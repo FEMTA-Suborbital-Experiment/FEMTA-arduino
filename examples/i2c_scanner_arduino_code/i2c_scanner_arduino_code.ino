@@ -2,7 +2,7 @@
 // Arduino I2C Scanner
 // Re-writed by Arbi Abdul Jabbaar
 // Using Arduino IDE 1.8.7
-// Using GY-87 module for the target
+// Using GY-87 module for the target 
 // Tested on 10 September 2019
 // This sketch tests the standard 7-bit addresses
 // Devices with higher bit address might not be seen properly.
