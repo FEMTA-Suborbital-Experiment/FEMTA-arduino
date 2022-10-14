@@ -7,19 +7,21 @@ int index = 0;
 
 
 void setup() {
+  // put your setup code here, to run once:
   Wire.begin();
   Serial.begin(9600); // 9600 bits per second
   
 }
 
 void loop() {
-  Wire.beginTransmission(8);
-  Wire.write(1);
-  Wire.requestFrom(8, 6); // request 6 bytes from device #8
+  // put your main code here, to run repeatedly:
+  Wire.requestFrom(8, 2); // request 2 bytes from device #8
   
+  //Serial.print("in void loop\n");
   while (Wire.available()) { // device may send less than requested
-    char c = Wire.read(); // receive a byte as a character
+    int c = Wire.read(); // receive a byte as a character
     Serial.print(c); // print the character
+    Serial.print(" is accel data\n");
   }
   delay(500);
   
