@@ -15,12 +15,12 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Wire.requestFrom(8, 2); // request 2 bytes from device #8
+  Wire.requestFrom(8, 1); // request 1 byte from device #8
   
   //Serial.print("in void loop\n");
   while (Wire.available()) { // device may send less than requested
-    int c = Wire.read(); // receive a byte as a character
-    Serial.print(c); // print the character
+    int c = Wire.read(); // receive a byte as an int
+    Serial.print(c); // print the int
     Serial.print(" is accel data\n");
   }
   delay(500);
