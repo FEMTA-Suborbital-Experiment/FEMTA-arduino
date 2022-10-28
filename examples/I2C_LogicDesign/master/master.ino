@@ -3,62 +3,39 @@
 
 #include <Wire.h>
 int state = 0; //0 = pre-liftoff, 1 = ascent, 2 = MECO, 3 = descent, 4 = post-descent
-int index = 0;
-
-
+//......int index = 0;
+const int REMOTE = 8;
+const int LOCAL = 4;
+int size1 = 6;
 void setup() {
   // put your setup code here, to run once:
-  Wire.begin();
+  Wire.begin(); // join I2C bus with address 4
   Serial.begin(9600); // 9600 bits per second
+  Wire.onReceive(receiveEvent);
   
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  Wire.requestFrom(8, 1); // request 1 byte from device #8
-  
-  //Serial.print("in void loop\n");
-  while (Wire.available()) { // device may send less than requested
-    int c = Wire.read(); // receive a byte as an int
-    Serial.print(c); // print the int
-    Serial.print(" is accel data\n");
+  Wire.requestFrom(REMOTE, 10*sizeof(char)); // 2nd param is exact size of thing being received
+  while (Wire.available()){
+    char c = Wire.read();
+    Serial.print(c);
+    //Serial.print("in while loop");
   }
-  delay(500);
-  
-   /*
-  //this is just to make sure the board is looping and not stuck
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(10);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  //delay(10);                       // wait for a second
-
-  
-  //this is super rudimentary, going to make decisions based on data trends in final model
-  if (accel[index] < 1 && Pressure[index] > 9 && Temperature[index] > 80){
-    state = 0;
-    Serial.print("pre-liftoff\n");
-  }
-  else if (accel[index] > 5 && Pressure[index] < 10 && Temperature[index] < 85){
-    state = 1;
-    Serial.print("ascent\n");
-  }
-  else if (accel[index] < 1 && Pressure[index] < 1 && Temperature[index] < 30){
-    state = 2;
-    Serial.print("MECO\n");
-  }
-  else if (accel[index] > 1 && Pressure[index] < 1 && Temperature[index] > 30){
-    state = 3;
-    Serial.print("descent\n");
-  }
-  else if (accel[index] < 1 && Pressure[index] > 9 && Temperature[index] < 80){
-    state = 4;
-    Serial.print("post-descent\n");
-  }
-  else{
-    Serial.print("unsure of state\n");
-  }
-  index++;
+  Serial.println(",");
   delay(1000);
   
-  // */
+}
+
+void receiveEvent(int size1)
+{
+  Serial.println("receive event");
+  while (Wire.available()){
+    char c = Wire.read();
+    Serial.print(c);
+    //Serial.print("in while loop");
+  }
+  int x = Wire.read();
+  Serial.print(x);
+  Serial.println("is x value");
 }
