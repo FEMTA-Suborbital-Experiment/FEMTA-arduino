@@ -16,11 +16,10 @@ void setup() {
 }
 
 void loop() {
-  Wire.requestFrom(REMOTE, 10*sizeof(char)); // 2nd param is exact size of thing being received
+  Wire.requestFrom(REMOTE, 30*sizeof(char)); // 2nd param is exact size of thing being received
   while (Wire.available()){
     char c = Wire.read();
     Serial.print(c);
-    //Serial.print("in while loop");
   }
   Serial.println(",");
   delay(1000);
