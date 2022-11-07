@@ -36,10 +36,11 @@ void loop() {
 //function that executes whenever data is requested by master, called an event
 ///*
 void requestEvent() {
-  stringData = "P: ";
+  stringData = "";
   stringData.concat(String(Pressure[x], 5)); // 5 is number of decimal places to include
-  stringData.concat(" accel: ");
+  stringData.concat(",");
   stringData.concat(accel[x]);
+  stringData.concat(";");
   for (int i = 0; i < stringData.length(); i++){
     Wire.write(stringData[i]); 
   }
