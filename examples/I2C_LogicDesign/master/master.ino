@@ -7,6 +7,7 @@ int state = 0; //0 = pre-liftoff, 1 = ascent, 2 = MECO, 3 = descent, 4 = post-de
 const int REMOTE = 8;
 const int LOCAL = 4;
 const int VIBRATION_MAG = 10;
+const int BUFFER_SIZE = 30;
 
 String StringData = "";
 int newVar = 0;
@@ -23,12 +24,12 @@ int j = 0;
 float sum[6]; //1 - pressure new, 2 - pressure old, 3 - accel new, 4 - accel old, 5 - stdv accel new, 6 - stdv accel old
 float average[4]; //same indexing as sum
 
-float stdv1[30]; //1 - accel new, 2 - accel old
-float stdv2[30];
+float stdv1[BUFFER_SIZE]; //1 - accel new, 2 - accel old
+float stdv2[BUFFER_SIZE];
 float avstdv[2]; //1 - accel new, 2 - accel old
 
-float accelBuff1[30];
-float accelBuff2[30];
+float accelBuff1[BUFFER_SIZE];
+float accelBuff2[BUFFER_SIZE];
 float temp[2];
 
 
