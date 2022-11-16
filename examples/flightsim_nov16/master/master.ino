@@ -6,8 +6,6 @@ int state = 0; //0 = pre-liftoff, 1 = ascent, 2 = MECO, 3 = descent, 4 = post-de
 //......int index = 0;
 const int REMOTE = 8;
 const int LOCAL = 4;
-const int VIBRATION_MAG = 10;
-
 String StringData = "";
 int newVar = 0;
 float pressThresh[4] = {85000, 0.1, .0008, .00175}; // (kpa) ground, MECO, coast-start, coast-end CALIBRATED ON HIGH END
@@ -60,7 +58,7 @@ void loop() {
   Serial.print(pressure);
   int indexEnd = StringData.indexOf(";");
   String Accel = StringData.substring(index+1, indexEnd);
-  float accel = Accel.toFloat() + vibration(VIBRATION_MAG);
+  float accel = Accel.toFloat() + vibration(10);
   Serial.print(" accel: ");
   Serial.println(accel); // done printing raw data
 
