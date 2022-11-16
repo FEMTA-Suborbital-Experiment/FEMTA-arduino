@@ -38,6 +38,12 @@ void setup() {
   
 }
 
+
+float vibration(int vibrationMag) {
+  return rand() % vibrationMag + 0.1 * (rand() % 10);
+}
+
+
 void loop() {
   Wire.requestFrom(REMOTE, 30*sizeof(char)); // 2nd param is exact size of thing being received
   StringData = "";
@@ -52,11 +58,11 @@ void loop() {
   Serial.print(pressure);
   int indexEnd = StringData.indexOf(";");
   String Accel = StringData.substring(index+1, indexEnd);
-  float accel = Accel.toFloat();
+  float accel = Accel.toFloat() + vibration(10);
   Serial.print(" accel: ");
   Serial.println(accel); // done printing raw data
 
-
+  // Data Smoothing and Flight Phase Detection
   float temp = accel;
   float average[2] = {0,0}; // First is newer buffer, second is older
   for (j = 29; j >= 1; j--)
@@ -91,5 +97,4 @@ void loop() {
   average[2] = 0;
   
   delay(1000);
-  
 }
