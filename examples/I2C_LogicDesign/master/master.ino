@@ -32,6 +32,9 @@ float accelBuff1[BUFFER_SIZE];
 float accelBuff2[BUFFER_SIZE];
 float temp[2];
 
+unsigned long time1 = 0;
+unsigned long time2 = 0;
+unsigned long diff = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -98,6 +101,11 @@ void loop() {
   
   average[1] = 0;
   average[2] = 0;
-  
+
+  //delay time testing
+  time1 = millis();
+  diff = time1 - time2;
+  Serial.println("This iteration took " + String(diff) + " ms"); 
+  time2 = time1;
   delay(1000);
 }
