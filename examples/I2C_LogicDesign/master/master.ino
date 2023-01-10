@@ -50,24 +50,21 @@ float vibration(int vibrationMag) {
 }
 
 
-void loop() {
-  Wire.requestFrom(REMOTE, 30*sizeof(char)); // 2nd param is exact size of thing being received
-  StringData = "";
-  while (Wire.available()){
-    char c = Wire.read();
-    StringData.concat(c);
+void determineState(float avg1, float avg2) {
+  if ((avg1 - avg2 >= accelThresh) && lastState != 1)
+  {
+    Serial.println("Entered Liftoff at index: " + String(i));
+    lastState = 1;
   }
-  int index = StringData.indexOf(",");
-  String Pressure = StringData.substring(0,index);
-  float pressure = Pressure.toFloat();
-  Serial.print("pressure: ");
-  Serial.print(pressure);
-  int indexEnd = StringData.indexOf(";");
-  String Accel = StringData.substring(index+1, indexEnd);
-  float accel = Accel.toFloat() + vibration(VIBRATION_MAG);
-  Serial.print(" accel: ");
-  Serial.println(accel); // done printing raw data
+  else if ((avg2 - avg1 >= accelThresh) && lastState != 2)
+  {
+    Serial.println("Entered MECO at index: " + String(i));
+    lastState = 2;
+  }
+}
 
+
+void smoothData(float accel) {
   // Data Smoothing and Flight Phase Detection
   float temp = accel;
   float average[2] = {0,0}; // First is newer buffer, second is older
@@ -88,20 +85,31 @@ void loop() {
   average[1] /= 30;
   Serial.println("Average 0: " + String(average[0]));
   Serial.println("Average 1: " + String(average[1]));
-  if ((average[0] - average[1] >= accelThresh) && lastState != 1)
-  {
-    Serial.println("Entered Liftoff at index: " + String(i));
-    lastState = 1;
-  }
-  else if ((average[1] - average[0] >= accelThresh) && lastState != 2)
-  {
-    Serial.println("Entered MECO at index: " + String(i));
-    lastState = 2;
-  }  
-  
-  average[1] = 0;
-  average[2] = 0;
 
+  determineState(average[0], average[1]);
+}
+
+
+void loop() {
+  Wire.requestFrom(REMOTE, 30*sizeof(char)); // 2nd param is exact size of thing being received
+  StringData = "";
+  while (Wire.available()){
+    char c = Wire.read();
+    StringData.concat(c);
+  }
+  int index = StringData.indexOf(",");
+  String Pressure = StringData.substring(0,index);
+  float pressure = Pressure.toFloat();
+  Serial.print("pressure: ");
+  Serial.print(pressure);
+  int indexEnd = StringData.indexOf(";");
+  String Accel = StringData.substring(index+1, indexEnd);
+  float accel = Accel.toFloat() + vibration(VIBRATION_MAG);
+  Serial.print(" accel: ");
+  Serial.println(accel); // done printing raw data
+
+  smoothData(accel);
+  
   //delay time testing
   time1 = millis();
   diff = time1 - time2;
