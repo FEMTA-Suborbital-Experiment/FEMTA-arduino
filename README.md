@@ -1,5 +1,12 @@
 # FEMTA PME & FTE Arduinos
 
+This repository contains the main sketches to operate the Propellant Management Experiment and FEMTA Thruster Experiments, as well as relevant libraries and datasheets for the sensors used in the hardware.
+
+# Quick Start
+See the [wiki](https://github.com/FEMTA-Suborbital-Experiment/FEMTA-arduino/wiki) for an onboarding tutorial to help you get started with developing for the FEMTA Avionics team.
+
+# History
+
 Due to new developments during the Summer of 2022, as well as plans to move away from using Exp in Spring 2021, the software and electronics team has completely refactored their approach to the avionics of the Propellant Management Experiment and the FEMTA Thruster Experiment. Rather than using a Pi-based flight computer with an in-house scripting language to collect data on the ground, the avionics subteam is developing a system to collect and to transition between different states of the Blue Origin New Shepard  launch. In comparison to using a system like Exp to run experiments, the avionics subteam proposes a simpler Arduino system that can accomplish testing on the ground and data collection for the FEMTA Suborbital Experiment. We aim to accomplish three tasks moving forward for this semester:
 
 - Software development of Arduino-based system on the Adafruit Feather M0 Logger to collect and govern transitions from one flight stage to the next
