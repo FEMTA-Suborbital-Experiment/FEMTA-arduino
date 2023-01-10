@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+    - main
+    - dev/flight-sim
+
+
+jobs:
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - uses: arduino/arduino-lint-action@v1
+      name: Lint
