@@ -33,10 +33,10 @@ const int BAUDRATE = 115200;
 
 void setup() {
     Serial.begin(BAUDRATE);
-    Serial.println("Starting")
+    Serial.println("Starting");
     
-    Wire.begin()
-    Serial.println("Wire began")
+    Wire.begin();
+    Serial.println("Wire began");
 }
 
 
@@ -80,8 +80,6 @@ void loop() {
         // A3
         [calibrate | HFE, poly, V, kPa | 3.9580327, -0.03188930];
 */
-
-
 float convertTokPa(float x, int index) {
     switch (index) {
         case (index == 0):
@@ -101,7 +99,8 @@ float convertTokPa(float x, int index) {
 
 // Altitudes are hard to correspond separately; thus, the Simbox will also need to send altitude data
 // This is not realistic in the Simbox's philosophy of simulating sensor data, but it provides some context
-// to pressure and temperature values received. 
+// to pressure and temperature values received.
+// TODO: Obtain Simbox altitudes and print to Arduino 
 void printSensorsFrom(float* A, float* B) {
     Serial.println("Pressure 1: " + String(convertTokPa(A[1], 0)));
     Serial.println("Pressure 2: " + String(convertTokPa(A[3], 1)));
