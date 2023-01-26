@@ -6,5 +6,8 @@
     "arduino.enableUSBDetection": true,
     "arduino.logLevel": "info",
     "C_Cpp.intelliSenseEngineFallback": "disabled",
-    "C_Cpp.intelliSenseEngine": "Tag Parser"
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+        "wire.h": "c"
+    }
 }
