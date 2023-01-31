@@ -3,6 +3,6 @@
     "board": "adafruit:samd:adafruit_feather_m0",
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
-    "sketch": "examples\\simbox_integration\\simbox_integration.ino",
+    "sketch": "examples\\flow_test\\flow_test.ino",
     "port": "COM8"
 }
