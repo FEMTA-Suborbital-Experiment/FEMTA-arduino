@@ -130,7 +130,7 @@ int8_t SensirionLF::trigger_soft_reset()
 {
   uint8_t count = 0;
   while (i2c_write(SOFT_RESET_I2C_ADDRESS, CMD_SOFT_RESET, CMD_SOFT_RESET_LENGTH) != 0) {
-    Serial.println("Error while sending soft reset command, retrying...");
+    // Serial.println("Error while sending soft reset command, retrying...");
     delay(CHIP_RESET_RETRY_DELAY);
     ++count;
     if (count > SOFT_RESET_MAX_TRIES) {

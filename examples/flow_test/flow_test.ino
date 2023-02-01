@@ -6,50 +6,72 @@
 #include <SPI.h>
 #include <SD.h>
 
+// https://forum.arduino.cc/t/single-line-define-to-disable-code/636044
+#define DEBUG true  //set to true for debug output, false for no debug output
+#define DEBUG_SERIAL if(DEBUG)Serial
+
+const String fileName = "FT04.TXT";
+
 const int delayMS{100};
 const int chipSelect{4}; 
 
+// Set these to true if flow measurement or pressure measurements or both are expected
+boolean canMeasureFlow{false};
+boolean canMeasurePressure{false};
+
 MS5837 sensor;
 
-String headers = "Time(s), Pressure(mbar), Flowrate(ml/min), Temperature(C), AirInLine, HighFlowDetected";
+String headers = "Time(s)";
 
 void setup() {
     
-    Serial.begin(115200); // initialize serial communication
+    DEBUG_SERIAL.begin(115200);
 
-    Serial.println("Begin Setup");
+    DEBUG_SERIAL.println("Begin Setup");
+
 
     Wire.begin();
 
     while (!SD.begin(chipSelect)) {
-        Serial.println("Card failed, or not present");
+        DEBUG_SERIAL.println("Card failed, or not present");
         // don't do anything more:
     }
-    /*
-    while (SLF3X.init() == 0) {
-        Serial.println("Error during SLF3X init. Stopping application.");
-        delay(1000); // loop forever
+
+
+    if (!sensor.init()) {
+        DEBUG_SERIAL.println("Init failed!");
+        DEBUG_SERIAL.println("Are SDA/SCL connected correctly?");
+        DEBUG_SERIAL.println("Blue Robotics Bar30: White=SDA, Green=SCL");
+        DEBUG_SERIAL.println("\n\n\n");
+        canMeasurePressure = false;
     }
-    */
-    /*
-    while (!sensor.init()) {
-        Serial.println("Init failed!");
-        Serial.println("Are SDA/SCL connected correctly?");
-        Serial.println("Blue Robotics Bar30: White=SDA, Green=SCL");
-        Serial.println("\n\n\n");
-        delay(5000);
+    else {
+        canMeasurePressure = true;
+        headers = headers + ", Pressure(mbar)";
+        DEBUG_SERIAL.println("Pressure sensor initialized");
     }
-    
+
+
+    if (SLF3X.init() == 1) {
+        DEBUG_SERIAL.println("Error during SLF3X init.");
+        canMeasureFlow = false;
+    }
+    else {
+        headers = headers + ", Flowrate(ml/min), Temperature(C), AirInLine, HighFlowDetected";
+        canMeasureFlow = true;
+    }
+       
     sensor.setModel(MS5837::MS5837_02BA);
     sensor.setFluidDensity(997); // kg/m^3 (freshwater, 1029 for seawater)
-    */
-    File dataFile = SD.open("FT02.txt", FILE_WRITE);
+
+    File dataFile = SD.open(fileName, FILE_WRITE);
     if(dataFile) {
+        DEBUG_SERIAL.println(headers);
         dataFile.println(headers);
         dataFile.close();
     }
     else {
-        Serial.println("Error opening text file during setup");
+        DEBUG_SERIAL.println("Error opening text file during setup");
     }
 }
 
@@ -64,25 +86,35 @@ void loop() {
   String dataString = "";
 
   float time = millis() / 1000.0;
-  // TODO: Function to append to dataString
   dataString = appendData(dataString, time);
-  dataString = appendData(dataString, sensor.pressure());
-  // dataString = appendData(dataString, );
+  if (canMeasureFlow) {
+    int ret = SLF3X.readSample();
+    if (ret == 0) {
+        dataString = appendData(dataString, SLF3X.getFlow());
+        dataString = appendData(dataString, SLF3X.getTemp());
+        dataString = appendData(dataString, SLF3X.isAirInLineDetected());
+        dataString = appendData(dataString, SLF3X.isHighFlowDetected());
+    }
+  }
+  if (canMeasurePressure) {
+    sensor.read();
+    dataString = appendData(dataString, sensor.pressure());
+  }
 
-  // open the file. note that only one file can be open at a time,
+ // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  File dataFile = SD.open("FT02.txt", FILE_WRITE);
+  File dataFile = SD.open(fileName, FILE_WRITE);
 
   // if the file is available, write to it:
     if (dataFile) {
         dataFile.println(dataString);
         dataFile.close();
         // print to the serial port too:
-        Serial.println(dataString);
+        DEBUG_SERIAL.println(dataString);
     }
     // if the file isn't open, pop up an error:
     else {
-        Serial.println("error opening datalog.txt");
+        DEBUG_SERIAL.println("error opening datalog.txt");
     }
     delay(delayMS);
 }
