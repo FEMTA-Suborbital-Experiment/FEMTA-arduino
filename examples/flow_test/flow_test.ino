@@ -37,6 +37,14 @@ void setup() {
         // don't do anything more:
     }
 
+    if (SLF3X.init() == 1) {
+        DEBUG_SERIAL.println("Error during SLF3X init.");
+        canMeasureFlow = false;
+    }
+    else {
+        headers = headers + ", Flowrate(ml/min), Temperature(C), AirInLine, HighFlowDetected";
+        canMeasureFlow = true;
+    }
 
     if (!sensor.init()) {
         DEBUG_SERIAL.println("Init failed!");
@@ -49,16 +57,6 @@ void setup() {
         canMeasurePressure = true;
         headers = headers + ", Pressure(mbar)";
         DEBUG_SERIAL.println("Pressure sensor initialized");
-    }
-
-
-    if (SLF3X.init() == 1) {
-        DEBUG_SERIAL.println("Error during SLF3X init.");
-        canMeasureFlow = false;
-    }
-    else {
-        headers = headers + ", Flowrate(ml/min), Temperature(C), AirInLine, HighFlowDetected";
-        canMeasureFlow = true;
     }
        
     sensor.setModel(MS5837::MS5837_02BA);
@@ -87,6 +85,11 @@ void loop() {
 
   float time = millis() / 1000.0;
   dataString = appendData(dataString, time);
+  
+  if (canMeasurePressure) {
+    sensor.read();
+    dataString = appendData(dataString, sensor.pressure());
+  }
   if (canMeasureFlow) {
     int ret = SLF3X.readSample();
     if (ret == 0) {
@@ -95,10 +98,6 @@ void loop() {
         dataString = appendData(dataString, SLF3X.isAirInLineDetected());
         dataString = appendData(dataString, SLF3X.isHighFlowDetected());
     }
-  }
-  if (canMeasurePressure) {
-    sensor.read();
-    dataString = appendData(dataString, sensor.pressure());
   }
 
  // open the file. note that only one file can be open at a time,
