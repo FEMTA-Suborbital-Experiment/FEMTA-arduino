@@ -22,11 +22,16 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 
-typedef struct hscm_data {
+typedef struct hscm_raw_data {
   int16_t p_upper; 
   int16_t p_lower; 
   int16_t t_upper; 
   int16_t t_lower;
+} hscm_raw_data;
+
+typedef struct hscm_data {
+  float pressure; 
+  float temperature; 
 } hscm_data;
 
 class HSCM_Pressure : public Adafruit_Sensor {
@@ -36,11 +41,12 @@ class HSCM_Pressure : public Adafruit_Sensor {
         bool getEvent(sensors_event_t *);
         void getSensor(sensor_t *);
 
+        hscm_data data;
 
     private:
         int32_t _sensorID;
 
-        hscm_data raw; // Last read accelerometer data will be available here
+        hscm_raw_data raw; // Last read accelerometer data will be available here
         float getLSB(lsm303_accel_mode_t);
         uint8_t getShift(lsm303_accel_mode_t);
 

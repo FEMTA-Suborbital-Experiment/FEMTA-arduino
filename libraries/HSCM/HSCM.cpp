@@ -10,13 +10,40 @@ HSCM_Pressure::HSCM() {
 
 }
 
-bool HSCM_Pressure::getEvent() {
+float HSCM_Pressure::getTemperature() {
 
 }
 
-void HSCM_Pressure::getSensor() {
+float HSCM_Pressure::getPressure() {
 
 }
+
+
+void HSCM_Pressure::init() {
+    Wire.begin()
+
+}
+
+
+int8_t HSCM_Pressure::start_measurement() {
+    if (i2c_write() != 0) {
+        
+    }
+    
+}
+
+
+void HSCM_Pressure::read() {
+    readRawData()
+
+    
+}
+
+
+void HSCM_Pressure::convert() {
+    
+}
+
 
 /*
     Private Functions
