@@ -8,8 +8,12 @@
 #define MIN_VALUE 0
 #define STEP_SIZE 1
 
+const int serial_precision = 5;
+const int log_precision = 10;
+
 int write_value = 0;
 int count = 0;
+
 File logfile;
 
 void setup() {
@@ -39,6 +43,7 @@ void setup() {
 // the loop routine runs over and over again forever:
 void loop() {
 
+  // TODO: Rewrite section below into a function and reduce while loops
   // tuning system
   if (!hasFlag()) { //does not see flag
     count = 0;
@@ -58,7 +63,7 @@ void loop() {
 
         writeVoltage();
         Serial.print("Decreasing: ");
-        Serial.println(convert2voltage(write_value), 10);
+        Serial.println(convert2voltage(write_value), serial_precision);
 
         delay(1);
       }
@@ -77,13 +82,14 @@ void loop() {
         }
 
         Serial.print("Increasing: ");
-        Serial.println(convert2voltage(write_value), 10);
+        Serial.println(convert2voltage(write_value), serial_precision);
         
         delay(1);
       }
     }
   } 
 
+  // TODO: Test separate adalogger implementation
   // manually flush to the files which takes around 20~40 msec
   logfile.flush();
 
@@ -95,17 +101,20 @@ void loop() {
     count -= 1;
   }
   writeVoltage();
-  Serial.print(" Input Voltage (V): ");
-  Serial.println(convert2voltage(write_value), 10);
+  Serial.print("Write value: ");
+  Serial.println(write_value);
+  Serial.print("Input Voltage (V): ");
+  Serial.println(convert2voltage(write_value), serial_precision);
 
   // delay of the system
-//  delay(30);
+  //  delay(30);
 }
 
 bool hasFlag() {
   // read the input on analog pin 0:
   int sensorValue = analogRead(A5);
   // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
+  Serial.print("Sensor Reading: ");
   Serial.println(sensorValue);
   return sensorValue > FLAG_TOLERANCE;
 }
@@ -121,7 +130,7 @@ void writeVoltage() {
   // write to the file
   logfile.print(millis());
   logfile.print("\t");
-  logfile.println(write_value, 10);
+  logfile.println(write_value, log_precision);
   return;
 }
 
