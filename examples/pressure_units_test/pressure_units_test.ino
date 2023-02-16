@@ -11,16 +11,16 @@
 #define DEBUG true  //set to true for debug output, false for no debug output
 #define DEBUG_SERIAL if(DEBUG)Serial
 
-const String fileName = "FT04.TXT";
+const String fileName = "FT06.TXT";
 
 const int delayMS{100};
 const int chipSelect{4}; 
 
-// Set these to true if flow measurement or pressure measurements or both are expected
-boolean canMeasureFlow{false};
+// Set these to true if pressure measurements or both are expected
 boolean canMeasurePressure{false};
 
 MS5837 sensor;
+HSCM_PSI hscm(0x28, 0, 0);
 
 String headers = "Time(s)";
 
@@ -38,15 +38,6 @@ void setup() {
         // don't do anything more:
     }
 
-    if (SLF3X.init() == 1) {
-        DEBUG_SERIAL.println("Error during SLF3X init.");
-        canMeasureFlow = false;
-    }
-    else {
-        headers = headers + ", Flowrate(ml/min), Temperature(C), AirInLine, HighFlowDetected";
-        canMeasureFlow = true;
-    }
-
     if (!sensor.init()) {
         DEBUG_SERIAL.println("Init failed!");
         DEBUG_SERIAL.println("Are SDA/SCL connected correctly?");
@@ -56,10 +47,11 @@ void setup() {
     }
     else {
         canMeasurePressure = true;
-        headers = headers + ", Pressure(mbar)";
+        headers = headers + ", Pressure(Prop)(mbar)";
+        headers = headers + ", Pressure(HSCM)(psi)";
         DEBUG_SERIAL.println("Pressure sensor initialized");
     }
-       
+
     sensor.setModel(MS5837::MS5837_02BA);
     sensor.setFluidDensity(997); // kg/m^3 (freshwater, 1029 for seawater)
 
@@ -75,8 +67,8 @@ void setup() {
 }
 
 
-String appendData(String str, float input) {
-  return str + String(input) + ",";
+String appendData(String str, float input, uint8_t precision) {
+  return str + String(input, precision) + ",";
 }
 
 
@@ -85,20 +77,13 @@ void loop() {
   String dataString = "";
 
   float time = millis() / 1000.0;
-  dataString = appendData(dataString, time);
+  dataString = appendData(dataString, time, 3);
   
   if (canMeasurePressure) {
     sensor.read();
-    dataString = appendData(dataString, sensor.pressure());
-  }
-  if (canMeasureFlow) {
-    int ret = SLF3X.readSample();
-    if (ret == 0) {
-        dataString = appendData(dataString, SLF3X.getFlow());
-        dataString = appendData(dataString, SLF3X.getTemp());
-        dataString = appendData(dataString, SLF3X.isAirInLineDetected());
-        dataString = appendData(dataString, SLF3X.isHighFlowDetected());
-    }
+    int status = hscm.read();
+    dataString = appendData(dataString, sensor.pressure(), 4);
+    dataString = appendData(dataString, hscm.pressure(), 8);
   }
 
  // open the file. note that only one file can be open at a time,
