@@ -1,7 +1,23 @@
 {
+    "version": 4,
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Arduino",
+            "compilerPath": "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\bin\\arm-none-eabi-g++",
+            "compilerArgs": [
+                "-mcpu=cortex-m0plus",
+                "-mthumb",
+                "-Werror=return-type",
+                "-std=gnu++11",
+                "-ffunction-sections",
+                "-fdata-sections",
+                "-fno-threadsafe-statics",
+                "-nostdlib",
+                "--param",
+                "-fno-rtti",
+                "-fno-exceptions"
+            ],
+            "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Adafruit_TinyUSB_Arduino\\src\\arduino",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Adafruit_TinyUSB_Arduino\\src\\arduino",
@@ -10,7 +26,6 @@
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS-Atmel\\1.2.2\\CMSIS\\Device\\ATMEL\\",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\cores\\arduino",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\variants\\feather_m0",
-                "C:\\Users\\jacob\\Documents\\Arduino\\libraries\\HSCM",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Wire",
                 "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include\\c++\\9.2.1",
                 "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include\\c++\\9.2.1\\arm-none-eabi",
@@ -19,8 +34,13 @@
                 "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\lib\\gcc\\arm-none-eabi\\9.2.1\\include-fixed",
                 "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include"
             ],
+            "forcedInclude": [
+                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\cores\\arduino\\Arduino.h"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++11",
             "defines": [
-                "__SKETCH_NAME__=\"\"\"hscm_read.ino\"\"\"",
+                "__SKETCH_NAME__=\"\"\"simbox_integration.ino\"\"\"",
                 "F_CPU=48000000L",
                 "ARDUINO=10816",
                 "ARDUINO_SAMD_ZERO",
@@ -498,6 +518,5 @@
                 "USBCON"
             ]
         }
-    ],
-    "version": 4
+    ]
 }
