@@ -1,16 +1,13 @@
 /*
 
-    HSCM Ambient Pressure Sensor
+    HSCM Ambient Pressure Sensor Driver
+    Author: Jacob Valdez
+    Email: jacob.a.valdez2002@gmail.com
 
 */
 
-#ifndef FEMTA_HSCM_H
-#define FEMTA_HSCM_H
-
-#define HSCM_ADDRESS 0x28
-
-#define HSCM_MEASURE_PRESSURE    0
-#define HSCM_MEASURE_TEMPERATURE 1
+#ifndef HSCM_H
+#define HSCM_H
 
 #if (ARDUINO >= 100)
  #include "Arduino.h"
@@ -18,41 +15,57 @@
  #include "WProgram.h"
 #endif
 
-#include <Adafruit_I2CDevice.h>
-#include <Adafruit_Sensor.h>
 #include <Wire.h>
 
-typedef struct hscm_raw_data {
-  int16_t p_upper; 
-  int16_t p_lower; 
-  int16_t t_upper; 
-  int16_t t_lower;
-} hscm_raw_data;
 
-typedef struct hscm_data {
-  float pressure; 
-  float temperature; 
-} hscm_data;
+typedef enum {
+  TYPE_2 = 0x28,
+  TYPE_3 = 0x38,
+  TYPE_4 = 0x48,
+  TYPE_5 = 0x58,
+  TYPE_6 = 0x68,
+  TYPE_7 = 0x78,
 
-class HSCM_Pressure : public Adafruit_Sensor {
+} hscm_output_type;
+
+
+class HSCM_PSI {
     public:
-        HSCM_Pressure();
-        void begin();
-        bool getEvent(sensors_event_t *);
-        void getSensor(sensor_t *);
 
-        hscm_data data;
+        hscm_output_type m_output_type;
+
+        static const float tf_range[4][2];
+        static const float pressure_range[4][2];
+
+        uint8_t m_i2cAddress;
+
+        int m_tf_type;
+        int m_pressure_type;
+
+        HSCM_PSI(int i2cAddress, int tf_type, int p_type);
+        HSCM_PSI(hscm_output_type output_type, int tf_type, int p_type);
+
+        uint8_t read();
+
+        float pressure();
+        float temperature();
 
     private:
-        int32_t _sensorID;
 
-        hscm_raw_data raw; // Last read accelerometer data will be available here
-        float getLSB(lsm303_accel_mode_t);
-        uint8_t getShift(lsm303_accel_mode_t);
+        float _pressure{0.0};
+        float _temperature{0.0};
 
-        void readRawData(void);
+        uint16_t p_upper; 
+        uint16_t p_lower; 
+        uint16_t t_upper; 
+        uint16_t t_lower;
 
-        Adafruit_I2CDevice *i2c_dev;
+        uint16_t output_max;
+        uint16_t output_min;
+
+        uint8_t status;
+
+        uint8_t readRaw();
 };
 
 #endif
