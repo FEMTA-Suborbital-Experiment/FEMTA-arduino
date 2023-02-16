@@ -16,11 +16,6 @@ typedef enum {
   PVC_4100,
 } pvcModel;
 
-typedef struct pvc4000_raw {
-    int16_t temp_data;
-    int16_t sensor_data;
-} pvc4000_raw;
-
 
 class PVC4000 {
 
@@ -62,15 +57,24 @@ class PVC4000 {
         void writeCalibrationTableX();
         void writeCalibrationTableY();
 
+        void enterWriteMode();
+        void exitWriteMode();
+
         uint16_t writeCalibrationTemperature();
         
+        void write(uint16_t data);
         uint16_t readRaw();
 
+        float _temperature;
+        float _pressure;
 
-        uint16_t[15] calibrationTableX;
-        uint16_t[15] calibrationTableY;
-        pvc4000_raw raw;
+        int16_t t_upper;
+        int16_t raw_upper;
+        int16_t t_lower;
+        int16_t raw_lower;
 
+        uint16_t calibrationTableX[15];
+        uint32_t calibrationTableY[15];
 };
 
 

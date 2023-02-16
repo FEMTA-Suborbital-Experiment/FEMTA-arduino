@@ -40,7 +40,7 @@
             "cStandard": "c11",
             "cppStandard": "c++11",
             "defines": [
-                "__SKETCH_NAME__=\"\"\"simbox_integration.ino\"\"\"",
+                "__SKETCH_NAME__=\"\"\"i2c_scanner_arduino_code.ino\"\"\"",
                 "F_CPU=48000000L",
                 "ARDUINO=10816",
                 "ARDUINO_SAMD_ZERO",
