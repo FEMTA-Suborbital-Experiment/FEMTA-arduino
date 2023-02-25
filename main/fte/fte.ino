@@ -1,5 +1,6 @@
 #include <SPI.h>
 #include <SD.h>
+#include <math.h>
 
 #define CARD_SELECT 4
 #define MAX_VOLTAGE 3.30
@@ -12,6 +13,8 @@ const int serial_precision = 5;
 const int log_precision = 10;
 
 int write_value = 0;
+int inc_count = 0;
+int dec_count = 0;
 int count = 0;
 
 File logfile;
@@ -47,63 +50,45 @@ void loop() {
   // tuning system
   if (!hasFlag()) { //does not see flag
     count = 0;
-    while (true) {
-      int dec_count = 0;
-      while (write_value > MIN_VALUE) {
-        if (hasFlag()) {
-          return;
-        }
+  
+    if (write_value < MAX_VALUE) {
 
-        if (dec_count < 0) {
-          write_value -= STEP_SIZE;
-          dec_count = 20;
-        } else {
-          dec_count -= 1;
-        }
-
-        writeVoltage();
-        Serial.print("Decreasing: ");
-        Serial.println(convert2voltage(write_value), serial_precision);
-
-        delay(1);
+      // Increase d'Arsonval voltage if  
+      if (inc_count < 0) {
+        write_value += STEP_SIZE;
+        inc_count = 20;
+      } else {
+        inc_count -= 1;
       }
-      int inc_count = 0;
-      while (write_value < MAX_VALUE) {
-        if (hasFlag()) {
-          return;
-        }
 
-        if (inc_count < 0) {
-          write_value += STEP_SIZE;
-          writeVoltage();
-          inc_count = 20;
-        } else {
-          inc_count -= 1;
-        }
+      Serial.print("Increasing: ");
 
-        Serial.print("Increasing: ");
-        Serial.println(convert2voltage(write_value), serial_precision);
-        
-        delay(1);
+    } else {
+        // Decrease d'Arsonval
+      if (dec_count < 0) {
+        write_value -= STEP_SIZE;
+        dec_count = 20;
+      } else {
+        dec_count -= 1;
       }
+
+      Serial.print("Decreasing: ");
+      
     }
-  } 
-
-  // TODO: Test separate adalogger implementation
-  // manually flush to the files which takes around 20~40 msec
-  logfile.flush();
-
-  // artifical kick to the system
-  if (count < 0) {
-    write_value += STEP_SIZE;
-    count = 5;
+  
+  delay(1);
   } else {
-    count -= 1;
+
+    // TODO: Test separate adalogger implementation
+    // manually flush to the files which takes around 20~40 msec
+    logfile.flush();
   }
+
+  // artifical kick to the system to ensure that the needle does not remain in one place due
+  // to sticking friction (causes needle to wobble)
+  perturbFlag();
+
   writeVoltage();
-  Serial.print("Write value: ");
-  Serial.println(write_value);
-  Serial.print("Input Voltage (V): ");
   Serial.println(convert2voltage(write_value), serial_precision);
 
   // delay of the system
@@ -119,12 +104,20 @@ bool hasFlag() {
   return sensorValue > FLAG_TOLERANCE;
 }
 
-void writeVoltage() {
-  if (write_value < 0) {
-    write_value = 0;
-  } else if (write_value > MAX_VALUE) {
-    write_value = MAX_VALUE;
+
+void perturbFlag() {
+  if (count < 0) {
+    write_value += STEP_SIZE;
+    Serial.print("with artificial kick: ");
+    count = 5;
+  } else {
+    count -= 1;
   }
+}
+
+
+void writeVoltage() {
+  write_value = constrain(write_value, 0, MAX_VALUE);
   analogWrite(A0, write_value);
 
   // write to the file
@@ -135,5 +128,5 @@ void writeVoltage() {
 }
 
 float convert2voltage(int value) {
-  return MAX_VOLTAGE * write_value / MAX_VALUE;
+  return MAX_VOLTAGE * value / MAX_VALUE;
 }
