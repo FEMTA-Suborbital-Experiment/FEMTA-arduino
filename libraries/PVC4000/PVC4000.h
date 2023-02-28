@@ -19,30 +19,29 @@ typedef enum {
 
 class PVC4000 {
 
-    static const uint16_t I2C_address;
-    static const uint16_t Cal_Data_R;
-    static const uint16_t Raw_Data_R;
-    static const uint16_t Reg1_R;
-    static const uint16_t Reg2_R;
-    static const uint16_t Cal_Tbl_X_R;
-    static const uint16_t Cal_Tbl_Y_R;
-
-    static const uint16_t In_W;
-    static const uint16_t Out_W;
-    static const uint16_t Reg1_W;
-    static const uint16_t Reg2_W;
-    static const uint16_t Cal_Tbl_X_W;
-    static const uint16_t Cal_Tbl_Y_W;
-
-
-    static const uint16_t model_1;
-    static const uint16_t model_2;
-
     public:    
-        uint16_t m_i2cAddress;
-        PVC4000(uint16_t address);
+        static const uint16_t I2C_address;
+        static const uint16_t Cal_Data_R;
+        static const uint16_t Raw_Data_R;
+        static const uint16_t Reg1_R;
+        static const uint16_t Reg2_R;
+        static const uint16_t Cal_Tbl_X_R;
+        static const uint16_t Cal_Tbl_Y_R;
 
-        void read();
+        static const uint16_t In_W;
+        static const uint16_t Out_W;
+        static const uint16_t Reg1_W;
+        static const uint16_t Reg2_W;
+        static const uint16_t Cal_Tbl_X_W;
+        static const uint16_t Cal_Tbl_Y_W;
+
+        static const uint16_t model_1;
+        static const uint16_t model_2;
+      
+        uint16_t m_i2cAddress;
+        PVC4000(int address);
+
+        int read();
         void calibrate();
         void init();
 
@@ -50,7 +49,8 @@ class PVC4000 {
         float pressure();
 
     private:
-        uint16_t checksum(uint16_t sum);
+
+        int checksum(uint16_t sum);
 
         void readCalibrationTableX();
         void readCalibrationTableY();
@@ -63,15 +63,15 @@ class PVC4000 {
         uint16_t writeCalibrationTemperature();
         
         void write(uint16_t data);
-        uint16_t readRaw();
+        int readRaw();
 
         float _temperature;
         float _pressure;
 
-        int16_t t_upper;
-        int16_t raw_upper;
-        int16_t t_lower;
-        int16_t raw_lower;
+        uint16_t t_upper;
+        uint16_t raw_upper;
+        uint16_t t_lower;
+        uint16_t raw_lower;
 
         uint16_t calibrationTableX[15];
         uint32_t calibrationTableY[15];

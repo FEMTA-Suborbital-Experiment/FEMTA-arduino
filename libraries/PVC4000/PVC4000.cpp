@@ -10,26 +10,26 @@
 #include "WProgram.h"
 #endif
 
-const uint8_t default_address{0x50};
-const uint8_t Cal_Data_R;
-const uint8_t Raw_Data_R{0xD0};
-const uint8_t Reg1_R{0xD3};
-const uint8_t Reg2_R{0xD4};
-const uint8_t Cal_Tbl_X_R{0xD1};
-const uint8_t Cal_Tbl_Y_R{0xD2};
+const uint16_t PVC4000::I2C_address{0x50};
+const uint16_t PVC4000::Cal_Data_R{0x00}; // TODO: Find the address that corresponds to Cal_Data_R
+const uint16_t PVC4000::Raw_Data_R{0xD0};
+const uint16_t PVC4000::Reg1_R{0xD3};
+const uint16_t PVC4000::Reg2_R{0xD4};
+const uint16_t PVC4000::Cal_Tbl_X_R{0xD1};
+const uint16_t PVC4000::Cal_Tbl_Y_R{0xD2};
 
-const uint8_t In_W{0xF0};
-const uint8_t Out_W{0xF1};
-const uint8_t Reg1_W{0xE2};
-const uint8_t Reg2_W{0xE3};
-const uint8_t Cal_Tbl_X_W{0xE4};
-const uint8_t Cal_Tbl_Y_W{0xE5};
+const uint16_t PVC4000::In_W{0xF0};
+const uint16_t PVC4000::Out_W{0xF1};
+const uint16_t PVC4000::Reg1_W{0xE2};
+const uint16_t PVC4000::Reg2_W{0xE3};
+const uint16_t PVC4000::Cal_Tbl_X_W{0xE4};
+const uint16_t PVC4000::Cal_Tbl_Y_W{0xE5};
 
 /*
     Public Functions
 
 */
-PVC4000::PVC4000(uint8_t address=default_address)
+PVC4000::PVC4000(int address=I2C_address)
     : m_i2cAddress {address}
 {
 
@@ -38,9 +38,7 @@ PVC4000::PVC4000(uint8_t address=default_address)
 
 void PVC4000::init()
 {
-    Wire.beginTransmission(m_i2cAddress);
-    Wire.write();
-    Wire.endTransmission();
+    Serial.println("Initialized PVC");
 }
 
 
@@ -55,30 +53,35 @@ float PVC4000::pressure() {
 
 
 void PVC4000::calibrate() {
-    int16_t p_count = raw_lower + raw_upper;
-    int16_t t_count = t_lower + t_upper;
+    uint16_t p_count = raw_lower + raw_upper;
+    uint16_t t_count = t_lower + t_upper;
 
     if (p_count <= 10000) {
         _pressure = p_count;
     } else {
-        _pressure = 13.5 * (p_count - 10000) + 10000;        
+        _pressure = 13.5 * (p_count - 10000) + 10000;
     }
-
+    _temperature = t_count;
 }
 
 
-void PVC4000::read() {
-    readRaw();
-    calibrate();
-
-
+int PVC4000::read() {
+    int status = readRaw();
+    if (status == 0) {
+        calibrate();
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 /*
     Private Functions
 */
-uint16_t PVC4000::checksum(uint16_t sum) {
-    if (1 + !(sum) == 0) {
+int PVC4000::checksum(uint16_t sum) {
+    Serial.print("Sum: ");
+    Serial.println(sum);
+    if (65535 - (sum) == 0) {
         return 0;
     }
     else {
@@ -86,7 +89,7 @@ uint16_t PVC4000::checksum(uint16_t sum) {
     }
 }
 
-uint16_t PVC4000::readRaw() {
+int PVC4000::readRaw() {
     Wire.write(Raw_Data_R);
     Wire.requestFrom(m_i2cAddress, (uint16_t) 5);
     uint16_t i, data_reg[5] = {0};
@@ -96,13 +99,15 @@ uint16_t PVC4000::readRaw() {
     }
     if (checksum(data_reg[0]) != 0) {
         Serial.println("Checksum is incorrect");
-        return;
+        return 1;
     };
 
     raw_upper = data_reg[1];
     raw_lower = data_reg[2];
     t_upper = data_reg[3];
     t_lower = data_reg[4];
+
+    return 0;
 }
 
 void PVC4000::readCalibrationTableX() {
@@ -156,13 +161,4 @@ void PVC4000::write(uint16_t data) {
     enterWriteMode();
     Wire.write(data);
     exitWriteMode();
-}
-
-
-/*
-    Test
-*/
-
-int main() {
-    return 0;
 }
