@@ -1,6 +1,7 @@
 #include <sensirion-lf.h>
 #include <MS5837.h>
 #include <HSCM.h>
+#include <PVC4000.h>
 
 #include <Wire.h>
 
@@ -11,7 +12,7 @@
 #define DEBUG true  //set to true for debug output, false for no debug output
 #define DEBUG_SERIAL if(DEBUG)Serial
 
-const String fileName = "FT06.TXT";
+const String fileName = "FT09.TXT";
 
 const int delayMS{100};
 const int chipSelect{4}; 
@@ -21,15 +22,16 @@ boolean canMeasurePressure{false};
 
 MS5837 sensor;
 HSCM_PSI hscm(0x28, 0, 0);
+PVC4000 pvc(0x50);
 
 String headers = "Time(s)";
 
 void setup() {
     
     DEBUG_SERIAL.begin(115200);
+    pvc.init();
 
     DEBUG_SERIAL.println("Begin Setup");
-
 
     Wire.begin();
 
@@ -47,8 +49,12 @@ void setup() {
     }
     else {
         canMeasurePressure = true;
-        headers = headers + ", Pressure(Prop)(mbar)";
+        headers = headers + ", Pressure(DPT)(mbar)";
         headers = headers + ", Pressure(HSCM)(psi)";
+        headers = headers + ", Pressure(PVC)(mtorr)";
+        headers = headers + ", Pressure(DPT)(kPa)";
+        headers = headers + ", Pressure(HSCM)(kPa)";
+        headers = headers + ", Pressure(PVC)(kPa)";
         DEBUG_SERIAL.println("Pressure sensor initialized");
     }
 
@@ -74,16 +80,22 @@ String appendData(String str, float input, uint8_t precision) {
 
 void loop() {
 
+  int status = pvc.read();
+  hscm.read();
+  sensor.read();
   String dataString = "";
 
   float time = millis() / 1000.0;
   dataString = appendData(dataString, time, 3);
-  
+
   if (canMeasurePressure) {
-    sensor.read();
-    int status = hscm.read();
     dataString = appendData(dataString, sensor.pressure(), 4);
-    dataString = appendData(dataString, hscm.pressure(), 8);
+  }
+
+  dataString = appendData(dataString, hscm.pressure(), 8);
+
+  if (status == 0) {
+    dataString = appendData(dataString, pvc.pressure(), 2);
   }
 
  // open the file. note that only one file can be open at a time,

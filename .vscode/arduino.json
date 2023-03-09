@@ -3,6 +3,6 @@
     "board": "adafruit:samd:adafruit_feather_m0",
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
-    "sketch": "examples\\i2c_scanner_arduino_code\\i2c_scanner_arduino_code.ino",
+    "sketch": "examples\\pvc_read\\pvc_read.ino",
     "port": "COM5"
 }

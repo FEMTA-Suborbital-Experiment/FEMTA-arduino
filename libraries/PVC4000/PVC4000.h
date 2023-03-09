@@ -48,9 +48,12 @@ class PVC4000 {
         float temperature();
         float pressure();
 
+        uint16_t get_raw_upper();
+        uint16_t get_raw_lower();
+
     private:
 
-        int checksum(uint16_t sum);
+        int CRC(uint16_t checksum, uint16_t sum);
 
         void readCalibrationTableX();
         void readCalibrationTableY();
@@ -63,6 +66,9 @@ class PVC4000 {
         uint16_t writeCalibrationTemperature();
         
         void write(uint16_t data);
+
+        float interpolate(uint16_t x);
+        
         int readRaw();
 
         float _temperature;
@@ -72,6 +78,16 @@ class PVC4000 {
         uint16_t raw_upper;
         uint16_t t_lower;
         uint16_t raw_lower;
+
+        float coeff;
+
+        bool firstCalibration;
+
+        static const uint16_t baseSensitivityTableX[8];
+        static const uint32_t baseSensitivityTableY[8];
+
+        uint16_t interpolationTableX[8];
+        uint16_t interpolationTableY[8];
 
         uint16_t calibrationTableX[15];
         uint32_t calibrationTableY[15];
