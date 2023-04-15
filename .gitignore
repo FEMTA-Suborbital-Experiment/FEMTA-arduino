@@ -4,3 +4,5 @@
 **/tasks.json
 **/c_cpp_properties.json
 .vscode
+**/arduino.json
+**/settings.json
