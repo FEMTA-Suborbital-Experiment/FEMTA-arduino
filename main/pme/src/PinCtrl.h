@@ -1,18 +1,27 @@
-#ifndef PinCtrl
-#define PinCtrl
+#ifndef FEMTA_PIN_CONTROLLER
+#define FEMTA_PIN_CONTROLLER
 
 #include "Arduino.h"
 
 class PinCtrl{
   public:
-    PinCtrl(int flowOpenPin, int flowClosePin, int ventOpenPin, int ventClosePin, int startPin);
-    
+    PinCtrl(int flowOpen, int flowClose, int ventOpen, int ventClose, int signal);
+
+    void openFlowValve();
+    void closeFlowValve();
+    void openVentValve();
+    void closeVentValve();
+    void signalStart();
+
+    void init();
+
   private:
-    void openFlowValve(int flowOpenPin);
-    void closeFlowValve(int flowClosePin);
-    void openVentValve(int ventOpenPin);
-    void closeVentValve(int ventClosePin);
-    void signalStart(int startPin);
+    int flowOpenPin;
+    int flowClosePin; 
+    int ventOpenPin;
+    int ventClosePin; 
+    int signalPin;
+    
 }
 
 #endif

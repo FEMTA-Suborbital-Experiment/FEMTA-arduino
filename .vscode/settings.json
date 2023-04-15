@@ -8,6 +8,7 @@
     "C_Cpp.intelliSenseEngineFallback": "disabled",
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "files.associations": {
-        "wire.h": "c"
+        "wire.h": "c",
+        "arduino.h": "c"
     }
 }
