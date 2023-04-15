@@ -1,0 +1,13 @@
+{
+    "arduino.path": "C:\\Program Files (x86)\\Arduino",
+    "arduino.additionalUrls": [
+        "https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
+    ],
+    "arduino.enableUSBDetection": true,
+    "arduino.logLevel": "info",
+    "C_Cpp.intelliSenseEngineFallback": "disabled",
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+        "wire.h": "c"
+    }
+}
