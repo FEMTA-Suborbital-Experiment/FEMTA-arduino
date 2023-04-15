@@ -25,12 +25,12 @@ int determineFlightState(float sensorArray){
     int buffSize = 15;
 
     float temp;
-    float average;
+    float average[2];
 
-    float aBuffNAve;
-    float aBuffOAve;
-    float sBuffNAve;
-    float sBuffOAve;
+    float aBuffNAve[30];
+    float aBuffOAve[30];
+    float sBuffNAve[30];
+    float sBuffOAve[30];
 
     int mecoDelay = 22000;
     int flowTime = 130000;
@@ -39,7 +39,8 @@ int determineFlightState(float sensorArray){
     int j;
 
 
-    accelMag = sqrt(pow(accelX, 2) + pow(accelY, 2) + pow(accelZ, 2));
+    accelMag = sqrt(pow(accelX, 2) + pow(accelY, 2) + pow(accelZ, 2));   
+    // Moving current flight state into previous
     StateLogic.prevFlightState = StateLogic.flightState;
 
     // setting timestamps
@@ -50,9 +51,8 @@ int determineFlightState(float sensorArray){
         StateLogic.timeSinceLaunch = millis() - StateLogic.timeOfLaunch;
     }
     
-    //populating buffer
-    //FIX BUFF NAMES
-    //Need to update accelMag value on each loop (each loop needs to pull in a new value)
+    // populating buffer
+    // Need to update accelMag value on each loop (each loop needs to pull in a new value)
     // maximum i value needs to be number of datapoints for profile
     for (i = 0; i < 999; i++) {
         temp = accelMag; // Simulating getting new data
@@ -73,7 +73,7 @@ int determineFlightState(float sensorArray){
             aBuffOAve[0] = temp;
         } else {
                 for (j = 29; j >= 1; j--) {
-                    aBuffNAve[j] = aBuffNAve[j - 1]; // Slide all the buffer points to the right for the newer buffer.
+                    aBuffNAve[j] = aBuffNAve[j - 1]; // Slide all the buffer points to the right for the newer buffer
                     aBuffOAve[j] = aBuffOAve[j - 1]; // Same as above but with the older buffer
                 }
                 aBuffNAve[0] = temp; // Set first point of new buffer to newly aquired accelerometer data
@@ -87,23 +87,6 @@ int determineFlightState(float sensorArray){
             }
             average[0] /= 30;
             average[1] /= 30;
-            if ((average[0] - average[1] >= accelThresh) && lastState != 1) {
-                printf("\nEntered Liftoff at index %d", i);
-                if (i < 100){
-                    printf(": this is a phantom detection of liftoff.");
-                }
-                lastState = 1;
-            }
-            else if ((average[1] - average[0] >= accelThresh) && lastState != 2) {
-                printf("\nEntered MECO at index %d", i);
-                if (i < 200){
-                    printf(": this is a phantom detection of MECO");
-                }
-                lastState = 2;
-            }
-
-        average[1] = 0;
-        average[2] = 0;
         }
     }
 
@@ -131,7 +114,4 @@ int determineFlightState(float sensorArray){
             StateLogic.flightState = 4;
         }
     }
-
-
-
 }
