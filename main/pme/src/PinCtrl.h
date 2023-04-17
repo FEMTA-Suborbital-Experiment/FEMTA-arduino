@@ -12,6 +12,7 @@ class PinCtrl{
     void openVentValve();
     void closeVentValve();
     void signalStart();
+    void signalStop();
 
     void init();
 

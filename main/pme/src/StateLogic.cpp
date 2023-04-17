@@ -5,6 +5,16 @@
 #include <cmath>
 //include other libraries needed
 
+StateLogic::StateLogic() {}
+
+StateLogic::init(float lowVacPressure, float highVacPressure) {
+    flightState = 0;
+    preFlightState = 0;
+    lowVacuumPressure = lowVacuumPressure;
+    highVacuumPressure = highVacPressure;
+
+}
+
 int determineFlightState(float sensorArray){
     //Break down sensor array by column - refer to variable decs
     //Break down accel vector into x/y/z

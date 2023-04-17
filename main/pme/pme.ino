@@ -1,6 +1,6 @@
 // Include libraries
-#include <StateLogic.h>
-#include <PinCtrl.h>
+#include "src/StateLogic.h"
+#include "src/PinCtrl.h"
 //#include <AtmosProfiles.h>
 //#include <Logger.h>
 
@@ -55,9 +55,7 @@ void loop() {
   // 3: Descent
   // 4: Landing
 
-  StateLogic.advanceTimeStep();
-
-  switch(StateLogic.flightState) {
+  switch(stateLogic.flightState) {
     case 1:
       pinController.closeFlowValve();
       pinController.openVentValve();
@@ -72,6 +70,7 @@ void loop() {
       pinController.closeVentValve();
   }
 
-  StateLogic.determineFlightState();
+  atmosProfiles.advanceTimeStep();
+  stateLogic.determineFlightState();
     
 }

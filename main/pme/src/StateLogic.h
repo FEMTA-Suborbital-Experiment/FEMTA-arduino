@@ -25,5 +25,7 @@ class StateLogic
         float accelBuffNew[15];
         float accelBuffOld[15];
 
+        StateLogic();
+
         int determineFlightState(float sensorArray);
 }
