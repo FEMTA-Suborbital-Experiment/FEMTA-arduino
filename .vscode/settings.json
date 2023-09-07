@@ -9,6 +9,7 @@
     "C_Cpp.intelliSenseEngine": "Tag Parser",
     "files.associations": {
         "wire.h": "c",
-        "arduino.h": "c"
+        "arduino.h": "c",
+        "fstream": "c"
     }
 }

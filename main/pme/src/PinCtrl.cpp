@@ -10,3 +10,26 @@ PinCtrl::init() {
     closeFlowValve();
     openVentValve();
 }
+
+void PinCtrl::openFlowValve(){
+
+}
+
+void PinCtrl::closeFlowValve(){
+
+}
+
+void PinCtrl::openVentValve(){
+
+}
+void PinCtrl::closeVentValve(){
+
+}
+
+void PinCtrl::signalStart(){
+
+}
+
+void PinCtrl::signalStop(){
+
+}

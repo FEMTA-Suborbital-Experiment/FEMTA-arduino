@@ -1,7 +1,7 @@
 #include "Logger.h"
 #include <limits>
 
-Logger Logger(int arraySize, bool writeToBinary, String name) : 
+Logger::Logger(int arraySize, bool writeToBinary, String name) : 
     mArraySize{arraySize}, mWriteToBinary{writeToBinary}, mName{name}, logFile(name)
 {
      struct logData{
@@ -12,7 +12,7 @@ Logger Logger(int arraySize, bool writeToBinary, String name) :
         };
 }
 
-void flushArrays() {
+void Logger::flushArrays() {
 
     // The lowest float means that it is flushed. Getting this value from an index means we ignore it in the log writing operation
     logData.time[mArraySize] = {std::numeric_limits<float>::min()};
@@ -21,7 +21,7 @@ void flushArrays() {
     logData.acceleration[mArraySize] = {std::numeric_limits<float>::min()};
 }
 
-int writeToFile() {
+int Logger::writeToFile() {
     if (mWriteToBinary == true) {
         printf("Binary write");
     } else {

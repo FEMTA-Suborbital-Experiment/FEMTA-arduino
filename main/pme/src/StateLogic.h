@@ -1,9 +1,10 @@
+#ifndef FEMTA_STATE_LOGIC
+#define FEMTA_STATE_LOGIC
+
 //Debug include statements
 #include <stdio.h>
 #include <string>
 #include <iostream>
-
-//Add #ifdef statements
 
 using namespace std;
 
@@ -29,3 +30,5 @@ class StateLogic
 
         int determineFlightState(float sensorArray);
 }
+
+#endif
