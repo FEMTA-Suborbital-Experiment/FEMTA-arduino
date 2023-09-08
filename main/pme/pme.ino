@@ -90,9 +90,4 @@ void loop() {
 
   // Takes in an array of the current values. Just included a dummy value here
   //stateLogic.determineFlightState(1.0);
-
-  logger.pushData(1, 1, 1, 1);
-  if (logger.isStructFilled())
-    logger.writeToFile();
-    
 }
