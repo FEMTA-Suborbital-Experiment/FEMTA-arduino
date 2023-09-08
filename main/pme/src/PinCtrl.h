@@ -5,7 +5,15 @@
 
 class PinCtrl{
   public:
-    PinCtrl(int flowOpen, int flowClose, int ventOpen, int ventClose, int signal);
+    PinCtrl(
+      int flowClose1, 
+      int flowOpen1, 
+      int flowClose2, 
+      int flowOpen2, 
+      int ventOpen, 
+      int ventClose, 
+      int signal
+      );
 
     void openFlowValve();
     void closeFlowValve();
@@ -14,15 +22,18 @@ class PinCtrl{
     void signalStart();
     void signalStop();
 
-    void init();
+    int init();
 
   private:
-    int flowOpenPin;
-    int flowClosePin; 
-    int ventOpenPin;
-    int ventClosePin; 
+    int closeSV1; 
+    int openSV1;
+    int closeSV2; 
+    int openSV2;
+    int closeLV1; 
+    int openLV1;
+
     int signalPin;
     
-}
+};
 
 #endif

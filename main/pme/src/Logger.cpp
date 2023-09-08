@@ -1,24 +1,37 @@
 #include "Logger.h"
-#include <limits>
 
-Logger::Logger(int arraySize, bool writeToBinary, String name) : 
-    mArraySize{arraySize}, mWriteToBinary{writeToBinary}, mName{name}, logFile(name)
+Logger::Logger(int arraySize, bool writeToBinary, const char* name) : 
+    mArraySize{arraySize}, mWriteToBinary{writeToBinary}, mName{name}
 {
-     struct logData{
-            int[mArraySize] time;
-            int[mArraySize] lowPressure;
-            int[mArraySize] highPressure;
-            int[mArraySize] acceleration;
-        };
+    logData.time.setMaxSize(arraySize);
+    logData.lowPressure.setMaxSize(arraySize);
+    logData.highPressure.setMaxSize(arraySize);
+    logData.acceleration.setMaxSize(arraySize);
+}
+
+int Logger::init() {
+    flushArrays();
+    std::ofstream logFile(mName, mWriteToBinary ? std::ios_base::binary : std::ios_base::out);
+
+    return 0;
 }
 
 void Logger::flushArrays() {
+    logData.time.clear();
+    logData.lowPressure.clear();
+    logData.highPressure.clear();
+    logData.acceleration.clear();
+}
 
-    // The lowest float means that it is flushed. Getting this value from an index means we ignore it in the log writing operation
-    logData.time[mArraySize] = {std::numeric_limits<float>::min()};
-    logData.lowPressure[mArraySize] = {std::numeric_limits<float>::min()};
-    logData.highPressure[mArraySize] = {std::numeric_limits<float>::min()};
-    logData.acceleration[mArraySize] = {std::numeric_limits<float>::min()};
+void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0) {    
+    logData.time.push_back(t);
+    logData.lowPressure.push_back(lp);
+    logData.highPressure.push_back(hp);
+    logData.acceleration.push_back(a);
+}
+
+bool Logger::isStructFilled() {
+    return logData.time.isFilled();;
 }
 
 int Logger::writeToFile() {
