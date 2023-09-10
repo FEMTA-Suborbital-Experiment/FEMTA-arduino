@@ -33,14 +33,3 @@ void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0) {
 bool Logger::isStructFilled() {
     return logData.time.isFilled();;
 }
-
-int Logger::writeToFile() {
-    if (mWriteToBinary == true) {
-        printf("Binary write");
-    } else {
-        printf("ASCII write");
-        logFile << "test";
-    }
-    flushArrays();
-    return 0;
-}

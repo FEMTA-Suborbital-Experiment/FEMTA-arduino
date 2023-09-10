@@ -1,0 +1,68 @@
+#include "Writer.h"
+
+/**
+ * @brief Construct a Writer class, which is responsible for the taking 
+ * logType data and writing it to a file for post-processing. 
+ * 
+ * @param name 
+ * @param toBinary 
+ * @param chipSelect 
+ */
+Writer::Writer(const char* name, const bool toBinary, const int chipSelect) : 
+    fileName{name}, willWriteToBinary{toBinary}, chipSelect{chipSelect}
+{}
+
+/**
+ * @brief Writes logType data to a File through text or binary methods. If successful,
+ * the method returns 0. Otherwise, it fails at other integer values.
+ * 
+ * @param data 
+ * @return int 
+ */
+int Writer::writeToFile(logType data) {
+    if (willWriteToBinary) {
+        return writeToBinary(data);
+    } else {
+        return writeToText(data);
+    }
+}
+
+/**
+ * @brief Serializes the struct to a binary file. This requires a reader class;
+ * but it is a faster method of saving data because we lack the overhead of a
+ * typical character (256 values per character versus 100 values). Note that we
+ * must establish a standard as to how we store our data.
+ * 
+ * @param data 
+ * @return int 
+ */
+int Writer::writeToBinary(logType data) {
+    File logFile = SD.open(fileName, FILE_WRITE);
+    // logFile.write();    
+
+    return 0; 
+}
+
+/**
+ * @brief Writes to a .txt file. This one is easier to access simply due to the
+ * file format, but takes a longer time to process since we must deal with the
+ * overhead of characters. Note that we must establish a standard as to how we
+ * store our data.
+ * 
+ * @param data 
+ * @return int 
+ */
+int Writer::writeToText(logType data) {
+    String s = " ";
+    File logFile = SD.open(fileName, FILE_WRITE);
+    for (int i=0; i < data.time.size(); ++i) {
+        logFile.print(
+            String(data.time[i]) + s 
+            + String(data.lowPressure[i]) + s 
+            + String(data.highPressure[i]) + s 
+            + String(data.acceleration[i]) + '\n'
+        );
+    }
+
+    return 0;
+}

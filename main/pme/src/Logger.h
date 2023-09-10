@@ -31,7 +31,6 @@ class Logger{
 
         bool mWriteToBinary;
         const char* mName;    
-        std::ofstream logFile;
         int mArraySize;
 };
 

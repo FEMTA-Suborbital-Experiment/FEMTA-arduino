@@ -1,7 +1,7 @@
 #include "Logger.h"
 
-Logger::Logger(int arraySize, bool writeToBinary, const char* name) : 
-    mArraySize{arraySize}, mWriteToBinary{writeToBinary}, mName{name}
+Logger::Logger(int arraySize) : 
+    mArraySize{arraySize}
 {
     logData.time.setMaxSize(arraySize);
     logData.lowPressure.setMaxSize(arraySize);
@@ -11,8 +11,6 @@ Logger::Logger(int arraySize, bool writeToBinary, const char* name) :
 
 int Logger::init() {
     flushArrays();
-    std::ofstream logFile(mName, mWriteToBinary ? std::ios_base::binary : std::ios_base::out);
-
     return 0;
 }
 
@@ -32,15 +30,4 @@ void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0) {
 
 bool Logger::isStructFilled() {
     return logData.time.isFilled();;
-}
-
-int Logger::writeToFile() {
-    if (mWriteToBinary == true) {
-        printf("Binary write");
-    } else {
-        printf("ASCII write");
-        logFile << "test";
-    }
-    flushArrays();
-    return 0;
 }
