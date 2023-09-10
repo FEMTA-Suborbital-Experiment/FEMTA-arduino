@@ -4,5 +4,5 @@
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
     "sketch": "examples\\logger_test\\logger_test.ino",
-    "port": "COM5"
+    "port": "COM9"
 }

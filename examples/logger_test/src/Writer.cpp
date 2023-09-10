@@ -12,6 +12,33 @@ Writer::Writer(const char* name, const bool toBinary, const int chipSelect) :
     fileName{name}, willWriteToBinary{toBinary}, chipSelect{chipSelect}
 {}
 
+
+/**
+ * @brief Initialize the writer by making sure the SD card can be detected. If not detected after 10 tries, time out.
+ * 
+ * @return int 
+ */
+int Writer::init() {
+    int count = 0;
+    while(!SD.begin(chipSelect)) {
+        if (count == 0) {
+            Serial.print("Couldn't find SD Card. Retrying...");
+        } else if (count == max_timeout) {
+            Serial.print("\nFailed to find SD card after ");
+            Serial.print(count);
+            Serial.print("tries.");
+            return 1;
+        } else {
+            Serial.print(" ");
+            Serial.print(count);
+        }
+        count++;
+        delay(1000);
+    }
+
+    return 0; 
+}
+
 /**
  * @brief Writes logType data to a File through text or binary methods. If successful,
  * the method returns 0. Otherwise, it fails at other integer values.
@@ -37,9 +64,11 @@ int Writer::writeToFile(logType data) {
  * @return int 
  */
 int Writer::writeToBinary(logType data) {
+    String extension(".dat");
     File logFile = SD.open(fileName, FILE_WRITE);
     // logFile.write();    
 
+    logFile.close();
     return 0; 
 }
 
@@ -54,7 +83,8 @@ int Writer::writeToBinary(logType data) {
  */
 int Writer::writeToText(logType data) {
     String s = " ";
-    File logFile = SD.open(fileName, FILE_WRITE);
+    String extension(".txt");
+    File logFile = SD.open(fileName + extension, FILE_WRITE);
     for (int i=0; i < data.time.size(); ++i) {
         logFile.print(
             String(data.time[i]) + s 
@@ -64,5 +94,6 @@ int Writer::writeToText(logType data) {
         );
     }
 
+    logFile.close();
     return 0;
 }

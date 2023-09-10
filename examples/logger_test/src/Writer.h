@@ -6,6 +6,8 @@
 #include <SPI.h>
 #include <SD.h>
 
+static const int max_timeout{10};
+
 /**
  * @brief Separate writer class.
  * 
@@ -16,6 +18,7 @@ class Writer {
         Writer(const char* name, const bool toBinary, const int chipSelect=4);
 
         int writeToFile(logType data);
+        int init();
     private:
         File logFile;
         int writeToBinary(logType data);

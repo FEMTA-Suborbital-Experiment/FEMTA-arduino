@@ -9,6 +9,10 @@ void setup() {
         Serial.println("Something went wrong with the logger. Exiting...");
         exit(1);
     }
+    if (writer.init() != 0) {
+        Serial.println("Something went wrong with the writer. Exiting...");
+        exit(1);
+    }
 }
 
 void loop() {
