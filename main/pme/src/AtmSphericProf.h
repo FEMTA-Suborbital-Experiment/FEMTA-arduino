@@ -4,8 +4,9 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
-//Make Atomospheric Profile Class
-//Need class vars for pressure, acceleration, altitude and time
+#include <iostream>
+
+
 class AtomSphericProfile {
     /*
         This class stores the atomspheric data recorded during the flight experiment.

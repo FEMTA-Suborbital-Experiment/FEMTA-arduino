@@ -3,6 +3,9 @@
 
 
 void print_vector(const char* vector_name, std::vector <double> const &a) {
+    /*
+        Prints the contents of a vector and its name in a readable format.
+    */
     std::cout << "The vector " << vector_name << " has elements: ";
 
     for(int i=0; i < a.size(); i++) {
@@ -12,6 +15,9 @@ void print_vector(const char* vector_name, std::vector <double> const &a) {
 }
 
 int main() {
+    /*
+        Tests the ability of the ParseCSV method to parse a csv file into its respective arrays
+    */
     const char* test_csv_file = "tests/FlightProfileEx_test.csv";
     AtomSphericProfile atmspheric_prof_test(test_csv_file);
     atmspheric_prof_test.ParseCSV();

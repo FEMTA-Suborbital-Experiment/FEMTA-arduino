@@ -1,11 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "AtmSphericProf.h"
-
-//Add a function to the class that parses csv files 
-    // should load a csv file
-    // assign each column to its corresponding class var, which should be arrays 
 
 
 void AtomSphericProfile::ParseCSV() {
@@ -21,11 +14,6 @@ void AtomSphericProfile::ParseCSV() {
             None
     */
     
-    // FILE* csv_file = fopen(csv_file_name, "r");
-    // fseek(csv_file, 0, SEEK_END);
-    // long array_size = ftell(csv_file);
-    // fseek(csv_file, 0, SEEK_SET);
-
     std::ifstream csv_file;
     csv_file.open(csv_file_name);
     
