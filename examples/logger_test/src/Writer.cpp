@@ -65,9 +65,14 @@ int Writer::writeToFile(logType data) {
  */
 int Writer::writeToBinary(logType data) {
     String extension(".dat");
-    File logFile = SD.open(fileName, FILE_WRITE);
-    // logFile.write();    
+    File logFile = SD.open(fileName + extension, FILE_WRITE);
 
+    // TODO: Apply DMA 
+    logFile.write((const uint8_t*)&data.time, sizeof(data.time));    
+    logFile.write((const uint8_t*)&data.lowPressure, sizeof(data.lowPressure));    
+    logFile.write((const uint8_t*)&data.highPressure, sizeof(data.highPressure));
+    logFile.write((const uint8_t*)&data.acceleration, sizeof(data.acceleration));
+    
     logFile.close();
     return 0; 
 }

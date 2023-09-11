@@ -1,8 +1,11 @@
 #include "src/Logger.h"
 #include "src/Writer.h"
+#include "src/Reader.h"
+
+bool writeToBinary{1};
 
 Logger logger(100);
-Writer writer("LT01", 0);
+Writer writer("LT01", writeToBinary);
 
 void setup() {
     if (logger.init() != 0) {
