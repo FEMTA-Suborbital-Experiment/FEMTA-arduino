@@ -17,7 +17,7 @@ class AtomSphericProfile {
         std::vector<double> accel_y;
         std::vector<double> accel_z;
         std::vector<double> time;
-        char* csv_file_name;
+        const char* csv_file_name;
 
         void ParseCSV();
 
@@ -25,7 +25,7 @@ class AtomSphericProfile {
             csv_file_name = "No File Inputted.";
         }
 
-        AtomSphericProfile(char* inputted_file_name) {
+        AtomSphericProfile(const char* inputted_file_name) {
             csv_file_name = inputted_file_name;
         }
 };

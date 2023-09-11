@@ -29,29 +29,34 @@ void AtomSphericProfile::ParseCSV() {
     std::ifstream csv_file;
     csv_file.open(csv_file_name);
     
-    std::string line_in_file = "";
-    getline(csv_file, line_in_file);
-
-    while(getline(csv_file, line_in_file)) {
-        std::string temp_str;
-        std::stringstream input_str(line_in_file);
-
-        getline(input_str, temp_str, ',');
-        time.push_back(atof(temp_str.c_str()));
-        getline(input_str, temp_str, ',');
-        pressure_hscm.push_back(atof(temp_str.c_str()));
-        getline(input_str, temp_str, ',');
-        pressure_mpi.push_back(atof(temp_str.c_str()));
-        getline(input_str, temp_str, ',');
-        accel_x.push_back(atof(temp_str.c_str()));
-        getline(input_str, temp_str, ',');
-        accel_y.push_back(atof(temp_str.c_str()));
-        getline(input_str, temp_str, ',');
-        accel_z.push_back(atof(temp_str.c_str()));
-
-        line_in_file = "";
+    if(csv_file.fail()) {
+        std::cout << "File was not succesfully opened." << std::endl;
     }
+    else {
+        std::cout << "File was succesfully opened." << std::endl;
+        std::string line_in_file = "";
+        getline(csv_file, line_in_file);
 
-    
+        while(getline(csv_file, line_in_file)) {
+            std::string temp_str;
+            std::stringstream input_str(line_in_file);
+
+            getline(input_str, temp_str, ',');
+            time.push_back(atof(temp_str.c_str()));
+            getline(input_str, temp_str, ',');
+            pressure_hscm.push_back(atof(temp_str.c_str()));
+            getline(input_str, temp_str, ',');
+            pressure_mpi.push_back(atof(temp_str.c_str()));
+            getline(input_str, temp_str, ',');
+            accel_x.push_back(atof(temp_str.c_str()));
+            getline(input_str, temp_str, ',');
+            accel_y.push_back(atof(temp_str.c_str()));
+            getline(input_str, temp_str, ',');
+            accel_z.push_back(atof(temp_str.c_str()));
+
+            line_in_file = "";
+        }
+
+    }
 }
 
