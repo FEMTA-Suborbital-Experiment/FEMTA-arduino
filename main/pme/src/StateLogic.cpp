@@ -4,144 +4,108 @@
 #include <stdlib.h>
 #include <cmath>
 //include other libraries needed
+#define BUFF_SIZE 15
 
 StateLogic::StateLogic() {}
 
-StateLogic::init(float lowVacPressure, float highVacPressure) {
+void StateLogic::init(float lowVacPressure, float highVacPressure) {
     flightState = 0;
-    preFlightState = 0;
-    lowVacuumPressure = lowVacuumPressure;
+    prevFlightState = 0;
+    lowVacuumPressure = lowVacPressure;
     highVacuumPressure = highVacPressure;
-
 }
 
-int determineFlightState(float sensorArray){
+int StateLogic::determineFlightState(float sensorArray[]){
+    // sensorArray = [accelX, accelY, accelZ, lowPressure, highPressure]
     //Break down sensor array by column - refer to variable decs
     //Break down accel vector into x/y/z
     float tsl; //time since launch
-    float accelMag;
-    float accelX;
-    float accelY;
-    float accelZ;
-    float lowPressure; //HSCM pressure reading
-    float highPressure; //Pirani pressure reading
+    float accelX = sensorArray[0];
+    float accelY = sensorArray[1];
+    float accelZ = sensorArray[2];
+    float lowPressure = sensorArray[3]; //HSCM pressure reading
+    float highPressure = sensorArray[4]; //Pirani pressure reading
 
-    float tALiftoff = 4.95; //m/s^2
-    float tSLiftoff = 3.12;
-    float tAMECO = -11.65;
+    // Compute magnitude of acceleration
+    float accelMag =
+        sqrt(pow(accelX, 2) + pow(accelY, 2) + pow(accelZ, 2));
+
+    float tALiftoff = 4.95; //m/s^2 // Acceleration threshold for liftoff
+    float tSLiftoff = 3.12; // Standard deviation
+    float tAMECO = -11.65; // Acceleration threshold for MECO
     float tSMECO = 6.48;
 
-    int flightState;
-    int buffSize = 15;
-
-    float temp;
-    float average;
-
-    float aBuffNAve;
-    float aBuffOAve;
-    float sBuffNAve;
-    float sBuffOAve;
-
-    int mecoDelay = 22000;
-    int flowTime = 130000;
-
-    int i;
-    int j;
-
-
-    accelMag = sqrt(pow(accelX, 2) + pow(accelY, 2) + pow(accelZ, 2));
-    StateLogic.prevFlightState = StateLogic.flightState;
+    int mecoDelay = 22000; // Milliseconds after MECO to wait before 0-g (start experiment)
+    int flowTime = 110000 + mecoDelay; // How long experiment should last
 
     // setting timestamps
-    if(StateLogic.prevFlightState > 1){
-        StateLogic.timeSinceMECO = millis() - StateLogic.timeOfMECO;
-    }
-    else if(StateLogic.prevFlightState > 0){
-        StateLogic.timeSinceLaunch = millis() - StateLogic.timeOfLaunch;
-    }
-    
-    //populating buffer
-    //FIX BUFF NAMES
-    //Need to update accelMag value on each loop (each loop needs to pull in a new value)
-    // maximum i value needs to be number of datapoints for profile
-    for (i = 0; i < 999; i++) {
-        temp = accelMag; // Simulating getting new data
-        if (i < 30) {
-            for (j = i; j >= 1; j--) {
-                aBuffNAve[j] = aBuffNAve[j - 1];
-            }
-            aBuffNAve[0] = temp;
-        } else if (i < 60) {
-            for (j = 29; j >= 1; j--) {
-                aBuffNAve[j] = aBuffNAve[j - 1];
-            }
-            aBuffNAve[0] = temp;
-            temp = aBuffNAve[29];
-            for (j = i - 30; j >= 1; j--) {
-                aBuffOAve[j] = aBuffOAve[j - 1];
-            }
-            aBuffOAve[0] = temp;
-        } else {
-                for (j = 29; j >= 1; j--) {
-                    aBuffNAve[j] = aBuffNAve[j - 1]; // Slide all the buffer points to the right for the newer buffer.
-                    aBuffOAve[j] = aBuffOAve[j - 1]; // Same as above but with the older buffer
-                }
-                aBuffNAve[0] = temp; // Set first point of new buffer to newly aquired accelerometer data
-                temp = aBuffNAve[29];
-                aBuffOAve[0] = temp; // Set first value of older buffer to last value of newer buffer (sliding)
-        }
-        if (i > 60) {
-            for (j = 0; j < 30; j++) {
-                average[0] += aBuffNAve[j];
-                average[1] += aBuffOAve[j];
-            }
-            average[0] /= 30;
-            average[1] /= 30;
-            if ((average[0] - average[1] >= accelThresh) && lastState != 1) {
-                printf("\nEntered Liftoff at index %d", i);
-                if (i < 100){
-                    printf(": this is a phantom detection of liftoff.");
-                }
-                lastState = 1;
-            }
-            else if ((average[1] - average[0] >= accelThresh) && lastState != 2) {
-                printf("\nEntered MECO at index %d", i);
-                if (i < 200){
-                    printf(": this is a phantom detection of MECO");
-                }
-                lastState = 2;
-            }
+    this->timeSinceMECO = millis() - this->timeOfMECO;
+    this->timeSinceLaunch = millis() - this->timeOfLaunch;
 
-        average[1] = 0;
-        average[2] = 0;
-        }
-    }
+    // Ring buffers for new (t-0 to t-15) and old (t-15 to t-30) moving AccelAverages
+    // For acceleration
+    // TODO: Add support for pressure sensor buffering?
+    float newAccelBuffer[BUFF_SIZE] = { 0 };
+    float oldAccelBuffer[BUFF_SIZE] = { 0 };
+    int newPtr = 0;
+    int oldPtr = 0;
 
+    if (newPtr >= BUFF_SIZE) {
+        // We're wrapping over, so move a value to the old buffer
+        oldAccelBuffer[oldPtr] = newAccelBuffer[newPtr % BUFF_SIZE];
+        oldPtr += 1;
+    }
+    newAccelBuffer[newPtr % BUFF_SIZE] = accelMag;
+    newPtr += 1;
+
+    // Compute moving AccelAverages and standard deviations
+    float oldAccelAverage = 0, oldAccelStdDev = 0;
+    float newAccelAverage = 0, newAccelStdDev = 0;
+
+    for (int i = 0; i < BUFF_SIZE; i++) {
+        oldAccelAverage += oldAccelBuffer[i];
+        newAccelAverage += newAccelBuffer[i];
+    }
+    oldAccelAverage /= BUFF_SIZE;
+    newAccelAverage /= BUFF_SIZE;
+    for (int i = 0; i < BUFF_SIZE; i++) {
+        oldAccelStdDev += oldAccelBuffer[i] - oldAccelAverage;
+        newAccelStdDev += newAccelBuffer[i] - newAccelAverage;
+    }
 
     //buffer logic, references code once buffers are populated
     if(millis() > 10000){
-
-        if (StateLogic.prevFlightState == 0) && ((SBuffNAve-SBuffOAve + ABuffNAve-ABuffOAve) > (tALiftoff+tSLiftoff)) /* && PRESSURE */{
+        if (this->prevFlightState == 0 &&
+            ((newAccelStdDev-oldAccelStdDev) + (newAccelAverage-oldAccelAverage)) > (tALiftoff+tSLiftoff)
+            /* && PRESSURE */
+        ) {
             // Entered Liftoff
-            StateLogic.timeOfLaunch = millis();
-            StateLogic.flightState = 1;
+            this->prevFlightState = this->flightState;
+            this->timeOfLaunch = millis();
+            this->flightState = 1; // Ascent
         }
         //include timeSinceLaunch FIX THIS
-        else if (StateLogic.prevFlightState == 1) && ((SBuffNAve-SBuffOAve + ABuffNAve-ABuffOAve) > (tSMECO-tMECO)) /* && PRESSURE */{
+        // Absolute time threshold since launch should also be considered
+        else if (this->prevFlightState == 1 &&
+                ((newAccelStdDev-oldAccelStdDev) + (newAccelAverage-oldAccelAverage)) > (tSMECO+tAMECO)
+                /* && PRESSURE */
+            ) {
             // Entered MECO
-            StateLogic.timeOfMECO = millis();
-            StateLogic.flightState = 2;
+            this->timeOfMECO = millis();
+            this->prevFlightState = this->flightState;
+            this->flightState = 2; // MECO
         }
-        else if (StateLogic.prevFlightState == 2) && ((millis() - StateLogic.timeOfMECO) >= mecoDelay){
+        else if (this->prevFlightState == 2 && this->timeSinceMECO >= mecoDelay) {
             // Entered operational state
-            StateLogic.flightState = 3;
+            this->prevFlightState = this->flightState;
+            this->flightState = 3; // Start experiment / running
         }
-        else if (StateLogic.prevFlightState == 3) && ((millis() - StateLogic.timeOfMECO) >= flowTime){
+        else if (this->prevFlightState == 3 && this->timeSinceMECO >= flowTime ){
             // Entered descent
-            StateLogic.flightState = 4;
+            this->prevFlightState = this->flightState;
+            this->flightState = 4; // Stopped experiment
         }
     }
 
-
-
+    return this->flightState;
 }

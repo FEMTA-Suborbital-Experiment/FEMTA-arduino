@@ -1,3 +1,5 @@
+#ifndef STATELOGIC_H
+#define STATELOGIC_H
 //Debug include statements
 #include <stdio.h>
 #include <string>
@@ -26,6 +28,9 @@ class StateLogic
         float accelBuffOld[15];
 
         StateLogic();
+        void init(float, float);
 
-        int determineFlightState(float sensorArray);
-}
+        int determineFlightState(float sensorArray[]);
+};
+
+#endif // STATELOGIC_H
