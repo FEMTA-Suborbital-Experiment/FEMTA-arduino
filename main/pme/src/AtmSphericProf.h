@@ -1,5 +1,6 @@
 #ifndef ATMSPHERICPROF
 #define ATMSPHERICPROF
+#include <cstddef>
 #include <string>
 #include <vector>
 #include <fstream>
@@ -18,6 +19,7 @@ class AtomSphericProfile {
         std::vector<double> accel_y;
         std::vector<double> accel_z;
         std::vector<double> time;
+        size_t count = 0;
         const char* csv_file_name;
 
         void ParseCSV();
