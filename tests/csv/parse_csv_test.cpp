@@ -18,7 +18,7 @@ int main() {
     /*
         Tests the ability of the ParseCSV method to parse a csv file into its respective arrays
     */
-    const char* test_csv_file = "tests/FlightProfileEx_test.csv";
+    const char* test_csv_file = "tests/flight-profile/FlightProfileEx_test.csv";
     AtomSphericProfile atmspheric_prof_test(test_csv_file);
     atmspheric_prof_test.ParseCSV();
     
