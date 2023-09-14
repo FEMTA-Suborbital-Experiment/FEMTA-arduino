@@ -1,5 +1,5 @@
+#include "Arduino.h"
 #include "StateLogic.h"
-#include "PinCtrl.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <cmath>
@@ -7,6 +7,10 @@
 #define BUFF_SIZE 15
 
 StateLogic::StateLogic() {}
+
+void StateLogic::init() {
+    this->init(0, 0);
+}
 
 void StateLogic::init(float lowVacPressure, float highVacPressure) {
     flightState = 0;

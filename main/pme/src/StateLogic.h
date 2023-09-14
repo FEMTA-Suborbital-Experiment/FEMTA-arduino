@@ -28,6 +28,7 @@ class StateLogic
         float accelBuffOld[15];
 
         StateLogic();
+        void init();
         void init(float, float);
 
         int determineFlightState(float sensorArray[]);
