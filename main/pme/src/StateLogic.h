@@ -9,6 +9,8 @@
 
 using namespace std;
 
+#define BUFF_SIZE 15
+
 class StateLogic
 {
     public:
@@ -24,8 +26,14 @@ class StateLogic
         float timeOfMECO;
         float timeSinceLaunch;
         float timeSincePowerup;
-        float accelBuffNew[15];
-        float accelBuffOld[15];
+
+        // Ring buffers for new (t-0 to t-15) and old (t-15 to t-30) moving AccelAverages
+        // For acceleration
+        // TODO: Add support for pressure sensor buffering?
+        float newAccelBuffer[BUFF_SIZE] = {0};
+        float oldAccelBuffer[BUFF_SIZE] = {0};
+        int newPtr = 0;
+        int oldPtr = 0;
 
         StateLogic();
         void init();

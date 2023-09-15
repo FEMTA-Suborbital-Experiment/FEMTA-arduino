@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <cmath>
 //include other libraries needed
-#define BUFF_SIZE 15
 
 StateLogic::StateLogic() {}
 
@@ -46,17 +45,10 @@ int StateLogic::determineFlightState(float sensorArray[]){
     this->timeSinceMECO = millis() - this->timeOfMECO;
     this->timeSinceLaunch = millis() - this->timeOfLaunch;
 
-    // Ring buffers for new (t-0 to t-15) and old (t-15 to t-30) moving AccelAverages
-    // For acceleration
-    // TODO: Add support for pressure sensor buffering?
-    float newAccelBuffer[BUFF_SIZE] = { 0 };
-    float oldAccelBuffer[BUFF_SIZE] = { 0 };
-    int newPtr = 0;
-    int oldPtr = 0;
-
     if (newPtr >= BUFF_SIZE) {
         // We're wrapping over, so move a value to the old buffer
-        oldAccelBuffer[oldPtr] = newAccelBuffer[newPtr % BUFF_SIZE];
+        oldAccelBuffer[oldPtr % BUFF_SIZE] = newAccelBuffer[newPtr % BUFF_SIZE];
+        // printf("move to old buffer: %d %d %.3f\n", newPtr, oldPtr, newAccelBuffer[newPtr % BUFF_SIZE]);
         oldPtr += 1;
     }
     newAccelBuffer[newPtr % BUFF_SIZE] = accelMag;
@@ -78,7 +70,8 @@ int StateLogic::determineFlightState(float sensorArray[]){
     }
 
     //buffer logic, references code once buffers are populated
-    if(millis() > 10000){
+    // printf("Data at %ld: %.3f %.3f, %.3f %.3f\n", millis(), newAccelAverage, oldAccelAverage, newAccelStdDev, oldAccelStdDev);
+    if(millis() > 4000){
         if (this->prevFlightState == 0 &&
             ((newAccelStdDev-oldAccelStdDev) + (newAccelAverage-oldAccelAverage)) > (tALiftoff+tSLiftoff)
             /* && PRESSURE */
@@ -91,7 +84,7 @@ int StateLogic::determineFlightState(float sensorArray[]){
         //include timeSinceLaunch FIX THIS
         // Absolute time threshold since launch should also be considered
         else if (this->prevFlightState == 1 &&
-                ((newAccelStdDev-oldAccelStdDev) + (newAccelAverage-oldAccelAverage)) > (tSMECO+tAMECO)
+                (newAccelAverage) < (2)
                 /* && PRESSURE */
             ) {
             // Entered MECO
