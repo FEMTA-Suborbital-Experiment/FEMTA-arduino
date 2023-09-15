@@ -26,6 +26,8 @@
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS-Atmel\\1.2.2\\CMSIS\\Device\\ATMEL\\",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\cores\\arduino",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\variants\\feather_m0",
+                "C:\\Users\\jacob\\Documents\\GitHub\\arduino\\libraries\\sensirion-lf",
+                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Wire",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\SPI",
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Adafruit_ZeroDMA",
                 "C:\\Users\\jacob\\Documents\\GitHub\\arduino\\libraries\\SD-1.2.4\\src",
@@ -42,7 +44,7 @@
             "cStandard": "c11",
             "cppStandard": "c++11",
             "defines": [
-                "__SKETCH_NAME__=\"\"\"logger_test.ino\"\"\"",
+                "__SKETCH_NAME__=\"\"\"flowmeter_verification.ino\"\"\"",
                 "F_CPU=48000000L",
                 "ARDUINO=10607",
                 "ARDUINO_SAMD_ZERO",
