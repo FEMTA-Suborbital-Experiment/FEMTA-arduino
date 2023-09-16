@@ -55,6 +55,8 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "sd.h": "c"
+        "sd.h": "c",
+        "atmosphericstruct.h": "c",
+        "atmosphericvector.h": "c"
     }
 }

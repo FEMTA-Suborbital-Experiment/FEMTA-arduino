@@ -3,7 +3,12 @@
 
 File dataFile;
 
-logType buf;
+typedef struct {
+    float time;
+    float lowPressure;
+    float highPressure;
+    float acceleration;
+}  buf;
 
 void setup() {
     File dataFile = open("LT01.DAT");
@@ -16,14 +21,13 @@ void loop() {
         dataFile.read((uint8_t *)&buf.highPressure, sizeof(buf.highPressure));
         dataFile.read((uint8_t *)&buf.acceleration, sizeof(buf.acceleration));
     
-        Serial.print(buf.ax, 6);
+        Serial.print(buf.time, 6);
         Serial.print('\t');
-        Serial.print(buf.ay,6);
+        Serial.print(buf.lowPressure,6);
         Serial.print('\t');
-        Serial.print(buf.az,6);
+        Serial.print(buf.highPressure,6);
         Serial.print('\t');
-        Serial.print(buf.t,6);
+        Serial.print(buf.acceleration,6);
         Serial.print('\n');
-        
   }
 }
