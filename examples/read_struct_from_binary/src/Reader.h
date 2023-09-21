@@ -4,14 +4,21 @@
 #include <Arduino.h>
 #include <SD.h>
 #include <SPI.h>
+#include <iostream>
 
 #include "AtmosphericStruct.h"
 
 class Reader {
     public:
-        Reader();
+        Reader(int chipSelect);
 
-        File readFile(const char* fileName);
+        int readFile(const char* fileName);
+
+        logType readVector();
+        int init();
+    private:
+        int mChipSelect;
+        File mFile;
 };
 
 #endif 

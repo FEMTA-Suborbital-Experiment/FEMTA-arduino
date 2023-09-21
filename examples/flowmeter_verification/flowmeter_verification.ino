@@ -9,7 +9,7 @@
 #define DEBUG true  //set to true for debug output, false for no debug output
 #define DEBUG_SERIAL if(DEBUG)Serial
 
-const String fileName = "FT04.TXT";
+const String fileName = "FT01.TXT";
 
 const int delayMS{100};
 const int chipSelect{4}; 

@@ -1,11 +1,10 @@
 #include "src/Logger.h"
 #include "src/Writer.h"
-#include "src/Reader.h"
 
 bool writeToBinary{1};
 
 Logger logger(100);
-Writer writer("LT01", writeToBinary);
+Writer writer("LT02", writeToBinary);
 
 void setup() {
     if (logger.init() != 0) {
@@ -20,7 +19,7 @@ void setup() {
 
 void loop() {
     delay(500);
-    logger.pushData(1, 1, 1, 1);
+    logger.pushData(1, 2, 3, 4);
     Serial.print("Time size: ");
     Serial.println(logger.logData.time.size());
     Serial.print("Low pressure size: ");

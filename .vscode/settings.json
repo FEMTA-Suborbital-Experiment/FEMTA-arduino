@@ -57,6 +57,7 @@
         "typeinfo": "cpp",
         "sd.h": "c",
         "atmosphericstruct.h": "c",
-        "atmosphericvector.h": "c"
+        "atmosphericvector.h": "c",
+        "protothread.h": "c"
     }
 }

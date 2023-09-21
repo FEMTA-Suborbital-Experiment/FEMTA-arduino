@@ -14,7 +14,8 @@ Writer::Writer(const char* name, const bool toBinary, const int chipSelect) :
 
 
 /**
- * @brief Initialize the writer by making sure the SD card can be detected. If not detected after 10 tries, time out.
+ * @brief Initialize the writer by making sure the SD card can be detected. 
+ * If not detected after 10 tries, time out.
  * 
  * @return int 
  */
@@ -55,7 +56,7 @@ int Writer::writeToFile(logType data) {
 }
 
 /**
- * @brief Serializes the struct to a binary file. This requires a reader class;
+ * @brief Serializes the struct to a binary file. This requires a reader class,
  * but it is a faster method of saving data because we lack the overhead of a
  * typical character (256 values per character versus 100 values). Note that we
  * must establish a standard as to how we store our data.
@@ -65,13 +66,18 @@ int Writer::writeToFile(logType data) {
  */
 int Writer::writeToBinary(logType data) {
     String extension(".dat");
-    File logFile = SD.open(fileName + extension, FILE_WRITE);
+    File logFile = SD.open(fileName + extension, O_CREAT | O_APPEND | O_WRITE);
 
     // TODO: Apply DMA 
-    logFile.write((const uint8_t*)&data.time, sizeof(data.time));    
-    logFile.write((const uint8_t*)&data.lowPressure, sizeof(data.lowPressure));    
-    logFile.write((const uint8_t*)&data.highPressure, sizeof(data.highPressure));
-    logFile.write((const uint8_t*)&data.acceleration, sizeof(data.acceleration));
+    logFile.write((const uint8_t*)&data.time.size(), sizeof(data.time.size()));    
+    logFile.write((const uint8_t*)&data.lowPressure.size(), sizeof(data.lowPressure.size()));    
+    logFile.write((const uint8_t*)&data.highPressure.size(), sizeof(data.highPressure.size()));
+    logFile.write((const uint8_t*)&data.acceleration.size(), sizeof(data.acceleration.size()));
+
+    logFile.write((const uint8_t*)&data.time[0], sizeof(float)*data.time.size());    
+    logFile.write((const uint8_t*)&data.lowPressure[0], sizeof(float)*data.lowPressure.size());    
+    logFile.write((const uint8_t*)&data.highPressure[0], sizeof(float)*data.highPressure.size());
+    logFile.write((const uint8_t*)&data.acceleration[0], sizeof(float)*data.acceleration.size());
     
     logFile.close();
     return 0; 

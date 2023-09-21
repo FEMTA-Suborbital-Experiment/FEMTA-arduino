@@ -1,33 +1,53 @@
+#include <SD.h>
+#include <SPI.h>
+
 #include "src/Reader.h"
 #include "src/AtmosphericStruct.h"
 
 File dataFile;
 
-typedef struct {
-    float time;
-    float lowPressure;
-    float highPressure;
-    float acceleration;
-}  buf;
+const char* file_name{"LT02.DAT"};
+
+union {
+  float fval;
+  byte bval[4];
+} float2byte;
+
+logType buf;
+
+Reader reader(4);
 
 void setup() {
-    File dataFile = open("LT01.DAT");
+    Serial.begin(115200);
+
+    Serial.println("Start setup");
+    if (reader.init() == 1) {
+        while(1) {
+            Serial.println("There is something wrong with the Reader class");
+        }
+    }
+
+    if (!reader.readFile(file_name)) {
+        while(1) {
+            Serial.print("Couldn't read ");
+            Serial.print(file_name);
+            Serial.println(" from SD. Ensure this file exists and try again");
+        }
+    }
+
+    buf = reader.readVector();
 }
 
 void loop() {
-    if (dataFile.available()) {
-        dataFile.read((uint8_t *)&buf.time, sizeof(buf.time));
-        dataFile.read((uint8_t *)&buf.lowPressure, sizeof(buf.lowPressure));
-        dataFile.read((uint8_t *)&buf.highPressure, sizeof(buf.highPressure));
-        dataFile.read((uint8_t *)&buf.acceleration, sizeof(buf.acceleration));
-    
-        Serial.print(buf.time, 6);
+    delay(1000);
+    for (int i=0; i < 100; ++i) {
+        Serial.print(buf.time[i], 2);
         Serial.print('\t');
-        Serial.print(buf.lowPressure,6);
+        Serial.print(buf.lowPressure[i],2);
         Serial.print('\t');
-        Serial.print(buf.highPressure,6);
+        Serial.print(buf.highPressure[i],2);
         Serial.print('\t');
-        Serial.print(buf.acceleration,6);
+        Serial.print(buf.acceleration[i],2);
         Serial.print('\n');
-  }
+    }
 }
