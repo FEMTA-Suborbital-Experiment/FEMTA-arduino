@@ -4,5 +4,5 @@
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
     "sketch": "examples\\pin_controller\\pin_controller.ino",
-    "port": "COM12"
+    "port": "COM5"
 }
