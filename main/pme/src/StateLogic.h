@@ -39,7 +39,7 @@ class StateLogic
         void init();
         void init(float, float);
 
-        int determineFlightState(float sensorArray[]);
+        int determineFlightState(unsigned long time_millis, float sensorArray[]);
 };
 
 #endif // STATELOGIC_H

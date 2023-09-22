@@ -18,7 +18,7 @@ void StateLogic::init(float lowVacPressure, float highVacPressure) {
     highVacuumPressure = highVacPressure;
 }
 
-int StateLogic::determineFlightState(float sensorArray[]){
+int StateLogic::determineFlightState(unsigned long time_millis, float sensorArray[]){
     // sensorArray = [accelX, accelY, accelZ, lowPressure, highPressure]
     //Break down sensor array by column - refer to variable decs
     //Break down accel vector into x/y/z
@@ -33,17 +33,19 @@ int StateLogic::determineFlightState(float sensorArray[]){
     float accelMag =
         sqrt(pow(accelX, 2) + pow(accelY, 2) + pow(accelZ, 2));
 
-    float tALiftoff = 4.95; //m/s^2 // Acceleration threshold for liftoff
+    float tALiftoff = 3.95; //m/s^2 // Acceleration threshold for liftoff
     float tSLiftoff = 3.12; // Standard deviation
     float tAMECO = -11.65; // Acceleration threshold for MECO
     float tSMECO = 6.48;
 
-    int mecoDelay = 22000; // Milliseconds after MECO to wait before 0-g (start experiment)
+    int liftoffBreaker = 150000;
+    int mecoDelay = 36000; // Milliseconds after MECO to wait before 0-g (start experiment)
     int flowTime = 110000 + mecoDelay; // How long experiment should last
 
     // setting timestamps
-    this->timeSinceMECO = millis() - this->timeOfMECO;
-    this->timeSinceLaunch = millis() - this->timeOfLaunch;
+    this->timeSinceMECO = time_millis - this->timeOfMECO;
+    // printf("Time since MECO: %f\n", this->timeSinceMECO);
+    this->timeSinceLaunch = time_millis - this->timeOfLaunch;
 
     if (newPtr >= BUFF_SIZE) {
         // We're wrapping over, so move a value to the old buffer
@@ -70,34 +72,34 @@ int StateLogic::determineFlightState(float sensorArray[]){
     }
 
     //buffer logic, references code once buffers are populated
-    // printf("Data at %ld: %.3f %.3f, %.3f %.3f\n", millis(), newAccelAverage, oldAccelAverage, newAccelStdDev, oldAccelStdDev);
-    if(millis() > 4000){
+    // printf("Data at %ld: %.3f %.3f, %.3f %.3f\n", time_millis, newAccelAverage, oldAccelAverage, newAccelStdDev, oldAccelStdDev);
+    if(time_millis > 4000){
         if (this->prevFlightState == 0 &&
-            ((newAccelStdDev-oldAccelStdDev) + (newAccelAverage-oldAccelAverage)) > (tALiftoff+tSLiftoff)
+            ((newAccelAverage-oldAccelAverage)) > (tALiftoff)
             /* && PRESSURE */
         ) {
             // Entered Liftoff
             this->prevFlightState = this->flightState;
-            this->timeOfLaunch = millis();
+            this->timeOfLaunch = time_millis;
             this->flightState = 1; // Ascent
         }
         //include timeSinceLaunch FIX THIS
         // Absolute time threshold since launch should also be considered
-        else if (this->prevFlightState == 1 &&
-                (newAccelAverage) < (2)
+        else if ((this->flightState <= 1 && newAccelAverage < 1)
+            || this->flightState == 1 && (time_millis - this->timeOfLaunch) >= liftoffBreaker
                 /* && PRESSURE */
             ) {
             // Entered MECO
-            this->timeOfMECO = millis();
+            this->timeOfMECO = time_millis;
             this->prevFlightState = this->flightState;
             this->flightState = 2; // MECO
         }
-        else if (this->prevFlightState == 2 && this->timeSinceMECO >= mecoDelay) {
+        else if (this->flightState == 2 && this->timeSinceMECO >= mecoDelay) {
             // Entered operational state
             this->prevFlightState = this->flightState;
             this->flightState = 3; // Start experiment / running
         }
-        else if (this->prevFlightState == 3 && this->timeSinceMECO >= flowTime ){
+        else if (this->flightState == 3 && this->timeSinceMECO >= flowTime ){
             // Entered descent
             this->prevFlightState = this->flightState;
             this->flightState = 4; // Stopped experiment
