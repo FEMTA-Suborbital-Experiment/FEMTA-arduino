@@ -2,10 +2,21 @@
 
 const int MAX_COUNTS{10};
 
+/**
+ * @brief Construct a Reader class, which takes a chip number (usually 4)
+ * for where the SD card is located.
+ * 
+ * @param chipSelect 
+ */
 Reader::Reader(int chipSelect)
  :mChipSelect{chipSelect}
 {}
 
+/**
+ * @brief Initialize the SD card for reading
+ * 
+ * @return int 
+ */
 int Reader::init() {
     int count = 0;
     while (!SD.begin(mChipSelect) && count < MAX_COUNTS) {
@@ -23,12 +34,25 @@ int Reader::init() {
     return 0;
 }
 
+/**
+ * @brief Read the file in the SD card and returns a check if it is available
+ * 
+ * @param fileName 
+ * @return int 
+ */
 int Reader::readFile(const char* fileName) {
     mFile = SD.open(fileName, FILE_READ);
 
     return mFile.available();
 }
 
+/**
+ * @brief Outputs the time, low pressure, high pressure, and acceleration values
+ * into a single, large vector for reading. 
+ * 
+ * https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot
+ * @return logType 
+ */
 logType Reader::readVector() {
     logType out;
     int t_size;
