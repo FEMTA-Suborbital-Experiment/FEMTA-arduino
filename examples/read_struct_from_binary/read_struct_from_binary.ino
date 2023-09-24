@@ -6,7 +6,7 @@
 
 File dataFile;
 
-const char* file_name{"LT02.DAT"};
+const char* file_name{"LT05.DAT"};
 
 union {
   float fval;
@@ -18,14 +18,15 @@ logType buf;
 Reader reader(4);
 
 void setup() {
-    Serial.begin(115200);
-
+    Serial.begin(9600);
+    delay(3000);
     Serial.println("Start setup");
     if (reader.init() == 1) {
         while(1) {
             Serial.println("There is something wrong with the Reader class");
         }
     }
+    Serial.println("Initialized reader");
 
     if (!reader.readFile(file_name)) {
         while(1) {
@@ -34,11 +35,14 @@ void setup() {
             Serial.println(" from SD. Ensure this file exists and try again");
         }
     }
+    Serial.println("Read file");
 
     buf = reader.readVector();
+    Serial.println("Finish setup");
 }
 
 void loop() {
+    Serial.println("Reading vector");
     delay(1000);
     for (int i=0; i < 100; ++i) {
         Serial.print(buf.time[i], 2);

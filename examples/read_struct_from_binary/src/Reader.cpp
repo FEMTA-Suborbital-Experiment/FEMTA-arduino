@@ -24,7 +24,7 @@ int Reader::init() {
 }
 
 int Reader::readFile(const char* fileName) {
-    mFile = SD.open(fileName, std::ios_base::binary);
+    mFile = SD.open(fileName, FILE_READ);
 
     return mFile.available();
 }
@@ -36,15 +36,19 @@ logType Reader::readVector() {
     int hp_size;
     int a_size;
 
-    mFile.read((uint8_t *)&t_size, sizeof(t_size));
-    mFile.read((uint8_t *)&lp_size, sizeof(lp_size));
-    mFile.read((uint8_t *)&hp_size, sizeof(hp_size));
-    mFile.read((uint8_t *)&a_size, sizeof(a_size));
+    mFile.read(reinterpret_cast<uint8_t*>(&t_size), sizeof(t_size));
+    mFile.read(reinterpret_cast<uint8_t*>(&lp_size), sizeof(lp_size));
+    mFile.read(reinterpret_cast<uint8_t*>(&hp_size), sizeof(hp_size));
+    mFile.read(reinterpret_cast<uint8_t*>(&a_size), sizeof(a_size));
+    out.time.resize(t_size);
+    out.lowPressure.resize(lp_size); 
+    out.highPressure.resize(hp_size); 
+    out.acceleration.resize(a_size); 
     
-    mFile.read((uint8_t *)&out.time[0], sizeof(float)*out.time.size());
-    mFile.read((uint8_t *)&out.lowPressure[0], sizeof(float)*out.lowPressure.size());
-    mFile.read((uint8_t *)&out.highPressure[0], sizeof(float)*out.highPressure.size());
-    mFile.read((uint8_t *)&out.acceleration[0], sizeof(float)*out.acceleration.size());
+    mFile.read(reinterpret_cast<uint8_t*>(&out.time[0]), sizeof(float)*out.time.size());
+    mFile.read(reinterpret_cast<uint8_t*>(&out.lowPressure[0]), sizeof(float)*out.lowPressure.size());
+    mFile.read(reinterpret_cast<uint8_t*>(&out.highPressure[0]), sizeof(float)*out.highPressure.size());
+    mFile.read(reinterpret_cast<uint8_t*>(&out.acceleration[0]), sizeof(float)*out.acceleration.size());
     
     return out;
 }

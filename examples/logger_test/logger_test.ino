@@ -4,9 +4,12 @@
 bool writeToBinary{1};
 
 Logger logger(100);
-Writer writer("LT02", writeToBinary);
+Writer writer("LT05", writeToBinary);
+int increment{0};
 
 void setup() {
+    Serial.begin(9600);
+    
     if (logger.init() != 0) {
         Serial.println("Something went wrong with the logger. Exiting...");
         exit(1);
@@ -19,7 +22,7 @@ void setup() {
 
 void loop() {
     delay(500);
-    logger.pushData(1, 2, 3, 4);
+    logger.pushData(1.1+increment, 2.1+increment, 3.1+increment, 4.1+increment);
     Serial.print("Time size: ");
     Serial.println(logger.logData.time.size());
     Serial.print("Low pressure size: ");
@@ -33,4 +36,5 @@ void loop() {
         writer.writeToFile(logger.logData);
         logger.flushArrays();
     }
+    increment++;
 }

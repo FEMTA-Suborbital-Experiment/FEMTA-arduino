@@ -68,16 +68,21 @@ int Writer::writeToBinary(logType data) {
     String extension(".dat");
     File logFile = SD.open(fileName + extension, O_CREAT | O_APPEND | O_WRITE);
 
-    // TODO: Apply DMA 
-    logFile.write((const uint8_t*)&data.time.size(), sizeof(data.time.size()));    
-    logFile.write((const uint8_t*)&data.lowPressure.size(), sizeof(data.lowPressure.size()));    
-    logFile.write((const uint8_t*)&data.highPressure.size(), sizeof(data.highPressure.size()));
-    logFile.write((const uint8_t*)&data.acceleration.size(), sizeof(data.acceleration.size()));
+    int t_size = data.time.size();
+    int lp_size = data.lowPressure.size();
+    int hp_size = data.highPressure.size();
+    int a_size = data.acceleration.size();
 
-    logFile.write((const uint8_t*)&data.time[0], sizeof(float)*data.time.size());    
-    logFile.write((const uint8_t*)&data.lowPressure[0], sizeof(float)*data.lowPressure.size());    
-    logFile.write((const uint8_t*)&data.highPressure[0], sizeof(float)*data.highPressure.size());
-    logFile.write((const uint8_t*)&data.acceleration[0], sizeof(float)*data.acceleration.size());
+    // TODO: Apply DMA 
+    logFile.write(reinterpret_cast<const uint8_t*>(&t_size), sizeof(t_size));    
+    logFile.write(reinterpret_cast<const uint8_t*>(&lp_size), sizeof(lp_size));    
+    logFile.write(reinterpret_cast<const uint8_t*>(&hp_size), sizeof(hp_size));
+    logFile.write(reinterpret_cast<const uint8_t*>(&a_size), sizeof(a_size));
+
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.time[0]), sizeof(float)*data.time.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.lowPressure[0]), sizeof(float)*data.lowPressure.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.highPressure[0]), sizeof(float)*data.highPressure.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.acceleration[0]), sizeof(float)*data.acceleration.size());
     
     logFile.close();
     return 0; 
