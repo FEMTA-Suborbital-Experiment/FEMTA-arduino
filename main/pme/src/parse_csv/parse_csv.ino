@@ -1,30 +1,31 @@
-#include "../AtmSphericProf.h"
-#include <CSV_Parser.h>
-#include <SD.h>
+#include "AtmSphericProf.h"
 
 
-AtomSphericProfile::ParseCSV() {
+void AtomSphericProfile::ParseCSV() {
   // if (!SD.begin(PIN_SPI_CS)) {
   //   Serial.println(F("SD CARD FAILED, OR NOT PRESENT!"));
   //   return 1; // don't do anything more:
   // }
 
   // open file for reading
-  csvFile = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
+  String csv_str;
+  File csvFile = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
   if (csvFile) {
     if (csvFile.available()) {
-      String csv_str = csvFile.readString();
+      csv_str = csvFile.readString();
       Serial.println(csv_str);
     }
 
-    file.close();
   } else {
     Serial.print(F("SD Card: error on opening file"));
   }
+  csvFile.close();
+  const char* csv_string = csv_str.c_str();
 
-  CSVParser parser(csv_str, "fffff");
+  CSV_Parser parser(csv_string, "fffff");
+  parser.parseLeftover();
   AtomSphericProfile::pressure_mpi = (float*)parser["Pressure Mpirani (torr)"];
-  AtomSphericProfile::pressure_hcsm = (float*)parser["Pressure HSCM (Pa)"];
+  AtomSphericProfile::pressure_hscm = (float*)parser["Pressure HSCM (Pa)"];
   AtomSphericProfile::accel_z = (float*)parser["Accel (x) (m/s)"];
   AtomSphericProfile::accel_y = (float*)parser["Accel (y)"];
   AtomSphericProfile::accel_x = (float*)parser["Accel (y)"];
@@ -32,7 +33,7 @@ AtomSphericProfile::ParseCSV() {
 }
 
 
-AtomSphericProfile::PrintArray(float* array, const char* array_name) {
+void AtomSphericProfile::PrintArray(float* array, const char* array_name) {
   Serial.print(array_name);
   Serial.print(": ");
   for(int i = 0; i < COLUMN_LEN; i++) {

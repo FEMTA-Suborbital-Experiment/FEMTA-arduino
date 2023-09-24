@@ -1,5 +1,5 @@
-#include "parse_csv.ino"
-
+//#include "parse_csv.ino"
+#include "AtmSphericProf.h"
 
 File csvFile;
 
@@ -47,13 +47,13 @@ void setup() {
     Serial.println("error opening test.txt");
   }
 
-  AtomSphericProfile atmspheric_prof_test(test_csv_file);
-  AtomSphericProfile.ParseCSV();
-  AtomSphericProfile.PrintArray(atmspheric_prof_test.pressure_hscm, "pressure_hscm");
-  AtomSphericProfile.PrintArray(atmspheric_prof_test.pressure_mpi, "pressure_mpi");
-  AtomSphericProfile.PrintArray(atmspheric_prof_test.accel_x, "accel_x");
-  AtomSphericProfile.PrintArray(atmspheric_prof_test.accel_y, "accel_y");
-  AtomSphericProfile.PrintArray(atmspheric_prof_test.accel_z, "accel_z");
+  AtomSphericProfile atmspheric_prof_test(csv_file_name);
+  atmspheric_prof_test.ParseCSV();
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_hscm, "pressure_hscm");
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_mpi, "pressure_mpi");
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_x, "accel_x");
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_y, "accel_y");
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_z, "accel_z");
 }
 
 void loop() {
