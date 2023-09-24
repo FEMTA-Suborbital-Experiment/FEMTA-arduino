@@ -26,14 +26,7 @@ void SensorPoller::init() {
         Serial.println("No LSM303 detected! Fatal error - cannot continue.");
         while (1) { delay(1000); }; // Hang indefinitely
     }
-    digitalWrite(PIN_DPT_SELECTOR_0, 1);
-    digitalWrite(PIN_DPT_SELECTOR_1, 0);
-    digitalWrite(PIN_DPT_SELECTOR_2, 0);
-    if (!this->pressure.init()) {
-        Serial.println("No MS5837 detected! Fatal error - cannot continue.");
-        while (1) {}; // Hang indefinitely
-    }
-    this->pressure.setFluidDensity(1.225); // fluid density of air is
+    this->initPressureSensors();
     this->accel.setRange(LSM303_RANGE_8G);
     this->accel.setMode(LSM303_MODE_NORMAL);
 
@@ -51,14 +44,28 @@ void SensorPoller::readAccelerometer(float *vec) {
     vec[2] = event.acceleration.x;
 }
 
+void SensorPoller::initPressureSensors() {
+    for (int i = 0; i < 5; i++) {
+        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
+        digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
+        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
+        Serial.print("Init pressure sensor ");
+        Serial.println(i);
+        if (!this->pressures[i]->init()) {
+            Serial.println("No MS5837 detected! Fatal error - cannot continue.");
+            while (1) { delay(1000); }; // Hang indefinitely
+        }
+    }
+}
+
 void SensorPoller::readPressureSensors(float *pressures, float *temperatures) {
     for (int i = 0; i < 5; i++) {
         digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
         digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
         digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
-        this->pressure.read();
-        pressures[i] = this->pressure.pressure();
-        temperatures[i] = this->pressure.temperature();
+        this->pressures[i]->read();
+        pressures[i] = this->pressures[i]->pressure();
+        temperatures[i] = this->pressures[i]->temperature();
     }
 }
 

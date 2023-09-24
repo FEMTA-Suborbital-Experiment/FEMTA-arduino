@@ -26,8 +26,16 @@ class SensorPoller {
         void readPressureSensors(float *pressures, float *temperatures); // float[5], float[5]
         void readFlowMeter(float *flow); // float
     private:
+        void initPressureSensors();
+
         Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(54321);
-        MS5837 pressure;
+        MS5837 pressure0;
+        MS5837 pressure1;
+        MS5837 pressure2;
+        MS5837 pressure3;
+        MS5837 pressure4;
+
+        MS5837 *pressures[5] = { &pressure0, &pressure1, &pressure2, &pressure3, &pressure4 };
 
         unsigned long lastRead;
         float sensorVector[5];
