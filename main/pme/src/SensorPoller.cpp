@@ -1,6 +1,6 @@
-#include <HSCM.h>
-#include <PVC4000.h>
-#include <sensirion-lf.h>
+// #include <HSCM.h>
+// #include <PVC4000.h>
+#include "sensirion-lf.h"
 #include <MS5837.h>
 #include <Adafruit_LSM303_Accel.h>
 #include <Adafruit_Sensor.h>
@@ -9,22 +9,38 @@
 
 #include "SensorPoller.h"
 
+int sensor_array[5][3] = {
+    {1, 0, 0},
+    {0, 1, 1},
+    {0, 1, 0},
+    {0, 0, 1},
+    {0, 0, 0}
+};
 
-SensorPoller::SensorPoller() {
+SensorPoller::SensorPoller() { }
+
+void SensorPoller::init() {
     /* Assign a unique ID to this sensor at the same time */
-    this->accel = Adafruit_LSM303_Accel_Unified(54321);
     if (!this->accel.begin()) {
         /* There was a problem detecting the ADXL345 ... check your connections */
         Serial.println("No LSM303 detected! Fatal error - cannot continue.");
-        while (1) {}; // Hang indefinitely
+        while (1) { delay(1000); }; // Hang indefinitely
     }
-    if (!this->lowAltBaro.init()) {
+    digitalWrite(PIN_DPT_SELECTOR_0, 1);
+    digitalWrite(PIN_DPT_SELECTOR_1, 0);
+    digitalWrite(PIN_DPT_SELECTOR_2, 0);
+    if (!this->pressure.init()) {
         Serial.println("No MS5837 detected! Fatal error - cannot continue.");
         while (1) {}; // Hang indefinitely
     }
-    this->lowAltBaro.setFluidDensity(1.225); // fluid density of air is
+    this->pressure.setFluidDensity(1.225); // fluid density of air is
     this->accel.setRange(LSM303_RANGE_8G);
     this->accel.setMode(LSM303_MODE_NORMAL);
+
+    if (SLF3X.init() != 0) {
+        Serial.println("Error during SLF3X init. Stopping application.");
+        while (1) { delay(1000); } // loop forever
+    }
 }
 
 void SensorPoller::readAccelerometer(float *vec) {
@@ -35,22 +51,46 @@ void SensorPoller::readAccelerometer(float *vec) {
     vec[2] = event.acceleration.x;
 }
 
+void SensorPoller::readPressureSensors(float *pressures, float *temperatures) {
+    for (int i = 0; i < 5; i++) {
+        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
+        digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
+        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
+        this->pressure.read();
+        pressures[i] = this->pressure.pressure();
+        temperatures[i] = this->pressure.temperature();
+    }
+}
+
 void SensorPoller::readLowAltBaro(float *val) {
-    this->lowAltBaro.read();
-    *val = this->lowAltBaro.altitude();
 }
 
 void SensorPoller::readHighAltBaro(float *val) {
 
 }
 
-void SensorPoller::readVector(float *vec) {
-    float accel[3];
-    this->readAccelerometer(accel);
-    float lowAlt;
-    this->readLowAltBaro(&lowAlt);
-    vec[0] = accel[0];
-    vec[1] = accel[1];
-    vec[2] = accel[2];
-    vec[3] = lowAlt;
+void SensorPoller::readFlowMeter(float *flow) {
+    int ret = SLF3X.readSample();
+    if (ret == 0) {
+        *flow = SLF3X.getFlow(); 
+    } else {
+        Serial.print("Error reading sample from SLF3X flow sensor: ");
+        Serial.println(ret);
+    }
 }
+
+// void SensorPoller::readVector(float *vec, unsigned long time_millis) {
+//     if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return;
+//     this->lastRead = time_millis;
+// 
+//     float accel[3];
+//     this->readAccelerometer(accel);
+// 
+//     float pressure[5];
+//     float temperature[5];
+//     this->readPressureSensors(pressure, temperature);
+//     vec[0] = accel[0];
+//     vec[1] = accel[1];
+//     vec[2] = accel[2];
+//     vec[3] = 0;
+// }

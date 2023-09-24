@@ -35,6 +35,8 @@
 #ifndef SENSIRION_LF_H
 #define SENSIRION_LF_H
 
+#include <stdint.h>
+
 class SensirionLF
 {
 public:

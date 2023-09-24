@@ -1,4 +1,5 @@
 // Include libraries
+#include "src/SensorPoller.h"
 #include "src/StateLogic.h"
 #include "src/PinCtrl.h"
 //#include <AtmosProfiles.h>
@@ -15,6 +16,9 @@ Logger logger;
 
 // Parameters for flight simulation
 bool readSensors{false};
+
+// Record last sensor read time
+unsigned long lastRead = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -72,5 +76,7 @@ void loop() {
 
   atmosProfiles.advanceTimeStep();
   stateLogic.determineFlightState();
-    
+
+  if ((time_millis - lastRead) > 1000 / (pollRate)) {
+  }
 }
