@@ -41,6 +41,11 @@ void setup() {
     Serial.println("Finish setup");
 }
 
+/**
+ * @brief Reads the output from logger_test.ino and outputs it to Serial.
+ * Preserves floats!
+ * 
+ */
 void loop() {
     Serial.println("Reading vector");
     delay(1000);
