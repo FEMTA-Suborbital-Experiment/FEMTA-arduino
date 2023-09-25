@@ -1,3 +1,20 @@
+/**
+ * @file PinCtrl.cpp
+ * 
+ * @mainpage FEMTA Pin Controller
+ * 
+ * @section summary Summary
+ * 
+ * The FEMTA Pin Controller takes an input of pins responsible for controlling
+ * the FEMTA experiment. The user then calls functions to open and close the
+ * valves in the experiment on the high-level. 
+ * 
+ * While the user opens and closes the valves, the underlaying Protothread
+ * that the PinController inherits checks the state and impulses the
+ * pins that corresponds to each valve.
+ * 
+ */
+
 #include "PinCtrl.h"
 
 const float t_delay{50};
@@ -9,13 +26,13 @@ const float t_delay{50};
  * the signal pin is an output which is measured by the FEMTA Thruster Experiment
  * and determines whether the Thruster Experiment should begin at the right time.
  * 
- * @param flowClose1 
- * @param flowOpen1 
- * @param flowClose2 
- * @param flowOpen2 
- * @param ventClose 
- * @param ventOpen 
- * @param signal 
+ * @param flowClose1 closeSV1
+ * @param flowOpen1 openSV1
+ * @param flowClose2 closeSV2
+ * @param flowOpen2 openSV2
+ * @param ventClose closeLV1
+ * @param ventOpen openLV1
+ * @param signal signal
  */
 PinCtrl::PinCtrl(
   int flowClose1,
@@ -49,7 +66,7 @@ PinCtrl::PinCtrl(
  * 
  * @return int 
  */
-int PinCtrl::init() {
+int PinCtrl::init(bool willInitializeValves) {
     pinMode(closeSV1, OUTPUT);
     pinMode(closeSV2, OUTPUT);
     pinMode(openSV1, OUTPUT);
@@ -57,9 +74,11 @@ int PinCtrl::init() {
     pinMode(closeLV1, OUTPUT);
     pinMode(openLV1, OUTPUT);
     
-    closeFlowValve1();
-    closeFlowValve2();
-    openVentValve();
+    if (willInitializeValves) {
+      closeFlowValve1();
+      closeFlowValve2();
+      openVentValve();
+    }
 
     return 0;
 }
@@ -89,21 +108,21 @@ bool PinCtrl::Run() {
         digitalWrite(closeSV2, HIGH);
         PT_WAIT_UNTIL(millis() - lastTime > t_delay);
         lastTime = millis();
-        closeSV1_bool = 0;
+        closeSV2_bool = 0;
         digitalWrite(closeSV2, LOW);
       }
       if (openSV1_bool) {
         digitalWrite(openSV1, HIGH);
         PT_WAIT_UNTIL(millis() - lastTime > t_delay);
         lastTime = millis();
-        closeSV1_bool = 0;
+        openSV1_bool = 0;
         digitalWrite(openSV1, LOW);
       }
       if (openSV2_bool) {
         digitalWrite(openSV2, HIGH);
         PT_WAIT_UNTIL(millis() - lastTime > t_delay);
         lastTime = millis();
-        closeSV1_bool = 0;
+        openSV2_bool = 0;
         digitalWrite(openSV2, LOW);
       }
       if (closeLV1_bool) {

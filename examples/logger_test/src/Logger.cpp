@@ -1,3 +1,23 @@
+/**
+ * @file Logger.cpp
+ * 
+ * @mainpage FEMTA Logger
+ * 
+ * @section Summary
+ * 
+ * The FEMTA Logger takes an max capacity integer as an input for the
+ * time, low pressure, high pressure, and acceleration values. Checking if
+ * these structs are filled are done at the high-level, to give the user
+ * control of actions to do if the structs are filled.
+ * 
+ * @section Logging Order
+ * 
+ * The FEMTA Logger takes the following order when pushing sensor values into
+ * its data: time, low pressure, high pressure, and acceleration. The FEMTA
+ * writer respects this order when it writes to files. 
+ * 
+ */
+
 #include "Logger.h"
 
 /**

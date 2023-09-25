@@ -1,3 +1,16 @@
+/**
+ * @file Writer.cpp
+ * 
+ * @mainpage FEMTA Writer
+ * 
+ * @section Summary
+ * 
+ * This is the FEMTA writer purposed for taking a logType struct as input from
+ * the FEMTA Logger and writing its contents to a text file or binary. Data is
+ * written in the order specified in the FEMTA Logger.
+ *   
+ * 
+ */
 #include "Writer.h"
 
 /**

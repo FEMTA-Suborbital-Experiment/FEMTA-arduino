@@ -10,12 +10,16 @@ bool isOpen{0};
 
 void setup() {
     Serial.begin(9600);
+    Serial.println("Begin setup");
+
     if (PinController.init() != 0) {
         Serial.println("Something went wrong with the PinController. Exiting...");
         exit(1);
     }
+    Serial.println("Initialized pin controller");
     lastTime = millis();
     lastTimeMu = micros();
+    Serial.println("Finish setup");
 }
 
 /**
@@ -26,7 +30,8 @@ void setup() {
  * 
  */
 void loop() {
-    // Serial.println(micros() - lastTimeMu);
+    Serial.println("Loop");
+    Serial.println(micros() - lastTimeMu);
     PinController.Run();
     if ((millis() - lastTime) > timeDelay) {
         isOpen = !isOpen;

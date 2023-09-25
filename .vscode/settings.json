@@ -58,6 +58,7 @@
         "sd.h": "c",
         "atmosphericstruct.h": "c",
         "atmosphericvector.h": "c",
-        "protothread.h": "c"
+        "protothread.h": "c",
+        "adafruit_zerodma.h": "c"
     }
 }
