@@ -1,6 +1,5 @@
 #ifndef ATMSPHERICPROF
 #define ATMSPHERICPROF
-//#include <StandardCplusplus.h>
 #include <string>
 #include <vector>
 #include <fstream>

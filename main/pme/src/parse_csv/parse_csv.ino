@@ -9,10 +9,17 @@ void AtomSphericProfile::ParseCSV() {
 
   // open file for reading
   String csv_str;
+  char current_char;
+  File csv_file = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
   File csvFile = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
+  unsigned long total_chars = csvFile.size();
   if (csvFile) {
     if (csvFile.available()) {
-      csv_str = csvFile.readString();
+      for(unsigned long i = 0; i <= total_chars; i++){
+        current_char = csvFile.read();
+        csv_str += current_char;
+      }
+      //csv_str = csvFile.readString();
       Serial.println(csv_str);
     }
 
