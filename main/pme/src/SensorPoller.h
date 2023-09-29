@@ -8,9 +8,9 @@
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
 
-#define PIN_DPT_SELECTOR_0 12
+#define PIN_DPT_SELECTOR_0 10
 #define PIN_DPT_SELECTOR_1 11
-#define PIN_DPT_SELECTOR_2 10
+#define PIN_DPT_SELECTOR_2 12
 
 class SensorPoller {
     public:
@@ -39,6 +39,10 @@ class SensorPoller {
 
         unsigned long lastRead;
         float sensorVector[5];
+
+        bool accelGood = true;
+        bool pressuresGood[5] = {1, 1, 1, 1, 1};
+        bool flowGood = true;
 };
 
 #endif

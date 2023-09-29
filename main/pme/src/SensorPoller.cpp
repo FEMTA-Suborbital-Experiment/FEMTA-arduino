@@ -24,6 +24,7 @@ void SensorPoller::init() {
     if (!this->accel.begin()) {
         /* There was a problem detecting the ADXL345 ... check your connections */
         Serial.println("No LSM303 detected! Fatal error - cannot continue.");
+        this->accelGood = false;
         while (1) { delay(1000); }; // Hang indefinitely
     }
     this->initPressureSensors();
@@ -31,12 +32,14 @@ void SensorPoller::init() {
     this->accel.setMode(LSM303_MODE_NORMAL);
 
     if (SLF3X.init() != 0) {
-        Serial.println("Error during SLF3X init. Stopping application.");
-        while (1) { delay(1000); } // loop forever
+        Serial.println("Error during SLF3X init. Continuing in failed state.");
+        delay(5000);
+        this->flowGood = false;
     }
 }
 
 void SensorPoller::readAccelerometer(float *vec) {
+    if (!this->accelGood) return;
     sensors_event_t event;
     this->accel.getEvent(&event);
     vec[0] = event.acceleration.x;
@@ -52,14 +55,20 @@ void SensorPoller::initPressureSensors() {
         Serial.print("Init pressure sensor ");
         Serial.println(i);
         if (!this->pressures[i]->init()) {
-            Serial.println("No MS5837 detected! Fatal error - cannot continue.");
-            while (1) { delay(1000); }; // Hang indefinitely
+            Serial.print("No MS5837 detected on:");
+            Serial.print(sensor_array[i][0]);
+            Serial.print(sensor_array[i][1]);
+            Serial.println(sensor_array[i][2]);
+            delay(5000);
+
+            this->pressuresGood[i] = 0;
         }
     }
 }
 
 void SensorPoller::readPressureSensors(float *pressures, float *temperatures) {
     for (int i = 0; i < 5; i++) {
+        if (!this->pressuresGood[i]) continue;
         digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
         digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
         digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
@@ -77,6 +86,7 @@ void SensorPoller::readHighAltBaro(float *val) {
 }
 
 void SensorPoller::readFlowMeter(float *flow) {
+    if (!this->flowGood) return;
     int ret = SLF3X.readSample();
     if (ret == 0) {
         *flow = SLF3X.getFlow(); 
