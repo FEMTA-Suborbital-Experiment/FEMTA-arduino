@@ -47,12 +47,12 @@ void setup() {
   }
 
   AtomSphericProfile atmspheric_prof_test(csv_file_name);
-  atmspheric_prof_test.ParseCSV();
-  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_hscm, "pressure_hscm");
-  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_mpi, "pressure_mpi");
-  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_x, "accel_x");
-  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_y, "accel_y");
-  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_z, "accel_z");
+  int len_of_array = atmspheric_prof_test.ParseCSVChunk();
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_hscm, "pressure_hscm", len_of_array);
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_mpi, "pressure_mpi", len_of_array);
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_x, "accel_x", len_of_array);
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_y, "accel_y", len_of_array);
+  atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_z, "accel_z", len_of_array);
 }
 
 void loop() {
