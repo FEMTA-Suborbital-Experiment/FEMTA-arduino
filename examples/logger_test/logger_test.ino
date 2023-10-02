@@ -4,7 +4,7 @@
 bool writeToBinary{1};
 
 Logger logger(100);
-Writer writer("LT05", writeToBinary);
+Writer writer("LT06", writeToBinary);
 int increment{0};
 
 void setup() {
@@ -21,7 +21,7 @@ void setup() {
 }
 
 void loop() {
-    delay(500);
+    delay(5);
     logger.pushData(1.1+increment, 2.1+increment, 3.1+increment, 4.1+increment);
     Serial.print("Time size: ");
     Serial.println(logger.logData.time.size());

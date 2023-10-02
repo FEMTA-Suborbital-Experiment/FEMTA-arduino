@@ -6,7 +6,7 @@
 
 File dataFile;
 
-const char* file_name{"LT05.DAT"};
+const char* file_name{"LT06.DAT"};
 
 union {
   float fval;
@@ -49,7 +49,7 @@ void setup() {
 void loop() {
     Serial.println("Reading vector");
     delay(1000);
-    for (int i=0; i < 100; ++i) {
+    for (int i=0; i < 300; ++i) {
         Serial.print(buf.time[i], 2);
         Serial.print('\t');
         Serial.print(buf.lowPressure[i],2);
