@@ -55,9 +55,9 @@ void SensorPoller::readAccelerometer(float *vec) {
 
 void SensorPoller::initPressureSensors() {
     for (int i = 0; i < 5; i++) {
-        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
+        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][2]);
         digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
-        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
+        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][0]);
         Serial.print("Init pressure sensor ");
         Serial.println(i);
         delay(100);
@@ -70,8 +70,11 @@ void SensorPoller::initPressureSensors() {
 
             this->pressuresGood[i] = 0;
         } else {
-          Serial.println("Good!");
-          this->pressures[i]->setModel(MS5837::MS5837_30BA);
+          Serial.print("Good! For: ");
+          Serial.print(sensor_array[i][0]);
+          Serial.print(sensor_array[i][1]);
+          Serial.println(sensor_array[i][2]);
+          this->pressures[i]->setModel(MS5837::MS5837_02BA);
         }
     }
 }
@@ -79,9 +82,9 @@ void SensorPoller::initPressureSensors() {
 void SensorPoller::readPressureSensors(float *pressures, float *temperatures) {
     for (int i = 0; i < 5; i++) {
         if (!this->pressuresGood[i]) continue;
-        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][0]);
+        digitalWrite(PIN_DPT_SELECTOR_0, sensor_array[i][2]);
         digitalWrite(PIN_DPT_SELECTOR_1, sensor_array[i][1]);
-        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
+        digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][0]);
         this->pressures[i]->read();
         pressures[i] = this->pressures[i]->pressure();
         temperatures[i] = this->pressures[i]->temperature();
