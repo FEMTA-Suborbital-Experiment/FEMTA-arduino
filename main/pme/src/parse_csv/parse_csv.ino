@@ -1,49 +1,63 @@
 #include "AtmSphericProf.h"
 
 
-void AtomSphericProfile::ParseCSV() {
-  // if (!SD.begin(PIN_SPI_CS)) {
-  //   Serial.println(F("SD CARD FAILED, OR NOT PRESENT!"));
-  //   return 1; // don't do anything more:
-  // }
-
-  // open file for reading
+int AtomSphericProfile::ParseCSVChunk() {
   String csv_str;
   char current_char;
-  File csv_file = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
-  File csvFile = SD.open(AtomSphericProfile::csv_file_name, FILE_READ);
-  unsigned long total_chars = csvFile.size();
-  if (csvFile) {
-    if (csvFile.available()) {
-      for(unsigned long i = 0; i <= total_chars; i++){
-        current_char = csvFile.read();
-        csv_str += current_char;
-      }
-      //csv_str = csvFile.readString();
-      Serial.println(csv_str);
+  char* token;
+
+  // open file for reading
+  File csvFile = SD.open(this->csv_file_name, FILE_READ);
+  if (!csvFile) {
+    Serial.println("Failed to open data.csv!");
+    return 0;
+  }
+
+  //Reading once to get past the header line of the csv file
+  csv_str = file.readStringUntil('\n')
+
+  int linesParsed = 0;
+  char buffer[BUFFER_SIZE]; // Adjust the buffer size as needed
+  while (file.available() && linesParsed < LEN_OF_CHUNK) {
+    // Read a line into the buffer
+    csv_str = file.readStringUntil('\n')
+    if(csv_str != NULL) {
+      csv_str.toCharArray(buffer, sizeof(buffer));
+    }
+    else {
+      csvFile.close();
+      return -1; //indicating that reached end of file
     }
 
-  } else {
-    Serial.print(F("SD Card: error on opening file"));
-  }
-  csvFile.close();
-  const char* csv_string = csv_str.c_str();
+    // Tokenize the line using strtok
+    token = strtok(buffer, ",");
 
-  CSV_Parser parser(csv_string, "fffff");
-  parser.parseLeftover();
-  AtomSphericProfile::pressure_mpi = (float*)parser["Pressure Mpirani (torr)"];
-  AtomSphericProfile::pressure_hscm = (float*)parser["Pressure HSCM (Pa)"];
-  AtomSphericProfile::accel_z = (float*)parser["Accel (x) (m/s)"];
-  AtomSphericProfile::accel_y = (float*)parser["Accel (y)"];
-  AtomSphericProfile::accel_x = (float*)parser["Accel (y)"];
-  AtomSphericProfile::time = (float*)parser["Time (ms)"];
+    if (token) {
+      time[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->pressure_hscm[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->pressure_mpi[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->accel_x[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->accel_y[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->accel_z[linesParsed] = atof(token);
+
+      linesParsed++;
+    }
+  }
+
+  csvFile.close();
+  return linesParsed;
 }
 
 
-void AtomSphericProfile::PrintArray(float* array, const char* array_name) {
+void AtomSphericProfile::PrintArray(float* array, const char* array_name, int len_of_array) {
   Serial.print(array_name);
   Serial.print(": ");
-  for(int i = 0; i < COLUMN_LEN; i++) {
+  for(int i = 0; i < len_of_array; i++) {
     Serial.print(array[i]);
     Serial.print(" ");
   }

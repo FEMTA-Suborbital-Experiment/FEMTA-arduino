@@ -41,6 +41,7 @@ void AtomSphericProfile::ParseCSV() {
             accel_y.push_back(atof(temp_str.c_str()));
             getline(input_str, temp_str, ',');
             accel_z.push_back(atof(temp_str.c_str()));
+            count += 1;
 
             line_in_file = "";
         }
