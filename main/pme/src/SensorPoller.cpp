@@ -21,11 +21,15 @@ SensorPoller::SensorPoller() { }
 
 void SensorPoller::init() {
     /* Assign a unique ID to this sensor at the same time */
+    pinMode(PIN_DPT_SELECTOR_0, OUTPUT);
+    pinMode(PIN_DPT_SELECTOR_1, OUTPUT);
+    pinMode(PIN_DPT_SELECTOR_2, OUTPUT);
+
     if (!this->accel.begin()) {
         /* There was a problem detecting the ADXL345 ... check your connections */
         Serial.println("No LSM303 detected! Fatal error - cannot continue.");
         this->accelGood = false;
-        while (1) { delay(1000); }; // Hang indefinitely
+        // while (1) { delay(1000); }; // Hang indefinitely
     }
     this->initPressureSensors();
     this->accel.setRange(LSM303_RANGE_8G);
@@ -39,12 +43,14 @@ void SensorPoller::init() {
 }
 
 void SensorPoller::readAccelerometer(float *vec) {
+    Serial.print("Is accel good? ");
+    Serial.println(this->accelGood);
     if (!this->accelGood) return;
     sensors_event_t event;
     this->accel.getEvent(&event);
     vec[0] = event.acceleration.x;
-    vec[1] = event.acceleration.x;
-    vec[2] = event.acceleration.x;
+    vec[1] = event.acceleration.y;
+    vec[2] = event.acceleration.z;
 }
 
 void SensorPoller::initPressureSensors() {
@@ -54,6 +60,7 @@ void SensorPoller::initPressureSensors() {
         digitalWrite(PIN_DPT_SELECTOR_2, sensor_array[i][2]);
         Serial.print("Init pressure sensor ");
         Serial.println(i);
+        delay(100);
         if (!this->pressures[i]->init()) {
             Serial.print("No MS5837 detected on:");
             Serial.print(sensor_array[i][0]);
@@ -62,6 +69,9 @@ void SensorPoller::initPressureSensors() {
             delay(5000);
 
             this->pressuresGood[i] = 0;
+        } else {
+          Serial.println("Good!");
+          this->pressures[i]->setModel(MS5837::MS5837_30BA);
         }
     }
 }

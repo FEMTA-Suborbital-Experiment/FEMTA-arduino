@@ -3,8 +3,12 @@
 SensorPoller sensors;
 
 void setup() {
+  while (!Serial)
+  ;
   Serial.begin(115200);
+  Serial.println("hello");
   sensors.init();
+  Serial.println("hey");
 }
 
 void checkAccel() {
@@ -44,8 +48,8 @@ void checkFlowMeter() {
 }
 
 void loop() {
-  // checkAccel();
-  // checkPressure();
+  checkAccel();
+  checkPressure();
   // checkFlowMeter();
   Serial.println("Hi");
   delay(1000);
