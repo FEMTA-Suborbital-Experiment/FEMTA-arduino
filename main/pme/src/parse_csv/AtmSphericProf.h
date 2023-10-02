@@ -16,15 +16,15 @@ class AtomSphericProfile {
         This class stores the atomspheric data recorded during the flight experiment.
     */
     public:
-        float pressure_mpi[LEN_OF_CHUNK] = {};
-        float pressure_hscm[LEN_OF_CHUNK] = {};
-        float accel_x[LEN_OF_CHUNK] = {};
-        float accel_y[LEN_OF_CHUNK] = {};
-        float accel_z[LEN_OF_CHUNK] = {};
-        float time[LEN_OF_CHUNK] = {};
+        float pressure_mpi[LEN_OF_CHUNK];
+        float pressure_hscm[LEN_OF_CHUNK];
+        float accel_x[LEN_OF_CHUNK];
+        float accel_y[LEN_OF_CHUNK];
+        float accel_z[LEN_OF_CHUNK];
+        float time[LEN_OF_CHUNK];
         const char* csv_file_name;
 
-        int ParseCSVChunk();
+        int ParseCSVChunk(int*);
 
         void PrintArray(float*, const char*, int);
 
