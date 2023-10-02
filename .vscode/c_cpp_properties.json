@@ -19,19 +19,7 @@
             ],
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Adafruit_TinyUSB_Arduino\\src\\arduino",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\libraries\\Adafruit_TinyUSB_Arduino\\src\\arduino",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS\\5.4.0\\CMSIS\\Core\\Include\\",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS\\5.4.0\\CMSIS\\DSP\\Include\\",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\tools\\CMSIS-Atmel\\1.2.2\\CMSIS\\Device\\ATMEL\\",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\cores\\arduino",
-                "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\variants\\feather_m0",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include\\c++\\9.2.1",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include\\c++\\9.2.1\\arm-none-eabi",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include\\c++\\9.2.1\\backward",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\lib\\gcc\\arm-none-eabi\\9.2.1\\include",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\lib\\gcc\\arm-none-eabi\\9.2.1\\include-fixed",
-                "c:\\users\\jacob\\appdata\\local\\arduino15\\packages\\adafruit\\tools\\arm-none-eabi-gcc\\9-2019q4\\arm-none-eabi\\include"
+                "/Users/ahcis/Desktop/Purdue/Year_2_Semester_1/FEMTA/FEMTA-arduino/libraries",
             ],
             "forcedInclude": [
                 "C:\\Users\\jacob\\AppData\\Local\\Arduino15\\packages\\adafruit\\hardware\\samd\\1.7.10\\cores\\arduino\\Arduino.h"
