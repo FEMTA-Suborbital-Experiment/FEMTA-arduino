@@ -48,7 +48,8 @@ int AtomSphericProfile::ParseCSVChunk() {
       linesParsed++;
     }
   }
-
+  
+  Serial.printf("Number of Lines Parsed: %d\n", linesParsed);
   csvFile.close();
   return linesParsed;
 }
