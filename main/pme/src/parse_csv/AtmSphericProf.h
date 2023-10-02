@@ -9,7 +9,7 @@
 
 #define PIN_SPI_CS 4
 #define LEN_OF_CHUNK 50
-#define BUFFER_SIZE 128
+#define BUFFER_SIZE 250
 
 class AtomSphericProfile {
     /*
