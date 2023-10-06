@@ -1,7 +1,7 @@
 #include "AtmSphericProf.h"
 
 
-int AtomSphericProfile::ParseCSVChunk() {
+int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
   String csv_str;
   char current_char;
   char* token;
@@ -16,17 +16,20 @@ int AtomSphericProfile::ParseCSVChunk() {
   //Reading once to get past the header line of the csv file
   csv_str = csvFile.readStringUntil('\n');
 
+  int end_of_file = csvFile.size();
   int linesParsed = 0;
   char buffer[BUFFER_SIZE]; // Adjust the buffer size as needed
-  while (csvFile.available() && linesParsed < LEN_OF_CHUNK) {
+  while (csvFile.available() && linesParsed < LEN_OF_CHUNK && *current_pos < end_of_file) {
     // Read a line into the buffer
     csv_str = csvFile.readStringUntil('\n');
+    Serial.println(csv_str);
     if(csv_str != NULL) {
       csv_str.toCharArray(buffer, sizeof(buffer));
     }
     else {
+      Serial.println("Reached End of File.");
       csvFile.close();
-      return -1; //indicating that reached end of file
+      return linesParsed; //indicating that reached end of file
     }
 
     // Tokenize the line using strtok
@@ -45,10 +48,11 @@ int AtomSphericProfile::ParseCSVChunk() {
       token = strtok(NULL, ",");
       this->accel_z[linesParsed] = atof(token);
 
+      *current_pos = csvFile.position();
       linesParsed++;
     }
   }
-  
+
   Serial.printf("Number of Lines Parsed: %d\n", linesParsed);
   csvFile.close();
   return linesParsed;

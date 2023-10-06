@@ -4,6 +4,7 @@ File csvFile;
 
 void setup() {
 
+  int current_pos_in_file = 0;
   const char* csv_file_name = "test.csv";
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
@@ -47,7 +48,7 @@ void setup() {
   }
 
   AtomSphericProfile atmspheric_prof_test(csv_file_name);
-  int len_of_array = atmspheric_prof_test.ParseCSVChunk();
+  int len_of_array = atmspheric_prof_test.ParseCSVChunk(&current_pos_in_file);
   atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_hscm, "pressure_hscm", len_of_array);
   atmspheric_prof_test.PrintArray(atmspheric_prof_test.pressure_mpi, "pressure_mpi", len_of_array);
   atmspheric_prof_test.PrintArray(atmspheric_prof_test.accel_x, "accel_x", len_of_array);
