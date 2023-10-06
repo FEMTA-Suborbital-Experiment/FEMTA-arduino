@@ -9,12 +9,18 @@ int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
   // open file for reading
   File csvFile = SD.open(this->csv_file_name, FILE_READ);
   if (!csvFile) {
-    Serial.println("Failed to open data.csv!");
+    Serial.print("Failed to open: ");
+    Serial.println(this->csv_file_name);
     return 0;
   }
+  // Serial.println("Opened file");
 
   //Reading once to get past the header line of the csv file
-  csv_str = csvFile.readStringUntil('\n');
+  if (*current_pos == 0) {
+    csv_str = csvFile.readStringUntil('\n');
+  } else {
+    csvFile.seek(*current_pos);
+  }
 
   int end_of_file = csvFile.size();
   int linesParsed = 0;
@@ -22,7 +28,7 @@ int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
   while (csvFile.available() && linesParsed < LEN_OF_CHUNK && *current_pos < end_of_file) {
     // Read a line into the buffer
     csv_str = csvFile.readStringUntil('\n');
-    Serial.println(csv_str);
+    // Serial.println(csv_str);
     if(csv_str != NULL) {
       csv_str.toCharArray(buffer, sizeof(buffer));
     }
@@ -31,6 +37,7 @@ int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
       csvFile.close();
       return linesParsed; //indicating that reached end of file
     }
+    // Serial.println("Got line");
 
     // Tokenize the line using strtok
     token = strtok(buffer, ",");
@@ -38,22 +45,24 @@ int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
     if (token) {
       time[linesParsed] = atof(token);
       token = strtok(NULL, ",");
-      this->pressure_hscm[linesParsed] = atof(token);
-      token = strtok(NULL, ",");
-      this->pressure_mpi[linesParsed] = atof(token);
-      token = strtok(NULL, ",");
       this->accel_x[linesParsed] = atof(token);
-      token = strtok(NULL, ",");
-      this->accel_y[linesParsed] = atof(token);
-      token = strtok(NULL, ",");
-      this->accel_z[linesParsed] = atof(token);
+      // token = strtok(NULL, ",");
+      // this->pressure_hscm[linesParsed] = atof(token);
+      // token = strtok(NULL, ",");
+      // this->pressure_mpi[linesParsed] = atof(token);
+      // token = strtok(NULL, ",");
+      // this->accel_x[linesParsed] = atof(token);
+      // token = strtok(NULL, ",");
+      // this->accel_y[linesParsed] = atof(token);
+      // token = strtok(NULL, ",");
+      // this->accel_z[linesParsed] = atof(token);
 
       *current_pos = csvFile.position();
       linesParsed++;
     }
   }
 
-  Serial.printf("Number of Lines Parsed: %d\n", linesParsed);
+  // Serial.printf("Number of Lines Parsed: %d\n", linesParsed);
   csvFile.close();
   return linesParsed;
 }
