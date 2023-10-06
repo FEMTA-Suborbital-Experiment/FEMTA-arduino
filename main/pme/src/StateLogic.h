@@ -10,6 +10,8 @@
 using namespace std;
 
 #define BUFF_SIZE 15
+#define NUM_OF_TRANSITIONS 10
+#define STORAGE_FILE_NAME "StateStorage.dat"
 
 class StateLogic
 {
@@ -34,6 +36,16 @@ class StateLogic
         float oldAccelBuffer[BUFF_SIZE] = {0};
         int newPtr = 0;
         int oldPtr = 0;
+
+        typedef struct {
+            int[NUM_OF_TRANSITIONS] current_state;
+            int[NUM_OF_TRANSITIONS] previous_state;
+            float[NUM_OF_TRANSITIONS] time_of_transit;
+            uint16_t current_time;
+        } StateStorage;
+
+        void read_state_storage (StateStorage);
+        void write_state_storage (StateStorage);
 
         StateLogic();
         void init();
