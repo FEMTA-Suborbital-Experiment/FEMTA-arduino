@@ -13,22 +13,29 @@
  */
 #include "Writer.h"
 
+const String Writer::logSizeFile{"logSize"};
+
 /**
  * @brief Construct a Writer class, which is responsible for the taking 
- * logType data and writing it to a file for post-processing. 
+ * logType data and writing it to a file for post-processing. This takes some
+ * user parameters for writing to binary (false by default) or overwriting the
+ * log file (for testing purposes, false by default).   
  * 
  * @param name 
- * @param toBinary 
- * @param chipSelect 
+ * @param chipSelect
+ * @param toBinary
+ * @param overwrite  
  */
-Writer::Writer(const char* name, const bool toBinary, const int chipSelect) : 
-    fileName{name}, willWriteToBinary{toBinary}, chipSelect{chipSelect}
+Writer::Writer(const char* name, const int chipSelect, const bool toBinary, const bool overwrite) : 
+    fileName{name}, willWriteToBinary{toBinary}, chipSelect{chipSelect}, willOverwrite{overwrite}
 {}
 
 
 /**
  * @brief Initialize the writer by making sure the SD card can be detected. 
- * If not detected after 10 tries, time out.
+ * If not detected after 10 tries, time out. Also check to see if the user
+ * plans to overwrite the existing log file on initialization.
+ * 
  * 
  * @return int 
  */
@@ -48,6 +55,26 @@ int Writer::init() {
         }
         count++;
         delay(1000);
+    }
+
+    delay(100);
+
+    if (willOverwrite) {
+        Serial.println("Will overwrite.");
+
+        String extension(".dat");
+        if (SD.exists(fileName + extension)) {
+            File fileExists = SD.open(fileName + extension, O_TRUNC);
+            SD.remove(fileName + extension);
+            Serial.println("Truncated log file.");
+            fileExists.close();
+        }
+        if (SD.exists(logSizeFile + extension)) {
+            File logSizeExists = SD.open(logSizeFile + extension, O_TRUNC);
+            SD.remove(logSizeFile + extension);
+            Serial.println("Truncated log size.");
+            logSizeExists.close();
+        }
     }
 
     return 0; 
@@ -72,25 +99,40 @@ int Writer::writeToFile(logType data) {
  * @brief Serializes the struct to a binary file. This requires a reader class,
  * but it is a faster method of saving data because we lack the overhead of a
  * typical character (256 values per character versus 100 values). Note that we
- * must establish a standard as to how we store our data.
+ * must establish a standard as to how we store our data. 
  * 
  * @param data 
  * @return int 
  */
 int Writer::writeToBinary(logType data) {
     String extension(".dat");
-    File logFile = SD.open(fileName + extension, O_CREAT | O_APPEND | O_WRITE);
+    logFile = SD.open(fileName + extension, FILE_WRITE);
+    logSize = SD.open(logSizeFile + extension, O_READ | O_WRITE | O_CREAT);
 
-    int t_size = data.time.size();
-    int lp_size = data.lowPressure.size();
-    int hp_size = data.highPressure.size();
-    int a_size = data.acceleration.size();
+    int vector_size{0};
+
+    Serial.print("Initialized Old size: ");
+    Serial.println(vector_size);
+
+    logSize.read(reinterpret_cast<uint8_t*>(&vector_size), sizeof(vector_size));
+
+    logSize.close();
+
+    Serial.print("Stored Old size: ");
+    Serial.println(vector_size);
+
+    int t_size = data.time.size() + vector_size;
+    int lp_size = data.lowPressure.size() + vector_size;
+    int hp_size = data.highPressure.size() + vector_size;
+    int a_size = data.acceleration.size() + vector_size;
+
+    Serial.print("Size of logSize: ");
+    Serial.println(t_size);
+
+    logSize = SD.open(logSizeFile + extension, O_READ | O_WRITE | O_CREAT);
 
     // TODO: Apply DMA 
-    logFile.write(reinterpret_cast<const uint8_t*>(&t_size), sizeof(t_size));    
-    logFile.write(reinterpret_cast<const uint8_t*>(&lp_size), sizeof(lp_size));    
-    logFile.write(reinterpret_cast<const uint8_t*>(&hp_size), sizeof(hp_size));
-    logFile.write(reinterpret_cast<const uint8_t*>(&a_size), sizeof(a_size));
+    logSize.write(reinterpret_cast<const uint8_t*>(&t_size), sizeof(t_size));    
 
     logFile.write(reinterpret_cast<const uint8_t*>(&data.time[0]), sizeof(float)*data.time.size());    
     logFile.write(reinterpret_cast<const uint8_t*>(&data.lowPressure[0]), sizeof(float)*data.lowPressure.size());    
@@ -98,6 +140,7 @@ int Writer::writeToBinary(logType data) {
     logFile.write(reinterpret_cast<const uint8_t*>(&data.acceleration[0]), sizeof(float)*data.acceleration.size());
     
     logFile.close();
+    logSize.close();
     return 0; 
 }
 

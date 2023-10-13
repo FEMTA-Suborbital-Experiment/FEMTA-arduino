@@ -10,7 +10,7 @@
 
 class Reader {
     public:
-        Reader(int chipSelect);
+        Reader(int chipSelect, int bufferSize);
 
         int readFile(const char* fileName);
 
@@ -18,7 +18,10 @@ class Reader {
         int init();
     private:
         int mChipSelect;
+        int mBufferSize;
         File mFile;
+
+        static const char* logSizeFile;
 };
 
 #endif 

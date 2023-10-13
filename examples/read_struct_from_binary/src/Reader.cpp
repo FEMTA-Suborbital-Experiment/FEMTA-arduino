@@ -2,14 +2,16 @@
 
 const int MAX_COUNTS{10};
 
+const char* Reader::logSizeFile{"logSize"};
+
 /**
  * @brief Construct a Reader class, which takes a chip number (usually 4)
  * for where the SD card is located.
  * 
  * @param chipSelect 
  */
-Reader::Reader(int chipSelect)
- :mChipSelect{chipSelect}
+Reader::Reader(int chipSelect, int bufferSize)
+ : mChipSelect{chipSelect}, mBufferSize{bufferSize}
 {}
 
 /**
@@ -50,29 +52,44 @@ int Reader::readFile(const char* fileName) {
  * @brief Outputs the time, low pressure, high pressure, and acceleration values
  * into a single, large vector for reading. 
  * 
+ * The writer class stores data by struct, rather than by outputting to a large
+ * vector. To compensate for this, we first read each vector to a temporary vector,
+ * push each index of the temporary vector to the output vector, and repeat this
+ * process for each chunk of the buffer. 
+ * 
  * https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot
  * @return logType 
  */
 logType Reader::readVector() {
+    String extension(".dat");
+
+    File logSize = SD.open(logSizeFile + extension, FILE_READ);
     logType out;
+    logType holder;
     int t_size;
     int lp_size;
     int hp_size;
     int a_size;
 
-    mFile.read(reinterpret_cast<uint8_t*>(&t_size), sizeof(t_size));
-    mFile.read(reinterpret_cast<uint8_t*>(&lp_size), sizeof(lp_size));
-    mFile.read(reinterpret_cast<uint8_t*>(&hp_size), sizeof(hp_size));
-    mFile.read(reinterpret_cast<uint8_t*>(&a_size), sizeof(a_size));
+    logSize.read(reinterpret_cast<uint8_t*>(&t_size), sizeof(t_size));
+
+    logSize.close();
+    
     out.time.resize(t_size);
-    out.lowPressure.resize(lp_size); 
-    out.highPressure.resize(hp_size); 
-    out.acceleration.resize(a_size); 
+    out.lowPressure.resize(t_size); 
+    out.highPressure.resize(t_size); 
+    out.acceleration.resize(t_size); 
     
-    mFile.read(reinterpret_cast<uint8_t*>(&out.time[0]), sizeof(float)*out.time.size());
-    mFile.read(reinterpret_cast<uint8_t*>(&out.lowPressure[0]), sizeof(float)*out.lowPressure.size());
-    mFile.read(reinterpret_cast<uint8_t*>(&out.highPressure[0]), sizeof(float)*out.highPressure.size());
-    mFile.read(reinterpret_cast<uint8_t*>(&out.acceleration[0]), sizeof(float)*out.acceleration.size());
-    
+    // TODO: Find a better implementation which directly reads the file contents to the buffer
+    for (int i=0; i < t_size / mBufferSize; ++i) {
+        mFile.read(reinterpret_cast<uint8_t*>(&out.time[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.lowPressure[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.highPressure[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.acceleration[i*mBufferSize]), sizeof(float)*mBufferSize);
+
+        Serial.print("Buffer chunk index: ");
+        Serial.println(i);
+    }
+
     return out;
 }

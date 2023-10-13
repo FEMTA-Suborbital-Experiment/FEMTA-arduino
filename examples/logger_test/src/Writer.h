@@ -34,17 +34,23 @@ static const int max_timeout{10};
  */
 class Writer {
     public:
-        Writer(const char* name, const bool toBinary, const int chipSelect=4);
+
+        // TODO: Alternate constructor which shouldn't take booleans as parameters
+        Writer(const char* name, const int chipSelect=4, const bool toBinary=0, const bool overwrite=0);
 
         int writeToFile(logType data);
         int init();
     private:
         File logFile;
+        File logSize;
         int writeToBinary(logType data);
         int writeToText(logType data);
         const char* fileName;
         bool willWriteToBinary;
+        bool willOverwrite;
         const int chipSelect;
+
+        static const String logSizeFile;
 };
 
 #endif
