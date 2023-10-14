@@ -9,6 +9,8 @@ unsigned long timeDelay{1000};
 bool isOpen{0};
 
 void setup() {
+    // while (!Serial) {}
+
     Serial.begin(9600);
     Serial.println("Begin setup");
 
@@ -30,8 +32,11 @@ void setup() {
  * 
  */
 void loop() {
-    Serial.println("Loop");
-    Serial.println(micros() - lastTimeMu);
+    // Serial.println("Loop");
+    // Serial.print("Function loop: ");
+    // Serial.println(micros() - lastTimeMu);
+    // Serial.print("Inner loop: ");
+    // Serial.println(millis() - lastTime);
     PinController.Run();
     if ((millis() - lastTime) > timeDelay) {
         isOpen = !isOpen;

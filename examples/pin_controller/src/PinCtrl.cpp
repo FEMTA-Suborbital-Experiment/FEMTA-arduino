@@ -50,14 +50,7 @@ PinCtrl::PinCtrl(
   closeLV1{ventClose}, 
   openLV1{ventOpen}, 
   signalPin{signal}
-{
-  closeSV1_bool = 0;
-  openSV1_bool = 0;
-  closeSV2_bool = 0;
-  openSV2_bool = 0;
-  closeSV1_bool = 0;
-  closeSV1_bool = 0;
-}
+{}
 
 
 /**
@@ -95,52 +88,53 @@ bool PinCtrl::Run() {
   static float lastTime = 0;
   PT_BEGIN();
 
-    for(;;) {
+  while (1) {
+    lastTime = millis();
+    // Serial.println("In loop");
+    PT_YIELD();
+    if (closeSV1_bool) {
+      digitalWrite(closeSV1, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
       lastTime = millis();
-       if (closeSV1_bool) {
-        digitalWrite(closeSV1, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        closeSV1_bool = 0;
-        digitalWrite(closeSV1, LOW);
-      }
-      if (closeSV2_bool) {
-        digitalWrite(closeSV2, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        closeSV2_bool = 0;
-        digitalWrite(closeSV2, LOW);
-      }
-      if (openSV1_bool) {
-        digitalWrite(openSV1, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        openSV1_bool = 0;
-        digitalWrite(openSV1, LOW);
-      }
-      if (openSV2_bool) {
-        digitalWrite(openSV2, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        openSV2_bool = 0;
-        digitalWrite(openSV2, LOW);
-      }
-      if (closeLV1_bool) {
-        digitalWrite(closeLV1, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        closeLV1_bool = 0;
-        digitalWrite(closeLV1, LOW);
-      }
-      if (openLV1_bool) {
-        digitalWrite(openLV1, HIGH);
-        PT_WAIT_UNTIL(millis() - lastTime > t_delay);
-        lastTime = millis();
-        openLV1_bool = 0;
-        digitalWrite(openLV1, LOW);
-      }
-
+      closeSV1_bool = 0;
+      digitalWrite(closeSV1, LOW);
     }
+    if (closeSV2_bool) {
+      digitalWrite(closeSV2, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
+      lastTime = millis();
+      closeSV2_bool = 0;
+      digitalWrite(closeSV2, LOW);
+    }
+    if (openSV1_bool) {
+      digitalWrite(openSV1, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
+      lastTime = millis();
+      openSV1_bool = 0;
+      digitalWrite(openSV1, LOW);
+    }
+    if (openSV2_bool) {
+      digitalWrite(openSV2, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
+      lastTime = millis();
+      openSV2_bool = 0;
+      digitalWrite(openSV2, LOW);
+    }
+    if (closeLV1_bool) {
+      digitalWrite(closeLV1, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
+      lastTime = millis();
+      closeLV1_bool = 0;
+      digitalWrite(closeLV1, LOW);
+    }
+    if (openLV1_bool) {
+      digitalWrite(openLV1, HIGH);
+      PT_WAIT_UNTIL(millis() - lastTime > t_delay);
+      lastTime = millis();
+      openLV1_bool = 0;
+      digitalWrite(openLV1, LOW);
+    }
+  }
 
   PT_END();
 }

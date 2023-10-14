@@ -63,12 +63,12 @@ class PinCtrl : public Protothread {
     int openLV1;
     int signalPin;
 
-    bool closeSV1_bool; 
-    bool openSV1_bool;
-    bool closeSV2_bool; 
-    bool openSV2_bool;
-    bool closeLV1_bool; 
-    bool openLV1_bool;
+    bool closeSV1_bool{0}; 
+    bool openSV1_bool{0};
+    bool closeSV2_bool{0}; 
+    bool openSV2_bool{0};
+    bool closeLV1_bool{0}; 
+    bool openLV1_bool{0};
 
     void togglePin(int pin);
     

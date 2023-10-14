@@ -19,30 +19,39 @@ void setup() {
 }
 
 void loop() {
+    closeAllValves();
+    // checkValveStates();
+    delay(1000);
+    openAllValves();
+    // checkValveStates();
+    delay(1000);
+}
+
+void closeAllValves() {
+    Serial.println("Close all valves");
     digitalWrite(openSV2, LOW);
     digitalWrite(openSV1, LOW);
     digitalWrite(openLV1, LOW);
     digitalWrite(closeSV2, HIGH);
     digitalWrite(closeSV1, HIGH);
     digitalWrite(closeLV1, HIGH);
-    Serial.println(digitalRead(openSV1));
-    Serial.println(digitalRead(closeSV1));
-    Serial.println(digitalRead(openSV2));
-    Serial.println(digitalRead(closeSV2));
-    Serial.println(digitalRead(openLV1));
-    Serial.println(digitalRead(closeLV1));
-    delay(1000);
+}
+
+void openAllValves() {
+    Serial.println("Open all valves");
     digitalWrite(openSV2, HIGH);
     digitalWrite(openSV1, HIGH);
     digitalWrite(openLV1, HIGH);
     digitalWrite(closeSV2, LOW);
     digitalWrite(closeSV1, LOW);
     digitalWrite(closeLV1, LOW);
+}
+
+void checkValveStates() {
     Serial.println(digitalRead(openSV1));
     Serial.println(digitalRead(closeSV1));
     Serial.println(digitalRead(openSV2));
     Serial.println(digitalRead(closeSV2));
     Serial.println(digitalRead(openLV1));
     Serial.println(digitalRead(closeLV1));
-    delay(1000);
 }

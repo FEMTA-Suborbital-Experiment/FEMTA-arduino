@@ -3,6 +3,6 @@
     "board": "adafruit:samd:adafruit_feather_m0",
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
-    "sketch": "examples\\logging\\read_struct_from_binary\\read_struct_from_binary.ino",
-    "port": "COM18"
+    "sketch": "examples\\pin_controller\\pin_controller.ino",
+    "port": "COM5"
 }
