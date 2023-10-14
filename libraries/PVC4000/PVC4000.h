@@ -1,3 +1,11 @@
+/**
+ * @file PVC4000.h
+ * @author Jacob Valdez (valdez24@purdue.edu)
+ * @brief The PVC4000 reads and outputs the ambient pressure and temperature in 
+ * the environment (assumed to be air).
+ * 
+ */
+
 #ifndef PVC_4000_H
 #define PVC_4000_H
 
@@ -17,6 +25,10 @@ typedef enum {
 } pvcModel;
 
 
+/**
+ * @brief PVC4000 class for the PVC4000 or PVC4100 MEMs transducers
+ * 
+ */
 class PVC4000 {
 
     public:    
