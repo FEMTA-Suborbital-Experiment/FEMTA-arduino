@@ -16,6 +16,14 @@
  * its data: time, low pressure, high pressure, and acceleration. The FEMTA
  * writer respects this order when it writes to files. 
  * 
+ * @section Utility
+ * 
+ * Push the time, low pressure, high pressure, and acceleration values
+ * read from the sensors using pushData(). These values will be stored
+ * in the class struct. Check to make sure that the vector is full using
+ * isStructFilled(). If it is, use the FEMTA writer class to write to a file, 
+ * and flush the array.
+ * 
  */
 
 #include "Logger.h"

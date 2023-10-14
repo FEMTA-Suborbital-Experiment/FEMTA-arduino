@@ -6,10 +6,6 @@
  * writing to a text file (for ground processing) and writing to a binary (to
  * enable better performance during the experiment).
  * 
- * The FEMTA writer makes use of direct-memory access methods for the SAMD
- * architecture (Arduino Zero, Adafruit Feather M0), enabling the CPU to perform
- * other important operations, such as flight state detection, simultaneously with
- * write operations. 
  *  
  * @date 2023-09-25
  * 
