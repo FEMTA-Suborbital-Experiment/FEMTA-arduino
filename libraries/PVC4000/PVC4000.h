@@ -57,6 +57,7 @@ class PVC4000 {
         void calibrate();
         void init();
 
+        float baselineTemperature();
         float temperature();
         float pressure();
 
@@ -76,6 +77,7 @@ class PVC4000 {
         void exitWriteMode();
 
         uint16_t writeCalibrationTemperature();
+        int getBaselineTemperature();
         
         void write(uint16_t data);
 
@@ -83,12 +85,15 @@ class PVC4000 {
         
         int readRaw();
 
+        float _baselineTemperature;
         float _temperature;
         float _pressure;
 
         uint16_t t_upper;
+        uint16_t bt_upper;
         uint16_t raw_upper;
         uint16_t t_lower;
+        uint16_t bt_lower;
         uint16_t raw_lower;
 
         float coeff;

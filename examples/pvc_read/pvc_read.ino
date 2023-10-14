@@ -66,8 +66,9 @@ void loop() {
     if (status == 0) {
         dataString = appendData(dataString, pvc.pressure(), 2);
         dataString = appendData(dataString, pvc.temperature(), 2);
-        dataString = appendData(dataString, pvc.get_raw_lower(), 2);
-        dataString = appendData(dataString, pvc.get_raw_upper(), 2);
+        dataString = appendData(dataString, pvc.baselineTemperature(), 2);
+        //dataString = appendData(dataString, pvc.get_raw_lower(), 2);
+        //dataString = appendData(dataString, pvc.get_raw_upper(), 2);
     }
     
     DEBUG_SERIAL.println(dataString);

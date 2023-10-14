@@ -109,6 +109,10 @@ float PVC4000::temperature() {
     return _temperature;
 }
 
+float PVC4000::baselineTemperature() {
+    return _baselineTemperature;
+}
+
 /**
  * @brief Obtain the pressure from the last read command.
  * 
@@ -162,13 +166,39 @@ float PVC4000::interpolate(uint16_t x) {
 }
 
 
+int PVC4000::getBaselineTemperature() {
+    int read_size = 3;
+    Wire.write(Reg2_R);
+    Wire.requestFrom(m_i2cAddress, (uint16_t) read_size);
+    uint16_t i, data_reg[read_size] = {0};
+    for (i = 0; i < read_size; i++) {
+        delay(4);
+        data_reg[i] = Wire.read();
+    }
+
+    uint16_t sum = data_reg[1] + data_reg[2];
+    uint16_t checksum = 1 + ~(sum);
+    
+    if (checksum == data_reg[0]) {
+        Serial.println("Checksum is incorrect");
+        return 1;
+    };
+
+    bt_lower = data_reg[1];
+    bt_upper = data_reg[2];
+
+    return 0;
+}
+
+
 /**
  * @brief Poll the sensor for new pressure and temperature readings.
  * 
  */
 void PVC4000::calibrate() {
     uint16_t p_count = (raw_upper << 8 | raw_lower);
-    uint16_t t_count = t_lower + t_upper;
+    uint16_t t_count = (t_upper << 8 | t_lower);
+    uint16_t bt_count = (bt_upper << 8 | bt_lower);
 
     if (firstCalibration == true) {
         firstCalibration = false;
@@ -197,7 +227,10 @@ void PVC4000::calibrate() {
         _pressure = 13.5 * (p_count - 10000) + 10000;
         // _pressure = interpolate(p_count);
     }
-    _temperature = t_count;
+
+    // TODO: 
+    _temperature = t_count / 1024.0;
+    _baselineTemperature = bt_count;
 }
 
 /**
@@ -262,6 +295,10 @@ int PVC4000::readRaw() {
     raw_lower = data_reg[2];
     t_upper = data_reg[4];
     t_lower = data_reg[5];
+
+    if (getBaselineTemperature() != 0) {
+        return 1;
+    };
 
     return 0;
 }
