@@ -62,7 +62,14 @@ int Writer::init() {
     if (willOverwrite) {
         Serial.println("Will overwrite.");
 
-        String extension(".dat");
+        String extension("");
+
+        if (willWriteToBinary) {
+            extension = String(".dat");
+        } else {
+            extension = String(".txt");
+        }
+
         if (SD.exists(fileName + extension)) {
             File fileExists = SD.open(fileName + extension, O_TRUNC);
             SD.remove(fileName + extension);
