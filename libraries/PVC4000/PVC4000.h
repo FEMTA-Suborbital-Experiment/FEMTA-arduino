@@ -1,3 +1,11 @@
+/**
+ * @file PVC4000.h
+ * @author Jacob Valdez (valdez24@purdue.edu)
+ * @brief The PVC4000 reads and outputs the ambient pressure and temperature in 
+ * the environment (assumed to be air).
+ * 
+ */
+
 #ifndef PVC_4000_H
 #define PVC_4000_H
 
@@ -17,6 +25,10 @@ typedef enum {
 } pvcModel;
 
 
+/**
+ * @brief PVC4000 class for the PVC4000 or PVC4100 MEMs transducers
+ * 
+ */
 class PVC4000 {
 
     public:    
@@ -45,6 +57,7 @@ class PVC4000 {
         void calibrate();
         void init();
 
+        float baselineTemperature();
         float temperature();
         float pressure();
 
@@ -64,6 +77,7 @@ class PVC4000 {
         void exitWriteMode();
 
         uint16_t writeCalibrationTemperature();
+        int getBaselineTemperature();
         
         void write(uint16_t data);
 
@@ -71,12 +85,15 @@ class PVC4000 {
         
         int readRaw();
 
+        float _baselineTemperature;
         float _temperature;
         float _pressure;
 
         uint16_t t_upper;
+        uint16_t bt_upper;
         uint16_t raw_upper;
         uint16_t t_lower;
+        uint16_t bt_lower;
         uint16_t raw_lower;
 
         float coeff;

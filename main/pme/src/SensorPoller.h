@@ -1,8 +1,8 @@
 #ifndef FEMTA_SENSOR_POLLER
 #define FEMTA_SENSOR_POLLER
 
-// #include <HSCM.h>
-// #include <PVC4000.h>
+#include <HSCM.h>
+#include <PVC4000.h>
 #include <MS5837.h>
 #include <Adafruit_LSM303_Accel.h>
 #include <Adafruit_Sensor.h>
@@ -21,8 +21,8 @@ class SensorPoller {
         SensorPoller();
         void init();
         void readAccelerometer(float *vec); // float[3]
-        void readLowAltBaro(float *val); // float
-        void readHighAltBaro(float *val); // float
+        void readLowAltBaro(float *pressure, float *temp); // float, HSCM
+        void readHighAltBaro(float *pressure, float *temp); // float, PVC
         void readPressureSensors(float *pressures, float *temperatures); // float[5], float[5]
         void readFlowMeter(float *flow); // float
     private:
@@ -36,6 +36,9 @@ class SensorPoller {
         MS5837 pressure4;
 
         MS5837 *pressures[5] = { &pressure0, &pressure1, &pressure2, &pressure3, &pressure4 };
+
+        PVC4000 highAlt = PVC4000(0x50); // high altitude baro
+        HSCM_PSI lowAlt = HSCM_PSI(0x20, 0, 0);
 
         unsigned long lastRead;
         float sensorVector[5];

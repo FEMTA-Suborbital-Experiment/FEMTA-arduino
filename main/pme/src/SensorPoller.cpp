@@ -1,10 +1,11 @@
-// #include <HSCM.h>
-// #include <PVC4000.h>
+#include <HSCM.h>
 #include "sensirion-lf.h"
 #include <MS5837.h>
+#include <PVC4000.h>
 #include <Adafruit_LSM303_Accel.h>
 #include <Adafruit_Sensor.h>
 #include <Wire.h>
+#include <SPI.h>
 #include <vector>
 
 #include "SensorPoller.h"
@@ -21,6 +22,8 @@ SensorPoller::SensorPoller() { }
 
 void SensorPoller::init() {
     /* Assign a unique ID to this sensor at the same time */
+    Wire.begin();
+
     pinMode(PIN_DPT_SELECTOR_0, OUTPUT);
     pinMode(PIN_DPT_SELECTOR_1, OUTPUT);
     pinMode(PIN_DPT_SELECTOR_2, OUTPUT);
@@ -34,6 +37,8 @@ void SensorPoller::init() {
     this->initPressureSensors();
     this->accel.setRange(LSM303_RANGE_8G);
     this->accel.setMode(LSM303_MODE_NORMAL);
+
+    this->highAlt.init();
 
     if (SLF3X.init() != 0) {
         Serial.println("Error during SLF3X init. Continuing in failed state.");
@@ -91,11 +96,27 @@ void SensorPoller::readPressureSensors(float *pressures, float *temperatures) {
     }
 }
 
-void SensorPoller::readLowAltBaro(float *val) {
+void SensorPoller::readLowAltBaro(float *pressure, float *temp) {
+    int status = lowAlt.read();
+    if (status >= 2) {
+        Serial.print("HSCM Error: ");
+        Serial.println(status);
+        return;
+    }
+    *pressure = lowAlt.pressure();
+    *temp = lowAlt.temperature();
 }
 
-void SensorPoller::readHighAltBaro(float *val) {
+void SensorPoller::readHighAltBaro(float *pressure, float *temp) {
+    int status = highAlt.read();
+    if (status != 0) {
+        Serial.print("PVC4000 Error: ");
+        Serial.println(status);
+        return;
+    }
 
+    *pressure = highAlt.pressure();
+    *temp = highAlt.baselineTemperature();
 }
 
 void SensorPoller::readFlowMeter(float *flow) {
