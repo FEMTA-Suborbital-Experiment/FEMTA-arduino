@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_s_d_lib" kind="namespace" language="C++">
+    <compoundname>SDLib</compoundname>
+    <innerclass refid="class_s_d_lib_1_1_file" prot="public">SDLib::File</innerclass>
+    <innerclass refid="class_s_d_lib_1_1_s_d_class" prot="public">SDLib::SDClass</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_s_d_8cpp_1a311ba8ede71ad9e1775f79a8f07a3728" prot="public" static="no" mutable="no">
+        <type><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDClass</ref></type>
+        <definition>SDClass SDLib::SD</definition>
+        <argsstring></argsstring>
+        <name>SD</name>
+        <qualifiedname>SDLib::SD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="635" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="635" bodyend="-1" declfile="libraries/SD-1.2.4/src/SD.h" declline="122" declcolumn="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_s_d_8cpp_1a104e127390a656ec68fb11b782acb7c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SDLib::getNextPathComponent</definition>
+        <argsstring>(const char *path, unsigned int *p_offset, char *buffer)</argsstring>
+        <name>getNextPathComponent</name>
+        <qualifiedname>SDLib::getNextPathComponent</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>unsigned int *</type>
+          <declname>p_offset</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="61" column="8" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="61" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="_s_d_8cpp_1a319c3e0473e7947f3fb18a9d90b50f08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::walkPath</definition>
+        <argsstring>(const char *filepath, SdFile &amp;parentDir, boolean(*callback)(SdFile &amp;parentDir, const char *filePathComponent, boolean isLastComponent, void *object), void *object=NULL)</argsstring>
+        <name>walkPath</name>
+        <qualifiedname>SDLib::walkPath</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>parentDir</declname>
+        </param>
+        <param>
+          <type>boolean(*)(<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;parentDir, const char *filePathComponent, boolean isLastComponent, void *object)</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>object</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="120" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="120" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="_s_d_8cpp_1a0e0b68c4f48284b2ee7858912d281c34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::callback_pathExists</definition>
+        <argsstring>(SdFile &amp;parentDir, const char *filePathComponent, boolean, void *)</argsstring>
+        <name>callback_pathExists</name>
+        <qualifiedname>SDLib::callback_pathExists</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>parentDir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filePathComponent</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="235" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="235" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="_s_d_8cpp_1a415aeca91de622c5cfa94b4061cd171f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::callback_makeDirPath</definition>
+        <argsstring>(SdFile &amp;parentDir, const char *filePathComponent, boolean isLastComponent, void *object)</argsstring>
+        <name>callback_makeDirPath</name>
+        <qualifiedname>SDLib::callback_makeDirPath</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>parentDir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filePathComponent</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>isLastComponent</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="258" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="258" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="_s_d_8cpp_1a76a2199b84862f7ecb32e64b2b22ff1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::callback_remove</definition>
+        <argsstring>(SdFile &amp;parentDir, const char *filePathComponent, boolean isLastComponent, void *)</argsstring>
+        <name>callback_remove</name>
+        <qualifiedname>SDLib::callback_remove</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>parentDir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filePathComponent</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>isLastComponent</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="313" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="313" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="_s_d_8cpp_1a6c9f39f77f9c789f26652943a110b6b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::callback_rmdir</definition>
+        <argsstring>(SdFile &amp;parentDir, const char *filePathComponent, boolean isLastComponent, void *)</argsstring>
+        <name>callback_rmdir</name>
+        <qualifiedname>SDLib::callback_rmdir</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>parentDir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filePathComponent</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>isLastComponent</declname>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.cpp" line="321" column="11" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="321" bodyend="331"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/SD.cpp" line="55" column="1"/>
+  </compounddef>
+</doxygen>

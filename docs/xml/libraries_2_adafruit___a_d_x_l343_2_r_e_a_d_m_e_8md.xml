@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>ADXL343<sp/>Accelerometer<sp/>Driver<sp/>![Build<sp/>Status](https://github.com/adafruit/Adafruit_ADXL343/workflows/Arduino%20Library%20CI/badge.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>driver<sp/>is<sp/>for<sp/>the<sp/>Adafruit<sp/>ADXL343<sp/>Breakout<sp/>(http://www.adafruit.com/products/),<sp/>and<sp/>is<sp/>based<sp/>on<sp/>Adafruit&apos;s<sp/>Unified<sp/>Sensor<sp/>Library<sp/>(Adafruit_Sensor).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>the<sp/>ADXL343<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>ADXL343<sp/>is<sp/>a<sp/>digital<sp/>accelerometer<sp/>that<sp/>supports<sp/>both<sp/>SPI<sp/>and<sp/>I2C<sp/>mode,<sp/>with<sp/>adjustable<sp/>data<sp/>rata<sp/>and<sp/>&apos;range&apos;<sp/>(+/-2/4/8/16g).<sp/><sp/>The<sp/>Adafruit_ADXL343<sp/>driver<sp/>takes<sp/>advantage<sp/>of<sp/>I2C<sp/>mode<sp/>to<sp/>reduce<sp/>the<sp/>total<sp/>pin<sp/>count<sp/>required<sp/>to<sp/>use<sp/>the<sp/>sensor.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">More<sp/>information<sp/>on<sp/>the<sp/>ADXL345<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>datasheet:<sp/>http://www.analog.com/static/imported-files/data_sheets/ADXL343.pdf</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>the<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library?<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library<sp/>(https://github.com/adafruit/Adafruit_Sensor)<sp/>provides<sp/>a<sp/>common<sp/>interface<sp/>and<sp/>data<sp/>type<sp/>for<sp/>any<sp/>supported<sp/>sensor.<sp/><sp/>It<sp/>defines<sp/>some<sp/>basic<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>(sensor<sp/>limits,<sp/>etc.),<sp/>and<sp/>returns<sp/>standard<sp/>SI<sp/>units<sp/>of<sp/>a<sp/>specific<sp/>type<sp/>and<sp/>scale<sp/>for<sp/>each<sp/>supported<sp/>sensor<sp/>type.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">It<sp/>provides<sp/>a<sp/>simple<sp/>abstraction<sp/>layer<sp/>between<sp/>your<sp/>application<sp/>and<sp/>the<sp/>actual<sp/>sensor<sp/>HW,<sp/>allowing<sp/>you<sp/>to<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>with<sp/>only<sp/>one<sp/>or<sp/>two<sp/>lines<sp/>of<sp/>code<sp/>to<sp/>change<sp/>in<sp/>your<sp/>project<sp/>(essentially<sp/>the<sp/>constructor<sp/>since<sp/>the<sp/>functions<sp/>to<sp/>read<sp/>sensor<sp/>data<sp/>and<sp/>get<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>are<sp/>defined<sp/>in<sp/>the<sp/>base<sp/>Adafruit_Sensor<sp/>class).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>imporant<sp/>useful<sp/>for<sp/>two<sp/>reasons:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.)<sp/>You<sp/>can<sp/>use<sp/>the<sp/>data<sp/>right<sp/>away<sp/>because<sp/>it&apos;s<sp/>already<sp/>converted<sp/>to<sp/>SI<sp/>units<sp/>that<sp/>you<sp/>understand<sp/>and<sp/>can<sp/>compare,<sp/>rather<sp/>than<sp/>meaningless<sp/>values<sp/>like<sp/>0..1023.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.)<sp/>Because<sp/>SI<sp/>units<sp/>are<sp/>standardised<sp/>in<sp/>the<sp/>sensor<sp/>library,<sp/>you<sp/>can<sp/>also<sp/>do<sp/>quick<sp/>sanity<sp/>checks<sp/>working<sp/>with<sp/>new<sp/>sensors,<sp/>or<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>if<sp/>you<sp/>need<sp/>better<sp/>sensitivity<sp/>or<sp/>if<sp/>a<sp/>lower<sp/>cost<sp/>unit<sp/>becomes<sp/>available,<sp/>etc.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Light<sp/>sensors<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>lux,<sp/>gyroscopes<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>rad/s,<sp/>etc.<sp/>...<sp/>freeing<sp/>you<sp/>up<sp/>to<sp/>focus<sp/>on<sp/>the<sp/>data,<sp/>rather<sp/>than<sp/>digging<sp/>through<sp/>the<sp/>datasheet<sp/>to<sp/>understand<sp/>what<sp/>the<sp/>sensor&apos;s<sp/>raw<sp/>numbers<sp/>really<sp/>mean.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>this<sp/>Driver<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code.<sp/><sp/>Please<sp/>support<sp/>Adafruit<sp/>and<sp/>open-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products<sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Written<sp/>by<sp/>Kevin<sp/>(KTOWN)<sp/>Townsend<sp/>for<sp/>Adafruit<sp/>Industries.</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_ADXL343/README.md"/>
+  </compounddef>
+</doxygen>

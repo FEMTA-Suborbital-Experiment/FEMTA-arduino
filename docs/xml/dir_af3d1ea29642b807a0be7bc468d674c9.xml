@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_af3d1ea29642b807a0be7bc468d674c9" kind="dir">
+    <compoundname>libraries/SD-1.2.4/src/utility</compoundname>
+    <innerfile refid="_fat_structs_8h">FatStructs.h</innerfile>
+    <innerfile refid="_sd2_card_8cpp">Sd2Card.cpp</innerfile>
+    <innerfile refid="_sd2_card_8h">Sd2Card.h</innerfile>
+    <innerfile refid="_sd2_pin_map_8h">Sd2PinMap.h</innerfile>
+    <innerfile refid="_sd_fat_8h">SdFat.h</innerfile>
+    <innerfile refid="_sd_fatmainpage_8h">SdFatmainpage.h</innerfile>
+    <innerfile refid="_sd_fat_util_8h">SdFatUtil.h</innerfile>
+    <innerfile refid="_sd_file_8cpp">SdFile.cpp</innerfile>
+    <innerfile refid="_sd_info_8h">SdInfo.h</innerfile>
+    <innerfile refid="_sd_volume_8cpp">SdVolume.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/"/>
+  </compounddef>
+</doxygen>

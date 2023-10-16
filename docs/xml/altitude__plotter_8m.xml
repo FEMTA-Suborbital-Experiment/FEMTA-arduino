@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="altitude__plotter_8m" kind="file" language="Objective-C">
+    <compoundname>altitude_plotter.m</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="altitude__plotter_8m_1af8cd9d9ccea7c45d462811c6cd1d1525" prot="public" static="no" mutable="no">
+        <type>Script to make an altitude plot of altitude txt Jacob Valdez</type>
+        <definition>Script to make an altitude plot of altitude txt Jacob Valdez altitude</definition>
+        <argsstring></argsstring>
+        <name>altitude</name>
+        <initializer>= readmatrix(&apos;altitude.txt&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/altitude_plotter.m" line="4" column="1" bodyfile="examples/simbox_integration/data/altitude_plotter.m" bodystart="4" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="altitude__plotter_8m_1a9d34c045144dd595affae17236b9337f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>plot</definition>
+        <argsstring>(altitude)</argsstring>
+        <name>plot</name>
+        <param>
+          <type>altitude</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/altitude_plotter.m" line="6" column="1" declfile="examples/simbox_integration/data/altitude_plotter.m" declline="6" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="altitude__plotter_8m_1acc3ead88a08be04f01ffbcba751d016b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>xlabel</definition>
+        <argsstring>(&quot;Index&quot;)</argsstring>
+        <name>xlabel</name>
+        <param>
+          <type>&quot;Index&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/altitude_plotter.m" line="7" column="1" declfile="examples/simbox_integration/data/altitude_plotter.m" declline="7" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="altitude__plotter_8m_1a2d00a5b92ff321e23e7dfedadf09d488" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ylabel</definition>
+        <argsstring>(&quot;Altitude [km]&quot;)</argsstring>
+        <name>ylabel</name>
+        <param>
+          <type>&quot;Altitude &quot;</type>
+          <array>[km]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/altitude_plotter.m" line="8" column="1" declfile="examples/simbox_integration/data/altitude_plotter.m" declline="8" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="altitude__plotter_8m_1a18d7d9ae0789c03bf422ea3c46c40fce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Assumed to be in kilometers</type>
+        <definition>Assumed to be in kilometers title</definition>
+        <argsstring>(&quot;Altitude Plot of altitude.txt&quot;)</argsstring>
+        <name>title</name>
+        <param>
+          <type>&quot;Altitude Plot of altitude.txt&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/altitude_plotter.m" line="9" column="1" declfile="examples/simbox_integration/data/altitude_plotter.m" declline="9" declcolumn="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">%<sp/>Script<sp/>to<sp/>make<sp/>an<sp/>altitude<sp/>plot<sp/>of<sp/>altitude.txt</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">%<sp/>Jacob<sp/>Valdez</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">altitude<sp/>=<sp/>readmatrix(</highlight><highlight class="stringliteral">&apos;altitude.txt&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">plot(altitude);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">xlabel(</highlight><highlight class="stringliteral">&quot;Index&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">ylabel(</highlight><highlight class="stringliteral">&quot;Altitude<sp/>[km]&quot;</highlight><highlight class="normal">);<sp/>%<sp/>Assumed<sp/>to<sp/>be<sp/>in<sp/>kilometers</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">title(</highlight><highlight class="stringliteral">&quot;Altitude<sp/>Plot<sp/>of<sp/>altitude.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="examples/simbox_integration/data/altitude_plotter.m"/>
+  </compounddef>
+</doxygen>

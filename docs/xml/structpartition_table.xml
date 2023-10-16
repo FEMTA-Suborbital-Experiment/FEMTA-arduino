@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structpartition_table" kind="struct" language="C++" prot="public">
+    <compoundname>partitionTable</compoundname>
+    <includes refid="_fat_structs_8h" local="no">FatStructs.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpartition_table_1adf386afb1f33046d8b6a1a0afa780ec9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::boot</definition>
+        <argsstring></argsstring>
+        <name>boot</name>
+        <qualifiedname>partitionTable::boot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boot Indicator . Indicates whether the volume is the active partition. Legal values include: 0X00. Do not use for booting. 0X80 Active partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="49" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a7d426694b8cf2151ae38568670a8c845" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::beginHead</definition>
+        <argsstring></argsstring>
+        <name>beginHead</name>
+        <qualifiedname>partitionTable::beginHead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Head part of Cylinder-head-sector address of the first block in the partition. Legal values are 0-255. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="54" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1ae201c11d9671c9efc307c654a2b6c026" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned partitionTable::beginSector</definition>
+        <argsstring></argsstring>
+        <name>beginSector</name>
+        <qualifiedname>partitionTable::beginSector</qualifiedname>
+        <bitfield> 6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector part of Cylinder-head-sector address of the first block in the partition. Legal values are 1-63. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="59" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a744f0c7f9ad4c426b10de085b4f52392" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned partitionTable::beginCylinderHigh</definition>
+        <argsstring></argsstring>
+        <name>beginCylinderHigh</name>
+        <qualifiedname>partitionTable::beginCylinderHigh</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High bits cylinder for first block in partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="61" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a941fcb4df298f5f73ccca011bf40787a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::beginCylinderLow</definition>
+        <argsstring></argsstring>
+        <name>beginCylinderLow</name>
+        <qualifiedname>partitionTable::beginCylinderLow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Combine beginCylinderLow with beginCylinderHigh. Legal values are 0-1023. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="66" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a3861cf276c728c4dd30ca04e74197ee8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>partitionTable::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partition type. See defines that begin with PART_TYPE_ for some Microsoft partition types. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="71" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a4a3945bfd3a29f474984cb9f180dbd51" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::endHead</definition>
+        <argsstring></argsstring>
+        <name>endHead</name>
+        <qualifiedname>partitionTable::endHead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>head part of cylinder-head-sector address of the last sector in the partition. Legal values are 0-255. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="76" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a27cdc4320c418ed0d833ab163ed77ad7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned partitionTable::endSector</definition>
+        <argsstring></argsstring>
+        <name>endSector</name>
+        <qualifiedname>partitionTable::endSector</qualifiedname>
+        <bitfield> 6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector part of cylinder-head-sector address of the last sector in the partition. Legal values are 1-63. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="81" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a32fea225b8ffd925ad919ffc56e9abda" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned partitionTable::endCylinderHigh</definition>
+        <argsstring></argsstring>
+        <name>endCylinderHigh</name>
+        <qualifiedname>partitionTable::endCylinderHigh</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High bits of end cylinder </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="83" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1ad7829e34be70084abe145227b0d18274" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t partitionTable::endCylinderLow</definition>
+        <argsstring></argsstring>
+        <name>endCylinderLow</name>
+        <qualifiedname>partitionTable::endCylinderLow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Combine endCylinderLow with endCylinderHigh. Legal values are 0-1023. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="88" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1a02bbdff840c854dc96fa0b6da8589d86" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t partitionTable::firstSector</definition>
+        <argsstring></argsstring>
+        <name>firstSector</name>
+        <qualifiedname>partitionTable::firstSector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Logical block address of the first block in the partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="90" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpartition_table_1acf96e59ce648a9a0cf35751c3b6d7730" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t partitionTable::totalSectors</definition>
+        <argsstring></argsstring>
+        <name>totalSectors</name>
+        <qualifiedname>partitionTable::totalSectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of the partition, in blocks. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="92" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>MBR partition table entry. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A partition table entry for a MBR formatted storage device. The MBR partition table has four entries. </para>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="43" column="1" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="43" bodyend="93"/>
+    <listofallmembers>
+      <member refid="structpartition_table_1a744f0c7f9ad4c426b10de085b4f52392" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>beginCylinderHigh</name></member>
+      <member refid="structpartition_table_1a941fcb4df298f5f73ccca011bf40787a" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>beginCylinderLow</name></member>
+      <member refid="structpartition_table_1a7d426694b8cf2151ae38568670a8c845" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>beginHead</name></member>
+      <member refid="structpartition_table_1ae201c11d9671c9efc307c654a2b6c026" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>beginSector</name></member>
+      <member refid="structpartition_table_1adf386afb1f33046d8b6a1a0afa780ec9" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>boot</name></member>
+      <member refid="structpartition_table_1a32fea225b8ffd925ad919ffc56e9abda" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>endCylinderHigh</name></member>
+      <member refid="structpartition_table_1ad7829e34be70084abe145227b0d18274" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>endCylinderLow</name></member>
+      <member refid="structpartition_table_1a4a3945bfd3a29f474984cb9f180dbd51" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>endHead</name></member>
+      <member refid="structpartition_table_1a27cdc4320c418ed0d833ab163ed77ad7" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>endSector</name></member>
+      <member refid="structpartition_table_1a02bbdff840c854dc96fa0b6da8589d86" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>firstSector</name></member>
+      <member refid="structpartition_table_1acf96e59ce648a9a0cf35751c3b6d7730" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>totalSectors</name></member>
+      <member refid="structpartition_table_1a3861cf276c728c4dd30ca04e74197ee8" prot="public" virt="non-virtual"><scope>partitionTable</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

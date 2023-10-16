@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_d_lib_1_1_s_d_class" kind="class" language="C++" prot="public">
+    <compoundname>SDLib::SDClass</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_d_lib_1_1_s_d_class_1a10f3b21152614f027d52376029ad5cee" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref></type>
+        <definition>Sd2Card SDLib::SDClass::card</definition>
+        <argsstring></argsstring>
+        <name>card</name>
+        <qualifiedname>SDLib::SDClass::card</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="62" column="15" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_d_lib_1_1_s_d_class_1a03758ec1e3bcf67b65cd8c769000a485" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sd_volume" kindref="compound">SdVolume</ref></type>
+        <definition>SdVolume SDLib::SDClass::volume</definition>
+        <argsstring></argsstring>
+        <name>volume</name>
+        <qualifiedname>SDLib::SDClass::volume</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="63" column="16" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_d_lib_1_1_s_d_class_1aebbb108b807cb47125209c5ad6aadc47" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sd_file" kindref="compound">SdFile</ref></type>
+        <definition>SdFile SDLib::SDClass::root</definition>
+        <argsstring></argsstring>
+        <name>root</name>
+        <qualifiedname>SDLib::SDClass::root</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="64" column="14" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_d_lib_1_1_s_d_class_1aa5168310088c5fa6812b244efb81b1d2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SDLib::SDClass::fileOpenMode</definition>
+        <argsstring></argsstring>
+        <name>fileOpenMode</name>
+        <qualifiedname>SDLib::SDClass::fileOpenMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="116" column="11" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_s_d_lib_1_1_s_d_class_1a68d15876ad188b7628261b12d0eac8aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class File</definition>
+        <argsstring></argsstring>
+        <name>File</name>
+        <qualifiedname>SDLib::SDClass::File</qualifiedname>
+        <param>
+          <type><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="118" column="20" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_s_d_lib_1_1_s_d_class_1a18f78f3da41fcdd7b15eac188c1c1939" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean callback_openPath</definition>
+        <argsstring>(SdFile &amp;, const char *, boolean, void *)</argsstring>
+        <name>callback_openPath</name>
+        <qualifiedname>SDLib::SDClass::callback_openPath</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+        </param>
+        <param>
+          <type>const char *</type>
+        </param>
+        <param>
+          <type>boolean</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="119" column="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a755675ff8f856d366ec8de4ea024e74a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_sd_file" kindref="compound">SdFile</ref></type>
+        <definition>SdFile SDLib::SDClass::getParentDir</definition>
+        <argsstring>(const char *filepath, int *indx)</argsstring>
+        <name>getParentDir</name>
+        <qualifiedname>SDLib::SDClass::getParentDir</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>indx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="67" column="14" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="373" bodyend="429"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a72fc9def5c1850b4b4bee984c6781c55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::begin</definition>
+        <argsstring>(uint8_t csPin=SD_CHIP_SELECT_PIN)</argsstring>
+        <name>begin</name>
+        <qualifiedname>SDLib::SDClass::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>csPin</declname>
+          <defval><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="71" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="339" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1aebc5e158b14d92fcef949235d90eaf74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::begin</definition>
+        <argsstring>(uint32_t clock, uint8_t csPin)</argsstring>
+        <name>begin</name>
+        <qualifiedname>SDLib::SDClass::begin</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>csPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="72" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="356" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a98077a1d700ececd5365b1a21f348dcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SDLib::SDClass::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>SDLib::SDClass::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="75" column="12" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="368" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a1a29aa2a69d6feef59de059339648b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref></type>
+        <definition>File SDLib::SDClass::open</definition>
+        <argsstring>(const char *filename, uint8_t mode=FILE_READ)</argsstring>
+        <name>open</name>
+        <qualifiedname>SDLib::SDClass::open</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+          <defval>FILE_READ</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="80" column="12" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="432" bodyend="487"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a607c1d447434587e85b04efbdaf5c5cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref></type>
+        <definition>File SDLib::SDClass::open</definition>
+        <argsstring>(const String &amp;filename, uint8_t mode=FILE_READ)</argsstring>
+        <name>open</name>
+        <qualifiedname>SDLib::SDClass::open</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+          <defval>FILE_READ</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="81" column="12" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a0b362aab87a4f3c4cebe3b804c084311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::exists</definition>
+        <argsstring>(const char *filepath)</argsstring>
+        <name>exists</name>
+        <qualifiedname>SDLib::SDClass::exists</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="86" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="536" bodyend="543"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a7c872a8f204d251e89f3f3236f0862fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::exists</definition>
+        <argsstring>(const String &amp;filepath)</argsstring>
+        <name>exists</name>
+        <qualifiedname>SDLib::SDClass::exists</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="87" column="15" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1aad36f5a3b1cdc102da62ee4f140f0324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::mkdir</definition>
+        <argsstring>(const char *filepath)</argsstring>
+        <name>mkdir</name>
+        <qualifiedname>SDLib::SDClass::mkdir</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="93" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="557" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a7403c4d32492205c78cf17c6786eb23a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::mkdir</definition>
+        <argsstring>(const String &amp;filepath)</argsstring>
+        <name>mkdir</name>
+        <qualifiedname>SDLib::SDClass::mkdir</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="94" column="15" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a000810a65b7b7eec2681879f4dfd8ea7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::remove</definition>
+        <argsstring>(const char *filepath)</argsstring>
+        <name>remove</name>
+        <qualifiedname>SDLib::SDClass::remove</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="99" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="579" bodyend="581"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a525788a5a63c82ed54383be03fcd2ec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::remove</definition>
+        <argsstring>(const String &amp;filepath)</argsstring>
+        <name>remove</name>
+        <qualifiedname>SDLib::SDClass::remove</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="100" column="15" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1af50e54e0707bdf4ad74d197508d4382b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::rmdir</definition>
+        <argsstring>(const char *filepath)</argsstring>
+        <name>rmdir</name>
+        <qualifiedname>SDLib::SDClass::rmdir</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="104" column="15" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="568" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_s_d_class_1a8caabe5ca27eda8c747015b085fd3f94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SDLib::SDClass::rmdir</definition>
+        <argsstring>(const String &amp;filepath)</argsstring>
+        <name>rmdir</name>
+        <qualifiedname>SDLib::SDClass::rmdir</qualifiedname>
+        <param>
+          <type>const String &amp;</type>
+          <declname>filepath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="105" column="15" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="105" bodyend="107"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/SD.h" line="58" column="3" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="58" bodyend="120"/>
+    <listofallmembers>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a72fc9def5c1850b4b4bee984c6781c55" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>begin</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1aebc5e158b14d92fcef949235d90eaf74" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>begin</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a18f78f3da41fcdd7b15eac188c1c1939" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>callback_openPath</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a10f3b21152614f027d52376029ad5cee" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>card</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a98077a1d700ececd5365b1a21f348dcd" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>end</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a0b362aab87a4f3c4cebe3b804c084311" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>exists</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a7c872a8f204d251e89f3f3236f0862fb" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>exists</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a68d15876ad188b7628261b12d0eac8aa" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>File</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1aa5168310088c5fa6812b244efb81b1d2" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>fileOpenMode</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a755675ff8f856d366ec8de4ea024e74a" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>getParentDir</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1aad36f5a3b1cdc102da62ee4f140f0324" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>mkdir</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a7403c4d32492205c78cf17c6786eb23a" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>mkdir</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a1a29aa2a69d6feef59de059339648b3e" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>open</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a607c1d447434587e85b04efbdaf5c5cc" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>open</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a000810a65b7b7eec2681879f4dfd8ea7" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>remove</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a525788a5a63c82ed54383be03fcd2ec7" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>remove</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1af50e54e0707bdf4ad74d197508d4382b" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>rmdir</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a8caabe5ca27eda8c747015b085fd3f94" prot="public" virt="non-virtual"><scope>SDLib::SDClass</scope><name>rmdir</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1aebbb108b807cb47125209c5ad6aadc47" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>root</name></member>
+      <member refid="class_s_d_lib_1_1_s_d_class_1a03758ec1e3bcf67b65cd8c769000a485" prot="private" virt="non-virtual"><scope>SDLib::SDClass</scope><name>volume</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

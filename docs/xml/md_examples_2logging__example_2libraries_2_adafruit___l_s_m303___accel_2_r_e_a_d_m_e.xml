@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit_LSM303_Accel &lt;a href=&quot;https://github.com/adafruit/Adafruit_LSM303_Accel/actions&quot; &gt;&lt;img src=&quot;https://github.com/adafruit/Adafruit_LSM303_Accel/workflows/Arduino%20Library%20CI/badge.svg&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;http://adafruit.github.io/Adafruit_LSM303_Accel/html/index.html&quot; &gt;&lt;img src=&quot;https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg&quot; alt=&quot;Documentation&quot;/&gt;&lt;/a&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ulink url="https://www.adafruit.com/product/1120"><image type="html" name="assets/board.jpg?raw=true" inline="yes"></image>
+</ulink></para>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e_1autotoc_md1">
+<title>Adafruit LSM303 Accelerometer Library</title>
+<para>This library is for the accelerometer used in the LSM303AGR and LSM303DLH</para>
+<para>Tested and works great with Adafruit&apos;s LSM303AGR and LSM303DLH Breakout Boards<itemizedlist>
+<listitem><para><ulink url="https://www.adafruit.com/product/1120">https://www.adafruit.com/product/1120</ulink></para>
+</listitem><listitem><para><ulink url="https://www.adafruit.com/product/4413">https://www.adafruit.com/product/4413</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>This chip uses I2C to communicate, 2 pins are required to interface</para>
+<para>Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<sect2 id="md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e_1autotoc_md2">
+<title>About the LSM303</title>
+<para>The LSM303 is a digital (I2C) accelerometer and digital compass (magnetometer) and accelerometer. The accelerometer allows you to measure acceleration or direction towards the center or the earth or orthogonal axes.</para>
+<para>Information on the LSM303AGR can be found in the datasheet: <ulink url="http://www.adafruit.com/datasheets/LSM303AGRC.PDF">http://www.adafruit.com/datasheets/LSM303AGRC.PDF</ulink></para>
+<para>Information on the LSM303DLH can be found in the datasheet: <ulink url="http://www.adafruit.com/datasheets/LSM303DLHC.PDF">http://www.adafruit.com/datasheets/LSM303DLHC.PDF</ulink></para>
+</sect2>
+<sect2 id="md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e_1autotoc_md3">
+<title>What is the Adafruit Unified Sensor Library?</title>
+<para>The Adafruit Unified Sensor Library (<bold><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref></bold>) provides a common interface and data type for any supported sensor. It defines some basic information about the sensor (sensor limits, etc.), and returns standard SI units of a specific type and scale for each supported sensor type.</para>
+<para>It provides a simple abstraction layer between your application and the actual sensor HW, allowing you to drop in any comparable sensor with only one or two lines of code to change in your project (essentially the constructor since the functions to read sensor data and get information about the sensor are defined in the base <ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref> class).</para>
+<para>This is imporant useful for two reasons:</para>
+<para>1.) You can use the data right away because it&apos;s already converted to SI units that you understand and can compare, rather than meaningless values like 0..1023.</para>
+<para>2.) Because SI units are standardised in the sensor library, you can also do quick sanity checks working with new sensors, or drop in any comparable sensor if you need better sensitivity or if a lower cost unit becomes available, etc.</para>
+<para>Light sensors will always report units in lux, gyroscopes will always report units in rad/s, etc. ... freeing you up to focus on the data, rather than digging through the datasheet to understand what the sensor&apos;s raw numbers really mean.</para>
+</sect2>
+<sect2 id="md_examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e_1autotoc_md4">
+<title>About this Driver</title>
+<para>Written by Bryan Siepert for Adafruit Industries. BSD license, check license.txt for more information All text above must be included in any redistribution</para>
+<para>To install, use the Arduino Library Manager and search for and install the following libraries:<itemizedlist>
+<listitem><para>&quot;Adafruit LSM303 Accel&quot;</para>
+</listitem><listitem><para>&quot;Adafruit Unified Sensor&quot;</para>
+</listitem><listitem><para>&quot;Adafruit BusIO&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para>Additonal details can be found in the guide:</para>
+<para><ulink url="https://learn.adafruit.com/lsm303-accelerometer-slash-compass-breakout/coding">https://learn.adafruit.com/lsm303-accelerometer-slash-compass-breakout/coding</ulink> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/README.md"/>
+  </compounddef>
+</doxygen>

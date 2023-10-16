@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8cpp" kind="file" language="C++">
+    <compoundname>Adafruit_Sensor.cpp</compoundname>
+    <includes refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="yes">Adafruit_Sensor.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp</label>
+        <link refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;Adafruit_Sensor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" kindref="member">Adafruit_Sensor::printSensorDetails</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>sensor;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" kindref="member">getSensor</ref>(&amp;sensor);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>Serial.println(F(</highlight><highlight class="stringliteral">&quot;------------------------------------&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Sensor:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Type:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>((sensors_type_t)sensor.<ref refid="structsensor__t_1ae1d59df64438923d3bd95f2416c32203" kindref="member">type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_ACCELEROMETER:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Acceleration<sp/>(m/s2)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_MAGNETIC_FIELD:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Magnetic<sp/>(uT)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_ORIENTATION:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Orientation<sp/>(degrees)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_GYROSCOPE:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Gyroscopic<sp/>(rad/s)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_LIGHT:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Light<sp/>(lux)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_PRESSURE:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Pressure<sp/>(hPa)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_PROXIMITY:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Distance<sp/>(cm)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_GRAVITY:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Gravity<sp/>(m/s2)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_LINEAR_ACCELERATION:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Linear<sp/>Acceleration<sp/>(m/s2)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_ROTATION_VECTOR:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Rotation<sp/>vector&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_RELATIVE_HUMIDITY:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Relative<sp/>Humidity<sp/>(%)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_AMBIENT_TEMPERATURE:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Ambient<sp/>Temp<sp/>(C)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_OBJECT_TEMPERATURE:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Object<sp/>Temp<sp/>(C)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_VOLTAGE:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Voltage<sp/>(V)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_CURRENT:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Current<sp/>(mA)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_COLOR:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Color<sp/>(RGBA)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>SENSOR_TYPE_TVOC:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Total<sp/>Volatile<sp/>Organic<sp/>Compounds<sp/>(ppb)&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>Serial.println();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Driver<sp/>Ver:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" kindref="member">version</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Unique<sp/>ID:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" kindref="member">sensor_id</ref>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Min<sp/>Value:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" kindref="member">min_value</ref>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Max<sp/>Value:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" kindref="member">max_value</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>Serial.print(F(</highlight><highlight class="stringliteral">&quot;Resolution:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>Serial.println(sensor.<ref refid="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" kindref="member">resolution</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>Serial.println(F(</highlight><highlight class="stringliteral">&quot;------------------------------------\n&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp"/>
+  </compounddef>
+</doxygen>

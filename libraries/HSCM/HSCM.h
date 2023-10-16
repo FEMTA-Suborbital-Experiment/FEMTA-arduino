@@ -1,10 +1,10 @@
-/*
-
-    HSCM Ambient Pressure Sensor Driver
-    Author: Jacob Valdez
-    Email: jacob.a.valdez2002@gmail.com
-
-*/
+/**
+ * @file HSCM.h
+ * @author Jacob Valdez (valdez24@purdue.edu)
+ * @brief The HSCM Ambient Pressure sensor obtains a reading of the pressure
+ * and temperature in its environment (assumed to be in air).
+ * 
+ */
 
 #ifndef HSCM_H
 #define HSCM_H
@@ -28,7 +28,11 @@ typedef enum {
 
 } hscm_output_type;
 
-
+/**
+ * @brief HSCM class based on 
+ * https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp
+ * 
+ */
 class HSCM_PSI {
     public:
 

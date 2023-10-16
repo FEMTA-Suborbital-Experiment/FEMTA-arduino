@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespacearduino__serial" kind="namespace" language="Python">
+    <compoundname>arduino_serial</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacearduino__serial_1ab8785b9473293ff8eed5a32c90388682" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <qualifiedname>arduino_serial.parser</qualifiedname>
+        <initializer>=  argparse.ArgumentParser()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="22" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1aeb1fa322958a6b5bd0a4766d1b8517bc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.metavar</definition>
+        <argsstring></argsstring>
+        <name>metavar</name>
+        <qualifiedname>arduino_serial.metavar</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="25" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a7b8d800aab0e605526eb4ca6c35f1245" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.required</definition>
+        <argsstring></argsstring>
+        <name>required</name>
+        <qualifiedname>arduino_serial.required</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="26" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a58fcf152158c611c7abac7ecb496d512" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>arduino_serial.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="27" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a84f2c6205ae6962994bcb11863bcd49d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>arduino_serial.help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="28" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a95175f203b56aab9cb702389fc0023c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.default</definition>
+        <argsstring></argsstring>
+        <name>default</name>
+        <qualifiedname>arduino_serial.default</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="34" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a1b55ba6a1032a4afcc97e7159039cc71" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.args</definition>
+        <argsstring></argsstring>
+        <name>args</name>
+        <qualifiedname>arduino_serial.args</qualifiedname>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="40" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1ae55ec6804eea5fc10d3b20e13f4529a8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.csv_bytes</definition>
+        <argsstring></argsstring>
+        <name>csv_bytes</name>
+        <qualifiedname>arduino_serial.csv_bytes</qualifiedname>
+        <initializer>=  f.read()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="43" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1af0d5131d18fb69c76fa7654dae16fe35" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list arduino_serial.arduino_ports</definition>
+        <argsstring></argsstring>
+        <name>arduino_ports</name>
+        <qualifiedname>arduino_serial.arduino_ports</qualifiedname>
+        <initializer>=  []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="45" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a089f86f1596f3f5f3a172eb7b8c8e91c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <qualifiedname>arduino_serial.i</qualifiedname>
+        <initializer>=  int(input(&apos;\nSelect the port to use\n&gt; &apos;))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="64" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a815c15b0d864b3114e22fecdf1423f2d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list arduino_serial::port</definition>
+        <argsstring></argsstring>
+        <name>port</name>
+        <qualifiedname>arduino_serial.port</qualifiedname>
+        <initializer>=  arduino_ports[i-1].device</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="65" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a31bc8b15c8231df2329def247c0d61e2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <qualifiedname>arduino_serial.s</qualifiedname>
+        <initializer>=  serial.Serial()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="72" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1ac052d93b7c02d6d09f40480b993e87bd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>arduino_serial.baudrate</definition>
+        <argsstring></argsstring>
+        <name>baudrate</name>
+        <qualifiedname>arduino_serial.baudrate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="73" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacearduino__serial_1a50ecda6bf018ea3bc7da34130f7bbab7" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str arduino_serial.in_str</definition>
+        <argsstring></argsstring>
+        <name>in_str</name>
+        <qualifiedname>arduino_serial.in_str</qualifiedname>
+        <initializer>=  &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="84" column="1" bodyfile="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>This script opens the port associated with Arduino, 
+writes to it, reads response, and terminates once it receives
+the &quot;end&quot; message.
+
+Usage examples:
+python arduino_serial.py --help
+python arduino_serial.py --csv hurricanes.csv
+python arduino_serial.py --csv hurricanes.csv --baudrate 115200
+python arduino_serial.py --csv ../path_to_some_other_csv/data.csv --baudrate 9600
+
+The sript requires &quot;pyserial&quot; library to be installed, 
+it can be installed through pip:
+python -m pip install pyserial
+</verbatim> </para>
+    </detaileddescription>
+    <location file="libraries/CSV_Parser/examples/reading_from_computer_python/arduino_serial.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

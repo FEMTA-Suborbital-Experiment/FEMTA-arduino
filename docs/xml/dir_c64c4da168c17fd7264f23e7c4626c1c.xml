@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_c64c4da168c17fd7264f23e7c4626c1c" kind="dir">
+    <compoundname>libraries/SD-1.2.4</compoundname>
+    <innerdir refid="dir_3def9379604d2642af756516ea3c4952">libraries/SD-1.2.4/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/"/>
+  </compounddef>
+</doxygen>

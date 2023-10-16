@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5c4b5ef54d966e0b6dcd2109d30115b4" kind="dir">
+    <compoundname>libraries/PVC4000</compoundname>
+    <innerfile refid="_p_v_c4000_8cpp">PVC4000.cpp</innerfile>
+    <innerfile refid="_p_v_c4000_8h">PVC4000.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/PVC4000/"/>
+  </compounddef>
+</doxygen>

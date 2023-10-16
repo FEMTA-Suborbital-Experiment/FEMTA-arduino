@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_625a750baf02b906f882eb1569b6d286" kind="dir">
+    <compoundname>libraries/Protothread</compoundname>
+    <innerfile refid="_protothread_8h">Protothread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Protothread/"/>
+  </compounddef>
+</doxygen>

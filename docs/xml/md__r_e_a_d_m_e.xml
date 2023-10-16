@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md__r_e_a_d_m_e" kind="page">
+    <compoundname>md__r_e_a_d_m_e</compoundname>
+    <title>FEMTA PME &amp; FTE Arduinos</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__r_e_a_d_m_e_1autotoc_md122"/> This repository contains the main sketches to operate the Propellant Management Experiment and FEMTA Thruster Experiments, as well as relevant libraries and datasheets for the sensors used in the hardware.</para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md123">
+<title>Quick Start</title>
+<para>See the <ulink url="https://github.com/FEMTA-Suborbital-Experiment/FEMTA-arduino/wiki">wiki</ulink> for an onboarding tutorial to help you get started with developing for the FEMTA Avionics team.</para>
+</sect1>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md124">
+<title>Navigation</title>
+<para>The folder structure of the arduino Github is easy to follow. The following list below describes the contents of each folder.</para>
+<para><itemizedlist>
+<listitem><para>datasheets: Relevant sensors used in the PME and FTE have datasheets, which are contained in this folder. This is a convenience for those who will need to interface sensors with the Arduino</para>
+</listitem><listitem><para>libraries: Arduino contains libraries used to communicate with sensors. In particular, the Wire library is a necessary module with capabilities to interface with I2C devices</para>
+</listitem><listitem><para>logs: The Feather M0 must produce data from its sensor readings such that one can take the data and produce a plot. The subteam expects to use .csv or delimited .txt files</para>
+</listitem><listitem><para>src: This folder houses the .ino sketches. The subteam expects to have two main files, one for the PME and one for the FTE. In addition, sketches in this folder will point to the &quot;libraries&quot; folder </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

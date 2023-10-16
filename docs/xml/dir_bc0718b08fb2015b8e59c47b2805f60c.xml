@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_bc0718b08fb2015b8e59c47b2805f60c" kind="dir">
+    <compoundname>libraries</compoundname>
+    <innerdir refid="dir_e49f2ac6e2206cd2e2ab86f29c42e94d">libraries/HSCM</innerdir>
+    <innerdir refid="dir_5c4b5ef54d966e0b6dcd2109d30115b4">libraries/PVC4000</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/"/>
+  </compounddef>
+</doxygen>

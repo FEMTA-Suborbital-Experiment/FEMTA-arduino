@@ -1,0 +1,1191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___s_p_i_device" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_SPIDevice</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h" local="no">Adafruit_SPIDevice.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1add48560f1ce65f121909d09ed59ee834" prot="private" static="no" mutable="no">
+        <type>SPIClass *</type>
+        <definition>SPIClass * Adafruit_SPIDevice::_spi</definition>
+        <argsstring></argsstring>
+        <name>_spi</name>
+        <qualifiedname>Adafruit_SPIDevice::_spi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="107" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a91bea503159a96a0fb15245359148242" prot="private" static="no" mutable="no">
+        <type>SPISettings *</type>
+        <definition>SPISettings * Adafruit_SPIDevice::_spiSetting</definition>
+        <argsstring></argsstring>
+        <name>_spiSetting</name>
+        <qualifiedname>Adafruit_SPIDevice::_spiSetting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="108" column="15" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1aac05402c974a66df0021f3b8d2bc23d6" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_SPIDevice::_freq</definition>
+        <argsstring></argsstring>
+        <name>_freq</name>
+        <qualifiedname>Adafruit_SPIDevice::_freq</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="109" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a943973a4763b2e2e6e87c064571d5888" prot="private" static="no" mutable="no">
+        <type>BusIOBitOrder</type>
+        <definition>BusIOBitOrder Adafruit_SPIDevice::_dataOrder</definition>
+        <argsstring></argsstring>
+        <name>_dataOrder</name>
+        <qualifiedname>Adafruit_SPIDevice::_dataOrder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="110" column="17" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a861d028e4b576c8cfaae80962c3985d9" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_SPIDevice::_dataMode</definition>
+        <argsstring></argsstring>
+        <name>_dataMode</name>
+        <qualifiedname>Adafruit_SPIDevice::_dataMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="111" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a8dd6c1410c53ed122489e3af2e4f85a9" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Adafruit_SPIDevice::_cs</definition>
+        <argsstring></argsstring>
+        <name>_cs</name>
+        <qualifiedname>Adafruit_SPIDevice::_cs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="114" column="10" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1ad859303ab7955335d40b875d542277b8" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Adafruit_SPIDevice::_sck</definition>
+        <argsstring></argsstring>
+        <name>_sck</name>
+        <qualifiedname>Adafruit_SPIDevice::_sck</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="114" column="14" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1aa78ab4f1d136263fd9d55ed099a59bd1" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Adafruit_SPIDevice::_mosi</definition>
+        <argsstring></argsstring>
+        <name>_mosi</name>
+        <qualifiedname>Adafruit_SPIDevice::_mosi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="114" column="19" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a48a8691ed1be2e738899442bd31d3a86" prot="private" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Adafruit_SPIDevice::_miso</definition>
+        <argsstring></argsstring>
+        <name>_miso</name>
+        <qualifiedname>Adafruit_SPIDevice::_miso</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="114" column="25" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___s_p_i_device_1a4d4f9c41a1c90bb2752405dfbf3ec709" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::_begun</definition>
+        <argsstring></argsstring>
+        <name>_begun</name>
+        <qualifiedname>Adafruit_SPIDevice::_begun</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="119" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a3b58c1ebba22985823848654e24d1fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::Adafruit_SPIDevice</definition>
+        <argsstring>(int8_t cspin, uint32_t freq=1000000, BusIOBitOrder dataOrder=SPI_BITORDER_MSBFIRST, uint8_t dataMode=SPI_MODE0, SPIClass *theSPI=&amp;SPI)</argsstring>
+        <name>Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::Adafruit_SPIDevice</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>cspin</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq</declname>
+          <defval>1000000</defval>
+        </param>
+        <param>
+          <type>BusIOBitOrder</type>
+          <declname>dataOrder</declname>
+          <defval>SPI_BITORDER_MSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataMode</declname>
+          <defval>SPI_MODE0</defval>
+        </param>
+        <param>
+          <type>SPIClass *</type>
+          <declname>theSPI</declname>
+          <defval>&amp;SPI</defval>
+        </param>
+        <briefdescription>
+<para>Create an SPI device with the given CS pin and settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cspin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arduino pin number to use for chip select </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI clock frequency to use, defaults to 1MHz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI data order to use for bits within each byte, defaults to SPI_BITORDER_MSBFIRST </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI mode to use, defaults to SPI_MODE0 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>theSPI</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI bus to use, defaults to &amp;theSPI </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="80" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a6fe83560f80083c5e6580b5e2e6b4cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::Adafruit_SPIDevice</definition>
+        <argsstring>(int8_t cspin, int8_t sck, int8_t miso, int8_t mosi, uint32_t freq=1000000, BusIOBitOrder dataOrder=SPI_BITORDER_MSBFIRST, uint8_t dataMode=SPI_MODE0)</argsstring>
+        <name>Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::Adafruit_SPIDevice</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>cspin</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>sck</declname>
+          <defname>sckpin</defname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>miso</declname>
+          <defname>misopin</defname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>mosi</declname>
+          <defname>mosipin</defname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq</declname>
+          <defval>1000000</defval>
+        </param>
+        <param>
+          <type>BusIOBitOrder</type>
+          <declname>dataOrder</declname>
+          <defval>SPI_BITORDER_MSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataMode</declname>
+          <defval>SPI_MODE0</defval>
+        </param>
+        <briefdescription>
+<para>Create an SPI device with the given CS pin and settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cspin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arduino pin number to use for chip select </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sckpin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arduino pin number to use for SCK </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>misopin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arduino pin number to use for MISO, set to -1 if not used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mosipin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The arduino pin number to use for MOSI, set to -1 if not used </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>freq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI clock frequency to use, defaults to 1MHz </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI data order to use for bits within each byte, defaults to SPI_BITORDER_MSBFIRST </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPI mode to use, defaults to SPI_MODE0 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="84" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="43" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ab2dc91c7ef9488df1c52bb682a39a7fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::~Adafruit_SPIDevice</definition>
+        <argsstring>()</argsstring>
+        <name>~Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::~Adafruit_SPIDevice</qualifiedname>
+        <briefdescription>
+<para>Release memory allocated in constructors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="88" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="78" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a6aa3c0bebb1d2d58516bce4f2dd1423f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_SPIDevice::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Initializes SPI bus and sets CS pin high. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Always returns true because there&apos;s no way to test success of SPI init </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="90" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="85" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a5c4fce15c92a0210c0872a827f239ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::read</definition>
+        <argsstring>(uint8_t *buffer, size_t len, uint8_t sendvalue=0xFF)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_SPIDevice::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sendvalue</declname>
+          <defval>0xFF</defval>
+        </param>
+        <briefdescription>
+<para>Read from SPI into a buffer from the SPI device, with transaction management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer of data to read into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from buffer to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sendvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 8-bits of data to write when doing the data read, defaults to 0xFF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true because there&apos;s no way to test success of SPI writes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="91" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="385" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a1c984896fcc5d009511ce37a659fdb2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write</definition>
+        <argsstring>(const uint8_t *buffer, size_t len, const uint8_t *prefix_buffer=nullptr, size_t prefix_len=0)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_SPIDevice::write</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>prefix_buffer</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>prefix_len</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Write a buffer or two to the SPI device, with transaction management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer of data to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from buffer to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to optional array of data to write before buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from prefix buffer to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true because there&apos;s no way to test success of SPI writes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="92" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="326" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a9cc3386cab3750aa18bbf3918261fc54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write_then_read</definition>
+        <argsstring>(const uint8_t *write_buffer, size_t write_len, uint8_t *read_buffer, size_t read_len, uint8_t sendvalue=0xFF)</argsstring>
+        <name>write_then_read</name>
+        <qualifiedname>Adafruit_SPIDevice::write_then_read</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>write_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>write_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>read_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>read_len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sendvalue</declname>
+          <defval>0xFF</defval>
+        </param>
+        <briefdescription>
+<para>Write some data, then read some data from SPI into another buffer, with transaction management. The buffers can point to same/overlapping locations. This does not transmit-receive at the same time! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>write_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer of data to write from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>write_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from buffer to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>read_buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer of data to read into. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>read_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from buffer to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sendvalue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 8-bits of data to write when doing the data read, defaults to 0xFF </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true because there&apos;s no way to test success of SPI writes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="94" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="421" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a808c81bc4b9e42d064b9f590a1f6b1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write_and_read</definition>
+        <argsstring>(uint8_t *buffer, size_t len)</argsstring>
+        <name>write_and_read</name>
+        <qualifiedname>Adafruit_SPIDevice::write_and_read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write some data and read some data at the same time from SPI into the same buffer, with transaction management. This is basicaly a wrapper for <ref refid="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" kindref="member">transfer()</ref> with CS-pin and transaction management. This /does/ transmit-receive at the same time! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to buffer of data to write/read to/from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes from buffer to write/read. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true because there&apos;s no way to test success of SPI writes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="97" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="485" bodyend="491"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_SPIDevice::transfer</definition>
+        <argsstring>(uint8_t send)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>Adafruit_SPIDevice::transfer</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>send</declname>
+        </param>
+        <briefdescription>
+<para>Transfer (send/receive) one byte over hard/soft SPI, without transaction management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>send</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The byte received while transmitting </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="99" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="260" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a155f5efd84dbc240c987f4066265b840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::transfer</definition>
+        <argsstring>(uint8_t *buffer, size_t len)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>Adafruit_SPIDevice::transfer</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Transfer (send/receive) a buffer over hard/soft SPI, without transaction management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to send and receive at the same time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to transfer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="100" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="122" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1acde87a3312ddc729c259b1b45fe71d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::beginTransaction</definition>
+        <argsstring>(void)</argsstring>
+        <name>beginTransaction</name>
+        <qualifiedname>Adafruit_SPIDevice::beginTransaction</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Manually begin a transaction (calls beginTransaction if hardware SPI) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="101" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="270" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a65b517b7372df56322b807a08d067f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::endTransaction</definition>
+        <argsstring>(void)</argsstring>
+        <name>endTransaction</name>
+        <qualifiedname>Adafruit_SPIDevice::endTransaction</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Manually end a transaction (calls endTransaction if hardware SPI) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="102" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="279" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a11e91bf075cdd77edcec11f4b28c6292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::beginTransactionWithAssertingCS</definition>
+        <argsstring>()</argsstring>
+        <name>beginTransactionWithAssertingCS</name>
+        <qualifiedname>Adafruit_SPIDevice::beginTransactionWithAssertingCS</qualifiedname>
+        <briefdescription>
+<para>Write a buffer or two to the SPI device, with transaction management. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Manually begin a transaction (calls beginTransaction if hardware SPI) with asserting the CS pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="103" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ad9e42c259682a03e76afd33c66af9317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::endTransactionWithDeassertingCS</definition>
+        <argsstring>()</argsstring>
+        <name>endTransactionWithDeassertingCS</name>
+        <qualifiedname>Adafruit_SPIDevice::endTransactionWithDeassertingCS</qualifiedname>
+        <briefdescription>
+<para>Manually end a transaction (calls endTransaction if hardware SPI) with deasserting the CS pin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="104" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a3b58c1ebba22985823848654e24d1fc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::Adafruit_SPIDevice</definition>
+        <argsstring>(int8_t cspin, uint32_t freq=1000000, BusIOBitOrder dataOrder=SPI_BITORDER_MSBFIRST, uint8_t dataMode=SPI_MODE0, SPIClass *theSPI=&amp;SPI)</argsstring>
+        <name>Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::Adafruit_SPIDevice</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>cspin</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq</declname>
+          <defval>1000000</defval>
+        </param>
+        <param>
+          <type>BusIOBitOrder</type>
+          <declname>dataOrder</declname>
+          <defval>SPI_BITORDER_MSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataMode</declname>
+          <defval>SPI_MODE0</defval>
+        </param>
+        <param>
+          <type>SPIClass *</type>
+          <declname>theSPI</declname>
+          <defval>&amp;SPI</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="80" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a6fe83560f80083c5e6580b5e2e6b4cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::Adafruit_SPIDevice</definition>
+        <argsstring>(int8_t cspin, int8_t sck, int8_t miso, int8_t mosi, uint32_t freq=1000000, BusIOBitOrder dataOrder=SPI_BITORDER_MSBFIRST, uint8_t dataMode=SPI_MODE0)</argsstring>
+        <name>Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::Adafruit_SPIDevice</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>cspin</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>sck</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>miso</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>mosi</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>freq</declname>
+          <defval>1000000</defval>
+        </param>
+        <param>
+          <type>BusIOBitOrder</type>
+          <declname>dataOrder</declname>
+          <defval>SPI_BITORDER_MSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>dataMode</declname>
+          <defval>SPI_MODE0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="84" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ab2dc91c7ef9488df1c52bb682a39a7fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_SPIDevice::~Adafruit_SPIDevice</definition>
+        <argsstring>()</argsstring>
+        <name>~Adafruit_SPIDevice</name>
+        <qualifiedname>Adafruit_SPIDevice::~Adafruit_SPIDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="88" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a6aa3c0bebb1d2d58516bce4f2dd1423f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_SPIDevice::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="90" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a5c4fce15c92a0210c0872a827f239ab1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::read</definition>
+        <argsstring>(uint8_t *buffer, size_t len, uint8_t sendvalue=0xFF)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_SPIDevice::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sendvalue</declname>
+          <defval>0xFF</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="91" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a1c984896fcc5d009511ce37a659fdb2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write</definition>
+        <argsstring>(const uint8_t *buffer, size_t len, const uint8_t *prefix_buffer=nullptr, size_t prefix_len=0)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_SPIDevice::write</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>prefix_buffer</declname>
+          <defval>nullptr</defval>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>prefix_len</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="92" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a9cc3386cab3750aa18bbf3918261fc54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write_then_read</definition>
+        <argsstring>(const uint8_t *write_buffer, size_t write_len, uint8_t *read_buffer, size_t read_len, uint8_t sendvalue=0xFF)</argsstring>
+        <name>write_then_read</name>
+        <qualifiedname>Adafruit_SPIDevice::write_then_read</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>write_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>write_len</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>read_buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>read_len</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>sendvalue</declname>
+          <defval>0xFF</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="94" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a808c81bc4b9e42d064b9f590a1f6b1bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_SPIDevice::write_and_read</definition>
+        <argsstring>(uint8_t *buffer, size_t len)</argsstring>
+        <name>write_and_read</name>
+        <qualifiedname>Adafruit_SPIDevice::write_and_read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="97" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_SPIDevice::transfer</definition>
+        <argsstring>(uint8_t send)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>Adafruit_SPIDevice::transfer</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>send</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="99" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a155f5efd84dbc240c987f4066265b840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::transfer</definition>
+        <argsstring>(uint8_t *buffer, size_t len)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>Adafruit_SPIDevice::transfer</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="100" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1acde87a3312ddc729c259b1b45fe71d82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::beginTransaction</definition>
+        <argsstring>(void)</argsstring>
+        <name>beginTransaction</name>
+        <qualifiedname>Adafruit_SPIDevice::beginTransaction</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="101" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a65b517b7372df56322b807a08d067f8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::endTransaction</definition>
+        <argsstring>(void)</argsstring>
+        <name>endTransaction</name>
+        <qualifiedname>Adafruit_SPIDevice::endTransaction</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="102" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a11e91bf075cdd77edcec11f4b28c6292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::beginTransactionWithAssertingCS</definition>
+        <argsstring>()</argsstring>
+        <name>beginTransactionWithAssertingCS</name>
+        <qualifiedname>Adafruit_SPIDevice::beginTransactionWithAssertingCS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="103" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1ad9e42c259682a03e76afd33c66af9317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::endTransactionWithDeassertingCS</definition>
+        <argsstring>()</argsstring>
+        <name>endTransactionWithDeassertingCS</name>
+        <qualifiedname>Adafruit_SPIDevice::endTransactionWithDeassertingCS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="104" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a0e9f91766b66b5f34ffd799525d68eda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::setChipSelect</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setChipSelect</name>
+        <qualifiedname>Adafruit_SPIDevice::setChipSelect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assert/Deassert the CS pin if it is defined. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state the CS is set to </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="112" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp" bodystart="289" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___s_p_i_device_1a0e9f91766b66b5f34ffd799525d68eda" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_SPIDevice::setChipSelect</definition>
+        <argsstring>(int value)</argsstring>
+        <name>setChipSelect</name>
+        <qualifiedname>Adafruit_SPIDevice::setChipSelect</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="112" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>! The class which defines how we will talk to this device over SPI </para>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="78" column="1" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="78" bodyend="120"/>
+    <listofallmembers>
+      <member refid="class_adafruit___s_p_i_device_1a4d4f9c41a1c90bb2752405dfbf3ec709" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_begun</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a8dd6c1410c53ed122489e3af2e4f85a9" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_cs</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a861d028e4b576c8cfaae80962c3985d9" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_dataMode</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a943973a4763b2e2e6e87c064571d5888" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_dataOrder</name></member>
+      <member refid="class_adafruit___s_p_i_device_1aac05402c974a66df0021f3b8d2bc23d6" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_freq</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a48a8691ed1be2e738899442bd31d3a86" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_miso</name></member>
+      <member refid="class_adafruit___s_p_i_device_1aa78ab4f1d136263fd9d55ed099a59bd1" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_mosi</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ad859303ab7955335d40b875d542277b8" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_sck</name></member>
+      <member refid="class_adafruit___s_p_i_device_1add48560f1ce65f121909d09ed59ee834" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_spi</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a91bea503159a96a0fb15245359148242" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>_spiSetting</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a3b58c1ebba22985823848654e24d1fc9" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>Adafruit_SPIDevice</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a6fe83560f80083c5e6580b5e2e6b4cc6" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>Adafruit_SPIDevice</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a3b58c1ebba22985823848654e24d1fc9" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>Adafruit_SPIDevice</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a6fe83560f80083c5e6580b5e2e6b4cc6" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>Adafruit_SPIDevice</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a6aa3c0bebb1d2d58516bce4f2dd1423f" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>begin</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a6aa3c0bebb1d2d58516bce4f2dd1423f" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>begin</name></member>
+      <member refid="class_adafruit___s_p_i_device_1acde87a3312ddc729c259b1b45fe71d82" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>beginTransaction</name></member>
+      <member refid="class_adafruit___s_p_i_device_1acde87a3312ddc729c259b1b45fe71d82" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>beginTransaction</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a11e91bf075cdd77edcec11f4b28c6292" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>beginTransactionWithAssertingCS</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a11e91bf075cdd77edcec11f4b28c6292" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>beginTransactionWithAssertingCS</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a65b517b7372df56322b807a08d067f8b" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>endTransaction</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a65b517b7372df56322b807a08d067f8b" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>endTransaction</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ad9e42c259682a03e76afd33c66af9317" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>endTransactionWithDeassertingCS</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ad9e42c259682a03e76afd33c66af9317" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>endTransactionWithDeassertingCS</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a5c4fce15c92a0210c0872a827f239ab1" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a5c4fce15c92a0210c0872a827f239ab1" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a0e9f91766b66b5f34ffd799525d68eda" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>setChipSelect</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a0e9f91766b66b5f34ffd799525d68eda" prot="private" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>setChipSelect</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>transfer</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a155f5efd84dbc240c987f4066265b840" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>transfer</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>transfer</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a155f5efd84dbc240c987f4066265b840" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>transfer</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a1c984896fcc5d009511ce37a659fdb2e" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a1c984896fcc5d009511ce37a659fdb2e" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a808c81bc4b9e42d064b9f590a1f6b1bd" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write_and_read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a808c81bc4b9e42d064b9f590a1f6b1bd" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write_and_read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a9cc3386cab3750aa18bbf3918261fc54" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write_then_read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1a9cc3386cab3750aa18bbf3918261fc54" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>write_then_read</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ab2dc91c7ef9488df1c52bb682a39a7fb" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>~Adafruit_SPIDevice</name></member>
+      <member refid="class_adafruit___s_p_i_device_1ab2dc91c7ef9488df1c52bb682a39a7fb" prot="public" virt="non-virtual"><scope>Adafruit_SPIDevice</scope><name>~Adafruit_SPIDevice</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

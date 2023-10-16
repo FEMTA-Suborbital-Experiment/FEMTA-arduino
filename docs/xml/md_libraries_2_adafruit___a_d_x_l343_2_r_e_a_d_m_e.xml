@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit ADXL343 Accelerometer Driver &lt;img src=&quot;https://github.com/adafruit/Adafruit_ADXL343/workflows/Arduino%20Library%20CI/badge.svg&quot; alt=&quot;Build Status&quot;/&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e_1autotoc_md33"/> This driver is for the Adafruit ADXL343 Breakout (<ulink url="http://www.adafruit.com/products/">http://www.adafruit.com/products/</ulink>), and is based on Adafruit&apos;s Unified Sensor Library (<ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref>).</para>
+<sect1 id="md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e_1autotoc_md34">
+<title>About the ADXL343</title>
+<para>The ADXL343 is a digital accelerometer that supports both SPI and I2C mode, with adjustable data rata and &apos;range&apos; (+/-2/4/8/16g). The <ref refid="class_adafruit___a_d_x_l343" kindref="compound">Adafruit_ADXL343</ref> driver takes advantage of I2C mode to reduce the total pin count required to use the sensor.</para>
+<para>More information on the ADXL345 can be found in the datasheet: <ulink url="http://www.analog.com/static/imported-files/data_sheets/ADXL343.pdf">http://www.analog.com/static/imported-files/data_sheets/ADXL343.pdf</ulink></para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e_1autotoc_md35">
+<title>What is the Adafruit Unified Sensor Library?</title>
+<para>The Adafruit Unified Sensor Library (<ulink url="https://github.com/adafruit/Adafruit_Sensor">https://github.com/adafruit/Adafruit_Sensor</ulink>) provides a common interface and data type for any supported sensor. It defines some basic information about the sensor (sensor limits, etc.), and returns standard SI units of a specific type and scale for each supported sensor type.</para>
+<para>It provides a simple abstraction layer between your application and the actual sensor HW, allowing you to drop in any comparable sensor with only one or two lines of code to change in your project (essentially the constructor since the functions to read sensor data and get information about the sensor are defined in the base <ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref> class).</para>
+<para>This is imporant useful for two reasons:</para>
+<para>1.) You can use the data right away because it&apos;s already converted to SI units that you understand and can compare, rather than meaningless values like 0..1023.</para>
+<para>2.) Because SI units are standardised in the sensor library, you can also do quick sanity checks working with new sensors, or drop in any comparable sensor if you need better sensitivity or if a lower cost unit becomes available, etc.</para>
+<para>Light sensors will always report units in lux, gyroscopes will always report units in rad/s, etc. ... freeing you up to focus on the data, rather than digging through the datasheet to understand what the sensor&apos;s raw numbers really mean.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___a_d_x_l343_2_r_e_a_d_m_e_1autotoc_md36">
+<title>About this Driver</title>
+<para>Adafruit invests time and resources providing this open source code. Please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<para>Written by Kevin (KTOWN) Townsend for Adafruit Industries. </para>
+</sect1>
+    </detaileddescription>
+    <location file="libraries/Adafruit_ADXL343/README.md"/>
+  </compounddef>
+</doxygen>

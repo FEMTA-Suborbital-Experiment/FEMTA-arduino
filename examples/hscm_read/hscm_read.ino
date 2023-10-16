@@ -11,17 +11,25 @@ void loop() {
     delay(100);
     int status = hscm.read();
     if (status < 2) {
-        Serial.print("Pressure: ");
-        Serial.println(hscm.pressure());
-        Serial.print("Temperature: ");
-        Serial.println(hscm.temperature());
+        readPressure();
+        readTemperature();
     }
     else {
         Serial.print("Error reading HSCM. Status code: ");
         Serial.println(status);
-        Serial.print("Pressure: ");
-        Serial.println(hscm.pressure());
-        Serial.print("Temperature: ");
-        Serial.println(hscm.temperature());
+        readPressure();
+        readTemperature();
     }
+}
+
+void readPressure() {
+    Serial.print("Pressure: ");
+    Serial.print(hscm.pressure());
+    Serial.println(" psi")
+}
+
+void readTemperature() {
+    Serial.print("Temperature: ");
+    Serial.print(hscm.temperature());
+    Serial.println(" C")
 }

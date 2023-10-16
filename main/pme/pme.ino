@@ -3,16 +3,15 @@
 #include "src/StateLogic.h"
 #include "src/PinCtrl.h"
 //#include <AtmosProfiles.h>
-//#include <Logger.h>
+#include "src/Logger.h"
 
-// Include sensor libraries
-
-
-// Define classes
-StateLogic stateLogic;
-PinCtrl pinController;
-AtmosProfiles atmosProfiles;
-Logger logger;
+int closeSV1{A1}; 
+int openSV1{5};
+int closeSV2{A2};
+int openSV2{6};
+int closeLV1{A3}; 
+int openLV1{9};
+int signalPin{13};
 
 // Parameters for flight simulation
 bool readSensors{false};
@@ -22,33 +21,39 @@ unsigned long lastRead = 0;
 
 void setup() {
   // put your setup code here, to run once:
-
-  stateLogic.init();
-  pinController.init();
-
-  if (readSensors == true) {
-    // Initialize all sensors
+/* 
+  if (stateLogic.init()) {
+    Serial.println("Something went wrong with initializing the state handler. Exiting...");
+    exit(1);
+  }; */
+  if (pinController.init() != 0)
+  {
+    Serial.println("Something went wrong with initializing the pin controller. Exiting...");
+    exit(1);
   }
-  else {
-    atmosProfiles.init()
+  if (logger.init() != 0)
+  {
+    Serial.println("Something went wrong with initializing the logger. Exiting...");
+    exit(1);
   }
-
-  // Configure logger
-  logger.transformToStruct(false);
-
 }
 
 void updateStateLogicMembers() {
   if (readSensors == true) {
     // Update state logic members to get sensor values
   } else {
+  // TODO: Implement atmospheric profiles first
+  /* 
     int currentTimeStep = atmosProfile.timeStep
     stateLogic.lowVacuumPressure = atmosProfiles.pressureProfile[currentTimeStep];
     stateLogic.highVacuumPressure = atmosProfiles.pressureProfile[currentTimeStep];
     stateLogic.acceleration = atmosProfile.accelerationProfile[currentTimeStep];
+ */
   }
 }
 
+// TODO: Once the classes are assembled and working, uncomment the appropriate sections
+// and make sure they work
 void loop() {
   // put your main code here, to run repeatedly:
 
@@ -59,6 +64,7 @@ void loop() {
   // 3: Descent
   // 4: Landing
 
+  /*
   switch(stateLogic.flightState) {
     case 1:
       pinController.closeFlowValve();
@@ -73,6 +79,7 @@ void loop() {
       pinController.closeFlowValve();
       pinController.closeVentValve();
   }
+  */
 
   atmosProfiles.advanceTimeStep();
   stateLogic.determineFlightState();

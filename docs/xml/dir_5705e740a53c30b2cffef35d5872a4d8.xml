@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5705e740a53c30b2cffef35d5872a4d8" kind="dir">
+    <compoundname>examples/simbox_integration</compoundname>
+    <innerdir refid="dir_374865700c641b3a4be35d48a1ad3d72">examples/simbox_integration/data</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/simbox_integration/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_ea2b310cc2ddea52c307f0e6c948dee4" kind="dir">
+    <compoundname>libraries/Adafruit_ADXL343</compoundname>
+    <innerfile refid="_adafruit___a_d_x_l343_8cpp">Adafruit_ADXL343.cpp</innerfile>
+    <innerfile refid="_adafruit___a_d_x_l343_8h">Adafruit_ADXL343.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Adafruit_ADXL343/"/>
+  </compounddef>
+</doxygen>

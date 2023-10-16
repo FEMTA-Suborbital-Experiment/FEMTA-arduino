@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logging__example_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.MD</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">###<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Place<sp/>the<sp/>folder<sp/>containing<sp/>this<sp/>.ino<sp/>into<sp/>the<sp/>Documents/Arduino<sp/>folder.<sp/>Cut<sp/>and<sp/>paste<sp/>the<sp/>libraries<sp/>folder<sp/>into<sp/>the<sp/>Arduino<sp/>folder.</highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/README.MD"/>
+  </compounddef>
+</doxygen>

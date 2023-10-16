@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1ceed6ac65738c70f90e358f5e1d69ce" kind="dir">
+    <compoundname>tests/sensors/src</compoundname>
+    <innerfile refid="tests_2sensors_2src_2_sensor_poller_8cpp">SensorPoller.cpp</innerfile>
+    <innerfile refid="tests_2sensors_2src_2_sensor_poller_8h">SensorPoller.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/sensors/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_protothread" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Protothread</compoundname>
+    <derivedcompoundref refid="class_pin_ctrl" prot="public" virt="non-virtual">PinCtrl</derivedcompoundref>
+    <derivedcompoundref refid="class_pin_ctrl" prot="public" virt="non-virtual">PinCtrl</derivedcompoundref>
+    <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_protothread_1a0428a9ed99eced9c08d7b524e65184f0" prot="protected" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short Protothread::LineNumber</definition>
+        <argsstring></argsstring>
+        <name>LineNumber</name>
+        <qualifiedname>Protothread::LineNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="89" column="28" bodyfile="libraries/Protothread/Protothread.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_protothread_1a439f9f3acdae4e648f082d71e5b7179e" prot="protected" static="yes" mutable="no">
+        <type>const LineNumber</type>
+        <definition>const LineNumber Protothread::LineNumberInvalid</definition>
+        <argsstring></argsstring>
+        <name>LineNumberInvalid</name>
+        <qualifiedname>Protothread::LineNumberInvalid</qualifiedname>
+        <initializer>= (LineNumber)(-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="92" column="29" bodyfile="libraries/Protothread/Protothread.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_protothread_1afa84624e985e17b4ccb3c7dffbc486a6" prot="protected" static="no" mutable="no">
+        <type>LineNumber</type>
+        <definition>LineNumber Protothread::_ptLine</definition>
+        <argsstring></argsstring>
+        <name>_ptLine</name>
+        <qualifiedname>Protothread::_ptLine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="96" column="16" bodyfile="libraries/Protothread/Protothread.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_protothread_1ad1ad115301f3a67a2ce0acd7cf2c2b6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Protothread::Protothread</definition>
+        <argsstring>()</argsstring>
+        <name>Protothread</name>
+        <qualifiedname>Protothread::Protothread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="64" column="5" bodyfile="libraries/Protothread/Protothread.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_protothread_1a1ed573d764f4f04d38a4104a01d3aaac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Protothread::~Protothread</definition>
+        <argsstring>()</argsstring>
+        <name>~Protothread</name>
+        <qualifiedname>Protothread::~Protothread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="67" column="13" bodyfile="libraries/Protothread/Protothread.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_protothread_1abaa5982808713e6a081f360610dbcea1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Protothread::Restart</definition>
+        <argsstring>()</argsstring>
+        <name>Restart</name>
+        <qualifiedname>Protothread::Restart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="70" column="10" bodyfile="libraries/Protothread/Protothread.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_protothread_1af8db8922fcbb667262045679c0b6ffe0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Protothread::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <qualifiedname>Protothread::Stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="75" column="10" bodyfile="libraries/Protothread/Protothread.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_protothread_1a8ee77430a2ef8286d773d0cedbe8844b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Protothread::IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <qualifiedname>Protothread::IsRunning</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="79" column="10" bodyfile="libraries/Protothread/Protothread.h" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_protothread_1a71f6d589b8a3077160746e152c43c683" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Protothread::Run</definition>
+        <argsstring>()=0</argsstring>
+        <name>Run</name>
+        <qualifiedname>Protothread::Run</qualifiedname>
+        <reimplementedby refid="class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870">Run</reimplementedby>
+        <reimplementedby refid="class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870">Run</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="84" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>PinCtrl</label>
+        <link refid="class_pin_ctrl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Protothread</label>
+        <link refid="class_protothread"/>
+      </node>
+    </inheritancegraph>
+    <location file="libraries/Protothread/Protothread.h" line="59" column="1" bodyfile="libraries/Protothread/Protothread.h" bodystart="60" bodyend="97"/>
+    <listofallmembers>
+      <member refid="class_protothread_1afa84624e985e17b4ccb3c7dffbc486a6" prot="protected" virt="non-virtual"><scope>Protothread</scope><name>_ptLine</name></member>
+      <member refid="class_protothread_1a8ee77430a2ef8286d773d0cedbe8844b" prot="public" virt="non-virtual"><scope>Protothread</scope><name>IsRunning</name></member>
+      <member refid="class_protothread_1a0428a9ed99eced9c08d7b524e65184f0" prot="protected" virt="non-virtual"><scope>Protothread</scope><name>LineNumber</name></member>
+      <member refid="class_protothread_1a439f9f3acdae4e648f082d71e5b7179e" prot="protected" virt="non-virtual"><scope>Protothread</scope><name>LineNumberInvalid</name></member>
+      <member refid="class_protothread_1ad1ad115301f3a67a2ce0acd7cf2c2b6d" prot="public" virt="non-virtual"><scope>Protothread</scope><name>Protothread</name></member>
+      <member refid="class_protothread_1abaa5982808713e6a081f360610dbcea1" prot="public" virt="non-virtual"><scope>Protothread</scope><name>Restart</name></member>
+      <member refid="class_protothread_1a71f6d589b8a3077160746e152c43c683" prot="public" virt="pure-virtual"><scope>Protothread</scope><name>Run</name></member>
+      <member refid="class_protothread_1af8db8922fcbb667262045679c0b6ffe0" prot="public" virt="non-virtual"><scope>Protothread</scope><name>Stop</name></member>
+      <member refid="class_protothread_1a1ed573d764f4f04d38a4104a01d3aaac" prot="public" virt="virtual"><scope>Protothread</scope><name>~Protothread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

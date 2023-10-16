@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_6bd0b3dce6573aab4210951dd504b20f" kind="dir">
+    <compoundname>examples/logging_example/libraries</compoundname>
+    <innerdir refid="dir_f7a9a5d1e51acfe4127456acfeeed4a0">examples/logging_example/libraries/AD7746</innerdir>
+    <innerdir refid="dir_fef078500d391ee2cd8e08037519b8ba">examples/logging_example/libraries/Adafruit_BusIO</innerdir>
+    <innerdir refid="dir_1950ed8031c3db255c1bb835c89441fd">examples/logging_example/libraries/Adafruit_LSM303_Accel</innerdir>
+    <innerdir refid="dir_df1e3f4da03149e8a99dc8917de355c3">examples/logging_example/libraries/Adafruit_LSM303DLH_Mag</innerdir>
+    <innerdir refid="dir_07925d3df167ee64711adf644a3d0ffb">examples/logging_example/libraries/Adafruit_Unified_Sensor</innerdir>
+    <innerdir refid="dir_75b74ad5fe7259e8fc1215058fac2a06">examples/logging_example/libraries/I2Cdev</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/"/>
+  </compounddef>
+</doxygen>

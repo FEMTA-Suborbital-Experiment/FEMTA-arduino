@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sensor_poller" kind="class" language="C++" prot="public">
+    <compoundname>SensorPoller</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorPoller::pollRate</definition>
+        <argsstring></argsstring>
+        <name>pollRate</name>
+        <qualifiedname>SensorPoller::pollRate</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/SensorPoller.h" line="14" column="13" bodyfile="main/pme/src/SensorPoller.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_poller_1abf908b6d7bbc6450f4ddf4fce027c334" prot="private" static="no" mutable="no">
+        <type>vector&lt; Sensor &gt;</type>
+        <definition>vector&lt;Sensor&gt; SensorPoller::sensorVector</definition>
+        <argsstring></argsstring>
+        <name>sensorVector</name>
+        <qualifiedname>SensorPoller::sensorVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/SensorPoller.h" line="19" column="16" bodyfile="main/pme/src/SensorPoller.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a3572c6394bf4998b66c916f75b1090e9" prot="private" static="no" mutable="no">
+        <type>Adafruit_LSM303_Accel_Unified</type>
+        <definition>Adafruit_LSM303_Accel_Unified SensorPoller::accel</definition>
+        <argsstring></argsstring>
+        <name>accel</name>
+        <qualifiedname>SensorPoller::accel</qualifiedname>
+        <initializer>= Adafruit_LSM303_Accel_Unified(54321)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="31" column="39" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a7b5c6b2ddc1c9d4a908b698b294b8796" prot="private" static="no" mutable="no">
+        <type>MS5837</type>
+        <definition>MS5837 SensorPoller::pressure0</definition>
+        <argsstring></argsstring>
+        <name>pressure0</name>
+        <qualifiedname>SensorPoller::pressure0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="32" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a280e05d834319fa5db8e29b22f387fba" prot="private" static="no" mutable="no">
+        <type>MS5837</type>
+        <definition>MS5837 SensorPoller::pressure1</definition>
+        <argsstring></argsstring>
+        <name>pressure1</name>
+        <qualifiedname>SensorPoller::pressure1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="33" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1ac8281f359e20580af2526d8355469d01" prot="private" static="no" mutable="no">
+        <type>MS5837</type>
+        <definition>MS5837 SensorPoller::pressure2</definition>
+        <argsstring></argsstring>
+        <name>pressure2</name>
+        <qualifiedname>SensorPoller::pressure2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="34" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a27b45e12989d938a19996ca6a1e010cb" prot="private" static="no" mutable="no">
+        <type>MS5837</type>
+        <definition>MS5837 SensorPoller::pressure3</definition>
+        <argsstring></argsstring>
+        <name>pressure3</name>
+        <qualifiedname>SensorPoller::pressure3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="35" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a2fa114864cf1f1b821dd8912bd5f139f" prot="private" static="no" mutable="no">
+        <type>MS5837</type>
+        <definition>MS5837 SensorPoller::pressure4</definition>
+        <argsstring></argsstring>
+        <name>pressure4</name>
+        <qualifiedname>SensorPoller::pressure4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="36" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a5c4cd33c89720d9f54dbcb8829dd85fd" prot="private" static="no" mutable="no">
+        <type>MS5837 *</type>
+        <definition>MS5837* SensorPoller::pressures[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>pressures</name>
+        <qualifiedname>SensorPoller::pressures</qualifiedname>
+        <initializer>= { &amp;pressure0, &amp;pressure1, &amp;pressure2, &amp;pressure3, &amp;pressure4 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="38" column="16" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a91075ee502dad1678b88c5337a81359d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref></type>
+        <definition>PVC4000 SensorPoller::highAlt</definition>
+        <argsstring></argsstring>
+        <name>highAlt</name>
+        <qualifiedname>SensorPoller::highAlt</qualifiedname>
+        <initializer>= <ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref>(0x50)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="40" column="17" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a70e0411b0727b787e43d7926c0bbbe76" prot="private" static="no" mutable="no">
+        <type><ref refid="class_h_s_c_m___p_s_i" kindref="compound">HSCM_PSI</ref></type>
+        <definition>HSCM_PSI SensorPoller::lowAlt</definition>
+        <argsstring></argsstring>
+        <name>lowAlt</name>
+        <qualifiedname>SensorPoller::lowAlt</qualifiedname>
+        <initializer>= <ref refid="class_h_s_c_m___p_s_i" kindref="compound">HSCM_PSI</ref>(0x20, 0, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="41" column="18" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a24fd7fb75ebc22476b5750c97460784d" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorPoller::lastRead</definition>
+        <argsstring></argsstring>
+        <name>lastRead</name>
+        <qualifiedname>SensorPoller::lastRead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="43" column="23" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a338c136e068817d97b20051b4617c15e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorPoller::sensorVector[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>sensorVector</name>
+        <qualifiedname>SensorPoller::sensorVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="44" column="15" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a07221024054d65eaaa7e0e5a86b37ad1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorPoller::accelGood</definition>
+        <argsstring></argsstring>
+        <name>accelGood</name>
+        <qualifiedname>SensorPoller::accelGood</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="46" column="14" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1aaeb798658b989736f6337d8c2a2e7055" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorPoller::pressuresGood[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>pressuresGood</name>
+        <qualifiedname>SensorPoller::pressuresGood</qualifiedname>
+        <initializer>= {1, 1, 1, 1, 1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="47" column="14" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_poller_1a4e1e2005c268633c607e6cb5a2da8255" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorPoller::flowGood</definition>
+        <argsstring></argsstring>
+        <name>flowGood</name>
+        <qualifiedname>SensorPoller::flowGood</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="48" column="14" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::addToSensorVector</definition>
+        <argsstring>()</argsstring>
+        <name>addToSensorVector</name>
+        <qualifiedname>SensorPoller::addToSensorVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/SensorPoller.h" line="16" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] SensorPoller::readVector</definition>
+        <argsstring>()</argsstring>
+        <name>readVector</name>
+        <qualifiedname>SensorPoller::readVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/SensorPoller.h" line="17" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorPoller::SensorPoller</definition>
+        <argsstring>()</argsstring>
+        <name>SensorPoller</name>
+        <qualifiedname>SensorPoller::SensorPoller</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="21" column="9" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>SensorPoller::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="22" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="23" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::readAccelerometer</definition>
+        <argsstring>(float *vec)</argsstring>
+        <name>readAccelerometer</name>
+        <qualifiedname>SensorPoller::readAccelerometer</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="23" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="50" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1aa2020c7d465f711303e678e9070dadab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::readLowAltBaro</definition>
+        <argsstring>(float *pressure, float *temp)</argsstring>
+        <name>readLowAltBaro</name>
+        <qualifiedname>SensorPoller::readLowAltBaro</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>pressure</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="24" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1ac1e38e730991296e93ebebb88245536a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::readHighAltBaro</definition>
+        <argsstring>(float *pressure, float *temp)</argsstring>
+        <name>readHighAltBaro</name>
+        <qualifiedname>SensorPoller::readHighAltBaro</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>pressure</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="25" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="110" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::readPressureSensors</definition>
+        <argsstring>(float *pressures, float *temperatures)</argsstring>
+        <name>readPressureSensors</name>
+        <qualifiedname>SensorPoller::readPressureSensors</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>pressures</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>temperatures</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="26" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="87" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::readFlowMeter</definition>
+        <argsstring>(float *flow)</argsstring>
+        <name>readFlowMeter</name>
+        <qualifiedname>SensorPoller::readFlowMeter</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>flow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="27" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="122" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_poller_1a1bfb10418f9d5076c5825fd2babb60dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorPoller::initPressureSensors</definition>
+        <argsstring>()</argsstring>
+        <name>initPressureSensors</name>
+        <qualifiedname>SensorPoller::initPressureSensors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="29" column="14" bodyfile="tests/sensors/src/SensorPoller.cpp" bodystart="61" bodyend="85"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="main/pme/src/SensorPoller.h" line="10" column="1" bodyfile="main/pme/src/SensorPoller.h" bodystart="10" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_sensor_poller_1a3572c6394bf4998b66c916f75b1090e9" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>accel</name></member>
+      <member refid="class_sensor_poller_1a07221024054d65eaaa7e0e5a86b37ad1" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>accelGood</name></member>
+      <member refid="class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>addToSensorVector</name></member>
+      <member refid="class_sensor_poller_1a4e1e2005c268633c607e6cb5a2da8255" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>flowGood</name></member>
+      <member refid="class_sensor_poller_1a91075ee502dad1678b88c5337a81359d" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>highAlt</name></member>
+      <member refid="class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>init</name></member>
+      <member refid="class_sensor_poller_1a1bfb10418f9d5076c5825fd2babb60dc" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>initPressureSensors</name></member>
+      <member refid="class_sensor_poller_1a24fd7fb75ebc22476b5750c97460784d" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>lastRead</name></member>
+      <member refid="class_sensor_poller_1a70e0411b0727b787e43d7926c0bbbe76" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>lowAlt</name></member>
+      <member refid="class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>pollRate</name></member>
+      <member refid="class_sensor_poller_1a7b5c6b2ddc1c9d4a908b698b294b8796" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressure0</name></member>
+      <member refid="class_sensor_poller_1a280e05d834319fa5db8e29b22f387fba" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressure1</name></member>
+      <member refid="class_sensor_poller_1ac8281f359e20580af2526d8355469d01" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressure2</name></member>
+      <member refid="class_sensor_poller_1a27b45e12989d938a19996ca6a1e010cb" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressure3</name></member>
+      <member refid="class_sensor_poller_1a2fa114864cf1f1b821dd8912bd5f139f" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressure4</name></member>
+      <member refid="class_sensor_poller_1a5c4cd33c89720d9f54dbcb8829dd85fd" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressures</name></member>
+      <member refid="class_sensor_poller_1aaeb798658b989736f6337d8c2a2e7055" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>pressuresGood</name></member>
+      <member refid="class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readAccelerometer</name></member>
+      <member refid="class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readFlowMeter</name></member>
+      <member refid="class_sensor_poller_1ac1e38e730991296e93ebebb88245536a" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readHighAltBaro</name></member>
+      <member refid="class_sensor_poller_1aa2020c7d465f711303e678e9070dadab" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readLowAltBaro</name></member>
+      <member refid="class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readPressureSensors</name></member>
+      <member refid="class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>readVector</name></member>
+      <member refid="class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a" prot="public" virt="non-virtual"><scope>SensorPoller</scope><name>SensorPoller</name></member>
+      <member refid="class_sensor_poller_1abf908b6d7bbc6450f4ddf4fce027c334" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>sensorVector</name></member>
+      <member refid="class_sensor_poller_1a338c136e068817d97b20051b4617c15e" prot="private" virt="non-virtual"><scope>SensorPoller</scope><name>sensorVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

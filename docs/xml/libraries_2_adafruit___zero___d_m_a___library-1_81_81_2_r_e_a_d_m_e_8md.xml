@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___zero___d_m_a___library-1_81_81_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit_ZeroDMA<sp/>library<sp/>[![Build<sp/>Status](https://github.com/adafruit/Adafruit_ZeroDMA/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_ZeroDMA/actions)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">DMA<sp/>helper/wrapped<sp/>for<sp/>ATSAMD21<sp/>such<sp/>as<sp/>Arduino<sp/>Zero<sp/>&amp;amp;<sp/>Feather<sp/>M0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Current<sp/>version<sp/>of<sp/>this<sp/>library<sp/>no<sp/>longer<sp/>requires<sp/>Adafruit_ASFcore<sp/>as<sp/>a<sp/>prerequisite.<sp/>However...IT<sp/>BREAKS<sp/>COMPATIBILITY<sp/>WITH<sp/>PRIOR<sp/>VERSIONS.<sp/>Function<sp/>names,<sp/>calling<sp/>sequence<sp/>and<sp/>return<sp/>types/values<sp/>have<sp/>changed.<sp/>See<sp/>examples!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Item(s)<sp/>in<sp/>&apos;utility&apos;<sp/>directory<sp/>are<sp/>much<sp/>pared-down<sp/>derivatives<sp/>of<sp/>Atmel<sp/>ASFcore<sp/>3<sp/>files.<sp/>Please<sp/>keep<sp/>their<sp/>original<sp/>copyright<sp/>and<sp/>license<sp/>intact<sp/>when<sp/>editing.</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/README.md"/>
+  </compounddef>
+</doxygen>

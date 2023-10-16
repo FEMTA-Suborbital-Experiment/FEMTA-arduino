@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit Bus IO Library &lt;a href=&quot;https://github.com/adafruit/Adafruit_BusIO/actions&quot; &gt;&lt;img src=&quot;https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_r_e_a_d_m_e_1autotoc_md0"/></para>
+<para>This is a helper library to abstract away I2C &amp; SPI transactions and registers</para>
+<para>Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<para>MIT license, all text above must be included in any redistribution </para>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/README.md"/>
+  </compounddef>
+</doxygen>

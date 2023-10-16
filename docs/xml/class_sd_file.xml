@@ -1,0 +1,2305 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sd_file" kind="class" language="C++" prot="public">
+    <compoundname>SdFile</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Print</basecompoundref>
+    <includes refid="_sd_fat_8h" local="no">SdFat.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_sd_file_1aa8d566c8c45a57c199623983964ff5c8" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* SdFile::oldDateTime_)(uint16_t &amp;date, uint16_t &amp;time)</definition>
+        <argsstring>)(uint16_t &amp;date, uint16_t &amp;time)</argsstring>
+        <name>oldDateTime_</name>
+        <qualifiedname>SdFile::oldDateTime_</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="411" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a5abda0cc6a4b7f9ec7bc9e31f2cb2c5e" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdFile::F_OFLAG</definition>
+        <argsstring></argsstring>
+        <name>F_OFLAG</name>
+        <qualifiedname>SdFile::F_OFLAG</qualifiedname>
+        <initializer>= (<ref refid="_sd_fat_8h_1a4efda39151f5ef2dc7fbd138be51336a" kindref="member">O_ACCMODE</ref> | <ref refid="_sd_fat_8h_1a4242b37e810af3a6485adda0e08a9a2b" kindref="member">O_APPEND</ref> | <ref refid="_sd_fat_8h_1a3066c471d52b056dec13fa567f7bbd9d" kindref="member">O_SYNC</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="423" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1aeebd57eadc0c1cfe0c12e5c81b047d1c" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdFile::F_FILE_NON_BLOCKING_WRITE</definition>
+        <argsstring></argsstring>
+        <name>F_FILE_NON_BLOCKING_WRITE</name>
+        <qualifiedname>SdFile::F_FILE_NON_BLOCKING_WRITE</qualifiedname>
+        <initializer>= 0X10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="425" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a5db68b47d924fd38494becce95f9c6c8" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdFile::F_FILE_CLUSTER_ADDED</definition>
+        <argsstring></argsstring>
+        <name>F_FILE_CLUSTER_ADDED</name>
+        <qualifiedname>SdFile::F_FILE_CLUSTER_ADDED</qualifiedname>
+        <initializer>= 0X20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="427" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1aa37d17c6298afb7caeba1718b1ab9216" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdFile::F_FILE_UNBUFFERED_READ</definition>
+        <argsstring></argsstring>
+        <name>F_FILE_UNBUFFERED_READ</name>
+        <qualifiedname>SdFile::F_FILE_UNBUFFERED_READ</qualifiedname>
+        <initializer>= 0X40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="429" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a5e5b43587cfe96709e9b5e22ba08e743" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdFile::F_FILE_DIR_DIRTY</definition>
+        <argsstring></argsstring>
+        <name>F_FILE_DIR_DIRTY</name>
+        <qualifiedname>SdFile::F_FILE_DIR_DIRTY</qualifiedname>
+        <initializer>= 0X80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="431" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a671500341631410733410c3495788c51" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* SdFile::dateTime_)(uint16_t *date, uint16_t *time)</definition>
+        <argsstring>)(uint16_t *date, uint16_t *time)</argsstring>
+        <name>dateTime_</name>
+        <qualifiedname>SdFile::dateTime_</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="453" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="453" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sd_file_1a8e748af115d721717f898da5af240e10" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::flags_</definition>
+        <argsstring></argsstring>
+        <name>flags_</name>
+        <qualifiedname>SdFile::flags_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="439" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a5567640b67767cb4cf894e3587bf628f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <qualifiedname>SdFile::type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="440" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a55c7cbbaf7fc17070608ad0dacd4c33d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::curCluster_</definition>
+        <argsstring></argsstring>
+        <name>curCluster_</name>
+        <qualifiedname>SdFile::curCluster_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="441" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="441" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1afd8346044630238bb4819cd7bf5a2dc5" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::curPosition_</definition>
+        <argsstring></argsstring>
+        <name>curPosition_</name>
+        <qualifiedname>SdFile::curPosition_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="442" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1aadfa0234914038f459f9cefc062b915f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::dirBlock_</definition>
+        <argsstring></argsstring>
+        <name>dirBlock_</name>
+        <qualifiedname>SdFile::dirBlock_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="443" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1acd4c504a2311e1755f385e9e3d4e4a24" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::dirIndex_</definition>
+        <argsstring></argsstring>
+        <name>dirIndex_</name>
+        <qualifiedname>SdFile::dirIndex_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="444" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a8f06e3c212051ce7e6ff65da4c46ab5d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::fileSize_</definition>
+        <argsstring></argsstring>
+        <name>fileSize_</name>
+        <qualifiedname>SdFile::fileSize_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="445" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="445" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1a4da4967eb2716f40c8397e544d269dc4" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::firstCluster_</definition>
+        <argsstring></argsstring>
+        <name>firstCluster_</name>
+        <qualifiedname>SdFile::firstCluster_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="446" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_file_1aa76295c203b6732ad2a85ebd3255b934" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sd_volume" kindref="compound">SdVolume</ref> *</type>
+        <definition>SdVolume* SdFile::vol_</definition>
+        <argsstring></argsstring>
+        <name>vol_</name>
+        <qualifiedname>SdFile::vol_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="447" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="447" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sd_file_1a9e08675e64a4ef847700876d4291bbef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SdFile::SdFile</definition>
+        <argsstring>(void)</argsstring>
+        <name>SdFile</name>
+        <qualifiedname>SdFile::SdFile</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an instance of <ref refid="class_sd_file" kindref="compound">SdFile</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="154" column="5" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a44c3d6ef602e84b8160a4d215faef7d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::clearUnbufferedRead</definition>
+        <argsstring>(void)</argsstring>
+        <name>clearUnbufferedRead</name>
+        <qualifiedname>SdFile::clearUnbufferedRead</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>writeError is set to true if an error occurs during a <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref>. Set writeError to false before calling print() and/or <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref> and check for true after calls to print() and/or <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref>. Cancel unbuffered reads for this file. See <ref refid="class_sd_file_1a08c9e76a4a7bb43fccf1dd5c72c66a16" kindref="member">setUnbufferedRead()</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="165" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a6b24350c89cc41ff644a343231a3983c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::close</definition>
+        <argsstring>(void)</argsstring>
+        <name>close</name>
+        <qualifiedname>SdFile::close</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close a file and force cached data and directory information to be written to the storage device.</para>
+<para><simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include no file is open or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="168" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="85" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a3b07fc09dbcb28ae7c89c060af6a1810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::contiguousRange</definition>
+        <argsstring>(uint32_t *bgnBlock, uint32_t *endBlock)</argsstring>
+        <name>contiguousRange</name>
+        <qualifiedname>SdFile::contiguousRange</qualifiedname>
+        <param>
+          <type>uint32_t *</type>
+          <declname>bgnBlock</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>endBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check for contiguous file and return its raw block range.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">bgnBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the first block address for the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">endBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the last block address for the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include file is not contiguous, file has zero length or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="169" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="104" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a07fc5c82318f073848e706f95830e5b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::createContiguous</definition>
+        <argsstring>(SdFile *dirFile, const char *fileName, uint32_t size)</argsstring>
+        <name>createContiguous</name>
+        <qualifiedname>SdFile::createContiguous</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create and open a new contiguous file of a specified size.</para>
+<para><simplesect kind="note"><para>This function only supports short DOS 8.3 names. See <ref refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" kindref="member">open()</ref> for more information.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dirFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory where the file will be created. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A valid DOS 8.3 file name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired file size.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include <emphasis>fileName</emphasis> contains an invalid DOS 8.3 file name, the FAT volume has not been initialized, a file is already open, the file already exists, the root directory is full or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="170" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="148" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a970ef8d6cbb09ccb104fe1156d4a0a9e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::curCluster</definition>
+        <argsstring>(void) const</argsstring>
+        <name>curCluster</name>
+        <qualifiedname>SdFile::curCluster</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current cluster number for a file or directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="173" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a6105ae2f1c23e99fdea17bc64571ea8c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::curPosition</definition>
+        <argsstring>(void) const</argsstring>
+        <name>curPosition</name>
+        <qualifiedname>SdFile::curPosition</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current position for a file or directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="177" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="177" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1af62898865cfe9a97ce75468efc0d2409" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::dirBlock</definition>
+        <argsstring>(void) const</argsstring>
+        <name>dirBlock</name>
+        <qualifiedname>SdFile::dirBlock</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Address of the block that contains this file&apos;s directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="220" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1abaf9b1dc12d53cdeb937065edf68927d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::dirEntry</definition>
+        <argsstring>(dir_t *dir)</argsstring>
+        <name>dirEntry</name>
+        <qualifiedname>SdFile::dirEntry</qualifiedname>
+        <param>
+          <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a files directory entry</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location for return of the files directory entry.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="223" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="181" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ad4381e541a53a7e5cf51a866c1c8f79e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::dirIndex</definition>
+        <argsstring>(void) const</argsstring>
+        <name>dirIndex</name>
+        <qualifiedname>SdFile::dirIndex</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Index of this file&apos;s directory in the block dirBlock. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="225" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="225" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1add58372b89c922511bc425d84b07dc5f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::fileSize</definition>
+        <argsstring>(void) const</argsstring>
+        <name>fileSize</name>
+        <qualifiedname>SdFile::fileSize</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The total number of bytes in a file or directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="230" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="230" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a854b7555bd774ff668558bf919636edd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdFile::firstCluster</definition>
+        <argsstring>(void) const</argsstring>
+        <name>firstCluster</name>
+        <qualifiedname>SdFile::firstCluster</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The first cluster number for a file or directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="234" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="234" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a564e69a08c11f20e66eb18c38e24b748" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::isDir</definition>
+        <argsstring>(void) const</argsstring>
+        <name>isDir</name>
+        <qualifiedname>SdFile::isDir</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if this is a <ref refid="class_sd_file" kindref="compound">SdFile</ref> for a directory else false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="238" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="238" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ad9ca9b2b519a933c25e8f893ee0201b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::isFile</definition>
+        <argsstring>(void) const</argsstring>
+        <name>isFile</name>
+        <qualifiedname>SdFile::isFile</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if this is a <ref refid="class_sd_file" kindref="compound">SdFile</ref> for a file else false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="242" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a54e1b9385c43c33dc83eaad6de0d33be" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::isOpen</definition>
+        <argsstring>(void) const</argsstring>
+        <name>isOpen</name>
+        <qualifiedname>SdFile::isOpen</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if this is a <ref refid="class_sd_file" kindref="compound">SdFile</ref> for an open file/directory else false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="246" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="246" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a22fb79f645f5a92baf699d547395667b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::isSubDir</definition>
+        <argsstring>(void) const</argsstring>
+        <name>isSubDir</name>
+        <qualifiedname>SdFile::isSubDir</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if this is a <ref refid="class_sd_file" kindref="compound">SdFile</ref> for a subdirectory else false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="250" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="250" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a29fd6e80e6cbd3c67724988f9fe02290" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::isRoot</definition>
+        <argsstring>(void) const</argsstring>
+        <name>isRoot</name>
+        <qualifiedname>SdFile::isRoot</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if this is a <ref refid="class_sd_file" kindref="compound">SdFile</ref> for the root directory. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="254" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1afd9965ed8dee8bdd4d86dd14032edbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::ls</definition>
+        <argsstring>(uint8_t flags=0, uint8_t indent=0)</argsstring>
+        <name>ls</name>
+        <qualifiedname>SdFile::ls</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>indent</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List directory contents to Serial.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The inclusive OR of</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+LS_DATE - Print file modification date</para>
+<para>LS_SIZE - Print file size.</para>
+<para>LS_R - Recursive list of subdirectories.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">indent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of space before file name. Used for recursive list to indicate subdirectory level. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="257" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="232" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a62984bedf614a8de96b48bf9c5e7159f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::makeDir</definition>
+        <argsstring>(SdFile *dir, const char *dirName)</argsstring>
+        <name>makeDir</name>
+        <qualifiedname>SdFile::makeDir</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>dirName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Make a new directory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An open SdFat instance for the directory that will containing the new directory.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dirName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A valid 8.3 DOS name for the new directory.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include this <ref refid="class_sd_file" kindref="compound">SdFile</ref> is already open, <emphasis>dir</emphasis> is not a directory, <emphasis>dirName</emphasis> is invalid or already exists in <emphasis>dir</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="258" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="341" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::open</definition>
+        <argsstring>(SdFile *dirFile, uint16_t index, uint8_t oflag)</argsstring>
+        <name>open</name>
+        <qualifiedname>SdFile::open</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>oflag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a file by index.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dirFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An open SdFat instance for the directory.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <emphasis>index</emphasis> of the directory entry for the file to be opened. The value for <emphasis>index</emphasis> is (directory file position)/32.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">oflag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Values for <emphasis>oflag</emphasis> are constructed by a bitwise-inclusive OR of flags O_READ, O_WRITE, O_TRUNC, and O_SYNC.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+See <ref refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" kindref="member">open()</ref> by fileName for definition of flags and return values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="259" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="565" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a3cf2167ad5ba6d84942ede8d2d07dcc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::open</definition>
+        <argsstring>(SdFile *dirFile, const char *fileName, uint8_t oflag)</argsstring>
+        <name>open</name>
+        <qualifiedname>SdFile::open</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>oflag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a file or directory by name.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dirFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An open SdFat instance for the directory containing the file to be opened.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A valid 8.3 DOS name for a file to be opened.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">oflag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Values for <emphasis>oflag</emphasis> are constructed by a bitwise-inclusive OR of flags from the following list</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+O_READ - Open for reading.</para>
+<para>O_RDONLY - Same as O_READ.</para>
+<para>O_WRITE - Open for writing.</para>
+<para>O_WRONLY - Same as O_WRITE.</para>
+<para>O_RDWR - Open for reading and writing.</para>
+<para>O_APPEND - If set, the file offset shall be set to the end of the file prior to each write.</para>
+<para>O_CREAT - If the file exists, this flag has no effect except as noted under O_EXCL below. Otherwise, the file shall be created</para>
+<para>O_EXCL - If O_CREAT and O_EXCL are set, <ref refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" kindref="member">open()</ref> shall fail if the file exists.</para>
+<para>O_SYNC - Call <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> after each write. This flag should not be used with <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write(uint8_t)</ref>, write_P(PGM_P), writeln_P(PGM_P), or the Arduino Print class. These functions do character at a time writes so <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> will be called after each byte.</para>
+<para>O_TRUNC - If the file exists and is a regular file, and the file is successfully opened and is not read only, its length shall be truncated to 0.</para>
+<para><simplesect kind="note"><para>Directory files must be opened read only. Write and truncation is not allowed for directory files.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include this <ref refid="class_sd_file" kindref="compound">SdFile</ref> is already open, <emphasis>difFile</emphasis> is not a directory, <emphasis>fileName</emphasis> is invalid, the file does not exist or can&apos;t be opened in the access mode specified by oflag. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="260" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="453" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ac3612bc27eaf52a23d8cb85c8d96ad38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::openRoot</definition>
+        <argsstring>(SdVolume *vol)</argsstring>
+        <name>openRoot</name>
+        <qualifiedname>SdFile::openRoot</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_volume" kindref="compound">SdVolume</ref> *</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a volume&apos;s root directory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">vol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FAT volume containing the root directory to be opened.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the FAT volume has not been initialized or it a FAT12 volume. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="262" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="653" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a6c389f0180b4a86fb6d7464f50d3b0dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t SdFile::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>SdFile::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the next byte from a file.</para>
+<para><simplesect kind="return"><para>For success read returns the next byte in the file as an int. If an error occurs or end of file is reached -1 is returned. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="273" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="273" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a77ad85c5c80b34f8ebc57b5b89730554" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t SdFile::read</definition>
+        <argsstring>(void *buf, uint16_t nbyte)</argsstring>
+        <name>read</name>
+        <qualifiedname>SdFile::read</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>nbyte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read data from a file starting at the current position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the location that will receive the data.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nbyte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of bytes to read.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>For success <ref refid="class_sd_file_1a6c389f0180b4a86fb6d7464f50d3b0dd" kindref="member">read()</ref> returns the number of bytes read. A value less than <emphasis>nbyte</emphasis>, including zero, will be returned if end of file is reached. If an error occurs, <ref refid="class_sd_file_1a6c389f0180b4a86fb6d7464f50d3b0dd" kindref="member">read()</ref> returns -1. Possible errors include <ref refid="class_sd_file_1a6c389f0180b4a86fb6d7464f50d3b0dd" kindref="member">read()</ref> called before a file has been opened, corrupt file system or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="277" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="769" bodyend="834"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SdFile::readDir</definition>
+        <argsstring>(dir_t *dir)</argsstring>
+        <name>readDir</name>
+        <qualifiedname>SdFile::readDir</qualifiedname>
+        <param>
+          <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read the next directory entry from a directory file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The dir_t struct that will receive the data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>For success <ref refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" kindref="member">readDir()</ref> returns the number of bytes read. A value of zero will be returned if end of file is reached. If an error occurs, <ref refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" kindref="member">readDir()</ref> returns -1. Possible errors include <ref refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" kindref="member">readDir()</ref> called before a directory has been opened, this is not a directory file or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="278" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="847" bodyend="870"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a66c5fb5f651a1ac319bab68fda1d3cc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::remove</definition>
+        <argsstring>(void)</argsstring>
+        <name>remove</name>
+        <qualifiedname>SdFile::remove</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a file.</para>
+<para>The directory entry and all data for the file are deleted.</para>
+<para><simplesect kind="note"><para>This function should not be used to delete the 8.3 version of a file that has a long name. For example if a file has the long name &quot;New Text Document.txt&quot; you should not delete the 8.3 name &quot;NEWTEX~1.TXT&quot;.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file read-only, is a directory, or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="280" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="909" bodyend="929"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1afa8aaa7bdeb97b4e691ea01adf99f654" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::rewind</definition>
+        <argsstring>(void)</argsstring>
+        <name>rewind</name>
+        <qualifiedname>SdFile::rewind</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the file&apos;s current position to zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="282" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="282" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a0d9e0c280b3469bb15e7258f6339746b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::rmDir</definition>
+        <argsstring>(void)</argsstring>
+        <name>rmDir</name>
+        <qualifiedname>SdFile::rmDir</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a directory file.</para>
+<para>The directory file will be removed only if it is empty and is not the root directory. <ref refid="class_sd_file_1a0d9e0c280b3469bb15e7258f6339746b" kindref="member">rmDir()</ref> follows DOS and Windows and ignores the read-only attribute for the directory.</para>
+<para><simplesect kind="note"><para>This function should not be used to delete the 8.3 version of a directory that has a long name. For example if a directory has the long name &quot;New folder&quot; you should not delete the 8.3 name &quot;NEWFOL~1&quot;.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file is not a directory, is the root directory, is not empty, or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="285" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="972" bodyend="1003"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a44c26fddfe2b42e7db3bc80290c77503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::rmRfStar</definition>
+        <argsstring>(void)</argsstring>
+        <name>rmRfStar</name>
+        <qualifiedname>SdFile::rmRfStar</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively delete a directory and all contained files.</para>
+<para>This is like the Unix/Linux &apos;rm -rf *&apos; if called with the root directory hence the name.</para>
+<para>Warning - This will remove all contents of the directory including subdirectories. The directory will then be removed if it is not root. The read-only attribute for files will be ignored.</para>
+<para><simplesect kind="note"><para>This function should not be used to delete the 8.3 version of a directory that has a long name. See <ref refid="class_sd_file_1a66c5fb5f651a1ac319bab68fda1d3cc2" kindref="member">remove()</ref> and <ref refid="class_sd_file_1a0d9e0c280b3469bb15e7258f6339746b" kindref="member">rmDir()</ref>.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="286" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1020" bodyend="1075"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1aa95121ff038538e671f125160b280e9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::seekCur</definition>
+        <argsstring>(uint32_t pos)</argsstring>
+        <name>seekCur</name>
+        <qualifiedname>SdFile::seekCur</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the files position to current position + <emphasis>pos</emphasis>. See <ref refid="class_sd_file_1a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" kindref="member">seekSet()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="288" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="288" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1afa70bc7ba5eb789aee1b62fc5fafaa5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::seekEnd</definition>
+        <argsstring>(void)</argsstring>
+        <name>seekEnd</name>
+        <qualifiedname>SdFile::seekEnd</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the files current position to end of file. Useful to position a file for append. See <ref refid="class_sd_file_1a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" kindref="member">seekSet()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="295" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="295" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::seekSet</definition>
+        <argsstring>(uint32_t pos)</argsstring>
+        <name>seekSet</name>
+        <qualifiedname>SdFile::seekSet</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a file&apos;s position.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new position in bytes from the beginning of the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="298" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1085" bodyend="1119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a08c9e76a4a7bb43fccf1dd5c72c66a16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::setUnbufferedRead</definition>
+        <argsstring>(void)</argsstring>
+        <name>setUnbufferedRead</name>
+        <qualifiedname>SdFile::setUnbufferedRead</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use unbuffered reads to access this file. Used with Wave Shield ISR. Used with <ref refid="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" kindref="member">Sd2Card::partialBlockRead()</ref> in WaveRP.</para>
+<para>Not recommended for normal applications. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="305" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="305" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a249632ba9580c556c0b041d6b2aaf224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::timestamp</definition>
+        <argsstring>(uint8_t flag, uint16_t year, uint8_t month, uint8_t day, uint8_t hour, uint8_t minute, uint8_t second)</argsstring>
+        <name>timestamp</name>
+        <qualifiedname>SdFile::timestamp</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>flag</declname>
+          <defname>flags</defname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set a file&apos;s timestamps in its directory entry.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Values for <emphasis>flags</emphasis> are constructed by a bitwise-inclusive OR of flags from the following list</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+T_ACCESS - Set the file&apos;s last access date.</para>
+<para>T_CREATE - Set the file&apos;s creation date and time.</para>
+<para>T_WRITE - Set the file&apos;s last write/modification date and time.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 1980 - 2107 inclusive.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 1 - 12 inclusive.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 1 - 31 inclusive.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 0 - 23 inclusive.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 0 - 59 inclusive.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Valid range 0 - 59 inclusive</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>It is possible to set an invalid date since there is no check for the number of days in a month.</para>
+</simplesect>
+<simplesect kind="note"><para>Modify and access timestamps may be overwritten if a date time callback function has been set by <ref refid="class_sd_file_1a2d78e6a8cedbf8ce545af68457b43bf1" kindref="member">dateTimeCallback()</ref>.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="310" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1203" bodyend="1239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::sync</definition>
+        <argsstring>(uint8_t blocking=1)</argsstring>
+        <name>sync</name>
+        <qualifiedname>SdFile::sync</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>blocking</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> call causes all modified data and directory fields to be written to the storage device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">blocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the sync should block until fully complete.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include a call to <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> before a file has been opened or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="312" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1132" bodyend="1167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a2da736b480e64ec2142687fb49871ada" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::type</definition>
+        <argsstring>(void) const</argsstring>
+        <name>type</name>
+        <qualifiedname>SdFile::type</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of this <ref refid="class_sd_file" kindref="compound">SdFile</ref>. You should use <ref refid="class_sd_file_1ad9ca9b2b519a933c25e8f893ee0201b6" kindref="member">isFile()</ref> or <ref refid="class_sd_file_1a564e69a08c11f20e66eb18c38e24b748" kindref="member">isDir()</ref> instead of <ref refid="class_sd_file_1a2da736b480e64ec2142687fb49871ada" kindref="member">type()</ref> if possible.</para>
+<para><simplesect kind="return"><para>The file or directory type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="318" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="318" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ade1e2b72f89b24f500502518fd678abd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::truncate</definition>
+        <argsstring>(uint32_t size)</argsstring>
+        <name>truncate</name>
+        <qualifiedname>SdFile::truncate</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+          <defname>length</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Truncate a file to a specified length. The current file position will be maintained if it is less than or equal to <emphasis>length</emphasis> otherwise it will be set to end of file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The desired length for the file.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include file is read only, file is a directory, <emphasis>length</emphasis> is greater than the current file size or an I/O error occurs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="321" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1253" bodyend="1312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a151bbc9fa7787b67f3d4a3574f9bc9e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::unbufferedRead</definition>
+        <argsstring>(void) const</argsstring>
+        <name>unbufferedRead</name>
+        <qualifiedname>SdFile::unbufferedRead</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Unbuffered read flag. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="323" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="323" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ae1b1b91b5fd3603a36af20a3e2ea09f1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sd_volume" kindref="compound">SdVolume</ref> *</type>
+        <definition>SdVolume * SdFile::volume</definition>
+        <argsstring>(void) const</argsstring>
+        <name>volume</name>
+        <qualifiedname>SdFile::volume</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_sd_volume" kindref="compound">SdVolume</ref> that contains this file. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="327" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="327" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a67267a4b63d03a16e099195935613006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SdFile::write</definition>
+        <argsstring>(uint8_t b)</argsstring>
+        <name>write</name>
+        <qualifiedname>SdFile::write</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a byte to a file. Required by the Arduino Print class.</para>
+<para>Use SdFile::writeError to check for errors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="330" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1451" bodyend="1453"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a94d4541fda63b5390c8e97ebe815115a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SdFile::write</definition>
+        <argsstring>(const void *buf, uint16_t nbyte)</argsstring>
+        <name>write</name>
+        <qualifiedname>SdFile::write</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>nbyte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write data to an open file.</para>
+<para><simplesect kind="note"><para>Data is moved to the cache but may not be written to the storage device until <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> is called.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the location of the data to be written.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">nbyte</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>For success <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref> returns the number of bytes written, always <emphasis>nbyte</emphasis>. If an error occurs, <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref> returns 0. Possible errors include <ref refid="class_sd_file_1a67267a4b63d03a16e099195935613006" kindref="member">write()</ref> is called before a file has been opened, write is called for a read-only file, device is full, a corrupt file system or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="331" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1330" bodyend="1444"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ad74aaa9115724d663ee39e6dd2d808f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t SdFile::write</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>write</name>
+        <qualifiedname>SdFile::write</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a string to a file. Used by the Arduino Print class.</para>
+<para>Use SdFile::writeError to check for errors. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="332" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1460" bodyend="1462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a477e29153291a129529274eb9d74cdf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SdFile::availableForWrite</definition>
+        <argsstring>(void)</argsstring>
+        <name>availableForWrite</name>
+        <qualifiedname>SdFile::availableForWrite</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check how many bytes can be written without blocking.</para>
+<para><simplesect kind="return"><para>The number of bytes that can be written without blocking. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="337" column="9" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="1492" bodyend="1527"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a872927812be6c48a894bdfc72f1701a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::contiguousRange</definition>
+        <argsstring>(uint32_t &amp;bgnBlock, uint32_t &amp;endBlock)</argsstring>
+        <name>contiguousRange</name>
+        <qualifiedname>SdFile::contiguousRange</qualifiedname>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>bgnBlock</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>endBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000001"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1a3b07fc09dbcb28ae7c89c060af6a1810" kindref="member">SdFile::contiguousRange(uint32_t* bgnBlock, uint32_t* endBlock)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="344" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="344" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a231dd495e5c5997aea2a842481a68f40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::createContiguous</definition>
+        <argsstring>(SdFile &amp;dirFile, const char *fileName, uint32_t size)</argsstring>
+        <name>createContiguous</name>
+        <qualifiedname>SdFile::createContiguous</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000002"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1a07fc5c82318f073848e706f95830e5b5" kindref="member">SdFile::createContiguous(SdFile* dirFile,
+  const char* fileName, uint32_t size)</ref> </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="351" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="351" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ae7b4b1057a1ee17f673c116771636156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::dirEntry</definition>
+        <argsstring>(dir_t &amp;dir)</argsstring>
+        <name>dirEntry</name>
+        <qualifiedname>SdFile::dirEntry</qualifiedname>
+        <param>
+          <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1abaf9b1dc12d53cdeb937065edf68927d" kindref="member">SdFile::dirEntry(dir_t* dir)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="367" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="367" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1af87e166d0059d392d7038f68fca68529" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::makeDir</definition>
+        <argsstring>(SdFile &amp;dir, const char *dirName)</argsstring>
+        <name>makeDir</name>
+        <qualifiedname>SdFile::makeDir</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>dirName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000005"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1a62984bedf614a8de96b48bf9c5e7159f" kindref="member">SdFile::makeDir(SdFile* dir, const char* dirName)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="373" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="373" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1afe1d8ce70ef58ee5967005047064167c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::open</definition>
+        <argsstring>(SdFile &amp;dirFile, const char *fileName, uint8_t oflag)</argsstring>
+        <name>open</name>
+        <qualifiedname>SdFile::open</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>oflag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1a3cf2167ad5ba6d84942ede8d2d07dcc6" kindref="member">SdFile::open(SdFile* dirFile, const char* fileName, uint8_t oflag)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="379" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="379" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a71e1c08dc4fb58b95554925a25435721" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::open</definition>
+        <argsstring>(SdFile &amp;dirFile, const char *fileName)</argsstring>
+        <name>open</name>
+        <qualifiedname>SdFile::open</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Do not use in new apps </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="384" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="384" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a8bc20433f081a6e9f1546601b7a1d712" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::open</definition>
+        <argsstring>(SdFile &amp;dirFile, uint16_t index, uint8_t oflag)</argsstring>
+        <name>open</name>
+        <qualifiedname>SdFile::open</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>oflag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" kindref="member">SdFile::open(SdFile* dirFile, uint16_t index, uint8_t oflag)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="390" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="390" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1abc60bbbb747c58319cfcfc11deb34d53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::openRoot</definition>
+        <argsstring>(SdVolume &amp;vol)</argsstring>
+        <name>openRoot</name>
+        <qualifiedname>SdFile::openRoot</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_volume" kindref="compound">SdVolume</ref> &amp;</type>
+          <declname>vol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_file_1ac3612bc27eaf52a23d8cb85c8d96ad38" kindref="member">SdFile::openRoot(SdVolume* vol)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="394" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="394" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ad107b73c6edfa489b76366edfef2eeae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SdFile::readDir</definition>
+        <argsstring>(dir_t &amp;dir)</argsstring>
+        <name>readDir</name>
+        <qualifiedname>SdFile::readDir</qualifiedname>
+        <param>
+          <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000010"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: int8_t <ref refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" kindref="member">SdFile::readDir(dir_t* dir)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="399" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="399" bodyend="401"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sd_file_1a2d78e6a8cedbf8ce545af68457b43bf1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SdFile::dateTimeCallback</definition>
+        <argsstring>(void(*dateTime)(uint16_t *date, uint16_t *time))</argsstring>
+        <name>dateTimeCallback</name>
+        <qualifiedname>SdFile::dateTimeCallback</qualifiedname>
+        <param>
+          <type>void(*)(uint16_t *date, uint16_t *time)</type>
+          <declname>dateTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the date/time callback function</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dateTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s call back function. The callback function is of the form:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dateTime(uint16_t*<sp/>date,<sp/>uint16_t*<sp/>time)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>uint16_t<sp/>year;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>uint8_t<sp/>month,<sp/>day,<sp/>hour,<sp/>minute,<sp/>second;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>User<sp/>gets<sp/>date<sp/>and<sp/>time<sp/>from<sp/>GPS<sp/>or<sp/>real-time<sp/>clock<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>date<sp/>using<sp/>FAT_DATE<sp/>macro<sp/>to<sp/>format<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*date<sp/>=<sp/>FAT_DATE(year,<sp/>month,<sp/>day);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>time<sp/>using<sp/>FAT_TIME<sp/>macro<sp/>to<sp/>format<sp/>fields</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*time<sp/>=<sp/>FAT_TIME(hour,<sp/>minute,<sp/>second);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>Sets the function that is called when a file is created or when a file&apos;s directory entry is modified by <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref>. All timestamps, access, creation, and modify, are set when a file is created. <ref refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" kindref="member">sync()</ref> maintains the last access date and last modify date/time.</para>
+<para>See the <ref refid="class_sd_file_1a249632ba9580c556c0b041d6b2aaf224" kindref="member">timestamp()</ref> function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="208" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="208" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1adaec83fdbd8473a8e336e27b8622f673" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SdFile::dateTimeCallbackCancel</definition>
+        <argsstring>(void)</argsstring>
+        <name>dateTimeCallbackCancel</name>
+        <qualifiedname>SdFile::dateTimeCallbackCancel</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cancel the date/time callback function. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="215" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="215" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ad7bbb106aa4c96c795c88b33def677bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::dirName</definition>
+        <argsstring>(const dir_t &amp;dir, char *name)</argsstring>
+        <name>dirName</name>
+        <qualifiedname>SdFile::dirName</qualifiedname>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Format the name field of <emphasis>dir</emphasis> into the 13 byte array <emphasis>name</emphasis> in standard 8.3 short name format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory structure containing the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A 13 byte char array for the formatted name. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="228" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="205" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a7267e3def5cba51149ff98baf5d3f2c8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::printDirName</definition>
+        <argsstring>(const dir_t &amp;dir, uint8_t width)</argsstring>
+        <name>printDirName</name>
+        <qualifiedname>SdFile::printDirName</qualifiedname>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> &amp;</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print the name field of a directory entry in 8.3 format to Serial.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory structure containing the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blank fill name if length is less than <emphasis>width</emphasis>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="263" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="692" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a77022a204f3e5148e78e1b7ae7b6865a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::printFatDate</definition>
+        <argsstring>(uint16_t fatDate)</argsstring>
+        <name>printFatDate</name>
+        <qualifiedname>SdFile::printFatDate</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>fatDate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print a directory date field to Serial.</para>
+<para>Format is yyyy-mm-dd.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fatDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The date field from a directory entry. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="264" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="721" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ab981ea789ec76d1a44e4b3c8a84ccd35" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::printFatTime</definition>
+        <argsstring>(uint16_t fatTime)</argsstring>
+        <name>printFatTime</name>
+        <qualifiedname>SdFile::printFatTime</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>fatTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print a directory time field to Serial.</para>
+<para>Format is hh:mm:ss.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fatTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time field from a directory entry. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="265" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="735" bodyend="741"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a0af47048953a2d1526db9336c39a8919" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SdFile::printTwoDigits</definition>
+        <argsstring>(uint8_t v)</argsstring>
+        <name>printTwoDigits</name>
+        <qualifiedname>SdFile::printTwoDigits</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print a value as two digits to Serial.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be printed, 0 &lt;= <emphasis>v</emphasis> &lt;= 99 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="266" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="747" bodyend="753"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1ab932b7896dce90a29031f3a9039807a2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::remove</definition>
+        <argsstring>(SdFile *dirFile, const char *fileName)</argsstring>
+        <name>remove</name>
+        <qualifiedname>SdFile::remove</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a file.</para>
+<para>The directory entry and all data for the file are deleted.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dirFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The directory that contains the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to be removed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function should not be used to delete the 8.3 version of a file that has a long name. For example if a file has the long name &quot;New Text Document.txt&quot; you should not delete the 8.3 name &quot;NEWTEX~1.TXT&quot;.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include the file is a directory, is read only, <emphasis>dirFile</emphasis> is not a directory, <emphasis>fileName</emphasis> is not found or an I/O error occurred. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="279" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="949" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a88a9b32bfec07c8c5cfdf8a36b7faf26" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SdFile::dateTimeCallback</definition>
+        <argsstring>(void(*dateTime)(uint16_t &amp;date, uint16_t &amp;time))</argsstring>
+        <name>dateTimeCallback</name>
+        <qualifiedname>SdFile::dateTimeCallback</qualifiedname>
+        <param>
+          <type>void(*)(uint16_t &amp;date, uint16_t &amp;time)</type>
+          <declname>dateTime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: static void <ref refid="class_sd_file_1a2d78e6a8cedbf8ce545af68457b43bf1" kindref="member">SdFile::dateTimeCallback</ref>( void (<emphasis>dateTime)(uint16_t</emphasis> date, uint16_t* time)); </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="361" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1aaea53aa58f7577dfafd0da3cb084f6d1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t SdFile::remove</definition>
+        <argsstring>(SdFile &amp;dirFile, const char *fileName)</argsstring>
+        <name>remove</name>
+        <qualifiedname>SdFile::remove</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;</type>
+          <declname>dirFile</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000011"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: static uint8_t <ref refid="class_sd_file_1ab932b7896dce90a29031f3a9039807a2" kindref="member">SdFile::remove(SdFile* dirFile, const char* fileName)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="405" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="405" bodyend="407"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sd_file_1aa6493dec4e66bf626730f54c62c21e14" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SdFile::oldToNew</definition>
+        <argsstring>(uint16_t *date, uint16_t *time)</argsstring>
+        <name>oldToNew</name>
+        <qualifiedname>SdFile::oldToNew</qualifiedname>
+        <param>
+          <type>uint16_t *</type>
+          <declname>date</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="412" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="412" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a954a273b8da88bcc24f8c6b747785ff7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::make83Name</definition>
+        <argsstring>(const char *str, uint8_t *name)</argsstring>
+        <name>make83Name</name>
+        <qualifiedname>SdFile::make83Name</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="454" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="286" bodyend="327"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sd_file_1aee6989bdc8ab73ee2eb363cfee804612" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::addCluster</definition>
+        <argsstring>(void)</argsstring>
+        <name>addCluster</name>
+        <qualifiedname>SdFile::addCluster</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="450" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="35" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a3b38355addd259f1016d3a2bac6612ec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::addDirCluster</definition>
+        <argsstring>(void)</argsstring>
+        <name>addDirCluster</name>
+        <qualifiedname>SdFile::addDirCluster</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="451" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="51" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a929ce7200e9cab55a251624c9b2c61c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+        <definition>dir_t * SdFile::cacheDirEntry</definition>
+        <argsstring>(uint8_t action)</argsstring>
+        <name>cacheDirEntry</name>
+        <qualifiedname>SdFile::cacheDirEntry</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="452" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="70" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a49808e622298af327380171d077308b0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdFile::openCachedEntry</definition>
+        <argsstring>(uint8_t cacheIndex, uint8_t oflags)</argsstring>
+        <name>openCachedEntry</name>
+        <qualifiedname>SdFile::openCachedEntry</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cacheIndex</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>oflags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="455" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="599" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_file_1a24a11bdabac09406762e73756d92a8bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+        <definition>dir_t * SdFile::readDirCache</definition>
+        <argsstring>(void)</argsstring>
+        <name>readDirCache</name>
+        <qualifiedname>SdFile::readDirCache</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="456" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdFile.cpp" bodystart="874" bodyend="893"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Access FAT16 and FAT32 files on SD and SDHC cards. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Print</label>
+      </node>
+      <node id="1">
+        <label>SdFile</label>
+        <link refid="class_sd_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Print</label>
+      </node>
+      <node id="1">
+        <label>SdFile</label>
+        <link refid="class_sd_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="151" column="1" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="151" bodyend="457"/>
+    <listofallmembers>
+      <member refid="class_sd_file_1aee6989bdc8ab73ee2eb363cfee804612" prot="private" virt="non-virtual"><scope>SdFile</scope><name>addCluster</name></member>
+      <member refid="class_sd_file_1a3b38355addd259f1016d3a2bac6612ec" prot="private" virt="non-virtual"><scope>SdFile</scope><name>addDirCluster</name></member>
+      <member refid="class_sd_file_1a477e29153291a129529274eb9d74cdf6" prot="public" virt="non-virtual"><scope>SdFile</scope><name>availableForWrite</name></member>
+      <member refid="class_sd_file_1a929ce7200e9cab55a251624c9b2c61c3" prot="private" virt="non-virtual"><scope>SdFile</scope><name>cacheDirEntry</name></member>
+      <member refid="class_sd_file_1a44c3d6ef602e84b8160a4d215faef7d4" prot="public" virt="non-virtual"><scope>SdFile</scope><name>clearUnbufferedRead</name></member>
+      <member refid="class_sd_file_1a6b24350c89cc41ff644a343231a3983c" prot="public" virt="non-virtual"><scope>SdFile</scope><name>close</name></member>
+      <member refid="class_sd_file_1a3b07fc09dbcb28ae7c89c060af6a1810" prot="public" virt="non-virtual"><scope>SdFile</scope><name>contiguousRange</name></member>
+      <member refid="class_sd_file_1a872927812be6c48a894bdfc72f1701a1" prot="public" virt="non-virtual"><scope>SdFile</scope><name>contiguousRange</name></member>
+      <member refid="class_sd_file_1a07fc5c82318f073848e706f95830e5b5" prot="public" virt="non-virtual"><scope>SdFile</scope><name>createContiguous</name></member>
+      <member refid="class_sd_file_1a231dd495e5c5997aea2a842481a68f40" prot="public" virt="non-virtual"><scope>SdFile</scope><name>createContiguous</name></member>
+      <member refid="class_sd_file_1a970ef8d6cbb09ccb104fe1156d4a0a9e" prot="public" virt="non-virtual"><scope>SdFile</scope><name>curCluster</name></member>
+      <member refid="class_sd_file_1a55c7cbbaf7fc17070608ad0dacd4c33d" prot="private" virt="non-virtual"><scope>SdFile</scope><name>curCluster_</name></member>
+      <member refid="class_sd_file_1a6105ae2f1c23e99fdea17bc64571ea8c" prot="public" virt="non-virtual"><scope>SdFile</scope><name>curPosition</name></member>
+      <member refid="class_sd_file_1afd8346044630238bb4819cd7bf5a2dc5" prot="private" virt="non-virtual"><scope>SdFile</scope><name>curPosition_</name></member>
+      <member refid="class_sd_file_1a671500341631410733410c3495788c51" prot="private" virt="non-virtual"><scope>SdFile</scope><name>dateTime_</name></member>
+      <member refid="class_sd_file_1a2d78e6a8cedbf8ce545af68457b43bf1" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dateTimeCallback</name></member>
+      <member refid="class_sd_file_1a88a9b32bfec07c8c5cfdf8a36b7faf26" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dateTimeCallback</name></member>
+      <member refid="class_sd_file_1adaec83fdbd8473a8e336e27b8622f673" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dateTimeCallbackCancel</name></member>
+      <member refid="class_sd_file_1af62898865cfe9a97ce75468efc0d2409" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dirBlock</name></member>
+      <member refid="class_sd_file_1aadfa0234914038f459f9cefc062b915f" prot="private" virt="non-virtual"><scope>SdFile</scope><name>dirBlock_</name></member>
+      <member refid="class_sd_file_1abaf9b1dc12d53cdeb937065edf68927d" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dirEntry</name></member>
+      <member refid="class_sd_file_1ae7b4b1057a1ee17f673c116771636156" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dirEntry</name></member>
+      <member refid="class_sd_file_1ad4381e541a53a7e5cf51a866c1c8f79e" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dirIndex</name></member>
+      <member refid="class_sd_file_1acd4c504a2311e1755f385e9e3d4e4a24" prot="private" virt="non-virtual"><scope>SdFile</scope><name>dirIndex_</name></member>
+      <member refid="class_sd_file_1ad7bbb106aa4c96c795c88b33def677bc" prot="public" virt="non-virtual"><scope>SdFile</scope><name>dirName</name></member>
+      <member refid="class_sd_file_1a5db68b47d924fd38494becce95f9c6c8" prot="private" virt="non-virtual"><scope>SdFile</scope><name>F_FILE_CLUSTER_ADDED</name></member>
+      <member refid="class_sd_file_1a5e5b43587cfe96709e9b5e22ba08e743" prot="private" virt="non-virtual"><scope>SdFile</scope><name>F_FILE_DIR_DIRTY</name></member>
+      <member refid="class_sd_file_1aeebd57eadc0c1cfe0c12e5c81b047d1c" prot="private" virt="non-virtual"><scope>SdFile</scope><name>F_FILE_NON_BLOCKING_WRITE</name></member>
+      <member refid="class_sd_file_1aa37d17c6298afb7caeba1718b1ab9216" prot="private" virt="non-virtual"><scope>SdFile</scope><name>F_FILE_UNBUFFERED_READ</name></member>
+      <member refid="class_sd_file_1a5abda0cc6a4b7f9ec7bc9e31f2cb2c5e" prot="private" virt="non-virtual"><scope>SdFile</scope><name>F_OFLAG</name></member>
+      <member refid="class_sd_file_1add58372b89c922511bc425d84b07dc5f" prot="public" virt="non-virtual"><scope>SdFile</scope><name>fileSize</name></member>
+      <member refid="class_sd_file_1a8f06e3c212051ce7e6ff65da4c46ab5d" prot="private" virt="non-virtual"><scope>SdFile</scope><name>fileSize_</name></member>
+      <member refid="class_sd_file_1a854b7555bd774ff668558bf919636edd" prot="public" virt="non-virtual"><scope>SdFile</scope><name>firstCluster</name></member>
+      <member refid="class_sd_file_1a4da4967eb2716f40c8397e544d269dc4" prot="private" virt="non-virtual"><scope>SdFile</scope><name>firstCluster_</name></member>
+      <member refid="class_sd_file_1a8e748af115d721717f898da5af240e10" prot="private" virt="non-virtual"><scope>SdFile</scope><name>flags_</name></member>
+      <member refid="class_sd_file_1a564e69a08c11f20e66eb18c38e24b748" prot="public" virt="non-virtual"><scope>SdFile</scope><name>isDir</name></member>
+      <member refid="class_sd_file_1ad9ca9b2b519a933c25e8f893ee0201b6" prot="public" virt="non-virtual"><scope>SdFile</scope><name>isFile</name></member>
+      <member refid="class_sd_file_1a54e1b9385c43c33dc83eaad6de0d33be" prot="public" virt="non-virtual"><scope>SdFile</scope><name>isOpen</name></member>
+      <member refid="class_sd_file_1a29fd6e80e6cbd3c67724988f9fe02290" prot="public" virt="non-virtual"><scope>SdFile</scope><name>isRoot</name></member>
+      <member refid="class_sd_file_1a22fb79f645f5a92baf699d547395667b" prot="public" virt="non-virtual"><scope>SdFile</scope><name>isSubDir</name></member>
+      <member refid="class_sd_file_1afd9965ed8dee8bdd4d86dd14032edbc0" prot="public" virt="non-virtual"><scope>SdFile</scope><name>ls</name></member>
+      <member refid="class_sd_file_1a954a273b8da88bcc24f8c6b747785ff7" prot="private" virt="non-virtual"><scope>SdFile</scope><name>make83Name</name></member>
+      <member refid="class_sd_file_1a62984bedf614a8de96b48bf9c5e7159f" prot="public" virt="non-virtual"><scope>SdFile</scope><name>makeDir</name></member>
+      <member refid="class_sd_file_1af87e166d0059d392d7038f68fca68529" prot="public" virt="non-virtual"><scope>SdFile</scope><name>makeDir</name></member>
+      <member refid="class_sd_file_1aa8d566c8c45a57c199623983964ff5c8" prot="private" virt="non-virtual"><scope>SdFile</scope><name>oldDateTime_</name></member>
+      <member refid="class_sd_file_1aa6493dec4e66bf626730f54c62c21e14" prot="private" virt="non-virtual"><scope>SdFile</scope><name>oldToNew</name></member>
+      <member refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" prot="public" virt="non-virtual"><scope>SdFile</scope><name>open</name></member>
+      <member refid="class_sd_file_1a3cf2167ad5ba6d84942ede8d2d07dcc6" prot="public" virt="non-virtual"><scope>SdFile</scope><name>open</name></member>
+      <member refid="class_sd_file_1afe1d8ce70ef58ee5967005047064167c" prot="public" virt="non-virtual"><scope>SdFile</scope><name>open</name></member>
+      <member refid="class_sd_file_1a71e1c08dc4fb58b95554925a25435721" prot="public" virt="non-virtual"><scope>SdFile</scope><name>open</name></member>
+      <member refid="class_sd_file_1a8bc20433f081a6e9f1546601b7a1d712" prot="public" virt="non-virtual"><scope>SdFile</scope><name>open</name></member>
+      <member refid="class_sd_file_1a49808e622298af327380171d077308b0" prot="private" virt="non-virtual"><scope>SdFile</scope><name>openCachedEntry</name></member>
+      <member refid="class_sd_file_1ac3612bc27eaf52a23d8cb85c8d96ad38" prot="public" virt="non-virtual"><scope>SdFile</scope><name>openRoot</name></member>
+      <member refid="class_sd_file_1abc60bbbb747c58319cfcfc11deb34d53" prot="public" virt="non-virtual"><scope>SdFile</scope><name>openRoot</name></member>
+      <member refid="class_sd_file_1a7267e3def5cba51149ff98baf5d3f2c8" prot="public" virt="non-virtual"><scope>SdFile</scope><name>printDirName</name></member>
+      <member refid="class_sd_file_1a77022a204f3e5148e78e1b7ae7b6865a" prot="public" virt="non-virtual"><scope>SdFile</scope><name>printFatDate</name></member>
+      <member refid="class_sd_file_1ab981ea789ec76d1a44e4b3c8a84ccd35" prot="public" virt="non-virtual"><scope>SdFile</scope><name>printFatTime</name></member>
+      <member refid="class_sd_file_1a0af47048953a2d1526db9336c39a8919" prot="public" virt="non-virtual"><scope>SdFile</scope><name>printTwoDigits</name></member>
+      <member refid="class_sd_file_1a6c389f0180b4a86fb6d7464f50d3b0dd" prot="public" virt="non-virtual"><scope>SdFile</scope><name>read</name></member>
+      <member refid="class_sd_file_1a77ad85c5c80b34f8ebc57b5b89730554" prot="public" virt="non-virtual"><scope>SdFile</scope><name>read</name></member>
+      <member refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" prot="public" virt="non-virtual"><scope>SdFile</scope><name>readDir</name></member>
+      <member refid="class_sd_file_1ad107b73c6edfa489b76366edfef2eeae" prot="public" virt="non-virtual"><scope>SdFile</scope><name>readDir</name></member>
+      <member refid="class_sd_file_1a24a11bdabac09406762e73756d92a8bd" prot="private" virt="non-virtual"><scope>SdFile</scope><name>readDirCache</name></member>
+      <member refid="class_sd_file_1ab932b7896dce90a29031f3a9039807a2" prot="public" virt="non-virtual"><scope>SdFile</scope><name>remove</name></member>
+      <member refid="class_sd_file_1a66c5fb5f651a1ac319bab68fda1d3cc2" prot="public" virt="non-virtual"><scope>SdFile</scope><name>remove</name></member>
+      <member refid="class_sd_file_1aaea53aa58f7577dfafd0da3cb084f6d1" prot="public" virt="non-virtual"><scope>SdFile</scope><name>remove</name></member>
+      <member refid="class_sd_file_1afa8aaa7bdeb97b4e691ea01adf99f654" prot="public" virt="non-virtual"><scope>SdFile</scope><name>rewind</name></member>
+      <member refid="class_sd_file_1a0d9e0c280b3469bb15e7258f6339746b" prot="public" virt="non-virtual"><scope>SdFile</scope><name>rmDir</name></member>
+      <member refid="class_sd_file_1a44c26fddfe2b42e7db3bc80290c77503" prot="public" virt="non-virtual"><scope>SdFile</scope><name>rmRfStar</name></member>
+      <member refid="class_sd_file_1a9e08675e64a4ef847700876d4291bbef" prot="public" virt="non-virtual"><scope>SdFile</scope><name>SdFile</name></member>
+      <member refid="class_sd_file_1aa95121ff038538e671f125160b280e9a" prot="public" virt="non-virtual"><scope>SdFile</scope><name>seekCur</name></member>
+      <member refid="class_sd_file_1afa70bc7ba5eb789aee1b62fc5fafaa5b" prot="public" virt="non-virtual"><scope>SdFile</scope><name>seekEnd</name></member>
+      <member refid="class_sd_file_1a5b8ea0ba6a9fec1ee8f1b11e90edb0c6" prot="public" virt="non-virtual"><scope>SdFile</scope><name>seekSet</name></member>
+      <member refid="class_sd_file_1a08c9e76a4a7bb43fccf1dd5c72c66a16" prot="public" virt="non-virtual"><scope>SdFile</scope><name>setUnbufferedRead</name></member>
+      <member refid="class_sd_file_1a42f006b16e686ee164e6d7df41fc94cd" prot="public" virt="non-virtual"><scope>SdFile</scope><name>sync</name></member>
+      <member refid="class_sd_file_1a249632ba9580c556c0b041d6b2aaf224" prot="public" virt="non-virtual"><scope>SdFile</scope><name>timestamp</name></member>
+      <member refid="class_sd_file_1ade1e2b72f89b24f500502518fd678abd" prot="public" virt="non-virtual"><scope>SdFile</scope><name>truncate</name></member>
+      <member refid="class_sd_file_1a2da736b480e64ec2142687fb49871ada" prot="public" virt="non-virtual"><scope>SdFile</scope><name>type</name></member>
+      <member refid="class_sd_file_1a5567640b67767cb4cf894e3587bf628f" prot="private" virt="non-virtual"><scope>SdFile</scope><name>type_</name></member>
+      <member refid="class_sd_file_1a151bbc9fa7787b67f3d4a3574f9bc9e3" prot="public" virt="non-virtual"><scope>SdFile</scope><name>unbufferedRead</name></member>
+      <member refid="class_sd_file_1aa76295c203b6732ad2a85ebd3255b934" prot="private" virt="non-virtual"><scope>SdFile</scope><name>vol_</name></member>
+      <member refid="class_sd_file_1ae1b1b91b5fd3603a36af20a3e2ea09f1" prot="public" virt="non-virtual"><scope>SdFile</scope><name>volume</name></member>
+      <member refid="class_sd_file_1a67267a4b63d03a16e099195935613006" prot="public" virt="non-virtual"><scope>SdFile</scope><name>write</name></member>
+      <member refid="class_sd_file_1a94d4541fda63b5390c8e97ebe815115a" prot="public" virt="non-virtual"><scope>SdFile</scope><name>write</name></member>
+      <member refid="class_sd_file_1ad74aaa9115724d663ee39e6dd2d808f8" prot="public" virt="non-virtual"><scope>SdFile</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

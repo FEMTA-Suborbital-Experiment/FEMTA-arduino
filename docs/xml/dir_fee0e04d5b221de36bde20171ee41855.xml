@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_fee0e04d5b221de36bde20171ee41855" kind="dir">
+    <compoundname>libraries/Adafruit_LSM303DLHC</compoundname>
+    <innerfile refid="_adafruit___l_s_m303_8h">Adafruit_LSM303.h</innerfile>
+    <innerfile refid="_adafruit___l_s_m303___u_8cpp">Adafruit_LSM303_U.cpp</innerfile>
+    <innerfile refid="_adafruit___l_s_m303___u_8h">Adafruit_LSM303_U.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Adafruit_LSM303DLHC/"/>
+  </compounddef>
+</doxygen>

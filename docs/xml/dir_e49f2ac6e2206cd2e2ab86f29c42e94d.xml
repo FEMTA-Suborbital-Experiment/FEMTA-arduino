@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_e49f2ac6e2206cd2e2ab86f29c42e94d" kind="dir">
+    <compoundname>libraries/HSCM</compoundname>
+    <innerfile refid="_h_s_c_m_8cpp">HSCM.cpp</innerfile>
+    <innerfile refid="_h_s_c_m_8h">HSCM.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/HSCM/"/>
+  </compounddef>
+</doxygen>

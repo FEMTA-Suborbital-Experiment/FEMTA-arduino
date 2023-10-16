@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1c9117dbe2432f230c46dd3ebd36fe53" kind="dir">
+    <compoundname>examples/read_struct_from_binary</compoundname>
+    <innerdir refid="dir_0e15fb878840e0ae29d66a650e89a95f">examples/read_struct_from_binary/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/read_struct_from_binary/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logger__test_2src_2_logger_8h" kind="file" language="C++">
+    <compoundname>Logger.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="yes">Arduino.h</includes>
+    <includes refid="examples_2logger__test_2src_2_atmospheric_struct_8h" local="yes">AtmosphericStruct.h</includes>
+    <includedby refid="examples_2logger__test_2src_2_logger_8cpp" local="yes">examples/logger_test/src/Logger.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="5">
+        <label>AtmosphericStruct.h</label>
+        <link refid="examples_2logger__test_2src_2_atmospheric_struct_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>AtmosphericVector.h</label>
+        <link refid="examples_2logger__test_2src_2_atmospheric_vector_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>examples/logger_test/src/Logger.h</label>
+        <link refid="examples_2logger__test_2src_2_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>limits</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>examples/logger_test/src/Logger.cpp</label>
+        <link refid="examples_2logger__test_2src_2_logger_8cpp"/>
+      </node>
+      <node id="1">
+        <label>examples/logger_test/src/Logger.h</label>
+        <link refid="examples_2logger__test_2src_2_logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_logger" prot="public">Logger</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="examples_2logger__test_2src_2_logger_8h_1a0592dba56693fad79136250c11e5a7fe" prot="public" static="no">
+        <name>MAX_SIZE</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logger_test/src/Logger.h" line="26" column="9" bodyfile="examples/logger_test/src/Logger.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The logger class used in the FEMTA Suborbital Experiment for logging sensor data and sending it to the writer class. The purpose of the logger class is to store the data until it has reached its capacity and send the data to write. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jacob Valdez (<ulink url="mailto:valdez24@purdue.edu">valdez24@purdue.edu</ulink>) </para>
+</simplesect>
+In addition, the logger class attempts to save its data in the Arduino&apos;s EEPROM addresses. In the case of a power shortage, the logger will recover its history of data, at the expense of a jump in time. <linebreak/>
+ </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FEMTA_LOGGER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEMTA_LOGGER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AtmosphericStruct.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>configurable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SIZE<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_logger" kindref="compound">Logger</ref>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_logger" kindref="compound">Logger</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arraySize);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_logger_1aa9983a0826820827e31fcf8fb77636a7" kindref="member">pushData</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lowPressure,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>highPressure,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>acceleration);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6" kindref="member">flushArrays</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_logger_1a5ba805b3d05cb8f2492251e2229600c5" kindref="member">isStructFilled</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structlog_type" kindref="compound">logType</ref><sp/>logData;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mArraySize;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="examples/logger_test/src/Logger.h"/>
+  </compounddef>
+</doxygen>

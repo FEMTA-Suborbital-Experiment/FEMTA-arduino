@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="test_8m" kind="file" language="Objective-C">
+    <compoundname>test.m</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="test_8m_1aebfdce4f6cc7241ba38924f77a12e7cf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>clear</definition>
+        <argsstring></argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="1" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_8m_1a3f3d3b13a15c726d6aa03db3dd0d6377" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>clc</definition>
+        <argsstring></argsstring>
+        <name>clc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="2" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_8m_1aca0f3b9c304e765ac2ffac82c06b075c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>wij</definition>
+        <argsstring></argsstring>
+        <name>wij</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="4" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_8m_1ad8c7ca87b6533d1fe223066dc2d5e057" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gammas</definition>
+        <argsstring></argsstring>
+        <name>gammas</name>
+        <initializer>= [0.44, 0.2, 0.24, 0.12]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="7" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_8m_1a1aabac6d068eef6a7bad3fdf50a05cc8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="9" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test_8m_1a8cc2e7240164328fdc3f0e5e21032c56" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <initializer>= [{1,2,3}, {1,2,3}, {2,3,4}, {4,3}]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/simbox_integration/data/test.m" line="11" column="1" bodyfile="examples/simbox_integration/data/test.m" bodystart="11" bodyend="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">clear;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">clc;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">wij<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">gammas<sp/>=<sp/>[0.44,<sp/>0.2,<sp/>0.24,<sp/>0.12];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">d<sp/>=<sp/>[];</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">N<sp/>=<sp/>[{1,2,3},<sp/>{1,2,3},<sp/>{2,3,4},<sp/>{4,3}];</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i=1:4</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>1:4</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>~=<sp/>j)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wij<sp/>=<sp/>[wij<sp/>1/gammas(i)*min(gammas(i)/d(i),gammas(j)/d(j))]</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>end</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">end</highlight></codeline>
+    </programlisting>
+    <location file="examples/simbox_integration/data/test.m"/>
+  </compounddef>
+</doxygen>

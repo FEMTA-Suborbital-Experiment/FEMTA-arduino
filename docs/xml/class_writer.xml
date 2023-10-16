@@ -1,0 +1,315 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_writer" kind="class" language="C++" prot="public">
+    <compoundname>Writer</compoundname>
+    <includes refid="_writer_8h" local="no">Writer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_writer_1a20ff82abdbff423dfc518b5510f4c008" prot="private" static="no" mutable="no">
+        <type>File</type>
+        <definition>File Writer::logFile</definition>
+        <argsstring></argsstring>
+        <name>logFile</name>
+        <qualifiedname>Writer::logFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="40" column="14" bodyfile="main/pme/src/Writer.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_writer_1a1c8c7417c31a4abcb96e27cf5dede3e8" prot="private" static="no" mutable="no">
+        <type>File</type>
+        <definition>File Writer::logSize</definition>
+        <argsstring></argsstring>
+        <name>logSize</name>
+        <qualifiedname>Writer::logSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="41" column="14" bodyfile="main/pme/src/Writer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_writer_1a3a1cb16ad118c5b865738362245ab6f7" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Writer::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <qualifiedname>Writer::fileName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="44" column="20" bodyfile="main/pme/src/Writer.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_writer_1aac1a692fff179dfa380307c0dffea6d7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Writer::willWriteToBinary</definition>
+        <argsstring></argsstring>
+        <name>willWriteToBinary</name>
+        <qualifiedname>Writer::willWriteToBinary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="45" column="14" bodyfile="main/pme/src/Writer.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_writer_1a51c53e3e9155002e7616385b62c887a7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Writer::willOverwrite</definition>
+        <argsstring></argsstring>
+        <name>willOverwrite</name>
+        <qualifiedname>Writer::willOverwrite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="46" column="14" bodyfile="main/pme/src/Writer.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_writer_1a05d7179ff6612729875b685be6ec710a" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int Writer::chipSelect</definition>
+        <argsstring></argsstring>
+        <name>chipSelect</name>
+        <qualifiedname>Writer::chipSelect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="47" column="19" bodyfile="main/pme/src/Writer.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_writer_1a29e0ee6eb72c1069fa1431ce8c8adbf7" prot="private" static="yes" mutable="no">
+        <type>const String</type>
+        <definition>const String Writer::logSizeFile</definition>
+        <argsstring></argsstring>
+        <name>logSizeFile</name>
+        <qualifiedname>Writer::logSizeFile</qualifiedname>
+        <initializer>{&quot;logSize&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="49" column="29" bodyfile="main/pme/src/Writer.h" bodystart="15" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_writer_1a06639f3d8669309bb57aa89fe85de302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Writer::Writer</definition>
+        <argsstring>(const char *name, const int chipSelect=4, const bool toBinary=0, const bool overwrite=0)</argsstring>
+        <name>Writer</name>
+        <qualifiedname>Writer::Writer</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>chipSelect</declname>
+          <defval>4</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>toBinary</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>overwrite</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="class_writer" kindref="compound">Writer</ref> class, which is responsible for the taking <ref refid="structlog_type" kindref="compound">logType</ref> data and writing it to a file for post-processing. This takes some user parameters for writing to binary (false by default) or overwriting the log file (for testing purposes, false by default). <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>chipSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>toBinary</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>overwrite</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="35" column="9" bodyfile="main/pme/src/Writer.cpp" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_writer_1a4e59a184209bcd1133ccf030087fab7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Writer::writeToFile</definition>
+        <argsstring>(logType data)</argsstring>
+        <name>writeToFile</name>
+        <qualifiedname>Writer::writeToFile</qualifiedname>
+        <param>
+          <type><ref refid="structlog_type" kindref="compound">logType</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Writes <ref refid="structlog_type" kindref="compound">logType</ref> data to a File through text or binary methods. If successful, the method returns 0. Otherwise, it fails at other integer values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="37" column="13" bodyfile="main/pme/src/Writer.cpp" bodystart="96" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Writer::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Writer::init</qualifiedname>
+        <briefdescription>
+<para>Initialize the writer by making sure the SD card can be detected. If not detected after 10 tries, time out. Also check to see if the user plans to overwrite the existing log file on initialization. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="38" column="13" bodyfile="main/pme/src/Writer.cpp" bodystart="41" bodyend="87"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_writer_1a9ce9a2221d3bb6e438226abbc636352e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Writer::writeToBinary</definition>
+        <argsstring>(logType data)</argsstring>
+        <name>writeToBinary</name>
+        <qualifiedname>Writer::writeToBinary</qualifiedname>
+        <param>
+          <type><ref refid="structlog_type" kindref="compound">logType</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Serializes the struct to a binary file. This requires a reader class, but it is a faster method of saving data because we lack the overhead of a typical character (256 values per character versus 100 values). Note that we must establish a standard as to how we store our data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="42" column="13" bodyfile="main/pme/src/Writer.cpp" bodystart="113" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_writer_1aa2f6c38109bbf865c05ca652f62680f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Writer::writeToText</definition>
+        <argsstring>(logType data)</argsstring>
+        <name>writeToText</name>
+        <qualifiedname>Writer::writeToText</qualifiedname>
+        <param>
+          <type><ref refid="structlog_type" kindref="compound">logType</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Writes to a .txt file. This one is easier to access simply due to the file format, but takes a longer time to process since we must deal with the overhead of characters. Note that we must establish a standard as to how we store our data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="43" column="13" bodyfile="main/pme/src/Writer.cpp" bodystart="162" bodyend="177"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Writing class for outputing data into binary or text. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="main/pme/src/Writer.h" line="31" column="1" bodyfile="main/pme/src/Writer.h" bodystart="31" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_writer_1a05d7179ff6612729875b685be6ec710a" prot="private" virt="non-virtual"><scope>Writer</scope><name>chipSelect</name></member>
+      <member refid="class_writer_1a3a1cb16ad118c5b865738362245ab6f7" prot="private" virt="non-virtual"><scope>Writer</scope><name>fileName</name></member>
+      <member refid="class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8" prot="public" virt="non-virtual"><scope>Writer</scope><name>init</name></member>
+      <member refid="class_writer_1a20ff82abdbff423dfc518b5510f4c008" prot="private" virt="non-virtual"><scope>Writer</scope><name>logFile</name></member>
+      <member refid="class_writer_1a1c8c7417c31a4abcb96e27cf5dede3e8" prot="private" virt="non-virtual"><scope>Writer</scope><name>logSize</name></member>
+      <member refid="class_writer_1a29e0ee6eb72c1069fa1431ce8c8adbf7" prot="private" virt="non-virtual"><scope>Writer</scope><name>logSizeFile</name></member>
+      <member refid="class_writer_1a51c53e3e9155002e7616385b62c887a7" prot="private" virt="non-virtual"><scope>Writer</scope><name>willOverwrite</name></member>
+      <member refid="class_writer_1aac1a692fff179dfa380307c0dffea6d7" prot="private" virt="non-virtual"><scope>Writer</scope><name>willWriteToBinary</name></member>
+      <member refid="class_writer_1a06639f3d8669309bb57aa89fe85de302" prot="public" virt="non-virtual"><scope>Writer</scope><name>Writer</name></member>
+      <member refid="class_writer_1a9ce9a2221d3bb6e438226abbc636352e" prot="private" virt="non-virtual"><scope>Writer</scope><name>writeToBinary</name></member>
+      <member refid="class_writer_1a4e59a184209bcd1133ccf030087fab7f" prot="public" virt="non-virtual"><scope>Writer</scope><name>writeToFile</name></member>
+      <member refid="class_writer_1aa2f6c38109bbf865c05ca652f62680f2" prot="private" virt="non-virtual"><scope>Writer</scope><name>writeToText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

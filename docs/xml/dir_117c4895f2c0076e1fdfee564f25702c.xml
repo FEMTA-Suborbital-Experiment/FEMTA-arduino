@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_117c4895f2c0076e1fdfee564f25702c" kind="dir">
+    <compoundname>examples/pin_controller</compoundname>
+    <innerdir refid="dir_62113be25d614709d785127b16b3186c">examples/pin_controller/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/pin_controller/"/>
+  </compounddef>
+</doxygen>
