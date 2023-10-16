@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structlog_type" kind="struct" language="C++" prot="public">
+    <compoundname>logType</compoundname>
+    <includes refid="_atmospheric_struct_8h" local="no">AtmosphericStruct.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlog_type_1a99408840dfd21747ed6a6ac0b8010061" prot="public" static="no" mutable="no">
+        <type><ref refid="class_atmospheric_vector" kindref="compound">AtmosphericVector</ref>&lt; float &gt;</type>
+        <definition>AtmosphericVector&lt;float&gt; logType::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>logType::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericStruct.h" line="12" column="23" bodyfile="main/pme/src/AtmosphericStruct.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21" prot="public" static="no" mutable="no">
+        <type><ref refid="class_atmospheric_vector" kindref="compound">AtmosphericVector</ref>&lt; float &gt;</type>
+        <definition>AtmosphericVector&lt;float&gt; logType::lowPressure</definition>
+        <argsstring></argsstring>
+        <name>lowPressure</name>
+        <qualifiedname>logType::lowPressure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericStruct.h" line="13" column="23" bodyfile="main/pme/src/AtmosphericStruct.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlog_type_1ac427d4daf20af0f2756e54154951ed3d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_atmospheric_vector" kindref="compound">AtmosphericVector</ref>&lt; float &gt;</type>
+        <definition>AtmosphericVector&lt;float&gt; logType::highPressure</definition>
+        <argsstring></argsstring>
+        <name>highPressure</name>
+        <qualifiedname>logType::highPressure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericStruct.h" line="14" column="23" bodyfile="main/pme/src/AtmosphericStruct.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlog_type_1a07557f8ebc502e7ba07083a57f4337b5" prot="public" static="no" mutable="no">
+        <type><ref refid="class_atmospheric_vector" kindref="compound">AtmosphericVector</ref>&lt; float &gt;</type>
+        <definition>AtmosphericVector&lt;float&gt; logType::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>logType::acceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericStruct.h" line="15" column="23" bodyfile="main/pme/src/AtmosphericStruct.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A log standard that is shared between the reader, logger, and writer classes. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>AtmosphericVector&lt; float &gt;</label>
+        <link refid="class_atmospheric_vector"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>logType</label>
+        <link refid="structlog_type"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>highPressure</edgelabel>
+          <edgelabel>lowPressure</edgelabel>
+          <edgelabel>time</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; float  &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="main/pme/src/AtmosphericStruct.h" line="11" column="1" bodyfile="main/pme/src/AtmosphericStruct.h" bodystart="11" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structlog_type_1a07557f8ebc502e7ba07083a57f4337b5" prot="public" virt="non-virtual"><scope>logType</scope><name>acceleration</name></member>
+      <member refid="structlog_type_1ac427d4daf20af0f2756e54154951ed3d" prot="public" virt="non-virtual"><scope>logType</scope><name>highPressure</name></member>
+      <member refid="structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21" prot="public" virt="non-virtual"><scope>logType</scope><name>lowPressure</name></member>
+      <member refid="structlog_type_1a99408840dfd21747ed6a6ac0b8010061" prot="public" virt="non-virtual"><scope>logType</scope><name>time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

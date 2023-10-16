@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_atmospheric_vector" kind="class" language="C++" prot="public">
+    <compoundname>AtmosphericVector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::vector&lt; T &gt;</basecompoundref>
+    <includes refid="_atmospheric_vector_8h" local="no">AtmosphericVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_atmospheric_vector_1adaf6740e684438f8433bb2aca8163018" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int AtmosphericVector&lt; T &gt;::_maxSize</definition>
+        <argsstring></argsstring>
+        <name>_maxSize</name>
+        <qualifiedname>AtmosphericVector::_maxSize</qualifiedname>
+        <briefdescription>
+<para>Capacity of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericVector.h" line="21" column="9" bodyfile="main/pme/src/AtmosphericVector.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmosphericVector&lt; T &gt;::setMaxSize</definition>
+        <argsstring>(int maxSize)</argsstring>
+        <name>setMaxSize</name>
+        <qualifiedname>AtmosphericVector::setMaxSize</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>maxSize</declname>
+        </param>
+        <briefdescription>
+<para>Set the capacity of the vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericVector.h" line="28" column="10" bodyfile="main/pme/src/AtmosphericVector.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AtmosphericVector&lt; T &gt;::push_back</definition>
+        <argsstring>(const T &amp;element)</argsstring>
+        <name>push_back</name>
+        <qualifiedname>AtmosphericVector::push_back</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>element</declname>
+        </param>
+        <briefdescription>
+<para>Append an element to the vector as long as the vector size is less than the capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>element</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericVector.h" line="36" column="10" bodyfile="main/pme/src/AtmosphericVector.h" bodystart="36" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AtmosphericVector&lt; T &gt;::isFilled</definition>
+        <argsstring>()</argsstring>
+        <name>isFilled</name>
+        <qualifiedname>AtmosphericVector::isFilled</qualifiedname>
+        <briefdescription>
+<para>Check if the vector is filled to its capacity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/AtmosphericVector.h" line="52" column="10" bodyfile="main/pme/src/AtmosphericVector.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A wrapper of vector which allows a user-defined maximum size. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>https://stackoverflow.com/questions/9248728/vector-how-to-set-the-maximum-number-of-elements-and-find-the-current-count</para>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AtmosphericVector&lt; T &gt;</label>
+        <link refid="class_atmospheric_vector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AtmosphericVector&lt; T &gt;</label>
+        <link refid="class_atmospheric_vector"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; T &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="main/pme/src/AtmosphericVector.h" line="15" column="1" bodyfile="main/pme/src/AtmosphericVector.h" bodystart="16" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_atmospheric_vector_1adaf6740e684438f8433bb2aca8163018" prot="private" virt="non-virtual"><scope>AtmosphericVector</scope><name>_maxSize</name></member>
+      <member refid="class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e" prot="public" virt="non-virtual"><scope>AtmosphericVector</scope><name>isFilled</name></member>
+      <member refid="class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770" prot="public" virt="non-virtual"><scope>AtmosphericVector</scope><name>push_back</name></member>
+      <member refid="class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd" prot="public" virt="non-virtual"><scope>AtmosphericVector</scope><name>setMaxSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="unioncsd__t" kind="union" language="C++" prot="public">
+    <compoundname>csd_t</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unioncsd__t_1acb1d09f122f32629d8d6faa9edcc943b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_s_d_v1" kindref="compound">csd1_t</ref></type>
+        <definition>csd1_t csd_t::v1</definition>
+        <argsstring></argsstring>
+        <name>v1</name>
+        <qualifiedname>csd_t::v1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="229" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unioncsd__t_1a19b60555856c9a485bcf4a84c248bfea" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_s_d_v2" kindref="compound">csd2_t</ref></type>
+        <definition>csd2_t csd_t::v2</definition>
+        <argsstring></argsstring>
+        <name>v2</name>
+        <qualifiedname>csd_t::v2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="230" column="10" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>CSDV1</label>
+        <link refid="struct_c_s_d_v1"/>
+      </node>
+      <node id="3">
+        <label>CSDV2</label>
+        <link refid="struct_c_s_d_v2"/>
+      </node>
+      <node id="1">
+        <label>csd_t</label>
+        <link refid="unioncsd__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>v1</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>v2</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="228" column="1" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="228" bodyend="231"/>
+    <listofallmembers>
+      <member refid="unioncsd__t_1acb1d09f122f32629d8d6faa9edcc943b" prot="public" virt="non-virtual"><scope>csd_t</scope><name>v1</name></member>
+      <member refid="unioncsd__t_1a19b60555856c9a485bcf4a84c248bfea" prot="public" virt="non-virtual"><scope>csd_t</scope><name>v2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

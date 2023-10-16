@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_75b74ad5fe7259e8fc1215058fac2a06" kind="dir">
+    <compoundname>examples/logging_example/libraries/I2Cdev</compoundname>
+    <innerfile refid="_i2_cdev_8cpp">I2Cdev.cpp</innerfile>
+    <innerfile refid="_i2_cdev_8h">I2Cdev.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/I2Cdev/"/>
+  </compounddef>
+</doxygen>

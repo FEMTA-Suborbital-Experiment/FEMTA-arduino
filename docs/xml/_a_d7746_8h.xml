@@ -1,0 +1,1195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_a_d7746_8h" kind="file" language="C++">
+    <compoundname>AD7746.h</compoundname>
+    <includes refid="_i2_cdev_8h" local="yes">I2Cdev.h</includes>
+    <includedby refid="_a_d7746_8cpp" local="yes">examples/logging_example/libraries/AD7746/AD7746.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>examples/logging_example/libraries/AD7746/AD7746.h</label>
+        <link refid="_a_d7746_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>I2Cdev.h</label>
+        <link refid="_i2_cdev_8h_source"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_a_d7746" prot="public">AD7746</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_a_d7746_8h_1ab29ff8b7f5634e3be0a168e7273dae22" prot="public" static="no">
+        <name>AD7746_ADDRESS</name>
+        <initializer>0x48</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="41" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1afa02fc5f6bd4879247abd19ceb0ec86f" prot="public" static="no">
+        <name>AD7746_DEFAULT_ADDRESS</name>
+        <initializer>AD7746_ADDRESS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="42" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a357ea9e94ed2877881f7e1e53e1ba59c" prot="public" static="no">
+        <name>AD7746_RA_STATUS</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="45" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1abb1bf6b75500da06dadc16470dd00a63" prot="public" static="no">
+        <name>AD7746_RA_CAP_DATA_H</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="46" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a593948839c4673f71209ab3ffcfaca98" prot="public" static="no">
+        <name>AD7746_RA_CAP_DATA_M</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="47" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1afa417d0556be74eb63b70cf4257ed59e" prot="public" static="no">
+        <name>AD7746_RA_CAP_DATA_L</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="48" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1acee527b52181f606c179738d8abf7865" prot="public" static="no">
+        <name>AD7746_RA_VT_DATA_H</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="49" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae7be820a6295d1047442b3b9a7221971" prot="public" static="no">
+        <name>AD7746_RA_VT_DATA_M</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="50" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a6c8f0ae986a98a260c74f710d59a5d9f" prot="public" static="no">
+        <name>AD7746_RA_VT_DATA_L</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="51" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a39a900107c1ffa4914d974590f0ddda3" prot="public" static="no">
+        <name>AD7746_RA_CAP_SETUP</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="52" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a0684d6e20acdea841f3d896b9fe4b6bb" prot="public" static="no">
+        <name>AD7746_RA_VT_SETUP</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="53" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a53031fb9a6db14ff1e8b121d655096a5" prot="public" static="no">
+        <name>AD7746_RA_EXC_SETUP</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="54" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a44a6e3e1a41ad29a0ccb9c14229b65cd" prot="public" static="no">
+        <name>AD7746_RA_CONFIGURATION</name>
+        <initializer>0x0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="55" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae146bd958ce1719ee0500b97dd8899bd" prot="public" static="no">
+        <name>AD7746_RA_CAP_DAC_A</name>
+        <initializer>0x0B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="56" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a21a7b1e7518775d9772ee625129a08a4" prot="public" static="no">
+        <name>AD7746_RA_CAP_DAC_B</name>
+        <initializer>0x0C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="57" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a37507536dbb979595d32790560680cf8" prot="public" static="no">
+        <name>AD7746_RA_CAP_OFF_H</name>
+        <initializer>0x0D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="58" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ab41f90a1075ac8c8727a049679ee1de1" prot="public" static="no">
+        <name>AD7746_RA_CAP_OFF_L</name>
+        <initializer>0x0E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="59" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ad20d5263c81f992c7ca12d12a277e819" prot="public" static="no">
+        <name>AD7746_RA_CAP_GAIN_H</name>
+        <initializer>0x0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="60" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aef4b7ecadb84fa6d354518f9e6350613" prot="public" static="no">
+        <name>AD7746_RA_CAP_GAIN_L</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="61" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aef62cf0abe40a794f3dc344a99f65037" prot="public" static="no">
+        <name>AD7746_RA_VOLT_GAIN_H</name>
+        <initializer>0x11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="62" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a8251dfa7b8f316c416126a1be3fe4166" prot="public" static="no">
+        <name>AD7746_RA_VOLT_GAIN_L</name>
+        <initializer>0x12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="63" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aa28cc5453c1c76f2c03c4d2c07247cf8" prot="public" static="no">
+        <name>AD7746_RESET</name>
+        <initializer>0xBF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="65" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae1fa2562128d74dc89cc72c06944ac34" prot="public" static="no">
+        <name>AD7746_EXCERR_BIT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="68" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a743a33ecf0c65e54042ec0d1c1002095" prot="public" static="no">
+        <name>AD7746_RDY_BIT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="69" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aa84ea7215ee9a5bd208080deb463a0cd" prot="public" static="no">
+        <name>AD7746_RDYVT_BIT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="70" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a74c15f8e9e4d47408a199218888a5771" prot="public" static="no">
+        <name>AD7746_RDYCAP_BIT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="71" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a6c0c6f09b993234a9fe844b4ff222636" prot="public" static="no">
+        <name>AD7746_CAPEN_BIT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="74" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a4bce4a8b0679c968fd8bf4e8fd81b6a7" prot="public" static="no">
+        <name>AD7746_CIN2_BIT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="75" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a2bba21f48443e55c4fe5897ed1c6b701" prot="public" static="no">
+        <name>AD7746_CAPDIFF_BIT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="76" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1acdda7adf67a8861daaa11f039997ed7d" prot="public" static="no">
+        <name>AD7746_CACHOP_BIT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="77" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aa6bc6f74612c248d62ae01699f032a1c" prot="public" static="no">
+        <name>AD7746_CAPEN</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPEN_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="79" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a6c0abacf21eff6d66049a791ebebdb81" prot="public" static="no">
+        <name>AD7746_CIN2</name>
+        <initializer>(1 &lt;&lt; AD7746_CIN2_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="80" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a15119100f94ecf534350ee0371b0e408" prot="public" static="no">
+        <name>AD7746_VTEN_BIT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="83" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a7bb2e14da01c76c918c1d8258e97384e" prot="public" static="no">
+        <name>AD7746_VTMD_BIT_1</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="84" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a99f045a89179a100f6afbb1f10c81226" prot="public" static="no">
+        <name>AD7746_VTMD_BIT_0</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="85" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a730601acf310429d5bcf1de7ef96ab87" prot="public" static="no">
+        <name>AD7746_EXTREF_BIT</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="86" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a720704718ff10803258dff538de24ce6" prot="public" static="no">
+        <name>AD7746_VTSHORT_BIT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="87" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a721e355fcb8e4de41c69cc891e044d09" prot="public" static="no">
+        <name>AD7746_VTCHOP_BIT</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="88" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a2463183ecd4a2507726de595043c3653" prot="public" static="no">
+        <name>AD7746_VTEN</name>
+        <initializer>(1 &lt;&lt; AD7746_VTEN_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="90" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a4e45ceae2883bbf61329f03cd66747ce" prot="public" static="no">
+        <name>AD7746_VTMD_INT_TEMP</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="92" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a6cf6e8762007ca8c7bb6494449bc8136" prot="public" static="no">
+        <name>AD7746_VTMD_EXT_TEMP</name>
+        <initializer>(1 &lt;&lt; AD7746_VTMD_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="93" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a7d86e1506a13d0f5ab7239721fe09a71" prot="public" static="no">
+        <name>AD7746_VTMD_VDD_MON</name>
+        <initializer>(1 &lt;&lt; AD7746_VTMD_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="94" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1af93e267f4117ca3db66222c9aee7609e" prot="public" static="no">
+        <name>AD7746_VTMD_VIN</name>
+        <initializer>(1 &lt;&lt; AD7746_VTMD_BIT_1) | (1 &lt;&lt; AD7746_VTMD_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="95" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1afb5ea70ebb527ee6531085e02b81b3cd" prot="public" static="no">
+        <name>AD7746_CLKCTRL_BIT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="98" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae8787f836163483b4c1064a708bdbe98" prot="public" static="no">
+        <name>AD7746_EXCON_BIT</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="99" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a02daf92e14cfb8f421edbc4bf5d634b8" prot="public" static="no">
+        <name>AD7746_EXCB_BIT</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="100" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ab68589decb1be9863d0caeb51a476930" prot="public" static="no">
+        <name>AD7746_INV_EXCB_BIT</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="101" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a36bfca91be53159d4179d477478d333d" prot="public" static="no">
+        <name>AD7746_EXCA_BIT</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="102" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a30fba66815385d1ea65bb732ca7bc3fd" prot="public" static="no">
+        <name>AD7746_INV_EXCA_BIT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="103" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae7808030e3d10d58399a72ff24f1e16e" prot="public" static="no">
+        <name>AD7746_EXCLVL_BIT_1</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="104" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a4ae62a2d393ad435dd725309573da34d" prot="public" static="no">
+        <name>AD7746_EXCLVL_BIT_0</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="105" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a26a44da52ec55d0ed48117aa78115be4" prot="public" static="no">
+        <name>AD7746_EXCA</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCA_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="107" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a6dee85f4030948f1f6e0140efe2c5363" prot="public" static="no">
+        <name>AD7746_EXCB</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCB_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="108" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a99abc5e7d5089248309f695e966dd7a6" prot="public" static="no">
+        <name>AD7746_EXCON</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCON_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="109" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a9351ea0464d83c9384700d25599d3df5" prot="public" static="no">
+        <name>AD7746_EXCLVL_VDD_X_1_8</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="111" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a5e49bd15d6e71e0b89bd7aa99fdf1df7" prot="public" static="no">
+        <name>AD7746_EXCLVL_VDD_X_1_4</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCLVL_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="112" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1acb4259e3df376f12fc8a75cfe7e0ac36" prot="public" static="no">
+        <name>AD7746_EXCLVL_VDD_X_3_8</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCLVL_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="113" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a70b33f14778aa0e3dcbbc55eeb7e3d98" prot="public" static="no">
+        <name>AD7746_EXCLVL_VDD_X_1_2</name>
+        <initializer>(1 &lt;&lt; AD7746_EXCLVL_BIT_1) | (1 &lt;&lt; AD7746_EXCLVL_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="114" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a2965e8a7dbff756ea1371aca0785acc6" prot="public" static="no">
+        <name>AD7746_VTF_BIT_1</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="117" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ad13e6e7af2e7cf498f7e2d08622f80ae" prot="public" static="no">
+        <name>AD7746_VTF_BIT_0</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="118" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a03379cd789bbaab888c52d3eb42bcd5f" prot="public" static="no">
+        <name>AD7746_CAPF_BIT_2</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="119" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a0c76d8d9d928641adc554fc095998a59" prot="public" static="no">
+        <name>AD7746_CAPF_BIT_1</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="120" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aae9ccee33ba4d72b9dd60e5fdff4d822" prot="public" static="no">
+        <name>AD7746_CAPF_BIT_0</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="121" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a3a2c54662b1abbd4ecc12144d099a1a5" prot="public" static="no">
+        <name>AD7746_MD_BIT_2</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="122" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a04b5edc3dc4f588a28b63e92cc3c7b01" prot="public" static="no">
+        <name>AD7746_MD_BIT_1</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="123" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ac2982acd2c2e2dd3e4304fbc8d9f5594" prot="public" static="no">
+        <name>AD7746_MD_BIT_0</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="124" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a43606da4c1103004045d9846a8b57138" prot="public" static="no">
+        <name>AD7746_VTF_20P1</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="126" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a39d70b23a4ea19eaa8c20a838b8bf99e" prot="public" static="no">
+        <name>AD7746_VTF_32P1</name>
+        <initializer>(1 &lt;&lt; AD7746_VTF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="127" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a351ccb54e26e52744945f2b7f1fd938c" prot="public" static="no">
+        <name>AD7746_VTF_62P1</name>
+        <initializer>(1 &lt;&lt; AD7746_VTF_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="128" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a9514e0a6a05925bb57197732a3d69a4d" prot="public" static="no">
+        <name>AD7746_VTF_122P1</name>
+        <initializer>(1 &lt;&lt; AD7746_VTF_BIT_1) | (1 &lt;&lt; AD7746_VTF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="129" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aada2e121baa0958373963ee0bbfa8360" prot="public" static="no">
+        <name>AD7746_CAPF_11P0</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="131" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae04cc6dacdfc5fa174b4cb37dcbad86e" prot="public" static="no">
+        <name>AD7746_CAPF_11P9</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="132" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a8701683dff6dbb0296d1fdac1552c382" prot="public" static="no">
+        <name>AD7746_CAPF_20P0</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="133" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1acd8c65bcb504de890f0d5073e4dca54e" prot="public" static="no">
+        <name>AD7746_CAPF_38P0</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_1) | (1 &lt;&lt; AD7746_CAPF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="134" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1aa3baee6130c2a07b0b8e4a0597e74e8c" prot="public" static="no">
+        <name>AD7746_CAPF_62P0</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="135" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a1006e90e09cdf85e88afb7215a751aa4" prot="public" static="no">
+        <name>AD7746_CAPF_77P0</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_2) | (1 &lt;&lt; AD7746_CAPF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="136" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae9045ba56f5f617f863ebcf0613567d3" prot="public" static="no">
+        <name>AD7746_CAPF_92P0</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_2) | (1 &lt;&lt; AD7746_CAPF_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="137" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ab8692f358278a712180bc2b1354c4be2" prot="public" static="no">
+        <name>AD7746_CAPF_109P6</name>
+        <initializer>(1 &lt;&lt; AD7746_CAPF_BIT_2) | (1 &lt;&lt; AD7746_CAPF_BIT_1) | (1 &lt;&lt; AD7746_CAPF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="138" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ae05c6149eb1bc41fe152e46d8772417d" prot="public" static="no">
+        <name>AD7746_MD_IDLE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="140" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ab467b44f276351354560abded71c8f12" prot="public" static="no">
+        <name>AD7746_MD_CONTINUOUS_CONVERSION</name>
+        <initializer>(1 &lt;&lt; AD7746_MD_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="141" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ac04be93ed37c61eb93b18ea834cc1a69" prot="public" static="no">
+        <name>AD7746_MD_SINGLE_CONVERSION</name>
+        <initializer>(1 &lt;&lt; AD7746_MD_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="142" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a019fe685744f8aaf470237f89052d193" prot="public" static="no">
+        <name>AD7746_MD_POWER_DOWN</name>
+        <initializer>(1 &lt;&lt; AD7746_MD_BIT_1) | (1 &lt;&lt; AD7746_MDF_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="143" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1af5644cb48559dba7aff3aa133df785dc" prot="public" static="no">
+        <name>AD7746_MD_OFFSET_CALIBRATION</name>
+        <initializer>(1 &lt;&lt; AD7746_MD_BIT_2) | (1 &lt;&lt; AD7746_MD_BIT_0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="144" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a06ebe6b41b903cc4ea49573b0621413a" prot="public" static="no">
+        <name>AD7746_MD_GAIN_CALIBRATION</name>
+        <initializer>(1 &lt;&lt; AD7746_MD_BIT_2) | (1 &lt;&lt; AD7746_MD_BIT_1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="145" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a5c7558c2f5f165abf2a7fb0170a9068a" prot="public" static="no">
+        <name>AD7746_DACAEN_BIT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="148" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a0c95ed751faf31a768378cd9386e55f0" prot="public" static="no">
+        <name>AD7746_DACAEN</name>
+        <initializer>(1 &lt;&lt; AD7746_DACAEN_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="150" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1ab4c76581794cb28fafc38c790b4140eb" prot="public" static="no">
+        <name>AD7746_DACBEN_BIT</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="153" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a28650c5b018582cb91d844a03cfc681f" prot="public" static="no">
+        <name>AD7746_DACBEN</name>
+        <initializer>(1 &lt;&lt; AD7746_DACBEN_BIT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="155" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_a_d7746_8h_1a091029913b51627c4b69cefd361be1f7" prot="public" static="no">
+        <name>AD7746_DAC_COEFFICIENT</name>
+        <initializer>0.13385826771654F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="158" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>I2Cdev<sp/>library<sp/>collection<sp/>-<sp/>AD7746<sp/>I2C<sp/>device<sp/>class<sp/>header<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Based<sp/>on<sp/>Analog<sp/>Devices<sp/>AD7746<sp/>Datasheet,<sp/>Revision<sp/>0,<sp/>2005</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2012-04-01<sp/>by<sp/>Peteris<sp/>Skorovs<sp/>&lt;pskorovs@gmail.com&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>I2C<sp/>device<sp/>library<sp/>is<sp/>using<sp/>(and<sp/>submitted<sp/>as<sp/>a<sp/>part<sp/>of)<sp/>Jeff<sp/>Rowberg&apos;s<sp/>I2Cdevlib<sp/>library,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>which<sp/>should<sp/>(hopefully)<sp/>always<sp/>be<sp/>available<sp/>at<sp/>https://github.com/jrowberg/i2cdevlib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Changelog:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>2012-04-01<sp/>-<sp/>initial<sp/>release</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>============================================</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">I2Cdev<sp/>device<sp/>library<sp/>code<sp/>is<sp/>placed<sp/>under<sp/>the<sp/>MIT<sp/>license</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">Copyright<sp/>(c)<sp/>2012<sp/>Peteris<sp/>Skorovs</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment">The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight></codeline>
+<codeline lineno="25"><highlight class="comment">THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight></codeline>
+<codeline lineno="28"><highlight class="comment">AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="32"><highlight class="comment">===============================================</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_AD7746_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_AD7746_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;I2Cdev.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x48</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DEFAULT_ADDRESS<sp/><sp/><sp/>AD7746_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_STATUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00<sp/></highlight><highlight class="comment">//<sp/>Status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_DATA_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_DATA_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_DATA_L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VT_DATA_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04<sp/></highlight><highlight class="comment">//<sp/>VT<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VT_DATA_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05<sp/></highlight><highlight class="comment">//<sp/>VT<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VT_DATA_L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x06<sp/></highlight><highlight class="comment">//<sp/>VT<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_SETUP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VT_SETUP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08<sp/></highlight><highlight class="comment">//<sp/>VT<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_EXC_SETUP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x09<sp/></highlight><highlight class="comment">//<sp/>Exc<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CONFIGURATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0A<sp/></highlight><highlight class="comment">//<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_DAC_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0B<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>DAC<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_DAC_B<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0C<sp/></highlight><highlight class="comment">//<sp/>Cap<sp/>DAC<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_OFF_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0D<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_OFF_L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0E<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_GAIN_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_CAP_GAIN_L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VOLT_GAIN_H<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RA_VOLT_GAIN_L<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RESET<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xBF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCERR_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RDY_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RDYVT_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_RDYCAP_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cap<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPEN_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CIN2_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPDIFF_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CACHOP_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPEN_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CIN2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CIN2_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>VT<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTEN_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_BIT_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_BIT_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXTREF_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTSHORT_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTCHOP_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTEN_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_INT_TEMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_EXT_TEMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTMD_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_VDD_MON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTMD_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTMD_VIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTMD_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTMD_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Exc<sp/>Setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CLKCTRL_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCON_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCB_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_INV_EXCB_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCA_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_INV_EXCA_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_BIT_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_BIT_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCA_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCB_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCON_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_VDD_X_1_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_VDD_X_1_4<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCLVL_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_VDD_X_3_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCLVL_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_EXCLVL_VDD_X_1_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCLVL_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_EXCLVL_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_BIT_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_BIT_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_BIT_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_BIT_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_BIT_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_BIT_2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_BIT_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_BIT_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_20P1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_32P1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_62P1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTF_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_VTF_122P1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTF_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_VTF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_11P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_11P9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_20P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_38P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_62P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_77P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_92P0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_CAPF_109P6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_CAPF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_IDLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_CONTINUOUS_CONVERSION<sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_SINGLE_CONVERSION<sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_POWER_DOWN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_1)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MDF_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_OFFSET_CALIBRATION<sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_MD_GAIN_CALIBRATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_2)<sp/>|<sp/>(1<sp/>&lt;&lt;<sp/>AD7746_MD_BIT_1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cap<sp/>DAC<sp/>A</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DACAEN_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DACAEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_DACAEN_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cap<sp/>DAC<sp/>B</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DACBEN_BIT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DACBEN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>AD7746_DACBEN_BIT)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AD7746_DAC_COEFFICIENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.13385826771654F<sp/></highlight><highlight class="comment">//<sp/>17pF/127</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="class_a_d7746" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_d7746" kindref="compound">AD7746</ref><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_d7746_1a51bfb371af256f07028623ccc4680c1e" kindref="member">AD7746</ref>();</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_a_d7746_1a51bfb371af256f07028623ccc4680c1e" kindref="member">AD7746</ref>(uint8_t<sp/>address);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_a_d7746_1a1f173bcc3280f5921a7e8500184f82d2" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_a_d7746_1ade3ea764ff47c96c1884745a2d4ceb82" kindref="member">testConnection</ref>();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reset();<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>getCapacitance();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeCapSetupRegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeVtSetupRegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeExcSetupRegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeConfigurationRegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeCapDacARegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeCapDacBRegister(uint8_t<sp/>data);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>devAddr;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>buffer[19];</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>_AD7746_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/libraries/AD7746/AD7746.h"/>
+  </compounddef>
+</doxygen>

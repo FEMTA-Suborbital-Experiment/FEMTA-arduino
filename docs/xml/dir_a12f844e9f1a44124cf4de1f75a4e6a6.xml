@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_a12f844e9f1a44124cf4de1f75a4e6a6" kind="dir">
+    <compoundname>libraries/Adafruit_Unified_Sensor</compoundname>
+    <innerfile refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8cpp">Adafruit_Sensor.cpp</innerfile>
+    <innerfile refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h">Adafruit_Sensor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Adafruit_Unified_Sensor/"/>
+  </compounddef>
+</doxygen>

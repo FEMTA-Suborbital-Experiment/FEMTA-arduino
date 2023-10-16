@@ -1,17 +1,12 @@
 /**
  * @file Reader.cpp
- * 
- * @mainpage FEMTA Reader
- * 
- * @section Summary
- * 
- * The FEMTA Reader takes an input binary file and outputs the contents
+ * @brief The FEMTA Reader takes an input binary file and outputs the contents
  * to a struct containing the time, low pressure, high pressure, and 
- * acceleration vectors. The reader is used to save a struct into
+ * acceleration vectors.
+ * 
+ * @details The reader is used to save a struct into
  * a text file, for the purpose of post-processing. The reader shall
  * not be used during launch.
- * 
- * @section Utility
  * 
  * Ensure that the file used for writing exists in the microSD card. 
  * Read the file using readFile() and store the contents of the binary
@@ -73,7 +68,7 @@ int Reader::readFile(const char* fileName) {
  * @brief Outputs the time, low pressure, high pressure, and acceleration values
  * into a single, large vector for reading. 
  * 
- * The writer class stores data by struct, rather than by outputting to a large
+ * @details The writer class stores data by struct, rather than by outputting to a large
  * vector. To compensate for this, we first read each vector to a temporary vector,
  * push each index of the temporary vector to the output vector, and repeat this
  * process for each chunk of the buffer. 

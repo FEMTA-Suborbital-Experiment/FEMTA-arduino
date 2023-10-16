@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h" kind="file" language="C++">
+    <compoundname>Adafruit_SPIDevice.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">SPI.h</includes>
+    <includedby refid="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h" local="no">libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h</includedby>
+    <includedby refid="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8cpp" local="yes">libraries/Adafruit_BusIO/Adafruit_SPIDevice.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_BusIO/Adafruit_SPIDevice.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SPI.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/Adafruit_BusIO/Adafruit_I2CRegister.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_BusIO/Adafruit_SPIDevice.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_adafruit___s_p_i_device" prot="public">Adafruit_SPIDevice</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h_1ad6a384a002c4fc658ba5cde19eade5c2" prot="public" static="no">
+        <name>SPI_BITORDER_MSBFIRST</name>
+        <initializer>MSBFIRST</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="37" column="9" bodyfile="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h_1a8982e24ac54e333a0ad2813a3667df73" prot="public" static="no">
+        <name>SPI_BITORDER_LSBFIRST</name>
+        <initializer>LSBFIRST</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="38" column="9" bodyfile="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h_1ad65ace9d1f2e952e782eef68a6deeef3" prot="public" static="no">
+        <type>BitOrder</type>
+        <definition>typedef BitOrder BusIOBitOrder</definition>
+        <argsstring></argsstring>
+        <name>BusIOBitOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" line="39" column="18" bodyfile="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>Adafruit_SPIDevice_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Adafruit_SPIDevice_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(SPI_INTERFACES_COUNT)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(SPI_INTERFACES_COUNT)<sp/>&amp;&amp;<sp/>(SPI_INTERFACES_COUNT<sp/>&gt;<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>some<sp/>modern<sp/>SPI<sp/>definitions<sp/>don&apos;t<sp/>have<sp/>BitOrder<sp/>enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(defined(__AVR__)<sp/>&amp;&amp;<sp/>!defined(ARDUINO_ARCH_MEGAAVR))<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ESP8266)<sp/>||<sp/>defined(TEENSYDUINO)<sp/>||<sp/>defined(SPARK)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_ARCH_SPRESENSE)<sp/>||<sp/>defined(MEGATINYCORE)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(DXCORE)<sp/>||<sp/>defined(ARDUINO_AVR_ATmega4809)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_AVR_ATmega4808)<sp/>||<sp/>defined(ARDUINO_AVR_ATmega3209)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_AVR_ATmega3208)<sp/>||<sp/>defined(ARDUINO_AVR_ATmega1609)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_AVR_ATmega1608)<sp/>||<sp/>defined(ARDUINO_AVR_ATmega809)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_AVR_ATmega808)<sp/>||<sp/>defined(ARDUINO_ARCH_ARC32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>_BitOrder<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>SPI_BITORDER_MSBFIRST<sp/>=<sp/>MSBFIRST,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>SPI_BITORDER_LSBFIRST<sp/>=<sp/>LSBFIRST,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/>BusIOBitOrder;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(ESP32)<sp/>||<sp/>defined(__ASR6501__)<sp/>||<sp/>defined(__ASR6502__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>some<sp/>modern<sp/>SPI<sp/>definitions<sp/>don&apos;t<sp/>have<sp/>BitOrder<sp/>enum<sp/>and<sp/>have<sp/>different<sp/>SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>mode<sp/>defines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>_BitOrder<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>SPI_BITORDER_MSBFIRST<sp/>=<sp/>SPI_MSBFIRST,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>SPI_BITORDER_LSBFIRST<sp/>=<sp/>SPI_LSBFIRST,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}<sp/>BusIOBitOrder;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Some<sp/>platforms<sp/>have<sp/>a<sp/>BitOrder<sp/>enum<sp/>but<sp/>its<sp/>named<sp/>MSBFIRST/LSBFIRST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI_BITORDER_MSBFIRST<sp/>MSBFIRST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI_BITORDER_LSBFIRST<sp/>LSBFIRST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>BitOrder<sp/>BusIOBitOrder;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__IMXRT1062__)<sp/></highlight><highlight class="comment">//<sp/>Teensy<sp/>4.x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*Warning*<sp/>I<sp/>disabled<sp/>the<sp/>usage<sp/>of<sp/>FAST_PINIO<sp/>as<sp/>the<sp/>set/clear<sp/>operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>in<sp/>the<sp/>cpp<sp/>file<sp/>are<sp/>not<sp/>atomic<sp/>and<sp/>can<sp/>effect<sp/>multiple<sp/>IO<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>if<sp/>an<sp/>interrupt<sp/>happens<sp/>in<sp/>between<sp/>the<sp/>time<sp/>the<sp/>code<sp/>reads<sp/>the<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>writes<sp/>out<sp/>the<sp/>updated<sp/>value,<sp/>that<sp/>changes<sp/>one<sp/>or<sp/>more<sp/>other<sp/>IO<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>on<sp/>that<sp/>same<sp/>IO<sp/>port,<sp/>those<sp/>change<sp/>will<sp/>be<sp/>clobbered<sp/>when<sp/>the<sp/>updated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>are<sp/>written<sp/>back.<sp/><sp/>A<sp/>fast<sp/>version<sp/>can<sp/>be<sp/>implemented<sp/>that<sp/>uses<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ports<sp/>set<sp/>and<sp/>clear<sp/>registers<sp/>which<sp/>are<sp/>atomic.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>typedef<sp/>volatile<sp/>uint32_t<sp/>BusIO_PortReg;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>typedef<sp/>uint32_t<sp/>BusIO_PortMask;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__AVR__)<sp/>||<sp/>defined(TEENSYDUINO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>BusIO_PortReg;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint8_t<sp/>BusIO_PortMask;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(ESP8266)<sp/>||<sp/>defined(ESP32)<sp/>||<sp/>defined(__SAM3X8E__)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(ARDUINO_ARCH_SAMD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint32_t<sp/>BusIO_PortReg;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/>BusIO_PortMask;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(defined(__arm__)<sp/>||<sp/>defined(ARDUINO_FEATHER52))<sp/>&amp;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>!defined(ARDUINO_ARCH_MBED)<sp/>&amp;&amp;<sp/>!defined(ARDUINO_ARCH_RP2040)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint32_t<sp/>BusIO_PortReg;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>uint32_t<sp/>BusIO_PortMask;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__ASR6501__)<sp/>&amp;&amp;<sp/>!defined(__ASR6502__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref>(int8_t<sp/>cspin,<sp/>uint32_t<sp/>freq<sp/>=<sp/>1000000,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BusIOBitOrder<sp/>dataOrder<sp/>=<sp/>SPI_BITORDER_MSBFIRST,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>dataMode<sp/>=<sp/>SPI_MODE0,<sp/>SPIClass<sp/>*theSPI<sp/>=<sp/>&amp;SPI);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref>(int8_t<sp/>cspin,<sp/>int8_t<sp/>sck,<sp/>int8_t<sp/>miso,<sp/>int8_t<sp/>mosi,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>freq<sp/>=<sp/>1000000,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BusIOBitOrder<sp/>dataOrder<sp/>=<sp/>SPI_BITORDER_MSBFIRST,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>dataMode<sp/>=<sp/>SPI_MODE0);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___s_p_i_device_1ab2dc91c7ef9488df1c52bb682a39a7fb" kindref="member">~Adafruit_SPIDevice</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a6aa3c0bebb1d2d58516bce4f2dd1423f" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a5c4fce15c92a0210c0872a827f239ab1" kindref="member">read</ref>(uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,<sp/>uint8_t<sp/>sendvalue<sp/>=<sp/>0xFF);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a1c984896fcc5d009511ce37a659fdb2e" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*prefix_buffer<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>prefix_len<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a9cc3386cab3750aa18bbf3918261fc54" kindref="member">write_then_read</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*write_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>write_len,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>*read_buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>read_len,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>sendvalue<sp/>=<sp/>0xFF);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a808c81bc4b9e42d064b9f590a1f6b1bd" kindref="member">write_and_read</ref>(uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" kindref="member">transfer</ref>(uint8_t<sp/>send);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1ac60964386f37b2c498fc1b1540f61889" kindref="member">transfer</ref>(uint8_t<sp/>*buffer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1acde87a3312ddc729c259b1b45fe71d82" kindref="member">beginTransaction</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a65b517b7372df56322b807a08d067f8b" kindref="member">endTransaction</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1a11e91bf075cdd77edcec11f4b28c6292" kindref="member">beginTransactionWithAssertingCS</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___s_p_i_device_1ad9e42c259682a03e76afd33c66af9317" kindref="member">endTransactionWithDeassertingCS</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>SPIClass<sp/>*_spi;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>SPISettings<sp/>*_spiSetting;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>uint32_t<sp/>_freq;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>BusIOBitOrder<sp/>_dataOrder;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_dataMode;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setChipSelect(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>int8_t<sp/>_cs,<sp/>_sck,<sp/>_mosi,<sp/>_miso;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>BUSIO_USE_FAST_PINIO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>BusIO_PortReg<sp/>*mosiPort,<sp/>*clkPort,<sp/>*misoPort,<sp/>*csPort;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>BusIO_PortMask<sp/>mosiPinMask,<sp/>misoPinMask,<sp/>clkPinMask,<sp/>csPinMask;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_begun;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>has<sp/>SPI<sp/>defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>Adafruit_SPIDevice_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_BusIO/Adafruit_SPIDevice.h"/>
+  </compounddef>
+</doxygen>

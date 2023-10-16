@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>Bus<sp/>IO<sp/>Library<sp/>[![Build<sp/>Status](https://github.com/adafruit/Adafruit_BusIO/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_BusIO/actions)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>helper<sp/>library<sp/>to<sp/>abstract<sp/>away<sp/>I2C<sp/>&amp;<sp/>SPI<sp/>transactions<sp/>and<sp/>registers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code,<sp/>please<sp/>support<sp/>Adafruit<sp/>and<sp/>open-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products<sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MIT<sp/>license,<sp/>all<sp/>text<sp/>above<sp/>must<sp/>be<sp/>included<sp/>in<sp/>any<sp/>redistribution</highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/README.md"/>
+  </compounddef>
+</doxygen>

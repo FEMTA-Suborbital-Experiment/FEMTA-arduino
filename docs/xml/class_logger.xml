@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_logger" kind="class" language="C++" prot="public">
+    <compoundname>Logger</compoundname>
+    <includes refid="_logger_8h" local="no">Logger.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_logger_1a4b71165774ee49293228f547869c325b" prot="public" static="no" mutable="no">
+        <type><ref refid="structlog_type" kindref="compound">logType</ref></type>
+        <definition>logType Logger::logData</definition>
+        <argsstring></argsstring>
+        <name>logData</name>
+        <qualifiedname>Logger::logData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="40" column="17" bodyfile="main/pme/src/Logger.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_logger_1a8648c145510d37ea7fefab9a3714fb71" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Logger::mArraySize</definition>
+        <argsstring></argsstring>
+        <name>mArraySize</name>
+        <qualifiedname>Logger::mArraySize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="42" column="13" bodyfile="main/pme/src/Logger.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Logger::Logger</definition>
+        <argsstring>(int arraySize)</argsstring>
+        <name>Logger</name>
+        <qualifiedname>Logger::Logger</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>arraySize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="class_logger" kindref="compound">Logger</ref> class, which is responsible for storing the time, low pressure, high pressure, and acceleraetion values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arraySize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="34" column="9" bodyfile="main/pme/src/Logger.cpp" bodystart="37" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Logger::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Logger::init</qualifiedname>
+        <briefdescription>
+<para>Initialize the <ref refid="class_logger" kindref="compound">Logger</ref> and flush all values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="35" column="13" bodyfile="main/pme/src/Logger.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_1aa9983a0826820827e31fcf8fb77636a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logger::pushData</definition>
+        <argsstring>(float time, float lowPressure, float highPressure, float acceleration)</argsstring>
+        <name>pushData</name>
+        <qualifiedname>Logger::pushData</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lowPressure</declname>
+          <defname>lp</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>highPressure</declname>
+          <defname>hp</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>acceleration</declname>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+<para>Append the time, low pressure, high pressure, and acceleration into the logger&apos;s buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>hp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="36" column="14" bodyfile="main/pme/src/Logger.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Logger::flushArrays</definition>
+        <argsstring>()</argsstring>
+        <name>flushArrays</name>
+        <qualifiedname>Logger::flushArrays</qualifiedname>
+        <briefdescription>
+<para>Clear the values from each buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="37" column="14" bodyfile="main/pme/src/Logger.cpp" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_logger_1a5ba805b3d05cb8f2492251e2229600c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Logger::isStructFilled</definition>
+        <argsstring>()</argsstring>
+        <name>isStructFilled</name>
+        <qualifiedname>Logger::isStructFilled</qualifiedname>
+        <briefdescription>
+<para>Check if the buffer is filled by checking the time variable, which always stores data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Logger.h" line="38" column="14" bodyfile="main/pme/src/Logger.cpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_logger" kindref="compound">Logger</ref> for sensor data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>AtmosphericVector&lt; float &gt;</label>
+        <link refid="class_atmospheric_vector"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Logger</label>
+        <link refid="class_logger"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>logData</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>logType</label>
+        <link refid="structlog_type"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>highPressure</edgelabel>
+          <edgelabel>lowPressure</edgelabel>
+          <edgelabel>time</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; float  &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="main/pme/src/Logger.h" line="32" column="1" bodyfile="main/pme/src/Logger.h" bodystart="32" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6" prot="public" virt="non-virtual"><scope>Logger</scope><name>flushArrays</name></member>
+      <member refid="class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe" prot="public" virt="non-virtual"><scope>Logger</scope><name>init</name></member>
+      <member refid="class_logger_1a5ba805b3d05cb8f2492251e2229600c5" prot="public" virt="non-virtual"><scope>Logger</scope><name>isStructFilled</name></member>
+      <member refid="class_logger_1a4b71165774ee49293228f547869c325b" prot="public" virt="non-virtual"><scope>Logger</scope><name>logData</name></member>
+      <member refid="class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28" prot="public" virt="non-virtual"><scope>Logger</scope><name>Logger</name></member>
+      <member refid="class_logger_1a8648c145510d37ea7fefab9a3714fb71" prot="private" virt="non-virtual"><scope>Logger</scope><name>mArraySize</name></member>
+      <member refid="class_logger_1aa9983a0826820827e31fcf8fb77636a7" prot="public" virt="non-virtual"><scope>Logger</scope><name>pushData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

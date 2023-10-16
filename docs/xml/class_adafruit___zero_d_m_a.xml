@@ -1,0 +1,748 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___zero_d_m_a" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_ZeroDMA</compoundname>
+    <includes refid="_adafruit___zero_d_m_a_8h" local="no">Adafruit_ZeroDMA.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1a80771921a68271f5a79ab0a6c4b1bad5" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ZeroDMA::channel</definition>
+        <argsstring></argsstring>
+        <name>channel</name>
+        <qualifiedname>Adafruit_ZeroDMA::channel</qualifiedname>
+        <briefdescription>
+<para>DMA channel index (0 to DMAC_CH_NUM-1, or 0xFF) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="237" column="11" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1a66edc3699148ad581926fa3566360f17" prot="protected" static="no" mutable="no">
+        <type>enum <ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref></type>
+        <definition>enum ZeroDMAstatus Adafruit_ZeroDMA::jobStatus</definition>
+        <argsstring></argsstring>
+        <name>jobStatus</name>
+        <qualifiedname>Adafruit_ZeroDMA::jobStatus</qualifiedname>
+        <briefdescription>
+<para>Last known DMA job status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="238" column="30" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1a84ae85a6a87a1388b5e070bb804500c1" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_ZeroDMA::hasDescriptors</definition>
+        <argsstring></argsstring>
+        <name>hasDescriptors</name>
+        <qualifiedname>Adafruit_ZeroDMA::hasDescriptors</qualifiedname>
+        <briefdescription>
+<para>&apos;true&apos; if one or more descriptors assigned </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="239" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1a681b8ea014c7d8e198218756700d8926" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_ZeroDMA::loopFlag</definition>
+        <argsstring></argsstring>
+        <name>loopFlag</name>
+        <qualifiedname>Adafruit_ZeroDMA::loopFlag</qualifiedname>
+        <briefdescription>
+<para>&apos;true&apos; if descriptor chain loops back to start </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="240" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1aa276d20e9ef4b3f8cbcd8cf569497923" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ZeroDMA::peripheralTrigger</definition>
+        <argsstring></argsstring>
+        <name>peripheralTrigger</name>
+        <qualifiedname>Adafruit_ZeroDMA::peripheralTrigger</qualifiedname>
+        <briefdescription>
+<para>Value set by <ref refid="class_adafruit___zero_d_m_a_1ac3f324b1792f0287093cedba2f9bfc0b" kindref="member">setTrigger()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="241" column="11" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1aef6d75fa171d1be7daec125b7a347363" prot="protected" static="no" mutable="no">
+        <type>dma_transfer_trigger_action</type>
+        <definition>dma_transfer_trigger_action Adafruit_ZeroDMA::triggerAction</definition>
+        <argsstring></argsstring>
+        <name>triggerAction</name>
+        <qualifiedname>Adafruit_ZeroDMA::triggerAction</qualifiedname>
+        <briefdescription>
+<para>Value set by <ref refid="class_adafruit___zero_d_m_a_1a4e863ea5e45bda38f9249d9443a55152" kindref="member">setAction()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="242" column="31" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___zero_d_m_a_1a82b002d9e2f796723e7e0652ee3e4d4f" prot="protected" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Adafruit_ZeroDMA::callback[DMA_CALLBACK_N])(Adafruit_ZeroDMA *)</definition>
+        <argsstring>[DMA_CALLBACK_N])(Adafruit_ZeroDMA *)</argsstring>
+        <name>callback</name>
+        <qualifiedname>Adafruit_ZeroDMA::callback</qualifiedname>
+        <briefdescription>
+<para>Callback func *s. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="243" column="3" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a0e99cbece18f2b520a09a5dbc5fa6df7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_ZeroDMA::Adafruit_ZeroDMA</definition>
+        <argsstring>(void)</argsstring>
+        <name>Adafruit_ZeroDMA</name>
+        <qualifiedname>Adafruit_ZeroDMA::Adafruit_ZeroDMA</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="48" column="3" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="98" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a12cd181b228127512b854b4f4a4702ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref></type>
+        <definition>ZeroDMAstatus Adafruit_ZeroDMA::allocate</definition>
+        <argsstring>(void)</argsstring>
+        <name>allocate</name>
+        <qualifiedname>Adafruit_ZeroDMA::allocate</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Allocate channel for ZeroDMA object. This allocates a CHANNEL, not a DESCRIPTOR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ZeroDMAstatus type: DMA_STATUS_OK on success. DMA_STATUS_ERR_NOT_FOUND if no DMA channels are free. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="60" column="17" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="195" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a271d8c9050b100ab2fb766f07642af4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref></type>
+        <definition>ZeroDMAstatus Adafruit_ZeroDMA::startJob</definition>
+        <argsstring>(void)</argsstring>
+        <name>startJob</name>
+        <qualifiedname>Adafruit_ZeroDMA::startJob</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Start a previously allocated-and-configured DMA job. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ZeroDMAstatus type: DMA_STATUS_OK on success. DMA_STATUS_BUSY if resource is busy. DMA_STATUS_ERR_NOT_INITIALIZED if attempting to start job on a channel that failed to allocate. DMA_STATUS_ERR_INVALID_ARG if a bad transfer size was specified. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="71" column="17" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="339" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a8b3fbf685ae3ef8f5392a21af5836a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref></type>
+        <definition>ZeroDMAstatus Adafruit_ZeroDMA::free</definition>
+        <argsstring>(void)</argsstring>
+        <name>free</name>
+        <qualifiedname>Adafruit_ZeroDMA::free</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Deallocates a previously-allocated DMA channel. This deallocates the CHANNEL, not any associated DESCRIPTORS. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>ZeroDMAstatus type: DMA_STATUS_OK on success. DMA_STATUS_BUSY if channel is busy (can&apos;t deallocate while in use). DMA_STATUS_ERR_NOT_INITIALIZED if channel isn&apos;t in use. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="82" column="17" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="303" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1ac62999634c9708aea1ee780df3f740d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::trigger</definition>
+        <argsstring>(void)</argsstring>
+        <name>trigger</name>
+        <qualifiedname>Adafruit_ZeroDMA::trigger</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Activate a previously allocated-and-configured DMA channel&apos;s software trigger. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="88" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="473" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1ac3f324b1792f0287093cedba2f9bfc0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::setTrigger</definition>
+        <argsstring>(uint8_t trigger)</argsstring>
+        <name>setTrigger</name>
+        <qualifiedname>Adafruit_ZeroDMA::setTrigger</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+<para>Set DMA peripheral trigger. This can be done before or after channel is allocated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trigger</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A device-specific DMA peripheral trigger ID, typically defined in a header file associated with that chip. Example triffer IDs might include SERCOM2_DMAC_ID_TX (SERCOM transfer complete) ADC_DMAC_ID_RESRDY (ADC results ready). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="99" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="436" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a4e863ea5e45bda38f9249d9443a55152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::setAction</definition>
+        <argsstring>(dma_transfer_trigger_action action)</argsstring>
+        <name>setAction</name>
+        <qualifiedname>Adafruit_ZeroDMA::setAction</qualifiedname>
+        <param>
+          <type>dma_transfer_trigger_action</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+<para>Set DMA trigger action. This can be done before or after channel is allocated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of DMA_TRIGGER_ACTON_BLOCK, DMA_TRIGGER_ACTON_BEAT or DMA_TRIGGER_ACTON_TRANSACTION for desired behavior. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="107" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="455" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1ada1ef40ce048e2af885815e39859476a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::setCallback</definition>
+        <argsstring>(void(*callback)(Adafruit_ZeroDMA *)=NULL, dma_callback_type type=DMA_CALLBACK_TRANSFER_DONE)</argsstring>
+        <name>setCallback</name>
+        <qualifiedname>Adafruit_ZeroDMA::setCallback</qualifiedname>
+        <param>
+          <type>void(*)(<ref refid="class_adafruit___zero_d_m_a" kindref="compound">Adafruit_ZeroDMA</ref> *)</type>
+          <declname>callback</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>dma_callback_type</type>
+          <declname>type</declname>
+          <defval>DMA_CALLBACK_TRANSFER_DONE</defval>
+        </param>
+        <briefdescription>
+<para>Set and enable callback function for ZeroDMA object. This can be called before or after channel and/or descriptors are allocated, but needs to be called before job is started. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to callback function which accepts a pointer to a ZeroDMA object (or NULL to disable callback). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Which DMA operation to attach this function to (a channel can have multiple callbacks assigned if needed, one for each of these situations): DMA_CALLBACK_DONE on successful completion of a DMA transfer. DMA_CALLBACK_TRANSFER_ERR if a bus error is detected during an AHB access or when the DMAC fetches an invalid descriptor. DMA_CALLBACK_CHANNEL_SUSPEND when a channel is suspended. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="125" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="378" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1abcb7a7f194c78db02c17b7dad80dcc1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::loop</definition>
+        <argsstring>(boolean flag)</argsstring>
+        <name>loop</name>
+        <qualifiedname>Adafruit_ZeroDMA::loop</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Select whether a channel&apos;s descriptor list should repeat or not. This can be called before or after channel and any descriptors are allocated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&apos;true&apos; if DMA descriptor list should repeat indefinitely, &apos;false&apos; if DMA transfer stops at end of descriptor list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="135" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="641" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1ac84c9a934b0b0533d49ba6d878ad5540" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::suspend</definition>
+        <argsstring>(void)</argsstring>
+        <name>suspend</name>
+        <qualifiedname>Adafruit_ZeroDMA::suspend</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Suspend a DMA channel. AVOID USING FOR NOW. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="140" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="384" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a2b9222e1b16cc0429b491b7fe093cb7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::resume</definition>
+        <argsstring>(void)</argsstring>
+        <name>resume</name>
+        <qualifiedname>Adafruit_ZeroDMA::resume</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Resume a previously-suspended DMA channel. AVOID USING FOR NOW. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="145" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="396" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1af5843942940a56babc3d00d20472b0a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::abort</definition>
+        <argsstring>(void)</argsstring>
+        <name>abort</name>
+        <qualifiedname>Adafruit_ZeroDMA::abort</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Cancel a DMA transfer operation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="150" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="420" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1ad7c9f597b6a6fa658993a80669aa5b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::setPriority</definition>
+        <argsstring>(dma_priority pri)</argsstring>
+        <name>setPriority</name>
+        <qualifiedname>Adafruit_ZeroDMA::setPriority</qualifiedname>
+        <param>
+          <type>dma_priority</type>
+          <declname>pri</declname>
+        </param>
+        <briefdescription>
+<para>Set DMA channel level priority. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA_PRIORITY_0 (lowest priority) through DMA_PRIORITY_3 (highest priority). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="157" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="293" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1af940ac0fbf99688fef10fdbeb1e92cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::printStatus</definition>
+        <argsstring>(ZeroDMAstatus s=DMA_STATUS_JOBSTATUS)</argsstring>
+        <name>printStatus</name>
+        <qualifiedname>Adafruit_ZeroDMA::printStatus</qualifiedname>
+        <param>
+          <type><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref></type>
+          <declname>s</declname>
+          <defval>DMA_STATUS_JOBSTATUS</defval>
+        </param>
+        <briefdescription>
+<para>Print (to Serial console) a string corresponding to a DMA job status value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Job status as might be returned by <ref refid="class_adafruit___zero_d_m_a_1a12cd181b228127512b854b4f4a4702ad" kindref="member">allocate()</ref>, <ref refid="class_adafruit___zero_d_m_a_1a271d8c9050b100ab2fb766f07642af4a" kindref="member">startJob()</ref>, etc., e.g. DMA_STATUS_OK, DMA_STATUS_ERR_NOT_FOUND, ... </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="165" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="666" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1af43fc8294a0a10448909247ba60ad7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ZeroDMA::getChannel</definition>
+        <argsstring>(void)</argsstring>
+        <name>getChannel</name>
+        <qualifiedname>Adafruit_ZeroDMA::getChannel</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the DMA channel index associated with a ZeroDMA object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint8_t Channel index (0 to DMAC_CH_NUM-1, or 0xFF). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="171" column="11" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="478" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a94112456ab7aead2acb19b10053530d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DmacDescriptor *</type>
+        <definition>DmacDescriptor * Adafruit_ZeroDMA::addDescriptor</definition>
+        <argsstring>(void *src, void *dst, uint32_t count=0, dma_beat_size size=DMA_BEAT_SIZE_BYTE, bool srcInc=true, bool dstInc=true, uint32_t stepSize=DMA_ADDRESS_INCREMENT_STEP_SIZE_1, bool stepSel=DMA_STEPSEL_DST)</argsstring>
+        <name>addDescriptor</name>
+        <qualifiedname>Adafruit_ZeroDMA::addDescriptor</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>dma_beat_size</type>
+          <declname>size</declname>
+          <defval>DMA_BEAT_SIZE_BYTE</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>srcInc</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>dstInc</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>stepSize</declname>
+          <defval>DMA_ADDRESS_INCREMENT_STEP_SIZE_1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>stepSel</declname>
+          <defval>DMA_STEPSEL_DST</defval>
+        </param>
+        <briefdescription>
+<para>Allocate and append a DMA descriptor to a channel&apos;s descriptor list. Channel must be allocated first. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transfer count. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Per-count transfer size (DMA_BEAT_SIZE_BYTE, DMA_BEAT_SIZE_HWORD or DMA_BEAT_SIZE_WORD for 8, 16, 32 bits respectively). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>srcInc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, increment the source address following each count. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dstInc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, increment the destination address following each count. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stepSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If source/dest address increment in use, this indicates the &apos;step size&apos; (allowing it to skip over elements). DMA_ADDRESS_INCREMENT_STEP_SIZE_1 for a contiguous transfer, &quot;_SIZE_2 for alternate items, &quot;_SIZE_4 8, 16, 32, 64 or 128 for other skip ranges. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stepSel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>DMA_STEPSEL_SRC or DMA_STEPSEL_DST depending which pointer the step size should apply to (can&apos;t be used on both simultaneously). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DmacDescriptor* Pointer to DmacDescriptor structure, or NULL on various errors. Calling code should keep the pointer for later if it needs to change or free the descriptor. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="202" column="3" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="487" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1a176317c57c824f223083b06568941b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::changeDescriptor</definition>
+        <argsstring>(DmacDescriptor *d, void *src=NULL, void *dst=NULL, uint32_t count=0)</argsstring>
+        <name>changeDescriptor</name>
+        <qualifiedname>Adafruit_ZeroDMA::changeDescriptor</qualifiedname>
+        <param>
+          <type>DmacDescriptor *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>src</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>dst</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Change a previously-allocated DMA descriptor. Only the most common settings (source, dest, count) are available here. For anything more esoteric, you&apos;ll need to modify the descriptor structure yourself. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to descriptor structure (as returned by <ref refid="class_adafruit___zero_d_m_a_1a94112456ab7aead2acb19b10053530d3" kindref="member">addDescriptor()</ref>). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New source address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New destination address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New transfer count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="219" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="580" bodyend="635"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1aefe46f2eb389ac5aac4ebfdb13a620d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ZeroDMA::_IRQhandler</definition>
+        <argsstring>(uint8_t flags)</argsstring>
+        <name>_IRQhandler</name>
+        <qualifiedname>Adafruit_ZeroDMA::_IRQhandler</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Interrupt handler function, used internally by the library, DO NOT TOUCH! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Channel number, actually. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="227" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="153" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___zero_d_m_a_1aed42b5b406df8f37f3f48df1b2c3e057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_ZeroDMA::isActive</definition>
+        <argsstring>()</argsstring>
+        <name>isActive</name>
+        <qualifiedname>Adafruit_ZeroDMA::isActive</qualifiedname>
+        <briefdescription>
+<para>Test if DMA transfer is in-progress. Might be better to use callback and flag, unsure. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>&apos;true&apos; if DMA channel is busy, &apos;false&apos; otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="234" column="8" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp" bodystart="705" bodyend="707"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Class encapsulating DMA jobs and descriptors. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="46" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="46" bodyend="244"/>
+    <listofallmembers>
+      <member refid="class_adafruit___zero_d_m_a_1aefe46f2eb389ac5aac4ebfdb13a620d0" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>_IRQhandler</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1af5843942940a56babc3d00d20472b0a4" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>abort</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a0e99cbece18f2b520a09a5dbc5fa6df7" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>Adafruit_ZeroDMA</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a94112456ab7aead2acb19b10053530d3" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>addDescriptor</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a12cd181b228127512b854b4f4a4702ad" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>allocate</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a82b002d9e2f796723e7e0652ee3e4d4f" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>callback</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a176317c57c824f223083b06568941b22" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>changeDescriptor</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a80771921a68271f5a79ab0a6c4b1bad5" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>channel</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a8b3fbf685ae3ef8f5392a21af5836a3f" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>free</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1af43fc8294a0a10448909247ba60ad7a0" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>getChannel</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a84ae85a6a87a1388b5e070bb804500c1" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>hasDescriptors</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1aed42b5b406df8f37f3f48df1b2c3e057" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>isActive</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a66edc3699148ad581926fa3566360f17" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>jobStatus</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1abcb7a7f194c78db02c17b7dad80dcc1f" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>loop</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a681b8ea014c7d8e198218756700d8926" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>loopFlag</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1aa276d20e9ef4b3f8cbcd8cf569497923" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>peripheralTrigger</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1af940ac0fbf99688fef10fdbeb1e92cc4" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>printStatus</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a2b9222e1b16cc0429b491b7fe093cb7a" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>resume</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a4e863ea5e45bda38f9249d9443a55152" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>setAction</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1ada1ef40ce048e2af885815e39859476a" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>setCallback</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1ad7c9f597b6a6fa658993a80669aa5b33" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>setPriority</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1ac3f324b1792f0287093cedba2f9bfc0b" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>setTrigger</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1a271d8c9050b100ab2fb766f07642af4a" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>startJob</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1ac84c9a934b0b0533d49ba6d878ad5540" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>suspend</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1ac62999634c9708aea1ee780df3f740d0" prot="public" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>trigger</name></member>
+      <member refid="class_adafruit___zero_d_m_a_1aef6d75fa171d1be7daec125b7a347363" prot="protected" virt="non-virtual"><scope>Adafruit_ZeroDMA</scope><name>triggerAction</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

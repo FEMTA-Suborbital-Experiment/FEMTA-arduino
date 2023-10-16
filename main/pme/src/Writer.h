@@ -24,7 +24,7 @@
 static const int max_timeout{10};
 
 /**
- * @brief Separate writer class.
+ * @brief Writing class for outputing data into binary or text.
  * 
  * 
  */

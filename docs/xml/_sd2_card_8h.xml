@@ -1,0 +1,876 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_sd2_card_8h" kind="file" language="C++">
+    <compoundname>Sd2Card.h</compoundname>
+    <includes refid="_sd2_pin_map_8h" local="yes">Sd2PinMap.h</includes>
+    <includes refid="_sd_info_8h" local="yes">SdInfo.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <includedby refid="_sd2_card_8cpp" local="yes">libraries/SD-1.2.4/src/utility/Sd2Card.cpp</includedby>
+    <includedby refid="_sd_fat_8h" local="yes">libraries/SD-1.2.4/src/utility/SdFat.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/utility/Sd2Card.h</label>
+        <link refid="_sd2_card_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Sd2PinMap.h</label>
+        <link refid="_sd2_pin_map_8h_source"/>
+      </node>
+      <node id="3">
+        <label>SdInfo.h</label>
+        <link refid="_sd_info_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>examples/read_struct_from_binary/src/Reader.cpp</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8cpp"/>
+      </node>
+      <node id="6">
+        <label>examples/read_struct_from_binary/src/Reader.h</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/SD-1.2.4/src/SD.h</label>
+        <link refid="_s_d_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/utility/Sd2Card.h</label>
+        <link refid="_sd2_card_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libraries/SD-1.2.4/src/utility/SdFat.h</label>
+        <link refid="_sd_fat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main/pme/src/Reader.cpp</label>
+        <link refid="main_2pme_2src_2_reader_8cpp"/>
+      </node>
+      <node id="8">
+        <label>main/pme/src/Reader.h</label>
+        <link refid="main_2pme_2src_2_reader_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="10">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sd2_card" prot="public">Sd2Card</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_sd2_card_8h_1a9a8be32a22117702b68a446f25f142b0" prot="public" static="no">
+        <name>USE_SPI_LIB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>USE_SPI_LIB: if set, use the SPI library bundled with Arduino IDE, otherwise run with a standalone driver for AVR. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="38" column="9" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sd2_card_8h_1ad3a00a466d2b81cff13c5447a09d704b" prot="public" static="no">
+        <name>MEGA_SOFT_SPI</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Define MEGA_SOFT_SPI non-zero to use software SPI on Mega Arduinos. Pins used are SS 10, MOSI 11, MISO 12, and SCK 13.</para>
+<para>MEGA_SOFT_SPI allows an unmodified Adafruit GPS Shield to be used on Mega Arduinos. Software SPI works well with GPS Shield V1.1 but many SD cards will fail with GPS Shield V1.0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="47" column="9" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_sd2_card_8h_1ad491a376db448bccdda45d46c08b2824" prot="public" static="no">
+        <name>SD_PROTECT_BLOCK_ZERO</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>optimize loops for hardware SPI Protect block zero from write if nonzero </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="108" column="9" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_sd2_card_8h_1a6c091c07d1eb82a94b1c5738f720264b" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_FULL_SPEED</definition>
+        <argsstring></argsstring>
+        <name>SPI_FULL_SPEED</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set SCK to max rate of F_CPU/2. See <ref refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" kindref="member">Sd2Card::setSckRate()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="29" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1abf126d9da3318e2709bbc3f2ab3cb3d1" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_HALF_SPEED</definition>
+        <argsstring></argsstring>
+        <name>SPI_HALF_SPEED</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set SCK rate to F_CPU/4. See <ref refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" kindref="member">Sd2Card::setSckRate()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="31" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ad6a75e4ff6409fe1305ec6915787458e" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_QUARTER_SPEED</definition>
+        <argsstring></argsstring>
+        <name>SPI_QUARTER_SPEED</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set SCK rate to F_CPU/8. <ref refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" kindref="member">Sd2Card::setSckRate()</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="33" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CHIP_SELECT_PIN</definition>
+        <argsstring></argsstring>
+        <name>SD_CHIP_SELECT_PIN</name>
+        <initializer>= SS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SD Chip Select pin</para>
+<para>Warning if this pin is redefined the hardware SS will pin will be enabled as an output by init(). An avr processor will not function as an SPI master unless SS is set to output mode. The default chip select pin for the SD card is SS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="70" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1abe8593732e5a9f38455125b0d499468d" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_MOSI_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI_MOSI_PIN</name>
+        <initializer>= MOSI</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI Master Out Slave In pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="79" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ae0bebe57d4925c25bfb58d8999d300ef" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_MISO_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI_MISO_PIN</name>
+        <initializer>= MISO</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI Master In Slave Out pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="81" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a7e5ead80033d2652108d1b835f3cc0f9" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SPI_SCK_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI_SCK_PIN</name>
+        <initializer>= SCK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI Clock pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="83" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ab9a8ea16ec863d40ec4c4468af81d081" prot="public" static="no" mutable="no">
+        <type>unsigned int const</type>
+        <definition>unsigned int const SD_INIT_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_INIT_TIMEOUT</name>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>init timeout ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="110" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a4311aa09cdb3584a0bb443278fd2243f" prot="public" static="no" mutable="no">
+        <type>unsigned int const</type>
+        <definition>unsigned int const SD_ERASE_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_ERASE_TIMEOUT</name>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>erase timeout ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="112" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1adc46d37f2a9680c7a258d9bfe580b32a" prot="public" static="no" mutable="no">
+        <type>unsigned int const</type>
+        <definition>unsigned int const SD_READ_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_READ_TIMEOUT</name>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read timeout ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="114" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a5056a62ef3f1bae7d095540ce5f0fb14" prot="public" static="no" mutable="no">
+        <type>unsigned int const</type>
+        <definition>unsigned int const SD_WRITE_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_WRITE_TIMEOUT</name>
+        <initializer>= 600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write time out ms </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="116" column="20" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a3803cc53ecc2b346ba950053f3dced47" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD0</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD0</name>
+        <initializer>= 0X1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>timeout error for command CMD0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="120" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a2da93442c11fa58ffd24fe9d7038393d" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD8</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD8</name>
+        <initializer>= 0X2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CMD8 was not accepted - not a valid SD card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="122" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a2e79398dcb2711672e50dc2bea94e141" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD17</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD17</name>
+        <initializer>= 0X3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error response for CMD17 (read block) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="124" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ade761c5ed037fbe0598f80c5e6d34268" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD24</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD24</name>
+        <initializer>= 0X4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error response for CMD24 (write block) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="126" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a4840a2a3026b537bf0e6a679715ec734" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD25</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD25</name>
+        <initializer>= 0X05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WRITE_MULTIPLE_BLOCKS command failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="128" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a0ebfb17cbc424fd2138918aa72307292" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_CMD58</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_CMD58</name>
+        <initializer>= 0X06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error response for CMD58 (read OCR) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="130" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1aa69b04c3716e3e9962617e264e7ebe44" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_ACMD23</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_ACMD23</name>
+        <initializer>= 0X07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SET_WR_BLK_ERASE_COUNT failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="132" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a62fdea7af4f09fb98f302bac1bfa17c2" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_ACMD41</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_ACMD41</name>
+        <initializer>= 0X08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card&apos;s ACMD41 initialization process timeout </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="134" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a0bbae62f7c90e60614cfa9063101c5e1" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_BAD_CSD</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_BAD_CSD</name>
+        <initializer>= 0X09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned a bad CSR version field </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="136" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a7726e63b7a04bc15b70901b418d6dd1e" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_ERASE</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_ERASE</name>
+        <initializer>= 0X0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>erase block group command failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="138" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a00e05ddd835d81e0b4d78ededae70a3c" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_ERASE_SINGLE_BLOCK</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_ERASE_SINGLE_BLOCK</name>
+        <initializer>= 0X0B</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card not capable of single block erase </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="140" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a8121967a262a076c5191a0e855531f99" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_ERASE_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_ERASE_TIMEOUT</name>
+        <initializer>= 0X0C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase sequence timed out </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="142" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1adb9b963e8c54c4daf616cc5fdc4010ac" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_READ</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_READ</name>
+        <initializer>= 0X0D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error token instead of read data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="144" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1af1cdb9d8082532f4fe4b7cf1931dddbe" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_READ_REG</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_READ_REG</name>
+        <initializer>= 0X0E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read <ref refid="struct_c_i_d" kindref="compound">CID</ref> or CSD failed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="146" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a49c57f2b1d31fe1b0baf73fab5bd469b" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_READ_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_READ_TIMEOUT</name>
+        <initializer>= 0X0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>timeout while waiting for start of read data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="148" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a87264e66265e36be6b1428ebacf2e4ed" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_STOP_TRAN</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_STOP_TRAN</name>
+        <initializer>= 0X10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card did not accept STOP_TRAN_TOKEN </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="150" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a98bb1b625b0b9ce99d8494fbb195274c" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_WRITE</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_WRITE</name>
+        <initializer>= 0X11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error token as a response to a write operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="152" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a376db89ebd1e212110419e3ac7a0c33f" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_WRITE_BLOCK_ZERO</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_WRITE_BLOCK_ZERO</name>
+        <initializer>= 0X12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>attempt to write protected block zero </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="154" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a30bc1de9e3914ace0b9dc30f99a0edea" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_WRITE_MULTIPLE</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_WRITE_MULTIPLE</name>
+        <initializer>= 0X13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card did not go ready for a multiple block write </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="156" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a06b427dad894918bd33fe2e74c50c2e0" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_WRITE_PROGRAMMING</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_WRITE_PROGRAMMING</name>
+        <initializer>= 0X14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>card returned an error to a CMD13 status check after a write </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="158" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1ae6574296ec37c52209c5f2c5664dccdb" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_WRITE_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_WRITE_TIMEOUT</name>
+        <initializer>= 0X15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>timeout occurred during write programming </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="160" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1aa4036973d09278197c2949181094e8e2" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_ERROR_SCK_RATE</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_ERROR_SCK_RATE</name>
+        <initializer>= 0X16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>incorrect rate selected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="162" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1af55081a60d333ab063a5da5dd2c3633b" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_TYPE_SD1</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_TYPE_SD1</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard capacity V1 SD card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="166" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a225807c91fc41717b4230d3b7e99c9f7" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_TYPE_SD2</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_TYPE_SD2</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Standard capacity V2 SD card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="168" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd2_card_8h_1a39b05691c3bcfffddd5d590589980f44" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SD_CARD_TYPE_SDHC</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD_TYPE_SDHC</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High Capacity SD card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="170" column="15" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> class </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Arduino<sp/>Sd2Card<sp/>Library</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2009<sp/>by<sp/>William<sp/>Greiman</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>Arduino<sp/>Sd2Card<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>along<sp/>with<sp/>the<sp/>Arduino<sp/>Sd2Card<sp/>Library.<sp/><sp/>If<sp/>not,<sp/>see</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>Sd2Card_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Sd2Card_h</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Sd2PinMap.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SdInfo.h&quot;</highlight></codeline>
+<codeline lineno="29" refid="_sd2_card_8h_1a6c091c07d1eb82a94b1c5738f720264b" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a6c091c07d1eb82a94b1c5738f720264b" kindref="member">SPI_FULL_SPEED</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31" refid="_sd2_card_8h_1abf126d9da3318e2709bbc3f2ab3cb3d1" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1abf126d9da3318e2709bbc3f2ab3cb3d1" kindref="member">SPI_HALF_SPEED</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="33" refid="_sd2_card_8h_1ad6a75e4ff6409fe1305ec6915787458e" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ad6a75e4ff6409fe1305ec6915787458e" kindref="member">SPI_QUARTER_SPEED</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="38" refid="_sd2_card_8h_1a9a8be32a22117702b68a446f25f142b0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>USE_SPI_LIB</highlight></codeline>
+<codeline lineno="47" refid="_sd2_card_8h_1ad3a00a466d2b81cff13c5447a09d704b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MEGA_SOFT_SPI<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>MEGA_SOFT_SPI<sp/>&amp;&amp;<sp/>(defined(__AVR_ATmega1280__)||defined(__AVR_ATmega2560__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>SOFTWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>MEGA_SOFT_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SPI<sp/>pin<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SOFTWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>hardware<sp/>pin<sp/>defs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>include<sp/>pins_arduino.h<sp/>or<sp/>variant.h<sp/>depending<sp/>on<sp/>architecture,<sp/>via<sp/>Arduino.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>SDCARD_SS_PIN</highlight></codeline>
+<codeline lineno="70" refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref><sp/>=<sp/>SS;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref><sp/>=<sp/>SDCARD_SS_PIN;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>three<sp/>pins<sp/>must<sp/>not<sp/>be<sp/>redefined<sp/>for<sp/>hardware<sp/>SPI,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>ensure<sp/>that<sp/>they<sp/>are<sp/>taken<sp/>from<sp/>pins_arduino.h<sp/>or<sp/>variant.h,<sp/>depending<sp/>on<sp/>architecture.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>SDCARD_MOSI_PIN</highlight></codeline>
+<codeline lineno="79" refid="_sd2_card_8h_1abe8593732e5a9f38455125b0d499468d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1abe8593732e5a9f38455125b0d499468d" kindref="member">SPI_MOSI_PIN</ref><sp/>=<sp/>MOSI;</highlight></codeline>
+<codeline lineno="81" refid="_sd2_card_8h_1ae0bebe57d4925c25bfb58d8999d300ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1ae0bebe57d4925c25bfb58d8999d300ef" kindref="member">SPI_MISO_PIN</ref><sp/>=<sp/>MISO;</highlight></codeline>
+<codeline lineno="83" refid="_sd2_card_8h_1a7e5ead80033d2652108d1b835f3cc0f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1a7e5ead80033d2652108d1b835f3cc0f9" kindref="member">SPI_SCK_PIN</ref><sp/>=<sp/>SCK;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1abe8593732e5a9f38455125b0d499468d" kindref="member">SPI_MOSI_PIN</ref><sp/>=<sp/>SDCARD_MOSI_PIN;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1ae0bebe57d4925c25bfb58d8999d300ef" kindref="member">SPI_MISO_PIN</ref><sp/>=<sp/>SDCARD_MISO_PIN;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="_sd2_card_8h_1a7e5ead80033d2652108d1b835f3cc0f9" kindref="member">SPI_SCK_PIN</ref><sp/>=<sp/>SDCARD_SCK_PIN;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>USE_SPI_LIB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>OPTIMIZE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/><sp/></highlight><highlight class="comment">//<sp/>SOFTWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>software<sp/>SPI<sp/>pins<sp/>so<sp/>Mega<sp/>can<sp/>use<sp/>unmodified<sp/>GPS<sp/>Shield</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1abe8593732e5a9f38455125b0d499468d" kindref="member">SPI_MOSI_PIN</ref><sp/>=<sp/>11;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ae0bebe57d4925c25bfb58d8999d300ef" kindref="member">SPI_MISO_PIN</ref><sp/>=<sp/>12;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a7e5ead80033d2652108d1b835f3cc0f9" kindref="member">SPI_SCK_PIN</ref><sp/>=<sp/>13;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SOFTWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="108" refid="_sd2_card_8h_1ad491a376db448bccdda45d46c08b2824" refkind="member"><highlight class="preprocessor">#define<sp/>SD_PROTECT_BLOCK_ZERO<sp/>1</highlight></codeline>
+<codeline lineno="110" refid="_sd2_card_8h_1ab9a8ea16ec863d40ec4c4468af81d081" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ab9a8ea16ec863d40ec4c4468af81d081" kindref="member">SD_INIT_TIMEOUT</ref><sp/>=<sp/>2000;</highlight></codeline>
+<codeline lineno="112" refid="_sd2_card_8h_1a4311aa09cdb3584a0bb443278fd2243f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a4311aa09cdb3584a0bb443278fd2243f" kindref="member">SD_ERASE_TIMEOUT</ref><sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="114" refid="_sd2_card_8h_1adc46d37f2a9680c7a258d9bfe580b32a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1adc46d37f2a9680c7a258d9bfe580b32a" kindref="member">SD_READ_TIMEOUT</ref><sp/>=<sp/>300;</highlight></codeline>
+<codeline lineno="116" refid="_sd2_card_8h_1a5056a62ef3f1bae7d095540ce5f0fb14" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a5056a62ef3f1bae7d095540ce5f0fb14" kindref="member">SD_WRITE_TIMEOUT</ref><sp/>=<sp/>600;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SD<sp/>card<sp/>errors</highlight></codeline>
+<codeline lineno="120" refid="_sd2_card_8h_1a3803cc53ecc2b346ba950053f3dced47" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a3803cc53ecc2b346ba950053f3dced47" kindref="member">SD_CARD_ERROR_CMD0</ref><sp/>=<sp/>0X1;</highlight></codeline>
+<codeline lineno="122" refid="_sd2_card_8h_1a2da93442c11fa58ffd24fe9d7038393d" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a2da93442c11fa58ffd24fe9d7038393d" kindref="member">SD_CARD_ERROR_CMD8</ref><sp/>=<sp/>0X2;</highlight></codeline>
+<codeline lineno="124" refid="_sd2_card_8h_1a2e79398dcb2711672e50dc2bea94e141" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a2e79398dcb2711672e50dc2bea94e141" kindref="member">SD_CARD_ERROR_CMD17</ref><sp/>=<sp/>0X3;</highlight></codeline>
+<codeline lineno="126" refid="_sd2_card_8h_1ade761c5ed037fbe0598f80c5e6d34268" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ade761c5ed037fbe0598f80c5e6d34268" kindref="member">SD_CARD_ERROR_CMD24</ref><sp/>=<sp/>0X4;</highlight></codeline>
+<codeline lineno="128" refid="_sd2_card_8h_1a4840a2a3026b537bf0e6a679715ec734" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a4840a2a3026b537bf0e6a679715ec734" kindref="member">SD_CARD_ERROR_CMD25</ref><sp/>=<sp/>0X05;</highlight></codeline>
+<codeline lineno="130" refid="_sd2_card_8h_1a0ebfb17cbc424fd2138918aa72307292" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a0ebfb17cbc424fd2138918aa72307292" kindref="member">SD_CARD_ERROR_CMD58</ref><sp/>=<sp/>0X06;</highlight></codeline>
+<codeline lineno="132" refid="_sd2_card_8h_1aa69b04c3716e3e9962617e264e7ebe44" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1aa69b04c3716e3e9962617e264e7ebe44" kindref="member">SD_CARD_ERROR_ACMD23</ref><sp/>=<sp/>0X07;</highlight></codeline>
+<codeline lineno="134" refid="_sd2_card_8h_1a62fdea7af4f09fb98f302bac1bfa17c2" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a62fdea7af4f09fb98f302bac1bfa17c2" kindref="member">SD_CARD_ERROR_ACMD41</ref><sp/>=<sp/>0X08;</highlight></codeline>
+<codeline lineno="136" refid="_sd2_card_8h_1a0bbae62f7c90e60614cfa9063101c5e1" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a0bbae62f7c90e60614cfa9063101c5e1" kindref="member">SD_CARD_ERROR_BAD_CSD</ref><sp/>=<sp/>0X09;</highlight></codeline>
+<codeline lineno="138" refid="_sd2_card_8h_1a7726e63b7a04bc15b70901b418d6dd1e" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a7726e63b7a04bc15b70901b418d6dd1e" kindref="member">SD_CARD_ERROR_ERASE</ref><sp/>=<sp/>0X0A;</highlight></codeline>
+<codeline lineno="140" refid="_sd2_card_8h_1a00e05ddd835d81e0b4d78ededae70a3c" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a00e05ddd835d81e0b4d78ededae70a3c" kindref="member">SD_CARD_ERROR_ERASE_SINGLE_BLOCK</ref><sp/>=<sp/>0X0B;</highlight></codeline>
+<codeline lineno="142" refid="_sd2_card_8h_1a8121967a262a076c5191a0e855531f99" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a8121967a262a076c5191a0e855531f99" kindref="member">SD_CARD_ERROR_ERASE_TIMEOUT</ref><sp/>=<sp/>0X0C;</highlight></codeline>
+<codeline lineno="144" refid="_sd2_card_8h_1adb9b963e8c54c4daf616cc5fdc4010ac" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1adb9b963e8c54c4daf616cc5fdc4010ac" kindref="member">SD_CARD_ERROR_READ</ref><sp/>=<sp/>0X0D;</highlight></codeline>
+<codeline lineno="146" refid="_sd2_card_8h_1af1cdb9d8082532f4fe4b7cf1931dddbe" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1af1cdb9d8082532f4fe4b7cf1931dddbe" kindref="member">SD_CARD_ERROR_READ_REG</ref><sp/>=<sp/>0X0E;</highlight></codeline>
+<codeline lineno="148" refid="_sd2_card_8h_1a49c57f2b1d31fe1b0baf73fab5bd469b" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a49c57f2b1d31fe1b0baf73fab5bd469b" kindref="member">SD_CARD_ERROR_READ_TIMEOUT</ref><sp/>=<sp/>0X0F;</highlight></codeline>
+<codeline lineno="150" refid="_sd2_card_8h_1a87264e66265e36be6b1428ebacf2e4ed" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a87264e66265e36be6b1428ebacf2e4ed" kindref="member">SD_CARD_ERROR_STOP_TRAN</ref><sp/>=<sp/>0X10;</highlight></codeline>
+<codeline lineno="152" refid="_sd2_card_8h_1a98bb1b625b0b9ce99d8494fbb195274c" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a98bb1b625b0b9ce99d8494fbb195274c" kindref="member">SD_CARD_ERROR_WRITE</ref><sp/>=<sp/>0X11;</highlight></codeline>
+<codeline lineno="154" refid="_sd2_card_8h_1a376db89ebd1e212110419e3ac7a0c33f" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a376db89ebd1e212110419e3ac7a0c33f" kindref="member">SD_CARD_ERROR_WRITE_BLOCK_ZERO</ref><sp/>=<sp/>0X12;</highlight></codeline>
+<codeline lineno="156" refid="_sd2_card_8h_1a30bc1de9e3914ace0b9dc30f99a0edea" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a30bc1de9e3914ace0b9dc30f99a0edea" kindref="member">SD_CARD_ERROR_WRITE_MULTIPLE</ref><sp/>=<sp/>0X13;</highlight></codeline>
+<codeline lineno="158" refid="_sd2_card_8h_1a06b427dad894918bd33fe2e74c50c2e0" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a06b427dad894918bd33fe2e74c50c2e0" kindref="member">SD_CARD_ERROR_WRITE_PROGRAMMING</ref><sp/>=<sp/>0X14;</highlight></codeline>
+<codeline lineno="160" refid="_sd2_card_8h_1ae6574296ec37c52209c5f2c5664dccdb" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1ae6574296ec37c52209c5f2c5664dccdb" kindref="member">SD_CARD_ERROR_WRITE_TIMEOUT</ref><sp/>=<sp/>0X15;</highlight></codeline>
+<codeline lineno="162" refid="_sd2_card_8h_1aa4036973d09278197c2949181094e8e2" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1aa4036973d09278197c2949181094e8e2" kindref="member">SD_CARD_ERROR_SCK_RATE</ref><sp/>=<sp/>0X16;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//<sp/>card<sp/>types</highlight></codeline>
+<codeline lineno="166" refid="_sd2_card_8h_1af55081a60d333ab063a5da5dd2c3633b" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1af55081a60d333ab063a5da5dd2c3633b" kindref="member">SD_CARD_TYPE_SD1</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="168" refid="_sd2_card_8h_1a225807c91fc41717b4230d3b7e99c9f7" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a225807c91fc41717b4230d3b7e99c9f7" kindref="member">SD_CARD_TYPE_SD2</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="170" refid="_sd2_card_8h_1a39b05691c3bcfffddd5d590589980f44" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_sd2_card_8h_1a39b05691c3bcfffddd5d590589980f44" kindref="member">SD_CARD_TYPE_SDHC</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="176" refid="class_sd2_card" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179" refid="class_sd2_card_1af85a5ec4f5f4ec89deb8936c3fd7de65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sd2_card_1af85a5ec4f5f4ec89deb8936c3fd7de65" kindref="member">Sd2Card</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>:<sp/>errorCode_(0),<sp/>inBlock_(0),<sp/>partialBlockRead_(0),<sp/>type_(0)<sp/>{}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="class_sd2_card_1a862473431cc314238bfccdc531a70d3a" kindref="member">cardSize</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1af49fb720fad1d3ea9f5782da0d87fc0b" kindref="member">erase</ref>(uint32_t<sp/>firstBlock,<sp/>uint32_t<sp/>lastBlock);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a2e3998f6e910a2936d3ef54bf082b2ce" kindref="member">eraseSingleBlockEnable</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186" refid="class_sd2_card_1a3e9f71d0b6d74580fca96dbca1e3a3ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a3e9f71d0b6d74580fca96dbca1e3a3ba" kindref="member">errorCode</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>errorCode_;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190" refid="class_sd2_card_1a51f51804473a8fefd29cabbc36018a49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a51f51804473a8fefd29cabbc36018a49" kindref="member">errorData</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>status_;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197" refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" kindref="member">init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" kindref="member">init</ref>(<ref refid="_sd2_card_8h_1a6c091c07d1eb82a94b1c5738f720264b" kindref="member">SPI_FULL_SPEED</ref>,<sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205" refid="class_sd2_card_1ad99b2d2156c9746065c52839ef679354" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1ad99b2d2156c9746065c52839ef679354" kindref="member">init</ref>(uint8_t<sp/>sckRateID)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" kindref="member">init</ref>(sckRateID,<sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" kindref="member">init</ref>(uint8_t<sp/>sckRateID,<sp/>uint8_t<sp/>chipSelectPin);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" kindref="member">partialBlockRead</ref>(uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="211" refid="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" kindref="member">partialBlockRead</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>partialBlockRead_;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1ae26d840449a42d45af464fb81b92e2ab" kindref="member">readBlock</ref>(uint32_t<sp/>block,<sp/>uint8_t*<sp/>dst);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1ae2d1396ad30081b4201cd372358ef699" kindref="member">readData</ref>(uint32_t<sp/>block,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>offset,<sp/>uint16_t<sp/>count,<sp/>uint8_t*<sp/>dst);</highlight></codeline>
+<codeline lineno="221" refid="class_sd2_card_1aee2be03d649548e2ab26033f18638d19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1aee2be03d649548e2ab26033f18638d19" kindref="member">readCID</ref>(<ref refid="struct_c_i_d" kindref="compound">cid_t</ref>*<sp/>cid)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>readRegister(CMD10,<sp/>cid);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227" refid="class_sd2_card_1a79845d8d4593cb3b1b7641ba27edddfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a79845d8d4593cb3b1b7641ba27edddfb" kindref="member">readCSD</ref>(<ref refid="unioncsd__t" kindref="compound">csd_t</ref>*<sp/>csd)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>readRegister(CMD9,<sp/>csd);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sd2_card_1a0de961537d051bbcafd87ed9fff5fe48" kindref="member">readEnd</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" kindref="member">setSckRate</ref>(uint8_t<sp/>sckRateID);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>USE_SPI_LIB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>setSpiClock(uint32_t<sp/>clock);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="236" refid="class_sd2_card_1acaaebba61c53eb3925457c563f56bb1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1acaaebba61c53eb3925457c563f56bb1a" kindref="member">type</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>type_;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1ac98353a26aa6485364e33924f3834ac1" kindref="member">writeBlock</ref>(uint32_t<sp/>blockNumber,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>src,<sp/>uint8_t<sp/>blocking<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1af602d107e1ead2d0971e9f4c7b744cf8" kindref="member">writeData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>src);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a82a21a07fdfe45c5c75d486a13cded8a" kindref="member">writeStart</ref>(uint32_t<sp/>blockNumber,<sp/>uint32_t<sp/>eraseCount);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a3a60481c0821606546a85d056bb96f47" kindref="member">writeStop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1a9b0da1097f3a705df420749c60ca1ef9" kindref="member">isBusy</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>block_;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>chipSelectPin_;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>errorCode_;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>inBlock_;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>offset_;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>partialBlockRead_;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>status_;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>type_;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>cardAcmd(uint8_t<sp/>cmd,<sp/>uint32_t<sp/>arg)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cardCommand(CMD55,<sp/>0);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cardCommand(cmd,<sp/>arg);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>cardCommand(uint8_t<sp/>cmd,<sp/>uint32_t<sp/>arg);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>error(uint8_t<sp/>code)<sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>errorCode_<sp/>=<sp/>code;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>readRegister(uint8_t<sp/>cmd,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>buf);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>sendWriteCommand(uint32_t<sp/>blockNumber,<sp/>uint32_t<sp/>eraseCount);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>chipSelectHigh(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>chipSelectLow(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sd2_card_1acaaebba61c53eb3925457c563f56bb1a" kindref="member">type</ref>(uint8_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type_<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>waitNotBusy(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>timeoutMillis);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_sd2_card_1af602d107e1ead2d0971e9f4c7b744cf8" kindref="member">writeData</ref>(uint8_t<sp/>token,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>src);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>waitStartBlock(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>Sd2Card_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_8md" kind="file" language="Markdown">
+    <compoundname>code-of-conduct.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>Community<sp/>Code<sp/>of<sp/>Conduct</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Our<sp/>Pledge</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>interest<sp/>of<sp/>fostering<sp/>an<sp/>open<sp/>and<sp/>welcoming<sp/>environment,<sp/>we<sp/>as</highlight></codeline>
+<codeline><highlight class="normal">contributors<sp/>and<sp/>leaders<sp/>pledge<sp/>to<sp/>making<sp/>participation<sp/>in<sp/>our<sp/>project<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">our<sp/>community<sp/>a<sp/>harassment-free<sp/>experience<sp/>for<sp/>everyone,<sp/>regardless<sp/>of<sp/>age,<sp/>body</highlight></codeline>
+<codeline><highlight class="normal">size,<sp/>disability,<sp/>ethnicity,<sp/>gender<sp/>identity<sp/>and<sp/>expression,<sp/>level<sp/>or<sp/>type<sp/>of</highlight></codeline>
+<codeline><highlight class="normal">experience,<sp/>education,<sp/>socio-economic<sp/>status,<sp/>nationality,<sp/>personal<sp/>appearance,</highlight></codeline>
+<codeline><highlight class="normal">race,<sp/>religion,<sp/>or<sp/>sexual<sp/>identity<sp/>and<sp/>orientation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Our<sp/>Standards</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>are<sp/>committed<sp/>to<sp/>providing<sp/>a<sp/>friendly,<sp/>safe<sp/>and<sp/>welcoming<sp/>environment<sp/>for</highlight></codeline>
+<codeline><highlight class="normal">all.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Examples<sp/>of<sp/>behavior<sp/>that<sp/>contributes<sp/>to<sp/>creating<sp/>a<sp/>positive<sp/>environment</highlight></codeline>
+<codeline><highlight class="normal">include:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Be<sp/>kind<sp/>and<sp/>courteous<sp/>to<sp/>others</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Using<sp/>welcoming<sp/>and<sp/>inclusive<sp/>language</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Being<sp/>respectful<sp/>of<sp/>differing<sp/>viewpoints<sp/>and<sp/>experiences</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Collaborating<sp/>with<sp/>other<sp/>community<sp/>members</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Gracefully<sp/>accepting<sp/>constructive<sp/>criticism</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Focusing<sp/>on<sp/>what<sp/>is<sp/>best<sp/>for<sp/>the<sp/>community</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Showing<sp/>empathy<sp/>towards<sp/>other<sp/>community<sp/>members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Examples<sp/>of<sp/>unacceptable<sp/>behavior<sp/>by<sp/>participants<sp/>include:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>use<sp/>of<sp/>sexualized<sp/>language<sp/>or<sp/>imagery<sp/>and<sp/>sexual<sp/>attention<sp/>or<sp/>advances</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>use<sp/>of<sp/>inappropriate<sp/>images,<sp/>including<sp/>in<sp/>a<sp/>community<sp/>member&apos;s<sp/>avatar</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>The<sp/>use<sp/>of<sp/>inappropriate<sp/>language,<sp/>including<sp/>in<sp/>a<sp/>community<sp/>member&apos;s<sp/>nickname</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Any<sp/>spamming,<sp/>flaming,<sp/>baiting<sp/>or<sp/>other<sp/>attention-stealing<sp/>behavior</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Excessive<sp/>or<sp/>unwelcome<sp/>helping;<sp/>answering<sp/>outside<sp/>the<sp/>scope<sp/>of<sp/>the<sp/>question</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>asked</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Trolling,<sp/>insulting/derogatory<sp/>comments,<sp/>and<sp/>personal<sp/>or<sp/>political<sp/>attacks</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Public<sp/>or<sp/>private<sp/>harassment</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Publishing<sp/>others&apos;<sp/>private<sp/>information,<sp/>such<sp/>as<sp/>a<sp/>physical<sp/>or<sp/>electronic</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>address,<sp/>without<sp/>explicit<sp/>permission</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Other<sp/>conduct<sp/>which<sp/>could<sp/>reasonably<sp/>be<sp/>considered<sp/>inappropriate</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>goal<sp/>of<sp/>the<sp/>standards<sp/>and<sp/>moderation<sp/>guidelines<sp/>outlined<sp/>here<sp/>is<sp/>to<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>maintain<sp/>a<sp/>respectful<sp/>community.<sp/>We<sp/>ask<sp/>that<sp/>you<sp/>don’t<sp/>just<sp/>aim<sp/>to<sp/>be</highlight></codeline>
+<codeline><highlight class="normal">&quot;technically<sp/>unimpeachable&quot;,<sp/>but<sp/>rather<sp/>try<sp/>to<sp/>be<sp/>your<sp/>best<sp/>self.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>value<sp/>many<sp/>things<sp/>beyond<sp/>technical<sp/>expertise,<sp/>including<sp/>collaboration<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">supporting<sp/>others<sp/>within<sp/>our<sp/>community.<sp/>Providing<sp/>a<sp/>positive<sp/>experience<sp/>for</highlight></codeline>
+<codeline><highlight class="normal">other<sp/>community<sp/>members<sp/>can<sp/>have<sp/>a<sp/>much<sp/>more<sp/>significant<sp/>impact<sp/>than<sp/>simply</highlight></codeline>
+<codeline><highlight class="normal">providing<sp/>the<sp/>correct<sp/>answer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Our<sp/>Responsibilities</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>leaders<sp/>are<sp/>responsible<sp/>for<sp/>clarifying<sp/>the<sp/>standards<sp/>of<sp/>acceptable</highlight></codeline>
+<codeline><highlight class="normal">behavior<sp/>and<sp/>are<sp/>expected<sp/>to<sp/>take<sp/>appropriate<sp/>and<sp/>fair<sp/>corrective<sp/>action<sp/>in</highlight></codeline>
+<codeline><highlight class="normal">response<sp/>to<sp/>any<sp/>instances<sp/>of<sp/>unacceptable<sp/>behavior.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>leaders<sp/>have<sp/>the<sp/>right<sp/>and<sp/>responsibility<sp/>to<sp/>remove,<sp/>edit,<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">reject<sp/>messages,<sp/>comments,<sp/>commits,<sp/>code,<sp/>issues,<sp/>and<sp/>other<sp/>contributions</highlight></codeline>
+<codeline><highlight class="normal">that<sp/>are<sp/>not<sp/>aligned<sp/>to<sp/>this<sp/>Code<sp/>of<sp/>Conduct,<sp/>or<sp/>to<sp/>ban<sp/>temporarily<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">permanently<sp/>any<sp/>community<sp/>member<sp/>for<sp/>other<sp/>behaviors<sp/>that<sp/>they<sp/>deem</highlight></codeline>
+<codeline><highlight class="normal">inappropriate,<sp/>threatening,<sp/>offensive,<sp/>or<sp/>harmful.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Moderation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Instances<sp/>of<sp/>behaviors<sp/>that<sp/>violate<sp/>the<sp/>Adafruit<sp/>Community<sp/>Code<sp/>of<sp/>Conduct</highlight></codeline>
+<codeline><highlight class="normal">may<sp/>be<sp/>reported<sp/>by<sp/>any<sp/>member<sp/>of<sp/>the<sp/>community.<sp/>Community<sp/>members<sp/>are</highlight></codeline>
+<codeline><highlight class="normal">encouraged<sp/>to<sp/>report<sp/>these<sp/>situations,<sp/>including<sp/>situations<sp/>they<sp/>witness</highlight></codeline>
+<codeline><highlight class="normal">involving<sp/>other<sp/>community<sp/>members.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>may<sp/>report<sp/>in<sp/>the<sp/>following<sp/>ways:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>any<sp/>situation,<sp/>you<sp/>may<sp/>send<sp/>an<sp/>email<sp/>to<sp/>&lt;support@adafruit.com&gt;.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">On<sp/>the<sp/>Adafruit<sp/>Discord,<sp/>you<sp/>may<sp/>send<sp/>an<sp/>open<sp/>message<sp/>from<sp/>any<sp/>channel</highlight></codeline>
+<codeline><highlight class="normal">to<sp/>all<sp/>Community<sp/>Helpers<sp/>by<sp/>tagging<sp/>@community<sp/>helpers.<sp/>You<sp/>may<sp/>also<sp/>send<sp/>an</highlight></codeline>
+<codeline><highlight class="normal">open<sp/>message<sp/>from<sp/>any<sp/>channel,<sp/>or<sp/>a<sp/>direct<sp/>message<sp/>to<sp/>@kattni#1507,</highlight></codeline>
+<codeline><highlight class="normal">@tannewt#4653,<sp/>@Dan<sp/>Halbert#1614,<sp/>@cater#2442,<sp/>@sommersoft#0222,<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">@Andon#8175.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Email<sp/>and<sp/>direct<sp/>message<sp/>reports<sp/>will<sp/>be<sp/>kept<sp/>confidential.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>situations<sp/>on<sp/>Discord<sp/>where<sp/>the<sp/>issue<sp/>is<sp/>particularly<sp/>egregious,<sp/>possibly</highlight></codeline>
+<codeline><highlight class="normal">illegal,<sp/>requires<sp/>immediate<sp/>action,<sp/>or<sp/>violates<sp/>the<sp/>Discord<sp/>terms<sp/>of<sp/>service,</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>should<sp/>also<sp/>report<sp/>the<sp/>message<sp/>directly<sp/>to<sp/>Discord.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">These<sp/>are<sp/>the<sp/>steps<sp/>for<sp/>upholding<sp/>our<sp/>community’s<sp/>standards<sp/>of<sp/>conduct.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Any<sp/>member<sp/>of<sp/>the<sp/>community<sp/>may<sp/>report<sp/>any<sp/>situation<sp/>that<sp/>violates<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>Community<sp/>Code<sp/>of<sp/>Conduct.<sp/>All<sp/>reports<sp/>will<sp/>be<sp/>reviewed<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">investigated.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>If<sp/>the<sp/>behavior<sp/>is<sp/>an<sp/>egregious<sp/>violation,<sp/>the<sp/>community<sp/>member<sp/>who</highlight></codeline>
+<codeline><highlight class="normal">committed<sp/>the<sp/>violation<sp/>may<sp/>be<sp/>banned<sp/>immediately,<sp/>without<sp/>warning.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Otherwise,<sp/>moderators<sp/>will<sp/>first<sp/>respond<sp/>to<sp/>such<sp/>behavior<sp/>with<sp/>a<sp/>warning.</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Moderators<sp/>follow<sp/>a<sp/>soft<sp/>&quot;three<sp/>strikes&quot;<sp/>policy<sp/>-<sp/>the<sp/>community<sp/>member<sp/>may</highlight></codeline>
+<codeline><highlight class="normal">be<sp/>given<sp/>another<sp/>chance,<sp/>if<sp/>they<sp/>are<sp/>receptive<sp/>to<sp/>the<sp/>warning<sp/>and<sp/>change<sp/>their</highlight></codeline>
+<codeline><highlight class="normal">behavior.</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>If<sp/>the<sp/>community<sp/>member<sp/>is<sp/>unreceptive<sp/>or<sp/>unreasonable<sp/>when<sp/>warned<sp/>by<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">moderator,<sp/>or<sp/>the<sp/>warning<sp/>goes<sp/>unheeded,<sp/>they<sp/>may<sp/>be<sp/>banned<sp/>for<sp/>a<sp/>first<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">second<sp/>offense.<sp/>Repeated<sp/>offenses<sp/>will<sp/>result<sp/>in<sp/>the<sp/>community<sp/>member<sp/>being</highlight></codeline>
+<codeline><highlight class="normal">banned.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Scope</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>Code<sp/>of<sp/>Conduct<sp/>and<sp/>the<sp/>enforcement<sp/>policies<sp/>listed<sp/>above<sp/>apply<sp/>to<sp/>all</highlight></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>Community<sp/>venues.<sp/>This<sp/>includes<sp/>but<sp/>is<sp/>not<sp/>limited<sp/>to<sp/>any<sp/>community</highlight></codeline>
+<codeline><highlight class="normal">spaces<sp/>(both<sp/>public<sp/>and<sp/>private),<sp/>the<sp/>entire<sp/>Adafruit<sp/>Discord<sp/>server,<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>GitHub<sp/>repositories.<sp/>Examples<sp/>of<sp/>Adafruit<sp/>Community<sp/>spaces<sp/>include</highlight></codeline>
+<codeline><highlight class="normal">but<sp/>are<sp/>not<sp/>limited<sp/>to<sp/>meet-ups,<sp/>audio<sp/>chats<sp/>on<sp/>the<sp/>Adafruit<sp/>Discord,<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">interaction<sp/>at<sp/>a<sp/>conference.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>Code<sp/>of<sp/>Conduct<sp/>applies<sp/>both<sp/>within<sp/>project<sp/>spaces<sp/>and<sp/>in<sp/>public<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal">when<sp/>an<sp/>individual<sp/>is<sp/>representing<sp/>the<sp/>project<sp/>or<sp/>its<sp/>community.<sp/>As<sp/>a<sp/>community</highlight></codeline>
+<codeline><highlight class="normal">member,<sp/>you<sp/>are<sp/>representing<sp/>our<sp/>community,<sp/>and<sp/>are<sp/>expected<sp/>to<sp/>behave</highlight></codeline>
+<codeline><highlight class="normal">accordingly.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Attribution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>Code<sp/>of<sp/>Conduct<sp/>is<sp/>adapted<sp/>from<sp/>the<sp/>[Contributor<sp/>Covenant][homepage],</highlight></codeline>
+<codeline><highlight class="normal">version<sp/>1.4,<sp/>available<sp/>at</highlight></codeline>
+<codeline><highlight class="normal">&lt;https://www.contributor-covenant.org/version/1/4/code-of-conduct.html&gt;,</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>the<sp/>[Rust<sp/>Code<sp/>of<sp/>Conduct](https://www.rust-lang.org/en-US/conduct.html).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>other<sp/>projects<sp/>adopting<sp/>the<sp/>Adafruit<sp/>Community<sp/>Code<sp/>of</highlight></codeline>
+<codeline><highlight class="normal">Conduct,<sp/>please<sp/>contact<sp/>the<sp/>maintainers<sp/>of<sp/>those<sp/>projects<sp/>for<sp/>enforcement.</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>wish<sp/>to<sp/>use<sp/>this<sp/>code<sp/>of<sp/>conduct<sp/>for<sp/>your<sp/>own<sp/>project,<sp/>consider</highlight></codeline>
+<codeline><highlight class="normal">explicitly<sp/>mentioning<sp/>your<sp/>moderation<sp/>policy<sp/>or<sp/>making<sp/>a<sp/>copy<sp/>with<sp/>your</highlight></codeline>
+<codeline><highlight class="normal">own<sp/>moderation<sp/>policy<sp/>so<sp/>as<sp/>to<sp/>avoid<sp/>confusion.</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_LSM303DLH_Mag/code-of-conduct.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,466 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" kind="file" language="C++">
+    <compoundname>Adafruit_Sensor.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8cpp" local="yes">libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h</label>
+        <link refid="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsensors__vec__t" prot="public">sensors_vec_t</innerclass>
+    <innerclass refid="structsensors__color__t" prot="public">sensors_color_t</innerclass>
+    <innerclass refid="structsensors__event__t" prot="public">sensors_event_t</innerclass>
+    <innerclass refid="structsensor__t" prot="public">sensor_t</innerclass>
+    <innerclass refid="class_adafruit___sensor" prot="public">Adafruit_Sensor</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1adf2baeb9499e0aae21699e2345fd51bd" prot="public" static="no">
+        <name>SENSORS_GRAVITY_EARTH</name>
+        <initializer>(9.80665F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Earth&apos;s gravity in m/s^2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="33" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1a4c728b30ce5e9479e6fa974f6d10d03a" prot="public" static="no">
+        <name>SENSORS_GRAVITY_MOON</name>
+        <initializer>(1.6F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The moon&apos;s gravity in m/s^2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="34" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1a9520402939315a287a0ab085f6b21a5b" prot="public" static="no">
+        <name>SENSORS_GRAVITY_SUN</name>
+        <initializer>(275.0F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The sun&apos;s gravity in m/s^2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="35" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1ab70b42e9de016c42388ff5d293b75712" prot="public" static="no">
+        <name>SENSORS_GRAVITY_STANDARD</name>
+        <initializer>(SENSORS_GRAVITY_EARTH)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="36" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1a23db0dca57c605a25ddfcdc0e349fd27" prot="public" static="no">
+        <name>SENSORS_MAGFIELD_EARTH_MAX</name>
+        <initializer>  (60.0F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Maximum magnetic field on Earth&apos;s surface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="37" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1a7a7347c9dd68408657c181e16d75472d" prot="public" static="no">
+        <name>SENSORS_MAGFIELD_EARTH_MIN</name>
+        <initializer>  (30.0F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum magnetic field on Earth&apos;s surface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="39" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="39" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1ad12eded4725631bfb3a662e743fe3bfb" prot="public" static="no">
+        <name>SENSORS_PRESSURE_SEALEVELHPA</name>
+        <initializer>  (1013.25F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Average sea level pressure is 1013.25 hPa </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="41" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="41" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1a54bd9549d7c88977f8769fac7be4578d" prot="public" static="no">
+        <name>SENSORS_DPS_TO_RADS</name>
+        <initializer>  (0.017453293F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Degrees/s to rad/s multiplier \ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="43" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1afc1d6f5819b7a1e3436af6948f5bcc80" prot="public" static="no">
+        <name>SENSORS_RADS_TO_DPS</name>
+        <initializer>  (57.29577793F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rad/s to degrees/s multiplier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="46" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="define" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1ac6c93a70e05c30bcd40f68a0621b8d52" prot="public" static="no">
+        <name>SENSORS_GAUSS_TO_MICROTESLA</name>
+        <initializer>  (100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gauss to micro-Tesla multiplier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="48" column="9" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="48" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643" prot="public" static="no" strong="no">
+        <type></type>
+        <name>sensors_type_t</name>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643abd9779b04292b5e8054485b10fccb99c" prot="public">
+          <name>SENSOR_TYPE_ACCELEROMETER</name>
+          <initializer>= (1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Gravity + linear acceleration </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a74438e3f4f1f8cb1e97ccebbd1096fe8" prot="public">
+          <name>SENSOR_TYPE_MAGNETIC_FIELD</name>
+          <initializer>= (2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643af2ccaca19bdabe513c45c058003ed596" prot="public">
+          <name>SENSOR_TYPE_ORIENTATION</name>
+          <initializer>= (3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643adc01250dcba5642d294f74ba4d115c28" prot="public">
+          <name>SENSOR_TYPE_GYROSCOPE</name>
+          <initializer>= (4)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ae19c28b874a4ef6706d44af6f373f743" prot="public">
+          <name>SENSOR_TYPE_LIGHT</name>
+          <initializer>= (5)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a81634a16935829065d399d686c44ad86" prot="public">
+          <name>SENSOR_TYPE_PRESSURE</name>
+          <initializer>= (6)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a47912cab9ef79bbe4eb20538a88ce59c" prot="public">
+          <name>SENSOR_TYPE_PROXIMITY</name>
+          <initializer>= (8)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac7d364262029cc21bc865577d5288a1e" prot="public">
+          <name>SENSOR_TYPE_GRAVITY</name>
+          <initializer>= (9)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a914a1f090dcc61586318fd4eb4cb1384" prot="public">
+          <name>SENSOR_TYPE_LINEAR_ACCELERATION</name>
+          <initializer>=
+      (10)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Acceleration not including gravity </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac407aca03c7ce72ea55e52f40477561b" prot="public">
+          <name>SENSOR_TYPE_ROTATION_VECTOR</name>
+          <initializer>= (11)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ad9ebf0d3f835c55738b4d4e915768875" prot="public">
+          <name>SENSOR_TYPE_RELATIVE_HUMIDITY</name>
+          <initializer>= (12)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a7d9456395f361833de2ee3ef12a1af2a" prot="public">
+          <name>SENSOR_TYPE_AMBIENT_TEMPERATURE</name>
+          <initializer>= (13)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643aea45b19cb567b213ad9e4d703ef00ac0" prot="public">
+          <name>SENSOR_TYPE_OBJECT_TEMPERATURE</name>
+          <initializer>= (14)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643aac4a182cee3a61ab359afa073b352b02" prot="public">
+          <name>SENSOR_TYPE_VOLTAGE</name>
+          <initializer>= (15)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac822523f1553bc62459b208283e27fa5" prot="public">
+          <name>SENSOR_TYPE_CURRENT</name>
+          <initializer>= (16)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ae41c2d95d02910a0e15266a9f4f1ed63" prot="public">
+          <name>SENSOR_TYPE_COLOR</name>
+          <initializer>= (17)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a8fe1eefa1b328a2309468157d5cac708" prot="public">
+          <name>SENSOR_TYPE_TVOC</name>
+          <initializer>= (18)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sensor types </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="52" column="1" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="52" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>(C)<sp/>2008<sp/>The<sp/>Android<sp/>Open<sp/>Source<sp/>Project</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software&lt;<sp/>/span&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Update<sp/>by<sp/>K.<sp/>Townsend<sp/>(Adafruit<sp/>Industries)<sp/>for<sp/>lighter<sp/>typedefs,<sp/>and</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>extended<sp/>sensor<sp/>support<sp/>to<sp/>include<sp/>color,<sp/>voltage<sp/>and<sp/>current<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ADAFRUIT_SENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADAFRUIT_SENSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ARDUINO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Print.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Constants<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_GRAVITY_EARTH<sp/>(9.80665F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_GRAVITY_MOON<sp/>(1.6F)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_GRAVITY_SUN<sp/>(275.0F)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_GRAVITY_STANDARD<sp/>(SENSORS_GRAVITY_EARTH)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_MAGFIELD_EARTH_MAX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/>(60.0F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_MAGFIELD_EARTH_MIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/>(30.0F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_PRESSURE_SEALEVELHPA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/>(1013.25F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_DPS_TO_RADS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/>(0.017453293F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_RADS_TO_DPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/>(57.29577793F)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSORS_GAUSS_TO_MICROTESLA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/>(100)<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ACCELEROMETER<sp/>=<sp/>(1),<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_MAGNETIC_FIELD<sp/>=<sp/>(2),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ORIENTATION<sp/>=<sp/>(3),</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GYROSCOPE<sp/>=<sp/>(4),</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LIGHT<sp/>=<sp/>(5),</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PRESSURE<sp/>=<sp/>(6),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PROXIMITY<sp/>=<sp/>(8),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GRAVITY<sp/>=<sp/>(9),</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LINEAR_ACCELERATION<sp/>=</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(10),<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ROTATION_VECTOR<sp/>=<sp/>(11),</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_RELATIVE_HUMIDITY<sp/>=<sp/>(12),</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_AMBIENT_TEMPERATURE<sp/>=<sp/>(13),</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_OBJECT_TEMPERATURE<sp/>=<sp/>(14),</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_VOLTAGE<sp/>=<sp/>(15),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_CURRENT<sp/>=<sp/>(16),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_COLOR<sp/>=<sp/>(17),</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>SENSOR_TYPE_TVOC<sp/>=<sp/>(18)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/>sensors_type_t;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>v[3];<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x;<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y;<sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>z;<sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Orientation<sp/>sensors<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>roll;<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>heading;<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>int8_t<sp/>status;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>uint8_t<sp/>reserved[3];<sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}<sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>c[3];<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RGB<sp/>color<sp/>space<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>g;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>uint32_t<sp/>rgba;<sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}<sp/><ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sensor<sp/>event<sp/>(36<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>int32_t<sp/>version;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>int32_t<sp/>sensor_id;<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>int32_t<sp/>reserved0;<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>int32_t<sp/>timestamp;<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>data[4];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/>acceleration;<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>magnetic;<sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/>orientation;<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/>gyro;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature;<sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>light;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pressure;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>relative_humidity;<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>current;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>voltage;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tvoc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref><sp/>color;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>};<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}<sp/><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sensor<sp/>details<sp/>(40<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a30308c9b983377042fd2cc8900454fb1" kindref="member">name</ref>[12];<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>int32_t<sp/>version;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>int32_t<sp/>sensor_id;<sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>max_value;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>min_value;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>resolution;<sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>int32_t<sp/>min_delay;<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}<sp/><ref refid="structsensor__t" kindref="compound">sensor_t</ref>;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor(s)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor" kindref="compound">~Adafruit_Sensor</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>must<sp/>be<sp/>defined<sp/>by<sp/>the<sp/>subclass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" kindref="member">enableAutoRange</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enabled)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>(void)enabled;<sp/></highlight><highlight class="comment">/*<sp/>suppress<sp/>unused<sp/>warning<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" kindref="member">getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>*)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="182" refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" kindref="member">getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>*)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" kindref="member">printSensorDetails</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_autoRange;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h"/>
+  </compounddef>
+</doxygen>

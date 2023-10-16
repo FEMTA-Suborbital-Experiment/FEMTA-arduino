@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit LSM303DLHC Driver (Accelerometer + Magnetometer)</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_1autotoc_md60"/> This driver is for the Adafruit LSM303 Breakout (<ulink url="http://www.adafruit.com/products/1120">http://www.adafruit.com/products/1120</ulink>), and is based on Adafruit&apos;s Unified Sensor Library (<ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref>).</para>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_1autotoc_md61">
+<title>About the LSM303</title>
+<para>The LSM303 is a digital (I2C) accelerometer and digital compass (magnetometer). The accelerometer allows you to measure acceleration or direction towards the center or the earth, and the magnetometer measure magnetic force, which is useful to detect magnetic north.</para>
+<para>More information on the LSM303 can be found in the datasheet: <ulink url="http://www.adafruit.com/datasheets/LSM303DLHC.PDF">http://www.adafruit.com/datasheets/LSM303DLHC.PDF</ulink></para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_1autotoc_md62">
+<title>What is the Adafruit Unified Sensor Library?</title>
+<para>The Adafruit Unified Sensor Library (<bold><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref></bold>) provides a common interface and data type for any supported sensor. It defines some basic information about the sensor (sensor limits, etc.), and returns standard SI units of a specific type and scale for each supported sensor type.</para>
+<para>It provides a simple abstraction layer between your application and the actual sensor HW, allowing you to drop in any comparable sensor with only one or two lines of code to change in your project (essentially the constructor since the functions to read sensor data and get information about the sensor are defined in the base <ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref> class).</para>
+<para>This is imporant useful for two reasons:</para>
+<para>1.) You can use the data right away because it&apos;s already converted to SI units that you understand and can compare, rather than meaningless values like 0..1023.</para>
+<para>2.) Because SI units are standardised in the sensor library, you can also do quick sanity checks working with new sensors, or drop in any comparable sensor if you need better sensitivity or if a lower cost unit becomes available, etc.</para>
+<para>Light sensors will always report units in lux, gyroscopes will always report units in rad/s, etc. ... freeing you up to focus on the data, rather than digging through the datasheet to understand what the sensor&apos;s raw numbers really mean.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_1autotoc_md63">
+<title>About this Driver</title>
+<para>Adafruit invests time and resources providing this open source code. Please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<para>Written by Kevin (KTOWN) Townsend for Adafruit Industries.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_1autotoc_md64">
+<title>Compatibility</title>
+<para>MCU | Tested Works | Doesn&apos;t Work | Not Tested | Notes ---------------<mdash/> | :-------<mdash/>: | :-------<mdash/>: | :------<mdash/>: | --<mdash/> Atmega328 @ 16MHz | X | | | Atmega328 @ 12MHz | X | | | Atmega32u4 @ 16MHz | X | | | Atmega32u4 @ 8MHz | X | | | ESP8266 | X | | | Atmega2560 @ 16MHz | X | | | SDA/SCL D20/D21 ATSAM3X8E | X | | | SDA/SCL D20/D21 ATSAM21D | X | | | ATtiny85 @ 16MHz | X | | | ATtiny85 @ 8MHz | X | | | Intel Curie @ 32MHz | X | | | STM32F2 | | | X |</para>
+<para><itemizedlist>
+<listitem><para>ATmega328 @ 16MHz : Arduino UNO, Adafruit Pro Trinket 5V, Adafruit Metro 328, Adafruit Metro Mini</para>
+</listitem><listitem><para>ATmega328 @ 12MHz : Adafruit Pro Trinket 3V</para>
+</listitem><listitem><para>ATmega32u4 @ 16MHz : Arduino Leonardo, Arduino Micro, Arduino Yun, Teensy 2.0</para>
+</listitem><listitem><para>ATmega32u4 @ 8MHz : Adafruit Flora, Bluefruit Micro</para>
+</listitem><listitem><para>ESP8266 : Adafruit Huzzah</para>
+</listitem><listitem><para>ATmega2560 @ 16MHz : Arduino Mega</para>
+</listitem><listitem><para>ATSAM3X8E : Arduino Due</para>
+</listitem><listitem><para>ATSAM21D : Arduino Zero, M0 Pro</para>
+</listitem><listitem><para>ATtiny85 @ 16MHz : Adafruit Trinket 5V</para>
+</listitem><listitem><para>ATtiny85 @ 8MHz : Adafruit Gemma, Arduino Gemma, Adafruit Trinket 3V </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="libraries/Adafruit_LSM303DLHC/README.md"/>
+  </compounddef>
+</doxygen>

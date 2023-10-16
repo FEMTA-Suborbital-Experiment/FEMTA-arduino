@@ -1,0 +1,836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___a_d_x_l343" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_ADXL343</compoundname>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <includes refid="_adafruit___a_d_x_l343_8h" local="no">Adafruit_ADXL343.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a2763c0755d82886a3c2dda03b479202c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+        <definition>Adafruit_SPIDevice* Adafruit_ADXL343::spi_dev</definition>
+        <argsstring></argsstring>
+        <name>spi_dev</name>
+        <qualifiedname>Adafruit_ADXL343::spi_dev</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="158" column="22" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a79056c22c6535abe5d74063aff4ad25e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+        <definition>Adafruit_I2CDevice* Adafruit_ADXL343::i2c_dev</definition>
+        <argsstring></argsstring>
+        <name>i2c_dev</name>
+        <qualifiedname>Adafruit_ADXL343::i2c_dev</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="159" column="22" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a028475e3508c518ba544a697beb62781" prot="private" static="no" mutable="no">
+        <type>TwoWire *</type>
+        <definition>TwoWire* Adafruit_ADXL343::_wire</definition>
+        <argsstring></argsstring>
+        <name>_wire</name>
+        <qualifiedname>Adafruit_ADXL343::_wire</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="161" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a207789a4fe4b38f316fe5aaba9a45f4c" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Adafruit_ADXL343::_sensorID</definition>
+        <argsstring></argsstring>
+        <name>_sensorID</name>
+        <qualifiedname>Adafruit_ADXL343::_sensorID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="162" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a703a05049cf7588e982bde26070ff02f" prot="private" static="no" mutable="no">
+        <type><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref></type>
+        <definition>range_t Adafruit_ADXL343::_range</definition>
+        <argsstring></argsstring>
+        <name>_range</name>
+        <qualifiedname>Adafruit_ADXL343::_range</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="163" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1ae9f7c2946b38ac9308ee2d4bb0d2ab7d" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::_clk</definition>
+        <argsstring></argsstring>
+        <name>_clk</name>
+        <qualifiedname>Adafruit_ADXL343::_clk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="164" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1ae1805485c4c2013a00adeb23fc07beaf" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::_do</definition>
+        <argsstring></argsstring>
+        <name>_do</name>
+        <qualifiedname>Adafruit_ADXL343::_do</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="164" column="16" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a740e6f063ca0e3be4f71b5756564a9b5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::_di</definition>
+        <argsstring></argsstring>
+        <name>_di</name>
+        <qualifiedname>Adafruit_ADXL343::_di</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="164" column="20" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a6db85d7df092ac4a3b0fde84f8e4b25c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::_cs</definition>
+        <argsstring></argsstring>
+        <name>_cs</name>
+        <qualifiedname>Adafruit_ADXL343::_cs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="164" column="24" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___a_d_x_l343_1a7b59e8248148c24d837a6adb9e8c9e80" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_ADXL343::_i2c</definition>
+        <argsstring></argsstring>
+        <name>_i2c</name>
+        <qualifiedname>Adafruit_ADXL343::_i2c</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="165" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1aa62db60446ca9ad7033d7c821573f716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_ADXL343::Adafruit_ADXL343</definition>
+        <argsstring>(int32_t sensorID)</argsstring>
+        <name>Adafruit_ADXL343</name>
+        <qualifiedname>Adafruit_ADXL343::Adafruit_ADXL343</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+        </param>
+        <briefdescription>
+<para>Instantiates a new ADXL343 class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensorID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional ID # so you can track this sensor, it will tag sensorEvents you create. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="131" column="3" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="175" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a6716ac3f8d88dc306bc562467c5aab0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_ADXL343::Adafruit_ADXL343</definition>
+        <argsstring>(int32_t sensorID, TwoWire *wireBus)</argsstring>
+        <name>Adafruit_ADXL343</name>
+        <qualifiedname>Adafruit_ADXL343::Adafruit_ADXL343</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+        </param>
+        <param>
+          <type>TwoWire *</type>
+          <declname>wireBus</declname>
+        </param>
+        <briefdescription>
+<para>Instantiates a new ADXL343 class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensorID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional ID # so you can track this sensor, it will tag sensorEvents you create. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wireBus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>TwoWire instance to use for I2C communication. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="132" column="3" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="190" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1ab8d8b1d8a193667b03dfedb742027cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_ADXL343::Adafruit_ADXL343</definition>
+        <argsstring>(uint8_t clock, uint8_t miso, uint8_t mosi, uint8_t cs, int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_ADXL343</name>
+        <qualifiedname>Adafruit_ADXL343::Adafruit_ADXL343</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>clock</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>miso</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>mosi</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>cs</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Instantiates a new ADXL343 class in SPI mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SCK pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>miso</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MISO pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mosi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MOSI pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The CS/SSEL pin </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sensorID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An optional ID # so you can track this sensor, it will tag sensoorEvents you create. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="133" column="3" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="208" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1ac43fa05e13e839fc43f1cff41e10f8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_ADXL343::begin</definition>
+        <argsstring>(uint8_t i2caddr=ADXL343_ADDRESS)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_ADXL343::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2caddr</declname>
+          <defval><ref refid="_adafruit___a_d_x_l343_8h_1a471a5bff26beba374f78df5b333d4716" kindref="member">ADXL343_ADDRESS</ref></defval>
+        </param>
+        <briefdescription>
+<para>Setups the HW (reads coefficients values, etc.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2caddr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 7-bit I2C address to find the ADXL on </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the sensor was successfully initialised. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="136" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="225" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a7e1023422638d87621053d50536dc155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ADXL343::setRange</definition>
+        <argsstring>(range_t range)</argsstring>
+        <name>setRange</name>
+        <qualifiedname>Adafruit_ADXL343::setRange</qualifiedname>
+        <param>
+          <type><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref></type>
+          <declname>range</declname>
+        </param>
+        <briefdescription>
+<para>Sets the g range for the accelerometer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The range to set, based on range_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="137" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="286" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a23d81de07070b2f7cb5405259a27a5f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref></type>
+        <definition>range_t Adafruit_ADXL343::getRange</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRange</name>
+        <qualifiedname>Adafruit_ADXL343::getRange</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sets the g range for the accelerometer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The range_t value corresponding to the sensors range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="138" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="313" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a6e4a36e653d0ae7098b41167dbc168f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ADXL343::setDataRate</definition>
+        <argsstring>(dataRate_t dataRate)</argsstring>
+        <name>setDataRate</name>
+        <qualifiedname>Adafruit_ADXL343::setDataRate</qualifiedname>
+        <param>
+          <type><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" kindref="member">dataRate_t</ref></type>
+          <declname>dataRate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the data rate for the ADXL343 (controls power consumption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data rate to set, based on dataRate_t </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="139" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="330" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a96ab4c4be9414b82616a4f3aa697cb69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" kindref="member">dataRate_t</ref></type>
+        <definition>dataRate_t Adafruit_ADXL343::getDataRate</definition>
+        <argsstring>(void)</argsstring>
+        <name>getDataRate</name>
+        <qualifiedname>Adafruit_ADXL343::getDataRate</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Sets the data rate for the ADXL343 (controls power consumption) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current data rate, based on dataRate_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="140" column="14" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="343" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a23ec0801feee878f6aa64020d4b831f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_ADXL343::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_ADXL343::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+<para>Gets the most recent sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> placeholder</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True of the read request was successful. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="141" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="362" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1aac54a36d585fa7cbe42a88290e37c500" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_ADXL343::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_ADXL343::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+          <defname>sensor</defname>
+        </param>
+        <briefdescription>
+<para>Gets the <ref refid="structsensor__t" kindref="compound">sensor_t</ref> data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the <ref refid="structsensor__t" kindref="compound">sensor_t</ref> placeholder. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="142" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="387" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1ade88a5194521804213cedbdff23da7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::getDeviceID</definition>
+        <argsstring>(void)</argsstring>
+        <name>getDeviceID</name>
+        <qualifiedname>Adafruit_ADXL343::getDeviceID</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read the device ID (can be used to check connection) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The 8-bit device ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="144" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a7004799e03016dc2d079561bffa0acbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_ADXL343::writeRegister</definition>
+        <argsstring>(uint8_t reg, uint8_t value)</argsstring>
+        <name>writeRegister</name>
+        <qualifiedname>Adafruit_ADXL343::writeRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes 8-bits to the specified destination register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register to write to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write to the register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="145" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a01635b0c88ac6651f35ccc438c42126b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::readRegister</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>readRegister</name>
+        <qualifiedname>Adafruit_ADXL343::readRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+<para>Reads 8-bits from the specified register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>register to read</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The results of the register read request </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="146" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="58" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1aa42e3293cc76a827a58ba49b1202cb84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t Adafruit_ADXL343::read16</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>read16</name>
+        <qualifiedname>Adafruit_ADXL343::read16</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+<para>Reads 16-bits from the specified register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The register to read two bytes from</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The 16-bit value read from the reg starting address </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="147" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1abe69f6718059917432951dc1f9f1730a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_ADXL343::enableInterrupts</definition>
+        <argsstring>(int_config cfg)</argsstring>
+        <name>enableInterrupts</name>
+        <qualifiedname>Adafruit_ADXL343::enableInterrupts</qualifiedname>
+        <param>
+          <type><ref refid="unionint__config" kindref="compound">int_config</ref></type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>Enables (1) or disables (0) the interrupts on the specified interrupt pin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitfield of the interrupts to enable or disable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation was successful, otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="149" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="102" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1ab2985273e580239dac8a672eb51f3f57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_ADXL343::mapInterrupts</definition>
+        <argsstring>(int_config cfg)</argsstring>
+        <name>mapInterrupts</name>
+        <qualifiedname>Adafruit_ADXL343::mapInterrupts</qualifiedname>
+        <param>
+          <type><ref refid="unionint__config" kindref="compound">int_config</ref></type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+<para>&apos;Maps&apos; the specific interrupt to either pin INT1 (bit=0), of pin INT2 (bit=1). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bitfield of the interrupts to enable or disable.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the operation was successful, otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="150" column="8" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="120" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1aa65d5a63863193fcaf5e59004880f817" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_ADXL343::checkInterrupts</definition>
+        <argsstring>(void)</argsstring>
+        <name>checkInterrupts</name>
+        <qualifiedname>Adafruit_ADXL343::checkInterrupts</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the status of the interrupt pins. Reading this register also clears or deasserts any currently active interrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The 8-bit content of the INT_SOURCE register. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="151" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1acba8a90ba0532baae64acf67c9338c4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t Adafruit_ADXL343::getX</definition>
+        <argsstring>(void)</argsstring>
+        <name>getX</name>
+        <qualifiedname>Adafruit_ADXL343::getX</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the most recent X axis value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The 16-bit signed value for the X axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="153" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1a0247281d12263afaa21ef5cf2f0a320a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t Adafruit_ADXL343::getY</definition>
+        <argsstring>(void)</argsstring>
+        <name>getY</name>
+        <qualifiedname>Adafruit_ADXL343::getY</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the most recent Y axis value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The 16-bit signed value for the Y axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="154" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___a_d_x_l343_1aa98856e2a01d03d5599b72fa0a7233bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t Adafruit_ADXL343::getZ</definition>
+        <argsstring>(void)</argsstring>
+        <name>getZ</name>
+        <qualifiedname>Adafruit_ADXL343::getZ</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the most recent Z axis value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The 16-bit signed value for the Z axis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="155" column="11" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp" bodystart="165" bodyend="165"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Driver for the Adafruit ADXL343 breakout. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Adafruit_ADXL343</label>
+        <link refid="class_adafruit___a_d_x_l343"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Adafruit_ADXL343</label>
+        <link refid="class_adafruit___a_d_x_l343"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="129" column="1" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="129" bodyend="166"/>
+    <listofallmembers>
+      <member refid="class_adafruit___a_d_x_l343_1ae9f7c2946b38ac9308ee2d4bb0d2ab7d" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_clk</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a6db85d7df092ac4a3b0fde84f8e4b25c" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_cs</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a740e6f063ca0e3be4f71b5756564a9b5" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_di</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1ae1805485c4c2013a00adeb23fc07beaf" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_do</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a7b59e8248148c24d837a6adb9e8c9e80" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_i2c</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a703a05049cf7588e982bde26070ff02f" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_range</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a207789a4fe4b38f316fe5aaba9a45f4c" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_sensorID</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a028475e3508c518ba544a697beb62781" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>_wire</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1aa62db60446ca9ad7033d7c821573f716" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>Adafruit_ADXL343</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a6716ac3f8d88dc306bc562467c5aab0b" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>Adafruit_ADXL343</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1ab8d8b1d8a193667b03dfedb742027cf4" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>Adafruit_ADXL343</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1ac43fa05e13e839fc43f1cff41e10f8fc" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>begin</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1aa65d5a63863193fcaf5e59004880f817" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>checkInterrupts</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1abe69f6718059917432951dc1f9f1730a" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>enableInterrupts</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a96ab4c4be9414b82616a4f3aa697cb69" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getDataRate</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1ade88a5194521804213cedbdff23da7e5" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getDeviceID</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a23ec0801feee878f6aa64020d4b831f8" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a23d81de07070b2f7cb5405259a27a5f0" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getRange</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1aac54a36d585fa7cbe42a88290e37c500" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1acba8a90ba0532baae64acf67c9338c4a" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getX</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a0247281d12263afaa21ef5cf2f0a320a" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getY</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1aa98856e2a01d03d5599b72fa0a7233bd" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>getZ</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a79056c22c6535abe5d74063aff4ad25e" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>i2c_dev</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1ab2985273e580239dac8a672eb51f3f57" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>mapInterrupts</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1aa42e3293cc76a827a58ba49b1202cb84" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>read16</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a01635b0c88ac6651f35ccc438c42126b" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>readRegister</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a6e4a36e653d0ae7098b41167dbc168f1" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>setDataRate</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a7e1023422638d87621053d50536dc155" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>setRange</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a2763c0755d82886a3c2dda03b479202c" prot="private" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>spi_dev</name></member>
+      <member refid="class_adafruit___a_d_x_l343_1a7004799e03016dc2d079561bffa0acbf" prot="public" virt="non-virtual"><scope>Adafruit_ADXL343</scope><name>writeRegister</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>~Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_ADXL343</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

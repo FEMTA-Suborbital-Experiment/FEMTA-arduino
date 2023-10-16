@@ -1,16 +1,11 @@
 /**
  * @file PinCtrl.cpp
+ * @brief The FEMTA Pin Controller takes an input of pins responsible for controlling
+ * the FEMTA experiment. 
  * 
- * @mainpage FEMTA Pin Controller
- * 
- * @section summary Summary
- * 
- * The FEMTA Pin Controller takes an input of pins responsible for controlling
- * the FEMTA experiment. The user then calls functions to open and close the
- * valves in the experiment on the high-level. 
- * 
- * While the user opens and closes the valves, the underlaying Protothread
- * that the PinController inherits checks the state and impulses the
+ * @details The user then calls functions to open and close the
+ * valves in the experiment on the high-level. While the user opens and closes the valves, 
+ * the underlaying Protothread that the PinController inherits checks the state and impulses the
  * pins that corresponds to each valve.
  * 
  */
@@ -21,9 +16,10 @@ const float t_delay{50};
 
 /**
  * @brief Construct a PinController class with the pins corresponding to a
- * valve or signal on the FEMTA Suborbital Experiment. The flow and vent
- * pins correspond to valves on the Propellant Management Experiment, while
- * the signal pin is an output which is measured by the FEMTA Thruster Experiment
+ * valve or signal on the FEMTA Suborbital Experiment. 
+ * 
+ * @details The flow and vent pins correspond to valves on the Propellant Management Experiment, 
+ * while the signal pin is an output which is measured by the FEMTA Thruster Experiment
  * and determines whether the Thruster Experiment should begin at the right time.
  * 
  * @param flowClose1 closeSV1
@@ -77,8 +73,9 @@ int PinCtrl::init(bool willInitializeValves) {
 }
 
 /**
- * @brief An overridden Protothread method which acts as a state machine that
- * checks if a certain pin is turned on and sets the pin to HIGH. After a certain
+ * @brief An overridden Protothread method which acts as a state machine.
+ * 
+ * @details This checks if a certain pin is turned on and sets the pin to HIGH. After a certain
  * time delay t_delay, set the pin to LOW.
  * 
  * @return true 

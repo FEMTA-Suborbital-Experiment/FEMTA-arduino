@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_0ec5e03aa92dd448ac4781d750bd098e" kind="dir">
+    <compoundname>libraries/Adafruit_Zero_DMA_Library-1.1.1</compoundname>
+    <innerdir refid="dir_dcbf243f25e331ebbb34986d8f7c616f">libraries/Adafruit_Zero_DMA_Library-1.1.1/utility</innerdir>
+    <innerfile refid="_adafruit___zero_d_m_a_8cpp">Adafruit_ZeroDMA.cpp</innerfile>
+    <innerfile refid="_adafruit___zero_d_m_a_8h">Adafruit_ZeroDMA.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/"/>
+  </compounddef>
+</doxygen>

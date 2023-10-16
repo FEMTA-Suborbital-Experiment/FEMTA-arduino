@@ -1,0 +1,1063 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sd2_card" kind="class" language="C++" prot="public">
+    <compoundname>Sd2Card</compoundname>
+    <includes refid="_sd2_card_8h" local="no">Sd2Card.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sd2_card_1af6133863be6def6ce371e6d9428965f3" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Sd2Card::block_</definition>
+        <argsstring></argsstring>
+        <name>block_</name>
+        <qualifiedname>Sd2Card::block_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="245" column="14" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a2d2c4dbf1ad5b9db664ae4004d53f1f0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::chipSelectPin_</definition>
+        <argsstring></argsstring>
+        <name>chipSelectPin_</name>
+        <qualifiedname>Sd2Card::chipSelectPin_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="246" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a33f189c533f6a7e4ff4aea280fd58bdb" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::errorCode_</definition>
+        <argsstring></argsstring>
+        <name>errorCode_</name>
+        <qualifiedname>Sd2Card::errorCode_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="247" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a357406af052ca3f7ae590213d9d47801" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::inBlock_</definition>
+        <argsstring></argsstring>
+        <name>inBlock_</name>
+        <qualifiedname>Sd2Card::inBlock_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="248" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a82f29b72f0a60a8bb6678059bb7fc062" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Sd2Card::offset_</definition>
+        <argsstring></argsstring>
+        <name>offset_</name>
+        <qualifiedname>Sd2Card::offset_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="249" column="14" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a57e8a19994351bed3136433031b776df" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::partialBlockRead_</definition>
+        <argsstring></argsstring>
+        <name>partialBlockRead_</name>
+        <qualifiedname>Sd2Card::partialBlockRead_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="250" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1a5db39d24c7a35e8fb3ac3590381adeb4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::status_</definition>
+        <argsstring></argsstring>
+        <name>status_</name>
+        <qualifiedname>Sd2Card::status_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="251" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd2_card_1ae6d445d9104162e37ac5e2cfe7209649" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <qualifiedname>Sd2Card::type_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="252" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sd2_card_1af85a5ec4f5f4ec89deb8936c3fd7de65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Sd2Card::Sd2Card</definition>
+        <argsstring>(void)</argsstring>
+        <name>Sd2Card</name>
+        <qualifiedname>Sd2Card::Sd2Card</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an instance of <ref refid="class_sd2_card" kindref="compound">Sd2Card</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="179" column="5" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="179" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a862473431cc314238bfccdc531a70d3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Sd2Card::cardSize</definition>
+        <argsstring>(void)</argsstring>
+        <name>cardSize</name>
+        <qualifiedname>Sd2Card::cardSize</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine the size of an SD flash memory card.</para>
+<para><simplesect kind="return"><para>The number of 512 byte data blocks in the card or zero if an error occurs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="180" column="14" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="153" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1af49fb720fad1d3ea9f5782da0d87fc0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::erase</definition>
+        <argsstring>(uint32_t firstBlock, uint32_t lastBlock)</argsstring>
+        <name>erase</name>
+        <qualifiedname>Sd2Card::erase</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>firstBlock</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>lastBlock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase a range of blocks.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">firstBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the first block in the range. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">lastBlock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of the last block in the range.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function requests the SD card to do a flash erase for a range of blocks. The data on the card after an erase operation is either 0 or 1, depends on the card vendor. The card must support single block erase.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="181" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="210" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a2e3998f6e910a2936d3ef54bf082b2ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::eraseSingleBlockEnable</definition>
+        <argsstring>(void)</argsstring>
+        <name>eraseSingleBlockEnable</name>
+        <qualifiedname>Sd2Card::eraseSingleBlockEnable</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine if card supports single block erase.</para>
+<para><simplesect kind="return"><para>The value one, true, is returned if single block erase is supported. The value zero, false, is returned if single block erase is not supported. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="182" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a3e9f71d0b6d74580fca96dbca1e3a3ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::errorCode</definition>
+        <argsstring>(void) const</argsstring>
+        <name>errorCode</name>
+        <qualifiedname>Sd2Card::errorCode</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>error code for last error. See <ref refid="_sd2_card_8h" kindref="compound">Sd2Card.h</ref> for a list of error codes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="186" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a51f51804473a8fefd29cabbc36018a49" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::errorData</definition>
+        <argsstring>(void) const</argsstring>
+        <name>errorData</name>
+        <qualifiedname>Sd2Card::errorData</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>error data for last error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="190" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::init</definition>
+        <argsstring>(void)</argsstring>
+        <name>init</name>
+        <qualifiedname>Sd2Card::init</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize an SD flash memory card with default clock rate and chip select pin. See sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="197" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="197" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ad99b2d2156c9746065c52839ef679354" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::init</definition>
+        <argsstring>(uint8_t sckRateID)</argsstring>
+        <name>init</name>
+        <qualifiedname>Sd2Card::init</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>sckRateID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize an SD flash memory card with the selected SPI clock rate and the default SD chip select pin. See sd2Card::init(uint8_t sckRateID, uint8_t chipSelectPin). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="205" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="205" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a919c789eb9b140426c706f0862780978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::init</definition>
+        <argsstring>(uint8_t sckRateID, uint8_t chipSelectPin)</argsstring>
+        <name>init</name>
+        <qualifiedname>Sd2Card::init</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>sckRateID</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>chipSelectPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize an SD flash memory card.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sckRateID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SPI clock rate selector. See <ref refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" kindref="member">setSckRate()</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">chipSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SD chip select pin number.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. The reason for failure can be determined by calling <ref refid="class_sd2_card_1a3e9f71d0b6d74580fca96dbca1e3a3ba" kindref="member">errorCode()</ref> and <ref refid="class_sd2_card_1a51f51804473a8fefd29cabbc36018a49" kindref="member">errorData()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="208" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="257" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1aa279ac05b3f25acbf10cc424a25750da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::partialBlockRead</definition>
+        <argsstring>(uint8_t value)</argsstring>
+        <name>partialBlockRead</name>
+        <qualifiedname>Sd2Card::partialBlockRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable or disable partial block reads.</para>
+<para>Enabling partial block reads improves performance by allowing a block to be read over the SPI bus as several sub-blocks. Errors may occur if the time between reads is too long since the SD card may timeout. The SPI SS line will be held low until the entire block is read or <ref refid="class_sd2_card_1a0de961537d051bbcafd87ed9fff5fe48" kindref="member">readEnd()</ref> is called.</para>
+<para>Use this for applications like the Adafruit Wave Shield.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value TRUE (non-zero) or FALSE (zero).) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="209" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::partialBlockRead</definition>
+        <argsstring>(void) const</argsstring>
+        <name>partialBlockRead</name>
+        <qualifiedname>Sd2Card::partialBlockRead</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current value, true or false, for partial block read. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="211" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ae26d840449a42d45af464fb81b92e2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::readBlock</definition>
+        <argsstring>(uint32_t block, uint8_t *dst)</argsstring>
+        <name>readBlock</name>
+        <qualifiedname>Sd2Card::readBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a 512 byte block from an SD card device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical block to be read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the location that will receive the data.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="214" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="388" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ae2d1396ad30081b4201cd372358ef699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::readData</definition>
+        <argsstring>(uint32_t block, uint16_t offset, uint16_t count, uint8_t *dst)</argsstring>
+        <name>readData</name>
+        <qualifiedname>Sd2Card::readData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read part of a 512 byte block from an SD card.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical block to be read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to skip at start of block </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">dst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the location that will receive the data. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="215" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="402" bodyend="472"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1aee2be03d649548e2ab26033f18638d19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::readCID</definition>
+        <argsstring>(cid_t *cid)</argsstring>
+        <name>readCID</name>
+        <qualifiedname>Sd2Card::readCID</qualifiedname>
+        <param>
+          <type><ref refid="struct_c_i_d" kindref="compound">cid_t</ref> *</type>
+          <declname>cid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a cards <ref refid="struct_c_i_d" kindref="compound">CID</ref> register. The <ref refid="struct_c_i_d" kindref="compound">CID</ref> contains card identification information such as Manufacturer ID, Product name, Product serial number and Manufacturing date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="221" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="221" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a79845d8d4593cb3b1b7641ba27edddfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::readCSD</definition>
+        <argsstring>(csd_t *csd)</argsstring>
+        <name>readCSD</name>
+        <qualifiedname>Sd2Card::readCSD</qualifiedname>
+        <param>
+          <type><ref refid="unioncsd__t" kindref="compound">csd_t</ref> *</type>
+          <declname>csd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read a cards CSD register. The CSD contains Card-Specific Data that provides information regarding access to the card&apos;s contents. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="227" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="227" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a0de961537d051bbcafd87ed9fff5fe48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::readEnd</definition>
+        <argsstring>(void)</argsstring>
+        <name>readEnd</name>
+        <qualifiedname>Sd2Card::readEnd</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Skip remaining data in a block when in partial block read mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="230" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="475" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::setSckRate</definition>
+        <argsstring>(uint8_t sckRateID)</argsstring>
+        <name>setSckRate</name>
+        <qualifiedname>Sd2Card::setSckRate</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>sckRateID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the SPI clock rate.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sckRateID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A value in the range [0, 6].</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+The SPI clock will be set to F_CPU/pow(2, 1 + sckRateID). The maximum SPI rate is F_CPU/2 for <emphasis>sckRateID</emphasis> = 0 and the minimum rate is F_CPU/128 for <emphasis>scsRateID</emphasis> = 6.</para>
+<para><simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for an invalid value of <emphasis>sckRateID</emphasis>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="231" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="535" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1aa8aa6629560568a3616736a83f60e5ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::setSpiClock</definition>
+        <argsstring>(uint32_t clock)</argsstring>
+        <name>setSpiClock</name>
+        <qualifiedname>Sd2Card::setSpiClock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>clock</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="233" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="566" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1acaaebba61c53eb3925457c563f56bb1a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::type</definition>
+        <argsstring>(void) const</argsstring>
+        <name>type</name>
+        <qualifiedname>Sd2Card::type</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the card type: SD V1, SD V2 or SDHC </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="236" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ac98353a26aa6485364e33924f3834ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::writeBlock</definition>
+        <argsstring>(uint32_t blockNumber, const uint8_t *src, uint8_t blocking=1)</argsstring>
+        <name>writeBlock</name>
+        <qualifiedname>Sd2Card::writeBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>blockNumber</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>blocking</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes a 512 byte block to an SD card.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">blockNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logical block to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the location of the data to be written. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">blocking</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If the write should be blocking. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="239" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="615" bodyend="653"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1af602d107e1ead2d0971e9f4c7b744cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::writeData</definition>
+        <argsstring>(const uint8_t *src)</argsstring>
+        <name>writeData</name>
+        <qualifiedname>Sd2Card::writeData</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write one data block in a multiple block write sequence </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="240" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="656" bodyend="664"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a82a21a07fdfe45c5c75d486a13cded8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::writeStart</definition>
+        <argsstring>(uint32_t blockNumber, uint32_t eraseCount)</argsstring>
+        <name>writeStart</name>
+        <qualifiedname>Sd2Card::writeStart</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>blockNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>eraseCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start a write multiple blocks sequence.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">blockNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of first block in sequence. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">eraseCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of blocks to be pre-erased.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>This function is used with <ref refid="class_sd2_card_1af602d107e1ead2d0971e9f4c7b744cf8" kindref="member">writeData()</ref> and <ref refid="class_sd2_card_1a3a60481c0821606546a85d056bb96f47" kindref="member">writeStop()</ref> for optimized multiple block writes.</para>
+</simplesect>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="241" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="716" bodyend="742"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a3a60481c0821606546a85d056bb96f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::writeStop</definition>
+        <argsstring>(void)</argsstring>
+        <name>writeStop</name>
+        <qualifiedname>Sd2Card::writeStop</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>End a write multiple blocks sequence.</para>
+<para><simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="242" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="749" bodyend="764"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a9b0da1097f3a705df420749c60ca1ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::isBusy</definition>
+        <argsstring>(void)</argsstring>
+        <name>isBusy</name>
+        <qualifiedname>Sd2Card::isBusy</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if the SD card is busy</para>
+<para><simplesect kind="return"><para>The value one, true, is returned when is busy and the value zero, false, is returned for when is NOT busy. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="243" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="771" bodyend="777"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sd2_card_1a0a7685e522dcd606f97d20b4a829f6ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::cardAcmd</definition>
+        <argsstring>(uint8_t cmd, uint32_t arg)</argsstring>
+        <name>cardAcmd</name>
+        <qualifiedname>Sd2Card::cardAcmd</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="254" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="254" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a73a49baa8e8a9f14f26cae408db69fbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::cardCommand</definition>
+        <argsstring>(uint8_t cmd, uint32_t arg)</argsstring>
+        <name>cardCommand</name>
+        <qualifiedname>Sd2Card::cardCommand</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="258" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="113" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1af03e574590524f93a61641604e02f79f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::error</definition>
+        <argsstring>(uint8_t code)</argsstring>
+        <name>error</name>
+        <qualifiedname>Sd2Card::error</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="259" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="259" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a1fa9f0bf1673a0ce7a51ed6330495978" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::readRegister</definition>
+        <argsstring>(uint8_t cmd, void *buf)</argsstring>
+        <name>readRegister</name>
+        <qualifiedname>Sd2Card::readRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>read <ref refid="struct_c_i_d" kindref="compound">CID</ref> or CSR register </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="262" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="500" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a432a9f31f2f1eb63311f9f0775f1dca6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::sendWriteCommand</definition>
+        <argsstring>(uint32_t blockNumber, uint32_t eraseCount)</argsstring>
+        <name>sendWriteCommand</name>
+        <qualifiedname>Sd2Card::sendWriteCommand</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>blockNumber</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>eraseCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="263" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a67b063133d2384426b2b34e943def1f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::chipSelectHigh</definition>
+        <argsstring>(void)</argsstring>
+        <name>chipSelectHigh</name>
+        <qualifiedname>Sd2Card::chipSelectHigh</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="264" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="177" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a530fc6399893b3877e1d76b9eb891d5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::chipSelectLow</definition>
+        <argsstring>(void)</argsstring>
+        <name>chipSelectLow</name>
+        <qualifiedname>Sd2Card::chipSelectLow</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="265" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="187" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a2edf71fa8a21b9e49a77d068d0508c6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sd2Card::type</definition>
+        <argsstring>(uint8_t value)</argsstring>
+        <name>type</name>
+        <qualifiedname>Sd2Card::type</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="266" column="10" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ac33e1c364c66bcefd4b69d438caf9b30" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::waitNotBusy</definition>
+        <argsstring>(unsigned int timeoutMillis)</argsstring>
+        <name>waitNotBusy</name>
+        <qualifiedname>Sd2Card::waitNotBusy</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>timeoutMillis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="269" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="573" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1a0ef21ed609a00460ef82ff6a6666140b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::writeData</definition>
+        <argsstring>(uint8_t token, const uint8_t *src)</argsstring>
+        <name>writeData</name>
+        <qualifiedname>Sd2Card::writeData</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>token</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="270" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="667" bodyend="703"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd2_card_1ad3f48b7f05926eb84ed99364bb11254d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Sd2Card::waitStartBlock</definition>
+        <argsstring>(void)</argsstring>
+        <name>waitStartBlock</name>
+        <qualifiedname>Sd2Card::waitStartBlock</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wait for start block token </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="271" column="13" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.cpp" bodystart="586" bodyend="604"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Raw access to SD and SDHC flash memory cards. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/Sd2Card.h" line="176" column="1" bodyfile="libraries/SD-1.2.4/src/utility/Sd2Card.h" bodystart="176" bodyend="272"/>
+    <listofallmembers>
+      <member refid="class_sd2_card_1af6133863be6def6ce371e6d9428965f3" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>block_</name></member>
+      <member refid="class_sd2_card_1a0a7685e522dcd606f97d20b4a829f6ea" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>cardAcmd</name></member>
+      <member refid="class_sd2_card_1a73a49baa8e8a9f14f26cae408db69fbd" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>cardCommand</name></member>
+      <member refid="class_sd2_card_1a862473431cc314238bfccdc531a70d3a" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>cardSize</name></member>
+      <member refid="class_sd2_card_1a67b063133d2384426b2b34e943def1f6" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>chipSelectHigh</name></member>
+      <member refid="class_sd2_card_1a530fc6399893b3877e1d76b9eb891d5f" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>chipSelectLow</name></member>
+      <member refid="class_sd2_card_1a2d2c4dbf1ad5b9db664ae4004d53f1f0" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>chipSelectPin_</name></member>
+      <member refid="class_sd2_card_1af49fb720fad1d3ea9f5782da0d87fc0b" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>erase</name></member>
+      <member refid="class_sd2_card_1a2e3998f6e910a2936d3ef54bf082b2ce" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>eraseSingleBlockEnable</name></member>
+      <member refid="class_sd2_card_1af03e574590524f93a61641604e02f79f" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>error</name></member>
+      <member refid="class_sd2_card_1a3e9f71d0b6d74580fca96dbca1e3a3ba" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>errorCode</name></member>
+      <member refid="class_sd2_card_1a33f189c533f6a7e4ff4aea280fd58bdb" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>errorCode_</name></member>
+      <member refid="class_sd2_card_1a51f51804473a8fefd29cabbc36018a49" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>errorData</name></member>
+      <member refid="class_sd2_card_1a357406af052ca3f7ae590213d9d47801" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>inBlock_</name></member>
+      <member refid="class_sd2_card_1afaec9a22060626b02c07a09eff2e9113" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>init</name></member>
+      <member refid="class_sd2_card_1ad99b2d2156c9746065c52839ef679354" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>init</name></member>
+      <member refid="class_sd2_card_1a919c789eb9b140426c706f0862780978" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>init</name></member>
+      <member refid="class_sd2_card_1a9b0da1097f3a705df420749c60ca1ef9" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>isBusy</name></member>
+      <member refid="class_sd2_card_1a82f29b72f0a60a8bb6678059bb7fc062" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>offset_</name></member>
+      <member refid="class_sd2_card_1aa279ac05b3f25acbf10cc424a25750da" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>partialBlockRead</name></member>
+      <member refid="class_sd2_card_1af3de0f1fdfc86816f45b555841ff291b" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>partialBlockRead</name></member>
+      <member refid="class_sd2_card_1a57e8a19994351bed3136433031b776df" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>partialBlockRead_</name></member>
+      <member refid="class_sd2_card_1ae26d840449a42d45af464fb81b92e2ab" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>readBlock</name></member>
+      <member refid="class_sd2_card_1aee2be03d649548e2ab26033f18638d19" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>readCID</name></member>
+      <member refid="class_sd2_card_1a79845d8d4593cb3b1b7641ba27edddfb" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>readCSD</name></member>
+      <member refid="class_sd2_card_1ae2d1396ad30081b4201cd372358ef699" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>readData</name></member>
+      <member refid="class_sd2_card_1a0de961537d051bbcafd87ed9fff5fe48" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>readEnd</name></member>
+      <member refid="class_sd2_card_1a1fa9f0bf1673a0ce7a51ed6330495978" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>readRegister</name></member>
+      <member refid="class_sd2_card_1af85a5ec4f5f4ec89deb8936c3fd7de65" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>Sd2Card</name></member>
+      <member refid="class_sd2_card_1a432a9f31f2f1eb63311f9f0775f1dca6" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>sendWriteCommand</name></member>
+      <member refid="class_sd2_card_1ad849b8896de9abd4e24bd98f4204ccc4" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>setSckRate</name></member>
+      <member refid="class_sd2_card_1aa8aa6629560568a3616736a83f60e5ed" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>setSpiClock</name></member>
+      <member refid="class_sd2_card_1a5db39d24c7a35e8fb3ac3590381adeb4" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>status_</name></member>
+      <member refid="class_sd2_card_1acaaebba61c53eb3925457c563f56bb1a" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>type</name></member>
+      <member refid="class_sd2_card_1a2edf71fa8a21b9e49a77d068d0508c6c" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>type</name></member>
+      <member refid="class_sd2_card_1ae6d445d9104162e37ac5e2cfe7209649" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>type_</name></member>
+      <member refid="class_sd2_card_1ac33e1c364c66bcefd4b69d438caf9b30" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>waitNotBusy</name></member>
+      <member refid="class_sd2_card_1ad3f48b7f05926eb84ed99364bb11254d" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>waitStartBlock</name></member>
+      <member refid="class_sd2_card_1ac98353a26aa6485364e33924f3834ac1" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>writeBlock</name></member>
+      <member refid="class_sd2_card_1af602d107e1ead2d0971e9f4c7b744cf8" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>writeData</name></member>
+      <member refid="class_sd2_card_1a0ef21ed609a00460ef82ff6a6666140b" prot="private" virt="non-virtual"><scope>Sd2Card</scope><name>writeData</name></member>
+      <member refid="class_sd2_card_1a82a21a07fdfe45c5c75d486a13cded8a" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>writeStart</name></member>
+      <member refid="class_sd2_card_1a3a60481c0821606546a85d056bb96f47" prot="public" virt="non-virtual"><scope>Sd2Card</scope><name>writeStop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

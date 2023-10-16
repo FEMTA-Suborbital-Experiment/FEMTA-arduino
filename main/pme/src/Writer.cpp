@@ -1,18 +1,12 @@
 /**
  * @file Writer.cpp
  * 
- * @mainpage FEMTA Writer
+ * @brief This is the FEMTA writer purposed for taking a logType struct as input from
+ * the FEMTA Logger and writing its contents to a text file or binary. 
  * 
- * @section Summary
- * 
- * This is the FEMTA writer purposed for taking a logType struct as input from
- * the FEMTA Logger and writing its contents to a text file or binary. Data is
- * written in the order specified in the FEMTA Logger.
- * 
- * @section Utility
- * 
- * Determine whether you will be writing to a binary, or overwriting the file, and specify
- * a file name. Once you reach the capacity of your log struct, call writeToFile().
+ * @details Data is written in the order specified in the FEMTA Logger. Determine whether 
+ * you will be writing to a binary, or overwriting the file, and specify a file name. 
+ * Once you reach the capacity of your log struct, call writeToFile().
  *   
  * 
  */

@@ -1,0 +1,671 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_api" kind="page">
+    <compoundname>md_api</compoundname>
+    <title>Summary</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_api_1autotoc_md0"/> <table rows="7" cols="2"><row>
+<entry thead="yes"><para>Members   </para>
+</entry><entry thead="yes"><para>Descriptions    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`AtmosphericVector`   </para>
+</entry><entry thead="no"><para>A wrapper of vector which allows a user-defined maximum size.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`HSCM_PSI`   </para>
+</entry><entry thead="no"><para>HSCM class based on <ulink url="https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp">https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp</ulink>.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`Logger`   </para>
+</entry><entry thead="no"><para>Logger for sensor data.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`PinCtrl`   </para>
+</entry><entry thead="no"><para>Pin Controller class.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`PVC4000`   </para>
+</entry><entry thead="no"><para>PVC4000 class for the PVC4000 or PVC4100 MEMs transducers.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>class</computeroutput>`Reader`   </para>
+</entry><entry thead="no"><para>Binary reader of struct data.   </para>
+</entry></row>
+</table>
+<computeroutput>class</computeroutput>`SensorPoller` | <computeroutput>class</computeroutput>`Writer` | Writing class for outputing data into binary or text. <computeroutput>struct</computeroutput>`logType` | A log standard that is shared between the reader, logger, and writer classes.</para>
+<sect1 id="md_api_1autotoc_md1">
+<title>class &lt;tt&gt;AtmosphericVector&lt;/tt&gt;</title>
+<para><programlisting><codeline><highlight class="normal">class<sp/>AtmosphericVector</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>:<sp/>public<sp/>std::vector&lt;<sp/>T<sp/>&gt;</highlight></codeline>
+</programlisting></para>
+<para>A wrapper of vector which allows a user-defined maximum size.</para>
+<para><ulink url="https://stackoverflow.com/questions/9248728/vector-how-to-set-the-maximum-number-of-elements-and-find-the-current-count">https://stackoverflow.com/questions/9248728/vector-how-to-set-the-maximum-number-of-elements-and-find-the-current-count</ulink></para>
+<sect4 id="md_api_1autotoc_md2">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>T</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect2 id="md_api_1autotoc_md3">
+<title>Summary</title>
+<para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Members   </para>
+</entry><entry thead="yes"><para>Descriptions    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public inline void</computeroutput>`setMaxSize`<computeroutput>(int maxSize)</computeroutput>   </para>
+</entry><entry thead="no"><para>Set the capacity of the vector.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public inline void</computeroutput>`push_back`<computeroutput>(const T &amp; element)</computeroutput>   </para>
+</entry><entry thead="no"><para>Append an element to the vector as long as the vector size is less than the capacity.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public inline bool</computeroutput>`isFilled`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Check if the vector is filled to its capacity.   </para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md4">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md5">
+<title>&lt;tt&gt;public inline void&lt;/tt&gt;@ref &quot;class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd&quot; &quot;`setMaxSize`&quot;&lt;tt&gt;(int maxSize)&lt;/tt&gt;</title>
+<para>Set the capacity of the vector.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md6">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>maxSize</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md7">
+<title>&lt;tt&gt;public inline void&lt;/tt&gt;@ref &quot;class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770&quot; &quot;`push_back`&quot;&lt;tt&gt;(const T &amp; element)&lt;/tt&gt;</title>
+<para>Append an element to the vector as long as the vector size is less than the capacity.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md8">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>element</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md9">
+<title>&lt;tt&gt;public inline bool&lt;/tt&gt;@ref &quot;class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e&quot; &quot;`isFilled`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Check if the vector is filled to its capacity.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md10">
+<title>Returns</title>
+<para>true</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md11">
+<title>Returns</title>
+<para>false</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md12">
+<title>class &lt;tt&gt;HSCM_PSI&lt;/tt&gt;</title>
+<para>HSCM class based on <ulink url="https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp">https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp</ulink>.</para>
+<sect2 id="md_api_1autotoc_md13">
+<title>Summary</title>
+<para>Members | Descriptions <linebreak/>
+ -----------------------------<mdash/>|------------------------------------------<mdash/> <computeroutput>public hscm_output_type</computeroutput>`m_output_type` | <computeroutput>public uint8_t</computeroutput>`m_i2cAddress` | <computeroutput>public int</computeroutput>`m_tf_type` | <computeroutput>public int</computeroutput>`m_pressure_type` | <computeroutput>public</computeroutput>`HSCM_PSI`<computeroutput>(int i2cAddress,int tf_type,int p_type)</computeroutput> | Construct the HSCM using the I2C address. <computeroutput>public</computeroutput>`HSCM_PSI`<computeroutput>(hscm_output_type output_type,int tf_type,int p_type)</computeroutput> | Construct the HSCM using the types listed in the datasheet. <computeroutput>public uint8_t</computeroutput>`read`<computeroutput>()</computeroutput> | Poll the HSCM for new pressure and temperature data and check the status of the read. <computeroutput>public float</computeroutput>`pressure`<computeroutput>()</computeroutput> | Return the ambient pressure (in psi) read by the HSCM. <computeroutput>public float</computeroutput>`temperature`<computeroutput>()</computeroutput> | Return the ambient temperature (in C) read by the HSCM.</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md14">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md15">
+<title>&lt;tt&gt;public hscm_output_type&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336&quot; &quot;`m_output_type`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md16">
+<title>&lt;tt&gt;public uint8_t&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7&quot; &quot;`m_i2cAddress`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md17">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b&quot; &quot;`m_tf_type`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md18">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091&quot; &quot;`m_pressure_type`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md19">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a&quot; &quot;`HSCM_PSI`&quot;&lt;tt&gt;(int i2cAddress,int tf_type,int p_type)&lt;/tt&gt;</title>
+<para>Construct the HSCM using the I2C address.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md20">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>i2cAddress</computeroutput></para>
+</listitem><listitem><para><computeroutput>tf_type</computeroutput></para>
+</listitem><listitem><para><computeroutput>p_type</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md21">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e&quot; &quot;`HSCM_PSI`&quot;&lt;tt&gt;(hscm_output_type output_type,int tf_type,int p_type)&lt;/tt&gt;</title>
+<para>Construct the HSCM using the types listed in the datasheet.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md22">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>output_type</computeroutput></para>
+</listitem><listitem><para><computeroutput>tf_type</computeroutput></para>
+</listitem><listitem><para><computeroutput>p_type</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md23">
+<title>&lt;tt&gt;public uint8_t&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac&quot; &quot;`read`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Poll the HSCM for new pressure and temperature data and check the status of the read.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md24">
+<title>Returns</title>
+<para>uint8_t</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md25">
+<title>&lt;tt&gt;public float&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764&quot; &quot;`pressure`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Return the ambient pressure (in psi) read by the HSCM.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md26">
+<title>Returns</title>
+<para>float</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md27">
+<title>&lt;tt&gt;public float&lt;/tt&gt;@ref &quot;class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1&quot; &quot;`temperature`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Return the ambient temperature (in C) read by the HSCM.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md28">
+<title>Returns</title>
+<para>float</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md29">
+<title>class &lt;tt&gt;Logger&lt;/tt&gt;</title>
+<para>Logger for sensor data.</para>
+<sect2 id="md_api_1autotoc_md30">
+<title>Summary</title>
+<para>Members | Descriptions <linebreak/>
+ -----------------------------<mdash/>|------------------------------------------<mdash/> <computeroutput>public</computeroutput>`logType``logData` | <computeroutput>public</computeroutput>`Logger`<computeroutput>(int arraySize)</computeroutput> | Construct a Logger class, which is responsible for storing the time, low pressure, high pressure, and acceleraetion values. <computeroutput>public int</computeroutput>`init`<computeroutput>()</computeroutput> | Initialize the Logger and flush all values. <computeroutput>public void</computeroutput>`pushData`<computeroutput>(float time,float lowPressure,float highPressure,float acceleration)</computeroutput> | Append the time, low pressure, high pressure, and acceleration into the logger&apos;s buffer. <computeroutput>public void</computeroutput>`flushArrays`<computeroutput>()</computeroutput> | Clear the values from each buffer. <computeroutput>public bool</computeroutput>`isStructFilled`<computeroutput>()</computeroutput> | Check if the buffer is filled by checking the time variable, which always stores data.</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md31">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md32">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;structlog_type&quot; &quot;`logType`&quot;@ref &quot;class_logger_1a4b71165774ee49293228f547869c325b&quot; &quot;`logData`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md33">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28&quot; &quot;`Logger`&quot;&lt;tt&gt;(int arraySize)&lt;/tt&gt;</title>
+<para>Construct a Logger class, which is responsible for storing the time, low pressure, high pressure, and acceleraetion values.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md34">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>arraySize</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md35">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe&quot; &quot;`init`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Initialize the Logger and flush all values.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md36">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md37">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_logger_1aa9983a0826820827e31fcf8fb77636a7&quot; &quot;`pushData`&quot;&lt;tt&gt;(float time,float lowPressure,float highPressure,float acceleration)&lt;/tt&gt;</title>
+<para>Append the time, low pressure, high pressure, and acceleration into the logger&apos;s buffer.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md38">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>t</computeroutput></para>
+</listitem><listitem><para><computeroutput>lp</computeroutput></para>
+</listitem><listitem><para><computeroutput>hp</computeroutput></para>
+</listitem><listitem><para><computeroutput>a</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md39">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6&quot; &quot;`flushArrays`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Clear the values from each buffer.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md40">
+<title>&lt;tt&gt;public bool&lt;/tt&gt;@ref &quot;class_logger_1a5ba805b3d05cb8f2492251e2229600c5&quot; &quot;`isStructFilled`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Check if the buffer is filled by checking the time variable, which always stores data.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md41">
+<title>Returns</title>
+<para>true</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md42">
+<title>Returns</title>
+<para>false</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md43">
+<title>class &lt;tt&gt;PinCtrl&lt;/tt&gt;</title>
+<para><programlisting><codeline><highlight class="normal">class<sp/>PinCtrl</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>:<sp/>public<sp/>Protothread</highlight></codeline>
+</programlisting></para>
+<para>Pin Controller class.</para>
+<sect2 id="md_api_1autotoc_md44">
+<title>Summary</title>
+<para><table rows="12" cols="2"><row>
+<entry thead="yes"><para>Members   </para>
+</entry><entry thead="yes"><para>Descriptions    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public</computeroutput>`PinCtrl`<computeroutput>(int flowClose1,int flowOpen1,int flowClose2,int flowOpen2,int ventOpen,int ventClose,int signal)</computeroutput>   </para>
+</entry><entry thead="no"><para>Construct a PinController class with the pins corresponding to a valve or signal on the FEMTA Suborbital Experiment.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`openFlowValve1`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Open flow valve 1.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`closeFlowValve1`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Close flow valve 1.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`openFlowValve2`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Open flow valve 2.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`closeFlowValve2`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Close flow valve 2.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`openVentValve`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Open vent valve 1.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`closeVentValve`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Close vent valve 1.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`signalStart`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Signal the start of an experiment.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public void</computeroutput>`signalStop`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Signal to stop the experiment.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public int</computeroutput>`init`<computeroutput>(bool willInitializeValves)</computeroutput>   </para>
+</entry><entry thead="no"><para>Initialize the pin modes and set the initial state of the valves at pre-flight.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public bool</computeroutput>`Run`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>An overridden Protothread method which acts as a state machine.   </para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md45">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md46">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_pin_ctrl_1aa4cfc2d94200389c25ee1eeb2726a214&quot; &quot;`PinCtrl`&quot;&lt;tt&gt;(int flowClose1,int flowOpen1,int flowClose2,int flowOpen2,int ventOpen,int ventClose,int signal)&lt;/tt&gt;</title>
+<para>Construct a PinController class with the pins corresponding to a valve or signal on the FEMTA Suborbital Experiment.</para>
+<para>The flow and vent pins correspond to valves on the Propellant Management Experiment, while the signal pin is an output which is measured by the FEMTA Thruster Experiment and determines whether the Thruster Experiment should begin at the right time.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md47">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>flowClose1</computeroutput> closeSV1</para>
+</listitem><listitem><para><computeroutput>flowOpen1</computeroutput> openSV1</para>
+</listitem><listitem><para><computeroutput>flowClose2</computeroutput> closeSV2</para>
+</listitem><listitem><para><computeroutput>flowOpen2</computeroutput> openSV2</para>
+</listitem><listitem><para><computeroutput>ventClose</computeroutput> closeLV1</para>
+</listitem><listitem><para><computeroutput>ventOpen</computeroutput> openLV1</para>
+</listitem><listitem><para><computeroutput>signal</computeroutput> signal</para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md48">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a38719c52dcbe99f6230a51bf17f28f77&quot; &quot;`openFlowValve1`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Open flow valve 1.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md49">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a58db08121a93246bd87410709b36a692&quot; &quot;`closeFlowValve1`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Close flow valve 1.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md50">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a5e386cb600e543d75e8caf00355a3941&quot; &quot;`openFlowValve2`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Open flow valve 2.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md51">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1ad0ce7969311375d091aa06ce7621179a&quot; &quot;`closeFlowValve2`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Close flow valve 2.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md52">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a6ef0214620aed42aa885e659be665d87&quot; &quot;`openVentValve`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Open vent valve 1.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md53">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a147c686c6879b7e574569bbfea69dd70&quot; &quot;`closeVentValve`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Close vent valve 1.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md54">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1aa658b5b491087b47e0c83ec4ceccc6e7&quot; &quot;`signalStart`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Signal the start of an experiment.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md55">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a2ac6386b567543305a3f82e14054c58d&quot; &quot;`signalStop`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Signal to stop the experiment.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md56">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_pin_ctrl_1acb4a92935a1e3d525f4e29e8a6e607d7&quot; &quot;`init`&quot;&lt;tt&gt;(bool willInitializeValves)&lt;/tt&gt;</title>
+<para>Initialize the pin modes and set the initial state of the valves at pre-flight.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md57">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md58">
+<title>&lt;tt&gt;public bool&lt;/tt&gt;@ref &quot;class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870&quot; &quot;`Run`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>An overridden Protothread method which acts as a state machine.</para>
+<para>This checks if a certain pin is turned on and sets the pin to HIGH. After a certain time delay t_delay, set the pin to LOW.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md59">
+<title>Returns</title>
+<para>true</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md60">
+<title>Returns</title>
+<para>false</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md61">
+<title>class &lt;tt&gt;PVC4000&lt;/tt&gt;</title>
+<para>PVC4000 class for the PVC4000 or PVC4100 MEMs transducers.</para>
+<sect2 id="md_api_1autotoc_md62">
+<title>Summary</title>
+<para>Members | Descriptions <linebreak/>
+ -----------------------------<mdash/>|------------------------------------------<mdash/> <computeroutput>public uint16_t</computeroutput>`m_i2cAddress` | <computeroutput>public</computeroutput>`PVC4000`<computeroutput>(int address)</computeroutput> | Construct a PVC4000 class using an I2C address, if necessary. <computeroutput>public int</computeroutput>`read`<computeroutput>()</computeroutput> | Update the pressure and temperature values and return the status based on the raw values. <computeroutput>public void</computeroutput>`calibrate`<computeroutput>()</computeroutput> | Poll the sensor for new pressure and temperature readings. <computeroutput>public void</computeroutput>`init`<computeroutput>()</computeroutput> | Initialize the PVC4000. <computeroutput>public float</computeroutput>`baselineTemperature`<computeroutput>()</computeroutput> | <computeroutput>public float</computeroutput>`temperature`<computeroutput>()</computeroutput> | Obtain the temperature from the last read command. <computeroutput>public float</computeroutput>`pressure`<computeroutput>()</computeroutput> | Obtain the pressure from the last read command. <computeroutput>public uint16_t</computeroutput>`get_raw_upper`<computeroutput>()</computeroutput> | Return a raw count corresponding to the most significant byte. <computeroutput>public uint16_t</computeroutput>`get_raw_lower`<computeroutput>()</computeroutput> | Return a raw count corresponding to the least significant byte.</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md63">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md64">
+<title>&lt;tt&gt;public uint16_t&lt;/tt&gt;@ref &quot;class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f&quot; &quot;`m_i2cAddress`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md65">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_p_v_c4000_1ab31a08063d6c570167391800d86bef11&quot; &quot;`PVC4000`&quot;&lt;tt&gt;(int address)&lt;/tt&gt;</title>
+<para>Construct a PVC4000 class using an I2C address, if necessary.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md66">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>address</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md67">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_p_v_c4000_1ac122759c1e4e377d672d54b661635509&quot; &quot;`read`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Update the pressure and temperature values and return the status based on the raw values.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md68">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md69">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3&quot; &quot;`calibrate`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Poll the sensor for new pressure and temperature readings.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md70">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752&quot; &quot;`init`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Initialize the PVC4000.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md71">
+<title>&lt;tt&gt;public float&lt;/tt&gt;@ref &quot;class_p_v_c4000_1a52012201d7a9199558053865c9eadac8&quot; &quot;`baselineTemperature`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md72">
+<title>&lt;tt&gt;public float&lt;/tt&gt;@ref &quot;class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b&quot; &quot;`temperature`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Obtain the temperature from the last read command.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md73">
+<title>Returns</title>
+<para>float</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md74">
+<title>&lt;tt&gt;public float&lt;/tt&gt;@ref &quot;class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547&quot; &quot;`pressure`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Obtain the pressure from the last read command.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md75">
+<title>Returns</title>
+<para>float</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md76">
+<title>&lt;tt&gt;public uint16_t&lt;/tt&gt;@ref &quot;class_p_v_c4000_1ab422024da4c792301181f537f066d7a4&quot; &quot;`get_raw_upper`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Return a raw count corresponding to the most significant byte.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md77">
+<title>Returns</title>
+<para>uint16_t</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md78">
+<title>&lt;tt&gt;public uint16_t&lt;/tt&gt;@ref &quot;class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5&quot; &quot;`get_raw_lower`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Return a raw count corresponding to the least significant byte.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md79">
+<title>Returns</title>
+<para>uint16_t</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md80">
+<title>class &lt;tt&gt;Reader&lt;/tt&gt;</title>
+<para>Binary reader of struct data.</para>
+<sect2 id="md_api_1autotoc_md81">
+<title>Summary</title>
+<para><table rows="5" cols="2"><row>
+<entry thead="yes"><para>Members   </para>
+</entry><entry thead="yes"><para>Descriptions    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public</computeroutput>`Reader`<computeroutput>(int chipSelect,int bufferSize)</computeroutput>   </para>
+</entry><entry thead="no"><para>Construct a Reader class, which takes a chip number (usually 4) for where the SD card is located.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public int</computeroutput>`readFile`<computeroutput>(const char * fileName)</computeroutput>   </para>
+</entry><entry thead="no"><para>Read the file in the SD card and returns a check if it is available.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public</computeroutput>`logType``readVector`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Outputs the time, low pressure, high pressure, and acceleration values into a single, large vector for reading.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public int</computeroutput>`init`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Initialize the SD card for reading.   </para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md82">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md83">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_reader_1aa53c935378e501762119494dbd1fdffb&quot; &quot;`Reader`&quot;&lt;tt&gt;(int chipSelect,int bufferSize)&lt;/tt&gt;</title>
+<para>Construct a Reader class, which takes a chip number (usually 4) for where the SD card is located.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md84">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>chipSelect</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md85">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_reader_1a28fe13eed13d02af3eb622de08604e87&quot; &quot;`readFile`&quot;&lt;tt&gt;(const char * fileName)&lt;/tt&gt;</title>
+<para>Read the file in the SD card and returns a check if it is available.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md86">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>fileName</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md87">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md88">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;structlog_type&quot; &quot;`logType`&quot;@ref &quot;class_reader_1aa761bdab52a52b4a9f61be941cb779a7&quot; &quot;`readVector`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Outputs the time, low pressure, high pressure, and acceleration values into a single, large vector for reading.</para>
+<para>The writer class stores data by struct, rather than by outputting to a large vector. To compensate for this, we first read each vector to a temporary vector, push each index of the temporary vector to the output vector, and repeat this process for each chunk of the buffer.</para>
+<para><ulink url="https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot">https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot</ulink> </para>
+</sect4>
+<sect4 id="md_api_1autotoc_md89">
+<title>Returns</title>
+<para>logType</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md90">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_reader_1aefa8f6560711e520cd36ec0f21afc403&quot; &quot;`init`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Initialize the SD card for reading.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md91">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md92">
+<title>class &lt;tt&gt;SensorPoller&lt;/tt&gt;</title>
+<sect2 id="md_api_1autotoc_md93">
+<title>Summary</title>
+<para>Members | Descriptions <linebreak/>
+ -----------------------------<mdash/>|------------------------------------------<mdash/> <computeroutput>public int</computeroutput>`pollRate` | <computeroutput>public void</computeroutput>`addToSensorVector`<computeroutput>()</computeroutput> | <computeroutput>public float[]</computeroutput>`readVector`<computeroutput>()</computeroutput> | <computeroutput>public</computeroutput>`SensorPoller`<computeroutput>()</computeroutput> | <computeroutput>public void</computeroutput>`init`<computeroutput>()</computeroutput> | <computeroutput>public void</computeroutput>`readAccelerometer`<computeroutput>(float * vec)</computeroutput> | <computeroutput>public void</computeroutput>`readLowAltBaro`<computeroutput>(float * pressure,float * temp)</computeroutput> | <computeroutput>public void</computeroutput>`readHighAltBaro`<computeroutput>(float * pressure,float * temp)</computeroutput> | <computeroutput>public void</computeroutput>`readPressureSensors`<computeroutput>(float * pressures,float * temperatures)</computeroutput> | <computeroutput>public void</computeroutput>`readFlowMeter`<computeroutput>(float * flow)</computeroutput> |</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md94">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md95">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4&quot; &quot;`pollRate`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md96">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65&quot; &quot;`addToSensorVector`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md97">
+<title>&lt;tt&gt;public float[]&lt;/tt&gt;@ref &quot;class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0&quot; &quot;`readVector`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md98">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a&quot; &quot;`SensorPoller`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md99">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d&quot; &quot;`init`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md100">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34&quot; &quot;`readAccelerometer`&quot;&lt;tt&gt;(float * vec)&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md101">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1aa2020c7d465f711303e678e9070dadab&quot; &quot;`readLowAltBaro`&quot;&lt;tt&gt;(float * pressure,float * temp)&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md102">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1ac1e38e730991296e93ebebb88245536a&quot; &quot;`readHighAltBaro`&quot;&lt;tt&gt;(float * pressure,float * temp)&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md103">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e&quot; &quot;`readPressureSensors`&quot;&lt;tt&gt;(float * pressures,float * temperatures)&lt;/tt&gt;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md104">
+<title>&lt;tt&gt;public void&lt;/tt&gt;@ref &quot;class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c&quot; &quot;`readFlowMeter`&quot;&lt;tt&gt;(float * flow)&lt;/tt&gt;</title>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md105">
+<title>class &lt;tt&gt;Writer&lt;/tt&gt;</title>
+<para>Writing class for outputing data into binary or text.</para>
+<sect2 id="md_api_1autotoc_md106">
+<title>Summary</title>
+<para><table rows="4" cols="2"><row>
+<entry thead="yes"><para>Members   </para>
+</entry><entry thead="yes"><para>Descriptions    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public</computeroutput>`Writer`<computeroutput>(const char * name,const int chipSelect,const bool toBinary,const bool overwrite)</computeroutput>   </para>
+</entry><entry thead="no"><para>Construct a Writer class, which is responsible for the taking logType data and writing it to a file for post-processing. This takes some user parameters for writing to binary (false by default) or overwriting the log file (for testing purposes, false by default).    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public int</computeroutput>`writeToFile`<computeroutput>(</computeroutput>`logType`<computeroutput>data)</computeroutput>   </para>
+</entry><entry thead="no"><para>Writes logType data to a File through text or binary methods. If successful, the method returns 0. Otherwise, it fails at other integer values.    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><computeroutput>public int</computeroutput>`init`<computeroutput>()</computeroutput>   </para>
+</entry><entry thead="no"><para>Initialize the writer by making sure the SD card can be detected. If not detected after 10 tries, time out. Also check to see if the user plans to overwrite the existing log file on initialization.   </para>
+</entry></row>
+</table>
+</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md107">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md108">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_writer_1a06639f3d8669309bb57aa89fe85de302&quot; &quot;`Writer`&quot;&lt;tt&gt;(const char * name,const int chipSelect,const bool toBinary,const bool overwrite)&lt;/tt&gt;</title>
+<para>Construct a Writer class, which is responsible for the taking logType data and writing it to a file for post-processing. This takes some user parameters for writing to binary (false by default) or overwriting the log file (for testing purposes, false by default).</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md109">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>name</computeroutput></para>
+</listitem><listitem><para><computeroutput>chipSelect</computeroutput></para>
+</listitem><listitem><para><computeroutput>toBinary</computeroutput></para>
+</listitem><listitem><para><computeroutput>overwrite</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md110">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_writer_1a4e59a184209bcd1133ccf030087fab7f&quot; &quot;`writeToFile`&quot;&lt;tt&gt;(&lt;/tt&gt;@ref &quot;structlog_type&quot; &quot;`logType`&quot;&lt;tt&gt;data)&lt;/tt&gt;</title>
+<para>Writes logType data to a File through text or binary methods. If successful, the method returns 0. Otherwise, it fails at other integer values.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md111">
+<title>Parameters</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>data</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md112">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md113">
+<title>&lt;tt&gt;public int&lt;/tt&gt;@ref &quot;class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8&quot; &quot;`init`&quot;&lt;tt&gt;()&lt;/tt&gt;</title>
+<para>Initialize the writer by making sure the SD card can be detected. If not detected after 10 tries, time out. Also check to see if the user plans to overwrite the existing log file on initialization.</para>
+</sect4>
+<sect4 id="md_api_1autotoc_md114">
+<title>Returns</title>
+<para>int</para>
+</sect4>
+</sect2>
+</sect1>
+<sect1 id="md_api_1autotoc_md115">
+<title>struct &lt;tt&gt;logType&lt;/tt&gt;</title>
+<para>A log standard that is shared between the reader, logger, and writer classes.</para>
+<sect2 id="md_api_1autotoc_md116">
+<title>Summary</title>
+<para>Members | Descriptions <linebreak/>
+ -----------------------------<mdash/>|------------------------------------------<mdash/> <computeroutput>public</computeroutput>`AtmosphericVector`<computeroutput>&lt; float &gt;</computeroutput>`time` | <computeroutput>public</computeroutput>`AtmosphericVector`<computeroutput>&lt; float &gt;</computeroutput>`lowPressure` | <computeroutput>public</computeroutput>`AtmosphericVector`<computeroutput>&lt; float &gt;</computeroutput>`highPressure` | <computeroutput>public</computeroutput>`AtmosphericVector`<computeroutput>&lt; float &gt;</computeroutput>`acceleration` |</para>
+</sect2>
+<sect2 id="md_api_1autotoc_md117">
+<title>Members</title>
+<sect4 id="md_api_1autotoc_md118">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_atmospheric_vector&quot; &quot;`AtmosphericVector`&quot;&lt;tt&gt;&lt; float &gt;&lt;/tt&gt;@ref &quot;structlog_type_1a99408840dfd21747ed6a6ac0b8010061&quot; &quot;`time`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md119">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_atmospheric_vector&quot; &quot;`AtmosphericVector`&quot;&lt;tt&gt;&lt; float &gt;&lt;/tt&gt;@ref &quot;structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21&quot; &quot;`lowPressure`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md120">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_atmospheric_vector&quot; &quot;`AtmosphericVector`&quot;&lt;tt&gt;&lt; float &gt;&lt;/tt&gt;@ref &quot;structlog_type_1ac427d4daf20af0f2756e54154951ed3d&quot; &quot;`highPressure`&quot;</title>
+</sect4>
+<sect4 id="md_api_1autotoc_md121">
+<title>&lt;tt&gt;public&lt;/tt&gt;@ref &quot;class_atmospheric_vector&quot; &quot;`AtmosphericVector`&quot;&lt;tt&gt;&lt; float &gt;&lt;/tt&gt;@ref &quot;structlog_type_1a07557f8ebc502e7ba07083a57f4337b5&quot; &quot;`acceleration`&quot;</title>
+<para>Generated by <ulink url="https://sourcey.com/moxygen">Moxygen</ulink> </para>
+</sect4>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="api.md"/>
+  </compounddef>
+</doxygen>

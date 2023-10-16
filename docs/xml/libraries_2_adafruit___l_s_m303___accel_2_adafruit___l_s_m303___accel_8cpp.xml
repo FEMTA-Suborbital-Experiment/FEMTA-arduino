@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8cpp" kind="file" language="C++">
+    <compoundname>Adafruit_LSM303_Accel.cpp</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes refid="libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h" local="yes">Adafruit_LSM303_Accel.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includes local="no">limits.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>Adafruit_BusIO_Register.h</label>
+      </node>
+      <node id="5">
+        <label>Adafruit_I2CDevice.h</label>
+      </node>
+      <node id="6">
+        <label>Adafruit_Sensor.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp</label>
+        <link refid="libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adafruit_LSM303_Accel.h</label>
+        <link refid="libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="7">
+        <label>Wire.h</label>
+      </node>
+      <node id="8">
+        <label>limits.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h" kindref="compound">Adafruit_LSM303_Accel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>CONSTRUCTOR</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><ref refid="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" kindref="member">Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</ref>(int32_t<sp/>sensorID)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>_sensorID<sp/>=<sp/>sensorID;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>raw<sp/>accel<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>raw.x<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>raw.y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>raw.z<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>PUBLIC<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a624809bb4ec6016bb16ec71fb8e868f6" kindref="member">Adafruit_LSM303_Accel_Unified::begin</ref>(uint8_t<sp/>i2c_address,<sp/>TwoWire<sp/>*wire)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i2c_dev)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>i2c_dev;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>i2c_dev<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref>(i2c_address,<sp/>wire);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!i2c_dev-&gt;<ref refid="class_adafruit___i2_c_device_1ada579d107621ac5f5e56f91f94a93be3" kindref="member">begin</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl1<sp/>=</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG1_A,<sp/>1);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>the<sp/>accelerometer<sp/>(100Hz)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>ctrl1.<ref refid="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" kindref="member">write</ref>(0x57);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>chip_id<sp/>=</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_WHO_AM_I,<sp/>1);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(chip_id.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>()<sp/>!=<sp/>0x33)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>LSM30<sp/>detected<sp/>...<sp/>return<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" kindref="member">Adafruit_LSM303_Accel_Unified::getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>*event)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>memset(event,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Read<sp/>new<sp/>raw<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>readRawData();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>=<sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" kindref="member">getMode</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lsb<sp/>=<sp/>getLSB(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>uint8_t<sp/>shift<sp/>=<sp/>getShift(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;version<sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;sensor_id<sp/>=<sp/>_sensorID;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;type<sp/>=<sp/>SENSOR_TYPE_ACCELEROMETER;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;timestamp<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;acceleration.x<sp/>=</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(float)(raw.x<sp/>&gt;&gt;<sp/>shift)<sp/>*<sp/>lsb<sp/>*<sp/>SENSORS_GRAVITY_STANDARD;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;acceleration.y<sp/>=</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(float)(raw.y<sp/>&gt;&gt;<sp/>shift)<sp/>*<sp/>lsb<sp/>*<sp/>SENSORS_GRAVITY_STANDARD;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;acceleration.z<sp/>=</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(float)(raw.z<sp/>&gt;&gt;<sp/>shift)<sp/>*<sp/>lsb<sp/>*<sp/>SENSORS_GRAVITY_STANDARD;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" kindref="member">Adafruit_LSM303_Accel_Unified::getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>*sensor)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>sensor_t<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>memset(sensor,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>Insert<sp/>the<sp/>sensor<sp/>name<sp/>in<sp/>the<sp/>fixed<sp/>length<sp/>char<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>strncpy(sensor-&gt;<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;LSM303&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sensor-&gt;<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sensor-&gt;<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>)<sp/>-<sp/>1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" kindref="member">version</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" kindref="member">sensor_id</ref><sp/>=<sp/>_sensorID;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1ae1d59df64438923d3bd95f2416c32203" kindref="member">type</ref><sp/>=<sp/>SENSOR_TYPE_ACCELEROMETER;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a1cd271377ff25ec9ca54886f876c87ec" kindref="member">min_delay</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" kindref="member">max_value</ref><sp/>=<sp/>0.0F;<sp/><sp/></highlight><highlight class="comment">//<sp/>TBD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" kindref="member">min_value</ref><sp/>=<sp/>0.0F;<sp/><sp/></highlight><highlight class="comment">//<sp/>TBD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" kindref="member">resolution</ref><sp/>=<sp/>0.0F;<sp/></highlight><highlight class="comment">//<sp/>TBD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1acb414dcb1a0ec2a1b8923bb26c0fd425" kindref="member">Adafruit_LSM303_Accel_Unified::setRange</ref>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref><sp/>new_range)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_4<sp/>=</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG4_A,<sp/>1);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref><sp/>=</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_4,<sp/>2,<sp/>4);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>.write(new_range);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" kindref="member">Adafruit_LSM303_Accel_Unified::getRange</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_4<sp/>=</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG4_A,<sp/>1);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref><sp/>=</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_4,<sp/>2,<sp/>4);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref>)<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>.read();</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a54f0853d3c88a9995b0f4f4f357a267c" kindref="member">Adafruit_LSM303_Accel_Unified::setMode</ref>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref><sp/>new_mode)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_1<sp/>=</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG1_A,<sp/>1);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_4<sp/>=</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG4_A,<sp/>1);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>low_power<sp/>=</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_1,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>hi_res<sp/>=</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_4,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>hi_res.<ref refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" kindref="member">write</ref>(new_mode<sp/>&amp;<sp/>0b01);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>delay(20);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>low_power.<ref refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" kindref="member">write</ref>((new_mode<sp/>&amp;<sp/>0b10)<sp/>&gt;&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>delay(20);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" kindref="member">Adafruit_LSM303_Accel_Unified::getMode</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_1<sp/>=</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG1_A,<sp/>1);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_4<sp/>=</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG4_A,<sp/>1);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>low_power<sp/>=</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_1,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>hi_res<sp/>=</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_4,<sp/>1,<sp/>3);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>uint8_t<sp/>low_power_bit<sp/>=<sp/>low_power.<ref refid="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>uint8_t<sp/>hi_res_bit<sp/>=<sp/>hi_res.<ref refid="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref>)(low_power_bit<sp/>&lt;&lt;<sp/>1<sp/>|<sp/>hi_res_bit);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">//<sp/>/***************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>PRIVATE<sp/>FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Adafruit_LSM303_Accel_Unified::readRawData()<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>sucks<sp/>but<sp/>using<sp/>one<sp/>register<sp/>with<sp/>a<sp/>6<sp/>byte<sp/>read<sp/>to<sp/>buffer<sp/>doesn&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>work.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg0<sp/>=</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_X_L_A,<sp/>1);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg1<sp/>=</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_X_H_A,<sp/>1);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg2<sp/>=</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_Y_L_A,<sp/>1);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg3<sp/>=</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_Y_H_A,<sp/>1);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg4<sp/>=</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_Z_L_A,<sp/>1);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>data_reg5<sp/>=</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_OUT_Z_H_A,<sp/>1);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>uint8_t<sp/>xlo<sp/>=<sp/>data_reg0.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>uint8_t<sp/>xhi<sp/>=<sp/>data_reg1.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>uint8_t<sp/>ylo<sp/>=<sp/>data_reg2.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/>uint8_t<sp/>yhi<sp/>=<sp/>data_reg3.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/>uint8_t<sp/>zlo<sp/>=<sp/>data_reg4.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>uint8_t<sp/>zhi<sp/>=<sp/>data_reg5.<ref refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>raw.x<sp/>=<sp/>(int16_t)(xlo<sp/>|<sp/>(xhi<sp/>&lt;&lt;<sp/>8));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>raw.y<sp/>=<sp/>(int16_t)(ylo<sp/>|<sp/>(yhi<sp/>&lt;&lt;<sp/>8));</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>raw.z<sp/>=<sp/>(int16_t)(zlo<sp/>|<sp/>(zhi<sp/>&lt;&lt;<sp/>8));</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Adafruit_LSM303_Accel_Unified::getLSB(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lsb<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref><sp/>=<sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" kindref="member">getRange</ref>();</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>==<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167aa7bb202067cb680a2f587532c10065e2" kindref="member">LSM303_MODE_NORMAL</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a1c38579a8c63e96c72a4a7f4ae625943" kindref="member">LSM303_RANGE_2G</ref>:</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.0039;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a66666d94f11aeb7b32b311786e209e3b" kindref="member">LSM303_RANGE_4G</ref>:</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.00782;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a8ca2ee7086d3f9b8110724bdbbc2b631" kindref="member">LSM303_RANGE_8G</ref>:</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.01563;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849af532c6e9be97c5d66b49165e4058878c" kindref="member">LSM303_RANGE_16G</ref>:</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.0469;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>==<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167afde3d73fc09da241227644fec2506165" kindref="member">LSM303_MODE_HIGH_RESOLUTION</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a1c38579a8c63e96c72a4a7f4ae625943" kindref="member">LSM303_RANGE_2G</ref>:</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.00098;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a66666d94f11aeb7b32b311786e209e3b" kindref="member">LSM303_RANGE_4G</ref>:</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.00195;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a8ca2ee7086d3f9b8110724bdbbc2b631" kindref="member">LSM303_RANGE_8G</ref>:</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.0039;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849af532c6e9be97c5d66b49165e4058878c" kindref="member">LSM303_RANGE_16G</ref>:</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.01172;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>==<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167a0d2504be2657e41773d07eec2c9d734a" kindref="member">LSM303_MODE_LOW_POWER</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a1c38579a8c63e96c72a4a7f4ae625943" kindref="member">LSM303_RANGE_2G</ref>:</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.01563;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a66666d94f11aeb7b32b311786e209e3b" kindref="member">LSM303_RANGE_4G</ref>:</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.03126;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849a8ca2ee7086d3f9b8110724bdbbc2b631" kindref="member">LSM303_RANGE_8G</ref>:</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.06252;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849af532c6e9be97c5d66b49165e4058878c" kindref="member">LSM303_RANGE_16G</ref>:</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lsb<sp/>=<sp/>0.18758;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lsb;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal">uint8_t<sp/>Adafruit_LSM303_Accel_Unified::getShift(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/>uint8_t<sp/>shift<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167afde3d73fc09da241227644fec2506165" kindref="member">LSM303_MODE_HIGH_RESOLUTION</ref>:</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167aa7bb202067cb680a2f587532c10065e2" kindref="member">LSM303_MODE_NORMAL</ref>:</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167a0d2504be2657e41773d07eec2c9d734a" kindref="member">LSM303_MODE_LOW_POWER</ref>:</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>shift;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight><highlight class="comment">/*************************************************************************/</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a822cf180aa4f4cd84ded428a34c07cde" kindref="member">Adafruit_LSM303_Accel_Unified::interruptsActiveHigh</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active_high)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>ctrl_6<sp/>=</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(i2c_dev,<sp/>LSM303_REGISTER_ACCEL_CTRL_REG6_A);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>active_low_bit<sp/>=</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(&amp;ctrl_6,<sp/>1,<sp/>1);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/>active_low_bit.<ref refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" kindref="member">write</ref>(active_high);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp"/>
+  </compounddef>
+</doxygen>

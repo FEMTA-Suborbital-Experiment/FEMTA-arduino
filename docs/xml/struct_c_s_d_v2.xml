@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_c_s_d_v2" kind="struct" language="C++" prot="public">
+    <compoundname>CSDV2</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a7778a9786d45cd4efa7bf06d7bded52a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved1</definition>
+        <argsstring></argsstring>
+        <name>reserved1</name>
+        <qualifiedname>CSDV2::reserved1</qualifiedname>
+        <bitfield> 6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="173" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a59dccb194acb31b218f94f2fbb81f92b" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::csd_ver</definition>
+        <argsstring></argsstring>
+        <name>csd_ver</name>
+        <qualifiedname>CSDV2::csd_ver</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="174" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a66975134ee179b2c2d93bf4ae3b522dd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::taac</definition>
+        <argsstring></argsstring>
+        <name>taac</name>
+        <qualifiedname>CSDV2::taac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="176" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a2fcdefca1df007ad0527d29af26c34ac" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::nsac</definition>
+        <argsstring></argsstring>
+        <name>nsac</name>
+        <qualifiedname>CSDV2::nsac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="178" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a4321f8cba41dcefe65e4d8357b93a705" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::tran_speed</definition>
+        <argsstring></argsstring>
+        <name>tran_speed</name>
+        <qualifiedname>CSDV2::tran_speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="180" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a577a7333925acccced97b25905f50c6e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::ccc_high</definition>
+        <argsstring></argsstring>
+        <name>ccc_high</name>
+        <qualifiedname>CSDV2::ccc_high</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="182" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a79cb233cef532dc1682e0ef11f7745dc" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::read_bl_len</definition>
+        <argsstring></argsstring>
+        <name>read_bl_len</name>
+        <qualifiedname>CSDV2::read_bl_len</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="184" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1ae40da77d4c0d6c911ebd868eceda8ea9" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::ccc_low</definition>
+        <argsstring></argsstring>
+        <name>ccc_low</name>
+        <qualifiedname>CSDV2::ccc_low</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="185" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a5151e2d94077d2a1ac8361174e4cd55a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved2</definition>
+        <argsstring></argsstring>
+        <name>reserved2</name>
+        <qualifiedname>CSDV2::reserved2</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="187" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a125f8388263cb94ac83fea63e1e375f5" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::dsr_imp</definition>
+        <argsstring></argsstring>
+        <name>dsr_imp</name>
+        <qualifiedname>CSDV2::dsr_imp</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="188" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1aa4b5351683ccc4331a446dccfa22ba97" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::read_blk_misalign</definition>
+        <argsstring></argsstring>
+        <name>read_blk_misalign</name>
+        <qualifiedname>CSDV2::read_blk_misalign</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="189" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a581efcca315ea376735dd9ca7f5172a8" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::write_blk_misalign</definition>
+        <argsstring></argsstring>
+        <name>write_blk_misalign</name>
+        <qualifiedname>CSDV2::write_blk_misalign</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="190" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1acb3ef2206ca2c6c5266c67b695509036" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::read_bl_partial</definition>
+        <argsstring></argsstring>
+        <name>read_bl_partial</name>
+        <qualifiedname>CSDV2::read_bl_partial</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="191" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a75924bf9bb5d5789e504a7b2d0dafb52" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved3</definition>
+        <argsstring></argsstring>
+        <name>reserved3</name>
+        <qualifiedname>CSDV2::reserved3</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="193" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a3bfb96cd3f44af64691bc12fbdaf6bbd" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::c_size_high</definition>
+        <argsstring></argsstring>
+        <name>c_size_high</name>
+        <qualifiedname>CSDV2::c_size_high</qualifiedname>
+        <bitfield> 6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="194" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a7f5abf62601418f93bf7db3e4c44cf17" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::c_size_mid</definition>
+        <argsstring></argsstring>
+        <name>c_size_mid</name>
+        <qualifiedname>CSDV2::c_size_mid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="196" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1aa3717fe7ec52d0336e3729144c15ca3d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CSDV2::c_size_low</definition>
+        <argsstring></argsstring>
+        <name>c_size_low</name>
+        <qualifiedname>CSDV2::c_size_low</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="198" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1aa8630e4c75cd434e0db43b1644b028b4" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::sector_size_high</definition>
+        <argsstring></argsstring>
+        <name>sector_size_high</name>
+        <qualifiedname>CSDV2::sector_size_high</qualifiedname>
+        <bitfield> 6</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="200" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1abd116d457efa09f91c5fad2536718299" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::erase_blk_en</definition>
+        <argsstring></argsstring>
+        <name>erase_blk_en</name>
+        <qualifiedname>CSDV2::erase_blk_en</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="201" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a4f474cd2339283c9a2224eb1259c8e53" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved4</definition>
+        <argsstring></argsstring>
+        <name>reserved4</name>
+        <qualifiedname>CSDV2::reserved4</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="202" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1afc375bf41f2bffcea61b4a26e95a259a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::wp_grp_size</definition>
+        <argsstring></argsstring>
+        <name>wp_grp_size</name>
+        <qualifiedname>CSDV2::wp_grp_size</qualifiedname>
+        <bitfield> 7</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="204" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a4fbf01ce65824823473004d8507a9682" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::sector_size_low</definition>
+        <argsstring></argsstring>
+        <name>sector_size_low</name>
+        <qualifiedname>CSDV2::sector_size_low</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="205" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1aa2b4a19a9ee6671b3441636868d2559e" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::write_bl_len_high</definition>
+        <argsstring></argsstring>
+        <name>write_bl_len_high</name>
+        <qualifiedname>CSDV2::write_bl_len_high</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="207" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a58bd5e31a21564370b5321ce744c53cf" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::r2w_factor</definition>
+        <argsstring></argsstring>
+        <name>r2w_factor</name>
+        <qualifiedname>CSDV2::r2w_factor</qualifiedname>
+        <bitfield> 3</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="208" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a6beffc3766b7f6cd658e3dad5b7e12f7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved5</definition>
+        <argsstring></argsstring>
+        <name>reserved5</name>
+        <qualifiedname>CSDV2::reserved5</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="209" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a17bbbfe5a1d0da01eeb9dc0e78d1fccc" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::wp_grp_enable</definition>
+        <argsstring></argsstring>
+        <name>wp_grp_enable</name>
+        <qualifiedname>CSDV2::wp_grp_enable</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="210" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1ac401478963e75077602ad0ca9f93c98a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved6</definition>
+        <argsstring></argsstring>
+        <name>reserved6</name>
+        <qualifiedname>CSDV2::reserved6</qualifiedname>
+        <bitfield> 5</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="212" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a5bdeb28b6b264d0da4d881881d135c7a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::write_partial</definition>
+        <argsstring></argsstring>
+        <name>write_partial</name>
+        <qualifiedname>CSDV2::write_partial</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="213" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a5455039cfbcd62d47d8777326a8332d5" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::write_bl_len_low</definition>
+        <argsstring></argsstring>
+        <name>write_bl_len_low</name>
+        <qualifiedname>CSDV2::write_bl_len_low</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="214" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a10ae8595e043b636b4aeaedcefaa4f97" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::reserved7</definition>
+        <argsstring></argsstring>
+        <name>reserved7</name>
+        <qualifiedname>CSDV2::reserved7</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="216" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1ac1c316bc9b54c269007fb8e29f635508" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::file_format</definition>
+        <argsstring></argsstring>
+        <name>file_format</name>
+        <qualifiedname>CSDV2::file_format</qualifiedname>
+        <bitfield> 2</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="217" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a15af35048d759ff86290222b7ce8e217" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::tmp_write_protect</definition>
+        <argsstring></argsstring>
+        <name>tmp_write_protect</name>
+        <qualifiedname>CSDV2::tmp_write_protect</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="218" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1ae8a4cd07025c0192acc093cca8379d73" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::perm_write_protect</definition>
+        <argsstring></argsstring>
+        <name>perm_write_protect</name>
+        <qualifiedname>CSDV2::perm_write_protect</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="219" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a94c3a6332d4905be59800fd59aafe5ff" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::copy</definition>
+        <argsstring></argsstring>
+        <name>copy</name>
+        <qualifiedname>CSDV2::copy</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="220" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a093e6982187fdc5ba9c787c014f6296c" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::file_format_grp</definition>
+        <argsstring></argsstring>
+        <name>file_format_grp</name>
+        <qualifiedname>CSDV2::file_format_grp</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="221" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a3bcdd97582c0d282b5e4270def81f156" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::always1</definition>
+        <argsstring></argsstring>
+        <name>always1</name>
+        <qualifiedname>CSDV2::always1</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="223" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_s_d_v2_1a099f7c6b9acbfa6b733fe4ab94c10ccc" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CSDV2::crc</definition>
+        <argsstring></argsstring>
+        <name>crc</name>
+        <qualifiedname>CSDV2::crc</qualifiedname>
+        <bitfield> 7</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="224" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="224" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="171" column="1" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="171" bodyend="225"/>
+    <listofallmembers>
+      <member refid="struct_c_s_d_v2_1a3bcdd97582c0d282b5e4270def81f156" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>always1</name></member>
+      <member refid="struct_c_s_d_v2_1a3bfb96cd3f44af64691bc12fbdaf6bbd" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>c_size_high</name></member>
+      <member refid="struct_c_s_d_v2_1aa3717fe7ec52d0336e3729144c15ca3d" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>c_size_low</name></member>
+      <member refid="struct_c_s_d_v2_1a7f5abf62601418f93bf7db3e4c44cf17" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>c_size_mid</name></member>
+      <member refid="struct_c_s_d_v2_1a577a7333925acccced97b25905f50c6e" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>ccc_high</name></member>
+      <member refid="struct_c_s_d_v2_1ae40da77d4c0d6c911ebd868eceda8ea9" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>ccc_low</name></member>
+      <member refid="struct_c_s_d_v2_1a94c3a6332d4905be59800fd59aafe5ff" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>copy</name></member>
+      <member refid="struct_c_s_d_v2_1a099f7c6b9acbfa6b733fe4ab94c10ccc" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>crc</name></member>
+      <member refid="struct_c_s_d_v2_1a59dccb194acb31b218f94f2fbb81f92b" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>csd_ver</name></member>
+      <member refid="struct_c_s_d_v2_1a125f8388263cb94ac83fea63e1e375f5" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>dsr_imp</name></member>
+      <member refid="struct_c_s_d_v2_1abd116d457efa09f91c5fad2536718299" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>erase_blk_en</name></member>
+      <member refid="struct_c_s_d_v2_1ac1c316bc9b54c269007fb8e29f635508" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>file_format</name></member>
+      <member refid="struct_c_s_d_v2_1a093e6982187fdc5ba9c787c014f6296c" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>file_format_grp</name></member>
+      <member refid="struct_c_s_d_v2_1a2fcdefca1df007ad0527d29af26c34ac" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>nsac</name></member>
+      <member refid="struct_c_s_d_v2_1ae8a4cd07025c0192acc093cca8379d73" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>perm_write_protect</name></member>
+      <member refid="struct_c_s_d_v2_1a58bd5e31a21564370b5321ce744c53cf" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>r2w_factor</name></member>
+      <member refid="struct_c_s_d_v2_1a79cb233cef532dc1682e0ef11f7745dc" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>read_bl_len</name></member>
+      <member refid="struct_c_s_d_v2_1acb3ef2206ca2c6c5266c67b695509036" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>read_bl_partial</name></member>
+      <member refid="struct_c_s_d_v2_1aa4b5351683ccc4331a446dccfa22ba97" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>read_blk_misalign</name></member>
+      <member refid="struct_c_s_d_v2_1a7778a9786d45cd4efa7bf06d7bded52a" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved1</name></member>
+      <member refid="struct_c_s_d_v2_1a5151e2d94077d2a1ac8361174e4cd55a" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved2</name></member>
+      <member refid="struct_c_s_d_v2_1a75924bf9bb5d5789e504a7b2d0dafb52" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved3</name></member>
+      <member refid="struct_c_s_d_v2_1a4f474cd2339283c9a2224eb1259c8e53" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved4</name></member>
+      <member refid="struct_c_s_d_v2_1a6beffc3766b7f6cd658e3dad5b7e12f7" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved5</name></member>
+      <member refid="struct_c_s_d_v2_1ac401478963e75077602ad0ca9f93c98a" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved6</name></member>
+      <member refid="struct_c_s_d_v2_1a10ae8595e043b636b4aeaedcefaa4f97" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>reserved7</name></member>
+      <member refid="struct_c_s_d_v2_1aa8630e4c75cd434e0db43b1644b028b4" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>sector_size_high</name></member>
+      <member refid="struct_c_s_d_v2_1a4fbf01ce65824823473004d8507a9682" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>sector_size_low</name></member>
+      <member refid="struct_c_s_d_v2_1a66975134ee179b2c2d93bf4ae3b522dd" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>taac</name></member>
+      <member refid="struct_c_s_d_v2_1a15af35048d759ff86290222b7ce8e217" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>tmp_write_protect</name></member>
+      <member refid="struct_c_s_d_v2_1a4321f8cba41dcefe65e4d8357b93a705" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>tran_speed</name></member>
+      <member refid="struct_c_s_d_v2_1a17bbbfe5a1d0da01eeb9dc0e78d1fccc" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>wp_grp_enable</name></member>
+      <member refid="struct_c_s_d_v2_1afc375bf41f2bffcea61b4a26e95a259a" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>wp_grp_size</name></member>
+      <member refid="struct_c_s_d_v2_1aa2b4a19a9ee6671b3441636868d2559e" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>write_bl_len_high</name></member>
+      <member refid="struct_c_s_d_v2_1a5455039cfbcd62d47d8777326a8332d5" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>write_bl_len_low</name></member>
+      <member refid="struct_c_s_d_v2_1a581efcca315ea376735dd9ca7f5172a8" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>write_blk_misalign</name></member>
+      <member refid="struct_c_s_d_v2_1a5bdeb28b6b264d0da4d881881d135c7a" prot="public" virt="non-virtual"><scope>CSDV2</scope><name>write_partial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

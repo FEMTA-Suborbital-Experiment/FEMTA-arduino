@@ -1,0 +1,1138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sd_volume" kind="class" language="C++" prot="public">
+    <compoundname>SdVolume</compoundname>
+    <includes refid="_sd_fat_8h" local="no">SdFat.h</includes>
+    <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_sd_volume_1ad89809cf54bdf885b0505e5edeff2049" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class SdFile</definition>
+        <argsstring></argsstring>
+        <name>SdFile</name>
+        <qualifiedname>SdVolume::SdFile</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="572" column="18" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="572" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_sd_volume_1a8a4d9b920289c01107cfc600cafe5b2b" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdVolume::CACHE_FOR_READ</definition>
+        <argsstring></argsstring>
+        <name>CACHE_FOR_READ</name>
+        <qualifiedname>SdVolume::CACHE_FOR_READ</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="575" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="575" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a20ec87eac48c050b48fe7365a79484c0" prot="private" static="yes" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const SdVolume::CACHE_FOR_WRITE</definition>
+        <argsstring></argsstring>
+        <name>CACHE_FOR_WRITE</name>
+        <qualifiedname>SdVolume::CACHE_FOR_WRITE</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="577" column="26" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a15dba3a8193dd80d5da9cddc8f2d1613" prot="private" static="yes" mutable="no">
+        <type><ref refid="unioncache__t" kindref="compound">cache_t</ref></type>
+        <definition>cache_t SdVolume::cacheBuffer_</definition>
+        <argsstring></argsstring>
+        <name>cacheBuffer_</name>
+        <qualifiedname>SdVolume::cacheBuffer_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="579" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a7fd915253194b6a539eb36e966d02dd3" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::cacheBlockNumber_</definition>
+        <argsstring></argsstring>
+        <name>cacheBlockNumber_</name>
+        <qualifiedname>SdVolume::cacheBlockNumber_</qualifiedname>
+        <initializer>= 0XFFFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="580" column="21" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1af58060df8a3f125a81cf6294bb120a51" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> *</type>
+        <definition>Sd2Card * SdVolume::sdCard_</definition>
+        <argsstring></argsstring>
+        <name>sdCard_</name>
+        <qualifiedname>SdVolume::sdCard_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="581" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a862fd50ab1e7b11c20f841869c484b99" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::cacheDirty_</definition>
+        <argsstring></argsstring>
+        <name>cacheDirty_</name>
+        <qualifiedname>SdVolume::cacheDirty_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="582" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a976ebab4b635d22f3cea0e97a4c7a936" prot="private" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::cacheMirrorBlock_</definition>
+        <argsstring></argsstring>
+        <name>cacheMirrorBlock_</name>
+        <qualifiedname>SdVolume::cacheMirrorBlock_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="583" column="21" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="583" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sd_volume_1aa077429d0aa1f170a0a164cd11bbf91e" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::allocSearchStart_</definition>
+        <argsstring></argsstring>
+        <name>allocSearchStart_</name>
+        <qualifiedname>SdVolume::allocSearchStart_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="585" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1afb23528bdacf2997068232f489a8c6cc" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::blocksPerCluster_</definition>
+        <argsstring></argsstring>
+        <name>blocksPerCluster_</name>
+        <qualifiedname>SdVolume::blocksPerCluster_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="586" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a0f272c8acebfd1434798dd335b396e67" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::blocksPerFat_</definition>
+        <argsstring></argsstring>
+        <name>blocksPerFat_</name>
+        <qualifiedname>SdVolume::blocksPerFat_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="587" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1aaf69cd22717602aacfc1b9a51c69245f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::clusterCount_</definition>
+        <argsstring></argsstring>
+        <name>clusterCount_</name>
+        <qualifiedname>SdVolume::clusterCount_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="588" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1aa1d6cb691ef6b795267dbf05c0fef37a" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::clusterSizeShift_</definition>
+        <argsstring></argsstring>
+        <name>clusterSizeShift_</name>
+        <qualifiedname>SdVolume::clusterSizeShift_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="589" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a4d03fee187ebfa8dc4b92183a2f19fc3" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::dataStartBlock_</definition>
+        <argsstring></argsstring>
+        <name>dataStartBlock_</name>
+        <qualifiedname>SdVolume::dataStartBlock_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="590" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a915c3eb3aa08b691116ea6b8406270ca" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatCount_</definition>
+        <argsstring></argsstring>
+        <name>fatCount_</name>
+        <qualifiedname>SdVolume::fatCount_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="591" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1aeed48344b94a550dc046d54ddf844d7f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::fatStartBlock_</definition>
+        <argsstring></argsstring>
+        <name>fatStartBlock_</name>
+        <qualifiedname>SdVolume::fatStartBlock_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="592" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="592" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1ad658d6ee453311732807226380f7ce74" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatType_</definition>
+        <argsstring></argsstring>
+        <name>fatType_</name>
+        <qualifiedname>SdVolume::fatType_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="593" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a8ace409388fb8ec83f1991f0bb833839" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SdVolume::rootDirEntryCount_</definition>
+        <argsstring></argsstring>
+        <name>rootDirEntryCount_</name>
+        <qualifiedname>SdVolume::rootDirEntryCount_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="594" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sd_volume_1a4f6064483cc59d26bee8c7e7bd0e0587" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::rootDirStart_</definition>
+        <argsstring></argsstring>
+        <name>rootDirStart_</name>
+        <qualifiedname>SdVolume::rootDirStart_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="595" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="595" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sd_volume_1a1843d58062920d6d0e122892ffa42923" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SdVolume::SdVolume</definition>
+        <argsstring>(void)</argsstring>
+        <name>SdVolume</name>
+        <qualifiedname>SdVolume::SdVolume</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create an instance of <ref refid="class_sd_volume" kindref="compound">SdVolume</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="485" column="5" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="485" bodyend="485"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1adfcf83cba537b831f3a993a058e7ca85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::init</definition>
+        <argsstring>(Sd2Card *dev)</argsstring>
+        <name>init</name>
+        <qualifiedname>SdVolume::init</qualifiedname>
+        <param>
+          <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a FAT volume. Try partition one first then try super floppy format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> where the volume is located.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include not finding a valid partition, not finding a valid FAT file system or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="505" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="505" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a8f5879e458ea6f1a2a2a2b884d800550" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::init</definition>
+        <argsstring>(Sd2Card *dev, uint8_t part)</argsstring>
+        <name>init</name>
+        <qualifiedname>SdVolume::init</qualifiedname>
+        <param>
+          <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> *</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize a FAT volume.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SD card where the volume is located.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">part</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The partition to be used. Legal values for <emphasis>part</emphasis> are 1-4 to use the corresponding partition on a device formatted with a MBR, Master Boot Record, or zero if the device is formatted as a super floppy with the FAT boot sector in block zero.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value one, true, is returned for success and the value zero, false, is returned for failure. Reasons for failure include not finding a valid partition, not finding a valid FAT file system in the specified partition or an I/O error. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="508" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="275" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ad6cb99a5d4e9e53651297b999eb2256f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::blocksPerCluster</definition>
+        <argsstring>(void) const</argsstring>
+        <name>blocksPerCluster</name>
+        <qualifiedname>SdVolume::blocksPerCluster</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The volume&apos;s cluster size in blocks. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="512" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="512" bodyend="514"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a783bfc6ced6f6af86c1e94d394ebe76c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::blocksPerFat</definition>
+        <argsstring>(void) const</argsstring>
+        <name>blocksPerFat</name>
+        <qualifiedname>SdVolume::blocksPerFat</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of blocks in one FAT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="516" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="516" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a9d70b14b7bd7cb07d4c90e854283aed9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::clusterCount</definition>
+        <argsstring>(void) const</argsstring>
+        <name>clusterCount</name>
+        <qualifiedname>SdVolume::clusterCount</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The total number of clusters in the volume. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="520" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="520" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a7cdcb6e4c187c96b1b536f9bc587c659" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::clusterSizeShift</definition>
+        <argsstring>(void) const</argsstring>
+        <name>clusterSizeShift</name>
+        <qualifiedname>SdVolume::clusterSizeShift</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The shift count required to multiply by blocksPerCluster. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="524" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="524" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a8e6813781321490fad895ce7b16a8638" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::dataStartBlock</definition>
+        <argsstring>(void) const</argsstring>
+        <name>dataStartBlock</name>
+        <qualifiedname>SdVolume::dataStartBlock</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The logical block number for the start of file data. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="528" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="528" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ad0985d6a2a136aedacd7678977b0e015" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatCount</definition>
+        <argsstring>(void) const</argsstring>
+        <name>fatCount</name>
+        <qualifiedname>SdVolume::fatCount</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of FAT structures on the volume. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="532" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="532" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a05f8847162b9d9f77b1b8db95cd63cec" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::fatStartBlock</definition>
+        <argsstring>(void) const</argsstring>
+        <name>fatStartBlock</name>
+        <qualifiedname>SdVolume::fatStartBlock</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The logical block number for the start of the first FAT. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="536" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="536" bodyend="538"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a85adb29d404b08b1b58e9f105b60ea8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatType</definition>
+        <argsstring>(void) const</argsstring>
+        <name>fatType</name>
+        <qualifiedname>SdVolume::fatType</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The FAT type of the volume. Values are 12, 16 or 32. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="540" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="540" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1addfdd68b9d9f728ac29d38f78c3fbead" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::rootDirEntryCount</definition>
+        <argsstring>(void) const</argsstring>
+        <name>rootDirEntryCount</name>
+        <qualifiedname>SdVolume::rootDirEntryCount</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The number of entries in the root directory for FAT16 volumes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="544" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="544" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1aeb10811341acc97f7ccda2394c777072" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::rootDirStart</definition>
+        <argsstring>(void) const</argsstring>
+        <name>rootDirStart</name>
+        <qualifiedname>SdVolume::rootDirStart</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The logical block number for the start of the root directory on FAT16 volumes or the first cluster number on FAT32 volumes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="549" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="549" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a037defc7dc23b38ee7ddf7b5273aea5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::init</definition>
+        <argsstring>(Sd2Card &amp;dev)</argsstring>
+        <name>init</name>
+        <qualifiedname>SdVolume::init</qualifiedname>
+        <param>
+          <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> &amp;</type>
+          <declname>dev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000012"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_volume_1adfcf83cba537b831f3a993a058e7ca85" kindref="member">SdVolume::init(Sd2Card* dev)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="560" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="560" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a51d8b4c5dd7372eb7dec486472139eb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::init</definition>
+        <argsstring>(Sd2Card &amp;dev, uint8_t part)</argsstring>
+        <name>init</name>
+        <qualifiedname>SdVolume::init</qualifiedname>
+        <param>
+          <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> &amp;</type>
+          <declname>dev</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>part</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000013"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use: uint8_t <ref refid="class_sd_volume_1a8f5879e458ea6f1a2a2a2b884d800550" kindref="member">SdVolume::init(Sd2Card* dev, uint8_t vol)</ref>; </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="565" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="565" bodyend="567"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_sd_volume_1a67b1f1cb378367f5a14e062fa284b6ed" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t *</type>
+        <definition>static uint8_t * SdVolume::cacheClear</definition>
+        <argsstring>(void)</argsstring>
+        <name>cacheClear</name>
+        <qualifiedname>SdVolume::cacheClear</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear the cache and returns a pointer to the cache. Used by the WaveRP recorder to do raw write to the SD card. Not for normal apps. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="489" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="489" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ad7433c0f197f28e77db117d1400ed539" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> *</type>
+        <definition>static Sd2Card * SdVolume::sdCard</definition>
+        <argsstring>(void)</argsstring>
+        <name>sdCard</name>
+        <qualifiedname>SdVolume::sdCard</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return a pointer to the <ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> object for this volume </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="553" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="553" bodyend="555"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sd_volume_1a930de0bb6e056f06ca091a61b747c49a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::allocContiguous</definition>
+        <argsstring>(uint32_t count, uint32_t *curCluster)</argsstring>
+        <name>allocContiguous</name>
+        <qualifiedname>SdVolume::allocContiguous</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>curCluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="597" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="31" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1aea444b5c8ef9402db3d386270b87b4c8" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::blockOfCluster</definition>
+        <argsstring>(uint32_t position) const</argsstring>
+        <name>blockOfCluster</name>
+        <qualifiedname>SdVolume::blockOfCluster</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="598" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="598" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1af45c2ecc54af05b82d305d773723c89c" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::clusterStartBlock</definition>
+        <argsstring>(uint32_t cluster) const</argsstring>
+        <name>clusterStartBlock</name>
+        <qualifiedname>SdVolume::clusterStartBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="601" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="601" bodyend="603"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a3ab72aa71ee8159800bca23918a2e28e" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t SdVolume::blockNumber</definition>
+        <argsstring>(uint32_t cluster, uint32_t position) const</argsstring>
+        <name>blockNumber</name>
+        <qualifiedname>SdVolume::blockNumber</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="604" column="14" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="604" bodyend="606"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ae2e1b7a75d8ee2c0cd13ab32723cc56a" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::chainSize</definition>
+        <argsstring>(uint32_t beginCluster, uint32_t *size) const</argsstring>
+        <name>chainSize</name>
+        <qualifiedname>SdVolume::chainSize</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>beginCluster</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="614" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="170" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ac0a20360ebc30dc314befba967389714" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatGet</definition>
+        <argsstring>(uint32_t cluster, uint32_t *value) const</argsstring>
+        <name>fatGet</name>
+        <qualifiedname>SdVolume::fatGet</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>uint32_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="615" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="183" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a1c3281f89bd526ec7217d75487693ce1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatPut</definition>
+        <argsstring>(uint32_t cluster, uint32_t value)</argsstring>
+        <name>fatPut</name>
+        <qualifiedname>SdVolume::fatPut</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="616" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="203" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1aae1923e6e22c2bede1ea92a36db7ef22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::fatPutEOC</definition>
+        <argsstring>(uint32_t cluster)</argsstring>
+        <name>fatPutEOC</name>
+        <qualifiedname>SdVolume::fatPutEOC</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="617" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="617" bodyend="619"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1aebd5fc75f04c7c1a9653f78a47f0b39f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::freeChain</definition>
+        <argsstring>(uint32_t cluster)</argsstring>
+        <name>freeChain</name>
+        <qualifiedname>SdVolume::freeChain</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="620" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="239" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a7cf2f46269b5cf8ec47c68eeae8c4fed" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::isEOC</definition>
+        <argsstring>(uint32_t cluster) const</argsstring>
+        <name>isEOC</name>
+        <qualifiedname>SdVolume::isEOC</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>cluster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="621" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="621" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a8179c56cf68e935e864d35b7964d0027" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::readBlock</definition>
+        <argsstring>(uint32_t block, uint8_t *dst)</argsstring>
+        <name>readBlock</name>
+        <qualifiedname>SdVolume::readBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="624" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="624" bodyend="626"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a6b1abe403fe0cd6c0d66fd8f9aafa7a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::readData</definition>
+        <argsstring>(uint32_t block, uint16_t offset, uint16_t count, uint8_t *dst)</argsstring>
+        <name>readData</name>
+        <qualifiedname>SdVolume::readData</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="627" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="627" bodyend="630"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a7a7112b5007e1c24cec81a47007dfa89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::writeBlock</definition>
+        <argsstring>(uint32_t block, const uint8_t *dst, uint8_t blocking=1)</argsstring>
+        <name>writeBlock</name>
+        <qualifiedname>SdVolume::writeBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>block</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>blocking</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="631" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="631" bodyend="633"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1ae7f99f4e9f2150a1d10b3a27c7785b41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::isBusy</definition>
+        <argsstring>(void)</argsstring>
+        <name>isBusy</name>
+        <qualifiedname>SdVolume::isBusy</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="634" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="634" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a17130f3c18b1dd96e7d9cf5ddaa160a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::isCacheMirrorBlockDirty</definition>
+        <argsstring>(void)</argsstring>
+        <name>isCacheMirrorBlockDirty</name>
+        <qualifiedname>SdVolume::isCacheMirrorBlockDirty</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="637" column="13" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="637" bodyend="639"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_sd_volume_1ab1cce12f620beff7cfc08ffad8dfd0f3" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::cacheFlush</definition>
+        <argsstring>(uint8_t blocking=1)</argsstring>
+        <name>cacheFlush</name>
+        <qualifiedname>SdVolume::cacheFlush</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>blocking</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="607" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="111" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a6628f0d9c8db9cf41b4b6fd2a68027b1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::cacheMirrorBlockFlush</definition>
+        <argsstring>(uint8_t blocking)</argsstring>
+        <name>cacheMirrorBlockFlush</name>
+        <qualifiedname>SdVolume::cacheMirrorBlockFlush</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>blocking</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="608" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="130" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1abe1cb1c55073cb2e10eea1e71229c0c1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::cacheRawBlock</definition>
+        <argsstring>(uint32_t blockNumber, uint8_t action)</argsstring>
+        <name>cacheRawBlock</name>
+        <qualifiedname>SdVolume::cacheRawBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>blockNumber</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>action</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="609" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="140" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1adb1e4e7404c9136f36c6c344ae47d15d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SdVolume::cacheSetDirty</definition>
+        <argsstring>(void)</argsstring>
+        <name>cacheSetDirty</name>
+        <qualifiedname>SdVolume::cacheSetDirty</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="610" column="17" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="610" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sd_volume_1a5d3a669674ebbd2850269ed2c6ed5c34" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SdVolume::cacheZeroBlock</definition>
+        <argsstring>(uint32_t blockNumber)</argsstring>
+        <name>cacheZeroBlock</name>
+        <qualifiedname>SdVolume::cacheZeroBlock</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>blockNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="613" column="20" bodyfile="libraries/SD-1.2.4/src/utility/SdVolume.cpp" bodystart="155" bodyend="167"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Access FAT16 and FAT32 volumes on SD and SDHC cards. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/SdFat.h" line="482" column="1" bodyfile="libraries/SD-1.2.4/src/utility/SdFat.h" bodystart="482" bodyend="640"/>
+    <listofallmembers>
+      <member refid="class_sd_volume_1a930de0bb6e056f06ca091a61b747c49a" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>allocContiguous</name></member>
+      <member refid="class_sd_volume_1aa077429d0aa1f170a0a164cd11bbf91e" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>allocSearchStart_</name></member>
+      <member refid="class_sd_volume_1a3ab72aa71ee8159800bca23918a2e28e" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>blockNumber</name></member>
+      <member refid="class_sd_volume_1aea444b5c8ef9402db3d386270b87b4c8" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>blockOfCluster</name></member>
+      <member refid="class_sd_volume_1ad6cb99a5d4e9e53651297b999eb2256f" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>blocksPerCluster</name></member>
+      <member refid="class_sd_volume_1afb23528bdacf2997068232f489a8c6cc" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>blocksPerCluster_</name></member>
+      <member refid="class_sd_volume_1a783bfc6ced6f6af86c1e94d394ebe76c" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>blocksPerFat</name></member>
+      <member refid="class_sd_volume_1a0f272c8acebfd1434798dd335b396e67" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>blocksPerFat_</name></member>
+      <member refid="class_sd_volume_1a8a4d9b920289c01107cfc600cafe5b2b" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>CACHE_FOR_READ</name></member>
+      <member refid="class_sd_volume_1a20ec87eac48c050b48fe7365a79484c0" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>CACHE_FOR_WRITE</name></member>
+      <member refid="class_sd_volume_1a7fd915253194b6a539eb36e966d02dd3" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheBlockNumber_</name></member>
+      <member refid="class_sd_volume_1a15dba3a8193dd80d5da9cddc8f2d1613" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheBuffer_</name></member>
+      <member refid="class_sd_volume_1a67b1f1cb378367f5a14e062fa284b6ed" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>cacheClear</name></member>
+      <member refid="class_sd_volume_1a862fd50ab1e7b11c20f841869c484b99" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheDirty_</name></member>
+      <member refid="class_sd_volume_1ab1cce12f620beff7cfc08ffad8dfd0f3" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheFlush</name></member>
+      <member refid="class_sd_volume_1a976ebab4b635d22f3cea0e97a4c7a936" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheMirrorBlock_</name></member>
+      <member refid="class_sd_volume_1a6628f0d9c8db9cf41b4b6fd2a68027b1" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheMirrorBlockFlush</name></member>
+      <member refid="class_sd_volume_1abe1cb1c55073cb2e10eea1e71229c0c1" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheRawBlock</name></member>
+      <member refid="class_sd_volume_1adb1e4e7404c9136f36c6c344ae47d15d" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheSetDirty</name></member>
+      <member refid="class_sd_volume_1a5d3a669674ebbd2850269ed2c6ed5c34" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>cacheZeroBlock</name></member>
+      <member refid="class_sd_volume_1ae2e1b7a75d8ee2c0cd13ab32723cc56a" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>chainSize</name></member>
+      <member refid="class_sd_volume_1a9d70b14b7bd7cb07d4c90e854283aed9" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>clusterCount</name></member>
+      <member refid="class_sd_volume_1aaf69cd22717602aacfc1b9a51c69245f" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>clusterCount_</name></member>
+      <member refid="class_sd_volume_1a7cdcb6e4c187c96b1b536f9bc587c659" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>clusterSizeShift</name></member>
+      <member refid="class_sd_volume_1aa1d6cb691ef6b795267dbf05c0fef37a" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>clusterSizeShift_</name></member>
+      <member refid="class_sd_volume_1af45c2ecc54af05b82d305d773723c89c" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>clusterStartBlock</name></member>
+      <member refid="class_sd_volume_1a8e6813781321490fad895ce7b16a8638" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>dataStartBlock</name></member>
+      <member refid="class_sd_volume_1a4d03fee187ebfa8dc4b92183a2f19fc3" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>dataStartBlock_</name></member>
+      <member refid="class_sd_volume_1ad0985d6a2a136aedacd7678977b0e015" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>fatCount</name></member>
+      <member refid="class_sd_volume_1a915c3eb3aa08b691116ea6b8406270ca" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatCount_</name></member>
+      <member refid="class_sd_volume_1ac0a20360ebc30dc314befba967389714" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatGet</name></member>
+      <member refid="class_sd_volume_1a1c3281f89bd526ec7217d75487693ce1" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatPut</name></member>
+      <member refid="class_sd_volume_1aae1923e6e22c2bede1ea92a36db7ef22" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatPutEOC</name></member>
+      <member refid="class_sd_volume_1a05f8847162b9d9f77b1b8db95cd63cec" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>fatStartBlock</name></member>
+      <member refid="class_sd_volume_1aeed48344b94a550dc046d54ddf844d7f" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatStartBlock_</name></member>
+      <member refid="class_sd_volume_1a85adb29d404b08b1b58e9f105b60ea8d" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>fatType</name></member>
+      <member refid="class_sd_volume_1ad658d6ee453311732807226380f7ce74" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>fatType_</name></member>
+      <member refid="class_sd_volume_1aebd5fc75f04c7c1a9653f78a47f0b39f" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>freeChain</name></member>
+      <member refid="class_sd_volume_1adfcf83cba537b831f3a993a058e7ca85" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>init</name></member>
+      <member refid="class_sd_volume_1a8f5879e458ea6f1a2a2a2b884d800550" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>init</name></member>
+      <member refid="class_sd_volume_1a037defc7dc23b38ee7ddf7b5273aea5a" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>init</name></member>
+      <member refid="class_sd_volume_1a51d8b4c5dd7372eb7dec486472139eb5" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>init</name></member>
+      <member refid="class_sd_volume_1ae7f99f4e9f2150a1d10b3a27c7785b41" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>isBusy</name></member>
+      <member refid="class_sd_volume_1a17130f3c18b1dd96e7d9cf5ddaa160a8" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>isCacheMirrorBlockDirty</name></member>
+      <member refid="class_sd_volume_1a7cf2f46269b5cf8ec47c68eeae8c4fed" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>isEOC</name></member>
+      <member refid="class_sd_volume_1a8179c56cf68e935e864d35b7964d0027" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>readBlock</name></member>
+      <member refid="class_sd_volume_1a6b1abe403fe0cd6c0d66fd8f9aafa7a0" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>readData</name></member>
+      <member refid="class_sd_volume_1addfdd68b9d9f728ac29d38f78c3fbead" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>rootDirEntryCount</name></member>
+      <member refid="class_sd_volume_1a8ace409388fb8ec83f1991f0bb833839" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>rootDirEntryCount_</name></member>
+      <member refid="class_sd_volume_1aeb10811341acc97f7ccda2394c777072" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>rootDirStart</name></member>
+      <member refid="class_sd_volume_1a4f6064483cc59d26bee8c7e7bd0e0587" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>rootDirStart_</name></member>
+      <member refid="class_sd_volume_1ad7433c0f197f28e77db117d1400ed539" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>sdCard</name></member>
+      <member refid="class_sd_volume_1af58060df8a3f125a81cf6294bb120a51" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>sdCard_</name></member>
+      <member refid="class_sd_volume_1ad89809cf54bdf885b0505e5edeff2049" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>SdFile</name></member>
+      <member refid="class_sd_volume_1a1843d58062920d6d0e122892ffa42923" prot="public" virt="non-virtual"><scope>SdVolume</scope><name>SdVolume</name></member>
+      <member refid="class_sd_volume_1a7a7112b5007e1c24cec81a47007dfa89" prot="private" virt="non-virtual"><scope>SdVolume</scope><name>writeBlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

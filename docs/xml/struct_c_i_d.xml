@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="struct_c_i_d" kind="struct" language="C++" prot="public">
+    <compoundname>CID</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_i_d_1addb3f98dd20ccc0ffdf300d5ef9c6333" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CID::mid</definition>
+        <argsstring></argsstring>
+        <name>mid</name>
+        <qualifiedname>CID::mid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="88" column="11" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a12cb950aa46c62c8af1e530006f97031" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CID::oid[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>oid</name>
+        <qualifiedname>CID::oid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="90" column="8" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a6484cd56fc4bacfa815c12d8682129ba" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CID::pnm[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>pnm</name>
+        <qualifiedname>CID::pnm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="92" column="8" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a7735b6ae8914c4731de30de32c0ac75c" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::prv_m</definition>
+        <argsstring></argsstring>
+        <name>prv_m</name>
+        <qualifiedname>CID::prv_m</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="94" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a15237f61edb06b3b6dd25b8c1f15280a" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::prv_n</definition>
+        <argsstring></argsstring>
+        <name>prv_n</name>
+        <qualifiedname>CID::prv_n</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="95" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1ada215f8541fa46078461d8da9574fc5e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t CID::psn</definition>
+        <argsstring></argsstring>
+        <name>psn</name>
+        <qualifiedname>CID::psn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="97" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a77cd7bf11f5d63fbcb4b2eec2559b645" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::mdt_year_high</definition>
+        <argsstring></argsstring>
+        <name>mdt_year_high</name>
+        <qualifiedname>CID::mdt_year_high</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="99" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a458794d915efa88aef06f5b0612895ac" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::reserved</definition>
+        <argsstring></argsstring>
+        <name>reserved</name>
+        <qualifiedname>CID::reserved</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="100" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a8b0c4317cc18c03335d7cde147aa8e8d" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::mdt_month</definition>
+        <argsstring></argsstring>
+        <name>mdt_month</name>
+        <qualifiedname>CID::mdt_month</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="102" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1ac36633e5eef5d901fe999aad7862508b" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::mdt_year_low</definition>
+        <argsstring></argsstring>
+        <name>mdt_year_low</name>
+        <qualifiedname>CID::mdt_year_low</qualifiedname>
+        <bitfield> 4</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="103" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1af14e08ffbcafb218efae70ad5b8f2c51" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::always1</definition>
+        <argsstring></argsstring>
+        <name>always1</name>
+        <qualifiedname>CID::always1</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="105" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_i_d_1a69b946a732f93b7a66aff4002ca00b77" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned CID::crc</definition>
+        <argsstring></argsstring>
+        <name>crc</name>
+        <qualifiedname>CID::crc</qualifiedname>
+        <bitfield> 7</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="106" column="12" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="86" column="1" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="86" bodyend="107"/>
+    <listofallmembers>
+      <member refid="struct_c_i_d_1af14e08ffbcafb218efae70ad5b8f2c51" prot="public" virt="non-virtual"><scope>CID</scope><name>always1</name></member>
+      <member refid="struct_c_i_d_1a69b946a732f93b7a66aff4002ca00b77" prot="public" virt="non-virtual"><scope>CID</scope><name>crc</name></member>
+      <member refid="struct_c_i_d_1a8b0c4317cc18c03335d7cde147aa8e8d" prot="public" virt="non-virtual"><scope>CID</scope><name>mdt_month</name></member>
+      <member refid="struct_c_i_d_1a77cd7bf11f5d63fbcb4b2eec2559b645" prot="public" virt="non-virtual"><scope>CID</scope><name>mdt_year_high</name></member>
+      <member refid="struct_c_i_d_1ac36633e5eef5d901fe999aad7862508b" prot="public" virt="non-virtual"><scope>CID</scope><name>mdt_year_low</name></member>
+      <member refid="struct_c_i_d_1addb3f98dd20ccc0ffdf300d5ef9c6333" prot="public" virt="non-virtual"><scope>CID</scope><name>mid</name></member>
+      <member refid="struct_c_i_d_1a12cb950aa46c62c8af1e530006f97031" prot="public" virt="non-virtual"><scope>CID</scope><name>oid</name></member>
+      <member refid="struct_c_i_d_1a6484cd56fc4bacfa815c12d8682129ba" prot="public" virt="non-virtual"><scope>CID</scope><name>pnm</name></member>
+      <member refid="struct_c_i_d_1a7735b6ae8914c4731de30de32c0ac75c" prot="public" virt="non-virtual"><scope>CID</scope><name>prv_m</name></member>
+      <member refid="struct_c_i_d_1a15237f61edb06b3b6dd25b8c1f15280a" prot="public" virt="non-virtual"><scope>CID</scope><name>prv_n</name></member>
+      <member refid="struct_c_i_d_1ada215f8541fa46078461d8da9574fc5e" prot="public" virt="non-virtual"><scope>CID</scope><name>psn</name></member>
+      <member refid="struct_c_i_d_1a458794d915efa88aef06f5b0612895ac" prot="public" virt="non-virtual"><scope>CID</scope><name>reserved</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

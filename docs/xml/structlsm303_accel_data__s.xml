@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structlsm303_accel_data__s" kind="struct" language="C++" prot="public">
+    <compoundname>lsm303AccelData_s</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h" local="no">Adafruit_LSM303_Accel.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlsm303_accel_data__s_1aa7355274ca653858408a58b0bdd7b540" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303AccelData_s::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>lsm303AccelData_s::x</qualifiedname>
+        <briefdescription>
+<para>x-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="67" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsm303_accel_data__s_1a0c934a0a1ccde8de68c9396145c99a05" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303AccelData_s::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>lsm303AccelData_s::y</qualifiedname>
+        <briefdescription>
+<para>y-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="68" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsm303_accel_data__s_1aa8aedc4b78c42e606bf89dfa380f97e1" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303AccelData_s::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>lsm303AccelData_s::z</qualifiedname>
+        <briefdescription>
+<para>z-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="69" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>INTERNAL ACCELERATION DATA TYPE. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="66" column="1" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="66" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structlsm303_accel_data__s_1aa7355274ca653858408a58b0bdd7b540" prot="public" virt="non-virtual"><scope>lsm303AccelData_s</scope><name>x</name></member>
+      <member refid="structlsm303_accel_data__s_1a0c934a0a1ccde8de68c9396145c99a05" prot="public" virt="non-virtual"><scope>lsm303AccelData_s</scope><name>y</name></member>
+      <member refid="structlsm303_accel_data__s_1aa8aedc4b78c42e606bf89dfa380f97e1" prot="public" virt="non-virtual"><scope>lsm303AccelData_s</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

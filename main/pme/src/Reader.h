@@ -17,6 +17,10 @@
 
 #include "AtmosphericStruct.h"
 
+/**
+ * @brief Binary reader of struct data.
+ * 
+ */
 class Reader {
     public:
         Reader(int chipSelect, int bufferSize);

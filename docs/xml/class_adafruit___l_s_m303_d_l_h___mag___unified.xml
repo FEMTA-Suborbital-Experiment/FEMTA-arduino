@@ -1,0 +1,662 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___l_s_m303_d_l_h___mag___unified" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_LSM303DLH_Mag_Unified</compoundname>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h" local="no">Adafruit_LSM303DLH_Mag.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a8dfc19cd9095676326ddb0729637419a" prot="public" static="no" mutable="no">
+        <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a5573de0aba7db7cba1f0083b635c8041" kindref="member">lsm303MagData</ref></type>
+        <definition>lsm303MagData Adafruit_LSM303DLH_Mag_Unified::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::raw</qualifiedname>
+        <briefdescription>
+<para>Last read magnetometer data will be available here. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="105" column="17" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2ea87a8959200b1d22aed94c051eb200" prot="public" static="no" mutable="no">
+        <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a84d3ad8ca5077d39b626bf4c4bcff62d" kindref="member">lsm303MagGain</ref></type>
+        <definition>lsm303MagGain Adafruit_LSM303DLH_Mag_Unified::magGain</definition>
+        <argsstring></argsstring>
+        <name>magGain</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::magGain</qualifiedname>
+        <briefdescription>
+<para>The current magnetometer gain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="106" column="17" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a1a12e65c97d6d6265b06f5220bc20954" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303DLH_Mag_Unified::autoRangeEnabled</definition>
+        <argsstring></argsstring>
+        <name>autoRangeEnabled</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::autoRangeEnabled</qualifiedname>
+        <briefdescription>
+<para>True if auto ranging is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="107" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a87e0fd6fb5d62bbdc473c51194ae2aea" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Adafruit_LSM303DLH_Mag_Unified::_sensorID</definition>
+        <argsstring></argsstring>
+        <name>_sensorID</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::_sensorID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="110" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a726cdfa2e1f0d86eca4868deeb1dd905" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+        <definition>Adafruit_I2CDevice * Adafruit_LSM303DLH_Mag_Unified::i2c_dev</definition>
+        <argsstring></argsstring>
+        <name>i2c_dev</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::i2c_dev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="115" column="22" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a54d9de2b526b0a984acfc7c03e0749ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_LSM303DLH_Mag_Unified::Adafruit_LSM303DLH_Mag_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_LSM303DLH_Mag_Unified</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::Adafruit_LSM303DLH_Mag_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Instantiates a new <ref refid="class_adafruit___l_s_m303_d_l_h___mag___unified" kindref="compound">Adafruit_LSM303DLH_Mag_Unified</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensorID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an optional identifier for the sensor instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="95" column="3" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="94" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a3b13466cd6d87c463aa47a433ffb22f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303DLH_Mag_Unified::begin</definition>
+        <argsstring>(uint8_t i2c_addr=_ADDRESS_MAG, TwoWire *wire=&amp;Wire)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2c_addr</declname>
+          <defname>i2c_address</defname>
+          <defval><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1ab1b4faa716d34ea654a7c1cc0eb37882" kindref="member">_ADDRESS_MAG</ref></defval>
+        </param>
+        <param>
+          <type>TwoWire *</type>
+          <declname>wire</declname>
+          <defval>&amp;Wire</defval>
+        </param>
+        <briefdescription>
+<para>Sets up the hardware and initializes I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2c_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2C address to be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Wire object to be used for I2C connections. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if initialization was successful, otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="97" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="113" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::enableAutoRange</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>enableAutoRange</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::enableAutoRange</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0">enableAutoRange</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+          <defname>enabled</defname>
+        </param>
+        <briefdescription>
+<para>Enables or disables auto-ranging. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable auto-ranging, false to disable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="99" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a53099f0f87d23e195620b1b65a9723b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::setMagGain</definition>
+        <argsstring>(lsm303MagGain gain)</argsstring>
+        <name>setMagGain</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::setMagGain</qualifiedname>
+        <param>
+          <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a84d3ad8ca5077d39b626bf4c4bcff62d" kindref="member">lsm303MagGain</ref></type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+<para>Sets the magnetometer&apos;s gain. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gain</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a <computeroutput>lsm303MagGain</computeroutput> specifying the new gain </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="100" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="161" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a5f6e52342352f182e7da04c0d1c61819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::setMagRate</definition>
+        <argsstring>(lsm303MagRate rate)</argsstring>
+        <name>setMagRate</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::setMagRate</qualifiedname>
+        <param>
+          <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1afb94e05d76b7aa7e91cb282ec062c7dd" kindref="member">lsm303MagRate</ref></type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+<para>Sets the magnetometer&apos;s update rate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput>lsm303MagRate</computeroutput> specifying the new rate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="101" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303DLH_Mag_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+<para>Gets the most recent sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <computeroutput><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref></computeroutput> to store the event data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="102" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="226" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+          <defname>sensor</defname>
+        </param>
+        <briefdescription>
+<para>Gets the <ref refid="structsensor__t" kindref="compound">sensor_t</ref> data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="103" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="316" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a54d9de2b526b0a984acfc7c03e0749ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_LSM303DLH_Mag_Unified::Adafruit_LSM303DLH_Mag_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_LSM303DLH_Mag_Unified</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::Adafruit_LSM303DLH_Mag_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="95" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a3b13466cd6d87c463aa47a433ffb22f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303DLH_Mag_Unified::begin</definition>
+        <argsstring>(uint8_t i2c_addr=_ADDRESS_MAG, TwoWire *wire=&amp;Wire)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2c_addr</declname>
+          <defval><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1ab1b4faa716d34ea654a7c1cc0eb37882" kindref="member">_ADDRESS_MAG</ref></defval>
+        </param>
+        <param>
+          <type>TwoWire *</type>
+          <declname>wire</declname>
+          <defval>&amp;Wire</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="97" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::enableAutoRange</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>enableAutoRange</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::enableAutoRange</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0">enableAutoRange</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Whether we should automatically change the range (if possible) for higher precision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if we will try to autorange </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="99" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a53099f0f87d23e195620b1b65a9723b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::setMagGain</definition>
+        <argsstring>(lsm303MagGain gain)</argsstring>
+        <name>setMagGain</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::setMagGain</qualifiedname>
+        <param>
+          <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a84d3ad8ca5077d39b626bf4c4bcff62d" kindref="member">lsm303MagGain</ref></type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="100" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a5f6e52342352f182e7da04c0d1c61819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::setMagRate</definition>
+        <argsstring>(lsm303MagRate rate)</argsstring>
+        <name>setMagRate</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::setMagRate</qualifiedname>
+        <param>
+          <type><ref refid="libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1afb94e05d76b7aa7e91cb282ec062c7dd" kindref="member">lsm303MagRate</ref></type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="101" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303DLH_Mag_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the latest sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if able to fetch an event </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="102" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get info about the sensor itself. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="103" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1aa31a24a7bb30a5efcb4bf4d955d899e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::write8</definition>
+        <argsstring>(byte address, byte reg, byte value)</argsstring>
+        <name>write8</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::write8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="112" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a6d69eb257c8c3975ffd5df2f00462275" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte Adafruit_LSM303DLH_Mag_Unified::read8</definition>
+        <argsstring>(byte address, byte reg)</argsstring>
+        <name>read8</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::read8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="113" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1abbe528a3c46cb2686bdd0a513beb146f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the raw data from the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="114" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.cpp" bodystart="58" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1aa31a24a7bb30a5efcb4bf4d955d899e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::write8</definition>
+        <argsstring>(byte address, byte reg, byte value)</argsstring>
+        <name>write8</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::write8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="112" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1a6d69eb257c8c3975ffd5df2f00462275" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte Adafruit_LSM303DLH_Mag_Unified::read8</definition>
+        <argsstring>(byte address, byte reg)</argsstring>
+        <name>read8</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::read8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="113" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303_d_l_h___mag___unified_1abbe528a3c46cb2686bdd0a513beb146f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303DLH_Mag_Unified::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_LSM303DLH_Mag_Unified::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="114" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Unified sensor driver for the magnetometer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Adafruit_LSM303DLH_Mag_Unified</label>
+        <link refid="class_adafruit___l_s_m303_d_l_h___mag___unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Adafruit_LSM303DLH_Mag_Unified</label>
+        <link refid="class_adafruit___l_s_m303_d_l_h___mag___unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>raw</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+      <node id="3">
+        <label>lsm303MagData_s</label>
+        <link refid="structlsm303_mag_data__s"/>
+      </node>
+    </collaborationgraph>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="93" column="1" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="93" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a87e0fd6fb5d62bbdc473c51194ae2aea" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>_sensorID</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a54d9de2b526b0a984acfc7c03e0749ad" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>Adafruit_LSM303DLH_Mag_Unified</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a54d9de2b526b0a984acfc7c03e0749ad" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>Adafruit_LSM303DLH_Mag_Unified</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a1a12e65c97d6d6265b06f5220bc20954" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>autoRangeEnabled</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a3b13466cd6d87c463aa47a433ffb22f1" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>begin</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a3b13466cd6d87c463aa47a433ffb22f1" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>begin</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a726cdfa2e1f0d86eca4868deeb1dd905" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>i2c_dev</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2ea87a8959200b1d22aed94c051eb200" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>magGain</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a8dfc19cd9095676326ddb0729637419a" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>raw</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1abbe528a3c46cb2686bdd0a513beb146f" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>read</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1abbe528a3c46cb2686bdd0a513beb146f" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>read</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a6d69eb257c8c3975ffd5df2f00462275" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>read8</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a6d69eb257c8c3975ffd5df2f00462275" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>read8</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a53099f0f87d23e195620b1b65a9723b1" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>setMagGain</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a53099f0f87d23e195620b1b65a9723b1" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>setMagGain</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a5f6e52342352f182e7da04c0d1c61819" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>setMagRate</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a5f6e52342352f182e7da04c0d1c61819" prot="public" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>setMagRate</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1aa31a24a7bb30a5efcb4bf4d955d899e8" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>write8</name></member>
+      <member refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1aa31a24a7bb30a5efcb4bf4d955d899e8" prot="private" virt="non-virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>write8</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>~Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_LSM303DLH_Mag_Unified</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

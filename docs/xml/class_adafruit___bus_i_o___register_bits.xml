@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___bus_i_o___register_bits" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_BusIO_RegisterBits</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h" local="no">Adafruit_BusIO_Register.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_bits_1afb77a7d13cff3e38b2444ed8973ad919" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref> *</type>
+        <definition>Adafruit_BusIO_Register * Adafruit_BusIO_RegisterBits::_register</definition>
+        <argsstring></argsstring>
+        <name>_register</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::_register</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="100" column="27" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_bits_1af3578a239cc59f6617e01261a12d59af" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_RegisterBits::_bits</definition>
+        <argsstring></argsstring>
+        <name>_bits</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::_bits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="101" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_bits_1aeabc19046d4479c41fae1f61e960fbb7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_RegisterBits::_shift</definition>
+        <argsstring></argsstring>
+        <name>_shift</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::_shift</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="101" column="17" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a369a5c8d03df7da82f8f46f00bd73855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits</definition>
+        <argsstring>(Adafruit_BusIO_Register *reg, uint8_t bits, uint8_t shift)</argsstring>
+        <name>Adafruit_BusIO_RegisterBits</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+<para>Create a slice of the register that we can address without touching other bits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref> which defines the bus/register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits wide we are slicing </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shift</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bits that our bit-slice is shifted from LSB </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="94" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="300" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_RegisterBits::write</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::write</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+<para>Write 4 bytes of data to the register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The 4 bytes to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="96" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="323" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_RegisterBits::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read 4 bytes of data from the register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>data The 4 bytes to read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="97" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="311" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a369a5c8d03df7da82f8f46f00bd73855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits</definition>
+        <argsstring>(Adafruit_BusIO_Register *reg, uint8_t bits, uint8_t shift)</argsstring>
+        <name>Adafruit_BusIO_RegisterBits</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::Adafruit_BusIO_RegisterBits</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref> *</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>bits</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>shift</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="94" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_RegisterBits::write</definition>
+        <argsstring>(uint32_t value)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::write</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="96" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_RegisterBits::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_RegisterBits::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="97" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The class which defines a slice of bits from within a device register (a location to read/write data from) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="92" column="1" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="92" bodyend="102"/>
+    <listofallmembers>
+      <member refid="class_adafruit___bus_i_o___register_bits_1af3578a239cc59f6617e01261a12d59af" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>_bits</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1afb77a7d13cff3e38b2444ed8973ad919" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>_register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1aeabc19046d4479c41fae1f61e960fbb7" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>_shift</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a369a5c8d03df7da82f8f46f00bd73855" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>Adafruit_BusIO_RegisterBits</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a369a5c8d03df7da82f8f46f00bd73855" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>Adafruit_BusIO_RegisterBits</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>write</name></member>
+      <member refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_RegisterBits</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

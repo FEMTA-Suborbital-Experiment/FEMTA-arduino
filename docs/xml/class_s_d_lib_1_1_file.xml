@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_s_d_lib_1_1_file" kind="class" language="C++" prot="public">
+    <compoundname>SDLib::File</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Stream</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_s_d_lib_1_1_file_1a022d4e2dc39807f4013dcd48b8e2f20f" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char SDLib::File::_name[13]</definition>
+        <argsstring>[13]</argsstring>
+        <name>_name</name>
+        <qualifiedname>SDLib::File::_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="30" column="12" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_d_lib_1_1_file_1a4b48fe478d4dc3d743ac219eab135053" prot="private" static="no" mutable="no">
+        <type><ref refid="class_sd_file" kindref="compound">SdFile</ref> *</type>
+        <definition>SdFile* SDLib::File::_file</definition>
+        <argsstring></argsstring>
+        <name>_file</name>
+        <qualifiedname>SDLib::File::_file</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="31" column="14" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1ad34490d697d9e56859f566534b360c54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>File::File</definition>
+        <argsstring>(SdFile f, const char *name)</argsstring>
+        <name>File</name>
+        <qualifiedname>SDLib::File::File</qualifiedname>
+        <param>
+          <type><ref refid="class_sd_file" kindref="compound">SdFile</ref></type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="34" column="7" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="21" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a7dcb21db9e1623e84b9c3dee81c12617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>File::File</definition>
+        <argsstring>(void)</argsstring>
+        <name>File</name>
+        <qualifiedname>SDLib::File::File</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="35" column="7" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1acee911dcb9057b964fd5b3ce888a934b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t File::write</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>write</name>
+        <qualifiedname>SDLib::File::write</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>val</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="36" column="22" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1aa531c1641a2363e1f6b9d103f37433da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t File::write</definition>
+        <argsstring>(const uint8_t *buf, size_t size)</argsstring>
+        <name>write</name>
+        <qualifiedname>SDLib::File::write</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="37" column="22" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="61" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a2bfd82042bf497c9bdf98fdeee300a0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int File::availableForWrite</definition>
+        <argsstring>()</argsstring>
+        <name>availableForWrite</name>
+        <qualifiedname>SDLib::File::availableForWrite</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="38" column="19" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a4c46a1975e66c37977bf07c58ec10b4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int File::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <qualifiedname>SDLib::File::read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="39" column="19" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a0e5025f39bd584563bfe4b05fc1db268" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int File::peek</definition>
+        <argsstring>()</argsstring>
+        <name>peek</name>
+        <qualifiedname>SDLib::File::peek</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="40" column="19" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1acf613c4e75bae85f543b30e701ebcc44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int File::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <qualifiedname>SDLib::File::available</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="41" column="19" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="110" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1af87fa862de707575b8badd044a5af80e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void File::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <qualifiedname>SDLib::File::flush</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="42" column="20" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a30539792f063f24ee5ee7c11dfa564b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int File::read</definition>
+        <argsstring>(void *buf, uint16_t nbyte)</argsstring>
+        <name>read</name>
+        <qualifiedname>SDLib::File::read</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>nbyte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="43" column="11" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="103" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a2a46cc148ddc53fe5170164227a695ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean File::seek</definition>
+        <argsstring>(uint32_t pos)</argsstring>
+        <name>seek</name>
+        <qualifiedname>SDLib::File::seek</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="44" column="15" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="126" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1aae991c597c0bc4c5eb44c1f3b06a21ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t File::position</definition>
+        <argsstring>()</argsstring>
+        <name>position</name>
+        <qualifiedname>SDLib::File::position</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="45" column="16" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a603d3cd3319142d00a7ebd434970b017" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t File::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <qualifiedname>SDLib::File::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="46" column="16" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="141" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a83cbce54d6c3b8c2f417b51f6b3f488c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void File::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <qualifiedname>SDLib::File::close</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="47" column="12" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="148" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1af171fbf441c899cf71d88b8b0b83d38b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>File::operator bool</definition>
+        <argsstring>()</argsstring>
+        <name>operator bool</name>
+        <qualifiedname>SDLib::File::operator bool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="48" column="7" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="162" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a7dc80cb96e6062652690a42b584f230e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * File::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <qualifiedname>SDLib::File::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="49" column="13" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a532cb01e66c863f0a0c70bad3acbcdfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean File::isDirectory</definition>
+        <argsstring>(void)</argsstring>
+        <name>isDirectory</name>
+        <qualifiedname>SDLib::File::isDirectory</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="51" column="15" bodyfile="libraries/SD-1.2.4/src/File.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1a89d7761b6a1de4ce8e82accc6e687264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref></type>
+        <definition>File SDLib::File::openNextFile</definition>
+        <argsstring>(uint8_t mode=O_RDONLY)</argsstring>
+        <name>openNextFile</name>
+        <qualifiedname>SDLib::File::openNextFile</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>mode</declname>
+          <defval><ref refid="_sd_fat_8h_1ac13ca62d7e6f8f6d657d4607474652bf" kindref="member">O_RDONLY</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="52" column="12" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="585" bodyend="627"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_d_lib_1_1_file_1ad4af7c5cd14c201f2cf05353dc854ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SDLib::File::rewindDirectory</definition>
+        <argsstring>(void)</argsstring>
+        <name>rewindDirectory</name>
+        <qualifiedname>SDLib::File::rewindDirectory</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="53" column="12" bodyfile="libraries/SD-1.2.4/src/SD.cpp" bodystart="629" bodyend="633"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SDLib::File</label>
+        <link refid="class_s_d_lib_1_1_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Stream</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SDLib::File</label>
+        <link refid="class_s_d_lib_1_1_file"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Stream</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/SD-1.2.4/src/SD.h" line="28" column="3" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="28" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_s_d_lib_1_1_file_1a4b48fe478d4dc3d743ac219eab135053" prot="private" virt="non-virtual"><scope>SDLib::File</scope><name>_file</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a022d4e2dc39807f4013dcd48b8e2f20f" prot="private" virt="non-virtual"><scope>SDLib::File</scope><name>_name</name></member>
+      <member refid="class_s_d_lib_1_1_file_1acf613c4e75bae85f543b30e701ebcc44" prot="public" virt="virtual"><scope>SDLib::File</scope><name>available</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a2bfd82042bf497c9bdf98fdeee300a0e" prot="public" virt="virtual"><scope>SDLib::File</scope><name>availableForWrite</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a83cbce54d6c3b8c2f417b51f6b3f488c" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>close</name></member>
+      <member refid="class_s_d_lib_1_1_file_1ad34490d697d9e56859f566534b360c54" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>File</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a7dcb21db9e1623e84b9c3dee81c12617" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>File</name></member>
+      <member refid="class_s_d_lib_1_1_file_1af87fa862de707575b8badd044a5af80e" prot="public" virt="virtual"><scope>SDLib::File</scope><name>flush</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a532cb01e66c863f0a0c70bad3acbcdfe" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>isDirectory</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a7dc80cb96e6062652690a42b584f230e" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>name</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a89d7761b6a1de4ce8e82accc6e687264" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>openNextFile</name></member>
+      <member refid="class_s_d_lib_1_1_file_1af171fbf441c899cf71d88b8b0b83d38b" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>operator bool</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a0e5025f39bd584563bfe4b05fc1db268" prot="public" virt="virtual"><scope>SDLib::File</scope><name>peek</name></member>
+      <member refid="class_s_d_lib_1_1_file_1aae991c597c0bc4c5eb44c1f3b06a21ec" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>position</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a4c46a1975e66c37977bf07c58ec10b4e" prot="public" virt="virtual"><scope>SDLib::File</scope><name>read</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a30539792f063f24ee5ee7c11dfa564b2" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>read</name></member>
+      <member refid="class_s_d_lib_1_1_file_1ad4af7c5cd14c201f2cf05353dc854ed5" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>rewindDirectory</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a2a46cc148ddc53fe5170164227a695ae" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>seek</name></member>
+      <member refid="class_s_d_lib_1_1_file_1a603d3cd3319142d00a7ebd434970b017" prot="public" virt="non-virtual"><scope>SDLib::File</scope><name>size</name></member>
+      <member refid="class_s_d_lib_1_1_file_1acee911dcb9057b964fd5b3ce888a934b" prot="public" virt="virtual"><scope>SDLib::File</scope><name>write</name></member>
+      <member refid="class_s_d_lib_1_1_file_1aa531c1641a2363e1f6b9d103f37433da" prot="public" virt="virtual"><scope>SDLib::File</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

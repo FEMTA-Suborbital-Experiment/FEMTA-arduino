@@ -1,0 +1,1234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___bus_i_o___register" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_BusIO_Register</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h" local="no">Adafruit_BusIO_Register.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1a58729e1f35c0302f749b00a8619ca5fc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+        <definition>Adafruit_I2CDevice * Adafruit_BusIO_Register::_i2cdevice</definition>
+        <argsstring></argsstring>
+        <name>_i2cdevice</name>
+        <qualifiedname>Adafruit_BusIO_Register::_i2cdevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="78" column="22" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1abbb8bad0ecf1fa444ed3c475d3877b53" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+        <definition>Adafruit_SPIDevice * Adafruit_BusIO_Register::_spidevice</definition>
+        <argsstring></argsstring>
+        <name>_spidevice</name>
+        <qualifiedname>Adafruit_BusIO_Register::_spidevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="79" column="22" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1ab8ebcdf8c3f7cece54bf6b033d49d329" prot="private" static="no" mutable="no">
+        <type>Adafruit_BusIO_SPIRegType</type>
+        <definition>Adafruit_BusIO_SPIRegType Adafruit_BusIO_Register::_spiregtype</definition>
+        <argsstring></argsstring>
+        <name>_spiregtype</name>
+        <qualifiedname>Adafruit_BusIO_Register::_spiregtype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="80" column="29" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1aed490186cd08587f0c510ed3b7619613" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Adafruit_BusIO_Register::_address</definition>
+        <argsstring></argsstring>
+        <name>_address</name>
+        <qualifiedname>Adafruit_BusIO_Register::_address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="81" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1a4479d7b4abf4e1c15740024e3aadc166" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::_width</definition>
+        <argsstring></argsstring>
+        <name>_width</name>
+        <qualifiedname>Adafruit_BusIO_Register::_width</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="82" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1af21a42805c7da8b32d3850d58fa547e5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::_addrwidth</definition>
+        <argsstring></argsstring>
+        <name>_addrwidth</name>
+        <qualifiedname>Adafruit_BusIO_Register::_addrwidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="82" column="18" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1a28ff498f47331d9150aa12320682b568" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::_byteorder</definition>
+        <argsstring></argsstring>
+        <name>_byteorder</name>
+        <qualifiedname>Adafruit_BusIO_Register::_byteorder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="82" column="29" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1a44c96d64aae4dd0a2b22326e059bfac0" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::_buffer</definition>
+        <argsstring>[4]</argsstring>
+        <name>_buffer</name>
+        <qualifiedname>Adafruit_BusIO_Register::_buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="83" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___bus_i_o___register_1a798fa9f15350980f269211a9b5dc86cf" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_Register::_cached</definition>
+        <argsstring></argsstring>
+        <name>_cached</name>
+        <qualifiedname>Adafruit_BusIO_Register::_cached</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="85" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a7de4a4cbb3e8cdfebac31344e8ab6c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_I2CDevice *i2cdevice, uint16_t reg_addr, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+          <declname>i2cdevice</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Create a register we access over an I2C Device (which defines the bus and address) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2cdevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2CDevice to use for underlying I2C access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address pointer value for the I2C/SMBus register, can be 8 or 16 bits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register data itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>byteorder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte order of the register (used when width is &gt; 1), defaults to LSBFIRST </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register address itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="45" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a89e57552743a5f15c99cb7aa27b3ca13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_SPIDevice *spidevice, uint16_t reg_addr, Adafruit_BusIO_SPIRegType type, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+          <declname>spidevice</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>Adafruit_BusIO_SPIRegType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Create a register we access over an SPI Device (which defines the bus and CS pin) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spidevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPIDevice to use for underlying SPI access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address pointer value for the SPI register, can be 8 or 16 bits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The method we use to read/write data to SPI (which is not as well defined as I2C) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register data itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>byteorder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte order of the register (used when width is &gt; 1), defaults to LSBFIRST </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register address itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="49" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="45" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a300a0297429df441bc88dbb37eac1a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_I2CDevice *i2cdevice, Adafruit_SPIDevice *spidevice, Adafruit_BusIO_SPIRegType type, uint16_t reg_addr, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+          <declname>i2cdevice</declname>
+        </param>
+        <param>
+          <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+          <declname>spidevice</declname>
+        </param>
+        <param>
+          <type>Adafruit_BusIO_SPIRegType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Create a register we access over an I2C or SPI Device. This is a handy function because we can pass in nullptr for the unused interface, allowing libraries to mass-define all the registers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2cdevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2CDevice to use for underlying I2C access, if nullptr we use SPI </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>spidevice</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SPIDevice to use for underlying SPI access, if nullptr we use I2C </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reg_addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address pointer value for the I2C/SMBus/SPI register, can be 8 or 16 bits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The method we use to read/write data to SPI (which is not as well defined as I2C) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register data itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>byteorder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The byte order of the register (used when width is &gt; 1), defaults to LSBFIRST </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the register address itself, defaults to 1 byte </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="54" column="3" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="78" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint8_t *buffer, uint8_t len)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Read a buffer of data from the register location. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to read into </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="60" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="201" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1adca04654563a7c68a580533197366f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint8_t *value)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Read 1 byte of data from the register location. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to uint8_t variable to read into </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="61" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="265" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a5c49c498815a5414d6fb5915760bbeba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint16_t *value)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint16_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Read 2 bytes of data from the register location. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to uint16_t variable to read into </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="62" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="242" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_Register::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read data from the register location. This does not do any error checking! </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns 0xFFFFFFFF on failure, value otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="63" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="169" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a9738fbb8c088d5cf6d381f87dc9288bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_Register::readCached</definition>
+        <argsstring>(void)</argsstring>
+        <name>readCached</name>
+        <qualifiedname>Adafruit_BusIO_Register::readCached</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Read cached data from last time we wrote to this register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns 0xFFFFFFFF on failure, value otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="64" column="12" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="192" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::write</definition>
+        <argsstring>(uint8_t *buffer, uint8_t len)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_Register::write</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Write a buffer of data to the register location. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to data to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="65" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="98" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1adad13ec14c8548eaeff62609077aa076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::write</definition>
+        <argsstring>(uint32_t value, uint8_t numbytes=0)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_Register::write</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>numbytes</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Write up to 4 bytes of data to the register location. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to write </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numbytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>How many bytes from &apos;value&apos; to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful write (only really useful for I2C as SPI is uncheckable) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="66" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="142" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::width</definition>
+        <argsstring>(void)</argsstring>
+        <name>width</name>
+        <qualifiedname>Adafruit_BusIO_Register::width</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>The width of the register data, helpful for doing calculations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The data width used when initializing the register </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="68" column="11" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="341" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a478ae4ca787304ead47a56994fbdb840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setWidth</definition>
+        <argsstring>(uint8_t width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>Adafruit_BusIO_Register::setWidth</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Set the default width of data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the default width of data read from register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="70" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="347" bodyend="347"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a08ddf29ed836c712e2a2f050e1ae3bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setAddress</definition>
+        <argsstring>(uint16_t address)</argsstring>
+        <name>setAddress</name>
+        <qualifiedname>Adafruit_BusIO_Register::setAddress</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Set register address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the address from register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="71" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="353" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a421a7c74ab0faafe243060af1883717a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setAddressWidth</definition>
+        <argsstring>(uint16_t address_width)</argsstring>
+        <name>setAddressWidth</name>
+        <qualifiedname>Adafruit_BusIO_Register::setAddressWidth</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address_width</declname>
+        </param>
+        <briefdescription>
+<para>Set the width of register address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the width for register address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="72" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="361" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1abc1e92469336a95e6ddf34bd7fd18a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::print</definition>
+        <argsstring>(Stream *s=&amp;Serial)</argsstring>
+        <name>print</name>
+        <qualifiedname>Adafruit_BusIO_Register::print</qualifiedname>
+        <param>
+          <type>Stream *</type>
+          <declname>s</declname>
+          <defval>&amp;Serial</defval>
+        </param>
+        <briefdescription>
+<para>Pretty printer for this register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Stream to print to, defaults to &amp;Serial </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="74" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="278" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1aebb1d9dd6520ba1a20b3952c434d7a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::println</definition>
+        <argsstring>(Stream *s=&amp;Serial)</argsstring>
+        <name>println</name>
+        <qualifiedname>Adafruit_BusIO_Register::println</qualifiedname>
+        <param>
+          <type>Stream *</type>
+          <declname>s</declname>
+          <defval>&amp;Serial</defval>
+        </param>
+        <briefdescription>
+<para>Pretty printer for this register. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Stream to print to, defaults to &amp;Serial </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="75" column="8" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp" bodystart="288" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a7de4a4cbb3e8cdfebac31344e8ab6c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_I2CDevice *i2cdevice, uint16_t reg_addr, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+          <declname>i2cdevice</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="45" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a89e57552743a5f15c99cb7aa27b3ca13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_SPIDevice *spidevice, uint16_t reg_addr, Adafruit_BusIO_SPIRegType type, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+          <declname>spidevice</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>Adafruit_BusIO_SPIRegType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="49" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a300a0297429df441bc88dbb37eac1a06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BusIO_Register::Adafruit_BusIO_Register</definition>
+        <argsstring>(Adafruit_I2CDevice *i2cdevice, Adafruit_SPIDevice *spidevice, Adafruit_BusIO_SPIRegType type, uint16_t reg_addr, uint8_t width=1, uint8_t byteorder=LSBFIRST, uint8_t address_width=1)</argsstring>
+        <name>Adafruit_BusIO_Register</name>
+        <qualifiedname>Adafruit_BusIO_Register::Adafruit_BusIO_Register</qualifiedname>
+        <param>
+          <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+          <declname>i2cdevice</declname>
+        </param>
+        <param>
+          <type><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref> *</type>
+          <declname>spidevice</declname>
+        </param>
+        <param>
+          <type>Adafruit_BusIO_SPIRegType</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>reg_addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>byteorder</declname>
+          <defval>LSBFIRST</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>address_width</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="54" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint8_t *buffer, uint8_t len)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="60" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1adca04654563a7c68a580533197366f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint8_t *value)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="61" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a5c49c498815a5414d6fb5915760bbeba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::read</definition>
+        <argsstring>(uint16_t *value)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>uint16_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="62" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_Register::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_BusIO_Register::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="63" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a9738fbb8c088d5cf6d381f87dc9288bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t Adafruit_BusIO_Register::readCached</definition>
+        <argsstring>(void)</argsstring>
+        <name>readCached</name>
+        <qualifiedname>Adafruit_BusIO_Register::readCached</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="64" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::write</definition>
+        <argsstring>(uint8_t *buffer, uint8_t len)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_Register::write</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1adad13ec14c8548eaeff62609077aa076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BusIO_Register::write</definition>
+        <argsstring>(uint32_t value, uint8_t numbytes=0)</argsstring>
+        <name>write</name>
+        <qualifiedname>Adafruit_BusIO_Register::write</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>numbytes</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="66" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_BusIO_Register::width</definition>
+        <argsstring>(void)</argsstring>
+        <name>width</name>
+        <qualifiedname>Adafruit_BusIO_Register::width</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="68" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a478ae4ca787304ead47a56994fbdb840" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setWidth</definition>
+        <argsstring>(uint8_t width)</argsstring>
+        <name>setWidth</name>
+        <qualifiedname>Adafruit_BusIO_Register::setWidth</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="70" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a08ddf29ed836c712e2a2f050e1ae3bcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setAddress</definition>
+        <argsstring>(uint16_t address)</argsstring>
+        <name>setAddress</name>
+        <qualifiedname>Adafruit_BusIO_Register::setAddress</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="71" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1a421a7c74ab0faafe243060af1883717a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::setAddressWidth</definition>
+        <argsstring>(uint16_t address_width)</argsstring>
+        <name>setAddressWidth</name>
+        <qualifiedname>Adafruit_BusIO_Register::setAddressWidth</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>address_width</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="72" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1abc1e92469336a95e6ddf34bd7fd18a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::print</definition>
+        <argsstring>(Stream *s=&amp;Serial)</argsstring>
+        <name>print</name>
+        <qualifiedname>Adafruit_BusIO_Register::print</qualifiedname>
+        <param>
+          <type>Stream *</type>
+          <declname>s</declname>
+          <defval>&amp;Serial</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="74" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___bus_i_o___register_1aebb1d9dd6520ba1a20b3952c434d7a47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BusIO_Register::println</definition>
+        <argsstring>(Stream *s=&amp;Serial)</argsstring>
+        <name>println</name>
+        <qualifiedname>Adafruit_BusIO_Register::println</qualifiedname>
+        <param>
+          <type>Stream *</type>
+          <declname>s</declname>
+          <defval>&amp;Serial</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="75" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The class which defines a device register (a location to read/write data from) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="43" column="1" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="43" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_adafruit___bus_i_o___register_1aed490186cd08587f0c510ed3b7619613" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_address</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1af21a42805c7da8b32d3850d58fa547e5" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_addrwidth</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a44c96d64aae4dd0a2b22326e059bfac0" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_buffer</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a28ff498f47331d9150aa12320682b568" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_byteorder</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a798fa9f15350980f269211a9b5dc86cf" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_cached</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a58729e1f35c0302f749b00a8619ca5fc" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_i2cdevice</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1abbb8bad0ecf1fa444ed3c475d3877b53" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_spidevice</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1ab8ebcdf8c3f7cece54bf6b033d49d329" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_spiregtype</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a4479d7b4abf4e1c15740024e3aadc166" prot="private" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>_width</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a7de4a4cbb3e8cdfebac31344e8ab6c8c" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a89e57552743a5f15c99cb7aa27b3ca13" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a300a0297429df441bc88dbb37eac1a06" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a7de4a4cbb3e8cdfebac31344e8ab6c8c" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a89e57552743a5f15c99cb7aa27b3ca13" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a300a0297429df441bc88dbb37eac1a06" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>Adafruit_BusIO_Register</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1abc1e92469336a95e6ddf34bd7fd18a67" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>print</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1abc1e92469336a95e6ddf34bd7fd18a67" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>print</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1aebb1d9dd6520ba1a20b3952c434d7a47" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>println</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1aebb1d9dd6520ba1a20b3952c434d7a47" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>println</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1adca04654563a7c68a580533197366f61" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a5c49c498815a5414d6fb5915760bbeba" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a2b48e23dacbb7cffc0eb07dcebcfba6f" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1adca04654563a7c68a580533197366f61" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a5c49c498815a5414d6fb5915760bbeba" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>read</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a9738fbb8c088d5cf6d381f87dc9288bb" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>readCached</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a9738fbb8c088d5cf6d381f87dc9288bb" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>readCached</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a08ddf29ed836c712e2a2f050e1ae3bcd" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setAddress</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a08ddf29ed836c712e2a2f050e1ae3bcd" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setAddress</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a421a7c74ab0faafe243060af1883717a" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setAddressWidth</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a421a7c74ab0faafe243060af1883717a" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setAddressWidth</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a478ae4ca787304ead47a56994fbdb840" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setWidth</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1a478ae4ca787304ead47a56994fbdb840" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>setWidth</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>width</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>width</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>write</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1adad13ec14c8548eaeff62609077aa076" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>write</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>write</name></member>
+      <member refid="class_adafruit___bus_i_o___register_1adad13ec14c8548eaeff62609077aa076" prot="public" virt="non-virtual"><scope>Adafruit_BusIO_Register</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_protothread_8h" kind="file" language="C++">
+    <compoundname>Protothread.h</compoundname>
+    <includedby refid="examples_2pin__controller_2src_2_pin_ctrl_8h" local="no">examples/pin_controller/src/PinCtrl.h</includedby>
+    <includedby refid="main_2pme_2src_2_pin_ctrl_8h" local="no">main/pme/src/PinCtrl.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>examples/pin_controller/src/PinCtrl.cpp</label>
+        <link refid="examples_2pin__controller_2src_2_pin_ctrl_8cpp"/>
+      </node>
+      <node id="2">
+        <label>examples/pin_controller/src/PinCtrl.h</label>
+        <link refid="examples_2pin__controller_2src_2_pin_ctrl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/Protothread/Protothread.h</label>
+        <link refid="_protothread_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>main/pme/src/PinCtrl.cpp</label>
+        <link refid="main_2pme_2src_2_pin_ctrl_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main/pme/src/PinCtrl.h</label>
+        <link refid="main_2pme_2src_2_pin_ctrl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_protothread" prot="public">Protothread</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_protothread_8h_1a6da3471eb116970eb1dce79bfcc7cd3e" prot="public" static="no">
+        <name>PT_BEGIN</name>
+        <param></param>
+        <initializer>bool ptYielded = true; (void) ptYielded; switch (_ptLine) { case 0:</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="100" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a146c4bb0e1f9f2020cd12b8dd7ff076e" prot="public" static="no">
+        <name>PT_END</name>
+        <param></param>
+        <initializer>default: ; } Stop(); return false;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="103" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a742a4c6aa99440473f54651233ebd28b" prot="public" static="no">
+        <name>PT_WAIT_UNTIL</name>
+        <param><defname>condition</defname></param>
+        <initializer>    do { _ptLine = __LINE__; case __LINE__: \
+    if (!(condition)) return true; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="106" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a3b5d03ed0a607155806a4f5f7a6570b2" prot="public" static="no">
+        <name>PT_WAIT_WHILE</name>
+        <param><defname>condition</defname></param>
+        <initializer>PT_WAIT_UNTIL(!(condition))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="111" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a62b66f563af59f459841f9cfe42b5496" prot="public" static="no">
+        <name>PT_WAIT_THREAD</name>
+        <param><defname>child</defname></param>
+        <initializer>PT_WAIT_WHILE((child).Run())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="114" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a74af1993d763f937b2282d27dc23349a" prot="public" static="no">
+        <name>PT_SPAWN</name>
+        <param><defname>child</defname></param>
+        <initializer>    do { (child).Restart(); PT_WAIT_THREAD(child); } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="117" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="117" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a0c880659ee8887e4fa796017599bc022" prot="public" static="no">
+        <name>PT_RESTART</name>
+        <param></param>
+        <initializer>do { Restart(); return true; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="121" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1aff926c0a76940ee9862be03f69605257" prot="public" static="no">
+        <name>PT_EXIT</name>
+        <param></param>
+        <initializer>do { Stop(); return false; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="124" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1a7593fae8873b594580319c407dd81ad6" prot="public" static="no">
+        <name>PT_YIELD</name>
+        <param></param>
+        <initializer>    do { ptYielded = false; _ptLine = __LINE__; case __LINE__: \
+    if (!ptYielded) return true; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="127" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="define" id="_protothread_8h_1af4ce443d68a92fa0d48b48583cd393ac" prot="public" static="no">
+        <name>PT_YIELD_UNTIL</name>
+        <param><defname>condition</defname></param>
+        <initializer>    do { ptYielded = false; _ptLine = __LINE__; case __LINE__: \
+    if (!ptYielded || !(condition)) return true; } while (0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Protothread/Protothread.h" line="132" column="9" bodyfile="libraries/Protothread/Protothread.h" bodystart="132" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Protothread<sp/>class<sp/>and<sp/>macros<sp/>for<sp/>lightweight,<sp/>stackless<sp/>threads<sp/>in<sp/>C++.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>was<sp/>&quot;ported&quot;<sp/>to<sp/>C++<sp/>from<sp/>Adam<sp/>Dunkels&apos;<sp/>protothreads<sp/>C<sp/>library<sp/>at:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.sics.se/~adam/pt/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Originally<sp/>ported<sp/>for<sp/>use<sp/>by<sp/>Hamilton<sp/>Jet<sp/>(www.hamiltonjet.co.nz)<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Ben<sp/>Hoyt,<sp/>but<sp/>stripped<sp/>down<sp/>for<sp/>public<sp/>release.<sp/>See<sp/>his<sp/>blog<sp/>entry<sp/>about</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>for<sp/>more<sp/>information:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://blog.brush.co.nz/2008/07/protothreads/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Visual<sp/>Studio<sp/>users:<sp/>There&apos;s<sp/>a<sp/>quirk<sp/>with<sp/>VS<sp/>where<sp/>it<sp/>defines<sp/>__LINE__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>as<sp/>a<sp/>non-constant<sp/>when<sp/>you&apos;ve<sp/>got<sp/>a<sp/>project&apos;s<sp/>Debug<sp/>Information<sp/>Format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>set<sp/>to<sp/>&quot;Program<sp/>Database<sp/>for<sp/>Edit<sp/>and<sp/>Continue<sp/>(/ZI)&quot;<sp/>--<sp/>the<sp/>default.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>To<sp/>fix,<sp/>just<sp/>go<sp/>to<sp/>the<sp/>project&apos;s<sp/>Properties,<sp/>Configuration<sp/>Properties,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C/C++,<sp/>General,<sp/>Debug<sp/>Information<sp/>Format,<sp/>and<sp/>change<sp/>it<sp/>to<sp/>&quot;Program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Database<sp/>(/Zi)&quot;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Protothread.h<sp/>is<sp/>licensed<sp/>under<sp/>an<sp/>MIT<sp/>license<sp/>(see<sp/>LICENSE.txt).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Adam&apos;s<sp/>original<sp/>library<sp/>was<sp/>licensed<sp/>under<sp/>a<sp/>similar,<sp/>BSD-style</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>license,<sp/>which<sp/>lives<sp/>at:<sp/>http://dunkels.com/adam/pt/license.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__PROTOTHREAD_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PROTOTHREAD_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>lightweight,<sp/>stackless<sp/>thread.<sp/>Override<sp/>the<sp/>Run()<sp/>method<sp/>and<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>PT_*<sp/>macros<sp/>to<sp/>do<sp/>work<sp/>of<sp/>the<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>simple<sp/>example</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>----------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>class<sp/>LEDFlasher<sp/>:<sp/>public<sp/>Protothread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>public:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>virtual<sp/>bool<sp/>Run();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>private:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ExpiryTimer<sp/>_timer;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>uintf<sp/>_i;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bool<sp/>LEDFlasher::Run()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>PT_BEGIN();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>for<sp/>(_i<sp/>=<sp/>0;<sp/>_i<sp/>&lt;<sp/>10;<sp/>_i++)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetLED(true);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_timer.Start(250);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PT_WAIT_UNTIL(_timer.Expired());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetLED(false);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_timer.Start(750);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PT_WAIT_UNTIL(_timer.Expired());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>PT_END();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="class_protothread" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_protothread" kindref="compound">Protothread</ref></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>a<sp/>new<sp/>protothread<sp/>that<sp/>will<sp/>start<sp/>from<sp/>the<sp/>beginning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>its<sp/>Run()<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_protothread" kindref="compound">Protothread</ref>()<sp/>:<sp/>_ptLine(0)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Virtual<sp/>destructor<sp/>in<sp/>case<sp/>subclass<sp/>wants<sp/>to<sp/>delete<sp/>via<sp/>base<sp/>pointer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_protothread" kindref="compound">~Protothread</ref>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restart<sp/>protothread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Restart()<sp/>{<sp/>_ptLine<sp/>=<sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>the<sp/>protothread<sp/>from<sp/>running.<sp/>Happens<sp/>automatically<sp/>at<sp/>PT_END.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>this<sp/>differs<sp/>from<sp/>the<sp/>Dunkels&apos;<sp/>original<sp/>protothread<sp/>behaviour</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(his<sp/>restart<sp/>automatically,<sp/>which<sp/>is<sp/>usually<sp/>not<sp/>what<sp/>you<sp/>want).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Stop()<sp/>{<sp/>_ptLine<sp/>=<sp/>LineNumberInvalid;<sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>true<sp/>if<sp/>the<sp/>protothread<sp/>is<sp/>running<sp/>or<sp/>waiting,<sp/>false<sp/>if<sp/>it<sp/>has</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ended<sp/>or<sp/>exited.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>IsRunning()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_ptLine<sp/>!=<sp/>LineNumberInvalid;<sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>next<sp/>part<sp/>of<sp/>protothread<sp/>or<sp/>return<sp/>immediately<sp/>if<sp/>it&apos;s<sp/>still</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>waiting.<sp/>Return<sp/>true<sp/>if<sp/>protothread<sp/>is<sp/>still<sp/>running,<sp/>false<sp/>if<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>finished.<sp/>Implement<sp/>this<sp/>method<sp/>in<sp/>your<sp/>Protothread<sp/>subclass.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Run()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Used<sp/>to<sp/>store<sp/>a<sp/>protothread&apos;s<sp/>position<sp/>(what<sp/>Dunkels<sp/>calls<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;local<sp/>continuation&quot;).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>LineNumber;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>invalid<sp/>line<sp/>number,<sp/>used<sp/>to<sp/>mark<sp/>the<sp/>protothread<sp/>has<sp/>ended.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LineNumber<sp/>LineNumberInvalid<sp/>=<sp/>(LineNumber)(-1);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stores<sp/>the<sp/>protothread&apos;s<sp/>position<sp/>(by<sp/>storing<sp/>the<sp/>line<sp/>number<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>PT_WAIT,<sp/>which<sp/>is<sp/>then<sp/>switched<sp/>on<sp/>at<sp/>the<sp/>next<sp/>Run).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>LineNumber<sp/>_ptLine;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Declare<sp/>start<sp/>of<sp/>protothread<sp/>(use<sp/>at<sp/>start<sp/>of<sp/>Run()<sp/>implementation).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_BEGIN()<sp/>bool<sp/>ptYielded<sp/>=<sp/>true;<sp/>(void)<sp/>ptYielded;<sp/>switch<sp/>(_ptLine)<sp/>{<sp/>case<sp/>0:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stop<sp/>protothread<sp/>and<sp/>end<sp/>it<sp/>(use<sp/>at<sp/>end<sp/>of<sp/>Run()<sp/>implementation).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_END()<sp/>default:<sp/>;<sp/>}<sp/>Stop();<sp/>return<sp/>false;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cause<sp/>protothread<sp/>to<sp/>wait<sp/>until<sp/>given<sp/>condition<sp/>is<sp/>true.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_WAIT_UNTIL(condition)<sp/>\</highlight></codeline>
+<codeline lineno="107"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>_ptLine<sp/>=<sp/>__LINE__;<sp/>case<sp/>__LINE__:<sp/>\</highlight></codeline>
+<codeline lineno="108"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!(condition))<sp/>return<sp/>true;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cause<sp/>protothread<sp/>to<sp/>wait<sp/>while<sp/>given<sp/>condition<sp/>is<sp/>true.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_WAIT_WHILE(condition)<sp/>PT_WAIT_UNTIL(!(condition))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cause<sp/>protothread<sp/>to<sp/>wait<sp/>until<sp/>given<sp/>child<sp/>protothread<sp/>completes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_WAIT_THREAD(child)<sp/>PT_WAIT_WHILE((child).Run())</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restart<sp/>and<sp/>spawn<sp/>given<sp/>child<sp/>protothread<sp/>and<sp/>wait<sp/>until<sp/>it<sp/>completes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_SPAWN(child)<sp/>\</highlight></codeline>
+<codeline lineno="118"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>(child).Restart();<sp/>PT_WAIT_THREAD(child);<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Restart<sp/>protothread&apos;s<sp/>execution<sp/>at<sp/>its<sp/>PT_BEGIN.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_RESTART()<sp/>do<sp/>{<sp/>Restart();<sp/>return<sp/>true;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stop<sp/>and<sp/>exit<sp/>from<sp/>protothread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_EXIT()<sp/>do<sp/>{<sp/>Stop();<sp/>return<sp/>false;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Yield<sp/>protothread<sp/>till<sp/>next<sp/>call<sp/>to<sp/>its<sp/>Run().</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_YIELD()<sp/>\</highlight></codeline>
+<codeline lineno="128"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>ptYielded<sp/>=<sp/>false;<sp/>_ptLine<sp/>=<sp/>__LINE__;<sp/>case<sp/>__LINE__:<sp/>\</highlight></codeline>
+<codeline lineno="129"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!ptYielded)<sp/>return<sp/>true;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Yield<sp/>protothread<sp/>until<sp/>given<sp/>condition<sp/>is<sp/>true.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PT_YIELD_UNTIL(condition)<sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>do<sp/>{<sp/>ptYielded<sp/>=<sp/>false;<sp/>_ptLine<sp/>=<sp/>__LINE__;<sp/>case<sp/>__LINE__:<sp/>\</highlight></codeline>
+<codeline lineno="134"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>if<sp/>(!ptYielded<sp/>||<sp/>!(condition))<sp/>return<sp/>true;<sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__PROTOTHREAD_H__</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Protothread/Protothread.h"/>
+  </compounddef>
+</doxygen>

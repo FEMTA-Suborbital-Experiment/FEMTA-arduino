@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit Unified Sensor Driver</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md23"/> Many small embedded systems exist to collect data from sensors, analyse the data, and either take an appropriate action or send that sensor data to another system for processing.</para>
+<para>One of the many challenges of embedded systems design is the fact that parts you used today may be out of production tomorrow, or system requirements may change and you may need to choose a different sensor down the road.</para>
+<para>Creating new drivers is a relatively easy task, but integrating them into existing systems is both error prone and time consuming since sensors rarely use the exact same units of measurement.</para>
+<para>By reducing all data to a single <bold><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref></bold> &apos;type&apos; and settling on specific, <bold>standardised SI units</bold> for each sensor family the same sensor types return values that are comparable with any other similar sensor. This enables you to switch sensor models with very little impact on the rest of the system, which can help mitigate some of the risks and problems of sensor availability and code reuse.</para>
+<para>The unified sensor abstraction layer is also useful for data-logging and data-transmission since you only have one well-known type to log or transmit over the air or wire.</para>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md24">
+<title>Unified Sensor Drivers</title>
+<para>The following drivers are based on the Adafruit Unified Sensor Driver:</para>
+<para><bold>Accelerometers</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_ADXL345">Adafruit_ADXL345</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_LSM303DLHC">Adafruit_LSM303DLHC</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_MMA8451_Library">Adafruit_MMA8451_Library</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Gyroscope</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_L3GD20_U">Adafruit_L3GD20_U</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Light</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_TSL2561">Adafruit_TSL2561</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_TSL2591_Library">Adafruit_TSL2591_Library</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Magnetometers</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_LSM303DLHC">Adafruit_LSM303DLHC</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_HMC5883_Unified">Adafruit_HMC5883_Unified</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Barometric Pressure</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_BMP085_Unified">Adafruit_BMP085_Unified</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_BMP183_Unified_Library">Adafruit_BMP183_Unified_Library</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Humidity &amp; Temperature</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/DHT-sensor-library">DHT-sensor-library</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Humidity, Temperature, &amp; Barometric Pressure</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_BME280_Library/">Adafruit_BME280_Library</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Orientation</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_BNO055">Adafruit_BNO055</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><bold>All in one device</bold><itemizedlist>
+<listitem><para><ulink url="https://github.com/adafruit/Adafruit_LSM9DS0_Library">Adafruit_LSM9DS0</ulink> (accelerometer, gyroscope, magnetometer)</para>
+</listitem><listitem><para><ulink url="https://github.com/adafruit/Adafruit_LSM9DS1/">Adafruit_LSM9DS1</ulink> (accelerometer, gyroscope, magnetometer)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md25">
+<title>How Does it Work?</title>
+<para>Any driver that supports the Adafruit unified sensor abstraction layer will implement the <ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref> base class. There are two main typedefs and one enum defined in Adafruit_Sensor.h that are used to &apos;abstract&apos; away the sensor details and values:</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md26">
+<title>Sensor Types (&lt;tt&gt;sensors_type_t&lt;/tt&gt;)</title>
+<para>These pre-defined sensor types are used to properly handle the two related typedefs below, and allows us determine what types of units the sensor uses, etc.</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><sp/>++</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ACCELEROMETER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_MAGNETIC_FIELD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(2),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ORIENTATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(3),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GYROSCOPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(4),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LIGHT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PRESSURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(6),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PROXIMITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(8),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GRAVITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(9),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LINEAR_ACCELERATION<sp/><sp/><sp/>=<sp/>(10),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ROTATION_VECTOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(11),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_RELATIVE_HUMIDITY<sp/><sp/><sp/><sp/><sp/>=<sp/>(12),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_AMBIENT_TEMPERATURE<sp/><sp/><sp/>=<sp/>(13),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_VOLTAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(15),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_CURRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(16),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_COLOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(17)</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>sensors_type_t;</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md27">
+<title>Sensor Details (&lt;tt&gt;sensor_t&lt;/tt&gt;)</title>
+<para>This typedef describes the specific capabilities of this sensor, and allows us to know what sensor we are using beneath the abstraction layer.</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><sp/>++</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sensor<sp/>details<sp/>(40<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="_fat_structs_8h_1a30308c9b983377042fd2cc8900454fb1" kindref="member">name</ref>[12];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>sensor_id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>max_value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>min_value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>resolution;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>min_delay;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><ref refid="structsensor__t" kindref="compound">sensor_t</ref>;</highlight></codeline>
+</programlisting></para>
+<para>The individual fields are intended to be used as follows:</para>
+<para><itemizedlist>
+<listitem><para><bold>name</bold>: The sensor name or ID, up to a maximum of twelve characters (ex. &quot;MPL115A2&quot;)</para>
+</listitem><listitem><para><bold>version</bold>: The version of the sensor HW and the driver to allow us to differentiate versions of the board or driver</para>
+</listitem><listitem><para><bold>sensor_id</bold>: A unique sensor identifier that is used to differentiate this specific sensor instance from any others that are present on the system or in the sensor network</para>
+</listitem><listitem><para><bold>type</bold>: The sensor type, based on <bold>sensors_type_t</bold> in sensors.h</para>
+</listitem><listitem><para><bold>max_value</bold>: The maximum value that this sensor can return (in the appropriate SI unit)</para>
+</listitem><listitem><para><bold>min_value</bold>: The minimum value that this sensor can return (in the appropriate SI unit)</para>
+</listitem><listitem><para><bold>resolution</bold>: The smallest difference between two values that this sensor can report (in the appropriate SI unit)</para>
+</listitem><listitem><para><bold>min_delay</bold>: The minimum delay in microseconds between two sensor events, or &apos;0&apos; if there is no constant sensor rate</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md28">
+<title>Sensor Data/Events (&lt;tt&gt;sensors_event_t&lt;/tt&gt;)</title>
+<para>This typedef is used to return sensor data from any sensor supported by the abstraction layer, using standard SI units and scales.</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><sp/>++</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sensor<sp/>event<sp/>(36<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>sensor_id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>reserved0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>timestamp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[4];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/><sp/><sp/>acceleration;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/><sp/><sp/>magnetic;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/><sp/><sp/>orientation;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref><sp/><sp/><sp/>gyro;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distance;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pressure;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>relative_humidity;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>voltage;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref><sp/>color;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>;</highlight></codeline>
+</programlisting> It includes the following fields:</para>
+<para><itemizedlist>
+<listitem><para><bold>version</bold>: Contain &apos;sizeof(sensors_event_t)&apos; to identify which version of the API we&apos;re using in case this changes in the future</para>
+</listitem><listitem><para><bold>sensor_id</bold>: A unique sensor identifier that is used to differentiate this specific sensor instance from any others that are present on the system or in the sensor network (must match the sensor_id value in the corresponding <ref refid="structsensor__t" kindref="compound">sensor_t</ref> enum above!)</para>
+</listitem><listitem><para><bold>type</bold>: the sensor type, based on <bold>sensors_type_t</bold> in sensors.h</para>
+</listitem><listitem><para><bold>timestamp</bold>: time in milliseconds when the sensor value was read</para>
+</listitem><listitem><para><bold>data[4]</bold>: An array of four 32-bit values that allows us to encapsulate any type of sensor data via a simple union (further described below)</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md29">
+<title>Required Functions</title>
+<para>In addition to the two standard types and the sensor type enum, all drivers based on <ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref> must also implement the following two functions:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><sp/>++</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getEvent(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>*);</highlight></codeline>
+</programlisting> Calling this function will populate the supplied <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> reference with the latest available sensor data. You should call this function as often as you want to update your data.</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal"><sp/>++</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getSensor(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>*);</highlight></codeline>
+</programlisting> Calling this function will provide some basic information about the sensor (the sensor name, driver version, min and max values, etc.</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md30">
+<title>Standardised SI values for &lt;tt&gt;sensors_event_t&lt;/tt&gt;</title>
+<para>A key part of the abstraction layer is the standardisation of values on SI units of a particular scale, which is accomplished via the data[4] union in <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> above. This 16 byte union includes fields for each main sensor type, and uses the following SI units and scales:</para>
+<para><itemizedlist>
+<listitem><para><bold>acceleration</bold>: values are in <bold>meter per second per second</bold> (m/s^2)</para>
+</listitem><listitem><para><bold>magnetic</bold>: values are in <bold>micro-Tesla</bold> (uT)</para>
+</listitem><listitem><para><bold>orientation</bold>: values are in <bold>degrees</bold></para>
+</listitem><listitem><para><bold>gyro</bold>: values are in <bold>rad/s</bold></para>
+</listitem><listitem><para><bold>temperature</bold>: values in <bold>degrees centigrade</bold> (Celsius)</para>
+</listitem><listitem><para><bold>distance</bold>: values are in <bold>centimeters</bold></para>
+</listitem><listitem><para><bold>light</bold>: values are in <bold>SI lux</bold> units</para>
+</listitem><listitem><para><bold>pressure</bold>: values are in <bold>hectopascal</bold> (hPa)</para>
+</listitem><listitem><para><bold>relative_humidity</bold>: values are in <bold>percent</bold></para>
+</listitem><listitem><para><bold>current</bold>: values are in <bold>milliamps</bold> (mA)</para>
+</listitem><listitem><para><bold>voltage</bold>: values are in <bold>volts</bold> (V)</para>
+</listitem><listitem><para><bold>color</bold>: values are in 0..1.0 RGB channel luminosity and 32-bit RGBA format</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_1autotoc_md31">
+<title>The Unified Driver Abstraction Layer in Practice</title>
+<para>Using the unified sensor abstraction layer is relatively easy once a compliant driver has been created.</para>
+<para>Every compliant sensor can now be read using a single, well-known &apos;type&apos; (<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>), and there is a standardised way of interrogating a sensor about its specific capabilities (via <ref refid="structsensor__t" kindref="compound">sensor_t</ref>).</para>
+<para>An example of reading the <ulink url="https://github.com/adafruit/Adafruit_TSL2561">TSL2561</ulink> light sensor can be seen below:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal">++</highlight></codeline>
+<codeline><highlight class="normal">Adafruit_TSL2561<sp/>tsl<sp/>=<sp/>Adafruit_TSL2561(TSL2561_ADDR_FLOAT,<sp/>12345);</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>a<sp/>new<sp/>sensor<sp/>event<sp/>*/</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>event;</highlight></codeline>
+<codeline><highlight class="normal">tsl.getEvent(&amp;event);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Display<sp/>the<sp/>results<sp/>(light<sp/>is<sp/>measured<sp/>in<sp/>lux)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event.<ref refid="structsensors__event__t_1adefd2ce2da44e4449ef7cadeaecc6cfd" kindref="member">light</ref>)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Serial.print(event.<ref refid="structsensors__event__t_1adefd2ce2da44e4449ef7cadeaecc6cfd" kindref="member">light</ref>);<sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;<sp/>lux&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>If<sp/>event.light<sp/>=<sp/>0<sp/>lux<sp/>the<sp/>sensor<sp/>is<sp/>probably<sp/>saturated</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>and<sp/>no<sp/>reliable<sp/>data<sp/>could<sp/>be<sp/>generated!<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Sensor<sp/>overload&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>Similarly, we can get the basic technical capabilities of this sensor with the following code:</para>
+<para><programlisting filename=".c"><codeline><highlight class="normal">++</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>sensor;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>sensor;</highlight></codeline>
+<codeline><highlight class="normal">tsl.getSensor(&amp;sensor);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Display<sp/>the<sp/>sensor<sp/>details<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">Serial.println(</highlight><highlight class="stringliteral">&quot;------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Sensor:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.println(sensor.<ref refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" kindref="member">name</ref>);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Driver<sp/>Ver:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.println(sensor.<ref refid="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" kindref="member">version</ref>);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Unique<sp/>ID:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.println(sensor.<ref refid="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" kindref="member">sensor_id</ref>);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Max<sp/>Value:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.print(sensor.<ref refid="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" kindref="member">max_value</ref>);<sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;<sp/>lux&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Min<sp/>Value:<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.print(sensor.<ref refid="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" kindref="member">min_value</ref>);<sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;<sp/>lux&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">Serial.print<sp/><sp/>(</highlight><highlight class="stringliteral">&quot;Resolution:<sp/><sp/><sp/>&quot;</highlight><highlight class="normal">);<sp/>Serial.print(sensor.<ref refid="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" kindref="member">resolution</ref>);<sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;<sp/>lux&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Serial.println(</highlight><highlight class="stringliteral">&quot;------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">Serial.println(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/README.md"/>
+  </compounddef>
+</doxygen>

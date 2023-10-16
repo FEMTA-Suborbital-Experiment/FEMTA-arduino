@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structlsm303_mag_data__s" kind="struct" language="C++" prot="public">
+    <compoundname>lsm303MagData_s</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h" local="no">Adafruit_LSM303DLH_Mag.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlsm303_mag_data__s_1ad520c769dfb74a10bcdc367862f7aedb" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303MagData_s::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>lsm303MagData_s::x</qualifiedname>
+        <briefdescription>
+<para>x-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="81" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsm303_mag_data__s_1a5717a446539f9c872403e9cf6568bfca" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303MagData_s::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>lsm303MagData_s::y</qualifiedname>
+        <briefdescription>
+<para>y-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="82" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsm303_mag_data__s_1a245ae176124ccadcfb55fafdcf0e28b0" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t lsm303MagData_s::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>lsm303MagData_s::z</qualifiedname>
+        <briefdescription>
+<para>z-axis data </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="83" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>INTERNAL ACCELERATION DATA TYPE. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" line="80" column="1" bodyfile="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/Adafruit_LSM303DLH_Mag.h" bodystart="80" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structlsm303_mag_data__s_1ad520c769dfb74a10bcdc367862f7aedb" prot="public" virt="non-virtual"><scope>lsm303MagData_s</scope><name>x</name></member>
+      <member refid="structlsm303_mag_data__s_1a5717a446539f9c872403e9cf6568bfca" prot="public" virt="non-virtual"><scope>lsm303MagData_s</scope><name>y</name></member>
+      <member refid="structlsm303_mag_data__s_1a245ae176124ccadcfb55fafdcf0e28b0" prot="public" virt="non-virtual"><scope>lsm303MagData_s</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

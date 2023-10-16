@@ -2,16 +2,14 @@
  * @file HSCM.cpp
  *
  * @mainpage HSCM Ambient Pressure Sensor 
+ *  
+ * @brief The HSCM Ambient Pressure sensor obtains a reading of the pressure
+ * and temperature in its environment (assumed to be in air). 
  * 
- * @section Summary
- * 
- * The HSCM Ambient Pressure sensor obtains a reading of the pressure
- * and temperature in its environment (assumed to be in air). The barometer
- * is valid from 0 psi to a maximum of 100 psi (depending on the type used).
- * However, the precision at vacuum is questionable and thus not used for
- * flight state detection in the higher altitudes (>150,000 ft).
- * 
- * @section Utility
+ * @details The barometer is valid from 0 psi to a maximum of 100 psi 
+ * (depending on the type used). However, the precision at vacuum is 
+ * questionable and thus not used for flight state detection in the 
+ * higher altitudes (>150,000 ft).
  * 
  * Make sure to include the read() function in the loop(). Then 
  * call the temperature() and pressure() to obtain the temperature 

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_8f0e73730895500e420937671a6cf615" kind="dir">
+    <compoundname>examples/logger_test/src</compoundname>
+    <innerfile refid="examples_2logger__test_2src_2_atmospheric_struct_8h">AtmosphericStruct.h</innerfile>
+    <innerfile refid="examples_2logger__test_2src_2_atmospheric_vector_8h">AtmosphericVector.h</innerfile>
+    <innerfile refid="examples_2logger__test_2src_2_logger_8cpp">Logger.cpp</innerfile>
+    <innerfile refid="examples_2logger__test_2src_2_logger_8h">Logger.h</innerfile>
+    <innerfile refid="examples_2logger__test_2src_2_writer_8cpp">Writer.cpp</innerfile>
+    <innerfile refid="examples_2logger__test_2src_2_writer_8h">Writer.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logger_test/src/"/>
+  </compounddef>
+</doxygen>

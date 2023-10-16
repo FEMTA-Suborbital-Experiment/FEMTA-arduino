@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_df1e3f4da03149e8a99dc8917de355c3" kind="dir">
+    <compoundname>examples/logging_example/libraries/Adafruit_LSM303DLH_Mag</compoundname>
+    <innerfile refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8cpp">Adafruit_LSM303DLH_Mag.cpp</innerfile>
+    <innerfile refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h">Adafruit_LSM303DLH_Mag.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303DLH_Mag/"/>
+  </compounddef>
+</doxygen>

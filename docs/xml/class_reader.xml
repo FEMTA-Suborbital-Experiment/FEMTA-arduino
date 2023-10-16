@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_reader" kind="class" language="C++" prot="public">
+    <compoundname>Reader</compoundname>
+    <includes refid="_reader_8h" local="no">Reader.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_reader_1a30cfe56ad99583512fc0919618def1ca" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reader::mChipSelect</definition>
+        <argsstring></argsstring>
+        <name>mChipSelect</name>
+        <qualifiedname>Reader::mChipSelect</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="33" column="13" bodyfile="main/pme/src/Reader.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reader_1a488d82bbe2e4bf0146ceadfed23ae335" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Reader::mBufferSize</definition>
+        <argsstring></argsstring>
+        <name>mBufferSize</name>
+        <qualifiedname>Reader::mBufferSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="34" column="13" bodyfile="main/pme/src/Reader.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_reader_1a7f4dada87525737cfa00e8a111128e4b" prot="private" static="no" mutable="no">
+        <type>File</type>
+        <definition>File Reader::mFile</definition>
+        <argsstring></argsstring>
+        <name>mFile</name>
+        <qualifiedname>Reader::mFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="35" column="14" bodyfile="main/pme/src/Reader.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_reader_1a8bf4741798c9a0bd64c6eb4472d07619" prot="private" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char * Reader::logSizeFile</definition>
+        <argsstring></argsstring>
+        <name>logSizeFile</name>
+        <qualifiedname>Reader::logSizeFile</qualifiedname>
+        <initializer>{&quot;logSize&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="37" column="27" bodyfile="main/pme/src/Reader.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_reader_1aa53c935378e501762119494dbd1fdffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Reader::Reader</definition>
+        <argsstring>(int chipSelect, int bufferSize)</argsstring>
+        <name>Reader</name>
+        <qualifiedname>Reader::Reader</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>chipSelect</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bufferSize</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="class_reader" kindref="compound">Reader</ref> class, which takes a chip number (usually 4) for where the SD card is located. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>chipSelect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="26" column="9" bodyfile="main/pme/src/Reader.cpp" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reader_1a28fe13eed13d02af3eb622de08604e87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Reader::readFile</definition>
+        <argsstring>(const char *fileName)</argsstring>
+        <name>readFile</name>
+        <qualifiedname>Reader::readFile</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Read the file in the SD card and returns a check if it is available. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="28" column="13" bodyfile="main/pme/src/Reader.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reader_1aa761bdab52a52b4a9f61be941cb779a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structlog_type" kindref="compound">logType</ref></type>
+        <definition>logType Reader::readVector</definition>
+        <argsstring>()</argsstring>
+        <name>readVector</name>
+        <qualifiedname>Reader::readVector</qualifiedname>
+        <briefdescription>
+<para>Outputs the time, low pressure, high pressure, and acceleration values into a single, large vector for reading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The writer class stores data by struct, rather than by outputting to a large vector. To compensate for this, we first read each vector to a temporary vector, push each index of the temporary vector to the output vector, and repeat this process for each chunk of the buffer.</para>
+<para><ulink url="https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot">https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot</ulink> <simplesect kind="return"><para><ref refid="structlog_type" kindref="compound">logType</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="30" column="17" bodyfile="main/pme/src/Reader.cpp" bodystart="79" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_reader_1aefa8f6560711e520cd36ec0f21afc403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Reader::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>Reader::init</qualifiedname>
+        <briefdescription>
+<para>Initialize the SD card for reading. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Reader.h" line="31" column="13" bodyfile="main/pme/src/Reader.cpp" bodystart="38" bodyend="53"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Binary reader of struct data. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="main/pme/src/Reader.h" line="24" column="1" bodyfile="main/pme/src/Reader.h" bodystart="24" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_reader_1aefa8f6560711e520cd36ec0f21afc403" prot="public" virt="non-virtual"><scope>Reader</scope><name>init</name></member>
+      <member refid="class_reader_1a8bf4741798c9a0bd64c6eb4472d07619" prot="private" virt="non-virtual"><scope>Reader</scope><name>logSizeFile</name></member>
+      <member refid="class_reader_1a488d82bbe2e4bf0146ceadfed23ae335" prot="private" virt="non-virtual"><scope>Reader</scope><name>mBufferSize</name></member>
+      <member refid="class_reader_1a30cfe56ad99583512fc0919618def1ca" prot="private" virt="non-virtual"><scope>Reader</scope><name>mChipSelect</name></member>
+      <member refid="class_reader_1a7f4dada87525737cfa00e8a111128e4b" prot="private" virt="non-virtual"><scope>Reader</scope><name>mFile</name></member>
+      <member refid="class_reader_1aa53c935378e501762119494dbd1fdffb" prot="public" virt="non-virtual"><scope>Reader</scope><name>Reader</name></member>
+      <member refid="class_reader_1a28fe13eed13d02af3eb622de08604e87" prot="public" virt="non-virtual"><scope>Reader</scope><name>readFile</name></member>
+      <member refid="class_reader_1aa761bdab52a52b4a9f61be941cb779a7" prot="public" virt="non-virtual"><scope>Reader</scope><name>readVector</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

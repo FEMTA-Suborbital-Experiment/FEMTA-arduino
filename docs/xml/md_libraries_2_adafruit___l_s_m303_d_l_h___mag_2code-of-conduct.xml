@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct" kind="page">
+    <compoundname>md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct</compoundname>
+    <title>Adafruit Community Code of Conduct</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md42"/> </para>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md43">
+<title>Our Pledge</title>
+<para>In the interest of fostering an open and welcoming environment, we as contributors and leaders pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level or type of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md44">
+<title>Our Standards</title>
+<para>We are committed to providing a friendly, safe and welcoming environment for all.</para>
+<para>Examples of behavior that contributes to creating a positive environment include:</para>
+<para><itemizedlist>
+<listitem><para>Be kind and courteous to others</para>
+</listitem><listitem><para>Using welcoming and inclusive language</para>
+</listitem><listitem><para>Being respectful of differing viewpoints and experiences</para>
+</listitem><listitem><para>Collaborating with other community members</para>
+</listitem><listitem><para>Gracefully accepting constructive criticism</para>
+</listitem><listitem><para>Focusing on what is best for the community</para>
+</listitem><listitem><para>Showing empathy towards other community members</para>
+</listitem></itemizedlist>
+</para>
+<para>Examples of unacceptable behavior by participants include:</para>
+<para><itemizedlist>
+<listitem><para>The use of sexualized language or imagery and sexual attention or advances</para>
+</listitem><listitem><para>The use of inappropriate images, including in a community member&apos;s avatar</para>
+</listitem><listitem><para>The use of inappropriate language, including in a community member&apos;s nickname</para>
+</listitem><listitem><para>Any spamming, flaming, baiting or other attention-stealing behavior</para>
+</listitem><listitem><para>Excessive or unwelcome helping; answering outside the scope of the question asked</para>
+</listitem><listitem><para>Trolling, insulting/derogatory comments, and personal or political attacks</para>
+</listitem><listitem><para>Public or private harassment</para>
+</listitem><listitem><para>Publishing others&apos; private information, such as a physical or electronic address, without explicit permission</para>
+</listitem><listitem><para>Other conduct which could reasonably be considered inappropriate</para>
+</listitem></itemizedlist>
+</para>
+<para>The goal of the standards and moderation guidelines outlined here is to build and maintain a respectful community. We ask that you don’t just aim to be &quot;technically unimpeachable&quot;, but rather try to be your best self.</para>
+<para>We value many things beyond technical expertise, including collaboration and supporting others within our community. Providing a positive experience for other community members can have a much more significant impact than simply providing the correct answer.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md45">
+<title>Our Responsibilities</title>
+<para>Project leaders are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.</para>
+<para>Project leaders have the right and responsibility to remove, edit, or reject messages, comments, commits, code, issues, and other contributions that are not aligned to this Code of Conduct, or to ban temporarily or permanently any community member for other behaviors that they deem inappropriate, threatening, offensive, or harmful.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md46">
+<title>Moderation</title>
+<para>Instances of behaviors that violate the Adafruit Community Code of Conduct may be reported by any member of the community. Community members are encouraged to report these situations, including situations they witness involving other community members.</para>
+<para>You may report in the following ways:</para>
+<para>In any situation, you may send an email to <ulink url="mailto:support@adafruit.com">support@adafruit.com</ulink>.</para>
+<para>On the Adafruit Discord, you may send an open message from any channel to all Community Helpers by tagging @community helpers. You may also send an open message from any channel, or a direct message to @kattni#1507, @tannewt#4653, @Dan Halbert#1614, @cater#2442, @sommersoft#0222, or @Andon#8175.</para>
+<para>Email and direct message reports will be kept confidential.</para>
+<para>In situations on Discord where the issue is particularly egregious, possibly illegal, requires immediate action, or violates the Discord terms of service, you should also report the message directly to Discord.</para>
+<para>These are the steps for upholding our community’s standards of conduct.</para>
+<para><orderedlist>
+<listitem><para>Any member of the community may report any situation that violates the Adafruit Community Code of Conduct. All reports will be reviewed and investigated.</para>
+</listitem><listitem><para>If the behavior is an egregious violation, the community member who committed the violation may be banned immediately, without warning.</para>
+</listitem><listitem><para>Otherwise, moderators will first respond to such behavior with a warning.</para>
+</listitem><listitem><para>Moderators follow a soft &quot;three strikes&quot; policy - the community member may be given another chance, if they are receptive to the warning and change their behavior.</para>
+</listitem><listitem><para>If the community member is unreceptive or unreasonable when warned by a moderator, or the warning goes unheeded, they may be banned for a first or second offense. Repeated offenses will result in the community member being banned.</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md47">
+<title>Scope</title>
+<para>This Code of Conduct and the enforcement policies listed above apply to all Adafruit Community venues. This includes but is not limited to any community spaces (both public and private), the entire Adafruit Discord server, and Adafruit GitHub repositories. Examples of Adafruit Community spaces include but are not limited to meet-ups, audio chats on the Adafruit Discord, or interaction at a conference.</para>
+<para>This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. As a community member, you are representing our community, and are expected to behave accordingly.</para>
+</sect1>
+<sect1 id="md_libraries_2_adafruit___l_s_m303_d_l_h___mag_2code-of-conduct_1autotoc_md48">
+<title>Attribution</title>
+<para>This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at <ulink url="https://www.contributor-covenant.org/version/1/4/code-of-conduct.html">https://www.contributor-covenant.org/version/1/4/code-of-conduct.html</ulink>, and the <ulink url="https://www.rust-lang.org/en-US/conduct.html">Rust Code of Conduct</ulink>.</para>
+<para>For other projects adopting the Adafruit Community Code of Conduct, please contact the maintainers of those projects for enforcement. If you wish to use this code of conduct for your own project, consider explicitly mentioning your moderation policy or making a copy with your own moderation policy so as to avoid confusion. </para>
+</sect1>
+    </detaileddescription>
+    <location file="libraries/Adafruit_LSM303DLH_Mag/code-of-conduct.md"/>
+  </compounddef>
+</doxygen>

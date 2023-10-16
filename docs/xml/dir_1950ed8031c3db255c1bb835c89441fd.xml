@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1950ed8031c3db255c1bb835c89441fd" kind="dir">
+    <compoundname>examples/logging_example/libraries/Adafruit_LSM303_Accel</compoundname>
+    <innerfile refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8cpp">Adafruit_LSM303_Accel.cpp</innerfile>
+    <innerfile refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h">Adafruit_LSM303_Accel.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/"/>
+  </compounddef>
+</doxygen>

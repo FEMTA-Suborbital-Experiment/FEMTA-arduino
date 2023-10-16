@@ -1,0 +1,1551 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_fat_structs_8h" kind="file" language="C++">
+    <compoundname>FatStructs.h</compoundname>
+    <includedby refid="_sd_fat_8h" local="yes">libraries/SD-1.2.4/src/utility/SdFat.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>examples/read_struct_from_binary/src/Reader.cpp</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8cpp"/>
+      </node>
+      <node id="6">
+        <label>examples/read_struct_from_binary/src/Reader.h</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/SD-1.2.4/src/SD.h</label>
+        <link refid="_s_d_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/utility/FatStructs.h</label>
+        <link refid="_fat_structs_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libraries/SD-1.2.4/src/utility/SdFat.h</label>
+        <link refid="_sd_fat_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main/pme/src/Reader.cpp</label>
+        <link refid="main_2pme_2src_2_reader_8cpp"/>
+      </node>
+      <node id="8">
+        <label>main/pme/src/Reader.h</label>
+        <link refid="main_2pme_2src_2_reader_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="10">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structpartition_table" prot="public">partitionTable</innerclass>
+    <innerclass refid="structmaster_boot_record" prot="public">masterBootRecord</innerclass>
+    <innerclass refid="structbios_parm_block" prot="public">biosParmBlock</innerclass>
+    <innerclass refid="structfat32_boot_sector" prot="public">fat32BootSector</innerclass>
+    <innerclass refid="structdirectory_entry" prot="public">directoryEntry</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_fat_structs_8h_1a37251e7d5c69a159be727a3fc8c9d0e6" prot="public" static="no">
+        <type>struct <ref refid="structpartition_table" kindref="compound">partitionTable</ref></type>
+        <definition>typedef struct partitionTable part_t</definition>
+        <argsstring></argsstring>
+        <name>part_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type name for <ref refid="structpartition_table" kindref="compound">partitionTable</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="95" column="29" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_fat_structs_8h_1a7c429e5097f101c8c97663d6c4155bd9" prot="public" static="no">
+        <type>struct <ref refid="structmaster_boot_record" kindref="compound">masterBootRecord</ref></type>
+        <definition>typedef struct masterBootRecord mbr_t</definition>
+        <argsstring></argsstring>
+        <name>mbr_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type name for <ref refid="structmaster_boot_record" kindref="compound">masterBootRecord</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="119" column="31" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_fat_structs_8h_1a5c8af240713e05e7e6c959006ced35fb" prot="public" static="no">
+        <type>struct <ref refid="structbios_parm_block" kindref="compound">biosParmBlock</ref></type>
+        <definition>typedef struct biosParmBlock bpb_t</definition>
+        <argsstring></argsstring>
+        <name>bpb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type name for <ref refid="structbios_parm_block" kindref="compound">biosParmBlock</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="241" column="28" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_fat_structs_8h_1a91a3979f1149ff688d0d8bb696bc2887" prot="public" static="no">
+        <type>struct <ref refid="structfat32_boot_sector" kindref="compound">fat32BootSector</ref></type>
+        <definition>typedef struct fat32BootSector fbs_t</definition>
+        <argsstring></argsstring>
+        <name>fbs_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type name for <ref refid="structfat32_boot_sector" kindref="compound">fat32BootSector</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="289" column="30" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" prot="public" static="no">
+        <type>struct <ref refid="structdirectory_entry" kindref="compound">directoryEntry</ref></type>
+        <definition>typedef struct directoryEntry dir_t</definition>
+        <argsstring></argsstring>
+        <name>dir_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type name for <ref refid="structdirectory_entry" kindref="compound">directoryEntry</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="374" column="29" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_fat_structs_8h_1aa1aeb3a5e2838c5c7270fa17bcc31e8e" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const BOOTSIG0</definition>
+        <argsstring></argsstring>
+        <name>BOOTSIG0</name>
+        <initializer>= 0X55</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Value for byte 510 of boot block or MBR </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="32" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a1b5a143c48d93d6f4e3fc1f5f3ac1dc3" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const BOOTSIG1</definition>
+        <argsstring></argsstring>
+        <name>BOOTSIG1</name>
+        <initializer>= 0XAA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Value for byte 511 of boot block or MBR </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="34" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ad2acb7fab9ef33a6f00c834401250229" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t boot</definition>
+        <argsstring></argsstring>
+        <name>boot</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boot Indicator . Indicates whether the volume is the active partition. Legal values include: 0X00. Do not use for booting. 0X80 Active partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="5" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ab27b713d70d01c43e31fc67e08f876bf" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t beginHead</definition>
+        <argsstring></argsstring>
+        <name>beginHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Head part of Cylinder-head-sector address of the first block in the partition. Legal values are 0-255. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="10" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3ef026d5e8a9c697e414cf773b129db4" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned beginSector</definition>
+        <argsstring></argsstring>
+        <name>beginSector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector part of Cylinder-head-sector address of the first block in the partition. Legal values are 1-63. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="15" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aae20759e6c6dbfa51368964f8fe095c7" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned beginCylinderHigh</definition>
+        <argsstring></argsstring>
+        <name>beginCylinderHigh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High bits cylinder for first block in partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="17" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1afefdee23280567f8434f9c31610e0a3b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t beginCylinderLow</definition>
+        <argsstring></argsstring>
+        <name>beginCylinderLow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Combine beginCylinderLow with beginCylinderHigh. Legal values are 0-1023. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="22" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partition type. See defines that begin with PART_TYPE_ for some Microsoft partition types. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="27" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a248e6a8c42872744129b8b85a864a7a6" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t endHead</definition>
+        <argsstring></argsstring>
+        <name>endHead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>head part of cylinder-head-sector address of the last sector in the partition. Legal values are 0-255. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="32" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a1412f3c5116885eb7d4a047e432c9cdd" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned endSector</definition>
+        <argsstring></argsstring>
+        <name>endSector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector part of cylinder-head-sector address of the last sector in the partition. Legal values are 1-63. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="37" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1adeccbdcad0d989d1e33a07b435ab7300" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned endCylinderHigh</definition>
+        <argsstring></argsstring>
+        <name>endCylinderHigh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High bits of end cylinder </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="39" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3eb4b87675075500899edbb9296e0435" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t endCylinderLow</definition>
+        <argsstring></argsstring>
+        <name>endCylinderLow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Combine endCylinderLow with endCylinderHigh. Legal values are 0-1023. Only used in old PC BIOS. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="44" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a5951cd74127d45180071909972899c0e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t firstSector</definition>
+        <argsstring></argsstring>
+        <name>firstSector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Logical block address of the first block in the partition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="46" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ab3559f69d4a46a945bd4c037070585f2" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t totalSectors</definition>
+        <argsstring></argsstring>
+        <name>totalSectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of the partition, in blocks. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="48" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a714f552faf0b0f09ffc53e2ba52ddbc3" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t codeArea[440]</definition>
+        <argsstring>[440]</argsstring>
+        <name>codeArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Code Area for master boot program. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="1" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a6a40348b3b308847ba21a75829d91871" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t diskSignature</definition>
+        <argsstring></argsstring>
+        <name>diskSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional WindowsNT disk signature. May contain more boot code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="3" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aefe56bef1bc942c24bc7eefc4a7aefcc" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t usuallyZero</definition>
+        <argsstring></argsstring>
+        <name>usuallyZero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Usually zero but may be more boot code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="5" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aa65f87792f271fc6cfa70980af6ac3dd" prot="public" static="no" mutable="no">
+        <type><ref refid="_fat_structs_8h_1a37251e7d5c69a159be727a3fc8c9d0e6" kindref="member">part_t</ref></type>
+        <definition>part_t part[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>part</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partition tables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="7" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aa5633d8ea0049be26315e7627e32bb4e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbrSig0</definition>
+        <argsstring></argsstring>
+        <name>mbrSig0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>First MBR signature byte. Must be 0X55 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="9" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1af106928fafe93a641c06cfb87b0d24e3" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mbrSig1</definition>
+        <argsstring></argsstring>
+        <name>mbrSig1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Second MBR signature byte. Must be 0XAA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="11" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1adb2ddeae74baf681103d21d724814a63" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t bytesPerSector</definition>
+        <argsstring></argsstring>
+        <name>bytesPerSector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of bytes per sector. This value may take on only the following values: 512, 1024, 2048 or 4096 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="4" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3ce07376c286acd8393a18a32d7ca4c0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sectorsPerCluster</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sectors per allocation unit. This value must be a power of 2 that is greater than 0. The legal values are 1, 2, 4, 8, 16, 32, 64, and 128. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="10" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a16c854faf567331bbbfb383e6c8df6f5" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t reservedSectorCount</definition>
+        <argsstring></argsstring>
+        <name>reservedSectorCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sectors before the first FAT. This value must not be zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="15" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a624e9eb125b4fc8aeaebcccf79e17aa8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fatCount</definition>
+        <argsstring></argsstring>
+        <name>fatCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The count of FAT data structures on the volume. This field should always contain the value 2 for any FAT volume of any type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="19" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aabe25e54b9c06a9a7393fc6c475d9fa1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t rootDirEntryCount</definition>
+        <argsstring></argsstring>
+        <name>rootDirEntryCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For FAT12 and FAT16 volumes, this field contains the count of 32-byte directory entries in the root directory. For FAT32 volumes, this field must be set to 0. For FAT12 and FAT16 volumes, this value should always specify a count that when multiplied by 32 results in a multiple of bytesPerSector. FAT16 volumes should use the value 512. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="28" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ad717f5b9af13f8ec9d0d6d1337174dfa" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t totalSectors16</definition>
+        <argsstring></argsstring>
+        <name>totalSectors16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is the old 16-bit total count of sectors on the volume. This count includes the count of all sectors in all four regions of the volume. This field can be 0; if it is 0, then totalSectors32 must be non-zero. For FAT32 volumes, this field must be 0. For FAT12 and FAT16 volumes, this field contains the sector count, and totalSectors32 is 0 if the total sector count fits (is less than 0x10000). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="38" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ab88738f9cb91c882cb91d5e83a19a73f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mediaType</definition>
+        <argsstring></argsstring>
+        <name>mediaType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This dates back to the old MS-DOS 1.x media determination and is no longer usually used for anything. 0xF8 is the standard value for fixed (non-removable) media. For removable media, 0xF0 is frequently used. Legal values are 0xF0 or 0xF8-0xFF. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="45" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1abf85d1c57b01c8901a0cdcd0ac1babc2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t sectorsPerFat16</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerFat16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of sectors occupied by one FAT on FAT12/FAT16 volumes. On FAT32 volumes this field must be 0, and sectorsPerFat32 contains the FAT size count. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="51" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ae1928fd953f5d0f198826c93c320f2b2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t sectorsPerTrtack</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerTrtack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sectors per track for interrupt 0x13. Not used otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="53" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a57cb7e16b9969fa87c9f1ca43a87d217" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t headCount</definition>
+        <argsstring></argsstring>
+        <name>headCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of heads for interrupt 0x13. Not used otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="55" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a454fd6cc3f063c86b7fe65c367da7cdd" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t hidddenSectors</definition>
+        <argsstring></argsstring>
+        <name>hidddenSectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of hidden sectors preceding the partition that contains this FAT volume. This field is generally only relevant for media visible on interrupt 0x13. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="61" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a64d5902f9e900ecc745b1c0b325d875f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t totalSectors32</definition>
+        <argsstring></argsstring>
+        <name>totalSectors32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is the new 32-bit total count of sectors on the volume. This count includes the count of all sectors in all four regions of the volume. This field can be 0; if it is 0, then totalSectors16 must be non-zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="68" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a687653b3b71ab0de1f27f8ab8f331a1c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sectorsPerFat32</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerFat32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of sectors occupied by one FAT on FAT32 volumes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="72" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a4f864cefb7f1b004d5739ffab9a65ae1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fat32Flags</definition>
+        <argsstring></argsstring>
+        <name>fat32Flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is only defined for FAT32 media and does not exist on FAT12 and FAT16 media. Bits 0-3 <ndash/> Zero-based number of active FAT. Only valid if mirroring is disabled. Bits 4-6 <ndash/> Reserved. Bit 7 <ndash/> 0 means the FAT is mirrored at runtime into all FATs. <ndash/> 1 means only one FAT is active; it is the one referenced in bits 0-3. Bits 8-15 <ndash/> Reserved. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="83" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a8f27235fa3dee48a4b4e099135fc81d6" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fat32Version</definition>
+        <argsstring></argsstring>
+        <name>fat32Version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FAT32 version. High byte is major revision number. Low byte is minor revision number. Only 0.0 define. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="88" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a58249ed4ed0f92d5768f2342f248af82" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fat32RootCluster</definition>
+        <argsstring></argsstring>
+        <name>fat32RootCluster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cluster number of the first cluster of the root directory for FAT32. This usually 2 but not required to be 2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="93" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aad3222ea255af06d09734e96a93c82ed" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fat32FSInfo</definition>
+        <argsstring></argsstring>
+        <name>fat32FSInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector number of FSINFO structure in the reserved area of the FAT32 volume. Usually 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="98" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a1914baf34756efd18072059dccfcf40f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fat32BackBootBlock</definition>
+        <argsstring></argsstring>
+        <name>fat32BackBootBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If non-zero, indicates the sector number in the reserved area of the volume of a copy of the boot record. Usually 6. No value other than 6 is recommended. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="104" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ae31dc7ad96aec8e0d184fd7e5a97f30d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32Reserved[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>fat32Reserved</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved for future expansion. Code that formats FAT32 volumes should always set all of the bytes of this field to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="109" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ae765fe8abf71fd961317f4314e16c1ac" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t jmpToBootCode[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>jmpToBootCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X86 jmp to boot program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="1" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ac1adff84818e7f18fdfea3374569a380" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char oemName[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>oemName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>informational only - don&apos;t depend on it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="3" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a4d8105e4754b2750ab421b9e84d2c43e" prot="public" static="no" mutable="no">
+        <type><ref refid="_fat_structs_8h_1a5c8af240713e05e7e6c959006ced35fb" kindref="member">bpb_t</ref></type>
+        <definition>bpb_t bpb</definition>
+        <argsstring></argsstring>
+        <name>bpb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BIOS Parameter Block </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="5" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1aa7c65fdb4f759fca094105d1c870bcb2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t driveNumber</definition>
+        <argsstring></argsstring>
+        <name>driveNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for int0x13 use value 0X80 for hard drive </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="7" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a2a2556147677ece60b8aadf4a0d608ed" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t reserved1</definition>
+        <argsstring></argsstring>
+        <name>reserved1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used by Windows NT - should be zero for FAT </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="9" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1acc4a4e4c22b630d12c1b2c2b8c7eb366" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bootSignature</definition>
+        <argsstring></argsstring>
+        <name>bootSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>0X29 if next three fields are valid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="11" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a7c9ffcee12051cefe1724e8024af25f8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t volumeSerialNumber</definition>
+        <argsstring></argsstring>
+        <name>volumeSerialNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usually generated by combining date and time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="13" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a253960050a38d2bfb2f57e86769aca62" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char volumeLabel[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>volumeLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>should match volume label in root dir </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="15" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1adf80bb044ef7c8ac6d371268aa338e23" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char fileSystemType[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>fileSystemType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>informational only - don&apos;t depend on it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="17" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a5d683c906867f4e0122d2ce3462de292" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bootCode[420]</definition>
+        <argsstring>[420]</argsstring>
+        <name>bootCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X86 boot code </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="19" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1abdaf2cc75b74800944ede557442ca5bd" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bootSectorSig0</definition>
+        <argsstring></argsstring>
+        <name>bootSectorSig0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be 0X55 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="21" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a44983e94ecddbdcb7ab691e493a13d94" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t bootSectorSig1</definition>
+        <argsstring></argsstring>
+        <name>bootSectorSig1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be 0XAA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="23" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a47b11a71cedad5402613ab2aae827c99" prot="public" static="no" mutable="no">
+        <type>uint16_t const</type>
+        <definition>uint16_t const FAT16EOC</definition>
+        <argsstring></argsstring>
+        <name>FAT16EOC</name>
+        <initializer>= 0XFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FAT16 end of chain value used by Microsoft. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="278" column="16" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a79b2cefbcfdbf3507fe0496804541b0d" prot="public" static="no" mutable="no">
+        <type>uint16_t const</type>
+        <definition>uint16_t const FAT16EOC_MIN</definition>
+        <argsstring></argsstring>
+        <name>FAT16EOC_MIN</name>
+        <initializer>= 0XFFF8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum value for FAT16 EOC. Use to test for EOC. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="280" column="16" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ac213f2ce8eaa53f7d98424b300038dfd" prot="public" static="no" mutable="no">
+        <type>uint32_t const</type>
+        <definition>uint32_t const FAT32EOC</definition>
+        <argsstring></argsstring>
+        <name>FAT32EOC</name>
+        <initializer>= 0X0FFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FAT32 end of chain value used by Microsoft. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="282" column="16" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1af5bcc97de8cc4956435d06349d6e714b" prot="public" static="no" mutable="no">
+        <type>uint32_t const</type>
+        <definition>uint32_t const FAT32EOC_MIN</definition>
+        <argsstring></argsstring>
+        <name>FAT32EOC_MIN</name>
+        <initializer>= 0X0FFFFFF8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum value for FAT32 EOC. Use to test for EOC. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="284" column="16" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a00e6cb52e814024fc23971c43f6e257a" prot="public" static="no" mutable="no">
+        <type>uint32_t const</type>
+        <definition>uint32_t const FAT32MASK</definition>
+        <argsstring></argsstring>
+        <name>FAT32MASK</name>
+        <initializer>= 0X0FFFFFFF</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mask a for FAT32 entry. Entries are 28 bits. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="286" column="16" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a30308c9b983377042fd2cc8900454fb1" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t name[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Short 8.3 name. The first eight bytes contain the file name with blank fill. The last three bytes contain the file extension with blank fill. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="5" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a983149395439fbc9ca8497076b75fd6b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Entry attributes.</para>
+<para>The upper two bits of the attribute byte are reserved and should always be set to 0 when a file is created and never modified or looked at after that. See defines that begin with DIR_ATT_. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="12" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a937b2d2e4b78ddf9e42b19c754e4f31a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t reservedNT</definition>
+        <argsstring></argsstring>
+        <name>reservedNT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved for use by Windows NT. Set value to 0 when a file is created and never modify or look at it after that. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="17" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a088ac767e59feb38599e0a53e6aacb82" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t creationTimeTenths</definition>
+        <argsstring></argsstring>
+        <name>creationTimeTenths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The granularity of the seconds part of creationTime is 2 seconds so this field is a count of tenths of a second and its valid value range is 0-199 inclusive. (WHG note - seems to be hundredths) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="23" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a2b2b18a3fb988470278b1217abe946ab" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t creationTime</definition>
+        <argsstring></argsstring>
+        <name>creationTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time file was created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="25" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ab00be6268bf4c4f4b6014f056e27ba45" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t creationDate</definition>
+        <argsstring></argsstring>
+        <name>creationDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Date file was created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="27" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a5635857642ec25e070355257115dafd1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastAccessDate</definition>
+        <argsstring></argsstring>
+        <name>lastAccessDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Last access date. Note that there is no last access time, only a date. This is the date of last read or write. In the case of a write, this should be set to the same date as lastWriteDate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="33" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ad6224dfa27a1c558703f158e93ceafe0" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t firstClusterHigh</definition>
+        <argsstring></argsstring>
+        <name>firstClusterHigh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>High word of this entry&apos;s first cluster number (always 0 for a FAT12 or FAT16 volume). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="38" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ab140bb773b2ff0ddf7199efc083ce037" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastWriteTime</definition>
+        <argsstring></argsstring>
+        <name>lastWriteTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time of last write. File creation is considered a write. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="40" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a26f462d6e4410d502149973ee6c216fd" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t lastWriteDate</definition>
+        <argsstring></argsstring>
+        <name>lastWriteDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Date of last write. File creation is considered a write. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="42" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3a4f70fb49494208d7eb349969a8acaa" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t firstClusterLow</definition>
+        <argsstring></argsstring>
+        <name>firstClusterLow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Low word of this entry&apos;s first cluster number. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="44" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a48f46ad02b77a00b795d15626ba1d42e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fileSize</definition>
+        <argsstring></argsstring>
+        <name>fileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>32-bit unsigned holding this file&apos;s size in bytes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="46" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a27c8cd1e50f71974c9d98a868cfc4c77" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_NAME_0XE5</definition>
+        <argsstring></argsstring>
+        <name>DIR_NAME_0XE5</name>
+        <initializer>= 0X05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>escape for name[0] = 0XE5 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="376" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a5de4ada3536d89559f6433e835e311da" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_NAME_DELETED</definition>
+        <argsstring></argsstring>
+        <name>DIR_NAME_DELETED</name>
+        <initializer>= 0XE5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>name[0] value for entry that is free after being &quot;deleted&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="378" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a23b2e4d06e245c778f4c52909cf97c76" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_NAME_FREE</definition>
+        <argsstring></argsstring>
+        <name>DIR_NAME_FREE</name>
+        <initializer>= 0X00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>name[0] value for entry that is free and no allocated entries follow </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="380" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1abff82a1fd65417a032777e0821821640" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_READ_ONLY</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_READ_ONLY</name>
+        <initializer>= 0X01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>file is read-only </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="382" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3a41f54f933a4d34b1502321ab9da5ff" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_HIDDEN</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_HIDDEN</name>
+        <initializer>= 0X02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File should hidden in directory listings </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="384" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ae89bc34164e7318b3d3169ff290c8d70" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_SYSTEM</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_SYSTEM</name>
+        <initializer>= 0X04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Entry is for a system file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="386" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_VOLUME_ID</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_VOLUME_ID</name>
+        <initializer>= 0X08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directory entry contains the volume label </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="388" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_DIRECTORY</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_DIRECTORY</name>
+        <initializer>= 0X10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Entry is for a directory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="390" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a7144738c367c16e672b3e48962bc7dda" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_ARCHIVE</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_ARCHIVE</name>
+        <initializer>= 0X20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Old DOS archive bit for backup support </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="392" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a0d3f6fbbd34126b2d5563bba65220985" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_LONG_NAME</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_LONG_NAME</name>
+        <initializer>= 0X0F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test value for long name entry. Test is (d-&gt;attributes &amp; DIR_ATT_LONG_NAME_MASK) == DIR_ATT_LONG_NAME. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="395" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a0aa5725dd4916058f0c6c06b09f83059" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_LONG_NAME_MASK</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_LONG_NAME_MASK</name>
+        <initializer>= 0X3F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test mask for long name entry </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="397" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1ad131502987658581d57cc18328d18aa5" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_DEFINED_BITS</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_DEFINED_BITS</name>
+        <initializer>= 0X3F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>defined attribute bits </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="399" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fat_structs_8h_1a40ed222fdb5b5c6b2f04268ab0ce20ca" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DIR_ATT_FILE_TYPE_MASK</definition>
+        <argsstring></argsstring>
+        <name>DIR_ATT_FILE_TYPE_MASK</name>
+        <initializer>= (<ref refid="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" kindref="member">DIR_ATT_VOLUME_ID</ref> | <ref refid="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" kindref="member">DIR_ATT_DIRECTORY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mask for file/subdirectory tests </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="405" column="15" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="405" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_fat_structs_8h_1a496dd28da2f524bc5d49e49b825fce8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structpartition_table" kindref="compound">partitionTable</ref></type>
+        <definition>struct directoryEntry __attribute__</definition>
+        <argsstring>((packed))</argsstring>
+        <name>__attribute__</name>
+        <param>
+          <type>(packed)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="34" column="15" declfile="libraries/SD-1.2.4/src/utility/FatStructs.h" declline="34" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="_fat_structs_8h_1a504c3d996b412f386becc27a8c49cd2c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t DIR_IS_LONG_NAME</definition>
+        <argsstring>(const dir_t *dir)</argsstring>
+        <name>DIR_IS_LONG_NAME</name>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directory entry is part of a long name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="401" column="23" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="401" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="_fat_structs_8h_1a5ce8bde4d6ff3950df951e84c7bb8d58" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t DIR_IS_FILE</definition>
+        <argsstring>(const dir_t *dir)</argsstring>
+        <name>DIR_IS_FILE</name>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directory entry is for a file </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="407" column="23" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="407" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="_fat_structs_8h_1ace8ed88fcb41afc4d2fe0eabf96e71c6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t DIR_IS_SUBDIR</definition>
+        <argsstring>(const dir_t *dir)</argsstring>
+        <name>DIR_IS_SUBDIR</name>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directory entry is for a subdirectory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="411" column="23" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="411" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="_fat_structs_8h_1a9d99b04fa090825a9b9c2468fa81e627" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>static uint8_t DIR_IS_FILE_OR_SUBDIR</definition>
+        <argsstring>(const dir_t *dir)</argsstring>
+        <name>DIR_IS_FILE_OR_SUBDIR</name>
+        <param>
+          <type>const <ref refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" kindref="member">dir_t</ref> *</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Directory entry is for a file or subdirectory </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="415" column="23" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="415" bodyend="417"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>FAT file structures </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_fat_structs_8h_1a714f552faf0b0f09ffc53e2ba52ddbc3" refkind="member"><highlight class="comment">/*<sp/>Arduino<sp/>SdFat<sp/>Library</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2009<sp/>by<sp/>William<sp/>Greiman</highlight></codeline>
+<codeline lineno="3" refid="_fat_structs_8h_1a6a40348b3b308847ba21a75829d91871" refkind="member"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4" refid="_fat_structs_8h_1adb2ddeae74baf681103d21d724814a63" refkind="member"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>Arduino<sp/>SdFat<sp/>Library</highlight></codeline>
+<codeline lineno="5" refid="_fat_structs_8h_1ad2acb7fab9ef33a6f00c834401250229" refkind="member"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7" refid="_fat_structs_8h_1aa7c65fdb4f759fca094105d1c870bcb2" refkind="member"><highlight class="comment"><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="9" refid="_fat_structs_8h_1aa5633d8ea0049be26315e7627e32bb4e" refkind="member"><highlight class="comment"><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10" refid="_fat_structs_8h_1ab27b713d70d01c43e31fc67e08f876bf" refkind="member"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11" refid="_fat_structs_8h_1acc4a4e4c22b630d12c1b2c2b8c7eb366" refkind="member"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12" refid="_fat_structs_8h_1a983149395439fbc9ca8497076b75fd6b" refkind="member"><highlight class="comment"><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13" refid="_fat_structs_8h_1a7c9ffcee12051cefe1724e8024af25f8" refkind="member"><highlight class="comment"><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15" refid="_fat_structs_8h_1a3ef026d5e8a9c697e414cf773b129db4" refkind="member"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17" refid="_fat_structs_8h_1aae20759e6c6dbfa51368964f8fe095c7" refkind="member"><highlight class="comment"><sp/><sp/><sp/>along<sp/>with<sp/>the<sp/>Arduino<sp/>SdFat<sp/>Library.<sp/><sp/>If<sp/>not,<sp/>see</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="19" refid="_fat_structs_8h_1a5d683c906867f4e0122d2ce3462de292" refkind="member"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FatStructs_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_fat_structs_8h_1abdaf2cc75b74800944ede557442ca5bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FatStructs_h</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="27" refid="_fat_structs_8h_1ab00be6268bf4c4f4b6014f056e27ba45" refkind="member"><highlight class="comment"><sp/><sp/><sp/>mostly<sp/>from<sp/>Microsoft<sp/>document<sp/>fatgen103.doc</highlight></codeline>
+<codeline lineno="28" refid="_fat_structs_8h_1aabe25e54b9c06a9a7393fc6c475d9fa1" refkind="member"><highlight class="comment"><sp/><sp/><sp/>http://www.microsoft.com/whdc/system/platform/firmware/fatgen.mspx</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="32" refid="_fat_structs_8h_1aa1aeb3a5e2838c5c7270fa17bcc31e8e" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1aa1aeb3a5e2838c5c7270fa17bcc31e8e" kindref="member">BOOTSIG0</ref><sp/>=<sp/>0X55;</highlight></codeline>
+<codeline lineno="34" refid="_fat_structs_8h_1a1b5a143c48d93d6f4e3fc1f5f3ac1dc3" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a1b5a143c48d93d6f4e3fc1f5f3ac1dc3" kindref="member">BOOTSIG1</ref><sp/>=<sp/>0XAA;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="43" refid="structpartition_table" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpartition_table" kindref="compound">partitionTable</ref><sp/>{</highlight></codeline>
+<codeline lineno="49" refid="structpartition_table_1adf386afb1f33046d8b6a1a0afa780ec9" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1adf386afb1f33046d8b6a1a0afa780ec9" kindref="member">boot</ref>;</highlight></codeline>
+<codeline lineno="54" refid="structpartition_table_1a7d426694b8cf2151ae38568670a8c845" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1a7d426694b8cf2151ae38568670a8c845" kindref="member">beginHead</ref>;</highlight></codeline>
+<codeline lineno="59" refid="structpartition_table_1ae201c11d9671c9efc307c654a2b6c026" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structpartition_table_1ae201c11d9671c9efc307c654a2b6c026" kindref="member">beginSector</ref><sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="61" refid="structpartition_table_1a744f0c7f9ad4c426b10de085b4f52392" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structpartition_table_1a744f0c7f9ad4c426b10de085b4f52392" kindref="member">beginCylinderHigh</ref><sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="66" refid="structpartition_table_1a941fcb4df298f5f73ccca011bf40787a" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1a941fcb4df298f5f73ccca011bf40787a" kindref="member">beginCylinderLow</ref>;</highlight></codeline>
+<codeline lineno="71" refid="structpartition_table_1a3861cf276c728c4dd30ca04e74197ee8" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1a3861cf276c728c4dd30ca04e74197ee8" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="76" refid="structpartition_table_1a4a3945bfd3a29f474984cb9f180dbd51" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1a4a3945bfd3a29f474984cb9f180dbd51" kindref="member">endHead</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structpartition_table_1a27cdc4320c418ed0d833ab163ed77ad7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structpartition_table_1a27cdc4320c418ed0d833ab163ed77ad7" kindref="member">endSector</ref><sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="83" refid="structpartition_table_1a32fea225b8ffd925ad919ffc56e9abda" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structpartition_table_1a32fea225b8ffd925ad919ffc56e9abda" kindref="member">endCylinderHigh</ref><sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="88" refid="structpartition_table_1ad7829e34be70084abe145227b0d18274" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structpartition_table_1ad7829e34be70084abe145227b0d18274" kindref="member">endCylinderLow</ref>;</highlight></codeline>
+<codeline lineno="90" refid="structpartition_table_1a02bbdff840c854dc96fa0b6da8589d86" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structpartition_table_1a02bbdff840c854dc96fa0b6da8589d86" kindref="member">firstSector</ref>;</highlight></codeline>
+<codeline lineno="92" refid="structpartition_table_1acf96e59ce648a9a0cf35751c3b6d7730" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structpartition_table_1acf96e59ce648a9a0cf35751c3b6d7730" kindref="member">totalSectors</ref>;</highlight></codeline>
+<codeline lineno="93" refid="_fat_structs_8h_1a58249ed4ed0f92d5768f2342f248af82" refkind="member"><highlight class="normal">}<sp/><ref refid="_adafruit___zero_d_m_a_8cpp_1a35977139f9fecb36af64baf1b69a559a" kindref="member">__attribute__</ref>((packed));</highlight></codeline>
+<codeline lineno="95" refid="_fat_structs_8h_1a37251e7d5c69a159be727a3fc8c9d0e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structpartition_table" kindref="compound">partitionTable</ref><sp/><ref refid="structpartition_table" kindref="compound">part_t</ref>;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="104" refid="_fat_structs_8h_1a1914baf34756efd18072059dccfcf40f" refkind="member"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmaster_boot_record" kindref="compound">masterBootRecord</ref><sp/>{</highlight></codeline>
+<codeline lineno="106" refid="structmaster_boot_record_1a26ca1fb4ebbff2cc1a54153b1dfcd688" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structmaster_boot_record_1a26ca1fb4ebbff2cc1a54153b1dfcd688" kindref="member">codeArea</ref>[440];</highlight></codeline>
+<codeline lineno="108" refid="structmaster_boot_record_1a77151c641444c0653ff71a253f0423ef" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structmaster_boot_record_1a77151c641444c0653ff71a253f0423ef" kindref="member">diskSignature</ref>;</highlight></codeline>
+<codeline lineno="110" refid="structmaster_boot_record_1afacfc863e98f64053cd9459c6dec948f" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structmaster_boot_record_1afacfc863e98f64053cd9459c6dec948f" kindref="member">usuallyZero</ref>;</highlight></codeline>
+<codeline lineno="112" refid="structmaster_boot_record_1aa4e294e50f311635c10c92f4c99227c5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structpartition_table" kindref="compound">part_t</ref><sp/><sp/><sp/><ref refid="structmaster_boot_record_1aa4e294e50f311635c10c92f4c99227c5" kindref="member">part</ref>[4];</highlight></codeline>
+<codeline lineno="114" refid="structmaster_boot_record_1a42b0b413ecb21ac5314d4f6bca05308f" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structmaster_boot_record_1a42b0b413ecb21ac5314d4f6bca05308f" kindref="member">mbrSig0</ref>;</highlight></codeline>
+<codeline lineno="116" refid="structmaster_boot_record_1aafbbcb4f6a2d1181c6458d4c9603df4f" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structmaster_boot_record_1aafbbcb4f6a2d1181c6458d4c9603df4f" kindref="member">mbrSig1</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/><ref refid="_adafruit___zero_d_m_a_8cpp_1a35977139f9fecb36af64baf1b69a559a" kindref="member">__attribute__</ref>((packed));</highlight></codeline>
+<codeline lineno="119" refid="_fat_structs_8h_1a7c429e5097f101c8c97663d6c4155bd9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structmaster_boot_record" kindref="compound">masterBootRecord</ref><sp/><ref refid="structmaster_boot_record" kindref="compound">mbr_t</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="128" refid="structbios_parm_block" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbios_parm_block" kindref="compound">biosParmBlock</ref><sp/>{</highlight></codeline>
+<codeline lineno="133" refid="structbios_parm_block_1aec24d316af486445d55da14cbbfa6bf4" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1aec24d316af486445d55da14cbbfa6bf4" kindref="member">bytesPerSector</ref>;</highlight></codeline>
+<codeline lineno="139" refid="structbios_parm_block_1a45d5e2d8c93a028a074e8ce3dc751ab5" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structbios_parm_block_1a45d5e2d8c93a028a074e8ce3dc751ab5" kindref="member">sectorsPerCluster</ref>;</highlight></codeline>
+<codeline lineno="144" refid="structbios_parm_block_1adb4830c345b27293c7d7b97b77f52e01" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1adb4830c345b27293c7d7b97b77f52e01" kindref="member">reservedSectorCount</ref>;</highlight></codeline>
+<codeline lineno="148" refid="structbios_parm_block_1a7c03f147c3fb18f0df03d346050af13b" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structbios_parm_block_1a7c03f147c3fb18f0df03d346050af13b" kindref="member">fatCount</ref>;</highlight></codeline>
+<codeline lineno="157" refid="structbios_parm_block_1a9a1b24bb2dbb3a123c4ffc703954d71d" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a9a1b24bb2dbb3a123c4ffc703954d71d" kindref="member">rootDirEntryCount</ref>;</highlight></codeline>
+<codeline lineno="167" refid="structbios_parm_block_1a686c686fde2fb109bea120f2f434db87" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a686c686fde2fb109bea120f2f434db87" kindref="member">totalSectors16</ref>;</highlight></codeline>
+<codeline lineno="174" refid="structbios_parm_block_1a4237e7c3ba247516d546c149954e5042" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structbios_parm_block_1a4237e7c3ba247516d546c149954e5042" kindref="member">mediaType</ref>;</highlight></codeline>
+<codeline lineno="180" refid="structbios_parm_block_1a24d6e5a9069491d5db6dbe747336985b" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a24d6e5a9069491d5db6dbe747336985b" kindref="member">sectorsPerFat16</ref>;</highlight></codeline>
+<codeline lineno="182" refid="structbios_parm_block_1a7c27cb7f66c2c9d5266d896e8df227c7" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a7c27cb7f66c2c9d5266d896e8df227c7" kindref="member">sectorsPerTrtack</ref>;</highlight></codeline>
+<codeline lineno="184" refid="structbios_parm_block_1a2324ca82e2a7da4d91f458fa32a6e239" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a2324ca82e2a7da4d91f458fa32a6e239" kindref="member">headCount</ref>;</highlight></codeline>
+<codeline lineno="190" refid="structbios_parm_block_1a9413199be8525190d40589f60c22bcab" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structbios_parm_block_1a9413199be8525190d40589f60c22bcab" kindref="member">hidddenSectors</ref>;</highlight></codeline>
+<codeline lineno="197" refid="structbios_parm_block_1abead42e130c40e2aa535202e7cb07578" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structbios_parm_block_1abead42e130c40e2aa535202e7cb07578" kindref="member">totalSectors32</ref>;</highlight></codeline>
+<codeline lineno="201" refid="structbios_parm_block_1ad80429df03a6b80f79b18cb6e1008d64" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structbios_parm_block_1ad80429df03a6b80f79b18cb6e1008d64" kindref="member">sectorsPerFat32</ref>;</highlight></codeline>
+<codeline lineno="212" refid="structbios_parm_block_1a626ac3dc473d764688b8171916eecf44" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a626ac3dc473d764688b8171916eecf44" kindref="member">fat32Flags</ref>;</highlight></codeline>
+<codeline lineno="217" refid="structbios_parm_block_1abad4f6f0c14dad9f5b7d43de94e685e8" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1abad4f6f0c14dad9f5b7d43de94e685e8" kindref="member">fat32Version</ref>;</highlight></codeline>
+<codeline lineno="222" refid="structbios_parm_block_1a77ca01bd99f746e05dd872cbd2979937" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structbios_parm_block_1a77ca01bd99f746e05dd872cbd2979937" kindref="member">fat32RootCluster</ref>;</highlight></codeline>
+<codeline lineno="227" refid="structbios_parm_block_1a25ea392d8284e6c1d007cb8fcad4b86c" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a25ea392d8284e6c1d007cb8fcad4b86c" kindref="member">fat32FSInfo</ref>;</highlight></codeline>
+<codeline lineno="233" refid="structbios_parm_block_1a7a4e93790b6e66f090c1551020b099bd" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structbios_parm_block_1a7a4e93790b6e66f090c1551020b099bd" kindref="member">fat32BackBootBlock</ref>;</highlight></codeline>
+<codeline lineno="238" refid="structbios_parm_block_1a351f87fe3446b1a71963a30bbdc23218" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structbios_parm_block_1a351f87fe3446b1a71963a30bbdc23218" kindref="member">fat32Reserved</ref>[12];</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}<sp/><ref refid="_adafruit___zero_d_m_a_8cpp_1a35977139f9fecb36af64baf1b69a559a" kindref="member">__attribute__</ref>((packed));</highlight></codeline>
+<codeline lineno="241" refid="_fat_structs_8h_1a5c8af240713e05e7e6c959006ced35fb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structbios_parm_block" kindref="compound">biosParmBlock</ref><sp/><ref refid="structbios_parm_block" kindref="compound">bpb_t</ref>;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="249" refid="structfat32_boot_sector" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfat32_boot_sector" kindref="compound">fat32BootSector</ref><sp/>{</highlight></codeline>
+<codeline lineno="251" refid="structfat32_boot_sector_1ad8c4921d1fcaba0370cff44a27f6f2d1" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1ad8c4921d1fcaba0370cff44a27f6f2d1" kindref="member">jmpToBootCode</ref>[3];</highlight></codeline>
+<codeline lineno="253" refid="structfat32_boot_sector_1a8516a46b7865715cf0f8f5c39dd96273" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structfat32_boot_sector_1a8516a46b7865715cf0f8f5c39dd96273" kindref="member">oemName</ref>[8];</highlight></codeline>
+<codeline lineno="255" refid="structfat32_boot_sector_1a01848fd44bea48d521bf13dcc8d69c95" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structbios_parm_block" kindref="compound">bpb_t</ref><sp/><sp/><sp/><sp/><ref refid="structfat32_boot_sector_1a01848fd44bea48d521bf13dcc8d69c95" kindref="member">bpb</ref>;</highlight></codeline>
+<codeline lineno="257" refid="structfat32_boot_sector_1a625a50384e3a46c5e330d0398c35a898" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1a625a50384e3a46c5e330d0398c35a898" kindref="member">driveNumber</ref>;</highlight></codeline>
+<codeline lineno="259" refid="structfat32_boot_sector_1a0a59c59a3f18c1117ffc6a0c25295b9c" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1a0a59c59a3f18c1117ffc6a0c25295b9c" kindref="member">reserved1</ref>;</highlight></codeline>
+<codeline lineno="261" refid="structfat32_boot_sector_1a1a06079dbeb74e505689a56ab08c05a7" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1a1a06079dbeb74e505689a56ab08c05a7" kindref="member">bootSignature</ref>;</highlight></codeline>
+<codeline lineno="263" refid="structfat32_boot_sector_1aa4dffa8748097e02373c33d5f1957b1e" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structfat32_boot_sector_1aa4dffa8748097e02373c33d5f1957b1e" kindref="member">volumeSerialNumber</ref>;</highlight></codeline>
+<codeline lineno="265" refid="structfat32_boot_sector_1a327d3769a6a9d172cec163cda30a35ee" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structfat32_boot_sector_1a327d3769a6a9d172cec163cda30a35ee" kindref="member">volumeLabel</ref>[11];</highlight></codeline>
+<codeline lineno="267" refid="structfat32_boot_sector_1a2835c957e6b680afded2b5f7e133fd3e" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structfat32_boot_sector_1a2835c957e6b680afded2b5f7e133fd3e" kindref="member">fileSystemType</ref>[8];</highlight></codeline>
+<codeline lineno="269" refid="structfat32_boot_sector_1a7a845a41d575937bb7aac2c5204a6e1d" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1a7a845a41d575937bb7aac2c5204a6e1d" kindref="member">bootCode</ref>[420];</highlight></codeline>
+<codeline lineno="271" refid="structfat32_boot_sector_1aea26006be62f6bbca4637e359ce85e40" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1aea26006be62f6bbca4637e359ce85e40" kindref="member">bootSectorSig0</ref>;</highlight></codeline>
+<codeline lineno="273" refid="structfat32_boot_sector_1a92816cfa0d97e94c46eaff1ccc92f1fa" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structfat32_boot_sector_1a92816cfa0d97e94c46eaff1ccc92f1fa" kindref="member">bootSectorSig1</ref>;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">}<sp/><ref refid="_adafruit___zero_d_m_a_8cpp_1a35977139f9fecb36af64baf1b69a559a" kindref="member">__attribute__</ref>((packed));</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="comment">//<sp/>End<sp/>Of<sp/>Chain<sp/>values<sp/>for<sp/>FAT<sp/>entries</highlight></codeline>
+<codeline lineno="278" refid="_fat_structs_8h_1a47b11a71cedad5402613ab2aae827c99" refkind="member"><highlight class="normal">uint16_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a47b11a71cedad5402613ab2aae827c99" kindref="member">FAT16EOC</ref><sp/>=<sp/>0XFFFF;</highlight></codeline>
+<codeline lineno="280" refid="_fat_structs_8h_1a79b2cefbcfdbf3507fe0496804541b0d" refkind="member"><highlight class="normal">uint16_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a79b2cefbcfdbf3507fe0496804541b0d" kindref="member">FAT16EOC_MIN</ref><sp/>=<sp/>0XFFF8;</highlight></codeline>
+<codeline lineno="282" refid="_fat_structs_8h_1ac213f2ce8eaa53f7d98424b300038dfd" refkind="member"><highlight class="normal">uint32_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1ac213f2ce8eaa53f7d98424b300038dfd" kindref="member">FAT32EOC</ref><sp/>=<sp/>0X0FFFFFFF;</highlight></codeline>
+<codeline lineno="284" refid="_fat_structs_8h_1af5bcc97de8cc4956435d06349d6e714b" refkind="member"><highlight class="normal">uint32_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1af5bcc97de8cc4956435d06349d6e714b" kindref="member">FAT32EOC_MIN</ref><sp/>=<sp/>0X0FFFFFF8;</highlight></codeline>
+<codeline lineno="286" refid="_fat_structs_8h_1a00e6cb52e814024fc23971c43f6e257a" refkind="member"><highlight class="normal">uint32_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a00e6cb52e814024fc23971c43f6e257a" kindref="member">FAT32MASK</ref><sp/>=<sp/>0X0FFFFFFF;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="_fat_structs_8h_1a91a3979f1149ff688d0d8bb696bc2887" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structfat32_boot_sector" kindref="compound">fat32BootSector</ref><sp/><ref refid="structfat32_boot_sector" kindref="compound">fbs_t</ref>;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="321" refid="structdirectory_entry" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdirectory_entry" kindref="compound">directoryEntry</ref><sp/>{</highlight></codeline>
+<codeline lineno="327" refid="structdirectory_entry_1a05dc993ea55a1a742de5970541a31ecb" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structdirectory_entry_1a05dc993ea55a1a742de5970541a31ecb" kindref="member">name</ref>[11];</highlight></codeline>
+<codeline lineno="334" refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" kindref="member">attributes</ref>;</highlight></codeline>
+<codeline lineno="339" refid="structdirectory_entry_1afe7d00be85f3b78549b21610050da52b" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structdirectory_entry_1afe7d00be85f3b78549b21610050da52b" kindref="member">reservedNT</ref>;</highlight></codeline>
+<codeline lineno="345" refid="structdirectory_entry_1aa5e1ce5b411b88f005b28a3e7c7c5af6" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><sp/><ref refid="structdirectory_entry_1aa5e1ce5b411b88f005b28a3e7c7c5af6" kindref="member">creationTimeTenths</ref>;</highlight></codeline>
+<codeline lineno="347" refid="structdirectory_entry_1a622bfa70c2cd9006108d7473d737a953" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a622bfa70c2cd9006108d7473d737a953" kindref="member">creationTime</ref>;</highlight></codeline>
+<codeline lineno="349" refid="structdirectory_entry_1a7b43372794655fe6604d3c17c02302fe" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a7b43372794655fe6604d3c17c02302fe" kindref="member">creationDate</ref>;</highlight></codeline>
+<codeline lineno="355" refid="structdirectory_entry_1abca70dc5c5fcbe199fd78df010111331" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1abca70dc5c5fcbe199fd78df010111331" kindref="member">lastAccessDate</ref>;</highlight></codeline>
+<codeline lineno="360" refid="structdirectory_entry_1a3b492598b2b05e8425d2a500443613bd" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a3b492598b2b05e8425d2a500443613bd" kindref="member">firstClusterHigh</ref>;</highlight></codeline>
+<codeline lineno="362" refid="structdirectory_entry_1a7bab435322d1928f66fbce53ee1f402d" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a7bab435322d1928f66fbce53ee1f402d" kindref="member">lastWriteTime</ref>;</highlight></codeline>
+<codeline lineno="364" refid="structdirectory_entry_1a12b2e7cf87482a942a0b5d3df6c51468" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a12b2e7cf87482a942a0b5d3df6c51468" kindref="member">lastWriteDate</ref>;</highlight></codeline>
+<codeline lineno="366" refid="structdirectory_entry_1a74bd660417a9c3501eae353326c14bb9" refkind="member"><highlight class="normal"><sp/><sp/>uint16_t<sp/><ref refid="structdirectory_entry_1a74bd660417a9c3501eae353326c14bb9" kindref="member">firstClusterLow</ref>;</highlight></codeline>
+<codeline lineno="368" refid="structdirectory_entry_1ac2445d99b50f925f662952e0ccd26a02" refkind="member"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="structdirectory_entry_1ac2445d99b50f925f662952e0ccd26a02" kindref="member">fileSize</ref>;</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">}<sp/><ref refid="_adafruit___zero_d_m_a_8cpp_1a35977139f9fecb36af64baf1b69a559a" kindref="member">__attribute__</ref>((packed));</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions<sp/>for<sp/>directory<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="374" refid="_fat_structs_8h_1a803db59d4e16a0c54a647afc6a7954e3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdirectory_entry" kindref="compound">directoryEntry</ref><sp/><ref refid="structdirectory_entry" kindref="compound">dir_t</ref>;</highlight></codeline>
+<codeline lineno="376" refid="_fat_structs_8h_1a27c8cd1e50f71974c9d98a868cfc4c77" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a27c8cd1e50f71974c9d98a868cfc4c77" kindref="member">DIR_NAME_0XE5</ref><sp/>=<sp/>0X05;</highlight></codeline>
+<codeline lineno="378" refid="_fat_structs_8h_1a5de4ada3536d89559f6433e835e311da" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a5de4ada3536d89559f6433e835e311da" kindref="member">DIR_NAME_DELETED</ref><sp/>=<sp/>0XE5;</highlight></codeline>
+<codeline lineno="380" refid="_fat_structs_8h_1a23b2e4d06e245c778f4c52909cf97c76" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a23b2e4d06e245c778f4c52909cf97c76" kindref="member">DIR_NAME_FREE</ref><sp/>=<sp/>0X00;</highlight></codeline>
+<codeline lineno="382" refid="_fat_structs_8h_1abff82a1fd65417a032777e0821821640" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1abff82a1fd65417a032777e0821821640" kindref="member">DIR_ATT_READ_ONLY</ref><sp/>=<sp/>0X01;</highlight></codeline>
+<codeline lineno="384" refid="_fat_structs_8h_1a3a41f54f933a4d34b1502321ab9da5ff" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a3a41f54f933a4d34b1502321ab9da5ff" kindref="member">DIR_ATT_HIDDEN</ref><sp/>=<sp/>0X02;</highlight></codeline>
+<codeline lineno="386" refid="_fat_structs_8h_1ae89bc34164e7318b3d3169ff290c8d70" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1ae89bc34164e7318b3d3169ff290c8d70" kindref="member">DIR_ATT_SYSTEM</ref><sp/>=<sp/>0X04;</highlight></codeline>
+<codeline lineno="388" refid="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" kindref="member">DIR_ATT_VOLUME_ID</ref><sp/>=<sp/>0X08;</highlight></codeline>
+<codeline lineno="390" refid="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" kindref="member">DIR_ATT_DIRECTORY</ref><sp/>=<sp/>0X10;</highlight></codeline>
+<codeline lineno="392" refid="_fat_structs_8h_1a7144738c367c16e672b3e48962bc7dda" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a7144738c367c16e672b3e48962bc7dda" kindref="member">DIR_ATT_ARCHIVE</ref><sp/>=<sp/>0X20;</highlight></codeline>
+<codeline lineno="395" refid="_fat_structs_8h_1a0d3f6fbbd34126b2d5563bba65220985" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a0d3f6fbbd34126b2d5563bba65220985" kindref="member">DIR_ATT_LONG_NAME</ref><sp/>=<sp/>0X0F;</highlight></codeline>
+<codeline lineno="397" refid="_fat_structs_8h_1a0aa5725dd4916058f0c6c06b09f83059" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a0aa5725dd4916058f0c6c06b09f83059" kindref="member">DIR_ATT_LONG_NAME_MASK</ref><sp/>=<sp/>0X3F;</highlight></codeline>
+<codeline lineno="399" refid="_fat_structs_8h_1ad131502987658581d57cc18328d18aa5" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1ad131502987658581d57cc18328d18aa5" kindref="member">DIR_ATT_DEFINED_BITS</ref><sp/>=<sp/>0X3F;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/>DIR_IS_LONG_NAME(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdirectory_entry" kindref="compound">dir_t</ref>*<sp/>dir)<sp/>{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dir-&gt;<ref refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" kindref="member">attributes</ref><sp/>&amp;<sp/><ref refid="_fat_structs_8h_1a0aa5725dd4916058f0c6c06b09f83059" kindref="member">DIR_ATT_LONG_NAME_MASK</ref>)<sp/>==<sp/><ref refid="_fat_structs_8h_1a0d3f6fbbd34126b2d5563bba65220985" kindref="member">DIR_ATT_LONG_NAME</ref>;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="405" refid="_fat_structs_8h_1a40ed222fdb5b5c6b2f04268ab0ce20ca" refkind="member"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_fat_structs_8h_1a40ed222fdb5b5c6b2f04268ab0ce20ca" kindref="member">DIR_ATT_FILE_TYPE_MASK</ref><sp/>=<sp/>(<ref refid="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" kindref="member">DIR_ATT_VOLUME_ID</ref><sp/>|<sp/><ref refid="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" kindref="member">DIR_ATT_DIRECTORY</ref>);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/>DIR_IS_FILE(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdirectory_entry" kindref="compound">dir_t</ref>*<sp/>dir)<sp/>{</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dir-&gt;<ref refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" kindref="member">attributes</ref><sp/>&amp;<sp/><ref refid="_fat_structs_8h_1a40ed222fdb5b5c6b2f04268ab0ce20ca" kindref="member">DIR_ATT_FILE_TYPE_MASK</ref>)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/>DIR_IS_SUBDIR(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdirectory_entry" kindref="compound">dir_t</ref>*<sp/>dir)<sp/>{</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dir-&gt;<ref refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" kindref="member">attributes</ref><sp/>&amp;<sp/><ref refid="_fat_structs_8h_1a40ed222fdb5b5c6b2f04268ab0ce20ca" kindref="member">DIR_ATT_FILE_TYPE_MASK</ref>)<sp/>==<sp/><ref refid="_fat_structs_8h_1a3f9e7ceac3e0a9aebead998e88349139" kindref="member">DIR_ATT_DIRECTORY</ref>;</highlight></codeline>
+<codeline lineno="413"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint8_t<sp/>DIR_IS_FILE_OR_SUBDIR(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdirectory_entry" kindref="compound">dir_t</ref>*<sp/>dir)<sp/>{</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dir-&gt;<ref refid="structdirectory_entry_1a16c6cde55c8175c90935c386f1cfb21a" kindref="member">attributes</ref><sp/>&amp;<sp/><ref refid="_fat_structs_8h_1af50cf547300f2cc5d33e7ab457b5a200" kindref="member">DIR_ATT_VOLUME_ID</ref>)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="417"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>FatStructs_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/SD-1.2.4/src/utility/FatStructs.h"/>
+  </compounddef>
+</doxygen>

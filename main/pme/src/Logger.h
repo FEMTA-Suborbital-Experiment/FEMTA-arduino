@@ -25,6 +25,10 @@
 // This is configurable
 #define MAX_SIZE 100
 
+/**
+ * @brief Logger for sensor data.
+ * 
+ */
 class Logger{
     public:
         Logger(int arraySize);

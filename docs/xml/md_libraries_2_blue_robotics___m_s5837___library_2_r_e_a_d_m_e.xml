@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e</compoundname>
+    <title>BlueRobotics MS5837 Library &lt;a href=&quot;https://travis-ci.org/bluerobotics/BlueRobotics_MS5837_Library&quot; &gt;&lt;img src=&quot;https://travis-ci.org/bluerobotics/BlueRobotics_MS5837_Library.svg?branch=master&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e_1autotoc_md75"/> Arduino library for the <ref refid="class_m_s5837" kindref="compound">MS5837</ref> pressure sensor. The <ref refid="class_m_s5837" kindref="compound">MS5837</ref> is a tiny SMT pressures sensor from Measurement Specialties that can measure pressure of up to 30 Bar (300m depth) with resolution of 0.2 mbar.</para>
+<para>This library also supports the MS5837-02BA which has a much smaller measurement range and is better suited for altitude measurement in air.</para>
+<sect1 id="md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e_1autotoc_md76">
+<title>Documentation</title>
+<para>Please see the examples for normal operation. Below are the available functions used in the library.</para>
+<para><programlisting><codeline><highlight class="normal"><sp/>cpp</highlight></codeline>
+<codeline><highlight class="normal">MS5837();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Must<sp/>be<sp/>called<sp/>before<sp/>attempting<sp/>to<sp/>operate<sp/>the<sp/>sensor.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Returns<sp/>true<sp/>if<sp/>the<sp/>sensor<sp/>was<sp/>initialized<sp/>successfully.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>init();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Set<sp/>model<sp/>of<sp/>MS5837<sp/>sensor.<sp/>Valid<sp/>options<sp/>are<sp/>MS5837::MS5837_30BA<sp/>(default)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>and<sp/>MS5837::MS5837_02BA.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>setModel(uint8_t<sp/>model);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Provide<sp/>the<sp/>density<sp/>of<sp/>the<sp/>working<sp/>fluid<sp/>in<sp/>kg/m^3.<sp/>Default<sp/>is<sp/>for<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>seawater.<sp/>Should<sp/>be<sp/>997<sp/>for<sp/>freshwater.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>setFluidDensity(float<sp/>density);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>The<sp/>read<sp/>from<sp/>I2C<sp/>takes<sp/>up<sp/>for<sp/>40<sp/>ms,<sp/>so<sp/>use<sp/>sparingly<sp/>is<sp/>possible.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>read();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Pressure<sp/>returned<sp/>in<sp/>mbar<sp/>or<sp/>mbar*conversion<sp/>rate.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>pressure(float<sp/>conversion<sp/>=<sp/>1.0f);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Temperature<sp/>returned<sp/>in<sp/>deg<sp/>C.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>temperature();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Depth<sp/>returned<sp/>in<sp/>meters<sp/>(valid<sp/>for<sp/>operation<sp/>in<sp/>incompressible</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>liquids<sp/>only.<sp/>Uses<sp/>density<sp/>that<sp/>is<sp/>set<sp/>for<sp/>fresh<sp/>or<sp/>seawater.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>depth();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**<sp/>Altitude<sp/>returned<sp/>in<sp/>meters<sp/>(valid<sp/>for<sp/>operation<sp/>in<sp/>air<sp/>only).</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>altitude();</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e_1autotoc_md77">
+<title>Versions</title>
+<para>1.0.0 - First release, included in Arduino Library Manager</para>
+</sect1>
+<sect1 id="md_libraries_2_blue_robotics___m_s5837___library_2_r_e_a_d_m_e_1autotoc_md78">
+<title>Reference</title>
+<para>You can find the <ulink url="http://www.mouser.com/ds/2/418/MS5837-30BA-736494.pdf">MS5837-30BA datasheet here</ulink>. </para>
+</sect1>
+    </detaileddescription>
+    <location file="libraries/BlueRobotics_MS5837_Library/README.md"/>
+  </compounddef>
+</doxygen>
