@@ -38,7 +38,7 @@ class SensorPoller {
         MS5837 *pressures[5] = { &pressure0, &pressure1, &pressure2, &pressure3, &pressure4 };
 
         PVC4000 highAlt = PVC4000(0x50); // high altitude baro
-        HSCM_PSI lowAlt = HSCM_PSI(0x20, 0, 0);
+        HSCM_PSI lowAlt = HSCM_PSI(0x28, 0, 0);
 
         unsigned long lastRead;
         float sensorVector[5];
