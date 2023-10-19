@@ -1,13 +1,12 @@
 /**
  * @file Writer.cpp
  * 
- * @mainpage FEMTA Writer
+ * @brief This is the FEMTA writer purposed for taking a logType struct as input from
+ * the FEMTA Logger and writing its contents to a text file or binary. 
  * 
- * @section Summary
- * 
- * This is the FEMTA writer purposed for taking a logType struct as input from
- * the FEMTA Logger and writing its contents to a text file or binary. Data is
- * written in the order specified in the FEMTA Logger.
+ * @details Data is written in the order specified in the FEMTA Logger. Determine whether 
+ * you will be writing to a binary, or overwriting the file, and specify a file name. 
+ * Once you reach the capacity of your log struct, call writeToFile().
  *   
  * 
  */
@@ -118,23 +117,14 @@ int Writer::writeToBinary(logType data) {
 
     int vector_size{0};
 
-    Serial.print("Initialized Old size: ");
-    Serial.println(vector_size);
-
     logSize.read(reinterpret_cast<uint8_t*>(&vector_size), sizeof(vector_size));
 
     logSize.close();
-
-    Serial.print("Stored Old size: ");
-    Serial.println(vector_size);
 
     int t_size = data.time.size() + vector_size;
     int lp_size = data.lowPressure.size() + vector_size;
     int hp_size = data.highPressure.size() + vector_size;
     int a_size = data.acceleration.size() + vector_size;
-
-    Serial.print("Size of logSize: ");
-    Serial.println(t_size);
 
     logSize = SD.open(logSizeFile + extension, O_READ | O_WRITE | O_CREAT);
 

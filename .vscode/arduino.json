@@ -3,6 +3,6 @@
     "board": "adafruit:samd:adafruit_feather_m0",
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
-    "sketch": "examples\\pvc_read\\pvc_read.ino",
-    "port": "COM9"
+    "sketch": "examples\\buffer_write_optimize\\buffer_write_optimize.ino",
+    "port": "COM18"
 }

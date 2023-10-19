@@ -1,8 +1,8 @@
 #include <SD.h>
 #include <SPI.h>
 
-#include "src/Reader.h"
-#include "src/AtmosphericStruct.h"
+#include <FEMTA_System/Reader.h>
+#include <FEMTA_System/AtmosphericStruct.h>
 
 File dataFile;
 
