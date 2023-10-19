@@ -1,7 +1,10 @@
 /**
  * @file buffer_write_optimize.ino
  * @author Jacob Valdez (valdez24@purdue.edu)
- * @brief Obtain write times and read times with respect to buffer size. Monitor the serial program to begin the program
+ * @brief Obtain write times and read times with respect to buffer size. Monitor the serial program to begin the program and obtain values
+ * @details This program obtains write values with Serial. Thus, these write times do not reflect the true write times without Serial.
+ * 
+ * 
  * @date 2023-10-19
  * 
  */
@@ -11,14 +14,18 @@
 
 // PARAMETERS
 
-// File name for writing and reading data from
+// File name for writing and reading log data
 const char* logFileName{"OP01"};
 
-// Buffer size which may change the writing and reading time
-const int logBufferSize{25};
+// File name for saving write and reading times
+const char* bufferWriteFileName{"BW"};
 
-// How many times to write to file before stopping the file
-const int maxWriteCount{10};
+// Buffer size which may change the writing and reading time. 
+// I've found that the maximum buffer size possible with Serial is 300
+const int logBufferSize{300};
+
+// How many times to write to file before stopping the program
+const int maxWriteCount{100};
 
 // PROGRAM
 
@@ -44,7 +51,7 @@ void setup() {
     if (writer.init() != 0) {errorCount++;}
 
     if (errorCount > 0) {
-        Serial.println("Something went wrong with initializing the writer reader logger classes");
+        Serial.println("Something went wrong with initializing the writer, reader, or logger classes");
         while(1);
     }
 }
@@ -60,10 +67,6 @@ void loop() {
         lastTime = micros();
         writer.writeToFile(logger.logData);
         int writeTime = micros() - lastTime;
-        Serial.print("Write time: ");
-        Serial.println(writeTime);
-        Serial.print("Buffer size: ");
-        Serial.println(logBufferSize);
 
         writeTimes[writeCount] = writeTime;
 
@@ -72,6 +75,9 @@ void loop() {
     if (writeCount == maxWriteCount) {
         Serial.print("Averaged write time:");
         Serial.println(mean(writeTimes, maxWriteCount));
+        Serial.print("Buffer size: ");
+        Serial.println(logBufferSize);
+        
 
         if (!reader.readFile(logFileName)) {
             Serial.println("Something went wrong with reading file"); 
@@ -80,8 +86,8 @@ void loop() {
 
         lastTime = micros();
         logType buf = reader.readVector();
-        Serial.print("Read time: ");
-        Serial.println(micros() - lastTime);
+        // Serial.print("Read time: ");
+        // Serial.println(micros() - lastTime);
         
         for (int i=0; i < buf.time.size(); ++i) {
             Serial.print(buf.time[i], 2);

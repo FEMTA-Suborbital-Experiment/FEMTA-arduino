@@ -4,5 +4,5 @@
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
     "sketch": "examples\\buffer_write_optimize\\buffer_write_optimize.ino",
-    "port": "COM18"
+    "port": "COM17"
 }
