@@ -11,6 +11,16 @@ using namespace std;
 
 #define BUFF_SIZE 15
 
+enum FlightState {
+    FLIGHT_STATE_PRELIFTOFF = 0,
+    FLIGHT_STATE_LIFTOFF = 1,
+    FLIGHT_STATE_MECO = 2,
+    FLIGHT_STATE_EXP_STARTED = 3,
+    FLIGHT_STATE_EXP_DONE = 4,
+    FLIGHT_STATE_DESCENDING = 5,
+    FLIGHT_STATE_LANDED = 6,
+};
+
 class StateLogic
 {
     public:
@@ -26,6 +36,8 @@ class StateLogic
         float timeOfMECO;
         float timeSinceLaunch;
         float timeSincePowerup;
+
+        bool spikeFlag = false; // Used to detect acceleration spikes for landing
 
         // Ring buffers for new (t-0 to t-15) and old (t-15 to t-30) moving AccelAverages
         // For acceleration

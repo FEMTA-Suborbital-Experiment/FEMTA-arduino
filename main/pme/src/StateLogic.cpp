@@ -74,35 +74,50 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
     //buffer logic, references code once buffers are populated
     // printf("Data at %ld: %.3f %.3f, %.3f %.3f\n", time_millis, newAccelAverage, oldAccelAverage, newAccelStdDev, oldAccelStdDev);
     if(time_millis > 4000){
-        if (this->prevFlightState == 0 &&
+        if (this->flightState >= FLIGHT_STATE_DESCENDING && accelMag >= 70) {
+            this->spikeFlag = true;
+        }
+
+        if (this->prevFlightState == FLIGHT_STATE_PRELIFTOFF &&
             ((newAccelAverage-oldAccelAverage)) > (tALiftoff)
             /* && PRESSURE */
         ) {
             // Entered Liftoff
             this->prevFlightState = this->flightState;
             this->timeOfLaunch = time_millis;
-            this->flightState = 1; // Ascent
+            this->flightState = FLIGHT_STATE_LIFTOFF; // Ascent
         }
         //include timeSinceLaunch FIX THIS
         // Absolute time threshold since launch should also be considered
-        else if ((this->flightState <= 1 && newAccelAverage < 1)
-            || this->flightState == 1 && (time_millis - this->timeOfLaunch) >= liftoffBreaker
+        else if ((this->flightState <= FLIGHT_STATE_LIFTOFF && newAccelAverage < 1)
+            || this->flightState == FLIGHT_STATE_LIFTOFF && (time_millis - this->timeOfLaunch) >= liftoffBreaker
                 /* && PRESSURE */
             ) {
             // Entered MECO
             this->timeOfMECO = time_millis;
             this->prevFlightState = this->flightState;
-            this->flightState = 2; // MECO
+            this->flightState = FLIGHT_STATE_MECO; // MECO
         }
-        else if (this->flightState == 2 && this->timeSinceMECO >= mecoDelay) {
+        else if (this->flightState == FLIGHT_STATE_MECO && this->timeSinceMECO >= mecoDelay) {
             // Entered operational state
             this->prevFlightState = this->flightState;
-            this->flightState = 3; // Start experiment / running
+            this->flightState = FLIGHT_STATE_EXP_STARTED; // Start experiment / running
         }
-        else if (this->flightState == 3 && this->timeSinceMECO >= flowTime ){
-            // Entered descent
+        else if (this->flightState == FLIGHT_STATE_EXP_STARTED && this->timeSinceMECO >= flowTime ){
+            // Stopped experiment after timer
             this->prevFlightState = this->flightState;
-            this->flightState = 4; // Stopped experiment
+            this->flightState = FLIGHT_STATE_EXP_DONE; // Stopped experiment
+        }
+        else if (this->flightState >= FLIGHT_STATE_EXP_STARTED && this->flightState < FLIGHT_STATE_DESCENDING && newAccelAverage > 4.0) {
+            // Started descent
+            this->prevFlightState = this->flightState;
+            this->flightState = FLIGHT_STATE_DESCENDING; // Started descent
+        }
+        else if (this->flightState >= FLIGHT_STATE_DESCENDING && this->spikeFlag && (7 <= newAccelAverage) && (newAccelAverage <= 12)) {
+            // Detect landing (drop in noise)
+            this->spikeFlag = false;
+            this->prevFlightState = this->flightState;
+            this->flightState = FLIGHT_STATE_LANDED; // Started descent
         }
     }
 
