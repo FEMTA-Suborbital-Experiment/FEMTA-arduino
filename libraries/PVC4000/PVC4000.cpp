@@ -213,12 +213,12 @@ void PVC4000::calibrate() {
         }
     }
 
-    Serial.print("CalibrationX0=");
-    Serial.println(calibrationTableX[0]);
-    Serial.print("CalibrationX1=");
-    Serial.println(calibrationTableX[1]);
-    Serial.print("P count");
-    Serial.println(p_count);
+    // Serial.print("CalibrationX0=");
+    // Serial.println(calibrationTableX[0]);
+    // Serial.print("CalibrationX1=");
+    // Serial.println(calibrationTableX[1]);
+    // Serial.print("P count");
+    // Serial.println(p_count);
  
 
     if (p_count <= 10000) {

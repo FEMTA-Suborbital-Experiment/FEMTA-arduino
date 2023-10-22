@@ -1,49 +1,61 @@
 // Include libraries
-//#include "src/StateLogic.h"
-#include "src/PinCtrl.h"
-//#include <AtmosProfiles.h>
-#include "src/Logger.h"
+//#include "StateLogic.h"
+#include "PinCtrl.h"
+#include "Logger.h"
+#include "Writer.h"
 
-int closeSV1{A1}; 
-int openSV1{5};
-int closeSV2{A2};
-int openSV2{6};
-int closeLV1{A3}; 
-int openLV1{9};
-int signalPin{13};
+// Pin Mappings to Opening and Closing Valves
+const int closeSV1{A1}; 
+const int openSV1{5};
+const int closeSV2{A2};
+const int openSV2{6};
+const int closeLV1{A3}; 
+const int openLV1{9};
+const int signalPin{13};
 
-// Parameters for flight simulation
-bool readSensors{false};
+// Buffer size to store data in the logger
+const int bufferSize{50};
+
+// Name of the output data file
+const char* fileName{"FT01"};
+
+// Determine if we will read from the sensors or from a csv file
+bool readSensors{true};
+
+// Writer parameters. Write to a binary file and choose to overwrite any existing files on the SD card
+bool writeToBinary{true};
+bool overwriteExistingFile{false};
 
 // Define classes. Testing this to make sure the classes work
-//StateLogic stateLogic(1000, 1000);
 PinCtrl pinController(
   closeSV1, openSV1, closeSV2, openSV2, closeLV1, openLV1, signalPin
-  );
-//AtmosProfiles atmosProfiles;
-Logger logger(100, readSensors, "LogTest");
+);
+Logger logger(bufferSize);
+Writer writer(fileName, 4, writeToBinary, overwriteExistingFile);
+
 
 void setup() {
-  // put your setup code here, to run once:
-/* 
-  if (stateLogic.init()) {
-    Serial.println("Something went wrong with initializing the state handler. Exiting...");
-    exit(1);
-  }; */
-  if (pinController.init() != 0)
-  {
+  // if (stateLogic.init()) {
+  //   Serial.println("Something went wrong with initializing the state handler. Exiting...");
+  //   exit(1);
+  // }
+  if (pinController.init() != 0) {
     Serial.println("Something went wrong with initializing the pin controller. Exiting...");
     exit(1);
   }
-  if (logger.init() != 0)
-  {
+  if (logger.init() != 0) {
     Serial.println("Something went wrong with initializing the logger. Exiting...");
+    exit(1);
+  }
+  if (writer.init() != 0) {
+    Serial.println("Something went wrong with initializing the writer. Exiting...");
     exit(1);
   }
 }
 
+
 void updateStateLogicMembers() {
-  if (readSensors == true) {
+  if (readSensors) {
     // Update state logic members to get sensor values
   } else {
   // TODO: Implement atmospheric profiles first
@@ -56,38 +68,26 @@ void updateStateLogicMembers() {
   }
 }
 
-// TODO: Once the classes are assembled and working, uncomment the appropriate sections
-// and make sure they work
+
 void loop() {
-  // put your main code here, to run repeatedly:
-
-  // Flight states:
-  // 0: Preflight
-  // 1: Liftoff/Ascent
-  // 2: Zero-G
-  // 3: Descent
-  // 4: Landing
-
-  /*
-  switch(stateLogic.flightState) {
-    case 1:
-      pinController.closeFlowValve();
-      pinController.openVentValve();
-      break;
-    case 2:
-      pinController.signalStart();
-      pinController.openFlowValve();
-      pinController.closeVentValve();
-    case 3:
-      pinController.signalStop();
-      pinController.closeFlowValve();
-      pinController.closeVentValve();
-  }
-  */
+  pinController.Run();
 
 
-  //atmosProfiles.advanceTimeStep();
+  // switch(stateLogic.flightState) {
+  //   case 0:
+  //   case 1:
+  //     pinController.closeFlowValve();
+  //     pinController.openVentValve();
+  //     break;
+  //   case 2:
+  //     pinController.signalStart();
+  //     pinController.openFlowValve();
+  //     pinController.closeVentValve();
+  //   case 3:
+  //     pinController.signalStop();
+  //     pinController.closeFlowValve();
+  //     pinController.closeVentValve();
+  // }
 
-  // Takes in an array of the current values. Just included a dummy value here
-  //stateLogic.determineFlightState(1.0);
+  logger.pushData(1.0f, 0.0, 0.0, 0.0);
 }
