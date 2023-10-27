@@ -1,3 +1,16 @@
+/**
+ * @file flow_test.ino
+ * @author Jacob Valdez (valdez24@purdue.edu)
+ * @brief A test sketch for propellant tank testing in a vacuum chamber
+ * @date 2023-10-22
+ * 
+ * @details This sketch makes use of the statelogic class to handle the
+ * control of the valves at certain pressure thresholds of the experiment.
+ * Since a flow test does not have an acceleration component, we rely entirely
+ * on the pressure sensors to determine flight state. 
+ * 
+ */
+
 #include "PinCtrl.h"
 #include "Logger.h"
 #include "Writer.h"

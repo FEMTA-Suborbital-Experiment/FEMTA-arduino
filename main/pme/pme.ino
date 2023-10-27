@@ -1,4 +1,14 @@
-// Include libraries
+/**
+ * @file pme.ino
+ * @author Jacob Valdez (valdez24@purdue.edu)
+ * @brief The main sketch to control the Propellant Management Unit
+ * @date 2023-10-22
+ * 
+ * @details The main datalogger runs this propellant management sketch to
+ * determine the flight state, control the experiment, and log data onto an SD card. 
+ * 
+ */
+
 //#include "StateLogic.h"
 #include "PinCtrl.h"
 #include "Logger.h"

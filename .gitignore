@@ -1,8 +1,13 @@
 **/build
-
 **/blink
 **/tasks.json
-**/c_cpp_properties.json
+.vscode/**
+.vscode/
 .vscode
 **/arduino.json
 **/settings.json
+**/c_cpp_properties.json
+arduino.json
+settings.json
+c_cpp_properties.json
+**/.vscode/

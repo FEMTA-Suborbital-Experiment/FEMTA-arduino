@@ -69,6 +69,7 @@ legend("Data", strcat("Quadratic Fit: R^2 = ", num2str(Rsq)));
 figure;
 semilogy(buffers, total_write_time / experiment_time * 100, 'o--');
 xlabel("Buffer Size")
-ylabel("Percent Downtime")
+ylabel("Percent Downtime (%)")
+yticks([0.1 1 5 10 25 50 100])
 grid on
 title("Percentage downtime as function of Buffer Size")
