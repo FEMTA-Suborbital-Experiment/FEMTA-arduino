@@ -26,16 +26,21 @@ class SensorPoller {
         void readHighAltBaro(float *pressure, float *temp); // float, PVC
         void readPressureSensors(float *pressures, float *temperatures); // float[5], float[5]
         void readFlowMeter(float *flow); // float
+        void readVector(float *vec, unsigned long time_millis);
     private:
         void initPressureSensors();
 
         unsigned long lastRead;
         float sensorVector[5];
         AtomSphericProfile *data;
+        int file_pos = 0;
+        int count = 0;
+        int len_of_array = 0;
 
         bool accelGood = true;
         bool pressuresGood[5] = {1, 1, 1, 1, 1};
         bool flowGood = true;
+
 };
 
 #endif

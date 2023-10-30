@@ -130,18 +130,25 @@ void SensorPoller::readFlowMeter(float *flow) {
     }
 }
 
-// void SensorPoller::readVector(float *vec, unsigned long time_millis) {
-//     if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return;
-//     this->lastRead = time_millis;
-// 
-//     float accel[3];
-//     this->readAccelerometer(accel);
-// 
-//     float pressure[5];
-//     float temperature[5];
-//     this->readPressureSensors(pressure, temperature);
-//     vec[0] = accel[0];
-//     vec[1] = accel[1];
-//     vec[2] = accel[2];
-//     vec[3] = 0;
-// }
+void SensorPoller::readVector(float *vec, unsigned long time_millis) {
+    if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return;
+    this->lastRead = time_millis;
+
+    float accel[3];
+    this->readAccelerometer(accel);
+
+    float pressure[5];
+    float temperature[5];
+    this->readPressureSensors(pressure, temperature);
+
+    float lowBaroP, lowBaroT;
+    float hiBaroP, hiBaroT;
+    this->readLowAltBaro(&lowBaroP, &lowBaroT);
+    this->readHighAltBaro(&hiBaroP, &hiBaroT);
+
+    vec[0] = accel[0];
+    vec[1] = accel[1];
+    vec[2] = accel[2];
+    vec[3] = lowBaroP;
+    vec[4] = hiBaroP;
+}
