@@ -10,5 +10,6 @@
     "files.associations": {
         "wire.h": "c",
         "arduino.h": "c"
-    }
+    },
+    "cmake.sourceDirectory": "/Users/ahcis/Desktop/Purdue/Year_2_Semester_1/FEMTA/FEMTA-arduino/examples/logging_example/libraries/Adafruit_BusIO"
 }

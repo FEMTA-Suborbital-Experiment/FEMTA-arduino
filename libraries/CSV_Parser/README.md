@@ -3,16 +3,19 @@
 * [What is this CSV parser](#what-is-this-csv-parser)  
 * [Installation](#installation)  
 * [Usage](#usage)  
-* [Examples](#examples)  
+    * [Examples](#examples)  
 * [Things to consider](#things-to-consider)  
 * [Specifying value types](#specifying-value-types)  
 	* [How to store unsigned types](#how-to-store-unsigned-types)  
-* [Casting returned values](#casting-returned-values)  
-* [Headerless files](#headerless-files)  
-* [Custom delimiter](#custom-delimiter)  
-* [Custom quote character](#custom-quote-character)  
-* [Checking if the file was parsed correctly](#checking-if-the-file-was-parsed-correctly)  
-* [Troubleshooting](#troubleshooting)  
+* [Customization](#customization)  
+    * Headerless files
+    * Custom delimiter
+    * Custom quote character
+    * Parsing one row at a time
+* [Troubleshooting](#troubleshooting)   
+    * Checking if the file was parsed correctly
+    * Platformio and SD library issue  
+    * `cp << file.read()` requiring `(char)` cast (potential issue from version 1.0.0, which may break old code)    
 * [Motivation](#motivation)  
 * [Documentation](#documentation)  
 
@@ -65,6 +68,8 @@ char * csv_str = "my_strings,my_longs,my_ints,my_chars,my_floats,my_hex,my_to_be
 
 CSV_Parser cp(csv_str, /*format*/ "sLdcfx-");
 
+// retrieving parsed values (and casting them to correct types,
+// corresponding to format string provided in constructor above)
 char    **strings =         (char**)cp["my_strings"];
 int32_t *longs =          (int32_t*)cp["my_longs"];
 int16_t *ints =           (int16_t*)cp["my_ints"];
@@ -87,8 +92,7 @@ Output:
 > world - 80000 - 150 - 20 - 7.77 - FF  
 > noice - 90000 - 160 - 20 - 9.99 - FFFFFF   
 
-Notice how each character within `"sLdcfx-"` string specifies different type for each column. It is very important to set this format right. 
-We could set each solumn to be strings like "sssssss", however this would use more memory than it's really needed. If we wanted to store a large array of small numerical values (e.g. under 128), then using "c" specifier would be appropriate. See [Specifying value types](#specifying-value-types) section for full list of available specifiers and their descriptions.  
+Notice how each character within `"sLdcfx-"` string specifies different type for each column. It is very important to set this format right. It determines to what type we must cast parsed value arrays (char\* for "s", int32_t for "L"). We could set each solumn to be strings like "sssssss", however this would use more memory than it's really needed. If we wanted to store a large array of small numerical values (e.g. under 128), then using "c" specifier (int8_t) would be appropriate. See [Specifying value types](#specifying-value-types) section for full list of available specifiers and their descriptions.  
 
 ![image didnt load](./images/format_string.png)  
 
@@ -148,21 +152,10 @@ cp << ",";
 cp << String(102) + ",103\n";
 ```
 Floats can be supplied as well. In general, any types can be supplied, the principle is: if the type isn't "String", "char \*" or "char", then the String(supplied_value) will be appended (before being parsed and stored as a type specified in the format string).   
+  
 
-**Important**  
-Arduino built-in File.read() method returns an integer (instead of a char). Therefore, it's important to cast its return before supplying it to CSV_Parser object, like:  
-```cpp
-File csv_file = SD.open(f_name); // or FFat.open(f_name);
-while (csv_file.available()) {
-    cp << (char)csv_file.read();
-}
-```
-Without `(char)`, the string representation of ascii number would be stored.  
-Before the 1.0.0 version, the `cp << 97;` expression would append letter 'a' (because '97' stands for 'a' in ascii table). From 1.0.0 version onwards, the `cp << 97;` is equivalent to `cp << String(97);`, it will append '97' instead of 'a'. That is correct behaviour in my opinion, however due to design of Arduino built-in "File.read()" method, which returns an integer, it is necessary to cast it's return (with `(char)csv_file.read()` as shown above), and problems may occur if some existing code (using this library) doesn't explicitly cast it.  
-
-
-## Examples
-Examples directory contains examples showing:  
+### Examples
+Examples directory shows:  
 * [basic usage](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/basic_usage)  
 * [how to handle unsigned types](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/unsigned_values)   
 * [how to supply csv by incomplete parts](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/supplying_csv_by_incomplete_parts)   
@@ -267,26 +260,9 @@ CSV_Parser cp(csv_str, /*format*/ "ucuc");
 
 See [unsigned_values example](https://github.com/michalmonday/CSV-Parser-for-Arduino/blob/master/examples/unsigned_values/unsigned_values.ino) for more info.  
 
-## Casting returned values
-Let's suppose that we parse the following:  
-```cpp
-char * csv_str = "my_strings,my_floats\n"
-		 "hello,1.1\n"
-		 "world,2.2\n";
-		 
-CSV_Parser cp(csv_str, /*format*/ "sf"); // s = string, f = float
-```
-
-To cast/retrieve the values we can use:  
-```cpp
-char  **strings = (char**)cp["my_strings"];
-float *floats =   (float*)cp["my_floats"];
-```
-
-"x" (hex input values), should be cast as "int32_t*" (or uint32_t*), because that's how they're stored. Casting them to "int*" could result in wrong address being computed when using `ints[index]`.  
+## Customization
   
-  
-## Headerless files
+### Headerless files
 To parse CSV files without header we can specify 3rd optional argument to the constructor. Example:  
 ```cpp
 CSV_Parser cp(csv_str, /*format*/ "---L", /*has_header*/ false);
@@ -298,7 +274,7 @@ int32_t * longs = (int32_t*)cp[3]; // 3 becuase L is at index 3 of "---L" format
 ```
 
 
-## Custom delimiter
+### Custom delimiter
 Delimiter is 4th parameter of the constructor. It's comma (,) by default. We can customize it like this:  
 ```cpp
 char * csv_str = "my_strings;my_floats\n"
@@ -308,14 +284,20 @@ char * csv_str = "my_strings;my_floats\n"
 CSV_Parser cp(csv_str, /*format*/ "sf", /*has_header*/ true, /*delimiter*/ ';');
 ```  
 
-## Custom quote character
+### Custom quote character
 Quote character is 5th parameter of the constructor. It's double quote (") by default. We can customize it like this:  
 ```cpp 
 CSV_Parser cp(csv_str, /*format*/ "sLdcfxs", /*has_header*/ true, /*delimiter*/ ',', /*quote_char*/ "'");
 ```
 
+### Parsing one row at a time
+Large files often can't be stored in the limited memory of microcontrollers. For that reason it's possible to parse the file row by row.
+See the [parsing_row_by_row.ino](./examples/parsing_row_by_row/parsing_row_by_row.ino) and [parsing_row_by_row_sd_card.ino](./examples/parsing_row_by_row_sd_card/parsing_row_by_row_sd_card.ino) examples for more information. When deciding to parse row by row, it is suggested to not combine it with the default way of parsing (using the same object). Please note that during row by row parsing the `cp.getRowsCount()` method will return 0 or 1 instead of the total number of previously parsed rows. In case of parsing one row at a time the integer-based indexing of `cp` object should be done (for efficiency and because the header is parsed after the first `parseRow()` call so string-based indexing can't really be used before the first `parseRow()` call), see examples for more details.
 
-## Checking if the file was parsed correctly
+
+## Troubleshooting  
+
+#### Checking if the file was parsed correctly
 Use CSV_Parser.print function and check serial monitor. Example:  
 ```cpp
 CSV_Parser cp(csv_str, /*format*/ "sLdcfx-");
@@ -335,18 +317,31 @@ It will display parsed header fields, their types and all the parsed values. Lik
 
 **Important - cp.print() method is using "Serial" object, it assumes that "Serial.begin(baud_rate);" was previously called.**  
 
-## Troubleshooting  
 
+#### Platformio and SD library issue  
 Platformio users reported compilation issues due to SD library import by the CSV_Parser.cpp file. Since 0.2.1 version of this library, the SD import can be disabled by placing `#define CSV_PARSER_DONT_IMPORT_SD` above (it won't work if it's below) the CSV_Parser library import like this:  
 
 ```cpp
 #define CSV_PARSER_DONT_IMPORT_SD
 #include <CSV_Parser.h>
 ```
+
+#### `cp << file.read();` requiring a `(char)` cast  (potential issue from version 1.0.0, which may break old code)  
+Arduino built-in File.read() method returns an integer (instead of a char). Therefore, it's important to cast its return before supplying it to CSV_Parser object, like:  
+```cpp
+File csv_file = SD.open(f_name); // or FFat.open(f_name);
+while (csv_file.available()) {
+    cp << (char)csv_file.read();
+}
+```
+Without `(char)`, the string representation of ascii number would be stored.  
+Before the 1.0.0 version, the `cp << 97;` expression would append letter 'a' (because '97' stands for 'a' in ascii table). From 1.0.0 version onwards, the `cp << 97;` is equivalent to `cp << String(97);`, it will append '97' instead of 'a'. That is correct behaviour in my opinion, however due to design of Arduino built-in "File.read()" method, which returns an integer, it is necessary to cast it's return (with `(char)csv_file.read()` as shown above), and problems may occur if some existing code (using this library) doesn't explicitly cast it.  
+
   
 ## Motivation
 I wanted to parse [covid-19 csv](https://github.com/tomwhite/covid-19-uk-data) data and couldn't find any csv parser for Arduino. So instead of rushing with a quick/dirty solution, I decided to write something that could be reused in the future (possibly by other people too).  
 
 
 ## Documentation 
+Documentation is embedded into source code and automatically generated using doxygen.  
 https://michalmonday.github.io/CSV-Parser-for-Arduino/index.html  

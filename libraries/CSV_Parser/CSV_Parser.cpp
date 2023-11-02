@@ -69,22 +69,25 @@ void CSV_Parser::AssignIsFmtUnsignedArray(const char * fmt_) {
 
 CSV_Parser::CSV_Parser(const char * s, const char * fmt_, bool has_header_, char delimiter_, char quote_char_) :
   fmt( strdup_ignoring_u(fmt_) ),
-  rows_count(NULL), 
+  rows_count(0), 
   cols_count( strlen_ignoring_u(fmt_) ),
   has_header(has_header_),
   delimiter(delimiter_),
   quote_char(quote_char_),
-  delim_chars({'\r', '\n', delimiter_, 0}),
+  delim_chars{'\r', '\n', delimiter_, 0},
   whole_csv_supplied(false),
   //whole_csv_supplied((bool)s ? true : false), // in constructor where whole csv is not supplied at once it should be set to false
-  leftover(NULL),
-  current_col(NULL),
+  leftover(0),
+  current_col(0),
   header_parsed(!has_header_)
 {  
   AssignIsFmtUnsignedArray(fmt_);
   
   keys =   (char**)calloc(cols_count, sizeof(char*));         // calloc fills memory with 0's so then I can simply use "if(keys[i]) { do something with key[i] }"
   values = (void**)calloc(cols_count, sizeof(void*));
+
+  for (int col = 0; col < cols_count; col++)
+      values[col] = malloc(getTypeSize(fmt[col])); 
 
   /*mem.check("constructor");
   mem.check("after calloc 1, should be = " + String(cols_count * sizeof(char*)));
@@ -107,6 +110,48 @@ CSV_Parser::~CSV_Parser() {
   free(fmt);
   free(leftover);
   free(is_fmt_unsigned);
+}
+
+// external function declaration for feeding characters to parser it must return a char
+extern char __attribute__((weak)) feedRowParser();
+char __attribute__((weak)) feedRowParser() { return '-'; }
+// external function declaration for checking if row parser finished parsing
+extern bool __attribute__((weak)) rowParserFinished();
+bool __attribute__((weak)) rowParserFinished() { return true; }
+// both functions above must be defined by the user, weak attribute is to avoid compilation
+// fail if the user doesn't define them (because not every user will use parseRow() method)
+
+bool CSV_Parser::parseRow() {
+  // parseRow() should never be used together with the original way of parsing csv 
+  // (by "original way of parsing" I mean: by using "cp <<" operator or by supplying whole csv at once)
+  // parseRow() requires feedRowParser() and rowParserFinished() to be defined by the user
+  // It then allows to read the first row in the same way as default parsing way, like:
+  //
+  //     char **strings = (char**)cp[0]; // string based indexing can't be used here because header was not supplied yet
+  //     while (cp.parseRow()) { 
+  //        char *str = strings[0];
+  //     }
+
+  if (rowParserFinished()) 
+    return false;
+
+  // It is necessary to deallocate memory for previously saved strings 
+  // (because strdup is used for saving strings which allocates new memory)
+  if (rows_count > 0) {
+    for (int col = 0; col < cols_count; col++) {
+      if (fmt[col] == 's')
+        free(((char**)values[col])[0]); // 0 stands for the first row, the use of parseRow implies that only 1 row is parsed at a time
+    }
+    rows_count = 0;
+  }
+
+  while (!rowParserFinished() && rows_count == 0)
+    *this << feedRowParser();
+  // thanks to the line below the csv could end without '\n' and the last value 
+  // would still be parsed if the rowParserFinished() returns true
+  if (rowParserFinished())
+    parseLeftover();
+  return rows_count > 0;
 }
 
 #ifndef CSV_PARSER_DONT_IMPORT_SD
@@ -175,7 +220,7 @@ char * CSV_Parser::parseStringValue(const char * s, int * chars_occupied) {
   bool ending_quote_found = false;
   while (char *next_quote = strchr(s, quote_char)) {
     if (*(next_quote+1) == quote_char) {
-  	  s += 2;
+  	  s = next_quote+2;
   	  len--;
   	  continue;
   	}
@@ -184,7 +229,7 @@ char * CSV_Parser::parseStringValue(const char * s, int * chars_occupied) {
   	*chars_occupied += next_quote - base;
   	len += next_quote - base;
   	
-  	if ((*(next_quote+1) == ','))
+  	if ((*(next_quote+1) == delimiter))
   		*chars_occupied += 1;
   	else
   		*chars_occupied += strspn(next_quote + 1, "\r\n");
@@ -394,14 +439,15 @@ void CSV_Parser::supplyChunk(const char *s) {
 
   int chars_occupied = 0;
   char * val = 0;
-  while (val = parseStringValue(s, &chars_occupied)) {
+  while ((val = parseStringValue(s, &chars_occupied))) {
     //debug_serial->println("rows_count = " + String(rows_count) + ", current_col = " + String(current_col) + ", val = " + String(val));
     if (fmt[current_col] != '-') {
       if (!header_parsed) {
         keys[current_col] = strdup_trimmed(val);
       } else {
         //mem.check("values[" + String(current_col) + "]");
-        values[current_col] = (char*)realloc(values[current_col], (rows_count+1) * getTypeSize(fmt[current_col])); 
+        if (rows_count > 0)
+          values[current_col] = (char*)realloc(values[current_col], (rows_count+1) * getTypeSize(fmt[current_col])); 
         saveNewValue(val, fmt[current_col], rows_count, current_col, is_fmt_unsigned[current_col]);
       }
     }
@@ -460,7 +506,8 @@ void CSV_Parser::parseLeftover() {
     int chars_occupied = 0;
     if (char * val = parseStringValue(leftover, &chars_occupied)) {
       if (fmt[current_col] != '-') {
-        values[current_col] = realloc(values[current_col], (rows_count+1) * getTypeSize(fmt[current_col]));
+        if (rows_count > 0)
+          values[current_col] = realloc(values[current_col], (rows_count+1) * getTypeSize(fmt[current_col]));
         saveNewValue(val, fmt[current_col], rows_count, current_col, is_fmt_unsigned[current_col]);  
       }
       if (++current_col == cols_count) {

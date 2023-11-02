@@ -1,7 +1,5 @@
 #include "AtmSphericProf.h"
 
-File csvFile;
-
 void setup() {
 
   const char* csv_file_name = "test.csv";
@@ -21,7 +19,7 @@ void setup() {
 
   // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
-  csvFile = SD.open("test.csv", FILE_WRITE);
+  File csvFile = SD.open("test.csv", O_WRITE | O_CREAT | O_TRUNC);
 
   // if the file opened okay, write to it:
   if (csvFile) {
@@ -43,7 +41,7 @@ void setup() {
     Serial.println("done.");
   } else {
     // if the file didn't open, print an error:
-    Serial.println("error opening test.txt");
+    Serial.println("error opening test.csv");
   }
 
   AtomSphericProfile atmspheric_prof_test(csv_file_name);

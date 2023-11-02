@@ -14,13 +14,13 @@ int AtomSphericProfile::ParseCSVChunk() {
   }
 
   //Reading once to get past the header line of the csv file
-  csv_str = file.readStringUntil('\n')
+  csv_str = csvFile.readStringUntil('\n');
 
   int linesParsed = 0;
   char buffer[BUFFER_SIZE]; // Adjust the buffer size as needed
-  while (file.available() && linesParsed < LEN_OF_CHUNK) {
+  while (csvFile.available() && linesParsed < LEN_OF_CHUNK) {
     // Read a line into the buffer
-    csv_str = file.readStringUntil('\n')
+    csv_str = csvFile.readStringUntil('\n');
     if(csv_str != NULL) {
       csv_str.toCharArray(buffer, sizeof(buffer));
     }

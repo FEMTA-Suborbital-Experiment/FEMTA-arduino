@@ -2,22 +2,25 @@
 #define STATELOGIC_H
 //Debug include statements
 #include <stdio.h>
+#include <string.h>
 #include <string>
 #include <iostream>
+#include <SD.h>
 
 //Add #ifdef statements
 
 using namespace std;
 
 #define BUFF_SIZE 15
-#define NUM_OF_TRANSITIONS 10
-#define STORAGE_FILE_NAME "StateStorage.dat"
+#define NUM_OF_TRANSITIONS 8
+#define EXTENSION ".dat"
 
 class StateLogic
 {
     public:
         int flightState;
         int prevFlightState;
+        const char* storageFileName;
         // pre-liftoff 0, liftoff pre-MECO 1, MECO pre-coast 2, coast 3, descent 4
         // string flightStates[5]; FIX THIS
         float lowVacuumPressure;
@@ -38,14 +41,14 @@ class StateLogic
         int oldPtr = 0;
 
         typedef struct {
-            int[NUM_OF_TRANSITIONS] current_state;
-            int[NUM_OF_TRANSITIONS] previous_state;
-            float[NUM_OF_TRANSITIONS] time_of_transit;
-            uint16_t current_time;
+            int current_state;
+            int* previous_state;
+            float* time_of_transit;
         } StateStorage;
 
-        void read_state_storage (StateStorage);
-        void write_state_storage (StateStorage);
+        void init_state_storage(const char *, int, int*, float*, StateStorage*);
+        void read_state_storage (StateStorage*);
+        void write_state_storage (StateStorage*);
 
         StateLogic();
         void init();

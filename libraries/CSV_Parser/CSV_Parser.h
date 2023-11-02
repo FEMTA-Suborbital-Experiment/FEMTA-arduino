@@ -58,7 +58,7 @@ class CSV_Parser {
 
   /*  Members responsible for keeping track of chunked supply of csv string.  */
   char * leftover;        // string that wasn't parsed yet because it doesn't end with delimiter or new line
-  uint16_t current_col;
+  int current_col;
   bool header_parsed;
 
   /*  Private methods  */
@@ -120,6 +120,11 @@ public:
 #ifndef CSV_PARSER_DONT_IMPORT_SD
   bool readSDfile(const char *f_name);
 #endif
+
+  /** @brief Reads a single row provided by the user-defined functions: feedRowParser (returns char to be supplied) and rowParserFinished (returns whether all rows were parsed)
+      @return true if row was parsed, false if not (e.g. if rowParserFinished() returned true) 
+     */
+  bool parseRow();
   
   int getColumnsCount();
   
