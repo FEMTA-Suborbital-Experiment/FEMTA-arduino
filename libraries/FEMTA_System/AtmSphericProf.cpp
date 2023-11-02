@@ -2,6 +2,17 @@
 
 
 int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
+/*
+      This function opens a csv file inputted in the constructor.
+      It then parses it and puts all of the data in each respective column into the 
+      pressure_hcsm, pressure_mpi, accel_x, accel_y, accel_z, and time data into vectors.
+
+      Inputs:
+          None
+
+      Outputs:
+          None
+*/
   String csv_str;
   char current_char;
   char* token;
