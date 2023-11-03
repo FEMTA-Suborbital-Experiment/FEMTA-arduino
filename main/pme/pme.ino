@@ -9,12 +9,18 @@
  * 
  */
 
-#include "SensorPoller.h"
-// #include "SensorPollerFake.h
+// Set to 1 for simulated sensor inputs
+#define SIM_MODE 1
+
 #include "StateLogic.h"
 #include "PinCtrl.h"
 #include "Logger.h"
 #include "Writer.h"
+#if SIM_MODE
+#include "SensorPollerFake.h"
+#else
+#include "SensorPoller.h"
+#endif
 
 // Pin Mappings to Opening and Closing Valves
 const int closeSV1{A1}; 
@@ -31,9 +37,6 @@ const int bufferSize{50};
 // Name of the output data file
 const char* fileName{"FT01"};
 
-// Determine if we will read from the sensors or from a csv file
-bool readSensors{true};
-
 // Writer parameters. Write to a binary file and choose to overwrite any existing files on the SD card
 bool writeToBinary{true};
 bool overwriteExistingFile{false};
@@ -44,6 +47,12 @@ PinCtrl pinController(
 );
 Logger logger(bufferSize);
 Writer writer(fileName, 4, writeToBinary, overwriteExistingFile);
+#if SIM_MODE
+SensorPollerFake poller;
+#else
+SensorPoller poller;
+#endif
+StateLogic statelogic;
 
 
 void setup() {
@@ -63,28 +72,26 @@ void setup() {
     Serial.println("Something went wrong with initializing the writer. Exiting...");
     exit(1);
   }
+
+  #if SIM_MODE
+  poller.init("/sim_profile.csv");
+  #else
+  poller.init();
+  #endif
+  statelogic.init(0, 0);
 }
 
 
 void updateStateLogicMembers() {
-  if (readSensors) {
-    // Update state logic members to get sensor values
-  } else {
-  // TODO: Implement atmospheric profiles first
-  /* 
-    int currentTimeStep = atmosProfile.timeStep
-    stateLogic.lowVacuumPressure = atmosProfiles.pressureProfile[currentTimeStep];
-    stateLogic.highVacuumPressure = atmosProfiles.pressureProfile[currentTimeStep];
-    stateLogic.acceleration = atmosProfile.accelerationProfile[currentTimeStep];
- */
-  }
+  float vector[5] = {0};
+  poller.readVector(vector, millis());
+  statelogic.determineFlightState(millis(), vector);
 }
 
 
 void loop() {
   pinController.Run();
-
-
+  Serial.println(statelogic.flightState);
   // switch(stateLogic.flightState) {
   //   case 0:
   //   case 1:

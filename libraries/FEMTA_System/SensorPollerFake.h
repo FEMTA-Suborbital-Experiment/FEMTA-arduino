@@ -13,13 +13,13 @@
 #define PIN_DPT_SELECTOR_1 11
 #define PIN_DPT_SELECTOR_2 10
 
-class SensorPoller {
+class SensorPollerFake {
     public:
     
         // Hertz
         int pollRate = 10;
 
-        SensorPoller();
+        SensorPollerFake();
         void init(const char *file);
         void readAccelerometer(float *vec); // float[3]
         void readLowAltBaro(float *pressure, float *temp); // float, HSCM
