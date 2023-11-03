@@ -1,4 +1,3 @@
-//#include "../../main/pme/src/StateLogic.h"
 #include "StateLogic.h"
 
 
@@ -27,20 +26,7 @@ void setup() {
                                                   .previous_state = read_previous_states, 
                                                   .time_of_transit = read_time_transits};
 
-  // File storageFile = SD.open("test.dat", O_WRITE | O_CREAT | O_TRUNC);
-
-  // if (storageFile) {
-  //   Serial.print("Writing to file...");
-  //   // storageFile.write((const uint8_t *)(a_storage), sizeof(*a_storage)/sizeof(uint8_t));
-  //   storageFile.close();
-  //   Serial.println("done.");
-  // }
-  // else {
-  //   Serial.println("Failed to write to storage file.");
-  // }
-
   ss_test.init_state_storage("test", current_state, previous_states, time_of_transition, &write_state_storage);
-  // //ss_test.init_state_storage("test_state_storage", current_state, previous_states, time_of_transition, &read_state_storage);
 
   ss_test.write_state_storage(&write_state_storage);
   delay(1000);
