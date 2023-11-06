@@ -6,11 +6,13 @@
 #include <string>
 #include <iostream>
 #include <SD.h>
+#include <RTClib.h>
 
 //Add #ifdef statements
 
 using namespace std;
 
+RTC_DS3231 rtc;
 #define BUFF_SIZE 15
 #define NUM_OF_TRANSITIONS 8
 #define EXTENSION ".dat"
@@ -58,6 +60,14 @@ class StateLogic
             float* time_of_transit;
         } StateStorage;
 
+        DateTime start;
+        DateTime now;
+
+        uint8_t elapsed_hour;
+        uint8_t elapsed_min;
+        uint8_t elapsed_sec;
+
+        DateTime init_rtc();
         void init_state_storage(const char *, int, int*, float*, StateStorage*);
         void read_state_storage (StateStorage*);
         void write_state_storage (StateStorage*);

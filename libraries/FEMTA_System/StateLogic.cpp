@@ -10,6 +10,25 @@ StateLogic::StateLogic() {}
 static void print_floats(float* array, const char* array_name, int len_of_array);
 static void print_ints(int* array, const char* array_name, int len_of_array);
 
+
+DateTime StateLogic::init_rtc() {
+    if (!rtc.begin()) {
+        Serial.println("Couldn't find RTC");
+        Serial.flush();
+        while (1) delay(10);
+    }
+
+    if (rtc.lostPower()) {
+        Serial.println("RTC lost power or is on new device. Initializing time to compile time");
+        // When time needs to be set on a new device, or after a power loss, the
+        // following line sets the RTC to the date & time this sketch was compiled
+        rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    }
+
+    return rtc.now();
+}
+
+
 void StateLogic::init_state_storage(const char* file_name, int curr_state, 
 int* prev_state, float* transit_time, StateLogic::StateStorage* a_state_storage){
     this->storageFileName = file_name;
