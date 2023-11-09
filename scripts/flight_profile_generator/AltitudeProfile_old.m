@@ -45,7 +45,7 @@ profile = [0,3.65
     500,3.65
     600,3.65];
 %liftoff at 7 seconds - index 4
-%meco at 146 seconds
+%meco at 146 seconds - index 17
 %peak at 246 seconds - index 23
 %land at 430 seconds - index 40 
 skip1 = 60;
@@ -104,9 +104,9 @@ xline(146,'--k',{'Meco'},'HandleVisibility','off')
 xline(246, '--k', {'Apogee'},'HandleVisibility','off')
 xline(430, '--k', {'Land'},'HandleVisibility','off')
 
-writematrix(time, 'time.csv');
-writematrix(alt, 'altitude.csv');
-writematrix(pressure, 'pressure.csv');
+%writematrix(time, 'time.csv');
+%writematrix(alt, 'altitude.csv');
+%writematrix(pressure, 'pressure.csv');
 
 figure;
 semilogy(time,pressure)

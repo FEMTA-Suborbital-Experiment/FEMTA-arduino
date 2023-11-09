@@ -12,6 +12,8 @@ settings.json
 c_cpp_properties.json
 **/.vscode/
 
+*.asv
+
 *.aux
 *.bbl
 *.bcf
