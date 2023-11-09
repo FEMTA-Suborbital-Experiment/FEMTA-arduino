@@ -13,6 +13,10 @@
 
 clear; clc; close all;
 
+%set(groot,'defaultAxesTickLabelInterpreter','latex');  
+%set(groot, 'defaulttextinterpreter', 'latex')
+%set(groot,'defaultLegendInterpreter','latex');
+
 %% PARAMETERS
 
 % Specify noise amplititude based on the five stages of flight: preflight, ascent,
@@ -97,11 +101,24 @@ end
 plot(t, acceleration)
 grid on
 title("Acceleration Profile")
-xlabel("Time [s]")
-ylabel("Acceleration [g]")
+xlabel("Time (s)")
+ylabel("Acceleration (g)")
+set(gca, 'FontSize', 45)
+set(gca, "LineWidth", 4)
 
-out_metric = [t', acceleration' * metric];
-out_imperial = [t', acceleration' * imperial];
+lineWidth = 2.5;
 
-writematrix(out_metric, "acceleration_Full_metric.csv");
-writematrix(out_imperial, "acceleration_Full_imperial.csv");
+xline(24, "r--", "Liftoff; 1", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(3.60, "b--", "Liftoff; 1", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(130, "b--", "MECO; 2", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(150, "r--", "MECO; 2", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(180, "b--", "Start Experiment; 3", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(326, "b--", "End Experiment; 4", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(353, "b--", "Descent; 5", 'FontSize', 30, 'LineWidth', lineWidth);
+xline(470, "b--", "Landed; 6", 'FontSize', 30, 'LineWidth', lineWidth);
+
+%out_metric = [t', acceleration' * metric];
+%out_imperial = [t', acceleration' * imperial];
+
+%writematrix(out_metric, "acceleration_Full_metric.csv");
+%writematrix(out_imperial, "acceleration_Full_imperial.csv");
