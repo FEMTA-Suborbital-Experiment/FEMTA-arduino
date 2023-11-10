@@ -56,17 +56,15 @@ int AtomSphericProfile::ParseCSVChunk(int* current_pos) {
     if (token) {
       time[linesParsed] = atof(token);
       token = strtok(NULL, ",");
+      this->pressure_hscm[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->pressure_mpi[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
       this->accel_x[linesParsed] = atof(token);
-      // token = strtok(NULL, ",");
-      // this->pressure_hscm[linesParsed] = atof(token);
-      // token = strtok(NULL, ",");
-      // this->pressure_mpi[linesParsed] = atof(token);
-      // token = strtok(NULL, ",");
-      // this->accel_x[linesParsed] = atof(token);
-      // token = strtok(NULL, ",");
-      // this->accel_y[linesParsed] = atof(token);
-      // token = strtok(NULL, ",");
-      // this->accel_z[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->accel_y[linesParsed] = atof(token);
+      token = strtok(NULL, ",");
+      this->accel_z[linesParsed] = atof(token);
 
       *current_pos = csvFile.position();
       linesParsed++;
