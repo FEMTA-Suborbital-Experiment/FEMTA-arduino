@@ -11,23 +11,45 @@ static void print_floats(float* array, const char* array_name, int len_of_array)
 static void print_ints(int* array, const char* array_name, int len_of_array);
 
 
-DateTime StateLogic::init_rtc() {
+void StateLogic::init_rtc(const char* starttime_filename) {
     if (!rtc.begin()) {
         Serial.println("Couldn't find RTC");
         Serial.flush();
         while (1) delay(10);
     }
 
-    if (rtc.lostPower()) {
-        Serial.println("RTC lost power or is on new device. Initializing time to compile time");
-        // When time needs to be set on a new device, or after a power loss, the
-        // following line sets the RTC to the date & time this sketch was compiled
-        rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-    }
+    String extension(EXTENSION);
+    File startFile = SD.open(starttime_filename + extension, O_WRITE | O_CREAT | O_TRUNC);
 
-    return rtc.now();
+    DateTime start = rtc.now();
+    this->start_time = start.unixtime();
+    if(startFile) {
+        Serial.print("Writing from file...");
+        startFile.write((const uint8_t *)&(this->start_time), sizeof(this->start_time));
+        startFile.close();
+        Serial.println("done.");
+    }
+    else {
+        Serial.println("Error writing to file");
+    }
 }
 
+
+void StateLogic::reinit_rtc(const char* starttime_filename) {
+    String extension(EXTENSION);
+    File startFile = SD.open(starttime_filename + extension, FILE_READ);
+
+    if (startFile) {
+      Serial.print("Reading from file...");
+      startFile.read((uint8_t *)&(this->start_time), sizeof(this->start_time));
+      startFile.close();
+      Serial.println("done.");
+    } else {
+      Serial.println("Error reading to file");
+    }
+
+    return rtc.now().unixtime();
+}
 
 void StateLogic::init_state_storage(const char* file_name, int curr_state, 
 int* prev_state, float* transit_time, StateLogic::StateStorage* a_state_storage){

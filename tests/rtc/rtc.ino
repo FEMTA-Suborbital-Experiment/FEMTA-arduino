@@ -3,6 +3,7 @@
 #include <RTClib.h>
 
 RTC_DS3231 rtc;
+DateTime start;
 
 void setup () {
   Serial.begin(57600);
@@ -24,37 +25,17 @@ void setup () {
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
 
-  // When time needs to be re-set on a previously configured device, the
-  // following line sets the RTC to the date & time this sketch was compiled
-  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-  // This line sets the RTC with an explicit date & time, for example to set
-  // January 21, 2014 at 3am you would call:
-  // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
+  start = rtc.now();
+  //rtc.adjust(start);
 }
 
 void loop () {
-    //Getting Start Time
-    DateTime start = rtc.now();
-    delay(1000);
-
     DateTime now = rtc.now();
     
-    uint8_t elapsed_hour;
-    uint8_t elapsed_min;
-    uint8_t elapsed_sec;
-
-    elapsed_hour = now.hour() - start.hour();
-    elapsed_min = now.minute() - start.minute();
-    elapsed_sec = now.second() - start.second();
-
-    Serial.print("Time: ");
-    Serial.print(elapsed_hour, DEC);
-    Serial.print(':');
-    Serial.print(elapsed_min, DEC);
-    Serial.print(':');
-    Serial.print(elapsed_sec, DEC);
-    Serial.println();
-
-    Serial.println();
+    // Calculate and print Unix time
+    unsigned long unixTime = now.unixtime() - start.unixtime();
+    Serial.print("Elapsed Unix time: ");
+    Serial.println(unixTime);
+    
     delay(1000);
 }

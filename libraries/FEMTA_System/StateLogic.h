@@ -60,14 +60,10 @@ class StateLogic
             float* time_of_transit;
         } StateStorage;
 
-        DateTime start;
-        DateTime now;
+        uint32_t start_time;
 
-        uint8_t elapsed_hour;
-        uint8_t elapsed_min;
-        uint8_t elapsed_sec;
-
-        DateTime init_rtc();
+        void init_rtc(const char*);
+        void reinit_rtc(const char*);
         void init_state_storage(const char *, int, int*, float*, StateStorage*);
         void read_state_storage (StateStorage*);
         void write_state_storage (StateStorage*);
