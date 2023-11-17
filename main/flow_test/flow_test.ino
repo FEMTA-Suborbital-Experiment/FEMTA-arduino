@@ -14,6 +14,7 @@
 #include "PinCtrl.h"
 #include "Logger.h"
 #include "Writer.h"
+#include "SensorPoller.h"
 
 const int closeSV1{A1}; 
 const int openSV1{5};
