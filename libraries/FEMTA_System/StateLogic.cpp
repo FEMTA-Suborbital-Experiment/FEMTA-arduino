@@ -11,44 +11,60 @@ static void print_floats(float* array, const char* array_name, int len_of_array)
 static void print_ints(int* array, const char* array_name, int len_of_array);
 
 
-void StateLogic::init_rtc(const char* starttime_filename) {
-    if (!rtc.begin()) {
+bool StateLogic::init_rtc(const char* starttime_filename) {
+    if (!this->rtc.begin()) {
         Serial.println("Couldn't find RTC");
         Serial.flush();
-        while (1) delay(10);
+        return false;
     }
 
+    this->rtc_file_name = starttime_filename;
     String extension(EXTENSION);
-    File startFile = SD.open(starttime_filename + extension, O_WRITE | O_CREAT | O_TRUNC);
+    File startFile = SD.open(this->rtc_file_name + extension, O_WRITE | O_CREAT | O_TRUNC);
 
     DateTime start = rtc.now();
     this->start_time = start.unixtime();
+
     if(startFile) {
         Serial.print("Writing from file...");
         startFile.write((const uint8_t *)&(this->start_time), sizeof(this->start_time));
         startFile.close();
         Serial.println("done.");
+        return true;
     }
     else {
         Serial.println("Error writing to file");
+        return false;
     }
 }
 
 
-void StateLogic::reinit_rtc(const char* starttime_filename) {
+bool StateLogic::reinit_rtc() {
+    if (!this->rtc.begin()) {
+        Serial.println("Couldn't find RTC");
+        Serial.flush();
+        return false;
+    }
+
     String extension(EXTENSION);
-    File startFile = SD.open(starttime_filename + extension, FILE_READ);
+    File startFile = SD.open(this->rtc_file_name + extension, FILE_READ);
 
     if (startFile) {
       Serial.print("Reading from file...");
       startFile.read((uint8_t *)&(this->start_time), sizeof(this->start_time));
       startFile.close();
       Serial.println("done.");
+      return true;
     } else {
       Serial.println("Error reading to file");
+      return false;
     }
+}
 
-    return rtc.now().unixtime();
+uint32_t StateLogic::elapsed_time() {
+    DateTime current = rtc.now();
+    uint32_t current_time = current.unixtime();
+    return current_time - this->start_time;
 }
 
 void StateLogic::init_state_storage(const char* file_name, int curr_state, 

@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "FEMTA_Arduino",
+			"path": "../../../../../../../Documents/PlatformIO/Projects/FEMTA_Arduino"
+		},
+		{
+			"name": "230924-151512-adafruit_feather_m0",
+			"path": "../../../../../../../Documents/PlatformIO/Projects/230924-151512-adafruit_feather_m0"
+		}
+	],
+	"settings": {
+		"arduino.path": "C:\\Program Files (x86)\\Arduino",
+		"arduino.additionalUrls": [
+			"https://adafruit.github.io/arduino-board-index/package_adafruit_index.json"
+		],
+		"arduino.enableUSBDetection": true,
+		"arduino.logLevel": "info",
+		"files.associations": {
+			"wire.h": "c",
+			"arduino.h": "c",
+			"*.tcc": "cpp"
+		}
+	}
+}
