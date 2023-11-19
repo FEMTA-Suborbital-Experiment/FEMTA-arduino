@@ -22,6 +22,7 @@ SensorPollerFake::SensorPollerFake() { }
 
 void SensorPollerFake::init(const char* file) {
     this->data = new AtomSphericProfile(file);
+    this->lastRead = 0;
 }
 
 void SensorPollerFake::readAccelerometer(float *vec) {
@@ -72,23 +73,34 @@ void SensorPollerFake::readFlowMeter(float *flow) {
     *flow = 0;
 }
 
-void SensorPollerFake::readVector(float *vec, unsigned long time_millis) {
-    if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return;
+int fail_flag = 0;
+
+int SensorPollerFake::readVector(float *vec, unsigned long time_millis) {
+    // Serial.printf("%d - %d -> %d\n", time_millis, this->lastRead, 1000 / this->pollRate);
+    if ((time_millis - this->lastRead) < 1000 / (this->pollRate)) return 0;
+    Serial.printf("Read %d %d\n", this->count, this->len_of_array);
     this->lastRead = time_millis;
 
-    this->count = 0;
     if (this->count >= this->len_of_array) {
+        Serial.printf("read chunk at %d\n", this->file_pos);
         this->count = 0;
         this->len_of_array = this->data->ParseCSVChunk(&(this->file_pos));
     }
 
-    while (this->data->time[this->count] * 1000 < time_millis) {
-        this->count += 1;
-        if (this->count >= this->len_of_array) {
-            Serial.printf("Done at %d +  %d", this->file_pos, this->count);
-            while (1) {}
-        }
-    }
+    // Serial.println("Done reading");
+
+    // while (this->count >= this->len_of_array || this->data->time[this->count] * 1000 < time_millis) {
+    //     Serial.println("Skipahead");
+    //     this->count += 1;
+    //     if (this->count >= this->len_of_array) {
+    //         Serial.printf("Done at %d +  %d", this->file_pos, this->count);
+    //         Serial.println();
+    //         while (1) {}
+    //     }
+    // }
+
+    Serial.print("read at ");
+    Serial.println(this->count);
 
     float accel[3];
     this->readAccelerometer(accel);
@@ -107,4 +119,7 @@ void SensorPollerFake::readVector(float *vec, unsigned long time_millis) {
     vec[2] = accel[2];
     vec[3] = lowBaroP;
     vec[4] = hiBaroP;
+    this->count += 1;
+
+    return 1;
 }

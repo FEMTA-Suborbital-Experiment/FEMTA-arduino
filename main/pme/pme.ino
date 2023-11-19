@@ -74,7 +74,11 @@ void setup() {
   }
 
   #if SIM_MODE
-  poller.init("/sim_profile.csv");
+  if (!SD.begin(4)) {
+    Serial.println("SD card initialization failed!");
+    while (1);
+  }
+  poller.init("prof.csv");
   #else
   poller.init();
   #endif
@@ -84,14 +88,26 @@ void setup() {
 
 void updateStateLogicMembers() {
   float vector[5] = {0};
-  poller.readVector(vector, millis());
+  int ret = poller.readVector(vector, millis());
+  if (!ret) return;
+  Serial.print("State{");
+  for (int i = 0; i < 5; i++) {
+    Serial.print(vector[i]);
+    Serial.print(",");
+  }
+  Serial.println("}");
   statelogic.determineFlightState(millis(), vector);
+  Serial.print(millis());
+  Serial.print(" ");
+  Serial.println(statelogic.flightState);
 }
 
 
 void loop() {
   pinController.Run();
-  Serial.println(statelogic.flightState);
+  updateStateLogicMembers();
+  float pressures[5];
+  float temperatures[5];
   // switch(stateLogic.flightState) {
   //   case 0:
   //   case 1:

@@ -25,7 +25,7 @@ class SensorPoller {
         void readHighAltBaro(float *pressure, float *temp); // float, PVC
         void readPressureSensors(float *pressures, float *temperatures); // float[5], float[5]
         void readFlowMeter(float *flow); // float
-        void readVector(float *vec, unsigned long time_millis);
+        int readVector(float *vec, unsigned long time_millis);
     private:
         void initPressureSensors();
 

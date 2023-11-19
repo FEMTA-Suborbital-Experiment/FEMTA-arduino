@@ -13,6 +13,10 @@
 #define PIN_DPT_SELECTOR_1 11
 #define PIN_DPT_SELECTOR_2 10
 
+// #define USE_DELAY 0
+
+extern int WALL_TIME_MILLIS;
+
 class SensorPollerFake {
     public:
     
@@ -26,11 +30,11 @@ class SensorPollerFake {
         void readHighAltBaro(float *pressure, float *temp); // float, PVC
         void readPressureSensors(float *pressures, float *temperatures); // float[5], float[5]
         void readFlowMeter(float *flow); // float
-        void readVector(float *vec, unsigned long time_millis);
+        int readVector(float *vec, unsigned long time_millis);
     private:
         void initPressureSensors();
 
-        unsigned long lastRead;
+        unsigned long lastRead = 0;
         float sensorVector[5];
         AtomSphericProfile *data;
         int file_pos = 0;

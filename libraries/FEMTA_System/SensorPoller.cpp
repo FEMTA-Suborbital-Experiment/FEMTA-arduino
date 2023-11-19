@@ -130,8 +130,8 @@ void SensorPoller::readFlowMeter(float *flow) {
     }
 }
 
-void SensorPoller::readVector(float *vec, unsigned long time_millis) {
-    if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return;
+int SensorPoller::readVector(float *vec, unsigned long time_millis) {
+    if ((time_millis - this->lastRead) > 1000 / (this->pollRate)) return 0;
     this->lastRead = time_millis;
 
     float accel[3];
@@ -151,4 +151,6 @@ void SensorPoller::readVector(float *vec, unsigned long time_millis) {
     vec[2] = accel[2];
     vec[3] = lowBaroP;
     vec[4] = hiBaroP;
+
+    return 1;
 }

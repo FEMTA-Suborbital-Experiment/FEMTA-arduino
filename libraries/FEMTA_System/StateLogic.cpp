@@ -174,7 +174,7 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_EXP_DONE; // Stopped experiment
         }
-        else if (this->flightState >= FLIGHT_STATE_EXP_STARTED && this->flightState < FLIGHT_STATE_DESCENDING && newAccelAverage > 4.0) {
+        else if (this->flightState >= FLIGHT_STATE_EXP_STARTED && this->flightState < FLIGHT_STATE_DESCENDING && newAccelAverage > 8.0) {
             // Started descent
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_DESCENDING; // Started descent
