@@ -13,6 +13,18 @@ typedef struct {
     AtmosphericVector<float> lowPressure;
     AtmosphericVector<float> highPressure;
     AtmosphericVector<float> acceleration;
+    
+    AtmosphericVector<float> pressure0;
+    AtmosphericVector<float> pressure1;
+    AtmosphericVector<float> pressure2;
+    AtmosphericVector<float> pressure3;
+    AtmosphericVector<float> pressure4;
+    
+    AtmosphericVector<float> temperature0;
+    AtmosphericVector<float> temperature1;
+    AtmosphericVector<float> temperature2;
+    AtmosphericVector<float> temperature3;
+    AtmosphericVector<float> temperature4;
 } logType;
 
 #endif

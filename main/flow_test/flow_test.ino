@@ -31,7 +31,7 @@ const char* fileName{"FT01"};
 // Parameters for flight simulation
 bool readSensors{true};
 
-bool writeToBinary{true};
+bool writeToBinary{false};
 bool overwriteExistingFile{false};
 
 // Define classes. Testing this to make sure the classes work
@@ -40,6 +40,12 @@ PinCtrl pinController(
 );
 Logger logger(bufferSize);
 Writer writer(fileName, 4, writeToBinary, overwriteExistingFile);
+SensorPoller poller;
+
+float pressure[5];
+float temperature[5];
+
+int lastTime;
 
 void setup() {
     if (pinController.init() != 0) {
@@ -54,8 +60,23 @@ void setup() {
         Serial.println("Something went wrong with initializing the writer. Exiting...");
         exit(1);
     }
+
+    poller.init();
+    lastTime = millis();
 }
 
 void loop() {
     pinController.Run();
+    readTime = millis();
+    if (readTime - lastTime) > (1000 / poller.pollRate) {
+        t = readTime - lastTime;
+        lastTime = readTime;
+        poller.readPressureSensors(pressure, temperature);
+        logger.pushData(t, 0, 0, 0, pressure, temperature);
+    }
+
+    if (logger.isStructFilled()) {
+        writer.writeToFile(logger.logData);
+        logger.flushArrays();
+    }
 }

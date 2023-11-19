@@ -126,6 +126,8 @@ int Writer::writeToBinary(logType data) {
     int hp_size = data.highPressure.size() + vector_size;
     int a_size = data.acceleration.size() + vector_size;
 
+    int pressure_size = data.pressure0.size() + vector_size;
+
     logSize = SD.open(logSizeFile + extension, O_READ | O_WRITE | O_CREAT);
 
     // TODO: Apply DMA 
@@ -135,6 +137,18 @@ int Writer::writeToBinary(logType data) {
     logFile.write(reinterpret_cast<const uint8_t*>(&data.lowPressure[0]), sizeof(float)*data.lowPressure.size());    
     logFile.write(reinterpret_cast<const uint8_t*>(&data.highPressure[0]), sizeof(float)*data.highPressure.size());
     logFile.write(reinterpret_cast<const uint8_t*>(&data.acceleration[0]), sizeof(float)*data.acceleration.size());
+
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure0[0]), sizeof(float)*data.pressure0.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure1[0]), sizeof(float)*data.pressure1.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure2[0]), sizeof(float)*data.pressure2.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure3[0]), sizeof(float)*data.pressure3.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure4[0]), sizeof(float)*data.pressure4.size());
+
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature0[0]), sizeof(float)*data.temperature0.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature1[0]), sizeof(float)*data.temperature1.size());    
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature2[0]), sizeof(float)*data.temperature2.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature3[0]), sizeof(float)*data.temperature3.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature4[0]), sizeof(float)*data.temperature4.size());
     
     logFile.close();
     logSize.close();
@@ -159,7 +173,17 @@ int Writer::writeToText(logType data) {
             String(data.time[i]) + s 
             + String(data.lowPressure[i]) + s 
             + String(data.highPressure[i]) + s 
-            + String(data.acceleration[i]) + '\n'
+            + String(data.acceleration[i]) + s
+            + String(data.pressure0[i]) + s
+            + String(data.pressure1[i]) + s
+            + String(data.pressure2[i]) + s
+            + String(data.pressure3[i]) + s
+            + String(data.pressure4[i]) + s
+            + String(data.temperature0[i]) + s
+            + String(data.temperature1[i]) + s
+            + String(data.temperature2[i]) + s
+            + String(data.temperature3[i]) + s
+            + String(data.temperature4[i]) + '\n'
         );
     }
 

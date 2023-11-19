@@ -62,6 +62,18 @@ void Logger::flushArrays() {
     logData.lowPressure.clear();
     logData.highPressure.clear();
     logData.acceleration.clear();
+
+    logData.pressure0.clear();
+    logData.pressure1.clear();
+    logData.pressure2.clear();
+    logData.pressure3.clear();
+    logData.pressure4.clear();
+
+    logData.temperature0.clear();
+    logData.temperature1.clear();
+    logData.temperature2.clear();
+    logData.temperature3.clear();
+    logData.temperature4.clear();
 }
 
 /**
@@ -73,11 +85,23 @@ void Logger::flushArrays() {
  * @param hp 
  * @param a 
  */
-void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0) {    
+void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0, float *pres, float *temps) {    
     logData.time.push_back(t);
     logData.lowPressure.push_back(lp);
     logData.highPressure.push_back(hp);
     logData.acceleration.push_back(a);
+    
+    logData.pressure0.push_back(pres[0]);
+    logData.pressure1.push_back(pres[1]);
+    logData.pressure2.push_back(pres[2]);
+    logData.pressure3.push_back(pres[3]);
+    logData.pressure4.push_back(pres[4]);
+
+    logData.temperature0.push_back(temps[0]);
+    logData.temperature1.push_back(temps[1]);
+    logData.temperature2.push_back(temps[2]);
+    logData.temperature3.push_back(temps[3]);
+    logData.temperature4.push_back(temps[4]);
 }
 
 
