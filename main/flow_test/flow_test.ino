@@ -9,13 +9,19 @@
  * Since a flow test does not have an acceleration component, we rely entirely
  * on the pressure sensors to determine flight state. 
  * 
- */
+ */// Set to 1 for simulated sensor inputs
+#define SIM_MODE 1
 
 #include "PinCtrl.h"
 #include "Logger.h"
 #include "Writer.h"
+#if SIM_MODE
+#include "SensorPollerFake.h"
+#else
 #include "SensorPoller.h"
+#endif
 
+// Pin Mappings to Opening and Closing Valves
 const int closeSV1{A1}; 
 const int openSV1{5};
 const int closeSV2{A2};
@@ -24,12 +30,11 @@ const int closeLV1{A3};
 const int openLV1{9};
 const int signalPin{13};
 
+// Buffer size to store data in the logger
 const int bufferSize{50};
 
+// Name of the output data file
 const char* fileName{"FT01"};
-
-// Parameters for flight simulation
-bool readSensors{true};
 
 bool writeToBinary{false};
 bool overwriteExistingFile{false};
@@ -40,7 +45,11 @@ PinCtrl pinController(
 );
 Logger logger(bufferSize);
 Writer writer(fileName, 4, writeToBinary, overwriteExistingFile);
+#if SIM_MODE
+SensorPollerFake poller;
+#else
 SensorPoller poller;
+#endif
 
 float pressure[5];
 float temperature[5];
@@ -61,7 +70,11 @@ void setup() {
         exit(1);
     }
 
+    #if SIM_MODE
+    poller.init("/sim_profile.csv");
+    #else
     poller.init();
+    #endif
     lastTime = millis();
 }
 
