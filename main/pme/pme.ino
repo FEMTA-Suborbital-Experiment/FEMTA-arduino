@@ -1,6 +1,6 @@
 /**
  * @file pme.ino
- * @author Jacob Valdez (valdez24@purdue.edu)
+ * @author Jacob Valdez (valdez24@purdue.edu), Vincent Wang (wang5528@purdue.edu)
  * @brief The main sketch to control the Propellant Management Unit
  * @date 2023-10-22
  * 
