@@ -82,26 +82,52 @@ logType Reader::readVector() {
     File logSize = SD.open(logSizeFile + extension, FILE_READ);
     logType out;
     logType holder;
-    int t_size;
-    int lp_size;
-    int hp_size;
-    int a_size;
+    int vector_size;
 
-    logSize.read(reinterpret_cast<uint8_t*>(&t_size), sizeof(t_size));
+    logSize.read(reinterpret_cast<uint8_t*>(&vector_size), sizeof(vector_size));
 
     logSize.close();
     
-    out.time.resize(t_size);
-    out.lowPressure.resize(t_size); 
-    out.highPressure.resize(t_size); 
-    out.acceleration.resize(t_size); 
+    out.time.resize(vector_size);
+    out.lowPressure.resize(vector_size); 
+    out.highPressure.resize(vector_size); 
+    out.accelerationX.resize(vector_size); 
+    out.accelerationY.resize(vector_size); 
+    out.accelerationZ.resize(vector_size); 
+
+    out.pressure0.resize(vector_size);
+    out.pressure1.resize(vector_size);
+    out.pressure2.resize(vector_size);
+    out.pressure3.resize(vector_size);
+    out.pressure4.resize(vector_size);
+
+    out.temperature0.resize(vector_size);
+    out.temperature1.resize(vector_size);
+    out.temperature2.resize(vector_size);
+    out.temperature3.resize(vector_size);
+    out.temperature4.resize(vector_size);
     
     // TODO: Find a better implementation which directly reads the file contents to the buffer
-    for (int i=0; i < t_size / mBufferSize; ++i) {
+    for (int i=0; i < vector_size / mBufferSize; ++i) {
         mFile.read(reinterpret_cast<uint8_t*>(&out.time[i*mBufferSize]), sizeof(float)*mBufferSize);
         mFile.read(reinterpret_cast<uint8_t*>(&out.lowPressure[i*mBufferSize]), sizeof(float)*mBufferSize);
         mFile.read(reinterpret_cast<uint8_t*>(&out.highPressure[i*mBufferSize]), sizeof(float)*mBufferSize);
-        mFile.read(reinterpret_cast<uint8_t*>(&out.acceleration[i*mBufferSize]), sizeof(float)*mBufferSize);
+        
+        mFile.read(reinterpret_cast<uint8_t*>(&out.accelerationX[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.accelerationY[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.accelerationZ[i*mBufferSize]), sizeof(float)*mBufferSize);
+
+        mFile.read(reinterpret_cast<uint8_t*>(&out.pressure0[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.pressure1[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.pressure2[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.pressure3[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.pressure4[i*mBufferSize]), sizeof(float)*mBufferSize);
+
+        mFile.read(reinterpret_cast<uint8_t*>(&out.temperature0[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.temperature1[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.temperature2[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.temperature3[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.temperature4[i*mBufferSize]), sizeof(float)*mBufferSize);
     }
 
     return out;

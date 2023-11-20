@@ -121,12 +121,7 @@ int Writer::writeToBinary(logType data) {
 
     logSize.close();
 
-    int t_size = data.time.size() + vector_size;
-    int lp_size = data.lowPressure.size() + vector_size;
-    int hp_size = data.highPressure.size() + vector_size;
-    int a_size = data.acceleration.size() + vector_size;
-
-    int pressure_size = data.pressure0.size() + vector_size;
+    int t_size = data.time.size() + vector_size; 
 
     logSize = SD.open(logSizeFile + extension, O_READ | O_WRITE | O_CREAT);
 
@@ -136,7 +131,10 @@ int Writer::writeToBinary(logType data) {
     logFile.write(reinterpret_cast<const uint8_t*>(&data.time[0]), sizeof(float)*data.time.size());    
     logFile.write(reinterpret_cast<const uint8_t*>(&data.lowPressure[0]), sizeof(float)*data.lowPressure.size());    
     logFile.write(reinterpret_cast<const uint8_t*>(&data.highPressure[0]), sizeof(float)*data.highPressure.size());
-    logFile.write(reinterpret_cast<const uint8_t*>(&data.acceleration[0]), sizeof(float)*data.acceleration.size());
+
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.accelerationX[0]), sizeof(float)*data.accelerationX.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.accelerationY[0]), sizeof(float)*data.accelerationY.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.accelerationZ[0]), sizeof(float)*data.accelerationZ.size());
 
     logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure0[0]), sizeof(float)*data.pressure0.size());    
     logFile.write(reinterpret_cast<const uint8_t*>(&data.pressure1[0]), sizeof(float)*data.pressure1.size());    
@@ -173,7 +171,9 @@ int Writer::writeToText(logType data) {
             String(data.time[i]) + s 
             + String(data.lowPressure[i]) + s 
             + String(data.highPressure[i]) + s 
-            + String(data.acceleration[i]) + s
+            + String(data.accelerationX[i]) + s
+            + String(data.accelerationY[i]) + s
+            + String(data.accelerationZ[i]) + s
             + String(data.pressure0[i]) + s
             + String(data.pressure1[i]) + s
             + String(data.pressure2[i]) + s

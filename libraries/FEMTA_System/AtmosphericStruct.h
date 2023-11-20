@@ -12,7 +12,9 @@ typedef struct {
     AtmosphericVector<float> time;
     AtmosphericVector<float> lowPressure;
     AtmosphericVector<float> highPressure;
-    AtmosphericVector<float> acceleration;
+    AtmosphericVector<float> accelerationX;
+    AtmosphericVector<float> accelerationY;
+    AtmosphericVector<float> accelerationZ;
     
     AtmosphericVector<float> pressure0;
     AtmosphericVector<float> pressure1;

@@ -40,7 +40,22 @@ Logger::Logger(int arraySize) :
     logData.time.setMaxSize(arraySize);
     logData.lowPressure.setMaxSize(arraySize);
     logData.highPressure.setMaxSize(arraySize);
-    logData.acceleration.setMaxSize(arraySize);
+
+    logData.accelerationX.setMaxSize(arraySize);
+    logData.accelerationY.setMaxSize(arraySize);
+    logData.accelerationZ.setMaxSize(arraySize);
+
+    logData.pressure0.setMaxSize(arraySize);
+    logData.pressure1.setMaxSize(arraySize);
+    logData.pressure2.setMaxSize(arraySize);
+    logData.pressure3.setMaxSize(arraySize);
+    logData.pressure4.setMaxSize(arraySize);
+
+    logData.temperature0.setMaxSize(arraySize);
+    logData.temperature1.setMaxSize(arraySize);
+    logData.temperature2.setMaxSize(arraySize);
+    logData.temperature3.setMaxSize(arraySize);
+    logData.temperature4.setMaxSize(arraySize);
 }
 
 /**
@@ -61,7 +76,10 @@ void Logger::flushArrays() {
     logData.time.clear();
     logData.lowPressure.clear();
     logData.highPressure.clear();
-    logData.acceleration.clear();
+    
+    logData.accelerationX.clear();
+    logData.accelerationY.clear();
+    logData.accelerationZ.clear();
 
     logData.pressure0.clear();
     logData.pressure1.clear();
@@ -85,11 +103,13 @@ void Logger::flushArrays() {
  * @param hp 
  * @param a 
  */
-void Logger::pushData(float t, float lp=0.0, float hp=0.0, float a=0.0, float *pres, float *temps) {    
+void Logger::pushData(float t, float *vec, float *pres, float *temps) {    
     logData.time.push_back(t);
-    logData.lowPressure.push_back(lp);
-    logData.highPressure.push_back(hp);
-    logData.acceleration.push_back(a);
+    logData.accelerationX.push_back(vec[0]);
+    logData.accelerationY.push_back(vec[1]);
+    logData.accelerationZ.push_back(vec[2]);
+    logData.lowPressure.push_back(vec[3]);
+    logData.highPressure.push_back(vec[4]);
     
     logData.pressure0.push_back(pres[0]);
     logData.pressure1.push_back(pres[1]);

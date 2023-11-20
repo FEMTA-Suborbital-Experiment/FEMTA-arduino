@@ -4,10 +4,11 @@
  * @brief A test sketch for propellant tank testing in a vacuum chamber
  * @date 2023-10-22
  * 
- * @details This sketch makes use of the statelogic class to handle the
+ * @details This sketch of a custom function to handle the
  * control of the valves at certain pressure thresholds of the experiment.
  * Since a flow test does not have an acceleration component, we rely entirely
- * on the pressure sensors to determine flight state. 
+ * on the pressure sensors to determine flight state. In addition, we also provide
+ * a simulation mode for offline testing. 
  * 
  */// Set to 1 for simulated sensor inputs
 #define SIM_MODE 1
@@ -51,10 +52,7 @@ SensorPollerFake poller;
 SensorPoller poller;
 #endif
 
-float pressure[5];
-float temperature[5];
-
-int lastTime;
+unsigned long lastRead{0};
 
 void setup() {
     if (pinController.init() != 0) {
@@ -75,17 +73,61 @@ void setup() {
     #else
     poller.init();
     #endif
-    lastTime = millis();
+    unsigned long lastRead = millis();
+}
+
+/**
+ * @brief Custom function that the user can write to the specifications of a specific test.
+ * 
+ * @details You can replicate the behavior of pme.ino by placing the flight state determination
+ * algorithm in this function. 
+ * 
+ * @param ambient 
+ * @param pressures 
+ * @param temperatures 
+ */
+void controlExperiment(float *ambient, float *pressures, float *temperatures) {
+    Serial.print("Ambient State: [ ");
+    for (int i = 0; i < 5; ++i) {
+        Serial.print(String(ambient[i]));
+        if (i < 4)
+            Serial.print(", ");
+    }
+    Serial.println("]");
+
+    Serial.print("Tank Pressures: [ ");
+    for (int i = 0; i < 5; ++i) {
+        Serial.print(String(pressures[i]));
+        if (i < 4)
+            Serial.print(", ");
+    }
+    Serial.println("]");
+
+    Serial.print("Tank Temperatures: [ ");
+    for (int i = 0; i < 5; ++i) {
+        Serial.print(String(temperatures[i]));
+        if (i < 4)
+            Serial.print(", ");
+    }
+    Serial.println("]");
 }
 
 void loop() {
     pinController.Run();
-    readTime = millis();
-    if (readTime - lastTime) > (1000 / poller.pollRate) {
-        t = readTime - lastTime;
-        lastTime = readTime;
-        poller.readPressureSensors(pressure, temperature);
-        logger.pushData(t, 0, 0, 0, pressure, temperature);
+    unsigned long currentRead = millis();
+    if ((currentRead - lastRead) > (1000.0 / poller.pollRate)) {
+        lastRead = currentRead;
+        
+        float ambient[5] = {0};
+        float pressures[5] = {0};
+        float temperatures[5] = {0};
+        
+        poller.readVector(ambient, currentRead);
+        poller.readPressureSensors(pressures, temperatures);
+
+        controlExperiment(ambient, pressures, temperatures);
+
+        logger.pushData(currentRead, ambient, pressures, temperatures);
     }
 
     if (logger.isStructFilled()) {
