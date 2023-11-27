@@ -122,6 +122,23 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
     newAccelBuffer[newPtr % BUFF_SIZE] = accelMag;
     newPtr += 1;
 
+    // Read pressures into buffers
+    lowPBuffer[lowPPtr] = lowPressure;
+    lowPPtr += 1;
+    hiPBuffer[hiPPtr] = highPressure;
+    hiPPtr += 1;
+
+    // Compute moving average for pressures
+    float lowPressureAverage = 0;
+    float highPressureAverage = 0;
+
+    for (int i = 0; i < BUFF_SIZE; i++) {
+        lowPressureAverage += lowPBuffer[i];
+        highPressureAverage += hiPBuffer[i];
+    }
+    lowPressureAverage /= BUFF_SIZE;
+    highPressureAverage /= BUFF_SIZE;
+
     // Compute moving AccelAverages and standard deviations
     float oldAccelAverage = 0, oldAccelStdDev = 0;
     float newAccelAverage = 0, newAccelStdDev = 0;
