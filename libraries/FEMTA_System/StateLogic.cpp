@@ -144,11 +144,11 @@ bool StateLogic::write_state_storage(StateLogic::StateStorage* a_storage){
     storageFile.write((const uint8_t *)(a_storage), sizeof(*a_storage)/sizeof(uint8_t));
     storageFile.close();
     Serial.println("done.");
-    return true
+    return true;
   }
   else {
     Serial.println("Failed to write to storage file.");
-    return false
+    return false;
   }
 }
 
@@ -177,10 +177,10 @@ bool StateLogic::read_state_storage(StateLogic::StateStorage* a_storage){
       // Serial.printf("Current State after reading is: %d\n", a_storage->current_state);
       // print_ints(a_storage->previous_state, "previous_state", NUM_OF_TRANSITIONS);
       // print_floats(a_storage->time_of_transit, "time_of_transit", NUM_OF_TRANSITIONS);
-      return true
+      return true;
     } else {
       Serial.println("Error reading to file");
-      return false
+      return false;
     }
 
 
