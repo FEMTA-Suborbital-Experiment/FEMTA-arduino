@@ -3,5 +3,5 @@
     "programmer": "adafruit:adafruit_jlink",
     "output": "../build",
     "sketch": "main\\flow_test\\flow_test.ino",
-    "port": "COM9"
+    "port": "COM18"
 }

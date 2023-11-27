@@ -35,7 +35,7 @@ const int signalPin{13};
 const int bufferSize{50};
 
 // Name of the output data file
-const char* fileName{"FT01"};
+const char* fileName{"FT02"};
 
 bool writeToBinary{false};
 bool overwriteExistingFile{false};
@@ -69,7 +69,7 @@ void setup() {
     }
 
     #if SIM_MODE
-    poller.init("/sim_profile.csv");
+    poller.init("prof.csv");
     #else
     poller.init();
     #endif
@@ -126,6 +126,7 @@ void loop() {
         poller.readPressureSensors(pressures, temperatures);
 
         controlExperiment(ambient, pressures, temperatures);
+
 
         logger.pushData(currentRead, ambient, pressures, temperatures);
     }
