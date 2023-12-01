@@ -86,8 +86,7 @@ void setup() {
 }
 
 
-void updateStateLogicMembers() {
-  float vector[5] = {0};
+void updateStateLogicMembers(float *vector) {
   int ret = poller.readVector(vector, millis());
   if (!ret) return;
   Serial.print("State{");
@@ -104,8 +103,9 @@ void updateStateLogicMembers() {
 
 
 void loop() {
+  float vector[5] = {0};
   pinController.Run();
-  updateStateLogicMembers();
+  updateStateLogicMembers(vector);
   float pressures[5];
   float temperatures[5];
   // switch(stateLogic.flightState) {
@@ -124,5 +124,5 @@ void loop() {
   //     pinController.closeVentValve();
   // }
 
-  logger.pushData(1.0f, 0.0, 0.0, 0.0);
+  logger.pushData(1.0f, vector, pressures, temperatures);
 }

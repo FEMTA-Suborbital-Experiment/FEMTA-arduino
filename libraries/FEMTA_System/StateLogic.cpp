@@ -123,9 +123,9 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
     newPtr += 1;
 
     // Read pressures into buffers
-    lowPBuffer[lowPPtr] = lowPressure;
+    lowPBuffer[lowPPtr % BUFF_SIZE] = lowPressure;
     lowPPtr += 1;
-    hiPBuffer[hiPPtr] = highPressure;
+    hiPBuffer[hiPPtr % BUFF_SIZE] = highPressure;
     hiPPtr += 1;
 
     // Compute moving average for pressures
@@ -154,6 +154,15 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
         newAccelStdDev += newAccelBuffer[i] - newAccelAverage;
     }
 
+    // DURING FLIGHT: Set to 0 to use accel only (probably more reliable)
+    // Baro may trip state changes early
+    int useBaro = 1;
+    float baroReading = lowPressureAverage;
+    if (baroReading < 0.2) {
+        // HSCM is likely out of calibration range, switch to PVC
+        baroReading = highPressureAverage;
+    }
+
     //buffer logic, references code once buffers are populated
     // printf("Data at %ld: %.3f %.3f, %.3f %.3f\n", time_millis, newAccelAverage, oldAccelAverage, newAccelStdDev, oldAccelStdDev);
     if(time_millis > 4000){
@@ -161,9 +170,9 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
             this->spikeFlag = true;
         }
 
-        if (this->prevFlightState == FLIGHT_STATE_PRELIFTOFF &&
-            ((newAccelAverage-oldAccelAverage)) > (tALiftoff)
-            /* && PRESSURE */
+        if ((this->prevFlightState == FLIGHT_STATE_PRELIFTOFF &&
+            ((newAccelAverage-oldAccelAverage)) > (tALiftoff))
+            || (useBaro && lowPressureAverage < 14.2)
         ) {
             // Entered Liftoff
             this->prevFlightState = this->flightState;
@@ -172,16 +181,17 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
         }
         //include timeSinceLaunch FIX THIS
         // Absolute time threshold since launch should also be considered
-        else if ((this->flightState <= FLIGHT_STATE_LIFTOFF && newAccelAverage < 1)
-            || this->flightState == FLIGHT_STATE_LIFTOFF && (time_millis - this->timeOfLaunch) >= liftoffBreaker
-                /* && PRESSURE */
+        else if (((this->flightState <= FLIGHT_STATE_LIFTOFF && newAccelAverage < 1)
+            || this->flightState == FLIGHT_STATE_LIFTOFF && (time_millis - this->timeOfLaunch) >= liftoffBreaker)
+            || (useBaro && highPressureAverage < 1.0)
             ) {
             // Entered MECO
             this->timeOfMECO = time_millis;
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_MECO; // MECO
         }
-        else if (this->flightState == FLIGHT_STATE_MECO && this->timeSinceMECO >= mecoDelay) {
+        else if ((this->flightState == FLIGHT_STATE_MECO && this->timeSinceMECO >= mecoDelay)
+            ) {
             // Entered operational state
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_EXP_STARTED; // Start experiment / running
@@ -191,12 +201,16 @@ int StateLogic::determineFlightState(unsigned long time_millis, float sensorArra
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_EXP_DONE; // Stopped experiment
         }
-        else if (this->flightState >= FLIGHT_STATE_EXP_STARTED && this->flightState < FLIGHT_STATE_DESCENDING && newAccelAverage > 8.0) {
+        else if ((this->flightState >= FLIGHT_STATE_EXP_STARTED && this->flightState < FLIGHT_STATE_DESCENDING && newAccelAverage > 8.0)
+            || (useBaro && highPressureAverage > 5.0)
+            ) {
             // Started descent
             this->prevFlightState = this->flightState;
             this->flightState = FLIGHT_STATE_DESCENDING; // Started descent
         }
-        else if (this->flightState >= FLIGHT_STATE_DESCENDING && this->spikeFlag && (7 <= newAccelAverage) && (newAccelAverage <= 12)) {
+        else if ((this->flightState >= FLIGHT_STATE_DESCENDING && this->spikeFlag && (7 <= newAccelAverage) && (newAccelAverage <= 12))
+            || (useBaro && lowPressureAverage > 14.5)
+            ) {
             // Detect landing (drop in noise)
             this->spikeFlag = false;
             this->prevFlightState = this->flightState;

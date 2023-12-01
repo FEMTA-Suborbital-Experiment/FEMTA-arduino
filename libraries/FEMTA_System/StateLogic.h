@@ -54,7 +54,7 @@ class StateLogic
         float lowPBuffer[BUFF_SIZE] = {0};
         float hiPBuffer[BUFF_SIZE] = {0};
         int hiPPtr = 0;
-        int hiPPtr = 0;
+        int lowPPtr = 0;
 
         typedef struct {
             int current_state;
