@@ -28,12 +28,15 @@ void SensorPoller::init() {
     pinMode(PIN_DPT_SELECTOR_1, OUTPUT);
     pinMode(PIN_DPT_SELECTOR_2, OUTPUT);
 
-    if (!this->accel.begin()) {
-        /* There was a problem detecting the ADXL345 ... check your connections */
-        Serial.println("No LSM303 detected! Fatal error - cannot continue.");
-        this->accelGood = false;
-        // while (1) { delay(1000); }; // Hang indefinitely
-    }
+    // TODO: Initialize two IMUs similarly to how we initialize barometers with demuxer
+
+    // if (!this->accel.begin()) {
+    //     /* There was a problem detecting the ADXL345 ... check your connections */
+    //     Serial.println("No LSM303 detected! Fatal error - cannot continue.");
+    //     this->accelGood = false;
+    //     // while (1) { delay(1000); }; // Hang indefinitely
+    // }
+
     this->initPressureSensors();
     this->accel.setRange(LSM303_RANGE_8G);
     this->accel.setMode(LSM303_MODE_NORMAL);
@@ -123,7 +126,10 @@ void SensorPoller::readFlowMeter(float *flow) {
     if (!this->flowGood) return;
     int ret = SLF3X.readSample();
     if (ret == 0) {
-        *flow = SLF3X.getFlow(); 
+        flow[0] = SLF3X.getFlow(); 
+        flow[1] = SLF3X.getTemp(); 
+        flow[2] = SLF3X.isAirInLineDetected(); 
+        flow[3] = SLF3X.isHighFlowDetected(); 
     } else {
         Serial.print("Error reading sample from SLF3X flow sensor: ");
         Serial.println(ret);
