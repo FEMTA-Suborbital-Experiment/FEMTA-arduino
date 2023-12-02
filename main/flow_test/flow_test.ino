@@ -11,7 +11,7 @@
  * a simulation mode for offline testing. 
  * 
  */// Set to 1 for simulated sensor inputs
-#define SIM_MODE 1
+#define SIM_MODE 0
 
 #include "PinCtrl.h"
 #include "Logger.h"
@@ -35,7 +35,7 @@ const int signalPin{13};
 const int bufferSize{50};
 
 // Name of the output data file
-const char* fileName{"FT02"};
+const char* fileName{"FT21"};
 
 bool writeToBinary{false};
 bool overwriteExistingFile{false};
@@ -53,20 +53,28 @@ SensorPoller poller;
 #endif
 
 unsigned long lastRead{0};
+unsigned long startTime{0};
 
 void setup() {
+    Serial.println("Initializing pin controller");
     if (pinController.init() != 0) {
         Serial.println("Something went wrong with initializing the pin controller. Exiting...");
         exit(1);
     }
+
+    Serial.println("Initializing logger");
     if (logger.init() != 0) {
         Serial.println("Something went wrong with initializing the logger. Exiting...");
         exit(1);
     }
+
+    Serial.println("Initializing writer");
     if (writer.init() != 0) {
         Serial.println("Something went wrong with initializing the writer. Exiting...");
         exit(1);
     }
+
+    Serial.println("Initializing sensor poller");
 
     #if SIM_MODE
     poller.init("prof.csv");
@@ -74,6 +82,7 @@ void setup() {
     poller.init();
     #endif
     unsigned long lastRead = millis();
+    unsigned long startTime = millis();
 }
 
 /**
@@ -86,7 +95,8 @@ void setup() {
  * @param pressures 
  * @param temperatures 
  */
-void controlExperiment(float *ambient, float *pressures, float *temperatures) {
+void controlExperiment(float *ambient, float *pressures, float *temperatures, float *flow) {
+    Serial.println("");
     Serial.print("Ambient State: [ ");
     for (int i = 0; i < 5; ++i) {
         Serial.print(String(ambient[i]));
@@ -110,6 +120,14 @@ void controlExperiment(float *ambient, float *pressures, float *temperatures) {
             Serial.print(", ");
     }
     Serial.println("]");
+
+    Serial.print("Flow State: [ ");
+    for (int i = 0; i < 4; ++i) {
+        Serial.print(String(flow[i]));
+        if (i < 3)
+            Serial.print(", ");
+    }
+    Serial.println("]");
 }
 
 void loop() {
@@ -118,17 +136,27 @@ void loop() {
     if ((currentRead - lastRead) > (1000.0 / poller.pollRate)) {
         lastRead = currentRead;
         
+        float flow[4] = {0};
         float ambient[5] = {0};
         float pressures[5] = {0};
         float temperatures[5] = {0};
         
         poller.readVector(ambient, currentRead);
         poller.readPressureSensors(pressures, temperatures);
+        poller.readFlowMeter(flow);
 
-        controlExperiment(ambient, pressures, temperatures);
+        controlExperiment(ambient, pressures, temperatures, flow);
 
 
-        logger.pushData(currentRead, ambient, pressures, temperatures);
+        logger.pushData(currentRead - startTime, ambient, pressures, temperatures, flow);
+        Serial.print("Flow rate1: ");
+        Serial.print(flow[0]);
+        Serial.print(" Flow rate2: ");
+        Serial.println(logger.logData.flowRate[0]);
+        Serial.print("Flow temp1: ");
+        Serial.print(flow[1]);
+        Serial.print(" Flow temp2: ");
+        Serial.println(logger.logData.flowTemperature[0]);
     }
 
     if (logger.isStructFilled()) {
