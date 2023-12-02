@@ -15,6 +15,11 @@ clear; clc; close all;
 %set(groot, 'defaulttextinterpreter', 'latex')
 %set(groot,'defaultLegendInterpreter','latex');
 
+%% PARAMETERS
+
+% TODO: Clarify variance of PVC4000 from datasheet.
+pvc_var = 100;
+
 %% INITIALIZATIONS
 
 pa_to_torr = 1/133.322368;
@@ -114,7 +119,7 @@ hscm_pressure = hscm_pressure * atmosphere / max(hscm_pressure);
 
 %% PVC PROFILE
 
-w = randn(size(pressure)) * 2000;
+w = randn(size(pressure)) * pvc_var;
 
 mtorr_pressure = pressure*pa_to_torr*torr_to_mtorr;
 mtorr_max_i = find(mtorr_pressure - 10000 < 0.1);
@@ -127,6 +132,7 @@ mtorr_pressure(end-mtorr_max_i(1):end) = 760000;
 mtorr_pressure(mtorr_min_i(1):mtorr_min_i(end)) = 1e-1;
 
 pvc_pressure = mtorr_pressure + w;
+pvc_pressure(pvc_pressure < 0) = 1e-1;
 
 %% WRITE TO FILE
 
