@@ -92,6 +92,8 @@ void Logger::flushArrays() {
     logData.temperature2.clear();
     logData.temperature3.clear();
     logData.temperature4.clear();
+
+    logData.flowRate.clear();
 }
 
 /**
@@ -103,7 +105,7 @@ void Logger::flushArrays() {
  * @param hp 
  * @param a 
  */
-void Logger::pushData(float t, float *vec, float *pres, float *temps) {    
+void Logger::pushData(float t, float *vec, float *pres, float *temps, float *flow) {    
     logData.time.push_back(t);
     logData.accelerationX.push_back(vec[0]);
     logData.accelerationY.push_back(vec[1]);
@@ -122,6 +124,11 @@ void Logger::pushData(float t, float *vec, float *pres, float *temps) {
     logData.temperature2.push_back(temps[2]);
     logData.temperature3.push_back(temps[3]);
     logData.temperature4.push_back(temps[4]);
+
+    logData.flowRate.push_back(flow[0]);
+    logData.flowTemperature.push_back(flow[1]);
+    logData.airInLine.push_back(flow[2]);
+    logData.highFlow.push_back(flow[3]);
 }
 
 

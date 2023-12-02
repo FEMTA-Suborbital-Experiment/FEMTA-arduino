@@ -147,6 +147,11 @@ int Writer::writeToBinary(logType data) {
     logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature2[0]), sizeof(float)*data.temperature2.size());
     logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature3[0]), sizeof(float)*data.temperature3.size());
     logFile.write(reinterpret_cast<const uint8_t*>(&data.temperature4[0]), sizeof(float)*data.temperature4.size());
+
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.flowRate[0]), sizeof(float)*data.flowRate.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.flowTemperature[0]), sizeof(float)*data.flowTemperature.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.airInLine[0]), sizeof(float)*data.airInLine.size());
+    logFile.write(reinterpret_cast<const uint8_t*>(&data.highFlow[0]), sizeof(float)*data.highFlow.size());
     
     logFile.close();
     logSize.close();
@@ -183,7 +188,11 @@ int Writer::writeToText(logType data) {
             + String(data.temperature1[i]) + s
             + String(data.temperature2[i]) + s
             + String(data.temperature3[i]) + s
-            + String(data.temperature4[i]) + '\n'
+            + String(data.temperature4[i]) + s
+            + String(data.flowRate[i]) + s
+            + String(data.flowTemperature[i]) + s
+            + String(data.airInLine[i]) + s
+            + String(data.highFlow[i]) + '\n'
         );
     }
 

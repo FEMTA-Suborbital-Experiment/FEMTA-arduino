@@ -33,7 +33,7 @@ class Logger{
     public:
         Logger(int arraySize);
         int init();
-        void pushData(float time, float* ambient, float *pressures, float *temperatures);
+        void pushData(float time, float* ambient, float *pressures, float *temperatures, float *flow);
         void flushArrays();
         bool isStructFilled();
     

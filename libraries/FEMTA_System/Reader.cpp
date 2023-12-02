@@ -106,6 +106,11 @@ logType Reader::readVector() {
     out.temperature2.resize(vector_size);
     out.temperature3.resize(vector_size);
     out.temperature4.resize(vector_size);
+
+    out.flowRate.resize(vector_size);
+    out.flowTemperature.resize(vector_size);
+    out.airInLine.resize(vector_size);
+    out.highFlow.resize(vector_size);
     
     // TODO: Find a better implementation which directly reads the file contents to the buffer
     for (int i=0; i < vector_size / mBufferSize; ++i) {
@@ -128,6 +133,11 @@ logType Reader::readVector() {
         mFile.read(reinterpret_cast<uint8_t*>(&out.temperature2[i*mBufferSize]), sizeof(float)*mBufferSize);
         mFile.read(reinterpret_cast<uint8_t*>(&out.temperature3[i*mBufferSize]), sizeof(float)*mBufferSize);
         mFile.read(reinterpret_cast<uint8_t*>(&out.temperature4[i*mBufferSize]), sizeof(float)*mBufferSize);
+
+        mFile.read(reinterpret_cast<uint8_t*>(&out.flowRate[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.flowTemperature[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.airInLine[i*mBufferSize]), sizeof(float)*mBufferSize);
+        mFile.read(reinterpret_cast<uint8_t*>(&out.highFlow[i*mBufferSize]), sizeof(float)*mBufferSize);
     }
 
     return out;

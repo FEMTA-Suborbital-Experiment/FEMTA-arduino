@@ -27,6 +27,11 @@ typedef struct {
     AtmosphericVector<float> temperature2;
     AtmosphericVector<float> temperature3;
     AtmosphericVector<float> temperature4;
+
+    AtmosphericVector<float> flowRate;
+    AtmosphericVector<float> flowTemperature;
+    AtmosphericVector<float> airInLine;
+    AtmosphericVector<float> highFlow;
 } logType;
 
 #endif
