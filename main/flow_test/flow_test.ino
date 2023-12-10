@@ -132,32 +132,28 @@ void controlExperiment(float *ambient, float *pressures, float *temperatures, fl
 
 void loop() {
     pinController.Run();
-    unsigned long currentRead = millis();
-    if ((currentRead - lastRead) > (1000.0 / poller.pollRate)) {
-        lastRead = currentRead;
+    currentRead = millis();
+//    if ((currentRead - lastRead) > (1000.0 / poller.pollRate)) {
+//        lastRead = currentRead;
         
         float flow[4] = {0};
         float ambient[5] = {0};
         float pressures[5] = {0};
         float temperatures[5] = {0};
         
-        poller.readVector(ambient, currentRead);
-        poller.readPressureSensors(pressures, temperatures);
-        poller.readFlowMeter(flow);
+        // FIXME: Poller not reading HSCM
+        int ret = poller.readVector(ambient, currentRead);
+        if (ret == 1) {
+            poller.readPressureSensors(pressures, temperatures);
+            poller.readFlowMeter(flow);
 
-        controlExperiment(ambient, pressures, temperatures, flow);
+            Serial.println("Read data");
+            controlExperiment(ambient, pressures, temperatures, flow);
+        }
 
-
+        // FIXME: Flow data not being pushed into logger.
         logger.pushData(currentRead - startTime, ambient, pressures, temperatures, flow);
-        Serial.print("Flow rate1: ");
-        Serial.print(flow[0]);
-        Serial.print(" Flow rate2: ");
-        Serial.println(logger.logData.flowRate[0]);
-        Serial.print("Flow temp1: ");
-        Serial.print(flow[1]);
-        Serial.print(" Flow temp2: ");
-        Serial.println(logger.logData.flowTemperature[0]);
-    }
+//    }
 
     if (logger.isStructFilled()) {
         writer.writeToFile(logger.logData);
