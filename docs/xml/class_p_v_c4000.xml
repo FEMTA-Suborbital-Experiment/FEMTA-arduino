@@ -1,0 +1,958 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_v_c4000" kind="class" language="C++" prot="public">
+    <compoundname>PVC4000</compoundname>
+    <includes refid="_p_v_c4000_8h" local="no">PVC4000.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_p_v_c4000_1aa002f1e10d5c829d89d2c69762674226" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::I2C_address</definition>
+        <argsstring></argsstring>
+        <name>I2C_address</name>
+        <qualifiedname>PVC4000::I2C_address</qualifiedname>
+        <initializer>{0x50}</initializer>
+        <briefdescription>
+<para>The I2C address of the <ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref> and PVC4100 models. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="35" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1afc394daf589265fadceb3fa2c2df2c90" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Cal_Data_R</definition>
+        <argsstring></argsstring>
+        <name>Cal_Data_R</name>
+        <qualifiedname>PVC4000::Cal_Data_R</qualifiedname>
+        <initializer>{0x00}</initializer>
+        <briefdescription>
+<para>Collection of read commands from PVC I2C - Application Note Page 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="36" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a65ca2af2e69bd3fca7d11fffcb0184db" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Raw_Data_R</definition>
+        <argsstring></argsstring>
+        <name>Raw_Data_R</name>
+        <qualifiedname>PVC4000::Raw_Data_R</qualifiedname>
+        <initializer>{0xD0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="37" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a14cac417f8d03115c9eb0caf552171d2" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Reg1_R</definition>
+        <argsstring></argsstring>
+        <name>Reg1_R</name>
+        <qualifiedname>PVC4000::Reg1_R</qualifiedname>
+        <initializer>{0xD3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="38" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ad9720be571b67edf411edf6fe7137c7b" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Reg2_R</definition>
+        <argsstring></argsstring>
+        <name>Reg2_R</name>
+        <qualifiedname>PVC4000::Reg2_R</qualifiedname>
+        <initializer>{0xD4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="39" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ace53d88e9ad3640f473cc45f3dbdf92a" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Cal_Tbl_X_R</definition>
+        <argsstring></argsstring>
+        <name>Cal_Tbl_X_R</name>
+        <qualifiedname>PVC4000::Cal_Tbl_X_R</qualifiedname>
+        <initializer>{0xD1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="40" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a757301ea5e2a32971b26ddf761c76dee" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Cal_Tbl_Y_R</definition>
+        <argsstring></argsstring>
+        <name>Cal_Tbl_Y_R</name>
+        <qualifiedname>PVC4000::Cal_Tbl_Y_R</qualifiedname>
+        <initializer>{0xD2}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="41" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ad3361f715b1a6ec2dc474c2be9ea4b0a" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::In_W</definition>
+        <argsstring></argsstring>
+        <name>In_W</name>
+        <qualifiedname>PVC4000::In_W</qualifiedname>
+        <initializer>{0xF0}</initializer>
+        <briefdescription>
+<para>Collection of write commands from PVC I2C - Application Note Page 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="43" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ad710173175d422d2d4888e6d4cfd6c39" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Out_W</definition>
+        <argsstring></argsstring>
+        <name>Out_W</name>
+        <qualifiedname>PVC4000::Out_W</qualifiedname>
+        <initializer>{0xF1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="44" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1aeaec099a27dbf7265ab8f3577408ae0e" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Reg1_W</definition>
+        <argsstring></argsstring>
+        <name>Reg1_W</name>
+        <qualifiedname>PVC4000::Reg1_W</qualifiedname>
+        <initializer>{0xE2}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="45" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a3b491c05b3fa1aa22a1c767dfb5bda6a" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Reg2_W</definition>
+        <argsstring></argsstring>
+        <name>Reg2_W</name>
+        <qualifiedname>PVC4000::Reg2_W</qualifiedname>
+        <initializer>{0xE3}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="46" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1aaac219c3aa3ff740d2f8d5f23db12bba" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Cal_Tbl_X_W</definition>
+        <argsstring></argsstring>
+        <name>Cal_Tbl_X_W</name>
+        <qualifiedname>PVC4000::Cal_Tbl_X_W</qualifiedname>
+        <initializer>{0xE4}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="47" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a0a492356697162e746c0736c87e75f22" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::Cal_Tbl_Y_W</definition>
+        <argsstring></argsstring>
+        <name>Cal_Tbl_Y_W</name>
+        <qualifiedname>PVC4000::Cal_Tbl_Y_W</qualifiedname>
+        <initializer>{0xE5}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="48" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1aa390523e5a43c8aad6c027ba493937ba" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::model_1</definition>
+        <argsstring></argsstring>
+        <name>model_1</name>
+        <qualifiedname>PVC4000::model_1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="50" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a0ff8830cf4d6004624bcb9e87b6011b7" prot="public" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::model_2</definition>
+        <argsstring></argsstring>
+        <name>model_2</name>
+        <qualifiedname>PVC4000::model_2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="51" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::m_i2cAddress</definition>
+        <argsstring></argsstring>
+        <name>m_i2cAddress</name>
+        <qualifiedname>PVC4000::m_i2cAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="53" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_v_c4000_1abb2beb0495ed0f4845d613d26b84ebfb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PVC4000::_baselineTemperature</definition>
+        <argsstring></argsstring>
+        <name>_baselineTemperature</name>
+        <qualifiedname>PVC4000::_baselineTemperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="88" column="15" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a26a6b101a4b345665483edb0d023d0d2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PVC4000::_temperature</definition>
+        <argsstring></argsstring>
+        <name>_temperature</name>
+        <qualifiedname>PVC4000::_temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="89" column="15" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ad1d79ab49231e06f8c63887086032582" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PVC4000::_pressure</definition>
+        <argsstring></argsstring>
+        <name>_pressure</name>
+        <qualifiedname>PVC4000::_pressure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="90" column="15" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a94141e583a2d41bc0cde3c2debd96cbe" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::t_upper</definition>
+        <argsstring></argsstring>
+        <name>t_upper</name>
+        <qualifiedname>PVC4000::t_upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="92" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a8a3128965b54f801e74673f1867f2ec8" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::bt_upper</definition>
+        <argsstring></argsstring>
+        <name>bt_upper</name>
+        <qualifiedname>PVC4000::bt_upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="93" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a3ed781be70998ece5897924364b84d07" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::raw_upper</definition>
+        <argsstring></argsstring>
+        <name>raw_upper</name>
+        <qualifiedname>PVC4000::raw_upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="94" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ad372c66786b2d056dec470940925d928" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::t_lower</definition>
+        <argsstring></argsstring>
+        <name>t_lower</name>
+        <qualifiedname>PVC4000::t_lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="95" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1afc9e7b87469095965429e6a551aa5a52" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::bt_lower</definition>
+        <argsstring></argsstring>
+        <name>bt_lower</name>
+        <qualifiedname>PVC4000::bt_lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="96" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1abe79222ed93636ed18fc8f8d85f26d1a" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::raw_lower</definition>
+        <argsstring></argsstring>
+        <name>raw_lower</name>
+        <qualifiedname>PVC4000::raw_lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="97" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a5e9c5241791752c700ed422517734fd5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PVC4000::coeff</definition>
+        <argsstring></argsstring>
+        <name>coeff</name>
+        <qualifiedname>PVC4000::coeff</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="99" column="15" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ac7210610540b377b360bcf2ce024128f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PVC4000::firstCalibration</definition>
+        <argsstring></argsstring>
+        <name>firstCalibration</name>
+        <qualifiedname>PVC4000::firstCalibration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="101" column="14" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a96a8df0ae8ab6633d01a8b7aa884ef10" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::interpolationTableX[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>interpolationTableX</name>
+        <qualifiedname>PVC4000::interpolationTableX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="106" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a585db47d1e8692e1dc441764392bb454" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::interpolationTableY[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>interpolationTableY</name>
+        <qualifiedname>PVC4000::interpolationTableY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="107" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1ab323ce3fc497f7c8adbc0cd9ab90b4fa" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::calibrationTableX[15]</definition>
+        <argsstring>[15]</argsstring>
+        <name>calibrationTableX</name>
+        <qualifiedname>PVC4000::calibrationTableX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="109" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a5f62cd8fa4f88cd2498a4661a7481e0f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t PVC4000::calibrationTableY[15]</definition>
+        <argsstring>[15]</argsstring>
+        <name>calibrationTableY</name>
+        <qualifiedname>PVC4000::calibrationTableY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="110" column="18" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_p_v_c4000_1ae28cab4248c83e84b22671594ad3d643" prot="private" static="yes" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t PVC4000::baseSensitivityTableX</definition>
+        <argsstring>[8]</argsstring>
+        <name>baseSensitivityTableX</name>
+        <qualifiedname>PVC4000::baseSensitivityTableX</qualifiedname>
+        <initializer>= {
+    0, 144, 185, 329, 684, 1344, 2745, 5841
+}</initializer>
+        <briefdescription>
+<para>Columns of the sensitivity table which maps a count to a pressure when reading above 10,000 counts. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="103" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_v_c4000_1a7c88f8935e004eb3ad3dc8c912e3d251" prot="private" static="yes" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t PVC4000::baseSensitivityTableY</definition>
+        <argsstring>[8]</argsstring>
+        <name>baseSensitivityTableY</name>
+        <qualifiedname>PVC4000::baseSensitivityTableY</qualifiedname>
+        <initializer>= {
+    760000, 413000, 300000, 200000, 100000, 50000, 25000, 10000
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="104" column="31" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="71" bodyend="73"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_v_c4000_1ab31a08063d6c570167391800d86bef11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PVC4000::PVC4000</definition>
+        <argsstring>(int address)</argsstring>
+        <name>PVC4000</name>
+        <qualifiedname>PVC4000::PVC4000</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Construct a <ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref> class using an I2C address, if necessary. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="54" column="9" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="85" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1ac122759c1e4e377d672d54b661635509" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PVC4000::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <qualifiedname>PVC4000::read</qualifiedname>
+        <briefdescription>
+<para>Update the pressure and temperature values and return the status based on the raw values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="56" column="13" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="242" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::calibrate</definition>
+        <argsstring>()</argsstring>
+        <name>calibrate</name>
+        <qualifiedname>PVC4000::calibrate</qualifiedname>
+        <briefdescription>
+<para>Poll the sensor for new pressure and temperature readings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="57" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="198" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>PVC4000::init</qualifiedname>
+        <briefdescription>
+<para>Initialize the <ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="58" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a52012201d7a9199558053865c9eadac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PVC4000::baselineTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>baselineTemperature</name>
+        <qualifiedname>PVC4000::baselineTemperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="60" column="15" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PVC4000::temperature</definition>
+        <argsstring>()</argsstring>
+        <name>temperature</name>
+        <qualifiedname>PVC4000::temperature</qualifiedname>
+        <briefdescription>
+<para>Obtain the temperature from the last read command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="61" column="15" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PVC4000::pressure</definition>
+        <argsstring>()</argsstring>
+        <name>pressure</name>
+        <qualifiedname>PVC4000::pressure</qualifiedname>
+        <briefdescription>
+<para>Obtain the pressure from the last read command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="62" column="15" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1ab422024da4c792301181f537f066d7a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::get_raw_upper</definition>
+        <argsstring>()</argsstring>
+        <name>get_raw_upper</name>
+        <qualifiedname>PVC4000::get_raw_upper</qualifiedname>
+        <briefdescription>
+<para>Return a raw count corresponding to the most significant byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint16_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="64" column="18" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::get_raw_lower</definition>
+        <argsstring>()</argsstring>
+        <name>get_raw_lower</name>
+        <qualifiedname>PVC4000::get_raw_lower</qualifiedname>
+        <briefdescription>
+<para>Return a raw count corresponding to the least significant byte. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint16_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="65" column="18" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="140" bodyend="142"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_p_v_c4000_1a688bea91e8d3a0c09b82e831dd68aad6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PVC4000::CRC</definition>
+        <argsstring>(uint16_t checksum, uint16_t sum)</argsstring>
+        <name>CRC</name>
+        <qualifiedname>PVC4000::CRC</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>checksum</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>sum</declname>
+        </param>
+        <briefdescription>
+<para>Perform a checksum and check if the returned values are valid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checksum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="69" column="13" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="259" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1af8e2ed07eb57520a559c2457853fa1d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::readCalibrationTableX</definition>
+        <argsstring>()</argsstring>
+        <name>readCalibrationTableX</name>
+        <qualifiedname>PVC4000::readCalibrationTableX</qualifiedname>
+        <briefdescription>
+<para>Read the sensor&apos;s calibration table and store it in the class X table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="71" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="311" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a584bfff9e57097a30d2e3b8d56e37122" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::readCalibrationTableY</definition>
+        <argsstring>()</argsstring>
+        <name>readCalibrationTableY</name>
+        <qualifiedname>PVC4000::readCalibrationTableY</qualifiedname>
+        <briefdescription>
+<para>Read the sensor&apos;s calibration table and store it in the class Y table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="72" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="325" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1ac0ad58f87843584aa02315e7bb85f02f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::writeCalibrationTableX</definition>
+        <argsstring>()</argsstring>
+        <name>writeCalibrationTableX</name>
+        <qualifiedname>PVC4000::writeCalibrationTableX</qualifiedname>
+        <briefdescription>
+<para>Write to the sensor&apos;s calibration X table using the class calibration X table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="73" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="339" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1acda0452008c2120154d5b8ec8e67f849" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::writeCalibrationTableY</definition>
+        <argsstring>()</argsstring>
+        <name>writeCalibrationTableY</name>
+        <qualifiedname>PVC4000::writeCalibrationTableY</qualifiedname>
+        <briefdescription>
+<para>Write to the sensor&apos;s calibration Y table using the class calibration Y table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="74" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="354" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a079cc72fb407dd358801219227137bcb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::enterWriteMode</definition>
+        <argsstring>()</argsstring>
+        <name>enterWriteMode</name>
+        <qualifiedname>PVC4000::enterWriteMode</qualifiedname>
+        <briefdescription>
+<para>Enter write mode for the PVC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="76" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="367" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a7718a1be2ba53c158ecf9e05a7c34099" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::exitWriteMode</definition>
+        <argsstring>()</argsstring>
+        <name>exitWriteMode</name>
+        <qualifiedname>PVC4000::exitWriteMode</qualifiedname>
+        <briefdescription>
+<para>Leave write mode for the PVC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="77" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="375" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a2218bae87a9d2ccc801e43254bb2e722" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t PVC4000::writeCalibrationTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>writeCalibrationTemperature</name>
+        <qualifiedname>PVC4000::writeCalibrationTemperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="79" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a2d5deeb173269a3e674ff76824dbab31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PVC4000::getBaselineTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>getBaselineTemperature</name>
+        <qualifiedname>PVC4000::getBaselineTemperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="80" column="13" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="169" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1af23b9fef5045f25d1194866641bae7d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PVC4000::write</definition>
+        <argsstring>(uint16_t data)</argsstring>
+        <name>write</name>
+        <qualifiedname>PVC4000::write</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Write new data to the PVC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="82" column="14" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="383" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a5db391b20818d88ca10ea3eb43a280ab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PVC4000::interpolate</definition>
+        <argsstring>(uint16_t x)</argsstring>
+        <name>interpolate</name>
+        <qualifiedname>PVC4000::interpolate</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Interpolate using the interpolation table and sensitivity table to obtain an ambient pressure which attempts to account for convection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="84" column="15" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="152" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_v_c4000_1a0a86de48853d7bef1e674c1e93006903" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int PVC4000::readRaw</definition>
+        <argsstring>()</argsstring>
+        <name>readRaw</name>
+        <qualifiedname>PVC4000::readRaw</qualifiedname>
+        <briefdescription>
+<para>Obtain the raw pressure and temperature values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/PVC4000/PVC4000.h" line="86" column="13" bodyfile="libraries/PVC4000/PVC4000.cpp" bodystart="275" bodyend="304"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref> class for the <ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref> or PVC4100 MEMs transducers. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/PVC4000/PVC4000.h" line="32" column="1" bodyfile="libraries/PVC4000/PVC4000.h" bodystart="32" bodyend="111"/>
+    <listofallmembers>
+      <member refid="class_p_v_c4000_1abb2beb0495ed0f4845d613d26b84ebfb" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>_baselineTemperature</name></member>
+      <member refid="class_p_v_c4000_1ad1d79ab49231e06f8c63887086032582" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>_pressure</name></member>
+      <member refid="class_p_v_c4000_1a26a6b101a4b345665483edb0d023d0d2" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>_temperature</name></member>
+      <member refid="class_p_v_c4000_1a52012201d7a9199558053865c9eadac8" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>baselineTemperature</name></member>
+      <member refid="class_p_v_c4000_1ae28cab4248c83e84b22671594ad3d643" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>baseSensitivityTableX</name></member>
+      <member refid="class_p_v_c4000_1a7c88f8935e004eb3ad3dc8c912e3d251" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>baseSensitivityTableY</name></member>
+      <member refid="class_p_v_c4000_1afc9e7b87469095965429e6a551aa5a52" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>bt_lower</name></member>
+      <member refid="class_p_v_c4000_1a8a3128965b54f801e74673f1867f2ec8" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>bt_upper</name></member>
+      <member refid="class_p_v_c4000_1afc394daf589265fadceb3fa2c2df2c90" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Cal_Data_R</name></member>
+      <member refid="class_p_v_c4000_1ace53d88e9ad3640f473cc45f3dbdf92a" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Cal_Tbl_X_R</name></member>
+      <member refid="class_p_v_c4000_1aaac219c3aa3ff740d2f8d5f23db12bba" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Cal_Tbl_X_W</name></member>
+      <member refid="class_p_v_c4000_1a757301ea5e2a32971b26ddf761c76dee" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Cal_Tbl_Y_R</name></member>
+      <member refid="class_p_v_c4000_1a0a492356697162e746c0736c87e75f22" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Cal_Tbl_Y_W</name></member>
+      <member refid="class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>calibrate</name></member>
+      <member refid="class_p_v_c4000_1ab323ce3fc497f7c8adbc0cd9ab90b4fa" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>calibrationTableX</name></member>
+      <member refid="class_p_v_c4000_1a5f62cd8fa4f88cd2498a4661a7481e0f" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>calibrationTableY</name></member>
+      <member refid="class_p_v_c4000_1a5e9c5241791752c700ed422517734fd5" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>coeff</name></member>
+      <member refid="class_p_v_c4000_1a688bea91e8d3a0c09b82e831dd68aad6" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>CRC</name></member>
+      <member refid="class_p_v_c4000_1a079cc72fb407dd358801219227137bcb" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>enterWriteMode</name></member>
+      <member refid="class_p_v_c4000_1a7718a1be2ba53c158ecf9e05a7c34099" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>exitWriteMode</name></member>
+      <member refid="class_p_v_c4000_1ac7210610540b377b360bcf2ce024128f" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>firstCalibration</name></member>
+      <member refid="class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>get_raw_lower</name></member>
+      <member refid="class_p_v_c4000_1ab422024da4c792301181f537f066d7a4" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>get_raw_upper</name></member>
+      <member refid="class_p_v_c4000_1a2d5deeb173269a3e674ff76824dbab31" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>getBaselineTemperature</name></member>
+      <member refid="class_p_v_c4000_1aa002f1e10d5c829d89d2c69762674226" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>I2C_address</name></member>
+      <member refid="class_p_v_c4000_1ad3361f715b1a6ec2dc474c2be9ea4b0a" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>In_W</name></member>
+      <member refid="class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>init</name></member>
+      <member refid="class_p_v_c4000_1a5db391b20818d88ca10ea3eb43a280ab" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>interpolate</name></member>
+      <member refid="class_p_v_c4000_1a96a8df0ae8ab6633d01a8b7aa884ef10" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>interpolationTableX</name></member>
+      <member refid="class_p_v_c4000_1a585db47d1e8692e1dc441764392bb454" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>interpolationTableY</name></member>
+      <member refid="class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>m_i2cAddress</name></member>
+      <member refid="class_p_v_c4000_1aa390523e5a43c8aad6c027ba493937ba" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>model_1</name></member>
+      <member refid="class_p_v_c4000_1a0ff8830cf4d6004624bcb9e87b6011b7" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>model_2</name></member>
+      <member refid="class_p_v_c4000_1ad710173175d422d2d4888e6d4cfd6c39" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Out_W</name></member>
+      <member refid="class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>pressure</name></member>
+      <member refid="class_p_v_c4000_1ab31a08063d6c570167391800d86bef11" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>PVC4000</name></member>
+      <member refid="class_p_v_c4000_1a65ca2af2e69bd3fca7d11fffcb0184db" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Raw_Data_R</name></member>
+      <member refid="class_p_v_c4000_1abe79222ed93636ed18fc8f8d85f26d1a" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>raw_lower</name></member>
+      <member refid="class_p_v_c4000_1a3ed781be70998ece5897924364b84d07" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>raw_upper</name></member>
+      <member refid="class_p_v_c4000_1ac122759c1e4e377d672d54b661635509" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>read</name></member>
+      <member refid="class_p_v_c4000_1af8e2ed07eb57520a559c2457853fa1d2" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>readCalibrationTableX</name></member>
+      <member refid="class_p_v_c4000_1a584bfff9e57097a30d2e3b8d56e37122" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>readCalibrationTableY</name></member>
+      <member refid="class_p_v_c4000_1a0a86de48853d7bef1e674c1e93006903" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>readRaw</name></member>
+      <member refid="class_p_v_c4000_1a14cac417f8d03115c9eb0caf552171d2" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Reg1_R</name></member>
+      <member refid="class_p_v_c4000_1aeaec099a27dbf7265ab8f3577408ae0e" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Reg1_W</name></member>
+      <member refid="class_p_v_c4000_1ad9720be571b67edf411edf6fe7137c7b" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Reg2_R</name></member>
+      <member refid="class_p_v_c4000_1a3b491c05b3fa1aa22a1c767dfb5bda6a" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>Reg2_W</name></member>
+      <member refid="class_p_v_c4000_1ad372c66786b2d056dec470940925d928" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>t_lower</name></member>
+      <member refid="class_p_v_c4000_1a94141e583a2d41bc0cde3c2debd96cbe" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>t_upper</name></member>
+      <member refid="class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b" prot="public" virt="non-virtual"><scope>PVC4000</scope><name>temperature</name></member>
+      <member refid="class_p_v_c4000_1af23b9fef5045f25d1194866641bae7d3" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>write</name></member>
+      <member refid="class_p_v_c4000_1ac0ad58f87843584aa02315e7bb85f02f" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>writeCalibrationTableX</name></member>
+      <member refid="class_p_v_c4000_1acda0452008c2120154d5b8ec8e67f849" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>writeCalibrationTableY</name></member>
+      <member refid="class_p_v_c4000_1a2218bae87a9d2ccc801e43254bb2e722" prot="private" virt="non-virtual"><scope>PVC4000</scope><name>writeCalibrationTemperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

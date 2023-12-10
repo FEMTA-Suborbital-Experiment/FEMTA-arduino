@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>Member <ref refid="class_sd_file_1a872927812be6c48a894bdfc72f1701a1" kindref="member">SdFile::contiguousRange</ref>  (uint32_t &amp;bgnBlock, uint32_t &amp;endBlock)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000001"/>Use: uint8_t <ref refid="class_sd_file_1a3b07fc09dbcb28ae7c89c060af6a1810" kindref="member">SdFile::contiguousRange(uint32_t* bgnBlock, uint32_t* endBlock)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1a231dd495e5c5997aea2a842481a68f40" kindref="member">SdFile::createContiguous</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dirFile, const char *fileName, uint32_t size)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000002"/>Use: uint8_t <ref refid="class_sd_file_1a07fc5c82318f073848e706f95830e5b5" kindref="member">SdFile::createContiguous(SdFile* dirFile,
+  const char* fileName, uint32_t size)</ref>  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1a88a9b32bfec07c8c5cfdf8a36b7faf26" kindref="member">SdFile::dateTimeCallback</ref>  (void(*dateTime)(uint16_t &amp;date, uint16_t &amp;time))</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000003"/>Use: static void <ref refid="class_sd_file_1a2d78e6a8cedbf8ce545af68457b43bf1" kindref="member">SdFile::dateTimeCallback</ref>( void (<emphasis>dateTime)(uint16_t</emphasis> date, uint16_t* time));  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1ae7b4b1057a1ee17f673c116771636156" kindref="member">SdFile::dirEntry</ref>  (dir_t &amp;dir)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000004"/>Use: uint8_t <ref refid="class_sd_file_1abaf9b1dc12d53cdeb937065edf68927d" kindref="member">SdFile::dirEntry(dir_t* dir)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1af87e166d0059d392d7038f68fca68529" kindref="member">SdFile::makeDir</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dir, const char *dirName)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000005"/>Use: uint8_t <ref refid="class_sd_file_1a62984bedf614a8de96b48bf9c5e7159f" kindref="member">SdFile::makeDir(SdFile* dir, const char* dirName)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1afe1d8ce70ef58ee5967005047064167c" kindref="member">SdFile::open</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dirFile, const char *fileName, uint8_t oflag)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000006"/>Use: uint8_t <ref refid="class_sd_file_1a3cf2167ad5ba6d84942ede8d2d07dcc6" kindref="member">SdFile::open(SdFile* dirFile, const char* fileName, uint8_t oflag)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1a71e1c08dc4fb58b95554925a25435721" kindref="member">SdFile::open</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dirFile, const char *fileName)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000007"/>Do not use in new apps  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1a8bc20433f081a6e9f1546601b7a1d712" kindref="member">SdFile::open</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dirFile, uint16_t index, uint8_t oflag)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000008"/>Use: uint8_t <ref refid="class_sd_file_1a9e211ac14784f48aebb213194336f8cc" kindref="member">SdFile::open(SdFile* dirFile, uint16_t index, uint8_t oflag)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1abc60bbbb747c58319cfcfc11deb34d53" kindref="member">SdFile::openRoot</ref>  (<ref refid="class_sd_volume" kindref="compound">SdVolume</ref> &amp;vol)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000009"/>Use: uint8_t <ref refid="class_sd_file_1ac3612bc27eaf52a23d8cb85c8d96ad38" kindref="member">SdFile::openRoot(SdVolume* vol)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1ad107b73c6edfa489b76366edfef2eeae" kindref="member">SdFile::readDir</ref>  (dir_t &amp;dir)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000010"/>Use: int8_t <ref refid="class_sd_file_1ab240540b099cedcfe8b93b5e853d0628" kindref="member">SdFile::readDir(dir_t* dir)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_file_1aaea53aa58f7577dfafd0da3cb084f6d1" kindref="member">SdFile::remove</ref>  (<ref refid="class_sd_file" kindref="compound">SdFile</ref> &amp;dirFile, const char *fileName)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000011"/>Use: static uint8_t <ref refid="class_sd_file_1ab932b7896dce90a29031f3a9039807a2" kindref="member">SdFile::remove(SdFile* dirFile, const char* fileName)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_volume_1a037defc7dc23b38ee7ddf7b5273aea5a" kindref="member">SdVolume::init</ref>  (<ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> &amp;dev)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000012"/>Use: uint8_t <ref refid="class_sd_volume_1adfcf83cba537b831f3a993a058e7ca85" kindref="member">SdVolume::init(Sd2Card* dev)</ref>;  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="class_sd_volume_1a51d8b4c5dd7372eb7dec486472139eb5" kindref="member">SdVolume::init</ref>  (<ref refid="class_sd2_card" kindref="compound">Sd2Card</ref> &amp;dev, uint8_t part)</term></varlistentry>
+<listitem><para><anchor id="deprecated_1_deprecated000013"/>Use: uint8_t <ref refid="class_sd_volume_1a8f5879e458ea6f1a2a2a2b884d800550" kindref="member">SdVolume::init(Sd2Card* dev, uint8_t vol)</ref>; </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="deprecated"/>
+  </compounddef>
+</doxygen>

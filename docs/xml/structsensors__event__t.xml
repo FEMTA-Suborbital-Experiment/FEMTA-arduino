@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structsensors__event__t" kind="struct" language="C++" prot="public">
+    <compoundname>sensors_event_t</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="no">Adafruit_Sensor.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensors__event__t_1a2134d60fdb21e3495c595a2df2f5cece" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensors_event_t::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>sensors_event_t::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be sizeof(struct sensors_event_t) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="118" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a6b06d35b17afbee79de7f45d9d71ed0b" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensors_event_t::sensor_id</definition>
+        <argsstring></argsstring>
+        <name>sensor_id</name>
+        <qualifiedname>sensors_event_t::sensor_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unique sensor identifier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="119" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a58401dd7f3400d9eb96c71b8fba9f8e8" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensors_event_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>sensors_event_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sensor type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="120" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a8be4dc00344f46abf29e06251bf9fad9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensors_event_t::reserved0</definition>
+        <argsstring></argsstring>
+        <name>reserved0</name>
+        <qualifiedname>sensors_event_t::reserved0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>reserved </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="121" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1acd3be1560458b3e3bf52f93f744e8238" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensors_event_t::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <qualifiedname>sensors_event_t::timestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>time is in milliseconds </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="122" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1addee33a715123e16eb463e5cc9024fe2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::data[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>data</name>
+        <qualifiedname>sensors_event_t::data</qualifiedname>
+        <briefdescription>
+<para>Raw data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="124" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a91a4325f468d3155e6921358a6f61baa" prot="public" static="no" mutable="no">
+        <type><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>sensors_vec_t sensors_event_t::acceleration</definition>
+        <argsstring></argsstring>
+        <name>acceleration</name>
+        <qualifiedname>sensors_event_t::acceleration</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>acceleration values are in meter per second per second (m/s^2) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="125" column="19" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1aa634d41a024e1cacdceecf85ec326698" prot="public" static="no" mutable="no">
+        <type><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>sensors_vec_t sensors_event_t::magnetic</definition>
+        <argsstring></argsstring>
+        <name>magnetic</name>
+        <qualifiedname>sensors_event_t::magnetic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>magnetic vector values are in micro-Tesla (uT) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="128" column="9" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1acbe3c50a256fa9423bc9e3a6e0da7ebf" prot="public" static="no" mutable="no">
+        <type><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>sensors_vec_t sensors_event_t::orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <qualifiedname>sensors_event_t::orientation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>orientation values are in degrees </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="129" column="19" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1ad108ea8c3a18d02cfc674ba27e94a2c4" prot="public" static="no" mutable="no">
+        <type><ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>sensors_vec_t sensors_event_t::gyro</definition>
+        <argsstring></argsstring>
+        <name>gyro</name>
+        <qualifiedname>sensors_event_t::gyro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>gyroscope values are in rad/s </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="130" column="19" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a914f76beb75bd99aa3c13d3a8e56e21c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <qualifiedname>sensors_event_t::temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>temperature is in degrees centigrade (Celsius) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="131" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a456259aaeb265913281d7ffbd8ad8697" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::distance</definition>
+        <argsstring></argsstring>
+        <name>distance</name>
+        <qualifiedname>sensors_event_t::distance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>distance in centimeters </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="132" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1adefd2ce2da44e4449ef7cadeaecc6cfd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::light</definition>
+        <argsstring></argsstring>
+        <name>light</name>
+        <qualifiedname>sensors_event_t::light</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>light in SI lux units </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="133" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::pressure</definition>
+        <argsstring></argsstring>
+        <name>pressure</name>
+        <qualifiedname>sensors_event_t::pressure</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pressure in hectopascal (hPa) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="134" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a577b73698368fb061382ce9f31052417" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::relative_humidity</definition>
+        <argsstring></argsstring>
+        <name>relative_humidity</name>
+        <qualifiedname>sensors_event_t::relative_humidity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>relative humidity in percent </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="135" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1ad34303af57d6bce18c34862a887fc005" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>sensors_event_t::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current in milliamps (mA) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="136" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1ab01b52f6b83f390a6370d319ded97b28" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::voltage</definition>
+        <argsstring></argsstring>
+        <name>voltage</name>
+        <qualifiedname>sensors_event_t::voltage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>voltage in volts (V) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="137" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a6ce5ca5bb4ab3f8a6861fc965a154599" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_event_t::tvoc</definition>
+        <argsstring></argsstring>
+        <name>tvoc</name>
+        <qualifiedname>sensors_event_t::tvoc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total Volatile Organic Compounds, in ppb </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="138" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a56b4d05fbf47013727ec1a0a94db91e6" prot="public" static="no" mutable="no">
+        <type><ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref></type>
+        <definition>sensors_color_t sensors_event_t::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>sensors_event_t::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>color in RGB component values </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="139" column="21" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a65765f2fda6943ab0fa6ef1d4b9d7d35" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref></type>
+        <definition>union sensors_event_t sensors_event_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_event_t</qualifiedname>
+        <briefdescription>
+<para>Union for the wide ranges of data we can carry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="140" column="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__event__t_1a99515c166299a0e5ef800be0fcf22556" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref></type>
+        <definition>union sensors_event_t sensors_event_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_event_t</qualifiedname>
+        <briefdescription>
+<para>Union for the wide ranges of data we can carry. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="140" column="33"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>struct sensor_event_s is used to provide a single sensor event in a common format. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>sensors_color_t</label>
+        <link refid="structsensors__color__t"/>
+      </node>
+      <node id="1">
+        <label>sensors_event_t</label>
+        <link refid="structsensors__event__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>acceleration</edgelabel>
+          <edgelabel>gyro</edgelabel>
+          <edgelabel>magnetic</edgelabel>
+          <edgelabel>orientation</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>sensors_vec_t</label>
+        <link refid="structsensors__vec__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="117" column="1" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="117" bodyend="141"/>
+    <listofallmembers>
+      <member refid="structsensors__event__t_1a91a4325f468d3155e6921358a6f61baa" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>acceleration</name></member>
+      <member refid="structsensors__event__t_1a56b4d05fbf47013727ec1a0a94db91e6" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>color</name></member>
+      <member refid="structsensors__event__t_1ad34303af57d6bce18c34862a887fc005" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>current</name></member>
+      <member refid="structsensors__event__t_1addee33a715123e16eb463e5cc9024fe2" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>data</name></member>
+      <member refid="structsensors__event__t_1a456259aaeb265913281d7ffbd8ad8697" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>distance</name></member>
+      <member refid="structsensors__event__t_1ad108ea8c3a18d02cfc674ba27e94a2c4" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>gyro</name></member>
+      <member refid="structsensors__event__t_1adefd2ce2da44e4449ef7cadeaecc6cfd" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>light</name></member>
+      <member refid="structsensors__event__t_1aa634d41a024e1cacdceecf85ec326698" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>magnetic</name></member>
+      <member refid="structsensors__event__t_1acbe3c50a256fa9423bc9e3a6e0da7ebf" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>orientation</name></member>
+      <member refid="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>pressure</name></member>
+      <member refid="structsensors__event__t_1a577b73698368fb061382ce9f31052417" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>relative_humidity</name></member>
+      <member refid="structsensors__event__t_1a8be4dc00344f46abf29e06251bf9fad9" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>reserved0</name></member>
+      <member refid="structsensors__event__t_1a6b06d35b17afbee79de7f45d9d71ed0b" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>sensor_id</name></member>
+      <member refid="structsensors__event__t_1a914f76beb75bd99aa3c13d3a8e56e21c" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>temperature</name></member>
+      <member refid="structsensors__event__t_1acd3be1560458b3e3bf52f93f744e8238" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>timestamp</name></member>
+      <member refid="structsensors__event__t_1a6ce5ca5bb4ab3f8a6861fc965a154599" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>tvoc</name></member>
+      <member refid="structsensors__event__t_1a58401dd7f3400d9eb96c71b8fba9f8e8" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>type</name></member>
+      <member refid="structsensors__event__t_1a2134d60fdb21e3495c595a2df2f5cece" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>version</name></member>
+      <member refid="structsensors__event__t_1ab01b52f6b83f390a6370d319ded97b28" prot="public" virt="non-virtual"><scope>sensors_event_t</scope><name>voltage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,536 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="api_8md" kind="file" language="Markdown">
+    <compoundname>api.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)<sp/>|<sp/>A<sp/>wrapper<sp/>of<sp/>vector<sp/>which<sp/>allows<sp/>a<sp/>user-defined<sp/>maximum<sp/>size.</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`HSCM_PSI`](#class_h_s_c_m___p_s_i)<sp/>|<sp/>HSCM<sp/>class<sp/>based<sp/>on<sp/>[https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp](https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp).</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`Logger`](#class_logger)<sp/>|<sp/>[Logger](#class_logger)<sp/>for<sp/>sensor<sp/>data.</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`PinCtrl`](#class_pin_ctrl)<sp/>|<sp/>Pin<sp/>Controller<sp/>class.</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`PVC4000`](#class_p_v_c4000)<sp/>|<sp/>[PVC4000](#class_p_v_c4000)<sp/>class<sp/>for<sp/>the<sp/>[PVC4000](#class_p_v_c4000)<sp/>or<sp/>PVC4100<sp/>MEMs<sp/>transducers.</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`Reader`](#class_reader)<sp/>|<sp/>Binary<sp/>reader<sp/>of<sp/>struct<sp/>data.</highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`SensorPoller`](#class_sensor_poller)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`class<sp/>`[`Writer`](#class_writer)<sp/>|<sp/>Writing<sp/>class<sp/>for<sp/>outputing<sp/>data<sp/>into<sp/>binary<sp/>or<sp/>text.</highlight></codeline>
+<codeline><highlight class="normal">`struct<sp/>`[`logType`](#structlog_type)<sp/>|<sp/>A<sp/>log<sp/>standard<sp/>that<sp/>is<sp/>shared<sp/>between<sp/>the<sp/>reader,<sp/>logger,<sp/>and<sp/>writer<sp/>classes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`AtmosphericVector`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">class<sp/>AtmosphericVector</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>:<sp/>public<sp/>std::vector&lt;<sp/>T<sp/>&gt;</highlight></codeline>
+<codeline><highlight class="normal">```<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>wrapper<sp/>of<sp/>vector<sp/>which<sp/>allows<sp/>a<sp/>user-defined<sp/>maximum<sp/>size.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">https://stackoverflow.com/questions/9248728/vector-how-to-set-the-maximum-number-of-elements-and-find-the-current-count</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`T`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>inline<sp/>void<sp/>`[`setMaxSize`](#class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd)`(int<sp/>maxSize)`<sp/>|<sp/>Set<sp/>the<sp/>capacity<sp/>of<sp/>the<sp/>vector.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>inline<sp/>void<sp/>`[`push_back`](#class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770)`(const<sp/>T<sp/>&amp;<sp/>element)`<sp/>|<sp/>Append<sp/>an<sp/>element<sp/>to<sp/>the<sp/>vector<sp/>as<sp/>long<sp/>as<sp/>the<sp/>vector<sp/>size<sp/>is<sp/>less<sp/>than<sp/>the<sp/>capacity.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>inline<sp/>bool<sp/>`[`isFilled`](#class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e)`()`<sp/>|<sp/>Check<sp/>if<sp/>the<sp/>vector<sp/>is<sp/>filled<sp/>to<sp/>its<sp/>capacity.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>inline<sp/>void<sp/>`[`setMaxSize`](#class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd)`(int<sp/>maxSize)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Set<sp/>the<sp/>capacity<sp/>of<sp/>the<sp/>vector.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`maxSize`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>inline<sp/>void<sp/>`[`push_back`](#class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770)`(const<sp/>T<sp/>&amp;<sp/>element)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Append<sp/>an<sp/>element<sp/>to<sp/>the<sp/>vector<sp/>as<sp/>long<sp/>as<sp/>the<sp/>vector<sp/>size<sp/>is<sp/>less<sp/>than<sp/>the<sp/>capacity.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`element`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>inline<sp/>bool<sp/>`[`isFilled`](#class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>if<sp/>the<sp/>vector<sp/>is<sp/>filled<sp/>to<sp/>its<sp/>capacity.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">true<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">false</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`HSCM_PSI`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">HSCM<sp/>class<sp/>based<sp/>on<sp/>[https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp](https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>hscm_output_type<sp/>`[`m_output_type`](#class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>uint8_t<sp/>`[`m_i2cAddress`](#class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`m_tf_type`](#class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`m_pressure_type`](#class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`HSCM_PSI`](#class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a)`(int<sp/>i2cAddress,int<sp/>tf_type,int<sp/>p_type)`<sp/>|<sp/>Construct<sp/>the<sp/>HSCM<sp/>using<sp/>the<sp/>I2C<sp/>address.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`HSCM_PSI`](#class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e)`(hscm_output_type<sp/>output_type,int<sp/>tf_type,int<sp/>p_type)`<sp/>|<sp/>Construct<sp/>the<sp/>HSCM<sp/>using<sp/>the<sp/>types<sp/>listed<sp/>in<sp/>the<sp/>datasheet.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>uint8_t<sp/>`[`read`](#class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac)`()`<sp/>|<sp/>Poll<sp/>the<sp/>HSCM<sp/>for<sp/>new<sp/>pressure<sp/>and<sp/>temperature<sp/>data<sp/>and<sp/>check<sp/>the<sp/>status<sp/>of<sp/>the<sp/>read.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float<sp/>`[`pressure`](#class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764)`()`<sp/>|<sp/>Return<sp/>the<sp/>ambient<sp/>pressure<sp/>(in<sp/>psi)<sp/>read<sp/>by<sp/>the<sp/>HSCM.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float<sp/>`[`temperature`](#class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1)`()`<sp/>|<sp/>Return<sp/>the<sp/>ambient<sp/>temperature<sp/>(in<sp/>C)<sp/>read<sp/>by<sp/>the<sp/>HSCM.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>hscm_output_type<sp/>`[`m_output_type`](#class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>uint8_t<sp/>`[`m_i2cAddress`](#class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`m_tf_type`](#class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`m_pressure_type`](#class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`HSCM_PSI`](#class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a)`(int<sp/>i2cAddress,int<sp/>tf_type,int<sp/>p_type)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>the<sp/>HSCM<sp/>using<sp/>the<sp/>I2C<sp/>address.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`i2cAddress`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tf_type`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`p_type`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`HSCM_PSI`](#class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e)`(hscm_output_type<sp/>output_type,int<sp/>tf_type,int<sp/>p_type)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>the<sp/>HSCM<sp/>using<sp/>the<sp/>types<sp/>listed<sp/>in<sp/>the<sp/>datasheet.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`output_type`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`tf_type`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`p_type`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>uint8_t<sp/>`[`read`](#class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Poll<sp/>the<sp/>HSCM<sp/>for<sp/>new<sp/>pressure<sp/>and<sp/>temperature<sp/>data<sp/>and<sp/>check<sp/>the<sp/>status<sp/>of<sp/>the<sp/>read.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">uint8_t</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float<sp/>`[`pressure`](#class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Return<sp/>the<sp/>ambient<sp/>pressure<sp/>(in<sp/>psi)<sp/>read<sp/>by<sp/>the<sp/>HSCM.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">float</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float<sp/>`[`temperature`](#class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Return<sp/>the<sp/>ambient<sp/>temperature<sp/>(in<sp/>C)<sp/>read<sp/>by<sp/>the<sp/>HSCM.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">float</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`Logger`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Logger](#class_logger)<sp/>for<sp/>sensor<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`logType`](#structlog_type)`<sp/>`[`logData`](#class_logger_1a4b71165774ee49293228f547869c325b)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`Logger`](#class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28)`(int<sp/>arraySize)`<sp/>|<sp/>Construct<sp/>a<sp/>[Logger](#class_logger)<sp/>class,<sp/>which<sp/>is<sp/>responsible<sp/>for<sp/>storing<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleraetion<sp/>values.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`init`](#class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe)`()`<sp/>|<sp/>Initialize<sp/>the<sp/>[Logger](#class_logger)<sp/>and<sp/>flush<sp/>all<sp/>values.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`pushData`](#class_logger_1aa9983a0826820827e31fcf8fb77636a7)`(float<sp/>time,float<sp/>lowPressure,float<sp/>highPressure,float<sp/>acceleration)`<sp/>|<sp/>Append<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleration<sp/>into<sp/>the<sp/>logger&apos;s<sp/>buffer.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`flushArrays`](#class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6)`()`<sp/>|<sp/>Clear<sp/>the<sp/>values<sp/>from<sp/>each<sp/>buffer.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>bool<sp/>`[`isStructFilled`](#class_logger_1a5ba805b3d05cb8f2492251e2229600c5)`()`<sp/>|<sp/>Check<sp/>if<sp/>the<sp/>buffer<sp/>is<sp/>filled<sp/>by<sp/>checking<sp/>the<sp/>time<sp/>variable,<sp/>which<sp/>always<sp/>stores<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`logType`](#structlog_type)`<sp/>`[`logData`](#class_logger_1a4b71165774ee49293228f547869c325b)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`Logger`](#class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28)`(int<sp/>arraySize)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>a<sp/>[Logger](#class_logger)<sp/>class,<sp/>which<sp/>is<sp/>responsible<sp/>for<sp/>storing<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleraetion<sp/>values.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`arraySize`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`init`](#class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>the<sp/>[Logger](#class_logger)<sp/>and<sp/>flush<sp/>all<sp/>values.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`pushData`](#class_logger_1aa9983a0826820827e31fcf8fb77636a7)`(float<sp/>time,float<sp/>lowPressure,float<sp/>highPressure,float<sp/>acceleration)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Append<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleration<sp/>into<sp/>the<sp/>logger&apos;s<sp/>buffer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`t`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`lp`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`hp`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`a`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`flushArrays`](#class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Clear<sp/>the<sp/>values<sp/>from<sp/>each<sp/>buffer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>bool<sp/>`[`isStructFilled`](#class_logger_1a5ba805b3d05cb8f2492251e2229600c5)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>if<sp/>the<sp/>buffer<sp/>is<sp/>filled<sp/>by<sp/>checking<sp/>the<sp/>time<sp/>variable,<sp/>which<sp/>always<sp/>stores<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">true<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">false</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`PinCtrl`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">class<sp/>PinCtrl</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>:<sp/>public<sp/>Protothread</highlight></codeline>
+<codeline><highlight class="normal">```<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Pin<sp/>Controller<sp/>class.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`PinCtrl`](#class_pin_ctrl_1aa4cfc2d94200389c25ee1eeb2726a214)`(int<sp/>flowClose1,int<sp/>flowOpen1,int<sp/>flowClose2,int<sp/>flowOpen2,int<sp/>ventOpen,int<sp/>ventClose,int<sp/>signal)`<sp/>|<sp/>Construct<sp/>a<sp/>PinController<sp/>class<sp/>with<sp/>the<sp/>pins<sp/>corresponding<sp/>to<sp/>a<sp/>valve<sp/>or<sp/>signal<sp/>on<sp/>the<sp/>FEMTA<sp/>Suborbital<sp/>Experiment.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`openFlowValve1`](#class_pin_ctrl_1a38719c52dcbe99f6230a51bf17f28f77)`()`<sp/>|<sp/>Open<sp/>flow<sp/>valve<sp/>1.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`closeFlowValve1`](#class_pin_ctrl_1a58db08121a93246bd87410709b36a692)`()`<sp/>|<sp/>Close<sp/>flow<sp/>valve<sp/>1.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`openFlowValve2`](#class_pin_ctrl_1a5e386cb600e543d75e8caf00355a3941)`()`<sp/>|<sp/>Open<sp/>flow<sp/>valve<sp/>2.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`closeFlowValve2`](#class_pin_ctrl_1ad0ce7969311375d091aa06ce7621179a)`()`<sp/>|<sp/>Close<sp/>flow<sp/>valve<sp/>2.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`openVentValve`](#class_pin_ctrl_1a6ef0214620aed42aa885e659be665d87)`()`<sp/>|<sp/>Open<sp/>vent<sp/>valve<sp/>1.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`closeVentValve`](#class_pin_ctrl_1a147c686c6879b7e574569bbfea69dd70)`()`<sp/>|<sp/>Close<sp/>vent<sp/>valve<sp/>1.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`signalStart`](#class_pin_ctrl_1aa658b5b491087b47e0c83ec4ceccc6e7)`()`<sp/>|<sp/>Signal<sp/>the<sp/>start<sp/>of<sp/>an<sp/>experiment.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`signalStop`](#class_pin_ctrl_1a2ac6386b567543305a3f82e14054c58d)`()`<sp/>|<sp/>Signal<sp/>to<sp/>stop<sp/>the<sp/>experiment.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`init`](#class_pin_ctrl_1acb4a92935a1e3d525f4e29e8a6e607d7)`(bool<sp/>willInitializeValves)`<sp/>|<sp/>Initialize<sp/>the<sp/>pin<sp/>modes<sp/>and<sp/>set<sp/>the<sp/>initial<sp/>state<sp/>of<sp/>the<sp/>valves<sp/>at<sp/>pre-flight.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>bool<sp/>`[`Run`](#class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870)`()`<sp/>|<sp/>An<sp/>overridden<sp/>Protothread<sp/>method<sp/>which<sp/>acts<sp/>as<sp/>a<sp/>state<sp/>machine.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`PinCtrl`](#class_pin_ctrl_1aa4cfc2d94200389c25ee1eeb2726a214)`(int<sp/>flowClose1,int<sp/>flowOpen1,int<sp/>flowClose2,int<sp/>flowOpen2,int<sp/>ventOpen,int<sp/>ventClose,int<sp/>signal)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>a<sp/>PinController<sp/>class<sp/>with<sp/>the<sp/>pins<sp/>corresponding<sp/>to<sp/>a<sp/>valve<sp/>or<sp/>signal<sp/>on<sp/>the<sp/>FEMTA<sp/>Suborbital<sp/>Experiment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>flow<sp/>and<sp/>vent<sp/>pins<sp/>correspond<sp/>to<sp/>valves<sp/>on<sp/>the<sp/>Propellant<sp/>Management<sp/>Experiment,<sp/>while<sp/>the<sp/>signal<sp/>pin<sp/>is<sp/>an<sp/>output<sp/>which<sp/>is<sp/>measured<sp/>by<sp/>the<sp/>FEMTA<sp/>Thruster<sp/>Experiment<sp/>and<sp/>determines<sp/>whether<sp/>the<sp/>Thruster<sp/>Experiment<sp/>should<sp/>begin<sp/>at<sp/>the<sp/>right<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`flowClose1`<sp/>closeSV1<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`flowOpen1`<sp/>openSV1<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`flowClose2`<sp/>closeSV2<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`flowOpen2`<sp/>openSV2<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`ventClose`<sp/>closeLV1<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`ventOpen`<sp/>openLV1<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`signal`<sp/>signal</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`openFlowValve1`](#class_pin_ctrl_1a38719c52dcbe99f6230a51bf17f28f77)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Open<sp/>flow<sp/>valve<sp/>1.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`closeFlowValve1`](#class_pin_ctrl_1a58db08121a93246bd87410709b36a692)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Close<sp/>flow<sp/>valve<sp/>1.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`openFlowValve2`](#class_pin_ctrl_1a5e386cb600e543d75e8caf00355a3941)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Open<sp/>flow<sp/>valve<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`closeFlowValve2`](#class_pin_ctrl_1ad0ce7969311375d091aa06ce7621179a)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Close<sp/>flow<sp/>valve<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`openVentValve`](#class_pin_ctrl_1a6ef0214620aed42aa885e659be665d87)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Open<sp/>vent<sp/>valve<sp/>1.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`closeVentValve`](#class_pin_ctrl_1a147c686c6879b7e574569bbfea69dd70)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Close<sp/>vent<sp/>valve<sp/>1.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`signalStart`](#class_pin_ctrl_1aa658b5b491087b47e0c83ec4ceccc6e7)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Signal<sp/>the<sp/>start<sp/>of<sp/>an<sp/>experiment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`signalStop`](#class_pin_ctrl_1a2ac6386b567543305a3f82e14054c58d)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Signal<sp/>to<sp/>stop<sp/>the<sp/>experiment.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`init`](#class_pin_ctrl_1acb4a92935a1e3d525f4e29e8a6e607d7)`(bool<sp/>willInitializeValves)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>the<sp/>pin<sp/>modes<sp/>and<sp/>set<sp/>the<sp/>initial<sp/>state<sp/>of<sp/>the<sp/>valves<sp/>at<sp/>pre-flight.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>bool<sp/>`[`Run`](#class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">An<sp/>overridden<sp/>Protothread<sp/>method<sp/>which<sp/>acts<sp/>as<sp/>a<sp/>state<sp/>machine.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>checks<sp/>if<sp/>a<sp/>certain<sp/>pin<sp/>is<sp/>turned<sp/>on<sp/>and<sp/>sets<sp/>the<sp/>pin<sp/>to<sp/>HIGH.<sp/>After<sp/>a<sp/>certain<sp/>time<sp/>delay<sp/>t_delay,<sp/>set<sp/>the<sp/>pin<sp/>to<sp/>LOW.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">true<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">false</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`PVC4000`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[PVC4000](#class_p_v_c4000)<sp/>class<sp/>for<sp/>the<sp/>[PVC4000](#class_p_v_c4000)<sp/>or<sp/>PVC4100<sp/>MEMs<sp/>transducers.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>uint16_t<sp/>`[`m_i2cAddress`](#class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`PVC4000`](#class_p_v_c4000_1ab31a08063d6c570167391800d86bef11)`(int<sp/>address)`<sp/>|<sp/>Construct<sp/>a<sp/>[PVC4000](#class_p_v_c4000)<sp/>class<sp/>using<sp/>an<sp/>I2C<sp/>address,<sp/>if<sp/>necessary.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`read`](#class_p_v_c4000_1ac122759c1e4e377d672d54b661635509)`()`<sp/>|<sp/>Update<sp/>the<sp/>pressure<sp/>and<sp/>temperature<sp/>values<sp/>and<sp/>return<sp/>the<sp/>status<sp/>based<sp/>on<sp/>the<sp/>raw<sp/>values.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`calibrate`](#class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3)`()`<sp/>|<sp/>Poll<sp/>the<sp/>sensor<sp/>for<sp/>new<sp/>pressure<sp/>and<sp/>temperature<sp/>readings.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`init`](#class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752)`()`<sp/>|<sp/>Initialize<sp/>the<sp/>[PVC4000](#class_p_v_c4000).</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float<sp/>`[`baselineTemperature`](#class_p_v_c4000_1a52012201d7a9199558053865c9eadac8)`()`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float<sp/>`[`temperature`](#class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b)`()`<sp/>|<sp/>Obtain<sp/>the<sp/>temperature<sp/>from<sp/>the<sp/>last<sp/>read<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float<sp/>`[`pressure`](#class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547)`()`<sp/>|<sp/>Obtain<sp/>the<sp/>pressure<sp/>from<sp/>the<sp/>last<sp/>read<sp/>command.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>uint16_t<sp/>`[`get_raw_upper`](#class_p_v_c4000_1ab422024da4c792301181f537f066d7a4)`()`<sp/>|<sp/>Return<sp/>a<sp/>raw<sp/>count<sp/>corresponding<sp/>to<sp/>the<sp/>most<sp/>significant<sp/>byte.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>uint16_t<sp/>`[`get_raw_lower`](#class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5)`()`<sp/>|<sp/>Return<sp/>a<sp/>raw<sp/>count<sp/>corresponding<sp/>to<sp/>the<sp/>least<sp/>significant<sp/>byte.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>uint16_t<sp/>`[`m_i2cAddress`](#class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`PVC4000`](#class_p_v_c4000_1ab31a08063d6c570167391800d86bef11)`(int<sp/>address)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>a<sp/>[PVC4000](#class_p_v_c4000)<sp/>class<sp/>using<sp/>an<sp/>I2C<sp/>address,<sp/>if<sp/>necessary.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`address`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`read`](#class_p_v_c4000_1ac122759c1e4e377d672d54b661635509)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Update<sp/>the<sp/>pressure<sp/>and<sp/>temperature<sp/>values<sp/>and<sp/>return<sp/>the<sp/>status<sp/>based<sp/>on<sp/>the<sp/>raw<sp/>values.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`calibrate`](#class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Poll<sp/>the<sp/>sensor<sp/>for<sp/>new<sp/>pressure<sp/>and<sp/>temperature<sp/>readings.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`init`](#class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>the<sp/>[PVC4000](#class_p_v_c4000).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float<sp/>`[`baselineTemperature`](#class_p_v_c4000_1a52012201d7a9199558053865c9eadac8)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float<sp/>`[`temperature`](#class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Obtain<sp/>the<sp/>temperature<sp/>from<sp/>the<sp/>last<sp/>read<sp/>command.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">float</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float<sp/>`[`pressure`](#class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Obtain<sp/>the<sp/>pressure<sp/>from<sp/>the<sp/>last<sp/>read<sp/>command.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">float</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>uint16_t<sp/>`[`get_raw_upper`](#class_p_v_c4000_1ab422024da4c792301181f537f066d7a4)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Return<sp/>a<sp/>raw<sp/>count<sp/>corresponding<sp/>to<sp/>the<sp/>most<sp/>significant<sp/>byte.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">uint16_t</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>uint16_t<sp/>`[`get_raw_lower`](#class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Return<sp/>a<sp/>raw<sp/>count<sp/>corresponding<sp/>to<sp/>the<sp/>least<sp/>significant<sp/>byte.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">uint16_t</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`Reader`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Binary<sp/>reader<sp/>of<sp/>struct<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`Reader`](#class_reader_1aa53c935378e501762119494dbd1fdffb)`(int<sp/>chipSelect,int<sp/>bufferSize)`<sp/>|<sp/>Construct<sp/>a<sp/>[Reader](#class_reader)<sp/>class,<sp/>which<sp/>takes<sp/>a<sp/>chip<sp/>number<sp/>(usually<sp/>4)<sp/>for<sp/>where<sp/>the<sp/>SD<sp/>card<sp/>is<sp/>located.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`readFile`](#class_reader_1a28fe13eed13d02af3eb622de08604e87)`(const<sp/>char<sp/>*<sp/>fileName)`<sp/>|<sp/>Read<sp/>the<sp/>file<sp/>in<sp/>the<sp/>SD<sp/>card<sp/>and<sp/>returns<sp/>a<sp/>check<sp/>if<sp/>it<sp/>is<sp/>available.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`logType`](#structlog_type)`<sp/>`[`readVector`](#class_reader_1aa761bdab52a52b4a9f61be941cb779a7)`()`<sp/>|<sp/>Outputs<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleration<sp/>values<sp/>into<sp/>a<sp/>single,<sp/>large<sp/>vector<sp/>for<sp/>reading.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`init`](#class_reader_1aefa8f6560711e520cd36ec0f21afc403)`()`<sp/>|<sp/>Initialize<sp/>the<sp/>SD<sp/>card<sp/>for<sp/>reading.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`Reader`](#class_reader_1aa53c935378e501762119494dbd1fdffb)`(int<sp/>chipSelect,int<sp/>bufferSize)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>a<sp/>[Reader](#class_reader)<sp/>class,<sp/>which<sp/>takes<sp/>a<sp/>chip<sp/>number<sp/>(usually<sp/>4)<sp/>for<sp/>where<sp/>the<sp/>SD<sp/>card<sp/>is<sp/>located.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`chipSelect`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`readFile`](#class_reader_1a28fe13eed13d02af3eb622de08604e87)`(const<sp/>char<sp/>*<sp/>fileName)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Read<sp/>the<sp/>file<sp/>in<sp/>the<sp/>SD<sp/>card<sp/>and<sp/>returns<sp/>a<sp/>check<sp/>if<sp/>it<sp/>is<sp/>available.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`fileName`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`logType`](#structlog_type)`<sp/>`[`readVector`](#class_reader_1aa761bdab52a52b4a9f61be941cb779a7)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Outputs<sp/>the<sp/>time,<sp/>low<sp/>pressure,<sp/>high<sp/>pressure,<sp/>and<sp/>acceleration<sp/>values<sp/>into<sp/>a<sp/>single,<sp/>large<sp/>vector<sp/>for<sp/>reading.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>writer<sp/>class<sp/>stores<sp/>data<sp/>by<sp/>struct,<sp/>rather<sp/>than<sp/>by<sp/>outputting<sp/>to<sp/>a<sp/>large<sp/>vector.<sp/>To<sp/>compensate<sp/>for<sp/>this,<sp/>we<sp/>first<sp/>read<sp/>each<sp/>vector<sp/>to<sp/>a<sp/>temporary<sp/>vector,<sp/>push<sp/>each<sp/>index<sp/>of<sp/>the<sp/>temporary<sp/>vector<sp/>to<sp/>the<sp/>output<sp/>vector,<sp/>and<sp/>repeat<sp/>this<sp/>process<sp/>for<sp/>each<sp/>chunk<sp/>of<sp/>the<sp/>buffer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot](https://stackoverflow.com/questions/31212680/c-how-to-write-several-simple-vectors-to-a-binary-file-in-one-shot)</highlight></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">[logType](#structlog_type)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`init`](#class_reader_1aefa8f6560711e520cd36ec0f21afc403)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>the<sp/>SD<sp/>card<sp/>for<sp/>reading.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`SensorPoller`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`pollRate`](#class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`addToSensorVector`](#class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65)`()`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>float[]<sp/>`[`readVector`](#class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0)`()`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`SensorPoller`](#class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a)`()`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`init`](#class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d)`()`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`readAccelerometer`](#class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34)`(float<sp/>*<sp/>vec)`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`readLowAltBaro`](#class_sensor_poller_1aa2020c7d465f711303e678e9070dadab)`(float<sp/>*<sp/>pressure,float<sp/>*<sp/>temp)`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`readHighAltBaro`](#class_sensor_poller_1ac1e38e730991296e93ebebb88245536a)`(float<sp/>*<sp/>pressure,float<sp/>*<sp/>temp)`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`readPressureSensors`](#class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e)`(float<sp/>*<sp/>pressures,float<sp/>*<sp/>temperatures)`<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>void<sp/>`[`readFlowMeter`](#class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c)`(float<sp/>*<sp/>flow)`<sp/>|<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`pollRate`](#class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`addToSensorVector`](#class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>float[]<sp/>`[`readVector`](#class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`SensorPoller`](#class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`init`](#class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`readAccelerometer`](#class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34)`(float<sp/>*<sp/>vec)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`readLowAltBaro`](#class_sensor_poller_1aa2020c7d465f711303e678e9070dadab)`(float<sp/>*<sp/>pressure,float<sp/>*<sp/>temp)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`readHighAltBaro`](#class_sensor_poller_1ac1e38e730991296e93ebebb88245536a)`(float<sp/>*<sp/>pressure,float<sp/>*<sp/>temp)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`readPressureSensors`](#class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e)`(float<sp/>*<sp/>pressures,float<sp/>*<sp/>temperatures)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>void<sp/>`[`readFlowMeter`](#class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c)`(float<sp/>*<sp/>flow)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>class<sp/>`Writer`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Writing<sp/>class<sp/>for<sp/>outputing<sp/>data<sp/>into<sp/>binary<sp/>or<sp/>text.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/><sp/>`[`Writer`](#class_writer_1a06639f3d8669309bb57aa89fe85de302)`(const<sp/>char<sp/>*<sp/>name,const<sp/>int<sp/>chipSelect,const<sp/>bool<sp/>toBinary,const<sp/>bool<sp/>overwrite)`<sp/>|<sp/>Construct<sp/>a<sp/>[Writer](#class_writer)<sp/>class,<sp/>which<sp/>is<sp/>responsible<sp/>for<sp/>the<sp/>taking<sp/>[logType](#structlog_type)<sp/>data<sp/>and<sp/>writing<sp/>it<sp/>to<sp/>a<sp/>file<sp/>for<sp/>post-processing.<sp/>This<sp/>takes<sp/>some<sp/>user<sp/>parameters<sp/>for<sp/>writing<sp/>to<sp/>binary<sp/>(false<sp/>by<sp/>default)<sp/>or<sp/>overwriting<sp/>the<sp/>log<sp/>file<sp/>(for<sp/>testing<sp/>purposes,<sp/>false<sp/>by<sp/>default).</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`writeToFile`](#class_writer_1a4e59a184209bcd1133ccf030087fab7f)`(`[`logType`](#structlog_type)`<sp/>data)`<sp/>|<sp/>Writes<sp/>[logType](#structlog_type)<sp/>data<sp/>to<sp/>a<sp/>File<sp/>through<sp/>text<sp/>or<sp/>binary<sp/>methods.<sp/>If<sp/>successful,<sp/>the<sp/>method<sp/>returns<sp/>0.<sp/>Otherwise,<sp/>it<sp/>fails<sp/>at<sp/>other<sp/>integer<sp/>values.</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>int<sp/>`[`init`](#class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8)`()`<sp/>|<sp/>Initialize<sp/>the<sp/>writer<sp/>by<sp/>making<sp/>sure<sp/>the<sp/>SD<sp/>card<sp/>can<sp/>be<sp/>detected.<sp/>If<sp/>not<sp/>detected<sp/>after<sp/>10<sp/>tries,<sp/>time<sp/>out.<sp/>Also<sp/>check<sp/>to<sp/>see<sp/>if<sp/>the<sp/>user<sp/>plans<sp/>to<sp/>overwrite<sp/>the<sp/>existing<sp/>log<sp/>file<sp/>on<sp/>initialization.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/><sp/>`[`Writer`](#class_writer_1a06639f3d8669309bb57aa89fe85de302)`(const<sp/>char<sp/>*<sp/>name,const<sp/>int<sp/>chipSelect,const<sp/>bool<sp/>toBinary,const<sp/>bool<sp/>overwrite)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Construct<sp/>a<sp/>[Writer](#class_writer)<sp/>class,<sp/>which<sp/>is<sp/>responsible<sp/>for<sp/>the<sp/>taking<sp/>[logType](#structlog_type)<sp/>data<sp/>and<sp/>writing<sp/>it<sp/>to<sp/>a<sp/>file<sp/>for<sp/>post-processing.<sp/>This<sp/>takes<sp/>some<sp/>user<sp/>parameters<sp/>for<sp/>writing<sp/>to<sp/>binary<sp/>(false<sp/>by<sp/>default)<sp/>or<sp/>overwriting<sp/>the<sp/>log<sp/>file<sp/>(for<sp/>testing<sp/>purposes,<sp/>false<sp/>by<sp/>default).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`name`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`chipSelect`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`toBinary`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>`overwrite`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`writeToFile`](#class_writer_1a4e59a184209bcd1133ccf030087fab7f)`(`[`logType`](#structlog_type)`<sp/>data)`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Writes<sp/>[logType](#structlog_type)<sp/>data<sp/>to<sp/>a<sp/>File<sp/>through<sp/>text<sp/>or<sp/>binary<sp/>methods.<sp/>If<sp/>successful,<sp/>the<sp/>method<sp/>returns<sp/>0.<sp/>Otherwise,<sp/>it<sp/>fails<sp/>at<sp/>other<sp/>integer<sp/>values.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Parameters</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`data`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>int<sp/>`[`init`](#class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8)`()`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Initialize<sp/>the<sp/>writer<sp/>by<sp/>making<sp/>sure<sp/>the<sp/>SD<sp/>card<sp/>can<sp/>be<sp/>detected.<sp/>If<sp/>not<sp/>detected<sp/>after<sp/>10<sp/>tries,<sp/>time<sp/>out.<sp/>Also<sp/>check<sp/>to<sp/>see<sp/>if<sp/>the<sp/>user<sp/>plans<sp/>to<sp/>overwrite<sp/>the<sp/>existing<sp/>log<sp/>file<sp/>on<sp/>initialization.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Returns</highlight></codeline>
+<codeline><highlight class="normal">int</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>struct<sp/>`logType`<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>log<sp/>standard<sp/>that<sp/>is<sp/>shared<sp/>between<sp/>the<sp/>reader,<sp/>logger,<sp/>and<sp/>writer<sp/>classes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Summary</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>Members<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Descriptions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">--------------------------------|---------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`time`](#structlog_type_1a99408840dfd21747ed6a6ac0b8010061)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`lowPressure`](#structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`highPressure`](#structlog_type_1ac427d4daf20af0f2756e54154951ed3d)<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`acceleration`](#structlog_type_1a07557f8ebc502e7ba07083a57f4337b5)<sp/>|<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`time`](#structlog_type_1a99408840dfd21747ed6a6ac0b8010061)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`lowPressure`](#structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`highPressure`](#structlog_type_1ac427d4daf20af0f2756e54154951ed3d)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>`public<sp/>`[`AtmosphericVector`](#class_atmospheric_vector)`&lt;<sp/>float<sp/>&gt;<sp/>`[`acceleration`](#structlog_type_1a07557f8ebc502e7ba07083a57f4337b5)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Generated<sp/>by<sp/>[Moxygen](https://sourcey.com/moxygen)</highlight></codeline>
+    </programlisting>
+    <location file="api.md"/>
+  </compounddef>
+</doxygen>

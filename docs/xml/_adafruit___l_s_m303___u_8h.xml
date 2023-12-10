@@ -1,0 +1,856 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_adafruit___l_s_m303___u_8h" kind="file" language="C++">
+    <compoundname>Adafruit_LSM303_U.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="no">Adafruit_Sensor.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includedby refid="_adafruit___l_s_m303_8h" local="yes">libraries/Adafruit_LSM303DLHC/Adafruit_LSM303.h</includedby>
+    <includedby refid="_adafruit___l_s_m303___u_8cpp" local="yes">libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Adafruit_Sensor.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h</label>
+        <link refid="_adafruit___l_s_m303___u_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="4">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>libraries/Adafruit_LSM303DLHC/Adafruit_LSM303.h</label>
+        <link refid="_adafruit___l_s_m303_8h_source"/>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h</label>
+        <link refid="_adafruit___l_s_m303___u_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structlsm303_mag_data__s" prot="public">lsm303MagData_s</innerclass>
+    <innerclass refid="structlsm303_accel_data__s" prot="public">lsm303AccelData_s</innerclass>
+    <innerclass refid="class_adafruit___l_s_m303___accel___unified" prot="public">Adafruit_LSM303_Accel_Unified</innerclass>
+    <innerclass refid="class_adafruit___l_s_m303___mag___unified" prot="public">Adafruit_LSM303_Mag_Unified</innerclass>
+    <innerclass refid="class_adafruit___l_s_m303" prot="public">Adafruit_LSM303</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_adafruit___l_s_m303___u_8h_1a21b9dff36d922f51e50daa9e6bd6a293" prot="public" static="no">
+        <name>LSM303_ADDRESS_ACCEL</name>
+        <initializer>(0x32 &gt;&gt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="31" column="13" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___l_s_m303___u_8h_1a40286561354477f54cd1a486526b628c" prot="public" static="no">
+        <name>LSM303_ADDRESS_MAG</name>
+        <initializer>(0x3C &gt;&gt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="32" column="13" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___l_s_m303___u_8h_1abae587dbff946412a52ef6ceaa14d84f" prot="public" static="no">
+        <name>LSM303_ID</name>
+        <initializer>(0b11010100)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="148" column="13" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lsm303AccelRegisters_t</name>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a050258008e9781f0b344bfa193931268" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG1_A</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a4109801d44398d4fddaec0bebd4ca49e" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG2_A</name>
+          <initializer>= 0x21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a8c00077c742ed55d9e5f9cc763b88e4f" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG3_A</name>
+          <initializer>= 0x22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075aa29f08bf92a48c02f33328608da1404f" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG4_A</name>
+          <initializer>= 0x23</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a80501f4b369dfbfccb9e2ddbc0fb6b51" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG5_A</name>
+          <initializer>= 0x24</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a16b151a1bf2542cabd1d8191b0fe878e" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CTRL_REG6_A</name>
+          <initializer>= 0x25</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a077b90c6cbed666ea9c055eae3a6dd49" prot="public">
+          <name>LSM303_REGISTER_ACCEL_REFERENCE_A</name>
+          <initializer>= 0x26</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a7f8c934d8a71e29f4684887b5652b1d1" prot="public">
+          <name>LSM303_REGISTER_ACCEL_STATUS_REG_A</name>
+          <initializer>= 0x27</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075aa62033d25ad6aef523641141f5a6b80e" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_X_L_A</name>
+          <initializer>= 0x28</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a74222a06a20e7fc0e8b74efe8ee5fb3d" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_X_H_A</name>
+          <initializer>= 0x29</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a6ddea68d56ecd10024f937ae77da7ac3" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_Y_L_A</name>
+          <initializer>= 0x2A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075aefb7359e7cc8ca55db1e6e3efbf3bf79" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_Y_H_A</name>
+          <initializer>= 0x2B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a9da16aeb808ce8e06b9a2bd56ee83b37" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_Z_L_A</name>
+          <initializer>= 0x2C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a1c3e1e1e44b09794eec8e6e8145f8517" prot="public">
+          <name>LSM303_REGISTER_ACCEL_OUT_Z_H_A</name>
+          <initializer>= 0x2D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a4a37c9ea7eb47f4a10513cd9c0369576" prot="public">
+          <name>LSM303_REGISTER_ACCEL_FIFO_CTRL_REG_A</name>
+          <initializer>= 0x2E</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075af3beca5bbc3c322dc2c95c1b61de27f1" prot="public">
+          <name>LSM303_REGISTER_ACCEL_FIFO_SRC_REG_A</name>
+          <initializer>= 0x2F</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a9368e8c4fa2ae20dd8ebef901d9b6ac2" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT1_CFG_A</name>
+          <initializer>= 0x30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075af04fc892709d3802b97b6a0f44ab7c78" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT1_SOURCE_A</name>
+          <initializer>= 0x31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a8d90d7553d89f6cc8e11894b11e5d431" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT1_THS_A</name>
+          <initializer>= 0x32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075ae340b862820e4be1a7d1dcd994214ea3" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT1_DURATION_A</name>
+          <initializer>= 0x33</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a1082336a4708e40fd2c22816c02d9860" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT2_CFG_A</name>
+          <initializer>= 0x34</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a31a9a76bfc51e1d15da6ee615ef636fa" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT2_SOURCE_A</name>
+          <initializer>= 0x35</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a1714d198c253ac27290612e5c03cb1e1" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT2_THS_A</name>
+          <initializer>= 0x36</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a3569551aade8b13e6a11cd9786b9a1c7" prot="public">
+          <name>LSM303_REGISTER_ACCEL_INT2_DURATION_A</name>
+          <initializer>= 0x37</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a2aae1962651bfa80c64eb6f5deb31f7d" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CLICK_CFG_A</name>
+          <initializer>= 0x38</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a2b1ad5757cff78a5b0a66086db382b63" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CLICK_SRC_A</name>
+          <initializer>= 0x39</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a024cedf45e471f7b15c507c55ae01915" prot="public">
+          <name>LSM303_REGISTER_ACCEL_CLICK_THS_A</name>
+          <initializer>= 0x3A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075af9ee2e90c68db76d71b5079cc00212d9" prot="public">
+          <name>LSM303_REGISTER_ACCEL_TIME_LIMIT_A</name>
+          <initializer>= 0x3B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075a20547f3696295be81c4872d7b09360c0" prot="public">
+          <name>LSM303_REGISTER_ACCEL_TIME_LATENCY_A</name>
+          <initializer>= 0x3C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a2e46071529700e6416da536323804075ac3ef85c29f0c70b333d3f17e616c69c1" prot="public">
+          <name>LSM303_REGISTER_ACCEL_TIME_WINDOW_A</name>
+          <initializer>= 0x3D</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="38" column="5" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="39" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="enum" id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lsm303MagRegisters_t</name>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a0c23b91a545cea35cd9d778b24ad3ad2" prot="public">
+          <name>LSM303_REGISTER_MAG_CRA_REG_M</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a7aab26ce37e624ed0c4cc95f454642f6" prot="public">
+          <name>LSM303_REGISTER_MAG_CRB_REG_M</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a14e9eb9720dcec21f86e6d32e188b801" prot="public">
+          <name>LSM303_REGISTER_MAG_MR_REG_M</name>
+          <initializer>= 0x02</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a7606a50f28b17941b6286956af77a488" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_X_H_M</name>
+          <initializer>= 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88ad85b1bad5c6fe7e7cff463d7df610e1e" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_X_L_M</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a9d1b04201594b33f879154846416e0e5" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_Z_H_M</name>
+          <initializer>= 0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a70cd83eb5328fe8313f30e5f9df2e52e" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_Z_L_M</name>
+          <initializer>= 0x06</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a9743dd24de81f7c3c23dfdc9700432f1" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_Y_H_M</name>
+          <initializer>= 0x07</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88ac9647a62ebeb806ff67f62322962dcfb" prot="public">
+          <name>LSM303_REGISTER_MAG_OUT_Y_L_M</name>
+          <initializer>= 0x08</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a01f2a97aa31bc0010ae6d481b945e404" prot="public">
+          <name>LSM303_REGISTER_MAG_SR_REG_Mg</name>
+          <initializer>= 0x09</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a4ab8c0afc1d762063d4bbc46683bc677" prot="public">
+          <name>LSM303_REGISTER_MAG_IRA_REG_M</name>
+          <initializer>= 0x0A</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88abdf39437bca3a77d7ed8a32f6a768cbc" prot="public">
+          <name>LSM303_REGISTER_MAG_IRB_REG_M</name>
+          <initializer>= 0x0B</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a2650ac82387846531502783f6005582e" prot="public">
+          <name>LSM303_REGISTER_MAG_IRC_REG_M</name>
+          <initializer>= 0x0C</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88aa1a0c8e18fcccff440945148e37a9d6d" prot="public">
+          <name>LSM303_REGISTER_MAG_TEMP_OUT_H_M</name>
+          <initializer>= 0x31</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a40aa2cd7541a072b0f41bd0356794f88a903f030923e308d901d0f78cc9e0588c" prot="public">
+          <name>LSM303_REGISTER_MAG_TEMP_OUT_L_M</name>
+          <initializer>= 0x32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="72" column="5" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="73" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="enum" id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lsm303MagGain</name>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62da83f744fd8593f78c696259bc4623a6cf" prot="public">
+          <name>LSM303_MAGGAIN_1_3</name>
+          <initializer>= 0x20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62da38b42e3b42246f3f572f893d80e86c91" prot="public">
+          <name>LSM303_MAGGAIN_1_9</name>
+          <initializer>= 0x40</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62da00d41f6afc0f2369e7dce168004043f9" prot="public">
+          <name>LSM303_MAGGAIN_2_5</name>
+          <initializer>= 0x60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62daf44d40d244439ca97d0873a5ccb4ff87" prot="public">
+          <name>LSM303_MAGGAIN_4_0</name>
+          <initializer>= 0x80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62dab0e2a008226c1e5ff8425f835ab312cc" prot="public">
+          <name>LSM303_MAGGAIN_4_7</name>
+          <initializer>= 0xA0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62da45cf11c6fdf99791f09719ed84a5ed5c" prot="public">
+          <name>LSM303_MAGGAIN_5_6</name>
+          <initializer>= 0xC0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1a84d3ad8ca5077d39b626bf4c4bcff62da2c9358dc26fa11afd5ab989e7e7bba2a" prot="public">
+          <name>LSM303_MAGGAIN_8_1</name>
+          <initializer>= 0xE0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="95" column="5" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="enum" id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>lsm303MagRate</name>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dda466e2c27a5382f72fa9eb6018d293e69" prot="public">
+          <name>LSM303_MAGRATE_0_7</name>
+          <initializer>= 0x00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dda2010c3618e4bbd284a3717a7664dd63a" prot="public">
+          <name>LSM303_MAGRATE_1_5</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dda68fdafbe7d944a1fe6ddbddce3a5ed4a" prot="public">
+          <name>LSM303_MAGRATE_3_0</name>
+          <initializer>= 0x62</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dda05315112533876d5f6cdef0cefd4566e" prot="public">
+          <name>LSM303_MAGRATE_7_5</name>
+          <initializer>= 0x03</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7dda7004c54eca7343b000c2cc4e893ceb58" prot="public">
+          <name>LSM303_MAGRATE_15</name>
+          <initializer>= 0x04</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7ddad0c8b20902ce6d54faea75c9fa23249d" prot="public">
+          <name>LSM303_MAGRATE_30</name>
+          <initializer>= 0x05</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7ddab5fc559236bfd4f278cf555295d23374" prot="public">
+          <name>LSM303_MAGRATE_75</name>
+          <initializer>= 0x06</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___l_s_m303___u_8h_1afb94e05d76b7aa7e91cb282ec062c7ddae7de803b87dc8cd0077dd4c8f8a57cd0" prot="public">
+          <name>LSM303_MAGRATE_220</name>
+          <initializer>= 0x07</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="110" column="5" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" bodystart="111" bodyend="120"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_adafruit___l_s_m303___u_8h_1a5573de0aba7db7cba1f0083b635c8041" prot="public" static="no">
+        <type>struct <ref refid="structlsm303_mag_data__s" kindref="compound">lsm303MagData_s</ref></type>
+        <definition>typedef struct lsm303MagData_s lsm303MagData</definition>
+        <argsstring></argsstring>
+        <name>lsm303MagData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="131" column="19"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_adafruit___l_s_m303___u_8h_1a7b2d0bd817dea8e02a8cee26e3ef61c0" prot="public" static="no">
+        <type>struct <ref refid="structlsm303_accel_data__s" kindref="compound">lsm303AccelData_s</ref></type>
+        <definition>typedef struct lsm303AccelData_s lsm303AccelData</definition>
+        <argsstring></argsstring>
+        <name>lsm303AccelData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="142" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>This<sp/>is<sp/>a<sp/>library<sp/>for<sp/>the<sp/>LSM303<sp/>Accelerometer<sp/>and<sp/>magnentometer/compass</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>Designed<sp/>specifically<sp/>to<sp/>work<sp/>with<sp/>the<sp/>Adafruit<sp/>LSM303DLHC<sp/>Breakout</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>These<sp/>displays<sp/>use<sp/>I2C<sp/>to<sp/>communicate,<sp/>2<sp/>pins<sp/>are<sp/>required<sp/>to<sp/>interface.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>please<sp/>support<sp/>Adafruit<sp/>andopen-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>Written<sp/>by<sp/>Kevin<sp/>Townsend<sp/>for<sp/>Adafruit<sp/>Industries.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>BSD<sp/>license,<sp/>all<sp/>text<sp/>above<sp/>must<sp/>be<sp/>included<sp/>in<sp/>any<sp/>redistribution</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__LSM303_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__LSM303_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(ARDUINO<sp/>&gt;=<sp/>100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_Sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>I2C<sp/>ADDRESS/BITS</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LSM303_ADDRESS_ACCEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x32<sp/>&gt;&gt;<sp/>1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0011001x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LSM303_ADDRESS_MAG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x3C<sp/>&gt;&gt;<sp/>1)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0011110x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>REGISTERS</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DEFAULT<sp/><sp/><sp/><sp/>TYPE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG1_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x20,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000111<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG2_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x21,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG3_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x22,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG4_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x23,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG5_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x24,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CTRL_REG6_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x25,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>rw</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_REFERENCE_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x26,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_STATUS_REG_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x27,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>00000000<sp/><sp/><sp/>r</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_X_L_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x28,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_X_H_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x29,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_Y_L_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2A,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_Y_H_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2B,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_Z_L_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2C,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_OUT_Z_H_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2D,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_FIFO_CTRL_REG_A<sp/><sp/><sp/><sp/><sp/>=<sp/>0x2E,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_FIFO_SRC_REG_A<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2F,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT1_CFG_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x30,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT1_SOURCE_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x31,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT1_THS_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x32,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT1_DURATION_A<sp/><sp/><sp/><sp/><sp/>=<sp/>0x33,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT2_CFG_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x34,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT2_SOURCE_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x35,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT2_THS_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x36,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_INT2_DURATION_A<sp/><sp/><sp/><sp/><sp/>=<sp/>0x37,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CLICK_CFG_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x38,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CLICK_SRC_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x39,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_CLICK_THS_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x3A,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_TIME_LIMIT_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x3B,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_TIME_LATENCY_A<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x3C,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_ACCEL_TIME_WINDOW_A<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x3D</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a2e46071529700e6416da536323804075" kindref="member">lsm303AccelRegisters_t</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_CRA_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_CRB_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x01,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_MR_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x02,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_X_H_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x03,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_X_L_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x04,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_Z_H_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x05,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_Z_L_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x06,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_Y_H_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x07,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_OUT_Y_L_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x08,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_SR_REG_Mg<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x09,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_IRA_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0A,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_IRB_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0B,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_IRC_REG_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x0C,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_TEMP_OUT_H_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x31,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_REGISTER_MAG_TEMP_OUT_L_M<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x32</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a40aa2cd7541a072b0f41bd0356794f88" kindref="member">lsm303MagRegisters_t</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/>MAGNETOMETER<sp/>GAIN<sp/>SETTINGS</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_1_3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x20,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>1.3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_1_9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x40,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>1.9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_2_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x60,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>2.5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_4_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x80,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>4.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_4_7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xA0,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>4.7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_5_6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xC0,<sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>5.6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGGAIN_8_1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xE0<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>+/-<sp/>8.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1a84d3ad8ca5077d39b626bf4c4bcff62d" kindref="member">lsm303MagGain</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>MAGNETOMETER<sp/>UPDATE<sp/>RATE<sp/>SETTINGS</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_0_7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00,<sp/><sp/></highlight><highlight class="comment">//<sp/>0.75<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_1_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x01,<sp/><sp/></highlight><highlight class="comment">//<sp/>1.5<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_3_0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x62,<sp/><sp/></highlight><highlight class="comment">//<sp/>3.0<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_7_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x03,<sp/><sp/></highlight><highlight class="comment">//<sp/>7.5<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x04,<sp/><sp/></highlight><highlight class="comment">//<sp/>15<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_30<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x05,<sp/><sp/></highlight><highlight class="comment">//<sp/>30<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_75<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x06,<sp/><sp/></highlight><highlight class="comment">//<sp/>75<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LSM303_MAGRATE_220<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x07<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>200<sp/>Hz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303_d_l_h___mag_2_adafruit___l_s_m303_d_l_h___mag_8h_1afb94e05d76b7aa7e91cb282ec062c7dd" kindref="member">lsm303MagRate</ref>;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/>INTERNAL<sp/>MAGNETOMETER<sp/>DATA<sp/>TYPE</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlsm303_mag_data__s" kindref="compound">lsm303MagData_s</ref></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_mag_data__s_1ad520c769dfb74a10bcdc367862f7aedb" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_mag_data__s_1a5717a446539f9c872403e9cf6568bfca" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_mag_data__s_1a245ae176124ccadcfb55fafdcf0e28b0" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structlsm303_mag_data__s" kindref="compound">lsm303MagData</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/><sp/>INTERNAL<sp/>ACCELERATION<sp/>DATA<sp/>TYPE</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structlsm303_accel_data__s" kindref="compound">lsm303AccelData_s</ref></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_accel_data__s_1aa7355274ca653858408a58b0bdd7b540" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_accel_data__s_1a0c934a0a1ccde8de68c9396145c99a05" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><ref refid="structlsm303_accel_data__s_1aa8aedc4b78c42e606bf89dfa380f97e1" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structlsm303_accel_data__s" kindref="compound">lsm303AccelData</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/>CHIP<sp/>ID</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LSM303_ID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0b11010100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Unified<sp/>sensor<sp/>driver<sp/>for<sp/>the<sp/>accelerometer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___l_s_m303___accel___unified" kindref="compound">Adafruit_LSM303_Accel_Unified</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adafruit___l_s_m303___accel___unified" kindref="compound">Adafruit_LSM303_Accel_Unified</ref>(int32_t<sp/>sensorID<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a624809bb4ec6016bb16ec71fb8e868f6" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158" refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" kindref="member">getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>*);</highlight></codeline>
+<codeline lineno="159" refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" kindref="member">getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>*);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>lsm303AccelData<sp/>raw;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>read<sp/>accelerometer<sp/>data<sp/>will<sp/>be<sp/>available<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_sensorID;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>read8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Unified<sp/>sensor<sp/>driver<sp/>for<sp/>the<sp/>magnetometer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="class_adafruit___l_s_m303___mag___unified" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___l_s_m303___mag___unified" kindref="compound">Adafruit_LSM303_Mag_Unified</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_adafruit___l_s_m303___mag___unified" kindref="compound">Adafruit_LSM303_Mag_Unified</ref>(int32_t<sp/>sensorID<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1ac05a035aa55f59f841aa91e0d47351bf" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1a659bbb397e0233e92ea10aebca8fd47a" kindref="member">enableAutoRange</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1a248b6b5d7699f8e1134e1c6a5b505bd1" kindref="member">setMagGain</ref>(lsm303MagGain<sp/>gain);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1a1c147b5afc449842a23bcd16d1980d4f" kindref="member">setMagRate</ref>(lsm303MagRate<sp/>rate);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1a9cf8ad0406e47762b730078db8a1157a" kindref="member">getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>*);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___l_s_m303___mag___unified_1a6a4d7a4a440a8faa122dfee113413375" kindref="member">getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>*);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlsm303_mag_data__s" kindref="compound">lsm303MagData</ref><sp/><sp/><sp/>raw;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>read<sp/>magnetometer<sp/>data<sp/>will<sp/>be<sp/>available<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>lsm303MagGain<sp/><sp/><sp/>magGain;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>autoRangeEnabled;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_sensorID;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>read8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Non<sp/>Unified<sp/>(old)<sp/>driver<sp/>for<sp/>compatibility<sp/>reasons<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="class_adafruit___l_s_m303" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___l_s_m303" kindref="compound">Adafruit_LSM303</ref></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>begin(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setMagGain(lsm303MagGain<sp/>gain);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlsm303_accel_data__s" kindref="compound">lsm303AccelData</ref><sp/>accelData;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>read<sp/>accelerometer<sp/>data<sp/>will<sp/>be<sp/>available<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structlsm303_mag_data__s" kindref="compound">lsm303MagData</ref><sp/>magData;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>read<sp/>magnetometer<sp/>data<sp/>will<sp/>be<sp/>available<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>write8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>value);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>read8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2sensirion-lf_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Experimental<sp/>Arduino<sp/>library<sp/>for<sp/>Sensirion<sp/>liquid<sp/>flow<sp/>sensors<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Build<sp/>Status](https://travis-ci.org/winkj/sensirion-lf.svg?branch=master)](https://travis-ci.org/winkj/sensirion-lf)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>an<sp/>Arduino<sp/>library<sp/>for<sp/>the<sp/>Sensirion<sp/>Liquid<sp/>Flow<sp/>sensors,<sp/>based<sp/>on<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">github<sp/>snippet<sp/>page<sp/>at<sp/>https://github.com/Sensirion/arduino-liquid-flow-snippets</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>the<sp/>documentation<sp/>on<sp/>https://developer.sensirion.com/tutorials/arduino-interface-for-liquid-flow-sensors/<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Supported<sp/>sensors</highlight></codeline>
+<codeline><highlight class="normal">Currently,<sp/>the<sp/>following<sp/>sensors<sp/>are<sp/>supported:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>SLF3X</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>sensors<sp/>are<sp/>expected<sp/>to<sp/>work,<sp/>but<sp/>haven&apos;t<sp/>been<sp/>tested:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>LD20</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Included<sp/>examples</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>slf3x-minimal</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>a<sp/>minimal<sp/>example,<sp/>reading<sp/>out<sp/>the<sp/>data<sp/>from<sp/>the<sp/>sensor<sp/>and<sp/>printing</highlight></codeline>
+<codeline><highlight class="normal">it<sp/>to<sp/>the<sp/>serial<sp/>console.<sp/>Use<sp/>the<sp/>Arduino<sp/>IDE&apos;s<sp/>&quot;Serial<sp/>Monitor&quot;<sp/>to<sp/>see<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">values<sp/>read<sp/>from<sp/>the<sp/>sensor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>slf3x-demo</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>example<sp/>adds<sp/>a<sp/>second<sp/>output<sp/>format<sp/>that<sp/>is<sp/>suitable<sp/>for<sp/>the<sp/>plotter<sp/>that</highlight></codeline>
+<codeline><highlight class="normal">is<sp/>integrated<sp/>with<sp/>the<sp/>Arduino<sp/>IDE.<sp/>To<sp/>enable<sp/>that<sp/>format,<sp/>simply<sp/>uncomment<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">```#define<sp/>GENERATE_PLOTTER_OUTPUT```<sp/>line.<sp/>Note<sp/>that<sp/>the<sp/>code<sp/>will<sp/>scale<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">flow<sp/>values<sp/>by<sp/>a<sp/>factor<sp/>of<sp/>1000<sp/>which<sp/>changes<sp/>the<sp/>unit<sp/>of<sp/>the<sp/>output<sp/>to</highlight></codeline>
+<codeline><highlight class="normal">micro<sp/>liters<sp/>per<sp/>hour;<sp/>this<sp/>is<sp/>done<sp/>to<sp/>get<sp/>the<sp/>values<sp/>into<sp/>a<sp/>similar<sp/>range<sp/>as</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>temperature<sp/>read<sp/>from<sp/>the<sp/>sensor.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>plot<sp/>should<sp/>look<sp/>similar<sp/>to<sp/>this:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![SLF3X<sp/>plot](/doc/sensirion-lf-plot.jpg)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Feedback</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>have<sp/>questions<sp/>or<sp/>suggestions,<sp/>please<sp/>submit<sp/>an<sp/>issue<sp/>via<sp/>github.</highlight></codeline>
+    </programlisting>
+    <location file="libraries/sensirion-lf/README.md"/>
+  </compounddef>
+</doxygen>

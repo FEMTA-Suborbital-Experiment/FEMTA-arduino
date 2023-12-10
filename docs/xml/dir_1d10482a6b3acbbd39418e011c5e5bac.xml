@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_1d10482a6b3acbbd39418e011c5e5bac" kind="dir">
+    <compoundname>libraries/CSV_Parser</compoundname>
+    <innerdir refid="dir_167996bba75b53f0367bb61bd4da5eae">libraries/CSV_Parser/examples</innerdir>
+    <innerfile refid="_c_s_v___parser_8cpp">CSV_Parser.cpp</innerfile>
+    <innerfile refid="_c_s_v___parser_8h">CSV_Parser.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/CSV_Parser/"/>
+  </compounddef>
+</doxygen>

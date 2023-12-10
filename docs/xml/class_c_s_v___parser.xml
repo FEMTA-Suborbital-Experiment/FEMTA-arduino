@@ -1,0 +1,1035 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_c_s_v___parser" kind="class" language="C++" prot="public">
+    <compoundname>CSV_Parser</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_s_v___parser_1a222c71a1d12a5dbd57dbf51c8161c2a6" prot="private" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** CSV_Parser::keys</definition>
+        <argsstring></argsstring>
+        <name>keys</name>
+        <qualifiedname>CSV_Parser::keys</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="29" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a3df07ff00ae8d52f60ffe8f4f6e03c8d" prot="private" static="no" mutable="no">
+        <type>void **</type>
+        <definition>void** CSV_Parser::values</definition>
+        <argsstring></argsstring>
+        <name>values</name>
+        <qualifiedname>CSV_Parser::values</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="30" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1ab31efc8af5797dbc8dfb8bde706b8551" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* CSV_Parser::fmt</definition>
+        <argsstring></argsstring>
+        <name>fmt</name>
+        <qualifiedname>CSV_Parser::fmt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="31" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a2134cbd02ee551016c362bfaff507398" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* CSV_Parser::is_fmt_unsigned</definition>
+        <argsstring></argsstring>
+        <name>is_fmt_unsigned</name>
+        <qualifiedname>CSV_Parser::is_fmt_unsigned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="33" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a481b3bde4c16e71176fe337d3c64eeaa" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSV_Parser::rows_count</definition>
+        <argsstring></argsstring>
+        <name>rows_count</name>
+        <qualifiedname>CSV_Parser::rows_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="46" column="7" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a48405b4a63f7e37fef10cf9453160986" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CSV_Parser::cols_count</definition>
+        <argsstring></argsstring>
+        <name>cols_count</name>
+        <qualifiedname>CSV_Parser::cols_count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="46" column="18" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a9eba25a78cc898263158d5a2c1d03467" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CSV_Parser::has_header</definition>
+        <argsstring></argsstring>
+        <name>has_header</name>
+        <qualifiedname>CSV_Parser::has_header</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="48" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1aba12ab1869f68246ce5c2c88173bb969" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CSV_Parser::delimiter</definition>
+        <argsstring></argsstring>
+        <name>delimiter</name>
+        <qualifiedname>CSV_Parser::delimiter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="49" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a6bbdec14ef50fc1390b17a9b45b08cbe" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CSV_Parser::quote_char</definition>
+        <argsstring></argsstring>
+        <name>quote_char</name>
+        <qualifiedname>CSV_Parser::quote_char</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="50" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a76b41922c6bc316ff925a7044156af62" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CSV_Parser::delim_chars[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>delim_chars</name>
+        <qualifiedname>CSV_Parser::delim_chars</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="52" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a7fd4c77b07fd1dd40e3cd3962242add2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CSV_Parser::whole_csv_supplied</definition>
+        <argsstring></argsstring>
+        <name>whole_csv_supplied</name>
+        <qualifiedname>CSV_Parser::whole_csv_supplied</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="55" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a9f07095190fe3ad910322c89ecac8c93" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* CSV_Parser::leftover</definition>
+        <argsstring></argsstring>
+        <name>leftover</name>
+        <qualifiedname>CSV_Parser::leftover</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="60" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1aa8c248b36566c78d36665618313ce338" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t CSV_Parser::current_col</definition>
+        <argsstring></argsstring>
+        <name>current_col</name>
+        <qualifiedname>CSV_Parser::current_col</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="61" column="12" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_s_v___parser_1a960f5baa43c15aff44b0ce4d7c44ad4a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CSV_Parser::header_parsed</definition>
+        <argsstring></argsstring>
+        <name>header_parsed</name>
+        <qualifiedname>CSV_Parser::header_parsed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="62" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_s_v___parser_1a769767d0ffa58290f06cd355324d7b29" prot="private" static="yes" mutable="no">
+        <type>Stream *</type>
+        <definition>Stream* CSV_Parser::debug_serial</definition>
+        <argsstring></argsstring>
+        <name>debug_serial</name>
+        <qualifiedname>CSV_Parser::debug_serial</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="53" column="18" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_s_v___parser_1aa45972a717a5af90b0293439401a8712" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * CSV_Parser::parseStringValue</definition>
+        <argsstring>(const char *, int *chars_occupied)</argsstring>
+        <name>parseStringValue</name>
+        <qualifiedname>CSV_Parser::parseStringValue</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <defname>s</defname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>chars_occupied</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="65" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="137" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1af81c68ae500606618b13002ba351178e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::saveNewValue</definition>
+        <argsstring>(const char *val, char type_specifier, int row, int col, bool is_unsigned)</argsstring>
+        <name>saveNewValue</name>
+        <qualifiedname>CSV_Parser::saveNewValue</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>type_specifier</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_unsigned</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="66" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="253" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a11e7418b32ca917cd514c9b46dcd1fab" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::AssignIsFmtUnsignedArray</definition>
+        <argsstring>(const char *fmt_)</argsstring>
+        <name>AssignIsFmtUnsignedArray</name>
+        <qualifiedname>CSV_Parser::AssignIsFmtUnsignedArray</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fmt_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="71" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1abbef77b23a8d4e17e8f40cf3585a64dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::supplyChunk</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>supplyChunk</name>
+        <qualifiedname>CSV_Parser::supplyChunk</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="83" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="367" bodyend="435"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_s_v___parser_1ae7e24b6f3df77a7ac22838ac7fccafeb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t CSV_Parser::getTypeSize</definition>
+        <argsstring>(char type_specifier)</argsstring>
+        <name>getTypeSize</name>
+        <qualifiedname>CSV_Parser::getTypeSize</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>type_specifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="68" column="17" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="215" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a8838d7926fc348a7b679f7d68b61b4aa" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * CSV_Parser::getTypeName</definition>
+        <argsstring>(char type_specifier, bool is_unsigned)</argsstring>
+        <name>getTypeName</name>
+        <qualifiedname>CSV_Parser::getTypeName</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>type_specifier</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_unsigned</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="69" column="22" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="230" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a3fce3caa8b981fbc8f561bf41be7b52f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * CSV_Parser::strdup_ignoring_u</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>strdup_ignoring_u</name>
+        <qualifiedname>CSV_Parser::strdup_ignoring_u</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="74" column="16" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="14" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a391b75b1332cf60f25567e10cf98f9cd" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t CSV_Parser::strlen_ignoring_u</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>strlen_ignoring_u</name>
+        <qualifiedname>CSV_Parser::strlen_ignoring_u</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="75" column="17" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a20d594863f73eef6f45b85a6564b184e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * CSV_Parser::strdup_trimmed</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>strdup_trimmed</name>
+        <qualifiedname>CSV_Parser::strdup_trimmed</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="76" column="16" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="42" bodyend="51"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_s_v___parser_1af284aab71d2ce32c42a86d69685ad121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CSV_Parser::CSV_Parser</definition>
+        <argsstring>(const char *s, const char *fmt, bool has_header=true, char delimiter=&apos;,&apos;, char quote_char=&apos;&quot;&apos;)</argsstring>
+        <name>CSV_Parser</name>
+        <qualifiedname>CSV_Parser::CSV_Parser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>has_header</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>delimiter</declname>
+          <defval>&apos;,&apos;</defval>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>quote_char</declname>
+          <defval>&apos;&quot;&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string containing csv <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fmt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- string containing format specifiers for each column <linebreak/>
+ Acceptable format types are: <linebreak/>
+ s - string (C-like string, not a &quot;String&quot; Arduino object, just a char pointer, terminated by 0) <linebreak/>
+ f - float <linebreak/>
+ L - int32_t (32-bit signed value, can&apos;t be used for values over 2147483647) <linebreak/>
+ d - int16_t (16-bit signed value, can&apos;t be used for values over 32767) <linebreak/>
+ c - char (8-bit signed value, can&apos;t be used for values over 127) <linebreak/>
+ x - hex (stored as int32_t) <linebreak/>
+ &quot;-&quot; (dash character) means that value is unused/not-parsed (this way memory won&apos;t be allocated for values from that column) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>has_header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) - If the supplied csv string does not have header line then &quot;false&quot; may be supplied <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delimiter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) - It&apos;s a character that separates values. By default it&apos;s a comma. If the delimiter is not a comma (e.g. if it&apos;s &quot;;&quot; or &quot;\t&quot; instead) then it may be supplied. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quote_char</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) - Quote char allows to include delimiter or new line characters to be part of the string value itself. By default it&apos;s double quote character. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="100" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="70" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a0a229060a79e48d510a3ab698adfa402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSV_Parser::CSV_Parser</definition>
+        <argsstring>(const char *s, const char *fmt, bool hh, char d, const char *qc)</argsstring>
+        <name>CSV_Parser</name>
+        <qualifiedname>CSV_Parser::CSV_Parser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hh</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>qc</declname>
+        </param>
+        <briefdescription>
+<para>Additional constructor to allow supplying quote char as a string. Why? <linebreak/>
+ Because supplied quote char is likely to be a single-quote, which would require escaping using backslash if it was supplied as char. I bet some people would rather use &quot;&apos;&quot; instead of &apos;\&apos;&apos; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="105" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1ab48c97e7d7b09990e7550f5eafbeb33e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSV_Parser::CSV_Parser</definition>
+        <argsstring>(const char *fmt_, bool hh=true, char d=&apos;,&apos;, char qc=&apos;&quot;&apos;) </argsstring>
+        <name>CSV_Parser</name>
+        <qualifiedname>CSV_Parser::CSV_Parser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fmt_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hh</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>d</declname>
+          <defval>&apos;,&apos;</defval>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>qc</declname>
+          <defval>&apos;&quot;&apos;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor for supplying csv string by chunks. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="108" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1aff78e0a453cef070b9f5cd212f832bf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSV_Parser::CSV_Parser</definition>
+        <argsstring>(const char *fmt_, bool hh, char d, const char *qc)</argsstring>
+        <name>CSV_Parser</name>
+        <qualifiedname>CSV_Parser::CSV_Parser</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>fmt_</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hh</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>qc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="109" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a1e4436ea4baef41584667d55ccf31983" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CSV_Parser::~CSV_Parser</definition>
+        <argsstring>()</argsstring>
+        <name>~CSV_Parser</name>
+        <qualifiedname>CSV_Parser::~CSV_Parser</qualifiedname>
+        <briefdescription>
+<para>Releases all dynamically allocated memory. <linebreak/>
+ Making values unusable once the <ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> goes out of scope. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="113" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="96" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1ac127ae6fb3f70b1a7fe841385675d2a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CSV_Parser::readSDfile</definition>
+        <argsstring>(const char *f_name)</argsstring>
+        <name>readSDfile</name>
+        <qualifiedname>CSV_Parser::readSDfile</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>f_name</declname>
+        </param>
+        <briefdescription>
+<para>Reads file from SD card. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- file name (provided file must have format that was supplied in <ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> constructor) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if file could be read, false if not. It requires previously calling &quot;SD.begin()&quot;. <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="121" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="113" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1adcf07ca7590aace95e8607ebf3ce2521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CSV_Parser::getColumnsCount</definition>
+        <argsstring>()</argsstring>
+        <name>getColumnsCount</name>
+        <qualifiedname>CSV_Parser::getColumnsCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="124" column="7" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="285" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a41ff94800b60aa976d10db7071957560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CSV_Parser::getRowsCount</definition>
+        <argsstring>()</argsstring>
+        <name>getRowsCount</name>
+        <qualifiedname>CSV_Parser::getRowsCount</qualifiedname>
+        <briefdescription>
+<para>Excluding header (if it was part of supplied CSV). <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="127" column="7" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="286" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1ae18a3b9fcebec1305ba23cfe50c56575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * CSV_Parser::getValues</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>getValues</name>
+        <qualifiedname>CSV_Parser::getValues</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Gets values given the column key name. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- column name <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the first value (it must be cast by the user) <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="132" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a6b07702c6dc7233d8e7297fcf0ba99ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * CSV_Parser::getValues</definition>
+        <argsstring>(int col_index)</argsstring>
+        <name>getValues</name>
+        <qualifiedname>CSV_Parser::getValues</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>col_index</declname>
+        </param>
+        <briefdescription>
+<para>Gets values given the column index. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- column number (starting with 0) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the first value (it must be cast by the user) <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="137" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1abfcc311c0f24c5a816651c0366a22979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * CSV_Parser::operator[]</definition>
+        <argsstring>(const char *key)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>CSV_Parser::operator[]</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>It&apos;s the same as GetValues(key) but allows to use operator instead of method call, like: <linebreak/>
+ int32_t * my_values = (int32_t*)cp[&quot;my_key&quot;]; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- column name <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="142" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="289" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1aa59219b05b949c7a2ba7abbad5f9bc8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * CSV_Parser::operator[]</definition>
+        <argsstring>(int col_index)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>CSV_Parser::operator[]</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>col_index</declname>
+        </param>
+        <briefdescription>
+<para>It&apos;s the same as GetValues(col_index) but allows to use operator instead of method call, like: <linebreak/>
+ int32_t * my_values = (int32_t*)cp[0]; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>col_index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- column index (0 being the first column) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="147" column="9" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="297" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a9e8b2eda58fcdd6a9e3da2f0c012e493" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::printKeys</definition>
+        <argsstring>(Stream &amp;ser=Serial)</argsstring>
+        <name>printKeys</name>
+        <qualifiedname>CSV_Parser::printKeys</qualifiedname>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>ser</declname>
+          <defval>Serial</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="149" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="279" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a8945f77049c64f6a59b08c146caa04d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::print</definition>
+        <argsstring>(Stream &amp;ser=Serial)</argsstring>
+        <name>print</name>
+        <qualifiedname>CSV_Parser::print</qualifiedname>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>ser</declname>
+          <defval>Serial</defval>
+        </param>
+        <briefdescription>
+<para>Prints whole parsed content including: <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>column names <linebreak/>
+</para>
+</listitem><listitem><para>column types <linebreak/>
+</para>
+</listitem><listitem><para>all parsed values <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(optional) - Stream object like &quot;Serial&quot; (by default) or &quot;Serial1&quot;. For example, it allows to supply &quot;Serial1&quot; or an object of &quot;SoftwareSerial.h&quot; library. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="159" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="301" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1aed45a6caaac8e820d7818a77a9abdf7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> &amp;</type>
+        <definition>CSV_Parser &amp; CSV_Parser::operator&lt;&lt;</definition>
+        <argsstring>(const char *s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>CSV_Parser::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>It&apos;s the same as supplyChunk(s) but allows to use operator instead of method call, like: <linebreak/>
+ cp &lt;&lt; &quot;my_strings,my_ints\n&quot; &lt;&lt; &quot;hello,1\n&quot; &lt;&lt; &quot;world,2\n&quot;; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="163" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="438" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a5525df9c35aec6876480129df126388e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> &amp;</type>
+        <definition>CSV_Parser &amp; CSV_Parser::operator&lt;&lt;</definition>
+        <argsstring>(String s)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>CSV_Parser::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Example: <linebreak/>
+ cp &lt;&lt; String(5) + &quot;,&quot; + String(6) + &quot;\n&quot;; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="167" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="445" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a376e45bf172be1016309a9c979343f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> &amp;</type>
+        <definition>CSV_Parser &amp; CSV_Parser::operator&lt;&lt;</definition>
+        <argsstring>(char c)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>CSV_Parser::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Example: <linebreak/>
+ cp &lt;&lt; &apos;a&apos; &lt;&lt; &apos;,&apos; &lt;&lt; &apos;b&apos;; <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="171" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="451" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1a352503aba3daf2e9db306c22f2c25692" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> &amp;</type>
+        <definition>CSV_Parser &amp; CSV_Parser::operator&lt;&lt;</definition>
+        <argsstring>(T t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>CSV_Parser::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>This handler converts all types (not covered in other &quot;&lt;&lt;&quot; operator handlers) to String. For example it will handle: <linebreak/>
+ cp &lt;&lt; 5; cp &lt;&lt; 5.5f; cp &lt;&lt; 5L; cp &lt;&lt; 0b11111111 <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="179" column="3" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_s_v___parser_1aafbdf5883363d81d2f494025a247a0f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSV_Parser::parseLeftover</definition>
+        <argsstring>()</argsstring>
+        <name>parseLeftover</name>
+        <qualifiedname>CSV_Parser::parseLeftover</qualifiedname>
+        <briefdescription>
+<para>Forces the previously supplied (but not parsed) chunks to be parsed despite not ending with &quot;\n&quot; or &quot;\r\n&quot; or delimiter. <linebreak/>
+ This function should be called after full csv string is supplied with repetitive supplyChunk method calls. <linebreak/>
+ If the csv string ended with &quot;\n&quot; or &quot;\r\n&quot; then endChunks() call is not necessary. <linebreak/>
+ If the csv string did not end with &quot;\n&quot; or &quot;\r\n&quot; then endChunks() must be called, otherwise the last row won&apos;t be returned when using &quot;GetValues&quot;. <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/CSV_Parser/CSV_Parser.h" line="188" column="8" bodyfile="libraries/CSV_Parser/CSV_Parser.cpp" bodystart="457" bodyend="475"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/CSV_Parser/CSV_Parser.h" line="28" column="1" bodyfile="libraries/CSV_Parser/CSV_Parser.h" bodystart="28" bodyend="196"/>
+    <listofallmembers>
+      <member refid="class_c_s_v___parser_1a11e7418b32ca917cd514c9b46dcd1fab" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>AssignIsFmtUnsignedArray</name></member>
+      <member refid="class_c_s_v___parser_1a48405b4a63f7e37fef10cf9453160986" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>cols_count</name></member>
+      <member refid="class_c_s_v___parser_1af284aab71d2ce32c42a86d69685ad121" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>CSV_Parser</name></member>
+      <member refid="class_c_s_v___parser_1a0a229060a79e48d510a3ab698adfa402" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>CSV_Parser</name></member>
+      <member refid="class_c_s_v___parser_1ab48c97e7d7b09990e7550f5eafbeb33e" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>CSV_Parser</name></member>
+      <member refid="class_c_s_v___parser_1aff78e0a453cef070b9f5cd212f832bf3" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>CSV_Parser</name></member>
+      <member refid="class_c_s_v___parser_1aa8c248b36566c78d36665618313ce338" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>current_col</name></member>
+      <member refid="class_c_s_v___parser_1a769767d0ffa58290f06cd355324d7b29" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>debug_serial</name></member>
+      <member refid="class_c_s_v___parser_1a76b41922c6bc316ff925a7044156af62" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>delim_chars</name></member>
+      <member refid="class_c_s_v___parser_1aba12ab1869f68246ce5c2c88173bb969" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>delimiter</name></member>
+      <member refid="class_c_s_v___parser_1ab31efc8af5797dbc8dfb8bde706b8551" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>fmt</name></member>
+      <member refid="class_c_s_v___parser_1adcf07ca7590aace95e8607ebf3ce2521" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>getColumnsCount</name></member>
+      <member refid="class_c_s_v___parser_1a41ff94800b60aa976d10db7071957560" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>getRowsCount</name></member>
+      <member refid="class_c_s_v___parser_1a8838d7926fc348a7b679f7d68b61b4aa" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>getTypeName</name></member>
+      <member refid="class_c_s_v___parser_1ae7e24b6f3df77a7ac22838ac7fccafeb" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>getTypeSize</name></member>
+      <member refid="class_c_s_v___parser_1ae18a3b9fcebec1305ba23cfe50c56575" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>getValues</name></member>
+      <member refid="class_c_s_v___parser_1a6b07702c6dc7233d8e7297fcf0ba99ae" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>getValues</name></member>
+      <member refid="class_c_s_v___parser_1a9eba25a78cc898263158d5a2c1d03467" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>has_header</name></member>
+      <member refid="class_c_s_v___parser_1a960f5baa43c15aff44b0ce4d7c44ad4a" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>header_parsed</name></member>
+      <member refid="class_c_s_v___parser_1a2134cbd02ee551016c362bfaff507398" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>is_fmt_unsigned</name></member>
+      <member refid="class_c_s_v___parser_1a222c71a1d12a5dbd57dbf51c8161c2a6" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>keys</name></member>
+      <member refid="class_c_s_v___parser_1a9f07095190fe3ad910322c89ecac8c93" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>leftover</name></member>
+      <member refid="class_c_s_v___parser_1aed45a6caaac8e820d7818a77a9abdf7c" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_s_v___parser_1a5525df9c35aec6876480129df126388e" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_s_v___parser_1a376e45bf172be1016309a9c979343f3d" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_s_v___parser_1a352503aba3daf2e9db306c22f2c25692" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_c_s_v___parser_1abfcc311c0f24c5a816651c0366a22979" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator[]</name></member>
+      <member refid="class_c_s_v___parser_1aa59219b05b949c7a2ba7abbad5f9bc8c" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>operator[]</name></member>
+      <member refid="class_c_s_v___parser_1aafbdf5883363d81d2f494025a247a0f7" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>parseLeftover</name></member>
+      <member refid="class_c_s_v___parser_1aa45972a717a5af90b0293439401a8712" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>parseStringValue</name></member>
+      <member refid="class_c_s_v___parser_1a8945f77049c64f6a59b08c146caa04d3" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>print</name></member>
+      <member refid="class_c_s_v___parser_1a9e8b2eda58fcdd6a9e3da2f0c012e493" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>printKeys</name></member>
+      <member refid="class_c_s_v___parser_1a6bbdec14ef50fc1390b17a9b45b08cbe" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>quote_char</name></member>
+      <member refid="class_c_s_v___parser_1ac127ae6fb3f70b1a7fe841385675d2a7" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>readSDfile</name></member>
+      <member refid="class_c_s_v___parser_1a481b3bde4c16e71176fe337d3c64eeaa" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>rows_count</name></member>
+      <member refid="class_c_s_v___parser_1af81c68ae500606618b13002ba351178e" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>saveNewValue</name></member>
+      <member refid="class_c_s_v___parser_1a3fce3caa8b981fbc8f561bf41be7b52f" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>strdup_ignoring_u</name></member>
+      <member refid="class_c_s_v___parser_1a20d594863f73eef6f45b85a6564b184e" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>strdup_trimmed</name></member>
+      <member refid="class_c_s_v___parser_1a391b75b1332cf60f25567e10cf98f9cd" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>strlen_ignoring_u</name></member>
+      <member refid="class_c_s_v___parser_1abbef77b23a8d4e17e8f40cf3585a64dc" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>supplyChunk</name></member>
+      <member refid="class_c_s_v___parser_1a3df07ff00ae8d52f60ffe8f4f6e03c8d" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>values</name></member>
+      <member refid="class_c_s_v___parser_1a7fd4c77b07fd1dd40e3cd3962242add2" prot="private" virt="non-virtual"><scope>CSV_Parser</scope><name>whole_csv_supplied</name></member>
+      <member refid="class_c_s_v___parser_1a1e4436ea4baef41584667d55ccf31983" prot="public" virt="non-virtual"><scope>CSV_Parser</scope><name>~CSV_Parser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

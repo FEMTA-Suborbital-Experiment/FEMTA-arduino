@@ -1,0 +1,493 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dma_8h" kind="file" language="C++">
+    <compoundname>dma.h</compoundname>
+    <includedby refid="_adafruit___zero_d_m_a_8cpp" local="yes">libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp</includedby>
+    <includedby refid="_adafruit___zero_d_m_a_8h" local="yes">libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp</label>
+        <link refid="_adafruit___zero_d_m_a_8cpp"/>
+      </node>
+      <node id="3">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h</label>
+        <link refid="_adafruit___zero_d_m_a_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h</label>
+        <link refid="dma_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="6">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="dma_8h_1aabc43583fb52cd9480c59db897f78c23" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_transfer_trigger_action</name>
+        <enumvalue id="dma_8h_1aabc43583fb52cd9480c59db897f78c23af8fbe26d27aff578921e9fa486704258" prot="public">
+          <name>DMA_TRIGGER_ACTON_BLOCK</name>
+          <initializer>= DMAC_CHCTRLB_TRIGACT_BLOCK_Val</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1aabc43583fb52cd9480c59db897f78c23a25b07b0447e8860f173f6f5f9d2cb31f" prot="public">
+          <name>DMA_TRIGGER_ACTON_BEAT</name>
+          <initializer>= DMAC_CHCTRLB_TRIGACT_BEAT_Val</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1aabc43583fb52cd9480c59db897f78c23aa5fc4013552338a0b763fd359ea6cfc1" prot="public">
+          <name>DMA_TRIGGER_ACTON_TRANSACTION</name>
+          <initializer>= DMAC_CHCTRLB_TRIGACT_TRANSACTION_Val</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="64" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="64" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1a044a5044a2ccdac91a29c8207219d577" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_callback_type</name>
+        <enumvalue id="dma_8h_1a044a5044a2ccdac91a29c8207219d577a9b2cc1fdd9fda5e4fff165bb232b8840" prot="public">
+          <name>DMA_CALLBACK_TRANSFER_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a044a5044a2ccdac91a29c8207219d577ae3c312bb398675686bf5c0a26a06fda3" prot="public">
+          <name>DMA_CALLBACK_TRANSFER_DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a044a5044a2ccdac91a29c8207219d577a79818e92ef128101984df8b95e61c776" prot="public">
+          <name>DMA_CALLBACK_CHANNEL_SUSPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a044a5044a2ccdac91a29c8207219d577a1b92d572f1f4199d5f981887508e9e77" prot="public">
+          <name>DMA_CALLBACK_N</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="79" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="79" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1a6f84d28afb31e513c29c2e9da1d0120d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_beat_size</name>
+        <enumvalue id="dma_8h_1a6f84d28afb31e513c29c2e9da1d0120dafd321522455a54f59f5a4168c62c8558" prot="public">
+          <name>DMA_BEAT_SIZE_BYTE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a6f84d28afb31e513c29c2e9da1d0120dab79be202b39b04f652696982c93963f3" prot="public">
+          <name>DMA_BEAT_SIZE_HWORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a6f84d28afb31e513c29c2e9da1d0120dacce3d2a2b202bf31ddc5bdd7b5c3028a" prot="public">
+          <name>DMA_BEAT_SIZE_WORD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="89" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="89" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1aebf9692c7c0af39d5d2e137487baa1d7" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_event_output_selection</name>
+        <enumvalue id="dma_8h_1aebf9692c7c0af39d5d2e137487baa1d7aa6b7160c2c889977128cea6ca2c6a77f" prot="public">
+          <name>DMA_EVENT_OUTPUT_DISABLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1aebf9692c7c0af39d5d2e137487baa1d7a0fde049d9afdb25030b7e667c6bec7c7" prot="public">
+          <name>DMA_EVENT_OUTPUT_BLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1aebf9692c7c0af39d5d2e137487baa1d7a3756263dcd33a7d67a8ed1de97a9cb31" prot="public">
+          <name>DMA_EVENT_OUTPUT_RESERVED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1aebf9692c7c0af39d5d2e137487baa1d7ac55ed4b0d4af31022c24df4d9ccbc576" prot="public">
+          <name>DMA_EVENT_OUTPUT_BEAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="95" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1a31ab63d65af87361e500fff3fe03f722" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_block_action</name>
+        <enumvalue id="dma_8h_1a31ab63d65af87361e500fff3fe03f722a781de6bc203827346700c2dd142da600" prot="public">
+          <name>DMA_BLOCK_ACTION_NOACT</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a31ab63d65af87361e500fff3fe03f722a8f95656f5991b2372fdb90f821982d7d" prot="public">
+          <name>DMA_BLOCK_ACTION_INT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a31ab63d65af87361e500fff3fe03f722a29908d5a9064a58bf72b5efb4e053edf" prot="public">
+          <name>DMA_BLOCK_ACTION_SUSPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a31ab63d65af87361e500fff3fe03f722a9e9b3ee8f86c74ce37036be344711364" prot="public">
+          <name>DMA_BLOCK_ACTION_BOTH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="102" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="102" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1a2635e8f47abaa1c52bce61445851d8d4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_step_selection</name>
+        <enumvalue id="dma_8h_1a2635e8f47abaa1c52bce61445851d8d4a41ab157c967a0d7ecbc66dd0344f05f1" prot="public">
+          <name>DMA_STEPSEL_DST</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a2635e8f47abaa1c52bce61445851d8d4ae32d908034c2102a9c785b1d2ad87067" prot="public">
+          <name>DMA_STEPSEL_SRC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="118" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1a32499dde8d086313e14271a5f71387a3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_address_increment_stepsize</name>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3ac59eebaae920a4b1a3dc137302b8ccda" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3acdbf4e8ded785c8b6fa169262345d826" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3a41621e913a27095efb54935369882603" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3a38a3bdd513d3b39e5d0ce4165a43d07a" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3ad74d0a2af39796d63bcf4e451c88066c" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_16</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3acc46092c27f7c8744daf791bb569870d" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_32</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3a0d321dbe4fbfa8aa473b66883d320ac1" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_64</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1a32499dde8d086313e14271a5f71387a3aacef4e2317c008612efd8d1291a7b352" prot="public">
+          <name>DMA_ADDRESS_INCREMENT_STEP_SIZE_128</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="126" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="126" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="enum" id="dma_8h_1acff7214370827484610e276b30f6da75" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dma_priority</name>
+        <enumvalue id="dma_8h_1acff7214370827484610e276b30f6da75aa455254c54e3f7a0b0846ff5d91119c1" prot="public">
+          <name>DMA_PRIORITY_0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1acff7214370827484610e276b30f6da75aabd243b9384615c8d1364305fbf8d053" prot="public">
+          <name>DMA_PRIORITY_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1acff7214370827484610e276b30f6da75a46641dd5c392c9869de38869bd2bbebe" prot="public">
+          <name>DMA_PRIORITY_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dma_8h_1acff7214370827484610e276b30f6da75a3bb23ef69592a092421c9c470d2fc1d1" prot="public">
+          <name>DMA_PRIORITY_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" line="138" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h" bodystart="138" bodyend="143"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>SAM Direct Memory Access Controller Driver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Copyright (C) 2014-2015 Atmel Corporation. All rights reserved.</para>
+<para>\asf_license_start </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#if<sp/>!defined(DMAC_RESERVED_CHANNELS)<sp/></highlight><highlight class="comment">//<sp/>SAMD<sp/>core<sp/>&gt;<sp/>1.2.1<sp/>has<sp/>this<sp/>built<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>Support<sp/>and<sp/>FAQ:<sp/>visit<sp/>&lt;a<sp/>href=&quot;http://www.atmel.com/design-support/&quot;&gt;Atmel</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>Support&lt;/a&gt;</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DMA_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DMA_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>THIS<sp/>IS<sp/>A<sp/>PARED-DOWN<sp/>VERSION<sp/>OF<sp/>DMA.H<sp/>FROM<sp/>ATMEL<sp/>ASFCORE<sp/>3.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Please<sp/>keep<sp/>original<sp/>copyright<sp/>and<sp/>license<sp/>intact!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(SAML21)<sp/>||<sp/>(SAML22)<sp/>||<sp/>(SAMC20)<sp/>||<sp/>(SAMC21)<sp/>||<sp/>defined(__DOXYGEN__)<sp/>||<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__SAMD51__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEATURE_DMA_CHANNEL_STANDBY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_transfer_trigger_action<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__SAMD51__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>SAMD51<sp/>has<sp/>a<sp/>&apos;burst&apos;<sp/>transfer<sp/>which<sp/>can<sp/>be<sp/>set<sp/>to<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>beat<sp/>to<sp/>accomplish<sp/>same<sp/>idea<sp/>as<sp/>SAMD21&apos;s<sp/>&apos;beat&apos;<sp/>transfer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Trigger<sp/>name<sp/>is<sp/>ACTON_BEAT<sp/>for<sp/>backward<sp/>compatibility.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_BLOCK<sp/>=<sp/>DMAC_CHCTRLA_TRIGACT_BLOCK_Val,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_BEAT<sp/>=<sp/>DMAC_CHCTRLA_TRIGACT_BURST_Val,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_TRANSACTION<sp/>=<sp/>DMAC_CHCTRLA_TRIGACT_TRANSACTION_Val,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_BLOCK<sp/>=<sp/>DMAC_CHCTRLB_TRIGACT_BLOCK_Val,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_BEAT<sp/>=<sp/>DMAC_CHCTRLB_TRIGACT_BEAT_Val,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>DMA_TRIGGER_ACTON_TRANSACTION<sp/>=<sp/>DMAC_CHCTRLB_TRIGACT_TRANSACTION_Val,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_callback_type<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>item<sp/>here<sp/>is<sp/>for<sp/>any<sp/>transfer<sp/>errors.<sp/>A<sp/>transfer<sp/>error<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>flagged<sp/>if<sp/>a<sp/>bus<sp/>error<sp/>is<sp/>detected<sp/>during<sp/>an<sp/>AHB<sp/>access<sp/>or<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>DMAC<sp/>fetches<sp/>an<sp/>invalid<sp/>descriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>DMA_CALLBACK_TRANSFER_ERROR,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>DMA_CALLBACK_TRANSFER_DONE,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>DMA_CALLBACK_CHANNEL_SUSPEND,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>DMA_CALLBACK_N,<sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>available<sp/>callbacks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_beat_size<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>DMA_BEAT_SIZE_BYTE<sp/>=<sp/>0,<sp/></highlight><highlight class="comment">//<sp/>8-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>DMA_BEAT_SIZE_HWORD,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>16-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>DMA_BEAT_SIZE_WORD,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>32-bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_event_output_selection<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>DMA_EVENT_OUTPUT_DISABLE<sp/>=<sp/>0,<sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>event<sp/>generation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>DMA_EVENT_OUTPUT_BLOCK,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Event<sp/>strobe<sp/>when<sp/>block<sp/>xfer<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>DMA_EVENT_OUTPUT_RESERVED,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>DMA_EVENT_OUTPUT_BEAT,<sp/></highlight><highlight class="comment">//<sp/>Event<sp/>strobe<sp/>when<sp/>beat<sp/>xfer<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_block_action<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>DMA_BLOCK_ACTION_NOACT<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Channel<sp/>in<sp/>normal<sp/>operation<sp/>and<sp/>sets<sp/>transfer<sp/>complete<sp/>interrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>flag<sp/>after<sp/>block<sp/>transfer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>DMA_BLOCK_ACTION_INT,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Trigger<sp/>channel<sp/>suspend<sp/>after<sp/>block<sp/>transfer<sp/>and<sp/>sets<sp/>channel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>suspend<sp/>interrupt<sp/>flag<sp/>once<sp/>the<sp/>channel<sp/>is<sp/>suspended</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>DMA_BLOCK_ACTION_SUSPEND,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sets<sp/>transfer<sp/>complete<sp/>interrupt<sp/>flag<sp/>after<sp/>a<sp/>block<sp/>transfer<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>trigger<sp/>channel<sp/>suspend.<sp/>The<sp/>channel<sp/>suspend<sp/>interrupt<sp/>flag<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>be<sp/>set<sp/>once<sp/>the<sp/>channel<sp/>is<sp/>suspended.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>DMA_BLOCK_ACTION_BOTH,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DMA<sp/>step<sp/>selection.<sp/>This<sp/>bit<sp/>determines<sp/>whether<sp/>the<sp/>step<sp/>size<sp/>setting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>applied<sp/>to<sp/>source<sp/>or<sp/>destination<sp/>address.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_step_selection<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>DMA_STEPSEL_DST<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>DMA_STEPSEL_SRC,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Address<sp/>increment<sp/>step<sp/>size.<sp/>These<sp/>bits<sp/>select<sp/>the<sp/>address<sp/>increment<sp/>step</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>size.<sp/>The<sp/>setting<sp/>apply<sp/>to<sp/>source<sp/>or<sp/>destination<sp/>address,<sp/>depending<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>STEPSEL<sp/>setting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_address_increment_stepsize<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_1<sp/>=<sp/>0,<sp/></highlight><highlight class="comment">//<sp/>beat<sp/>size<sp/>*<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_2,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>beat<sp/>size<sp/>*<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_4,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>beat<sp/>size<sp/>*<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_8,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>etc...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_16,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_32,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_64,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_128,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>higher<sp/>numbers<sp/>are<sp/>higher<sp/>priority</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>dma_priority<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>DMA_PRIORITY_0,<sp/></highlight><highlight class="comment">//<sp/>lowest<sp/>(default)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>DMA_PRIORITY_1,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>DMA_PRIORITY_2,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>DMA_PRIORITY_3,<sp/></highlight><highlight class="comment">//<sp/>highest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DMA_H_INCLUDED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DMAC_RESERVED_CHANNELS</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/utility/dma.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Driver<sp/>#</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Many<sp/>small<sp/>embedded<sp/>systems<sp/>exist<sp/>to<sp/>collect<sp/>data<sp/>from<sp/>sensors,<sp/>analyse<sp/>the<sp/>data,<sp/>and<sp/>either<sp/>take<sp/>an<sp/>appropriate<sp/>action<sp/>or<sp/>send<sp/>that<sp/>sensor<sp/>data<sp/>to<sp/>another<sp/>system<sp/>for<sp/>processing.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">One<sp/>of<sp/>the<sp/>many<sp/>challenges<sp/>of<sp/>embedded<sp/>systems<sp/>design<sp/>is<sp/>the<sp/>fact<sp/>that<sp/>parts<sp/>you<sp/>used<sp/>today<sp/>may<sp/>be<sp/>out<sp/>of<sp/>production<sp/>tomorrow,<sp/>or<sp/>system<sp/>requirements<sp/>may<sp/>change<sp/>and<sp/>you<sp/>may<sp/>need<sp/>to<sp/>choose<sp/>a<sp/>different<sp/>sensor<sp/>down<sp/>the<sp/>road.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Creating<sp/>new<sp/>drivers<sp/>is<sp/>a<sp/>relatively<sp/>easy<sp/>task,<sp/>but<sp/>integrating<sp/>them<sp/>into<sp/>existing<sp/>systems<sp/>is<sp/>both<sp/>error<sp/>prone<sp/>and<sp/>time<sp/>consuming<sp/>since<sp/>sensors<sp/>rarely<sp/>use<sp/>the<sp/>exact<sp/>same<sp/>units<sp/>of<sp/>measurement.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>reducing<sp/>all<sp/>data<sp/>to<sp/>a<sp/>single<sp/>**sensors\_event\_t**<sp/>&apos;type&apos;<sp/>and<sp/>settling<sp/>on<sp/>specific,<sp/>**standardised<sp/>SI<sp/>units**<sp/>for<sp/>each<sp/>sensor<sp/>family<sp/>the<sp/>same<sp/>sensor<sp/>types<sp/>return<sp/>values<sp/>that<sp/>are<sp/>comparable<sp/>with<sp/>any<sp/>other<sp/>similar<sp/>sensor.<sp/><sp/>This<sp/>enables<sp/>you<sp/>to<sp/>switch<sp/>sensor<sp/>models<sp/>with<sp/>very<sp/>little<sp/>impact<sp/>on<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>system,<sp/>which<sp/>can<sp/>help<sp/>mitigate<sp/>some<sp/>of<sp/>the<sp/>risks<sp/>and<sp/>problems<sp/>of<sp/>sensor<sp/>availability<sp/>and<sp/>code<sp/>reuse.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>unified<sp/>sensor<sp/>abstraction<sp/>layer<sp/>is<sp/>also<sp/>useful<sp/>for<sp/>data-logging<sp/>and<sp/>data-transmission<sp/>since<sp/>you<sp/>only<sp/>have<sp/>one<sp/>well-known<sp/>type<sp/>to<sp/>log<sp/>or<sp/>transmit<sp/>over<sp/>the<sp/>air<sp/>or<sp/>wire.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Unified<sp/>Sensor<sp/>Drivers<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>drivers<sp/>are<sp/>based<sp/>on<sp/>the<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Driver:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Accelerometers**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_ADXL345](https://github.com/adafruit/Adafruit_ADXL345)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_LSM303DLHC](https://github.com/adafruit/Adafruit_LSM303DLHC)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_MMA8451\_Library](https://github.com/adafruit/Adafruit_MMA8451_Library)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Gyroscope**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_L3GD20\_U](https://github.com/adafruit/Adafruit_L3GD20_U)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Light**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_TSL2561](https://github.com/adafruit/Adafruit_TSL2561)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_TSL2591\_Library](https://github.com/adafruit/Adafruit_TSL2591_Library)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Magnetometers**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_LSM303DLHC](https://github.com/adafruit/Adafruit_LSM303DLHC)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_HMC5883\_Unified](https://github.com/adafruit/Adafruit_HMC5883_Unified)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">**Barometric<sp/>Pressure**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_BMP085\_Unified](https://github.com/adafruit/Adafruit_BMP085_Unified)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit\_BMP183\_Unified\_Library](https://github.com/adafruit/Adafruit_BMP183_Unified_Library)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Humidity<sp/>&amp;<sp/>Temperature**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[DHT-sensor-library](https://github.com/adafruit/DHT-sensor-library)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Humidity,<sp/>Temperature,<sp/>&amp;<sp/>Barometric<sp/>Pressure**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Adafruit_BME280_Library](https://github.com/adafruit/Adafruit_BME280_Library/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Orientation**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>-<sp/>[Adafruit_BNO055](https://github.com/adafruit/Adafruit_BNO055)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**All<sp/>in<sp/>one<sp/>device**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Adafruit_LSM9DS0](https://github.com/adafruit/Adafruit_LSM9DS0_Library)<sp/>(accelerometer,<sp/>gyroscope,<sp/>magnetometer)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Adafruit_LSM9DS1](https://github.com/adafruit/Adafruit_LSM9DS1/)<sp/>(accelerometer,<sp/>gyroscope,<sp/>magnetometer)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>Does<sp/>it<sp/>Work?<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Any<sp/>driver<sp/>that<sp/>supports<sp/>the<sp/>Adafruit<sp/>unified<sp/>sensor<sp/>abstraction<sp/>layer<sp/>will<sp/>implement<sp/>the<sp/>Adafruit\_Sensor<sp/>base<sp/>class.<sp/><sp/>There<sp/>are<sp/>two<sp/>main<sp/>typedefs<sp/>and<sp/>one<sp/>enum<sp/>defined<sp/>in<sp/>Adafruit_Sensor.h<sp/>that<sp/>are<sp/>used<sp/>to<sp/>&apos;abstract&apos;<sp/>away<sp/>the<sp/>sensor<sp/>details<sp/>and<sp/>values:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sensor<sp/>Types<sp/>(`sensors_type_t`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">These<sp/>pre-defined<sp/>sensor<sp/>types<sp/>are<sp/>used<sp/>to<sp/>properly<sp/>handle<sp/>the<sp/>two<sp/>related<sp/>typedefs<sp/>below,<sp/>and<sp/>allows<sp/>us<sp/>determine<sp/>what<sp/>types<sp/>of<sp/>units<sp/>the<sp/>sensor<sp/>uses,<sp/>etc.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">/**<sp/>Sensor<sp/>types<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>enum</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ACCELEROMETER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(1),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_MAGNETIC_FIELD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(2),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ORIENTATION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(3),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GYROSCOPE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(4),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LIGHT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PRESSURE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(6),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_PROXIMITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(8),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_GRAVITY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(9),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_LINEAR_ACCELERATION<sp/><sp/><sp/>=<sp/>(10),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_ROTATION_VECTOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(11),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_RELATIVE_HUMIDITY<sp/><sp/><sp/><sp/><sp/>=<sp/>(12),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_AMBIENT_TEMPERATURE<sp/><sp/><sp/>=<sp/>(13),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_VOLTAGE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(15),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_CURRENT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(16),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>SENSOR_TYPE_COLOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(17)</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>sensors_type_t;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sensor<sp/>Details<sp/>(`sensor_t`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>typedef<sp/>describes<sp/>the<sp/>specific<sp/>capabilities<sp/>of<sp/>this<sp/>sensor,<sp/>and<sp/>allows<sp/>us<sp/>to<sp/>know<sp/>what<sp/>sensor<sp/>we<sp/>are<sp/>using<sp/>beneath<sp/>the<sp/>abstraction<sp/>layer.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>Sensor<sp/>details<sp/>(40<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">/**<sp/>struct<sp/>sensor_s<sp/>is<sp/>used<sp/>to<sp/>describe<sp/>basic<sp/>information<sp/>about<sp/>a<sp/>specific<sp/>sensor.<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>struct</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>char<sp/><sp/><sp/><sp/><sp/>name[12];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>sensor_id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/>max_value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/>min_value;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/>resolution;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>min_delay;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>sensor_t;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>individual<sp/>fields<sp/>are<sp/>intended<sp/>to<sp/>be<sp/>used<sp/>as<sp/>follows:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**name**:<sp/>The<sp/>sensor<sp/>name<sp/>or<sp/>ID,<sp/>up<sp/>to<sp/>a<sp/>maximum<sp/>of<sp/>twelve<sp/>characters<sp/>(ex.<sp/>&quot;MPL115A2&quot;)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**version**:<sp/>The<sp/>version<sp/>of<sp/>the<sp/>sensor<sp/>HW<sp/>and<sp/>the<sp/>driver<sp/>to<sp/>allow<sp/>us<sp/>to<sp/>differentiate<sp/>versions<sp/>of<sp/>the<sp/>board<sp/>or<sp/>driver</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**sensor\_id**:<sp/>A<sp/>unique<sp/>sensor<sp/>identifier<sp/>that<sp/>is<sp/>used<sp/>to<sp/>differentiate<sp/>this<sp/>specific<sp/>sensor<sp/>instance<sp/>from<sp/>any<sp/>others<sp/>that<sp/>are<sp/>present<sp/>on<sp/>the<sp/>system<sp/>or<sp/>in<sp/>the<sp/>sensor<sp/>network</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**type**:<sp/>The<sp/>sensor<sp/>type,<sp/>based<sp/>on<sp/>**sensors\_type\_t**<sp/>in<sp/>sensors.h</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**max\_value**:<sp/>The<sp/>maximum<sp/>value<sp/>that<sp/>this<sp/>sensor<sp/>can<sp/>return<sp/>(in<sp/>the<sp/>appropriate<sp/>SI<sp/>unit)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**min\_value**:<sp/>The<sp/>minimum<sp/>value<sp/>that<sp/>this<sp/>sensor<sp/>can<sp/>return<sp/>(in<sp/>the<sp/>appropriate<sp/>SI<sp/>unit)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**resolution**:<sp/>The<sp/>smallest<sp/>difference<sp/>between<sp/>two<sp/>values<sp/>that<sp/>this<sp/>sensor<sp/>can<sp/>report<sp/>(in<sp/>the<sp/>appropriate<sp/>SI<sp/>unit)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**min\_delay**:<sp/>The<sp/>minimum<sp/>delay<sp/>in<sp/>microseconds<sp/>between<sp/>two<sp/>sensor<sp/>events,<sp/>or<sp/>&apos;0&apos;<sp/>if<sp/>there<sp/>is<sp/>no<sp/>constant<sp/>sensor<sp/>rate</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sensor<sp/>Data/Events<sp/>(`sensors_event_t`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>typedef<sp/>is<sp/>used<sp/>to<sp/>return<sp/>sensor<sp/>data<sp/>from<sp/>any<sp/>sensor<sp/>supported<sp/>by<sp/>the<sp/>abstraction<sp/>layer,<sp/>using<sp/>standard<sp/>SI<sp/>units<sp/>and<sp/>scales.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/>Sensor<sp/>event<sp/>(36<sp/>bytes)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">/**<sp/>struct<sp/>sensor_event_s<sp/>is<sp/>used<sp/>to<sp/>provide<sp/>a<sp/>single<sp/>sensor<sp/>event<sp/>in<sp/>a<sp/>common<sp/>format.<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">typedef<sp/>struct</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>version;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>sensor_id;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>type;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>reserved0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>timestamp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>union</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[4];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors_vec_t<sp/><sp/><sp/>acceleration;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors_vec_t<sp/><sp/><sp/>magnetic;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors_vec_t<sp/><sp/><sp/>orientation;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors_vec_t<sp/><sp/><sp/>gyro;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temperature;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distance;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pressure;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>relative_humidity;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>voltage;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sensors_color_t<sp/>color;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>sensors_event_t;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">It<sp/>includes<sp/>the<sp/>following<sp/>fields:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**version**:<sp/>Contain<sp/>&apos;sizeof(sensors\_event\_t)&apos;<sp/>to<sp/>identify<sp/>which<sp/>version<sp/>of<sp/>the<sp/>API<sp/>we&apos;re<sp/>using<sp/>in<sp/>case<sp/>this<sp/>changes<sp/>in<sp/>the<sp/>future</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**sensor\_id**:<sp/>A<sp/>unique<sp/>sensor<sp/>identifier<sp/>that<sp/>is<sp/>used<sp/>to<sp/>differentiate<sp/>this<sp/>specific<sp/>sensor<sp/>instance<sp/>from<sp/>any<sp/>others<sp/>that<sp/>are<sp/>present<sp/>on<sp/>the<sp/>system<sp/>or<sp/>in<sp/>the<sp/>sensor<sp/>network<sp/>(must<sp/>match<sp/>the<sp/>sensor\_id<sp/>value<sp/>in<sp/>the<sp/>corresponding<sp/>sensor\_t<sp/>enum<sp/>above!)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**type**:<sp/>the<sp/>sensor<sp/>type,<sp/>based<sp/>on<sp/>**sensors\_type\_t**<sp/>in<sp/>sensors.h</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**timestamp**:<sp/>time<sp/>in<sp/>milliseconds<sp/>when<sp/>the<sp/>sensor<sp/>value<sp/>was<sp/>read</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**data[4]**:<sp/>An<sp/>array<sp/>of<sp/>four<sp/>32-bit<sp/>values<sp/>that<sp/>allows<sp/>us<sp/>to<sp/>encapsulate<sp/>any<sp/>type<sp/>of<sp/>sensor<sp/>data<sp/>via<sp/>a<sp/>simple<sp/>union<sp/>(further<sp/>described<sp/>below)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Required<sp/>Functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>addition<sp/>to<sp/>the<sp/>two<sp/>standard<sp/>types<sp/>and<sp/>the<sp/>sensor<sp/>type<sp/>enum,<sp/>all<sp/>drivers<sp/>based<sp/>on<sp/>Adafruit_Sensor<sp/>must<sp/>also<sp/>implement<sp/>the<sp/>following<sp/>two<sp/>functions:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>getEvent(sensors_event_t*);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Calling<sp/>this<sp/>function<sp/>will<sp/>populate<sp/>the<sp/>supplied<sp/>sensors\_event\_t<sp/>reference<sp/>with<sp/>the<sp/>latest<sp/>available<sp/>sensor<sp/>data.<sp/><sp/>You<sp/>should<sp/>call<sp/>this<sp/>function<sp/>as<sp/>often<sp/>as<sp/>you<sp/>want<sp/>to<sp/>update<sp/>your<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>getSensor(sensor_t*);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Calling<sp/>this<sp/>function<sp/>will<sp/>provide<sp/>some<sp/>basic<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>(the<sp/>sensor<sp/>name,<sp/>driver<sp/>version,<sp/>min<sp/>and<sp/>max<sp/>values,<sp/>etc.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Standardised<sp/>SI<sp/>values<sp/>for<sp/>`sensors_event_t`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>key<sp/>part<sp/>of<sp/>the<sp/>abstraction<sp/>layer<sp/>is<sp/>the<sp/>standardisation<sp/>of<sp/>values<sp/>on<sp/>SI<sp/>units<sp/>of<sp/>a<sp/>particular<sp/>scale,<sp/>which<sp/>is<sp/>accomplished<sp/>via<sp/>the<sp/>data[4]<sp/>union<sp/>in<sp/>sensors\_event\_t<sp/>above.<sp/><sp/>This<sp/>16<sp/>byte<sp/>union<sp/>includes<sp/>fields<sp/>for<sp/>each<sp/>main<sp/>sensor<sp/>type,<sp/>and<sp/>uses<sp/>the<sp/>following<sp/>SI<sp/>units<sp/>and<sp/>scales:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**acceleration**:<sp/>values<sp/>are<sp/>in<sp/>**meter<sp/>per<sp/>second<sp/>per<sp/>second**<sp/>(m/s^2)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**magnetic**:<sp/>values<sp/>are<sp/>in<sp/>**micro-Tesla**<sp/>(uT)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**orientation**:<sp/>values<sp/>are<sp/>in<sp/>**degrees**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**gyro**:<sp/>values<sp/>are<sp/>in<sp/>**rad/s**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**temperature**:<sp/>values<sp/>in<sp/>**degrees<sp/>centigrade**<sp/>(Celsius)<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**distance**:<sp/>values<sp/>are<sp/>in<sp/>**centimeters**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**light**:<sp/>values<sp/>are<sp/>in<sp/>**SI<sp/>lux**<sp/>units</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**pressure**:<sp/>values<sp/>are<sp/>in<sp/>**hectopascal**<sp/>(hPa)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**relative\_humidity**:<sp/>values<sp/>are<sp/>in<sp/>**percent**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**current**:<sp/>values<sp/>are<sp/>in<sp/>**milliamps**<sp/>(mA)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**voltage**:<sp/>values<sp/>are<sp/>in<sp/>**volts**<sp/>(V)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**color**:<sp/>values<sp/>are<sp/>in<sp/>0..1.0<sp/>RGB<sp/>channel<sp/>luminosity<sp/>and<sp/>32-bit<sp/>RGBA<sp/>format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>The<sp/>Unified<sp/>Driver<sp/>Abstraction<sp/>Layer<sp/>in<sp/>Practice<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Using<sp/>the<sp/>unified<sp/>sensor<sp/>abstraction<sp/>layer<sp/>is<sp/>relatively<sp/>easy<sp/>once<sp/>a<sp/>compliant<sp/>driver<sp/>has<sp/>been<sp/>created.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Every<sp/>compliant<sp/>sensor<sp/>can<sp/>now<sp/>be<sp/>read<sp/>using<sp/>a<sp/>single,<sp/>well-known<sp/>&apos;type&apos;<sp/>(sensors\_event\_t),<sp/>and<sp/>there<sp/>is<sp/>a<sp/>standardised<sp/>way<sp/>of<sp/>interrogating<sp/>a<sp/>sensor<sp/>about<sp/>its<sp/>specific<sp/>capabilities<sp/>(via<sp/>sensor\_t).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">An<sp/>example<sp/>of<sp/>reading<sp/>the<sp/>[TSL2561](https://github.com/adafruit/Adafruit_TSL2561)<sp/>light<sp/>sensor<sp/>can<sp/>be<sp/>seen<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Adafruit_TSL2561<sp/>tsl<sp/>=<sp/>Adafruit_TSL2561(TSL2561_ADDR_FLOAT,<sp/>12345);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/>/*<sp/>Get<sp/>a<sp/>new<sp/>sensor<sp/>event<sp/>*/<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>sensors_event_t<sp/>event;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>tsl.getEvent(&amp;event);</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>/*<sp/>Display<sp/>the<sp/>results<sp/>(light<sp/>is<sp/>measured<sp/>in<sp/>lux)<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/>if<sp/>(event.light)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>Serial.print(event.light);<sp/>Serial.println(&quot;<sp/>lux&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>/*<sp/>If<sp/>event.light<sp/>=<sp/>0<sp/>lux<sp/>the<sp/>sensor<sp/>is<sp/>probably<sp/>saturated</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>and<sp/>no<sp/>reliable<sp/>data<sp/>could<sp/>be<sp/>generated!<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>Serial.println(&quot;Sensor<sp/>overload&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Similarly,<sp/>we<sp/>can<sp/>get<sp/>the<sp/>basic<sp/>technical<sp/>capabilities<sp/>of<sp/>this<sp/>sensor<sp/>with<sp/>the<sp/>following<sp/>code:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/>sensor_t<sp/>sensor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>sensor_t<sp/>sensor;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>tsl.getSensor(&amp;sensor);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>/*<sp/>Display<sp/>the<sp/>sensor<sp/>details<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.println(&quot;------------------------------------&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Sensor:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;);<sp/>Serial.println(sensor.name);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Driver<sp/>Ver:<sp/><sp/><sp/>&quot;);<sp/>Serial.println(sensor.version);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Unique<sp/>ID:<sp/><sp/><sp/><sp/>&quot;);<sp/>Serial.println(sensor.sensor_id);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Max<sp/>Value:<sp/><sp/><sp/><sp/>&quot;);<sp/>Serial.print(sensor.max_value);<sp/>Serial.println(&quot;<sp/>lux&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Min<sp/>Value:<sp/><sp/><sp/><sp/>&quot;);<sp/>Serial.print(sensor.min_value);<sp/>Serial.println(&quot;<sp/>lux&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.print<sp/><sp/>(&quot;Resolution:<sp/><sp/><sp/>&quot;);<sp/>Serial.print(sensor.resolution);<sp/>Serial.println(&quot;<sp/>lux&quot;);<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.println(&quot;------------------------------------&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Serial.println(&quot;&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/README.md"/>
+  </compounddef>
+</doxygen>

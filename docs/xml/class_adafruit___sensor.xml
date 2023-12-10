@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___sensor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Adafruit_Sensor</compoundname>
+    <derivedcompoundref refid="class_adafruit___a_d_x_l343" prot="public" virt="non-virtual">Adafruit_ADXL343</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303_d_l_h___mag___unified" prot="public" virt="non-virtual">Adafruit_LSM303DLH_Mag_Unified</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303_d_l_h___mag___unified" prot="public" virt="non-virtual">Adafruit_LSM303DLH_Mag_Unified</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303___accel___unified" prot="public" virt="non-virtual">Adafruit_LSM303_Accel_Unified</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303___accel___unified" prot="public" virt="non-virtual">Adafruit_LSM303_Accel_Unified</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303___accel___unified" prot="public" virt="non-virtual">Adafruit_LSM303_Accel_Unified</derivedcompoundref>
+    <derivedcompoundref refid="class_adafruit___l_s_m303___mag___unified" prot="public" virt="non-virtual">Adafruit_LSM303_Mag_Unified</derivedcompoundref>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="no">Adafruit_Sensor.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___sensor_1a79419e4b6898903c0de4aa80133f01ae" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_Sensor::_autoRange</definition>
+        <argsstring></argsstring>
+        <name>_autoRange</name>
+        <qualifiedname>Adafruit_Sensor::_autoRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="187" column="8" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_Sensor::Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="166" column="3" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Adafruit_Sensor::~Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>~Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::~Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="167" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::enableAutoRange</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>enableAutoRange</name>
+        <qualifiedname>Adafruit_Sensor::enableAutoRange</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd">enableAutoRange</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd">enableAutoRange</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a659bbb397e0233e92ea10aebca8fd47a">enableAutoRange</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Whether we should automatically change the range (if possible) for higher precision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if we will try to autorange </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="174" column="16" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Adafruit_Sensor::getEvent</definition>
+        <argsstring>(sensors_event_t *)=0</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_Sensor::getEvent</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___a_d_x_l343_1a23ec0801feee878f6aa64020d4b831f8">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a9cf8ad0406e47762b730078db8a1157a">getEvent</reimplementedby>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the latest sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if able to fetch an event </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="180" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::getSensor</definition>
+        <argsstring>(sensor_t *)=0</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_Sensor::getSensor</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___a_d_x_l343_1aac54a36d585fa7cbe42a88290e37c500">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a6a4d7a4a440a8faa122dfee113413375">getSensor</reimplementedby>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get info about the sensor itself. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="182" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_Sensor::printSensorDetails</definition>
+        <argsstring>(void)</argsstring>
+        <name>printSensorDetails</name>
+        <qualifiedname>Adafruit_Sensor::printSensorDetails</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Prints sensor information to serial console. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="184" column="8" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.cpp" bodystart="8" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_Sensor::Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="166" column="3" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="166" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Adafruit_Sensor::~Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>~Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::~Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="167" column="11" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="167" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::enableAutoRange</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>enableAutoRange</name>
+        <qualifiedname>Adafruit_Sensor::enableAutoRange</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd">enableAutoRange</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a2cd03f4d713566c8d9564ede663289cd">enableAutoRange</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a659bbb397e0233e92ea10aebca8fd47a">enableAutoRange</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+<para>Whether we should automatically change the range (if possible) for higher precision. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if we will try to autorange </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="174" column="16" bodyfile="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Adafruit_Sensor::getEvent</definition>
+        <argsstring>(sensors_event_t *)=0</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_Sensor::getEvent</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___a_d_x_l343_1a23ec0801feee878f6aa64020d4b831f8">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1ae87dd7b25c4bdefc6c869516235aa938">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d">getEvent</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a9cf8ad0406e47762b730078db8a1157a">getEvent</reimplementedby>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the latest sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if able to fetch an event </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="180" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::getSensor</definition>
+        <argsstring>(sensor_t *)=0</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_Sensor::getSensor</qualifiedname>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___a_d_x_l343_1aac54a36d585fa7cbe42a88290e37c500">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303_d_l_h___mag___unified_1a812cb692473cf4477da12c41d3802f28">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c">getSensor</reimplementedby>
+        <reimplementedby refid="class_adafruit___l_s_m303___mag___unified_1a6a4d7a4a440a8faa122dfee113413375">getSensor</reimplementedby>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get info about the sensor itself. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="182" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_Sensor::printSensorDetails</definition>
+        <argsstring>(void)</argsstring>
+        <name>printSensorDetails</name>
+        <qualifiedname>Adafruit_Sensor::printSensorDetails</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="184" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Common sensor interface to unify various sensors. Intentionally modeled after sensors.h in the Android API: <ulink url="https://github.com/android/platform_hardware_libhardware/blob/master/include/hardware/sensors.h">https://github.com/android/platform_hardware_libhardware/blob/master/include/hardware/sensors.h</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Adafruit_ADXL343</label>
+        <link refid="class_adafruit___a_d_x_l343"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adafruit_LSM303DLH_Mag_Unified</label>
+        <link refid="class_adafruit___l_s_m303_d_l_h___mag___unified"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Adafruit_LSM303_Accel_Unified</label>
+        <link refid="class_adafruit___l_s_m303___accel___unified"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Adafruit_LSM303_Mag_Unified</label>
+        <link refid="class_adafruit___l_s_m303___mag___unified"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </inheritancegraph>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="163" column="1" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="163" bodyend="188"/>
+    <listofallmembers>
+      <member refid="class_adafruit___sensor_1a79419e4b6898903c0de4aa80133f01ae" prot="private" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>_autoRange</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>~Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

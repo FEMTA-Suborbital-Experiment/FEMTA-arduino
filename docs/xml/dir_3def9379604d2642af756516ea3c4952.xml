@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_3def9379604d2642af756516ea3c4952" kind="dir">
+    <compoundname>libraries/SD-1.2.4/src</compoundname>
+    <innerdir refid="dir_af3d1ea29642b807a0be7bc468d674c9">libraries/SD-1.2.4/src/utility</innerdir>
+    <innerfile refid="_file_8cpp">File.cpp</innerfile>
+    <innerfile refid="_s_d_8cpp">SD.cpp</innerfile>
+    <innerfile refid="_s_d_8h">SD.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/"/>
+  </compounddef>
+</doxygen>

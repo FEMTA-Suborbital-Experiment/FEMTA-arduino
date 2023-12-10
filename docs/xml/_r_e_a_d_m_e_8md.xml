@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>FEMTA<sp/>PME<sp/>&amp;<sp/>FTE<sp/>Arduinos</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>repository<sp/>contains<sp/>the<sp/>main<sp/>sketches<sp/>to<sp/>operate<sp/>the<sp/>Propellant<sp/>Management<sp/>Experiment<sp/>and<sp/>FEMTA<sp/>Thruster<sp/>Experiments,<sp/>as<sp/>well<sp/>as<sp/>relevant<sp/>libraries<sp/>and<sp/>datasheets<sp/>for<sp/>the<sp/>sensors<sp/>used<sp/>in<sp/>the<sp/>hardware.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Quick<sp/>Start</highlight></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[wiki](https://github.com/FEMTA-Suborbital-Experiment/FEMTA-arduino/wiki)<sp/>for<sp/>an<sp/>onboarding<sp/>tutorial<sp/>to<sp/>help<sp/>you<sp/>get<sp/>started<sp/>with<sp/>developing<sp/>for<sp/>the<sp/>FEMTA<sp/>Avionics<sp/>team.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Navigation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>folder<sp/>structure<sp/>of<sp/>the<sp/>arduino<sp/>Github<sp/>is<sp/>easy<sp/>to<sp/>follow.<sp/>The<sp/>following<sp/>list<sp/>below<sp/>describes<sp/>the<sp/>contents<sp/>of<sp/>each<sp/>folder.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>datasheets:<sp/>Relevant<sp/>sensors<sp/>used<sp/>in<sp/>the<sp/>PME<sp/>and<sp/>FTE<sp/>have<sp/>datasheets,<sp/>which<sp/>are<sp/>contained<sp/>in<sp/>this<sp/>folder.<sp/>This<sp/>is<sp/>a<sp/>convenience<sp/>for<sp/>those<sp/>who<sp/>will<sp/>need<sp/>to<sp/>interface<sp/>sensors<sp/>with<sp/>the<sp/>Arduino</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>libraries:<sp/>Arduino<sp/>contains<sp/>libraries<sp/>used<sp/>to<sp/>communicate<sp/>with<sp/>sensors.<sp/>In<sp/>particular,<sp/>the<sp/>Wire<sp/>library<sp/>is<sp/>a<sp/>necessary<sp/>module<sp/>with<sp/>capabilities<sp/>to<sp/>interface<sp/>with<sp/>I2C<sp/>devices</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>logs:<sp/>The<sp/>Feather<sp/>M0<sp/>must<sp/>produce<sp/>data<sp/>from<sp/>its<sp/>sensor<sp/>readings<sp/>such<sp/>that<sp/>one<sp/>can<sp/>take<sp/>the<sp/>data<sp/>and<sp/>produce<sp/>a<sp/>plot.<sp/>The<sp/>subteam<sp/>expects<sp/>to<sp/>use<sp/>.csv<sp/>or<sp/>delimited<sp/>.txt<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>src:<sp/>This<sp/>folder<sp/>houses<sp/>the<sp/>.ino<sp/>sketches.<sp/>The<sp/>subteam<sp/>expects<sp/>to<sp/>have<sp/>two<sp/>main<sp/>files,<sp/>one<sp/>for<sp/>the<sp/>PME<sp/>and<sp/>one<sp/>for<sp/>the<sp/>FTE.<sp/>In<sp/>addition,<sp/>sketches<sp/>in<sp/>this<sp/>folder<sp/>will<sp/>point<sp/>to<sp/>the<sp/>&quot;libraries&quot;<sp/>folder</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

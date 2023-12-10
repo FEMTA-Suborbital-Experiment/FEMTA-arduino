@@ -1,0 +1,696 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_sd_info_8h" kind="file" language="C++">
+    <compoundname>SdInfo.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_sd2_card_8h" local="yes">libraries/SD-1.2.4/src/utility/Sd2Card.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/utility/SdInfo.h</label>
+        <link refid="_sd_info_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>examples/read_struct_from_binary/src/Reader.cpp</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8cpp"/>
+      </node>
+      <node id="7">
+        <label>examples/read_struct_from_binary/src/Reader.h</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libraries/SD-1.2.4/src/SD.h</label>
+        <link refid="_s_d_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libraries/SD-1.2.4/src/utility/Sd2Card.h</label>
+        <link refid="_sd2_card_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>libraries/SD-1.2.4/src/utility/SdFat.h</label>
+        <link refid="_sd_fat_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/utility/SdInfo.h</label>
+        <link refid="_sd_info_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>main/pme/src/Reader.cpp</label>
+        <link refid="main_2pme_2src_2_reader_8cpp"/>
+      </node>
+      <node id="9">
+        <label>main/pme/src/Reader.h</label>
+        <link refid="main_2pme_2src_2_reader_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="11">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_c_i_d" prot="public">CID</innerclass>
+    <innerclass refid="struct_c_s_d_v1" prot="public">CSDV1</innerclass>
+    <innerclass refid="struct_c_s_d_v2" prot="public">CSDV2</innerclass>
+    <innerclass refid="unioncsd__t" prot="public">csd_t</innerclass>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_sd_info_8h_1a7f1c4653597f0e5276671139a3592dcd" prot="public" static="no">
+        <type>struct <ref refid="struct_c_i_d" kindref="compound">CID</ref></type>
+        <definition>typedef struct CID cid_t</definition>
+        <argsstring></argsstring>
+        <name>cid_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="107" column="7"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_sd_info_8h_1a4dc5a2aea3d7715c82094bce06e1b3a7" prot="public" static="no">
+        <type>struct <ref refid="struct_c_s_d_v1" kindref="compound">CSDV1</ref></type>
+        <definition>typedef struct CSDV1 csd1_t</definition>
+        <argsstring></argsstring>
+        <name>csd1_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="168" column="8"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_sd_info_8h_1a3e07997926302b26d47ffb0535da9d01" prot="public" static="no">
+        <type>struct <ref refid="struct_c_s_d_v2" kindref="compound">CSDV2</ref></type>
+        <definition>typedef struct CSDV2 csd2_t</definition>
+        <argsstring></argsstring>
+        <name>csd2_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="225" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="_sd_info_8h_1a1ec3c92c9dd38b0efa9126be38850d29" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD0</definition>
+        <argsstring></argsstring>
+        <name>CMD0</name>
+        <initializer>= 0X00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>GO_IDLE_STATE - init card in spi mode if CS low </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="36" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a5555048921d7792941f6cde88d5c8e36" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD8</definition>
+        <argsstring></argsstring>
+        <name>CMD8</name>
+        <initializer>= 0X08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SEND_IF_COND - verify SD Memory Card interface operating condition. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="38" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1afdee4fb07dae3bf93f0e9a0d9987143e" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD9</definition>
+        <argsstring></argsstring>
+        <name>CMD9</name>
+        <initializer>= 0X09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SEND_CSD - read the Card Specific Data (CSD register) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="40" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a7228ab7c6f05aac53cf844e8e4a9a121" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD10</definition>
+        <argsstring></argsstring>
+        <name>CMD10</name>
+        <initializer>= 0X0A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SEND_CID - read the card identification information (<ref refid="struct_c_i_d" kindref="compound">CID</ref> register) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="42" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a0a4b464ebac5e07eb233da545ff29259" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD13</definition>
+        <argsstring></argsstring>
+        <name>CMD13</name>
+        <initializer>= 0X0D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SEND_STATUS - read the card status register </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="44" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1ab5e57c3b26526169eb6f2150a23adfe4" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD17</definition>
+        <argsstring></argsstring>
+        <name>CMD17</name>
+        <initializer>= 0X11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>READ_BLOCK - read a single data block from the card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="46" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1ae0b9ab3c62fefc845e22834eb7f6abdd" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD24</definition>
+        <argsstring></argsstring>
+        <name>CMD24</name>
+        <initializer>= 0X18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WRITE_BLOCK - write a single data block to the card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="48" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1ac93a7f0b1843211d8fb003038c1db20f" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD25</definition>
+        <argsstring></argsstring>
+        <name>CMD25</name>
+        <initializer>= 0X19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>WRITE_MULTIPLE_BLOCK - write blocks of data until a STOP_TRANSMISSION </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="50" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a120c7957c30e8c619360c7bab8ba0e58" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD32</definition>
+        <argsstring></argsstring>
+        <name>CMD32</name>
+        <initializer>= 0X20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ERASE_WR_BLK_START - sets the address of the first block to be erased </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="52" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1aa6202b0708714b643336fcf4d3036e23" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD33</definition>
+        <argsstring></argsstring>
+        <name>CMD33</name>
+        <initializer>= 0X21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ERASE_WR_BLK_END - sets the address of the last block of the continuous range to be erased </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="55" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1aa5e07e08a8cccb47d966cff9d19f5f12" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD38</definition>
+        <argsstring></argsstring>
+        <name>CMD38</name>
+        <initializer>= 0X26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ERASE - erase all previously selected blocks </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="57" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a6e3cb1cf62a815db82fe9f343a4cb1a4" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD55</definition>
+        <argsstring></argsstring>
+        <name>CMD55</name>
+        <initializer>= 0X37</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>APP_CMD - escape for application specific command </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="59" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a65360b0848046db96c7a3a38ea77b027" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const CMD58</definition>
+        <argsstring></argsstring>
+        <name>CMD58</name>
+        <initializer>= 0X3A</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>READ_OCR - read the OCR register of a card </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="61" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a4427a8b94a0a6092255388a8666c42eb" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const ACMD23</definition>
+        <argsstring></argsstring>
+        <name>ACMD23</name>
+        <initializer>= 0X17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SET_WR_BLK_ERASE_COUNT - Set the number of write blocks to be pre-erased before writing </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="64" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a3d9453bff2059b4175f09e82220d5dc5" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const ACMD41</definition>
+        <argsstring></argsstring>
+        <name>ACMD41</name>
+        <initializer>= 0X29</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SD_SEND_OP_COMD - Sends host capacity support information and activates the card&apos;s initialization process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="67" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1abd9bae6aca26cbe7e75dac573bb98ed9" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const R1_READY_STATE</definition>
+        <argsstring></argsstring>
+        <name>R1_READY_STATE</name>
+        <initializer>= 0X00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status for card in the ready state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="70" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a180d34bf6496bc49f34e750d3878c528" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const R1_IDLE_STATE</definition>
+        <argsstring></argsstring>
+        <name>R1_IDLE_STATE</name>
+        <initializer>= 0X01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status for card in the idle state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="72" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a0299085ef0457c2d8714c838beaead80" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const R1_ILLEGAL_COMMAND</definition>
+        <argsstring></argsstring>
+        <name>R1_ILLEGAL_COMMAND</name>
+        <initializer>= 0X04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>status bit for illegal command </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="74" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a266235d83a613a26790bf21cc5e643e7" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DATA_START_BLOCK</definition>
+        <argsstring></argsstring>
+        <name>DATA_START_BLOCK</name>
+        <initializer>= 0XFE</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start data token for read or write single block </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="76" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a22cd4350449d8c6e4ed71ddaa86d4482" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const STOP_TRAN_TOKEN</definition>
+        <argsstring></argsstring>
+        <name>STOP_TRAN_TOKEN</name>
+        <initializer>= 0XFD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>stop token for write multiple blocks </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="78" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a55a97e38f040eaef5ea72c04ed0b8ca3" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const WRITE_MULTIPLE_TOKEN</definition>
+        <argsstring></argsstring>
+        <name>WRITE_MULTIPLE_TOKEN</name>
+        <initializer>= 0XFC</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start data token for write multiple blocks </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="80" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1ae8f749cad9dfa06c4a44435bac117183" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DATA_RES_MASK</definition>
+        <argsstring></argsstring>
+        <name>DATA_RES_MASK</name>
+        <initializer>= 0X1F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mask for data response tokens after a write block operation </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="82" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_sd_info_8h_1a0fbc8534d6683fea65b463f439df1c3d" prot="public" static="no" mutable="no">
+        <type>uint8_t const</type>
+        <definition>uint8_t const DATA_RES_ACCEPTED</definition>
+        <argsstring></argsstring>
+        <name>DATA_RES_ACCEPTED</name>
+        <initializer>= 0X05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>write data accepted token </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/SdInfo.h" line="84" column="15" bodyfile="libraries/SD-1.2.4/src/utility/SdInfo.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Arduino<sp/>Sd2Card<sp/>Library</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/><sp/>Copyright<sp/>(C)<sp/>2009<sp/>by<sp/>William<sp/>Greiman</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/>This<sp/>file<sp/>is<sp/>part<sp/>of<sp/>the<sp/>Arduino<sp/>Sd2Card<sp/>Library</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/>This<sp/>Library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/>along<sp/>with<sp/>the<sp/>Arduino<sp/>Sd2Card<sp/>Library.<sp/><sp/>If<sp/>not,<sp/>see</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SdInfo_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SdInfo_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Based<sp/>on<sp/>the<sp/>document:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SD<sp/>Specifications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Part<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Physical<sp/>Layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Simplified<sp/>Specification</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>2.00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>September<sp/>25,<sp/>2006</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>www.sdcard.org/developers/tech/sdcard/pls/Simplified_Physical_Layer_Spec.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SD<sp/>card<sp/>commands</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD0<sp/>=<sp/>0X00;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD8<sp/>=<sp/>0X08;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD9<sp/>=<sp/>0X09;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD10<sp/>=<sp/>0X0A;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD13<sp/>=<sp/>0X0D;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD17<sp/>=<sp/>0X11;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD24<sp/>=<sp/>0X18;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD25<sp/>=<sp/>0X19;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD32<sp/>=<sp/>0X20;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD33<sp/>=<sp/>0X21;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD38<sp/>=<sp/>0X26;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD55<sp/>=<sp/>0X37;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CMD58<sp/>=<sp/>0X3A;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ACMD23<sp/>=<sp/>0X17;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ACMD41<sp/>=<sp/>0X29;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>R1_READY_STATE<sp/>=<sp/>0X00;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>R1_IDLE_STATE<sp/>=<sp/>0X01;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>R1_ILLEGAL_COMMAND<sp/>=<sp/>0X04;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DATA_START_BLOCK<sp/>=<sp/>0XFE;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>STOP_TRAN_TOKEN<sp/>=<sp/>0XFD;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>WRITE_MULTIPLE_TOKEN<sp/>=<sp/>0XFC;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DATA_RES_MASK<sp/>=<sp/>0X1F;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">uint8_t<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>DATA_RES_ACCEPTED<sp/>=<sp/>0X05;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="struct_c_i_d" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_i_d" kindref="compound">CID</ref><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint8_t<sp/>mid;<sp/><sp/></highlight><highlight class="comment">//<sp/>Manufacturer<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>1-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>oid[2];<sp/><sp/></highlight><highlight class="comment">//<sp/>OEM/Application<sp/>ID</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>3-7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>pnm[5];<sp/><sp/></highlight><highlight class="comment">//<sp/>Product<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>prv_m<sp/>:<sp/>4;<sp/><sp/></highlight><highlight class="comment">//<sp/>Product<sp/>revision<sp/>n.m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>prv_n<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>9-12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>uint32_t<sp/>psn;<sp/><sp/></highlight><highlight class="comment">//<sp/>Product<sp/>serial<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>mdt_year_high<sp/>:<sp/>4;<sp/><sp/></highlight><highlight class="comment">//<sp/>Manufacturing<sp/>date</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>mdt_month<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>mdt_year_low<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>always1<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>crc<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/><ref refid="struct_c_i_d" kindref="compound">cid_t</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CSD<sp/>for<sp/>version<sp/>1.00<sp/>cards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="struct_c_s_d_v1" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_s_d_v1" kindref="compound">CSDV1</ref><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved1<sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>csd_ver<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>uint8_t<sp/>taac;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>uint8_t<sp/>nsac;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>uint8_t<sp/>tran_speed;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>uint8_t<sp/>ccc_high;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_bl_len<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>ccc_low<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>c_size_high<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved2<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dsr_imp<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_blk_misalign<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_blk_misalign<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_bl_partial<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>uint8_t<sp/>c_size_mid;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>vdd_r_curr_max<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>vdd_r_curr_min<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>c_size_low<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>c_size_mult_high<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>vdd_w_cur_max<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>vdd_w_curr_min<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sector_size_high<sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>erase_blk_en<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>c_size_mult_low<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>wp_grp_size<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sector_size_low<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_bl_len_high<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>r2w_factor<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved3<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>wp_grp_enable<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved4<sp/>:<sp/>5;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_partial<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_bl_len_low<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved5:<sp/>2;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>file_format<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>tmp_write_protect<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>perm_write_protect<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>copy<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>file_format_grp<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>always1<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>crc<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}<sp/><ref refid="struct_c_s_d_v1" kindref="compound">csd1_t</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CSD<sp/>for<sp/>version<sp/>2.00<sp/>cards</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="struct_c_s_d_v2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_s_d_v2" kindref="compound">CSDV2</ref><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved1<sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>csd_ver<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>uint8_t<sp/>taac;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/>uint8_t<sp/>nsac;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>uint8_t<sp/>tran_speed;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/>uint8_t<sp/>ccc_high;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_bl_len<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>ccc_low<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved2<sp/>:<sp/>4;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>dsr_imp<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_blk_misalign<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_blk_misalign<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>read_bl_partial<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved3<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>c_size_high<sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>uint8_t<sp/>c_size_mid;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>uint8_t<sp/>c_size_low;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sector_size_high<sp/>:<sp/>6;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>erase_blk_en<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved4<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>wp_grp_size<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>sector_size_low<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_bl_len_high<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>r2w_factor<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved5<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>wp_grp_enable<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved6<sp/>:<sp/>5;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_partial<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>write_bl_len_low<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>reserved7:<sp/>2;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>file_format<sp/>:<sp/>2;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>tmp_write_protect<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>perm_write_protect<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>copy<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>file_format_grp<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>byte<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>always1<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>crc<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}<sp/><ref refid="struct_c_s_d_v2" kindref="compound">csd2_t</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="comment">//<sp/>union<sp/>of<sp/>old<sp/>and<sp/>new<sp/>style<sp/>CSD<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="unioncsd__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unioncsd__t" kindref="compound">csd_t</ref><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><ref refid="struct_c_s_d_v1" kindref="compound">csd1_t</ref><sp/>v1;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><ref refid="struct_c_s_d_v2" kindref="compound">csd2_t</ref><sp/>v2;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SdInfo_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/SD-1.2.4/src/utility/SdInfo.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h" kind="file" language="C++">
+    <compoundname>Adafruit_I2CRegister.h</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h" local="no">Adafruit_BusIO_Register.h</includes>
+    <includes local="no">Arduino.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="2">
+        <label>Adafruit_BusIO_Register.h</label>
+        <link refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Adafruit_I2CDevice.h</label>
+        <link refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_device_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h</label>
+        <link refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Adafruit_SPIDevice.h</label>
+        <link refid="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SPI.h</label>
+      </node>
+      <node id="5">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h_1a54801c392b2db2b783afd2b787e7cbbb" prot="public" static="no">
+        <type><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref></type>
+        <definition>typedef Adafruit_BusIO_Register Adafruit_I2CRegister</definition>
+        <argsstring></argsstring>
+        <name>Adafruit_I2CRegister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h" line="7" column="33" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="examples_2logging__example_2libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h_1a5df0c4d963bdcbb3b8928d4a64ba8d95" prot="public" static="no">
+        <type><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref></type>
+        <definition>typedef Adafruit_BusIO_RegisterBits Adafruit_I2CRegisterBits</definition>
+        <argsstring></argsstring>
+        <name>Adafruit_I2CRegisterBits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h" line="8" column="37" bodyfile="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_ADAFRUIT_I2C_REGISTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADAFRUIT_I2C_REGISTER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_BusIO_Register.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_I2CRegister</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_I2CRegisterBits</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/libraries/Adafruit_BusIO/Adafruit_I2CRegister.h"/>
+  </compounddef>
+</doxygen>

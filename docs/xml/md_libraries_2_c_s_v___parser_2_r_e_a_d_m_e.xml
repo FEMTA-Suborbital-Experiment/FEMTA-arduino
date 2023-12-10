@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e</compoundname>
+    <title>Table of contents</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md79"/><itemizedlist>
+<listitem><para>What is CSV format <linebreak/>
+</para>
+</listitem><listitem><para>What is this CSV parser <linebreak/>
+</para>
+</listitem><listitem><para>Installation <linebreak/>
+</para>
+</listitem><listitem><para>Usage <linebreak/>
+</para>
+</listitem><listitem><para><ref refid="dir_d28a4824dc47e487b107a5db32ef43c4" kindref="compound">Examples</ref> <linebreak/>
+</para>
+</listitem><listitem><para>Things to consider <linebreak/>
+</para>
+</listitem><listitem><para>Specifying value types <linebreak/>
+<itemizedlist>
+<listitem><para>How to store unsigned types <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Casting returned values <linebreak/>
+</para>
+</listitem><listitem><para>Headerless files <linebreak/>
+</para>
+</listitem><listitem><para>Custom delimiter <linebreak/>
+</para>
+</listitem><listitem><para>Custom quote character <linebreak/>
+</para>
+</listitem><listitem><para>Checking if the file was parsed correctly <linebreak/>
+</para>
+</listitem><listitem><para>Troubleshooting <linebreak/>
+</para>
+</listitem><listitem><para>Motivation <linebreak/>
+</para>
+</listitem><listitem><para>Documentation <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md80">
+<title>What is CSV format</title>
+<para>CSV means comma separated values. It&apos;s like a normal &quot;txt&quot; file with commas at regular places to separate some values. <linebreak/>
+ Typically the first line of CSV file is a &quot;header&quot;, containing names of columns (this way any reader knows which column means what). <linebreak/>
+ Example CSV file with header and 2 columns: <linebreak/>
+</para>
+<para><blockquote><para><zwj/>Date,Temperature <linebreak/>
+ 2020/06/12,20 <linebreak/>
+ 2020/06/13,22 <linebreak/>
+ 2020/06/14,21 <linebreak/>
+ </para>
+</blockquote>Using CSV format is one way of organising data, which makes it easy for programs to read. <linebreak/>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md81">
+<title>What is this CSV parser</title>
+<para>It&apos;s a class to which you can supply: <linebreak/>
+<itemizedlist>
+<listitem><para>csv string (including new-line characters) <linebreak/>
+</para>
+</listitem><listitem><para>format string (where each letter specifies type of value for each column) <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>Class parses that string, in other words, it extracts values, stores them and provides you with: <linebreak/>
+<itemizedlist>
+<listitem><para>easily accessible set of arrays (their types are specified by the format string) <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>It adheres to the <ulink url="https://tools.ietf.org/html/rfc4180">RFC 4180 specification</ulink>. <linebreak/>
+ It was written with care to not be greedy in terms of occupied memory and parsing time. <linebreak/>
+</para>
+<para><image type="html" name="./images/working_principle.png" alt="image didnt load" inline="yes"></image>
+ <linebreak/>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md82">
+<title>Installation</title>
+<para>In Arduino IDE select <bold>Tools-&gt;Manage libraries</bold>, type &quot;csv&quot; in the top editbox, find &quot;CSV Parser&quot; and press <bold>install</bold>. <linebreak/>
+</para>
+<para><image type="html" name="https://raw.githubusercontent.com/michalmonday/files/master/CSV-Parser-for-Arduino/lib_mngr.png" alt="library manager image" inline="yes"></image>
+ <linebreak/>
+</para>
+<para>Then just add the following line at the top of your sketch: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="preprocessor">#include<sp/>&lt;CSV_Parser.h&gt;</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md83">
+<title>Usage</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings,my_longs,my_ints,my_chars,my_floats,my_hex,my_to_be_ignored\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello,70000,140,10,3.33,FF0000,this_value_wont_be_stored\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world,80000,150,20,7.77,0000FF,this_value_wont_be_stored\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;noice,90000,160,30,9.99,FFFFFF,this_value_wont_be_stored\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sLdcfx-&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>**strings<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**)cp[</highlight><highlight class="stringliteral">&quot;my_strings&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal">int32_t<sp/>*longs<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(int32_t*)cp[</highlight><highlight class="stringliteral">&quot;my_longs&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal">int16_t<sp/>*ints<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(int16_t*)cp[</highlight><highlight class="stringliteral">&quot;my_ints&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>*chars<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)cp[</highlight><highlight class="stringliteral">&quot;my_chars&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>*floats<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)cp[</highlight><highlight class="stringliteral">&quot;my_floats&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal">int32_t<sp/>*longs_from_hex<sp/>=<sp/>(int32_t*)cp[</highlight><highlight class="stringliteral">&quot;my_hex&quot;</highlight><highlight class="normal">];<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CSV_Parser<sp/>stores<sp/>hex<sp/>as<sp/>longs<sp/>(casting<sp/>to<sp/>int*<sp/>would<sp/>point<sp/>to<sp/>wrong<sp/>address<sp/>when<sp/>ints[ind]<sp/>is<sp/>used)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>cp.getRowsCount();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(strings[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(longs[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(ints[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(chars[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(floats[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>-<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(longs_from_hex[i],<sp/>HEX);<sp/>Serial.println();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+<para>Output: <linebreak/>
+ <blockquote><para><zwj/>hello - 70000 - 140 - 10 - 3.33 - FF0000 <linebreak/>
+ world - 80000 - 150 - 20 - 7.77 - FF <linebreak/>
+ noice - 90000 - 160 - 20 - 9.99 - FFFFFF <linebreak/>
+ </para>
+</blockquote>Notice how each character within <computeroutput>&quot;sLdcfx-&quot;</computeroutput> string specifies different type for each column. It is very important to set this format right. We could set each solumn to be strings like &quot;sssssss&quot;, however this would use more memory than it&apos;s really needed. If we wanted to store a large array of small numerical values (e.g. under 128), then using &quot;c&quot; specifier would be appropriate. See Specifying value types section for full list of available specifiers and their descriptions. <linebreak/>
+</para>
+<para><image type="html" name="./images/format_string.png" alt="image didnt load" inline="yes"></image>
+ <linebreak/>
+</para>
+<para><bold>Is it necessary to supply the whole string at once?</bold> <linebreak/>
+ No, it may be supplied in incomplete parts as shown in <ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/blob/master/examples/supplying_csv_by_incomplete_parts/supplying_csv_by_incomplete_parts.ino">this example</ulink>. <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="comment">/*<sp/><sp/><sp/>&quot;sL&quot;<sp/>means<sp/>&quot;string&quot;<sp/>(char*<sp/>type)<sp/>and<sp/>&quot;Long&quot;<sp/>(int32_t<sp/>type)<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(</highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sL&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*CSV<sp/>file:</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/>my_strings,my_numbers\n</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/>hello,5\n</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/><sp/>world,10\n</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>File<sp/>supplied<sp/>in<sp/>chunks:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cp<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;my_st&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;rings&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,my_n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cp<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;umbers\nh&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ello,5\nwor&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ld,10\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**strings<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**)cp[</highlight><highlight class="stringliteral">&quot;my_strings&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>int32_t<sp/>*numbers<sp/>=<sp/>(int32_t*)cp[</highlight><highlight class="stringliteral">&quot;my_numbers&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>cp.getRowsCount();<sp/>row++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(row,<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;.<sp/>String<sp/>=<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(strings[row]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(row,<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;.<sp/>Number<sp/>=<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(numbers[row],<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+</programlisting></para>
+<para>We may as well supply the csv file character by character like: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings,my_floats\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello,1.1\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world,2.2\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(</highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sf&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c<sp/>:<sp/>String(csv_str))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">/*<sp/>or<sp/>(to<sp/>avoid<sp/>using<sp/>&quot;String&quot;<sp/>object)</highlight></codeline>
+<codeline><highlight class="comment">for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>strlen(csv_str);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="comment"><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>csv_str[i];</highlight></codeline>
+<codeline><highlight class="comment">}<sp/>*/</highlight></codeline>
+</programlisting></para>
+<para>Since version 1.0.0, we can supply various types: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="comment">//<sp/>original<sp/>csv<sp/>file<sp/>=<sp/>&quot;101,102,103\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>how<sp/>we<sp/>could<sp/>supply<sp/>it:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/>String(102)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,103\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+</programlisting> Floats can be supplied as well. In general, any types can be supplied, the principle is: if the type isn&apos;t &quot;String&quot;, &quot;char \*&quot; or &quot;char&quot;, then the String(supplied_value) will be appended (before being parsed and stored as a type specified in the format string). <linebreak/>
+</para>
+<para><bold>Important</bold> <linebreak/>
+ Arduino built-in File.read() method returns an integer (instead of a char). Therefore, it&apos;s important to cast its return before supplying it to <ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref> object, like: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="normal">File<sp/>csv_file<sp/>=<sp/>SD.open(f_name);<sp/></highlight><highlight class="comment">//<sp/>or<sp/>FFat.open(f_name);</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(csv_file.available())<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>(char)csv_file.read();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> Without <computeroutput>(char)</computeroutput>, the string representation of ascii number would be stored. <linebreak/>
+ Before the 1.0.0 version, the <computeroutput>cp &lt;&lt; 97;</computeroutput> expression would append letter &apos;a&apos; (because &apos;97&apos; stands for &apos;a&apos; in ascii table). From 1.0.0 version onwards, the <computeroutput>cp &lt;&lt; 97;</computeroutput> is equivalent to <computeroutput>cp &lt;&lt; String(97);</computeroutput>, it will append &apos;97&apos; instead of &apos;a&apos;. That is correct behaviour in my opinion, however due to design of Arduino built-in &quot;File.read()&quot; method, which returns an integer, it is necessary to cast it&apos;s return (with <computeroutput>(char)csv_file.read()</computeroutput> as shown above), and problems may occur if some existing code (using this library) doesn&apos;t explicitly cast it. <linebreak/>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md84">
+<title>Examples</title>
+<para>Examples directory contains examples showing: <linebreak/>
+<itemizedlist>
+<listitem><para><ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/basic_usage">basic usage</ulink> <linebreak/>
+</para>
+</listitem><listitem><para><ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/unsigned_values">how to handle unsigned types</ulink> <linebreak/>
+</para>
+</listitem><listitem><para><ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/supplying_csv_by_incomplete_parts">how to supply csv by incomplete parts</ulink> <linebreak/>
+</para>
+</listitem><listitem><para><ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/reading_from_computer_python">how to read csv file from a PC (using provided python script)</ulink> <linebreak/>
+</para>
+</listitem><listitem><para><ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/reading_from_sd_card">how to read csv file from SD card</ulink> <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md85">
+<title>Things to consider</title>
+<para>If CSV file doesn&apos;t contain header line, then it must be specified as 3rd argument of the constructor (see this example) <linebreak/>
+ If CSV file is separated by other character instead of comma, then it must be specified as 4th argument of the constructor (see this example) <linebreak/>
+</para>
+<para>Programmer must: <linebreak/>
+<itemizedlist>
+<listitem><para>know and specify what type of values are stored in each of the CSV columns (see this example) <linebreak/>
+</para>
+</listitem><listitem><para>cast returned values appropriately (see this example) <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>The CSV file may: <linebreak/>
+<itemizedlist>
+<listitem><para>include mixed type of line endings (&apos;\r<linebreak/>
+&apos;, &apos;<linebreak/>
+&apos;) <linebreak/>
+</para>
+</listitem><listitem><para>end with &apos;<linebreak/>
+&apos; or &apos;\r<linebreak/>
+&apos; but it doesn&apos;t have to <linebreak/>
+</para>
+</listitem><listitem><para>have empty fields <linebreak/>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>**Important - if the file does not end with &quot;\n&quot; (new line) then cp.parseLeftover() method must be called after supplying the whole file (regardless if it was supplied all at once or in parts). Example:** <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings,my_floats\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello,1.1\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world,2.2&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>last<sp/>line<sp/>is<sp/>not<sp/>ending<sp/>with<sp/>&quot;\n&quot;<sp/>or<sp/>&quot;\r\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sf&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">cp.parseLeftover();</highlight></codeline>
+</programlisting></para>
+<para><bold>What if the string itself stored in CSV contains comma (or other custom delimiter)?</bold> <linebreak/>
+ As described in the <ulink url="https://tools.ietf.org/html/rfc4180">RFC 4180 specification</ulink> we can enclose the string using double quotes. Example csv: <linebreak/>
+ <blockquote><para><zwj/>my_strings,my_ints<linebreak/>
+ <linebreak/>
+ &quot;single, string, including, commas&quot;,10<linebreak/>
+ <linebreak/>
+ &quot;another string, with single comma&quot;,20 <linebreak/>
+ </para>
+</blockquote></para>
+<para><bold>What if we wanted to store double quotes themselves?</bold> <linebreak/>
+ As described in the <ulink url="https://tools.ietf.org/html/rfc4180">RFC 4180 specification</ulink> we can put two double quotes next to each other. The parser will treat them as one. Example: <linebreak/>
+ <blockquote><para><zwj/>my_strings,my_ints<linebreak/>
+ <linebreak/>
+ &quot;this string will have 1 &quot;&quot; double quote inside it&quot;,10<linebreak/>
+ <linebreak/>
+ &quot;another string with &quot;&quot; double quote char&quot;,10<linebreak/>
+ <linebreak/>
+ </para>
+</blockquote>Parser will read such file as: <linebreak/>
+ 1st string = this string will have 1 &quot; double quote inside it  &lt;br&gt;
+2nd string = another string with &quot; double quote char <linebreak/>
+</para>
+<para>Notice that it&apos;s possible to customize the quote char as shown in this section. E.g. to use single quotes (&apos;) instead. <linebreak/>
+</para>
+<para><bold>Header fields leading and trailing spaces are ignored</bold> <linebreak/>
+ Example: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>test<sp/>a<sp/><sp/>,<sp/><sp/>test<sp/>b<sp/><sp/>\n&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>header<sp/>names<sp/>include<sp/>leading<sp/>and<sp/>trailing<sp/>spaces</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;1,2\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;3,4\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="stringliteral">&quot;cc&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">int8_t<sp/>*a<sp/>=<sp/>(int8_t*)cp[</highlight><highlight class="stringliteral">&quot;test<sp/>a&quot;</highlight><highlight class="normal">];<sp/></highlight><highlight class="comment">//<sp/>notice<sp/>how<sp/>&quot;test<sp/>a&quot;<sp/>is<sp/>used<sp/>instead<sp/>of<sp/>&quot;<sp/><sp/>test<sp/>a<sp/><sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">int8_t<sp/>*b<sp/>=<sp/>(int8_t*)cp[</highlight><highlight class="stringliteral">&quot;test<sp/>b&quot;</highlight><highlight class="normal">];</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md86">
+<title>Specifying value types</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings,my_floats\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello,1.1\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world,2.2\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sf&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+</programlisting></para>
+<para>Example above is specifying &quot;s&quot; (string) for the 1st column, and &quot;f&quot; (float) for the 2nd column. <linebreak/>
+</para>
+<para>Possible specifiers are: <linebreak/>
+ <table rows="2" cols="3"><row>
+<entry thead="yes"><para>Specifier   </para>
+</entry><entry thead="yes"><para>Type   </para>
+</entry><entry thead="yes"><para>Description    </para>
+</entry></row>
+<row>
+<entry thead="no"><para><bold>s</bold>   </para>
+</entry><entry thead="no"><para>string (char*)   </para>
+</entry><entry thead="no"><para>C-like string, not a &quot;String&quot; Arduino object.   </para>
+</entry></row>
+</table>
+| <bold>f</bold> | float | <linebreak/>
+ | <bold>L</bold> | int32_t | 32-bit signed value, value range: -2,147,483,648 to 2,147,483,647. Capital L is used because lowercase &quot;l&quot; looks like number one &quot;1&quot;. | | <bold>d</bold> | int16_t | 16-bit signed value, value range: -32,768 to 32,767. | | <bold>c</bold> | char | 8-bit signed value, value range: -128 to 127. | | <bold>x</bold> | int32_t | Expects hexadecimal string (will store &quot;10&quot; or &quot;0x10&quot; csv as 16). | | <bold>-</bold> | | Dash character means that value is unused/not-parsed, this way memory won&apos;t be allocated for values from that column. | | <bold>uL</bold> | uint32_t | 32-bit unsigned value, value range: 0 to 4,294,967,295. | | <bold>ud</bold> | uint16_t | 16-bit unsigned value, value range: 0 to 65,535. | | <bold>uc</bold> | uint8_t | 8-bit unsigned value, value range: 0 to 255. | | <bold>ux</bold> | uint32_t | Expects hexadecimal string (will store &quot;10&quot; or &quot;0x10&quot; csv as 16). |</para>
+<sect3 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md87">
+<title>How to store unsigned types</title>
+<para>As shown in the table above, unsigned type specifiers are made by preceding the integer based specifiers (&quot;L&quot;, &quot;d&quot;, &quot;c&quot;, &quot;x&quot;) with &quot;u&quot;.</para>
+<para>Example: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;column_1,column_2\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;201,202\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;203,204\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;ucuc&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>See <ulink url="https://github.com/michalmonday/CSV-Parser-for-Arduino/blob/master/examples/unsigned_values/unsigned_values.ino">unsigned_values example</ulink> for more info. <linebreak/>
+</para>
+</sect3>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md88">
+<title>Casting returned values</title>
+<para>Let&apos;s suppose that we parse the following: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings,my_floats\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello,1.1\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world,2.2\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sf&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+</programlisting></para>
+<para>To cast/retrieve the values we can use: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>**strings<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**)cp[</highlight><highlight class="stringliteral">&quot;my_strings&quot;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*floats<sp/>=<sp/><sp/><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*)cp[</highlight><highlight class="stringliteral">&quot;my_floats&quot;</highlight><highlight class="normal">];</highlight></codeline>
+</programlisting></para>
+<para>&quot;x&quot; (hex input values), should be cast as &quot;int32_t*&quot; (or uint32_t*), because that&apos;s how they&apos;re stored. Casting them to &quot;int*&quot; could result in wrong address being computed when using <computeroutput>ints[index]</computeroutput>. <linebreak/>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md89">
+<title>Headerless files</title>
+<para>To parse CSV files without header we can specify 3rd optional argument to the constructor. Example: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;---L&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">/*has_header*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+<para>And then we can use the following to get the extracted values: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="normal">int32_t<sp/>*<sp/>longs<sp/>=<sp/>(int32_t*)cp[3];<sp/></highlight><highlight class="comment">//<sp/>3<sp/>becuase<sp/>L<sp/>is<sp/>at<sp/>index<sp/>3<sp/>of<sp/>&quot;---L&quot;<sp/>format<sp/>string</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md90">
+<title>Custom delimiter</title>
+<para>Delimiter is 4th parameter of the constructor. It&apos;s comma (,) by default. We can customize it like this: <linebreak/>
+ <programlisting filename=".cpp"><codeline><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>csv_str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;my_strings;my_floats\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;hello;1.1\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;world;2.2\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_c_s_v___parser" kindref="compound">CSV_Parser</ref><sp/>cp(csv_str,<sp/></highlight><highlight class="comment">/*format*/</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;sf&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">/*has_header*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">/*delimiter*/</highlight><highlight class="normal"><sp/></highlight><highlight class="charliteral">&apos;;&apos;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md91">
+<title>Custom quote character</title>
+<para>Quote character is 5th parameter of the constructor. It&apos;s double quote (&quot;) by default. We can customize it like this:  &lt;br&gt;
+@icode{cpp} 
+CSV_Parser cp(csv_str, /*format*/ &quot;sLdcfxs&quot;, /*has_header*/ true, /*delimiter*/ &apos;,&apos;, /*quote_char*/ &quot;&apos;&quot;);
+@endicode 
+
+
+@section autotoc_md92 Checking if the file was parsed correctly
+Use CSV_Parser.print function and check serial monitor. Example:  &lt;br&gt;
+@icode{cpp} 
+CSV_Parser cp(csv_str, /*format*/ &quot;sLdcfx-&quot;);
+cp.print();
+@endicode 
+
+It will display parsed header fields, their types and all the parsed values. Like this:  &lt;br&gt;
+&lt;blockquote&gt;&amp;zwj;CSV_Parser content:  &lt;br&gt;
+  Header:  &lt;br&gt;
+     my_strings | my_longs | my_ints | my_chars | my_floats | my_hex | -  &lt;br&gt;
+  Types:  &lt;br&gt;
+     char* | int32_t | int16_t | char | float | hex (long) | -  &lt;br&gt;
+  Values:  &lt;br&gt;
+     hello | 70000 | 140 | 10 | 3.33 | FF0000 | -   &lt;br&gt;
+     world | 80000 | 150 | 20 | 7.77 | FF | -  &lt;br&gt;
+     noice | 90000 | 160 | 30 | 9.99 | FFFFFF | -  &lt;br&gt;
+&lt;/blockquote&gt;
+&lt;strong&gt;Important - cp.print() method is using &quot;Serial&quot; object, it assumes that &quot;Serial.begin(baud_rate);&quot; was previously called.&lt;/strong&gt;  &lt;br&gt;
+
+@section autotoc_md93 Troubleshooting
+
+Platformio users reported compilation issues due to SD library import by the CSV_Parser.cpp file. Since 0.2.1 version of this library, the SD import can be disabled by placing &lt;tt&gt;\#define CSV_PARSER_DONT_IMPORT_SD&lt;/tt&gt; above (it won&apos;t work if it&apos;s below) the CSV_Parser library import like this:  &lt;br&gt;
+
+@icode{cpp} 
+#define CSV_PARSER_DONT_IMPORT_SD
+#include &lt;CSV_Parser.h&gt;
+@endicode 
+
+@section autotoc_md94 Motivation
+I wanted to parse &lt;a href=&quot;<ulink url="https://github.com/tomwhite/covid-19-uk-data">https://github.com/tomwhite/covid-19-uk-data</ulink>" &gt;covid-19 csv data and couldn&apos;t find any csv parser for Arduino. So instead of rushing with a quick/dirty solution, I decided to write something that could be reused in the future (possibly by other people too). <linebreak/>
+</para>
+</sect1>
+<sect1 id="md_libraries_2_c_s_v___parser_2_r_e_a_d_m_e_1autotoc_md95">
+<title>Documentation</title>
+<para><ulink url="https://michalmonday.github.io/CSV-Parser-for-Arduino/index.html">https://michalmonday.github.io/CSV-Parser-for-Arduino/index.html</ulink> <linebreak/>
+ </para>
+</sect1>
+    </detaileddescription>
+    <location file="libraries/CSV_Parser/README.md"/>
+  </compounddef>
+</doxygen>

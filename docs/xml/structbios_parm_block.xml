@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structbios_parm_block" kind="struct" language="C++" prot="public">
+    <compoundname>biosParmBlock</compoundname>
+    <includes refid="_fat_structs_8h" local="no">FatStructs.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbios_parm_block_1aec24d316af486445d55da14cbbfa6bf4" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::bytesPerSector</definition>
+        <argsstring></argsstring>
+        <name>bytesPerSector</name>
+        <qualifiedname>biosParmBlock::bytesPerSector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of bytes per sector. This value may take on only the following values: 512, 1024, 2048 or 4096 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="133" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a45d5e2d8c93a028a074e8ce3dc751ab5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t biosParmBlock::sectorsPerCluster</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerCluster</name>
+        <qualifiedname>biosParmBlock::sectorsPerCluster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sectors per allocation unit. This value must be a power of 2 that is greater than 0. The legal values are 1, 2, 4, 8, 16, 32, 64, and 128. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="139" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1adb4830c345b27293c7d7b97b77f52e01" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::reservedSectorCount</definition>
+        <argsstring></argsstring>
+        <name>reservedSectorCount</name>
+        <qualifiedname>biosParmBlock::reservedSectorCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of sectors before the first FAT. This value must not be zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="144" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a7c03f147c3fb18f0df03d346050af13b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t biosParmBlock::fatCount</definition>
+        <argsstring></argsstring>
+        <name>fatCount</name>
+        <qualifiedname>biosParmBlock::fatCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The count of FAT data structures on the volume. This field should always contain the value 2 for any FAT volume of any type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="148" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a9a1b24bb2dbb3a123c4ffc703954d71d" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::rootDirEntryCount</definition>
+        <argsstring></argsstring>
+        <name>rootDirEntryCount</name>
+        <qualifiedname>biosParmBlock::rootDirEntryCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For FAT12 and FAT16 volumes, this field contains the count of 32-byte directory entries in the root directory. For FAT32 volumes, this field must be set to 0. For FAT12 and FAT16 volumes, this value should always specify a count that when multiplied by 32 results in a multiple of bytesPerSector. FAT16 volumes should use the value 512. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="157" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a686c686fde2fb109bea120f2f434db87" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::totalSectors16</definition>
+        <argsstring></argsstring>
+        <name>totalSectors16</name>
+        <qualifiedname>biosParmBlock::totalSectors16</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is the old 16-bit total count of sectors on the volume. This count includes the count of all sectors in all four regions of the volume. This field can be 0; if it is 0, then totalSectors32 must be non-zero. For FAT32 volumes, this field must be 0. For FAT12 and FAT16 volumes, this field contains the sector count, and totalSectors32 is 0 if the total sector count fits (is less than 0x10000). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="167" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a4237e7c3ba247516d546c149954e5042" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t biosParmBlock::mediaType</definition>
+        <argsstring></argsstring>
+        <name>mediaType</name>
+        <qualifiedname>biosParmBlock::mediaType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This dates back to the old MS-DOS 1.x media determination and is no longer usually used for anything. 0xF8 is the standard value for fixed (non-removable) media. For removable media, 0xF0 is frequently used. Legal values are 0xF0 or 0xF8-0xFF. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="174" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a24d6e5a9069491d5db6dbe747336985b" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::sectorsPerFat16</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerFat16</name>
+        <qualifiedname>biosParmBlock::sectorsPerFat16</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of sectors occupied by one FAT on FAT12/FAT16 volumes. On FAT32 volumes this field must be 0, and sectorsPerFat32 contains the FAT size count. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="180" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a7c27cb7f66c2c9d5266d896e8df227c7" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::sectorsPerTrtack</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerTrtack</name>
+        <qualifiedname>biosParmBlock::sectorsPerTrtack</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sectors per track for interrupt 0x13. Not used otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="182" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a2324ca82e2a7da4d91f458fa32a6e239" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::headCount</definition>
+        <argsstring></argsstring>
+        <name>headCount</name>
+        <qualifiedname>biosParmBlock::headCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of heads for interrupt 0x13. Not used otherwise. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="184" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a9413199be8525190d40589f60c22bcab" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t biosParmBlock::hidddenSectors</definition>
+        <argsstring></argsstring>
+        <name>hidddenSectors</name>
+        <qualifiedname>biosParmBlock::hidddenSectors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of hidden sectors preceding the partition that contains this FAT volume. This field is generally only relevant for media visible on interrupt 0x13. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="190" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1abead42e130c40e2aa535202e7cb07578" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t biosParmBlock::totalSectors32</definition>
+        <argsstring></argsstring>
+        <name>totalSectors32</name>
+        <qualifiedname>biosParmBlock::totalSectors32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is the new 32-bit total count of sectors on the volume. This count includes the count of all sectors in all four regions of the volume. This field can be 0; if it is 0, then totalSectors16 must be non-zero. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="197" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1ad80429df03a6b80f79b18cb6e1008d64" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t biosParmBlock::sectorsPerFat32</definition>
+        <argsstring></argsstring>
+        <name>sectorsPerFat32</name>
+        <qualifiedname>biosParmBlock::sectorsPerFat32</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count of sectors occupied by one FAT on FAT32 volumes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="201" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a626ac3dc473d764688b8171916eecf44" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::fat32Flags</definition>
+        <argsstring></argsstring>
+        <name>fat32Flags</name>
+        <qualifiedname>biosParmBlock::fat32Flags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field is only defined for FAT32 media and does not exist on FAT12 and FAT16 media. Bits 0-3 <ndash/> Zero-based number of active FAT. Only valid if mirroring is disabled. Bits 4-6 <ndash/> Reserved. Bit 7 <ndash/> 0 means the FAT is mirrored at runtime into all FATs. <ndash/> 1 means only one FAT is active; it is the one referenced in bits 0-3. Bits 8-15 <ndash/> Reserved. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="212" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1abad4f6f0c14dad9f5b7d43de94e685e8" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::fat32Version</definition>
+        <argsstring></argsstring>
+        <name>fat32Version</name>
+        <qualifiedname>biosParmBlock::fat32Version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FAT32 version. High byte is major revision number. Low byte is minor revision number. Only 0.0 define. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="217" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a77ca01bd99f746e05dd872cbd2979937" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t biosParmBlock::fat32RootCluster</definition>
+        <argsstring></argsstring>
+        <name>fat32RootCluster</name>
+        <qualifiedname>biosParmBlock::fat32RootCluster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cluster number of the first cluster of the root directory for FAT32. This usually 2 but not required to be 2. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="222" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a25ea392d8284e6c1d007cb8fcad4b86c" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::fat32FSInfo</definition>
+        <argsstring></argsstring>
+        <name>fat32FSInfo</name>
+        <qualifiedname>biosParmBlock::fat32FSInfo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sector number of FSINFO structure in the reserved area of the FAT32 volume. Usually 1. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="227" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a7a4e93790b6e66f090c1551020b099bd" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t biosParmBlock::fat32BackBootBlock</definition>
+        <argsstring></argsstring>
+        <name>fat32BackBootBlock</name>
+        <qualifiedname>biosParmBlock::fat32BackBootBlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If non-zero, indicates the sector number in the reserved area of the volume of a copy of the boot record. Usually 6. No value other than 6 is recommended. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="233" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbios_parm_block_1a351f87fe3446b1a71963a30bbdc23218" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t biosParmBlock::fat32Reserved[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>fat32Reserved</name>
+        <qualifiedname>biosParmBlock::fat32Reserved</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reserved for future expansion. Code that formats FAT32 volumes should always set all of the bytes of this field to 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="238" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="238" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>BIOS parameter block. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The BIOS parameter block describes the physical layout of a FAT volume. </para>
+    </detaileddescription>
+    <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="128" column="1" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="128" bodyend="239"/>
+    <listofallmembers>
+      <member refid="structbios_parm_block_1aec24d316af486445d55da14cbbfa6bf4" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>bytesPerSector</name></member>
+      <member refid="structbios_parm_block_1a7a4e93790b6e66f090c1551020b099bd" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32BackBootBlock</name></member>
+      <member refid="structbios_parm_block_1a626ac3dc473d764688b8171916eecf44" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32Flags</name></member>
+      <member refid="structbios_parm_block_1a25ea392d8284e6c1d007cb8fcad4b86c" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32FSInfo</name></member>
+      <member refid="structbios_parm_block_1a351f87fe3446b1a71963a30bbdc23218" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32Reserved</name></member>
+      <member refid="structbios_parm_block_1a77ca01bd99f746e05dd872cbd2979937" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32RootCluster</name></member>
+      <member refid="structbios_parm_block_1abad4f6f0c14dad9f5b7d43de94e685e8" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fat32Version</name></member>
+      <member refid="structbios_parm_block_1a7c03f147c3fb18f0df03d346050af13b" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>fatCount</name></member>
+      <member refid="structbios_parm_block_1a2324ca82e2a7da4d91f458fa32a6e239" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>headCount</name></member>
+      <member refid="structbios_parm_block_1a9413199be8525190d40589f60c22bcab" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>hidddenSectors</name></member>
+      <member refid="structbios_parm_block_1a4237e7c3ba247516d546c149954e5042" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>mediaType</name></member>
+      <member refid="structbios_parm_block_1adb4830c345b27293c7d7b97b77f52e01" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>reservedSectorCount</name></member>
+      <member refid="structbios_parm_block_1a9a1b24bb2dbb3a123c4ffc703954d71d" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>rootDirEntryCount</name></member>
+      <member refid="structbios_parm_block_1a45d5e2d8c93a028a074e8ce3dc751ab5" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>sectorsPerCluster</name></member>
+      <member refid="structbios_parm_block_1a24d6e5a9069491d5db6dbe747336985b" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>sectorsPerFat16</name></member>
+      <member refid="structbios_parm_block_1ad80429df03a6b80f79b18cb6e1008d64" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>sectorsPerFat32</name></member>
+      <member refid="structbios_parm_block_1a7c27cb7f66c2c9d5266d896e8df227c7" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>sectorsPerTrtack</name></member>
+      <member refid="structbios_parm_block_1a686c686fde2fb109bea120f2f434db87" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>totalSectors16</name></member>
+      <member refid="structbios_parm_block_1abead42e130c40e2aa535202e7cb07578" prot="public" virt="non-virtual"><scope>biosParmBlock</scope><name>totalSectors32</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

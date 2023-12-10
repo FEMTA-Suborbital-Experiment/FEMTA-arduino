@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="tests_2sensors_2src_2_sensor_poller_8h" kind="file" language="C++">
+    <compoundname>SensorPoller.h</compoundname>
+    <includes refid="_h_s_c_m_8h" local="no">HSCM.h</includes>
+    <includes refid="_p_v_c4000_8h" local="no">PVC4000.h</includes>
+    <includes local="no">MS5837.h</includes>
+    <includes local="no">Adafruit_LSM303_Accel.h</includes>
+    <includes local="no">Adafruit_Sensor.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includedby refid="tests_2sensors_2src_2_sensor_poller_8cpp" local="yes">tests/sensors/src/SensorPoller.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>Adafruit_LSM303_Accel.h</label>
+      </node>
+      <node id="9">
+        <label>Adafruit_Sensor.h</label>
+      </node>
+      <node id="2">
+        <label>HSCM.h</label>
+        <link refid="_h_s_c_m_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>PVC4000.h</label>
+        <link refid="_p_v_c4000_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/sensors/src/SensorPoller.h</label>
+        <link refid="tests_2sensors_2src_2_sensor_poller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MS5837.h</label>
+      </node>
+      <node id="3">
+        <label>WProgram.h</label>
+      </node>
+      <node id="4">
+        <label>Wire.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_sensor_poller" prot="public">SensorPoller</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="tests_2sensors_2src_2_sensor_poller_8h_1a3e553cb1549b32cbdb8e38b97961b3fa" prot="public" static="no">
+        <name>PIN_DPT_SELECTOR_0</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="11" column="9" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tests_2sensors_2src_2_sensor_poller_8h_1ac629e1a3737ee765c63e6ae18759a84a" prot="public" static="no">
+        <name>PIN_DPT_SELECTOR_1</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="12" column="9" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="tests_2sensors_2src_2_sensor_poller_8h_1a5ce29f54b558268fe85901f3c603d170" prot="public" static="no">
+        <name>PIN_DPT_SELECTOR_2</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/sensors/src/SensorPoller.h" line="13" column="9" bodyfile="tests/sensors/src/SensorPoller.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>FEMTA_SENSOR_POLLER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEMTA_SENSOR_POLLER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_h_s_c_m_8h" kindref="compound">HSCM.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_p_v_c4000_8h" kindref="compound">PVC4000.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;MS5837.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_LSM303_Accel.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_Sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_DPT_SELECTOR_0<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_DPT_SELECTOR_1<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_DPT_SELECTOR_2<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sensor_poller" kindref="compound">SensorPoller</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hertz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pollRate<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sensor_poller" kindref="compound">SensorPoller</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readAccelerometer(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*vec);<sp/></highlight><highlight class="comment">//<sp/>float[3]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readLowAltBaro(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pressure,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp);<sp/></highlight><highlight class="comment">//<sp/>float,<sp/>HSCM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readHighAltBaro(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pressure,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp);<sp/></highlight><highlight class="comment">//<sp/>float,<sp/>PVC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readPressureSensors(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pressures,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temperatures);<sp/></highlight><highlight class="comment">//<sp/>float[5],<sp/>float[5]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readFlowMeter(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*flow);<sp/></highlight><highlight class="comment">//<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initPressureSensors();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adafruit_LSM303_Accel_Unified<sp/>accel<sp/>=<sp/>Adafruit_LSM303_Accel_Unified(54321);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>pressure0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>pressure1;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>pressure2;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>pressure3;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>pressure4;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MS5837<sp/>*pressures[5]<sp/>=<sp/>{<sp/>&amp;pressure0,<sp/>&amp;pressure1,<sp/>&amp;pressure2,<sp/>&amp;pressure3,<sp/>&amp;pressure4<sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref><sp/>highAlt<sp/>=<sp/><ref refid="class_p_v_c4000" kindref="compound">PVC4000</ref>(0x50);<sp/></highlight><highlight class="comment">//<sp/>high<sp/>altitude<sp/>baro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_h_s_c_m___p_s_i" kindref="compound">HSCM_PSI</ref><sp/>lowAlt<sp/>=<sp/><ref refid="class_h_s_c_m___p_s_i" kindref="compound">HSCM_PSI</ref>(0x20,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lastRead;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>sensorVector[5];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>accelGood<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pressuresGood[5]<sp/>=<sp/>{1,<sp/>1,<sp/>1,<sp/>1,<sp/>1};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>flowGood<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="tests/sensors/src/SensorPoller.h"/>
+  </compounddef>
+</doxygen>

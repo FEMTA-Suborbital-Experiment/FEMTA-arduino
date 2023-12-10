@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_sensirion_l_f" kind="class" language="C++" prot="public">
+    <compoundname>SensirionLF</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensirion_l_f_1a0e2edf3da8ac8a98ef6dd36a8f9c0e34" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensirionLF::mFlowScaleFactor</definition>
+        <argsstring></argsstring>
+        <name>mFlowScaleFactor</name>
+        <qualifiedname>SensirionLF::mFlowScaleFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="64" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1a954a6453d798ea495bdf11784aa2eba5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensirionLF::mTempScaleFactor</definition>
+        <argsstring></argsstring>
+        <name>mTempScaleFactor</name>
+        <qualifiedname>SensirionLF::mTempScaleFactor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="65" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1afff359d70f1ac8f63066bc7ae0963490" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensirionLF::mI2cAddress</definition>
+        <argsstring></argsstring>
+        <name>mI2cAddress</name>
+        <qualifiedname>SensirionLF::mI2cAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="66" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1a52a02b89fba288618aeb94005c84ded5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensirionLF::mFlow</definition>
+        <argsstring></argsstring>
+        <name>mFlow</name>
+        <qualifiedname>SensirionLF::mFlow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="68" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1a4e84a2fc2764dfc295dd004eb6be870b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensirionLF::mTemp</definition>
+        <argsstring></argsstring>
+        <name>mTemp</name>
+        <qualifiedname>SensirionLF::mTemp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="69" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1adc92227a434f2722c3cedec45df88f07" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensirionLF::mAirInLineDetected</definition>
+        <argsstring></argsstring>
+        <name>mAirInLineDetected</name>
+        <qualifiedname>SensirionLF::mAirInLineDetected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="71" column="8" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensirion_l_f_1a8e7f9277a8314bd7b9c96b85b1cbd670" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensirionLF::mHighFlowDetected</definition>
+        <argsstring></argsstring>
+        <name>mHighFlowDetected</name>
+        <qualifiedname>SensirionLF::mHighFlowDetected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="72" column="8" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensirion_l_f_1ae57f5727ece412740aee198cfb257305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensirionLF::SensirionLF</definition>
+        <argsstring>(float flowScaleFactor, float tempScaleFactor, uint8_t i2cAddress)</argsstring>
+        <name>SensirionLF</name>
+        <qualifiedname>SensirionLF::SensirionLF</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>flowScaleFactor</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>tempScaleFactor</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2cAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="41" column="3" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="64" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1acc46fa51e68b7bda73eed96e1621efd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>SensirionLF::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="43" column="10" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a2e1a79c0128e591a8ee955cb56b5dc7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::readSample</definition>
+        <argsstring>()</argsstring>
+        <name>readSample</name>
+        <qualifiedname>SensirionLF::readSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="44" column="10" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="84" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a3dffe677786d1dd384081ddf27a83a23" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensirionLF::getFlow</definition>
+        <argsstring>() const</argsstring>
+        <name>getFlow</name>
+        <qualifiedname>SensirionLF::getFlow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="46" column="9" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a3e66c4041217b160583b0fc66f5a96b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensirionLF::getTemp</definition>
+        <argsstring>() const</argsstring>
+        <name>getTemp</name>
+        <qualifiedname>SensirionLF::getTemp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="47" column="9" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a5cdb302a4be88e9fda040c4b61aebc04" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SensirionLF::isAirInLineDetected</definition>
+        <argsstring>() const</argsstring>
+        <name>isAirInLineDetected</name>
+        <qualifiedname>SensirionLF::isAirInLineDetected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="49" column="8" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a72dd9574c783418a8727c2de110b722d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SensirionLF::isHighFlowDetected</definition>
+        <argsstring>() const</argsstring>
+        <name>isHighFlowDetected</name>
+        <qualifiedname>SensirionLF::isHighFlowDetected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="50" column="8" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensirion_l_f_1ad87ef790c71fc20398dbd6672f8533f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SensirionLF::crc8</definition>
+        <argsstring>(const uint8_t *data, uint8_t len)</argsstring>
+        <name>crc8</name>
+        <qualifiedname>SensirionLF::crc8</qualifiedname>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="53" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="156" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a4b6e811dbf7695975e5bed80f56dfdaf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::i2c_read</definition>
+        <argsstring>(uint8_t addr, uint8_t *data, uint16_t count)</argsstring>
+        <name>i2c_read</name>
+        <qualifiedname>SensirionLF::i2c_read</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="54" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="174" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a06a405b98bf596ceb2fdb4061817e16f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::i2c_write</definition>
+        <argsstring>(uint8_t addr, const uint8_t *data, uint16_t count)</argsstring>
+        <name>i2c_write</name>
+        <qualifiedname>SensirionLF::i2c_write</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="55" column="11" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="186" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a9a68ed2a590efcea3881791eb5631e35" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::trigger_soft_reset</definition>
+        <argsstring>()</argsstring>
+        <name>trigger_soft_reset</name>
+        <qualifiedname>SensirionLF::trigger_soft_reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="57" column="10" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="129" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a385a8dd302e89452d9d6ff03187768fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::start_measurement</definition>
+        <argsstring>()</argsstring>
+        <name>start_measurement</name>
+        <qualifiedname>SensirionLF::start_measurement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="58" column="10" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="119" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1a460f19095aef83d51b03fbda9907ae81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t SensirionLF::validate_crc</definition>
+        <argsstring>(uint8_t *data, uint8_t word_count)</argsstring>
+        <name>validate_crc</name>
+        <qualifiedname>SensirionLF::validate_crc</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>word_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="60" column="10" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="101" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensirion_l_f_1ac53a853b78fce2fad8d76e0a55df5b95" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensirionLF::convert_and_scale</definition>
+        <argsstring>(uint8_t b1, uint8_t b2, float scale_factor)</argsstring>
+        <name>convert_and_scale</name>
+        <qualifiedname>SensirionLF::convert_and_scale</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>b1</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>b2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale_factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/sensirion-lf/sensirion-lf.h" line="62" column="16" bodyfile="libraries/sensirion-lf/sensirion-lf.cpp" bodystart="145" bodyend="154"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/sensirion-lf/sensirion-lf.h" line="38" column="1" bodyfile="libraries/sensirion-lf/sensirion-lf.h" bodystart="39" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_sensirion_l_f_1ac53a853b78fce2fad8d76e0a55df5b95" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>convert_and_scale</name></member>
+      <member refid="class_sensirion_l_f_1ad87ef790c71fc20398dbd6672f8533f7" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>crc8</name></member>
+      <member refid="class_sensirion_l_f_1a3dffe677786d1dd384081ddf27a83a23" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>getFlow</name></member>
+      <member refid="class_sensirion_l_f_1a3e66c4041217b160583b0fc66f5a96b8" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>getTemp</name></member>
+      <member refid="class_sensirion_l_f_1a4b6e811dbf7695975e5bed80f56dfdaf" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>i2c_read</name></member>
+      <member refid="class_sensirion_l_f_1a06a405b98bf596ceb2fdb4061817e16f" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>i2c_write</name></member>
+      <member refid="class_sensirion_l_f_1acc46fa51e68b7bda73eed96e1621efd9" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>init</name></member>
+      <member refid="class_sensirion_l_f_1a5cdb302a4be88e9fda040c4b61aebc04" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>isAirInLineDetected</name></member>
+      <member refid="class_sensirion_l_f_1a72dd9574c783418a8727c2de110b722d" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>isHighFlowDetected</name></member>
+      <member refid="class_sensirion_l_f_1adc92227a434f2722c3cedec45df88f07" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mAirInLineDetected</name></member>
+      <member refid="class_sensirion_l_f_1a52a02b89fba288618aeb94005c84ded5" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mFlow</name></member>
+      <member refid="class_sensirion_l_f_1a0e2edf3da8ac8a98ef6dd36a8f9c0e34" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mFlowScaleFactor</name></member>
+      <member refid="class_sensirion_l_f_1a8e7f9277a8314bd7b9c96b85b1cbd670" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mHighFlowDetected</name></member>
+      <member refid="class_sensirion_l_f_1afff359d70f1ac8f63066bc7ae0963490" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mI2cAddress</name></member>
+      <member refid="class_sensirion_l_f_1a4e84a2fc2764dfc295dd004eb6be870b" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mTemp</name></member>
+      <member refid="class_sensirion_l_f_1a954a6453d798ea495bdf11784aa2eba5" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>mTempScaleFactor</name></member>
+      <member refid="class_sensirion_l_f_1a2e1a79c0128e591a8ee955cb56b5dc7b" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>readSample</name></member>
+      <member refid="class_sensirion_l_f_1ae57f5727ece412740aee198cfb257305" prot="public" virt="non-virtual"><scope>SensirionLF</scope><name>SensirionLF</name></member>
+      <member refid="class_sensirion_l_f_1a385a8dd302e89452d9d6ff03187768fb" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>start_measurement</name></member>
+      <member refid="class_sensirion_l_f_1a9a68ed2a590efcea3881791eb5631e35" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>trigger_soft_reset</name></member>
+      <member refid="class_sensirion_l_f_1a460f19095aef83d51b03fbda9907ae81" prot="private" virt="non-virtual"><scope>SensirionLF</scope><name>validate_crc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

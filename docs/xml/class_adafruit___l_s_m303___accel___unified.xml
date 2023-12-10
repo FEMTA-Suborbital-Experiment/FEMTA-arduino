@@ -1,0 +1,840 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_adafruit___l_s_m303___accel___unified" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_LSM303_Accel_Unified</compoundname>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <basecompoundref refid="class_adafruit___sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h" local="no">Adafruit_LSM303_Accel.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_adafruit___l_s_m303___accel___unified_1a6cdc587b77551d9f26a1c56fe52bd13b" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Adafruit_LSM303_Accel_Unified::_sensorID</definition>
+        <argsstring></argsstring>
+        <name>_sensorID</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::_sensorID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="115" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___l_s_m303___accel___unified_1a9608edce819cbca92feb483273cb522d" prot="private" static="no" mutable="no">
+        <type>lsm303AccelData</type>
+        <definition>lsm303AccelData Adafruit_LSM303_Accel_Unified::raw</definition>
+        <argsstring></argsstring>
+        <name>raw</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::raw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="117" column="19" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_adafruit___l_s_m303___accel___unified_1aebaf2fbf9b5d792b4d6450f21a982e41" prot="private" static="no" mutable="no">
+        <type><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref> *</type>
+        <definition>Adafruit_I2CDevice * Adafruit_LSM303_Accel_Unified::i2c_dev</definition>
+        <argsstring></argsstring>
+        <name>i2c_dev</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::i2c_dev</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="123" column="22" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_LSM303_Accel_Unified</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Instantiates a new <ref refid="class_adafruit___l_s_m303" kindref="compound">Adafruit_LSM303</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sensorID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an optional identifier for the sensor instance </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="100" column="3" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="48" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a13ff5beea514144203669c81b33a2c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::begin</definition>
+        <argsstring>(uint8_t i2c_addr=LSM303_ADDRESS_ACCEL, TwoWire *wire=&amp;Wire)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2c_addr</declname>
+          <defname>i2c_address</defname>
+          <defval>LSM303_ADDRESS_ACCEL</defval>
+        </param>
+        <param>
+          <type>TwoWire *</type>
+          <declname>wire</declname>
+          <defval>&amp;Wire</defval>
+        </param>
+        <briefdescription>
+<para>Sets up the hardware and initializes I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2c_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The I2C address to be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>wire</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Wire object to be used for I2C connections. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if initialization was successful, otherwise false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="102" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="69" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+<para>Gets the most recent sensor event, Adafruit Unified Sensor format. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the most recent sensor event.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an Adafruit Unified sensor_event_t object that we&apos;ll fill in </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True on successful read </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="103" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="102" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+          <defname>sensor</defname>
+        </param>
+        <briefdescription>
+<para>Gets the <ref refid="structsensor__t" kindref="compound">sensor_t</ref> data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="104" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="132" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1acb414dcb1a0ec2a1b8923bb26c0fd425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::setRange</definition>
+        <argsstring>(lsm303_accel_range_t)</argsstring>
+        <name>setRange</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::setRange</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref></type>
+          <defname>new_range</defname>
+        </param>
+        <briefdescription>
+<para>Sets the accelerometer&apos;s range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an <computeroutput>lsm303_accel_range_t</computeroutput> representing the range of measurements in +/-G. The smaller the range, the more accurate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="106" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="155" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref></type>
+        <definition>lsm303_accel_range_t Adafruit_LSM303_Accel_Unified::getRange</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRange</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getRange</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Gets the accelerometer&apos;s range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The <computeroutput>lsm303_accel_range_t</computeroutput> representing the range of measurements in +/-G. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="107" column="24" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="172" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+        <definition>lsm303_accel_mode_t Adafruit_LSM303_Accel_Unified::getMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>getMode</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getMode</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the accelerometer&apos;s power mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The <computeroutput>lsm303_accel_mode_t</computeroutput> representing the power mode. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="109" column="23" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="217" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a54f0853d3c88a9995b0f4f4f357a267c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::setMode</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::setMode</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+          <defname>new_mode</defname>
+        </param>
+        <briefdescription>
+<para>Sets the accelerometer&apos;s power mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>new_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an <computeroutput>lsm303_accel_mode_t</computeroutput> representing the power mode. The mode effects the precision of the sensor&apos;s readings High resolution is 12-bit Normal mode is 10-bit Low power is 8-bit </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="110" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="192" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a822cf180aa4f4cd84ded428a34c07cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::interruptsActiveHigh</definition>
+        <argsstring>(bool)</argsstring>
+        <name>interruptsActiveHigh</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::interruptsActiveHigh</qualifiedname>
+        <param>
+          <type>bool</type>
+          <defname>active_high</defname>
+        </param>
+        <briefdescription>
+<para>Sets the polarity of the interrupt pins. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>active_high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set to true for the INT pints to be active high, false for active low </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="112" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="360" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_LSM303_Accel_Unified</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="100" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a13ff5beea514144203669c81b33a2c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::begin</definition>
+        <argsstring>(uint8_t i2c_addr=LSM303_ADDRESS_ACCEL, TwoWire *wire=&amp;Wire)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::begin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>i2c_addr</declname>
+          <defval>LSM303_ADDRESS_ACCEL</defval>
+        </param>
+        <param>
+          <type>TwoWire *</type>
+          <declname>wire</declname>
+          <defval>&amp;Wire</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="102" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the latest sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if able to fetch an event </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="103" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get info about the sensor itself. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="104" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1acb414dcb1a0ec2a1b8923bb26c0fd425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::setRange</definition>
+        <argsstring>(lsm303_accel_range_t)</argsstring>
+        <name>setRange</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::setRange</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="106" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1ac7d4eae17f0ac494b9aea6dee7dce7f6" kindref="member">lsm303_accel_range_t</ref></type>
+        <definition>lsm303_accel_range_t Adafruit_LSM303_Accel_Unified::getRange</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRange</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getRange</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="107" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+        <definition>lsm303_accel_mode_t Adafruit_LSM303_Accel_Unified::getMode</definition>
+        <argsstring>(void)</argsstring>
+        <name>getMode</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getMode</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="109" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a54f0853d3c88a9995b0f4f4f357a267c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::setMode</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::setMode</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="110" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a822cf180aa4f4cd84ded428a34c07cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::interruptsActiveHigh</definition>
+        <argsstring>(bool)</argsstring>
+        <name>interruptsActiveHigh</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::interruptsActiveHigh</qualifiedname>
+        <param>
+          <type>bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="112" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_LSM303_Accel_Unified</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::Adafruit_LSM303_Accel_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="155" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a624809bb4ec6016bb16ec71fb8e868f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::begin</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Setups the HW. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="157" column="10" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.cpp" bodystart="156" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_LSM303_Accel_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getEvent</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get the latest sensor event. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if able to fetch an event </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="158" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getSensor</qualifiedname>
+        <reimplements refid="class_adafruit___sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+<para>Get info about the sensor itself. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="159" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a3e80aa1520ec3b8db3dc1856ace7087e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_LSM303_Accel_Unified::getLSB</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>getLSB</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getLSB</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+          <defname>mode</defname>
+        </param>
+        <briefdescription>
+<para>Gets the Least Significant Bit value for the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current mode, used to determind the appropriate lsb value in concert with the current range setting. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="118" column="9" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="276" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a595501d81fad191f8665b13f8c3de941" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_LSM303_Accel_Unified::getShift</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>getShift</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getShift</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+          <defname>mode</defname>
+        </param>
+        <briefdescription>
+<para>Gets the bit shift amount for the current mode. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current mode, used to determind the appropriate shift amount based on the bitdepth of the mode </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="119" column="11" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="337" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a1c46968a8a8c8a08fa02663537f67734" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::readRawData</definition>
+        <argsstring>(void)</argsstring>
+        <name>readRawData</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::readRawData</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the raw data from the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="121" column="8" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.cpp" bodystart="242" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a3e80aa1520ec3b8db3dc1856ace7087e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_LSM303_Accel_Unified::getLSB</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>getLSB</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getLSB</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="118" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a595501d81fad191f8665b13f8c3de941" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Adafruit_LSM303_Accel_Unified::getShift</definition>
+        <argsstring>(lsm303_accel_mode_t)</argsstring>
+        <name>getShift</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::getShift</qualifiedname>
+        <param>
+          <type><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1c6596f8506cb603f2a58682443ddcc1" kindref="member">lsm303_accel_mode_t</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="119" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a1c46968a8a8c8a08fa02663537f67734" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::readRawData</definition>
+        <argsstring>(void)</argsstring>
+        <name>readRawData</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::readRawData</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="121" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a2c0247fa5762e3e623416b8cf9f9a062" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::write8</definition>
+        <argsstring>(byte address, byte reg, byte value)</argsstring>
+        <name>write8</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::write8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Abstract away platform differences in Arduino wire library. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="166" column="10" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.cpp" bodystart="47" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a3dfecc1df3541e3548e8c05e7c35a232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>byte</type>
+        <definition>byte Adafruit_LSM303_Accel_Unified::read8</definition>
+        <argsstring>(byte address, byte reg)</argsstring>
+        <name>read8</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::read8</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+<para>Abstract away platform differences in Arduino wire library. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="167" column="10" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.cpp" bodystart="65" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_adafruit___l_s_m303___accel___unified_1a6d0b18eb37f311d92a6b06fa961269d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_LSM303_Accel_Unified::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <qualifiedname>Adafruit_LSM303_Accel_Unified::read</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the raw data from the sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.h" line="168" column="10" bodyfile="libraries/Adafruit_LSM303DLHC/Adafruit_LSM303_U.cpp" bodystart="92" bodyend="127"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Unified sensor driver for the accelerometer. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Adafruit_LSM303_Accel_Unified</label>
+        <link refid="class_adafruit___l_s_m303___accel___unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Adafruit_LSM303_Accel_Unified</label>
+        <link refid="class_adafruit___l_s_m303___accel___unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="class_adafruit___sensor"/>
+      </node>
+    </collaborationgraph>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" line="98" column="1" bodyfile="examples/logging_example/libraries/Adafruit_LSM303_Accel/Adafruit_LSM303_Accel.h" bodystart="98" bodyend="124"/>
+    <listofallmembers>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a6cdc587b77551d9f26a1c56fe52bd13b" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>_sensorID</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>Adafruit_LSM303_Accel_Unified</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>Adafruit_LSM303_Accel_Unified</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a37af85fef15e75e97a101b5d9d12e205" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>Adafruit_LSM303_Accel_Unified</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a13ff5beea514144203669c81b33a2c63" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>begin</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a13ff5beea514144203669c81b33a2c63" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>begin</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a624809bb4ec6016bb16ec71fb8e868f6" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>begin</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>enableAutoRange</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1ad934837fae49e9b9086a2f60e662bf7d" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getEvent</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a3e80aa1520ec3b8db3dc1856ace7087e" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getLSB</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a3e80aa1520ec3b8db3dc1856ace7087e" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getLSB</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getMode</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a6a631c75a79d547cb13feba031e42e71" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getMode</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getRange</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a894c778e7176f3ce550da2dd87be9da5" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getRange</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a600a7e423d2f2b52bca7dd611bf19a9c" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getSensor</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a595501d81fad191f8665b13f8c3de941" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getShift</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a595501d81fad191f8665b13f8c3de941" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>getShift</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1aebaf2fbf9b5d792b4d6450f21a982e41" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>i2c_dev</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a822cf180aa4f4cd84ded428a34c07cde" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>interruptsActiveHigh</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a822cf180aa4f4cd84ded428a34c07cde" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>interruptsActiveHigh</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___sensor_1af994cc1147831134ad7bf7b2c99d7478" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>printSensorDetails</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a9608edce819cbca92feb483273cb522d" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>raw</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a6d0b18eb37f311d92a6b06fa961269d3" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>read</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a3dfecc1df3541e3548e8c05e7c35a232" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>read8</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a1c46968a8a8c8a08fa02663537f67734" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>readRawData</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a1c46968a8a8c8a08fa02663537f67734" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>readRawData</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a54f0853d3c88a9995b0f4f4f357a267c" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>setMode</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a54f0853d3c88a9995b0f4f4f357a267c" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>setMode</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1acb414dcb1a0ec2a1b8923bb26c0fd425" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>setRange</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1acb414dcb1a0ec2a1b8923bb26c0fd425" prot="public" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>setRange</name></member>
+      <member refid="class_adafruit___l_s_m303___accel___unified_1a2c0247fa5762e3e623416b8cf9f9a062" prot="private" virt="non-virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>write8</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>~Adafruit_Sensor</name></member>
+      <member refid="class_adafruit___sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_LSM303_Accel_Unified</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

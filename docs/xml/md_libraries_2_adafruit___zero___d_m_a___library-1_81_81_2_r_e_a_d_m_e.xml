@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="md_libraries_2_adafruit___zero___d_m_a___library-1_81_81_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md_libraries_2_adafruit___zero___d_m_a___library-1_81_81_2_r_e_a_d_m_e</compoundname>
+    <title>Adafruit_ZeroDMA library &lt;a href=&quot;https://github.com/adafruit/Adafruit_ZeroDMA/actions&quot; &gt;&lt;img src=&quot;https://github.com/adafruit/Adafruit_ZeroDMA/workflows/Arduino%20Library%20CI/badge.svg&quot; alt=&quot;Build Status&quot;/&gt;&lt;/a&gt;</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_libraries_2_adafruit___zero___d_m_a___library-1_81_81_2_r_e_a_d_m_e_1autotoc_md74"/> DMA helper/wrapped for ATSAMD21 such as Arduino Zero &amp; Feather M0</para>
+<para>Current version of this library no longer requires Adafruit_ASFcore as a prerequisite. However...IT BREAKS COMPATIBILITY WITH PRIOR VERSIONS. Function names, calling sequence and return types/values have changed. See examples!</para>
+<para>Item(s) in &apos;utility&apos; directory are much pared-down derivatives of Atmel ASFcore 3 files. Please keep their original copyright and license intact when editing. </para>
+    </detaileddescription>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/README.md"/>
+  </compounddef>
+</doxygen>

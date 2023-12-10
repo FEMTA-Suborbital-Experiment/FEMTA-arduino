@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_c_s_v___parser_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>contents</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[What<sp/>is<sp/>CSV<sp/>format](#what-is-csv-format)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[What<sp/>is<sp/>this<sp/>CSV<sp/>parser](#what-is-this-csv-parser)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Installation](#installation)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Usage](#usage)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Examples](#examples)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Things<sp/>to<sp/>consider](#things-to-consider)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Specifying<sp/>value<sp/>types](#specifying-value-types)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>[How<sp/>to<sp/>store<sp/>unsigned<sp/>types](#how-to-store-unsigned-types)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Casting<sp/>returned<sp/>values](#casting-returned-values)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Headerless<sp/>files](#headerless-files)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Custom<sp/>delimiter](#custom-delimiter)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Custom<sp/>quote<sp/>character](#custom-quote-character)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Checking<sp/>if<sp/>the<sp/>file<sp/>was<sp/>parsed<sp/>correctly](#checking-if-the-file-was-parsed-correctly)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Troubleshooting](#troubleshooting)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Motivation](#motivation)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Documentation](#documentation)<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>CSV<sp/>format</highlight></codeline>
+<codeline><highlight class="normal">CSV<sp/>means<sp/>comma<sp/>separated<sp/>values.<sp/>It&apos;s<sp/>like<sp/>a<sp/>normal<sp/>&quot;txt&quot;<sp/>file<sp/>with<sp/>commas<sp/>at<sp/>regular<sp/>places<sp/>to<sp/>separate<sp/>some<sp/>values.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Typically<sp/>the<sp/>first<sp/>line<sp/>of<sp/>CSV<sp/>file<sp/>is<sp/>a<sp/>&quot;header&quot;,<sp/>containing<sp/>names<sp/>of<sp/>columns<sp/>(this<sp/>way<sp/>any<sp/>reader<sp/>knows<sp/>which<sp/>column<sp/>means<sp/>what).<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Example<sp/>CSV<sp/>file<sp/>with<sp/>header<sp/>and<sp/>2<sp/>columns:<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>Date,Temperature<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>2020/06/12,20<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>2020/06/13,22<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>2020/06/14,21<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Using<sp/>CSV<sp/>format<sp/>is<sp/>one<sp/>way<sp/>of<sp/>organising<sp/>data,<sp/>which<sp/>makes<sp/>it<sp/>easy<sp/>for<sp/>programs<sp/>to<sp/>read.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>this<sp/>CSV<sp/>parser</highlight></codeline>
+<codeline><highlight class="normal">It&apos;s<sp/>a<sp/>class<sp/>to<sp/>which<sp/>you<sp/>can<sp/>supply:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>csv<sp/>string<sp/>(including<sp/>new-line<sp/>characters)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[format<sp/>string](#specifying-value-types)<sp/>(where<sp/>each<sp/>letter<sp/>specifies<sp/>type<sp/>of<sp/>value<sp/>for<sp/>each<sp/>column)<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Class<sp/>parses<sp/>that<sp/>string,<sp/>in<sp/>other<sp/>words,<sp/>it<sp/>extracts<sp/>values,<sp/>stores<sp/>them<sp/>and<sp/>provides<sp/>you<sp/>with:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>easily<sp/>accessible<sp/>set<sp/>of<sp/>arrays<sp/>(their<sp/>types<sp/>are<sp/>specified<sp/>by<sp/>the<sp/>format<sp/>string)<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">It<sp/>adheres<sp/>to<sp/>the<sp/>[RFC<sp/>4180<sp/>specification](https://tools.ietf.org/html/rfc4180).<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">It<sp/>was<sp/>written<sp/>with<sp/>care<sp/>to<sp/>not<sp/>be<sp/>greedy<sp/>in<sp/>terms<sp/>of<sp/>occupied<sp/>memory<sp/>and<sp/>parsing<sp/>time.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image<sp/>didnt<sp/>load](./images/working_principle.png)<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>Arduino<sp/>IDE<sp/>select<sp/>**Tools-&gt;Manage<sp/>libraries**,<sp/>type<sp/>&quot;csv&quot;<sp/>in<sp/>the<sp/>top<sp/>editbox,<sp/>find<sp/>&quot;CSV<sp/>Parser&quot;<sp/>and<sp/>press<sp/>**install**.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![library<sp/>manager<sp/>image](https://raw.githubusercontent.com/michalmonday/files/master/CSV-Parser-for-Arduino/lib_mngr.png)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Then<sp/>just<sp/>add<sp/>the<sp/>following<sp/>line<sp/>at<sp/>the<sp/>top<sp/>of<sp/>your<sp/>sketch:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;CSV_Parser.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings,my_longs,my_ints,my_chars,my_floats,my_hex,my_to_be_ignored\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello,70000,140,10,3.33,FF0000,this_value_wont_be_stored\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world,80000,150,20,7.77,0000FF,this_value_wont_be_stored\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;noice,90000,160,30,9.99,FFFFFF,this_value_wont_be_stored\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sLdcfx-&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">char<sp/><sp/><sp/><sp/>**strings<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char**)cp[&quot;my_strings&quot;];</highlight></codeline>
+<codeline><highlight class="normal">int32_t<sp/>*longs<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(int32_t*)cp[&quot;my_longs&quot;];</highlight></codeline>
+<codeline><highlight class="normal">int16_t<sp/>*ints<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(int16_t*)cp[&quot;my_ints&quot;];</highlight></codeline>
+<codeline><highlight class="normal">char<sp/><sp/><sp/><sp/>*chars<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(char*)cp[&quot;my_chars&quot;];</highlight></codeline>
+<codeline><highlight class="normal">float<sp/><sp/><sp/>*floats<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(float*)cp[&quot;my_floats&quot;];</highlight></codeline>
+<codeline><highlight class="normal">int32_t<sp/>*longs_from_hex<sp/>=<sp/>(int32_t*)cp[&quot;my_hex&quot;];<sp/><sp/><sp/><sp/>//<sp/>CSV_Parser<sp/>stores<sp/>hex<sp/>as<sp/>longs<sp/>(casting<sp/>to<sp/>int*<sp/>would<sp/>point<sp/>to<sp/>wrong<sp/>address<sp/>when<sp/>ints[ind]<sp/>is<sp/>used)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>cp.getRowsCount();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(strings[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(&quot;<sp/>-<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(longs[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(&quot;<sp/>-<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(ints[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(&quot;<sp/>-<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(chars[i],<sp/>DEC);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(&quot;<sp/>-<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(floats[i]);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial.print(&quot;<sp/>-<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(longs_from_hex[i],<sp/>HEX);<sp/>Serial.println();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Output:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>hello<sp/>-<sp/>70000<sp/>-<sp/>140<sp/>-<sp/>10<sp/>-<sp/>3.33<sp/>-<sp/>FF0000<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>world<sp/>-<sp/>80000<sp/>-<sp/>150<sp/>-<sp/>20<sp/>-<sp/>7.77<sp/>-<sp/>FF<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>noice<sp/>-<sp/>90000<sp/>-<sp/>160<sp/>-<sp/>20<sp/>-<sp/>9.99<sp/>-<sp/>FFFFFF<sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Notice<sp/>how<sp/>each<sp/>character<sp/>within<sp/>`&quot;sLdcfx-&quot;`<sp/>string<sp/>specifies<sp/>different<sp/>type<sp/>for<sp/>each<sp/>column.<sp/>It<sp/>is<sp/>very<sp/>important<sp/>to<sp/>set<sp/>this<sp/>format<sp/>right.<sp/></highlight></codeline>
+<codeline><highlight class="normal">We<sp/>could<sp/>set<sp/>each<sp/>solumn<sp/>to<sp/>be<sp/>strings<sp/>like<sp/>&quot;sssssss&quot;,<sp/>however<sp/>this<sp/>would<sp/>use<sp/>more<sp/>memory<sp/>than<sp/>it&apos;s<sp/>really<sp/>needed.<sp/>If<sp/>we<sp/>wanted<sp/>to<sp/>store<sp/>a<sp/>large<sp/>array<sp/>of<sp/>small<sp/>numerical<sp/>values<sp/>(e.g.<sp/>under<sp/>128),<sp/>then<sp/>using<sp/>&quot;c&quot;<sp/>specifier<sp/>would<sp/>be<sp/>appropriate.<sp/>See<sp/>[Specifying<sp/>value<sp/>types](#specifying-value-types)<sp/>section<sp/>for<sp/>full<sp/>list<sp/>of<sp/>available<sp/>specifiers<sp/>and<sp/>their<sp/>descriptions.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image<sp/>didnt<sp/>load](./images/format_string.png)<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Is<sp/>it<sp/>necessary<sp/>to<sp/>supply<sp/>the<sp/>whole<sp/>string<sp/>at<sp/>once?**<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">No,<sp/>it<sp/>may<sp/>be<sp/>supplied<sp/>in<sp/>incomplete<sp/>parts<sp/>as<sp/>shown<sp/>in<sp/>[this<sp/>example](https://github.com/michalmonday/CSV-Parser-for-Arduino/blob/master/examples/supplying_csv_by_incomplete_parts/supplying_csv_by_incomplete_parts.ino).<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">/*<sp/><sp/><sp/>&quot;sL&quot;<sp/>means<sp/>&quot;string&quot;<sp/>(char*<sp/>type)<sp/>and<sp/>&quot;Long&quot;<sp/>(int32_t<sp/>type)<sp/><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>CSV_Parser<sp/>cp(/*format*/<sp/>&quot;sL&quot;);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>/*CSV<sp/>file:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>my_strings,my_numbers\n</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>hello,5\n</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>world,10\n</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>/*<sp/>File<sp/>supplied<sp/>in<sp/>chunks:<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cp<sp/>&lt;&lt;<sp/>&quot;my_st&quot;<sp/>&lt;&lt;<sp/>&quot;rings&quot;<sp/>&lt;&lt;<sp/>&quot;,my_n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cp<sp/>&lt;&lt;<sp/>&quot;umbers\nh&quot;<sp/>&lt;&lt;<sp/>&quot;ello,5\nwor&quot;<sp/>&lt;&lt;<sp/>&quot;ld,10\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>char<sp/>**strings<sp/>=<sp/>(char**)cp[&quot;my_strings&quot;];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>int32_t<sp/>*numbers<sp/>=<sp/>(int32_t*)cp[&quot;my_numbers&quot;];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>for(int<sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>cp.getRowsCount();<sp/>row++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(row,<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(&quot;.<sp/>String<sp/>=<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(strings[row]);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(row,<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(&quot;.<sp/>Number<sp/>=<sp/>&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(numbers[row],<sp/>DEC);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>may<sp/>as<sp/>well<sp/>supply<sp/>the<sp/>csv<sp/>file<sp/>character<sp/>by<sp/>character<sp/>like:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings,my_floats\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello,1.1\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world,2.2\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(/*format*/<sp/>&quot;sf&quot;);<sp/>//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>(char<sp/>c<sp/>:<sp/>String(csv_str))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>c;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/*<sp/>or<sp/>(to<sp/>avoid<sp/>using<sp/>&quot;String&quot;<sp/>object)</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>strlen(csv_str);<sp/>i++)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>csv_str[i];</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Since<sp/>version<sp/>1.0.0,<sp/>we<sp/>can<sp/>supply<sp/>various<sp/>types:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>original<sp/>csv<sp/>file<sp/>=<sp/>&quot;101,102,103\n&quot;</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>how<sp/>we<sp/>could<sp/>supply<sp/>it:</highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/>&apos;1&apos;<sp/>&lt;&lt;<sp/>0<sp/>&lt;&lt;<sp/>&quot;1&quot;;</highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/>&quot;,&quot;;</highlight></codeline>
+<codeline><highlight class="normal">cp<sp/>&lt;&lt;<sp/>String(102)<sp/>+<sp/>&quot;,103\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Floats<sp/>can<sp/>be<sp/>supplied<sp/>as<sp/>well.<sp/>In<sp/>general,<sp/>any<sp/>types<sp/>can<sp/>be<sp/>supplied,<sp/>the<sp/>principle<sp/>is:<sp/>if<sp/>the<sp/>type<sp/>isn&apos;t<sp/>&quot;String&quot;,<sp/>&quot;char<sp/>\*&quot;<sp/>or<sp/>&quot;char&quot;,<sp/>then<sp/>the<sp/>String(supplied_value)<sp/>will<sp/>be<sp/>appended<sp/>(before<sp/>being<sp/>parsed<sp/>and<sp/>stored<sp/>as<sp/>a<sp/>type<sp/>specified<sp/>in<sp/>the<sp/>format<sp/>string).<sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Important**<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Arduino<sp/>built-in<sp/>File.read()<sp/>method<sp/>returns<sp/>an<sp/>integer<sp/>(instead<sp/>of<sp/>a<sp/>char).<sp/>Therefore,<sp/>it&apos;s<sp/>important<sp/>to<sp/>cast<sp/>its<sp/>return<sp/>before<sp/>supplying<sp/>it<sp/>to<sp/>CSV_Parser<sp/>object,<sp/>like:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">File<sp/>csv_file<sp/>=<sp/>SD.open(f_name);<sp/>//<sp/>or<sp/>FFat.open(f_name);</highlight></codeline>
+<codeline><highlight class="normal">while<sp/>(csv_file.available())<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cp<sp/>&lt;&lt;<sp/>(char)csv_file.read();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Without<sp/>`(char)`,<sp/>the<sp/>string<sp/>representation<sp/>of<sp/>ascii<sp/>number<sp/>would<sp/>be<sp/>stored.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Before<sp/>the<sp/>1.0.0<sp/>version,<sp/>the<sp/>`cp<sp/>&lt;&lt;<sp/>97;`<sp/>expression<sp/>would<sp/>append<sp/>letter<sp/>&apos;a&apos;<sp/>(because<sp/>&apos;97&apos;<sp/>stands<sp/>for<sp/>&apos;a&apos;<sp/>in<sp/>ascii<sp/>table).<sp/>From<sp/>1.0.0<sp/>version<sp/>onwards,<sp/>the<sp/>`cp<sp/>&lt;&lt;<sp/>97;`<sp/>is<sp/>equivalent<sp/>to<sp/>`cp<sp/>&lt;&lt;<sp/>String(97);`,<sp/>it<sp/>will<sp/>append<sp/>&apos;97&apos;<sp/>instead<sp/>of<sp/>&apos;a&apos;.<sp/>That<sp/>is<sp/>correct<sp/>behaviour<sp/>in<sp/>my<sp/>opinion,<sp/>however<sp/>due<sp/>to<sp/>design<sp/>of<sp/>Arduino<sp/>built-in<sp/>&quot;File.read()&quot;<sp/>method,<sp/>which<sp/>returns<sp/>an<sp/>integer,<sp/>it<sp/>is<sp/>necessary<sp/>to<sp/>cast<sp/>it&apos;s<sp/>return<sp/>(with<sp/>`(char)csv_file.read()`<sp/>as<sp/>shown<sp/>above),<sp/>and<sp/>problems<sp/>may<sp/>occur<sp/>if<sp/>some<sp/>existing<sp/>code<sp/>(using<sp/>this<sp/>library)<sp/>doesn&apos;t<sp/>explicitly<sp/>cast<sp/>it.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Examples</highlight></codeline>
+<codeline><highlight class="normal">Examples<sp/>directory<sp/>contains<sp/>examples<sp/>showing:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[basic<sp/>usage](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/basic_usage)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[how<sp/>to<sp/>handle<sp/>unsigned<sp/>types](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/unsigned_values)<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[how<sp/>to<sp/>supply<sp/>csv<sp/>by<sp/>incomplete<sp/>parts](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/supplying_csv_by_incomplete_parts)<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[how<sp/>to<sp/>read<sp/>csv<sp/>file<sp/>from<sp/>a<sp/>PC<sp/>(using<sp/>provided<sp/>python<sp/>script)](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/reading_from_computer_python)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[how<sp/>to<sp/>read<sp/>csv<sp/>file<sp/>from<sp/>SD<sp/>card](https://github.com/michalmonday/CSV-Parser-for-Arduino/tree/master/examples/reading_from_sd_card)<sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Things<sp/>to<sp/>consider<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">If<sp/>CSV<sp/>file<sp/>doesn&apos;t<sp/>contain<sp/>header<sp/>line,<sp/>then<sp/>it<sp/>must<sp/>be<sp/>specified<sp/>as<sp/>3rd<sp/>argument<sp/>of<sp/>the<sp/>constructor<sp/>(see<sp/>[this<sp/>example](#headerless-files))<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">If<sp/>CSV<sp/>file<sp/>is<sp/>separated<sp/>by<sp/>other<sp/>character<sp/>instead<sp/>of<sp/>comma,<sp/>then<sp/>it<sp/>must<sp/>be<sp/>specified<sp/>as<sp/>4th<sp/>argument<sp/>of<sp/>the<sp/>constructor<sp/>(see<sp/>[this<sp/>example](#custom-delimiter))<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Programmer<sp/>must:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>know<sp/>and<sp/>specify<sp/>what<sp/>type<sp/>of<sp/>values<sp/>are<sp/>stored<sp/>in<sp/>each<sp/>of<sp/>the<sp/>CSV<sp/>columns<sp/>(see<sp/>[this<sp/>example](#specifying-value-types))<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>cast<sp/>returned<sp/>values<sp/>appropriately<sp/>(see<sp/>[this<sp/>example](#casting-returned-values))<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>CSV<sp/>file<sp/>may:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>include<sp/>mixed<sp/>type<sp/>of<sp/>line<sp/>endings<sp/>(&apos;\r\n&apos;,<sp/>&apos;\n&apos;)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>end<sp/>with<sp/>&apos;\n&apos;<sp/>or<sp/>&apos;\r\n&apos;<sp/>but<sp/>it<sp/>doesn&apos;t<sp/>have<sp/>to<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>have<sp/>empty<sp/>fields<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">**Important<sp/>-<sp/>if<sp/>the<sp/>file<sp/>does<sp/>not<sp/>end<sp/>with<sp/>&quot;\n&quot;<sp/>(new<sp/>line)<sp/>then<sp/>cp.parseLeftover()<sp/>method<sp/>must<sp/>be<sp/>called<sp/>after<sp/>supplying<sp/>the<sp/>whole<sp/>file<sp/>(regardless<sp/>if<sp/>it<sp/>was<sp/>supplied<sp/>all<sp/>at<sp/>once<sp/>or<sp/>in<sp/>parts).<sp/>Example:**<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings,my_floats\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello,1.1\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world,2.2&quot;;<sp/>//<sp/>last<sp/>line<sp/>is<sp/>not<sp/>ending<sp/>with<sp/>&quot;\n&quot;<sp/>or<sp/>&quot;\r\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sf&quot;);<sp/>//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+<codeline><highlight class="normal">cp.parseLeftover();</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**What<sp/>if<sp/>the<sp/>string<sp/>itself<sp/>stored<sp/>in<sp/>CSV<sp/>contains<sp/>comma<sp/>(or<sp/>other<sp/>custom<sp/>delimiter)?**<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">As<sp/>described<sp/>in<sp/>the<sp/>[RFC<sp/>4180<sp/>specification](https://tools.ietf.org/html/rfc4180)<sp/>we<sp/>can<sp/>enclose<sp/>the<sp/>string<sp/>using<sp/>double<sp/>quotes.<sp/>Example<sp/>csv:<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>my_strings,my_ints\n<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>&quot;single,<sp/>string,<sp/>including,<sp/>commas&quot;,10\n<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>&quot;another<sp/>string,<sp/>with<sp/>single<sp/>comma&quot;,20<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**What<sp/>if<sp/>we<sp/>wanted<sp/>to<sp/>store<sp/>double<sp/>quotes<sp/>themselves?**<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">As<sp/>described<sp/>in<sp/>the<sp/>[RFC<sp/>4180<sp/>specification](https://tools.ietf.org/html/rfc4180)<sp/>we<sp/>can<sp/>put<sp/>two<sp/>double<sp/>quotes<sp/>next<sp/>to<sp/>each<sp/>other.<sp/>The<sp/>parser<sp/>will<sp/>treat<sp/>them<sp/>as<sp/>one.<sp/>Example:<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>my_strings,my_ints\n<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>&quot;this<sp/>string<sp/>will<sp/>have<sp/>1<sp/>&quot;&quot;<sp/>double<sp/>quote<sp/>inside<sp/>it&quot;,10\n<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>&quot;another<sp/>string<sp/>with<sp/>&quot;&quot;<sp/>double<sp/>quote<sp/>char&quot;,10\n<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Parser<sp/>will<sp/>read<sp/>such<sp/>file<sp/>as:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">1st<sp/>string<sp/>=<sp/>this<sp/>string<sp/>will<sp/>have<sp/>1<sp/>&quot;<sp/>double<sp/>quote<sp/>inside<sp/>it<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">2nd<sp/>string<sp/>=<sp/>another<sp/>string<sp/>with<sp/>&quot;<sp/>double<sp/>quote<sp/>char<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Notice<sp/>that<sp/>it&apos;s<sp/>possible<sp/>to<sp/>customize<sp/>the<sp/>quote<sp/>char<sp/>as<sp/>shown<sp/>in<sp/>[this<sp/>section](#custom-quote-character).<sp/>E.g.<sp/>to<sp/>use<sp/>single<sp/>quotes<sp/>(&apos;)<sp/>instead.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Header<sp/>fields<sp/>leading<sp/>and<sp/>trailing<sp/>spaces<sp/>are<sp/>ignored**<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Example:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;<sp/><sp/>test<sp/>a<sp/><sp/>,<sp/><sp/>test<sp/>b<sp/><sp/>\n&quot;<sp/>//<sp/>header<sp/>names<sp/>include<sp/>leading<sp/>and<sp/>trailing<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;1,2\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;3,4\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>&quot;cc&quot;);</highlight></codeline>
+<codeline><highlight class="normal">int8_t<sp/>*a<sp/>=<sp/>(int8_t*)cp[&quot;test<sp/>a&quot;];<sp/>//<sp/>notice<sp/>how<sp/>&quot;test<sp/>a&quot;<sp/>is<sp/>used<sp/>instead<sp/>of<sp/>&quot;<sp/><sp/>test<sp/>a<sp/><sp/>&quot;</highlight></codeline>
+<codeline><highlight class="normal">int8_t<sp/>*b<sp/>=<sp/>(int8_t*)cp[&quot;test<sp/>b&quot;];</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Specifying<sp/>value<sp/>types<sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings,my_floats\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello,1.1\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world,2.2\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sf&quot;);<sp/>//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example<sp/>above<sp/>is<sp/>specifying<sp/>&quot;s&quot;<sp/>(string)<sp/>for<sp/>the<sp/>1st<sp/>column,<sp/>and<sp/>&quot;f&quot;<sp/>(float)<sp/>for<sp/>the<sp/>2nd<sp/>column.<sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Possible<sp/>specifiers<sp/>are:<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>Specifier<sp/>|<sp/>Type<sp/>|<sp/>Description<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>---<sp/>|<sp/>---<sp/>|<sp/>---<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**s**<sp/>|<sp/>string<sp/>(char\*)<sp/>|<sp/><sp/>C-like<sp/>string,<sp/>not<sp/>a<sp/>&quot;String&quot;<sp/>Arduino<sp/>object.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**f**<sp/>|<sp/>float<sp/>|<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**L**<sp/>|<sp/>int32_t<sp/>|<sp/>32-bit<sp/>signed<sp/>value,<sp/>value<sp/>range:<sp/>-2,147,483,648<sp/>to<sp/>2,147,483,647.<sp/>Capital<sp/>L<sp/>is<sp/>used<sp/>because<sp/>lowercase<sp/>&quot;l&quot;<sp/>looks<sp/>like<sp/>number<sp/>one<sp/>&quot;1&quot;.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**d**<sp/>|<sp/>int16_t<sp/>|<sp/>16-bit<sp/>signed<sp/>value,<sp/>value<sp/>range:<sp/>-32,768<sp/>to<sp/>32,767.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**c**<sp/>|<sp/>char<sp/>|<sp/><sp/><sp/><sp/>8-bit<sp/>signed<sp/>value,<sp/>value<sp/>range:<sp/>-128<sp/>to<sp/>127.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**x**<sp/>|<sp/>int32_t<sp/>|<sp/>Expects<sp/>hexadecimal<sp/>string<sp/>(will<sp/>store<sp/>&quot;10&quot;<sp/>or<sp/>&quot;0x10&quot;<sp/>csv<sp/>as<sp/>16).<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**-**<sp/>|<sp/><sp/>|<sp/>Dash<sp/>character<sp/>means<sp/>that<sp/>value<sp/>is<sp/>unused/not-parsed,<sp/>this<sp/>way<sp/>memory<sp/>won&apos;t<sp/>be<sp/>allocated<sp/>for<sp/>values<sp/>from<sp/>that<sp/>column.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**uL**<sp/>|<sp/>uint32_t<sp/>|<sp/>32-bit<sp/>unsigned<sp/>value,<sp/>value<sp/>range:<sp/>0<sp/>to<sp/>4,294,967,295.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**ud**<sp/>|<sp/>uint16_t<sp/>|<sp/>16-bit<sp/>unsigned<sp/>value,<sp/>value<sp/>range:<sp/>0<sp/>to<sp/>65,535.<sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**uc**<sp/>|<sp/>uint8_t<sp/>|<sp/><sp/>8-bit<sp/>unsigned<sp/>value,<sp/>value<sp/>range:<sp/>0<sp/>to<sp/>255.<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>**ux**<sp/>|<sp/>uint32_t<sp/>|<sp/>Expects<sp/>hexadecimal<sp/>string<sp/>(will<sp/>store<sp/>&quot;10&quot;<sp/>or<sp/>&quot;0x10&quot;<sp/>csv<sp/>as<sp/>16).<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>How<sp/>to<sp/>store<sp/>unsigned<sp/>types</highlight></codeline>
+<codeline><highlight class="normal">As<sp/>shown<sp/>in<sp/>the<sp/>table<sp/>above,<sp/>unsigned<sp/>type<sp/>specifiers<sp/>are<sp/>made<sp/>by<sp/>preceding<sp/>the<sp/>integer<sp/>based<sp/>specifiers<sp/>(&quot;L&quot;,<sp/>&quot;d&quot;,<sp/>&quot;c&quot;,<sp/>&quot;x&quot;)<sp/>with<sp/>&quot;u&quot;.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;column_1,column_2\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&quot;201,202\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>&quot;203,204\n&quot;;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;ucuc&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>[unsigned_values<sp/>example](https://github.com/michalmonday/CSV-Parser-for-Arduino/blob/master/examples/unsigned_values/unsigned_values.ino)<sp/>for<sp/>more<sp/>info.<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Casting<sp/>returned<sp/>values</highlight></codeline>
+<codeline><highlight class="normal">Let&apos;s<sp/>suppose<sp/>that<sp/>we<sp/>parse<sp/>the<sp/>following:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings,my_floats\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello,1.1\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world,2.2\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sf&quot;);<sp/>//<sp/>s<sp/>=<sp/>string,<sp/>f<sp/>=<sp/>float</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>cast/retrieve<sp/>the<sp/>values<sp/>we<sp/>can<sp/>use:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/><sp/>**strings<sp/>=<sp/>(char**)cp[&quot;my_strings&quot;];</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>*floats<sp/>=<sp/><sp/><sp/>(float*)cp[&quot;my_floats&quot;];</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&quot;x&quot;<sp/>(hex<sp/>input<sp/>values),<sp/>should<sp/>be<sp/>cast<sp/>as<sp/>&quot;int32_t*&quot;<sp/>(or<sp/>uint32_t*),<sp/>because<sp/>that&apos;s<sp/>how<sp/>they&apos;re<sp/>stored.<sp/>Casting<sp/>them<sp/>to<sp/>&quot;int*&quot;<sp/>could<sp/>result<sp/>in<sp/>wrong<sp/>address<sp/>being<sp/>computed<sp/>when<sp/>using<sp/>`ints[index]`.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Headerless<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>parse<sp/>CSV<sp/>files<sp/>without<sp/>header<sp/>we<sp/>can<sp/>specify<sp/>3rd<sp/>optional<sp/>argument<sp/>to<sp/>the<sp/>constructor.<sp/>Example:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;---L&quot;,<sp/>/*has_header*/<sp/>false);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">And<sp/>then<sp/>we<sp/>can<sp/>use<sp/>the<sp/>following<sp/>to<sp/>get<sp/>the<sp/>extracted<sp/>values:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">int32_t<sp/>*<sp/>longs<sp/>=<sp/>(int32_t*)cp[3];<sp/>//<sp/>3<sp/>becuase<sp/>L<sp/>is<sp/>at<sp/>index<sp/>3<sp/>of<sp/>&quot;---L&quot;<sp/>format<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Custom<sp/>delimiter</highlight></codeline>
+<codeline><highlight class="normal">Delimiter<sp/>is<sp/>4th<sp/>parameter<sp/>of<sp/>the<sp/>constructor.<sp/>It&apos;s<sp/>comma<sp/>(,)<sp/>by<sp/>default.<sp/>We<sp/>can<sp/>customize<sp/>it<sp/>like<sp/>this:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">char<sp/>*<sp/>csv_str<sp/>=<sp/>&quot;my_strings;my_floats\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;hello;1.1\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;world;2.2\n&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sf&quot;,<sp/>/*has_header*/<sp/>true,<sp/>/*delimiter*/<sp/>&apos;;&apos;);</highlight></codeline>
+<codeline><highlight class="normal">```<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Custom<sp/>quote<sp/>character</highlight></codeline>
+<codeline><highlight class="normal">Quote<sp/>character<sp/>is<sp/>5th<sp/>parameter<sp/>of<sp/>the<sp/>constructor.<sp/>It&apos;s<sp/>double<sp/>quote<sp/>(&quot;)<sp/>by<sp/>default.<sp/>We<sp/>can<sp/>customize<sp/>it<sp/>like<sp/>this:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp<sp/></highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sLdcfxs&quot;,<sp/>/*has_header*/<sp/>true,<sp/>/*delimiter*/<sp/>&apos;,&apos;,<sp/>/*quote_char*/<sp/>&quot;&apos;&quot;);</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Checking<sp/>if<sp/>the<sp/>file<sp/>was<sp/>parsed<sp/>correctly</highlight></codeline>
+<codeline><highlight class="normal">Use<sp/>CSV_Parser.print<sp/>function<sp/>and<sp/>check<sp/>serial<sp/>monitor.<sp/>Example:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">CSV_Parser<sp/>cp(csv_str,<sp/>/*format*/<sp/>&quot;sLdcfx-&quot;);</highlight></codeline>
+<codeline><highlight class="normal">cp.print();</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">It<sp/>will<sp/>display<sp/>parsed<sp/>header<sp/>fields,<sp/>their<sp/>types<sp/>and<sp/>all<sp/>the<sp/>parsed<sp/>values.<sp/>Like<sp/>this:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/>CSV_Parser<sp/>content:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/>Header:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/><sp/>my_strings<sp/>|<sp/>my_longs<sp/>|<sp/>my_ints<sp/>|<sp/>my_chars<sp/>|<sp/>my_floats<sp/>|<sp/>my_hex<sp/>|<sp/>-<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/>Types:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/><sp/>char*<sp/>|<sp/>int32_t<sp/>|<sp/>int16_t<sp/>|<sp/>char<sp/>|<sp/>float<sp/>|<sp/>hex<sp/>(long)<sp/>|<sp/>-<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/>Values:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/><sp/>hello<sp/>|<sp/>70000<sp/>|<sp/>140<sp/>|<sp/>10<sp/>|<sp/>3.33<sp/>|<sp/>FF0000<sp/>|<sp/>-<sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/><sp/>world<sp/>|<sp/>80000<sp/>|<sp/>150<sp/>|<sp/>20<sp/>|<sp/>7.77<sp/>|<sp/>FF<sp/>|<sp/>-<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;<sp/><sp/><sp/><sp/><sp/><sp/>noice<sp/>|<sp/>90000<sp/>|<sp/>160<sp/>|<sp/>30<sp/>|<sp/>9.99<sp/>|<sp/>FFFFFF<sp/>|<sp/>-<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Important<sp/>-<sp/>cp.print()<sp/>method<sp/>is<sp/>using<sp/>&quot;Serial&quot;<sp/>object,<sp/>it<sp/>assumes<sp/>that<sp/>&quot;Serial.begin(baud_rate);&quot;<sp/>was<sp/>previously<sp/>called.**<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Platformio<sp/>users<sp/>reported<sp/>compilation<sp/>issues<sp/>due<sp/>to<sp/>SD<sp/>library<sp/>import<sp/>by<sp/>the<sp/>CSV_Parser.cpp<sp/>file.<sp/>Since<sp/>0.2.1<sp/>version<sp/>of<sp/>this<sp/>library,<sp/>the<sp/>SD<sp/>import<sp/>can<sp/>be<sp/>disabled<sp/>by<sp/>placing<sp/>`#define<sp/>CSV_PARSER_DONT_IMPORT_SD`<sp/>above<sp/>(it<sp/>won&apos;t<sp/>work<sp/>if<sp/>it&apos;s<sp/>below)<sp/>the<sp/>CSV_Parser<sp/>library<sp/>import<sp/>like<sp/>this:<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```cpp</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>CSV_PARSER_DONT_IMPORT_SD</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;CSV_Parser.h&gt;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Motivation</highlight></codeline>
+<codeline><highlight class="normal">I<sp/>wanted<sp/>to<sp/>parse<sp/>[covid-19<sp/>csv](https://github.com/tomwhite/covid-19-uk-data)<sp/>data<sp/>and<sp/>couldn&apos;t<sp/>find<sp/>any<sp/>csv<sp/>parser<sp/>for<sp/>Arduino.<sp/>So<sp/>instead<sp/>of<sp/>rushing<sp/>with<sp/>a<sp/>quick/dirty<sp/>solution,<sp/>I<sp/>decided<sp/>to<sp/>write<sp/>something<sp/>that<sp/>could<sp/>be<sp/>reused<sp/>in<sp/>the<sp/>future<sp/>(possibly<sp/>by<sp/>other<sp/>people<sp/>too).<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Documentation<sp/></highlight></codeline>
+<codeline><highlight class="normal">https://michalmonday.github.io/CSV-Parser-for-Arduino/index.html<sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="libraries/CSV_Parser/README.md"/>
+  </compounddef>
+</doxygen>

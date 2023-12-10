@@ -1,0 +1,836 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_adafruit___a_d_x_l343_8h" kind="file" language="C++">
+    <compoundname>Adafruit_ADXL343.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="no">Adafruit_BusIO_Register.h</includes>
+    <includes local="no">Adafruit_I2CDevice.h</includes>
+    <includes local="no">Adafruit_Sensor.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includedby refid="_adafruit___a_d_x_l343_8cpp" local="yes">libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Adafruit_BusIO_Register.h</label>
+      </node>
+      <node id="4">
+        <label>Adafruit_I2CDevice.h</label>
+      </node>
+      <node id="5">
+        <label>Adafruit_Sensor.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_ADXL343/Adafruit_ADXL343.h</label>
+        <link refid="_adafruit___a_d_x_l343_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="6">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>libraries/Adafruit_ADXL343/Adafruit_ADXL343.cpp</label>
+        <link refid="_adafruit___a_d_x_l343_8cpp"/>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_ADXL343/Adafruit_ADXL343.h</label>
+        <link refid="_adafruit___a_d_x_l343_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="unionint__config" prot="public">int_config</innerclass>
+    <innerclass refid="class_adafruit___a_d_x_l343" prot="public">Adafruit_ADXL343</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a471a5bff26beba374f78df5b333d4716" prot="public" static="no">
+        <name>ADXL343_ADDRESS</name>
+        <initializer>(0x53)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assumes ALT address pin low </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="35" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a528fa0678527604af38dc5cb174f2b3c" prot="public" static="no">
+        <name>ADXL343_REG_DEVID</name>
+        <initializer>(0x00)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Device ID </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="41" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a67dceb2a59b69b7555c9b4cc4464c7e1" prot="public" static="no">
+        <name>ADXL343_REG_THRESH_TAP</name>
+        <initializer>(0x1D)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tap threshold </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="42" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1af73bbfa0ccb51e2f1ee99e7f788b3001" prot="public" static="no">
+        <name>ADXL343_REG_OFSX</name>
+        <initializer>(0x1E)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X-axis offset </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="43" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a74a0ffaeb203398104e3fe61ce73cf05" prot="public" static="no">
+        <name>ADXL343_REG_OFSY</name>
+        <initializer>(0x1F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y-axis offset </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="44" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a6041413fd7536b427194aff5192f0623" prot="public" static="no">
+        <name>ADXL343_REG_OFSZ</name>
+        <initializer>(0x20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Z-axis offset </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="45" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a26167ef539102aeebb747447ad1b10ab" prot="public" static="no">
+        <name>ADXL343_REG_DUR</name>
+        <initializer>(0x21)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tap duration </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="46" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a7c01242e4ef84a3f97983c95d8b39201" prot="public" static="no">
+        <name>ADXL343_REG_LATENT</name>
+        <initializer>(0x22)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tap latency </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="47" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a1f6c0706dd4cc299d378ac75e4e1e15d" prot="public" static="no">
+        <name>ADXL343_REG_WINDOW</name>
+        <initializer>(0x23)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tap window </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="48" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a059581b3db85086481390035d1c697f3" prot="public" static="no">
+        <name>ADXL343_REG_THRESH_ACT</name>
+        <initializer>(0x24)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Activity threshold </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="49" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1ab8517225db456bef9af26004c7fd430e" prot="public" static="no">
+        <name>ADXL343_REG_THRESH_INACT</name>
+        <initializer>(0x25)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inactivity threshold </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="50" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1aa8c3329aba4165a3715754f52bb03255" prot="public" static="no">
+        <name>ADXL343_REG_TIME_INACT</name>
+        <initializer>(0x26)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inactivity time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="51" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a5d1b75a296c9786c884eb2633dec866b" prot="public" static="no">
+        <name>ADXL343_REG_ACT_INACT_CTL</name>
+        <initializer>  (0x27)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Axis enable control for activity and inactivity detection </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="52" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="52" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a8326695f40d9fb58078d405347fed8eb" prot="public" static="no">
+        <name>ADXL343_REG_THRESH_FF</name>
+        <initializer>(0x28)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free-fall threshold </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="54" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a19bdaf7238019ef78ef37b466a6ce1f8" prot="public" static="no">
+        <name>ADXL343_REG_TIME_FF</name>
+        <initializer>(0x29)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free-fall time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="55" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1ae5c2307df1335ac843649e81cc2f2593" prot="public" static="no">
+        <name>ADXL343_REG_TAP_AXES</name>
+        <initializer>(0x2A)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Axis control for single/double tap </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="56" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a3346518d9fc78b7503a7600d7e21b7ee" prot="public" static="no">
+        <name>ADXL343_REG_ACT_TAP_STATUS</name>
+        <initializer>(0x2B)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source for single/double tap </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="57" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a7646e1c70e5cd26212ec0c13d5f52154" prot="public" static="no">
+        <name>ADXL343_REG_BW_RATE</name>
+        <initializer>(0x2C)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data rate and power mode control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="58" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1aeae5292b8ad20121fd5b227125ef04f1" prot="public" static="no">
+        <name>ADXL343_REG_POWER_CTL</name>
+        <initializer>(0x2D)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Power-saving features control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="59" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a6c93a9d7553536e7bde1afda293d8a3b" prot="public" static="no">
+        <name>ADXL343_REG_INT_ENABLE</name>
+        <initializer>(0x2E)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interrupt enable control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="60" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a079ab817f5d95196229f26c69469d899" prot="public" static="no">
+        <name>ADXL343_REG_INT_MAP</name>
+        <initializer>(0x2F)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Interrupt mapping control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="61" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a3a0123afda3b149eda856b8f5e28552d" prot="public" static="no">
+        <name>ADXL343_REG_INT_SOURCE</name>
+        <initializer>(0x30)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source of interrupts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="62" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a02ccfa71660cb2181fdf951ff6bcc9b2" prot="public" static="no">
+        <name>ADXL343_REG_DATA_FORMAT</name>
+        <initializer>(0x31)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Data format control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="63" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a0a842ebb5a4191b1a2b685403a7dbfa9" prot="public" static="no">
+        <name>ADXL343_REG_DATAX0</name>
+        <initializer>(0x32)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X-axis data 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="64" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1af132fd8c772a5295b38b7c97158b4d7b" prot="public" static="no">
+        <name>ADXL343_REG_DATAX1</name>
+        <initializer>(0x33)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X-axis data 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="65" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a27ad66205a5c7bd03381d8db41a8d59c" prot="public" static="no">
+        <name>ADXL343_REG_DATAY0</name>
+        <initializer>(0x34)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y-axis data 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="66" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a2bcffa093c4f612a97ed8170425b0549" prot="public" static="no">
+        <name>ADXL343_REG_DATAY1</name>
+        <initializer>(0x35)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Y-axis data 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="67" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a89ad1be51f4bd97b35ed20b64487816e" prot="public" static="no">
+        <name>ADXL343_REG_DATAZ0</name>
+        <initializer>(0x36)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Z-axis data 0 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="68" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a6927f8cbcac93adc5a145828413a4d04" prot="public" static="no">
+        <name>ADXL343_REG_DATAZ1</name>
+        <initializer>(0x37)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Z-axis data 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="69" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a84cc40f77dc447bdb0f4fa419fa0acc0" prot="public" static="no">
+        <name>ADXL343_REG_FIFO_CTL</name>
+        <initializer>(0x38)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO control </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="70" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a89351fd101fa7deb45a6de27f4025658" prot="public" static="no">
+        <name>ADXL343_REG_FIFO_STATUS</name>
+        <initializer>(0x39)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO status </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="71" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_adafruit___a_d_x_l343_8h_1a642c86b9f1fc91402bea49ba73cacf57" prot="public" static="no">
+        <name>ADXL343_MG2G_MULTIPLIER</name>
+        <initializer>(0.004)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4mg per lsb </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="77" column="9" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>dataRate_t</name>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa782adbaa76b21982ba3eca5050e91d8" prot="public">
+          <name>ADXL343_DATARATE_3200_HZ</name>
+          <initializer>= 0b1111</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>3200Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4cf175b8ace4df4e930634276283b8ef" prot="public">
+          <name>ADXL343_DATARATE_1600_HZ</name>
+          <initializer>= 0b1110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>1600Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4a49d3c15ef625970c5089f78aeee575" prot="public">
+          <name>ADXL343_DATARATE_800_HZ</name>
+          <initializer>= 0b1101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>800Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa1537f4c04a6356de27157a36433039ee" prot="public">
+          <name>ADXL343_DATARATE_400_HZ</name>
+          <initializer>= 0b1100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>400Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa6b6f7c3237e818c2ab1989d233016e2" prot="public">
+          <name>ADXL343_DATARATE_200_HZ</name>
+          <initializer>= 0b1011</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>200Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8c09bfedfc876344698cd0a3e2e43ab5" prot="public">
+          <name>ADXL343_DATARATE_100_HZ</name>
+          <initializer>= 0b1010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>100Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa3001dcaf384b04e542586961af92fa7a" prot="public">
+          <name>ADXL343_DATARATE_50_HZ</name>
+          <initializer>= 0b1001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>50Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa85a93d23388ed52e8fd86753236f5254" prot="public">
+          <name>ADXL343_DATARATE_25_HZ</name>
+          <initializer>= 0b1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>25Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aac7063fc631243b5af561ed57baade5de" prot="public">
+          <name>ADXL343_DATARATE_12_5_HZ</name>
+          <initializer>= 0b0111</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>12.5Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8efca2315528667cf431d4eefbae3353" prot="public">
+          <name>ADXL343_DATARATE_6_25HZ</name>
+          <initializer>= 0b0110</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>6.25Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4c2fbdb6e44c5e549fda963b352faff4" prot="public">
+          <name>ADXL343_DATARATE_3_13_HZ</name>
+          <initializer>= 0b0101</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>3.13Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa748ca5cfb6e2c9b1efd133c77c9ad8e" prot="public">
+          <name>ADXL343_DATARATE_1_56_HZ</name>
+          <initializer>= 0b0100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>1.56Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa0492711762e93619d48ec5aec1c86b4c" prot="public">
+          <name>ADXL343_DATARATE_0_78_HZ</name>
+          <initializer>= 0b0011</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>0.78Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa2e3a9723daff6795fd877a1124b8c333" prot="public">
+          <name>ADXL343_DATARATE_0_39_HZ</name>
+          <initializer>= 0b0010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>0.39Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aae26958e57440eac6b8250aface0bef00" prot="public">
+          <name>ADXL343_DATARATE_0_20_HZ</name>
+          <initializer>= 0b0001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>0.20Hz Bandwidth </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aadb39e9d844ada1bd8f6ce4fed7740223" prot="public">
+          <name>ADXL343_DATARATE_0_10_HZ</name>
+          <initializer>= 0b0000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>0.10Hz Bandwidth (default value) </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used with register 0x2C (ADXL343_REG_BW_RATE) to set bandwidth </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="81" column="1" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="81" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="enum" id="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>range_t</name>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5bacb166bf33b14fb0dc657201d2232835b" prot="public">
+          <name>ADXL343_RANGE_16_G</name>
+          <initializer>= 0b11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>+/- 16g </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5baf4d20b15527928d5a8a3d02225019bc9" prot="public">
+          <name>ADXL343_RANGE_8_G</name>
+          <initializer>= 0b10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>+/- 8g </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba19981f968911ff0c1e41416f34f888a3" prot="public">
+          <name>ADXL343_RANGE_4_G</name>
+          <initializer>= 0b01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>+/- 4g </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba36d14f18a5ad5a392d25734b28b759d9" prot="public">
+          <name>ADXL343_RANGE_2_G</name>
+          <initializer>= 0b00</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>+/- 2g (default value) </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used with register 0x31 (ADXL343_REG_DATA_FORMAT) to set g range </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="101" column="1" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="enum" id="_adafruit___a_d_x_l343_8h_1ac13c67f033a620e7e62a7311e097901d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>int_pin</name>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1ac13c67f033a620e7e62a7311e097901dab7e394ca25da3e99f25ba41f314c84a5" prot="public">
+          <name>ADXL343_INT1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___a_d_x_l343_8h_1ac13c67f033a620e7e62a7311e097901da53691817b3fbb78ebe423a906d32d7d2" prot="public">
+          <name>ADXL343_INT2</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Possible interrupt pin outputs on the ADXL343. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" line="124" column="1" bodyfile="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h" bodystart="124" bodyend="124"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Bryan Siepert and K. Townsend (Adafruit Industries)</para>
+</simplesect>
+BSD license (see license.txt)</para>
+<para>This is a library for the Adafruit ADS1015 breakout board -<mdash/>&gt; <ulink url="https://www.adafruit.com/products/???">https://www.adafruit.com/products/???</ulink></para>
+<para>Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<para>v1.0 - First release </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/**************************************************************************/</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ADAFRUIT_SENSOR_ADXL343_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADAFRUIT_SENSOR_ADXL343_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_BusIO_Register.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_I2CDevice.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_Sensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>I2C<sp/>ADDRESS/BITS</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_adafruit___a_d_x_l343_8h_1a471a5bff26beba374f78df5b333d4716" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_ADDRESS<sp/>(0x53)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>REGISTERS</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_adafruit___a_d_x_l343_8h_1a528fa0678527604af38dc5cb174f2b3c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DEVID<sp/>(0x00)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_adafruit___a_d_x_l343_8h_1a67dceb2a59b69b7555c9b4cc4464c7e1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_THRESH_TAP<sp/>(0x1D)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="_adafruit___a_d_x_l343_8h_1af73bbfa0ccb51e2f1ee99e7f788b3001" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_OFSX<sp/>(0x1E)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="_adafruit___a_d_x_l343_8h_1a74a0ffaeb203398104e3fe61ce73cf05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_OFSY<sp/>(0x1F)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_adafruit___a_d_x_l343_8h_1a6041413fd7536b427194aff5192f0623" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_OFSZ<sp/>(0x20)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="_adafruit___a_d_x_l343_8h_1a26167ef539102aeebb747447ad1b10ab" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DUR<sp/>(0x21)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="_adafruit___a_d_x_l343_8h_1a7c01242e4ef84a3f97983c95d8b39201" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_LATENT<sp/>(0x22)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="_adafruit___a_d_x_l343_8h_1a1f6c0706dd4cc299d378ac75e4e1e15d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_WINDOW<sp/>(0x23)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_adafruit___a_d_x_l343_8h_1a059581b3db85086481390035d1c697f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_THRESH_ACT<sp/>(0x24)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="_adafruit___a_d_x_l343_8h_1ab8517225db456bef9af26004c7fd430e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_THRESH_INACT<sp/>(0x25)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="_adafruit___a_d_x_l343_8h_1aa8c3329aba4165a3715754f52bb03255" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_TIME_INACT<sp/>(0x26)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_ACT_INACT_CTL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53" refid="_adafruit___a_d_x_l343_8h_1a5d1b75a296c9786c884eb2633dec866b" refkind="member"><highlight class="preprocessor"><sp/><sp/>(0x27)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_adafruit___a_d_x_l343_8h_1a8326695f40d9fb58078d405347fed8eb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_THRESH_FF<sp/>(0x28)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_adafruit___a_d_x_l343_8h_1a19bdaf7238019ef78ef37b466a6ce1f8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_TIME_FF<sp/>(0x29)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="_adafruit___a_d_x_l343_8h_1ae5c2307df1335ac843649e81cc2f2593" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_TAP_AXES<sp/>(0x2A)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="_adafruit___a_d_x_l343_8h_1a3346518d9fc78b7503a7600d7e21b7ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_ACT_TAP_STATUS<sp/>(0x2B)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="_adafruit___a_d_x_l343_8h_1a7646e1c70e5cd26212ec0c13d5f52154" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_BW_RATE<sp/>(0x2C)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_adafruit___a_d_x_l343_8h_1aeae5292b8ad20121fd5b227125ef04f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_POWER_CTL<sp/>(0x2D)<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_adafruit___a_d_x_l343_8h_1a6c93a9d7553536e7bde1afda293d8a3b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_INT_ENABLE<sp/>(0x2E)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="_adafruit___a_d_x_l343_8h_1a079ab817f5d95196229f26c69469d899" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_INT_MAP<sp/>(0x2F)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_adafruit___a_d_x_l343_8h_1a3a0123afda3b149eda856b8f5e28552d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_INT_SOURCE<sp/>(0x30)<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="_adafruit___a_d_x_l343_8h_1a02ccfa71660cb2181fdf951ff6bcc9b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATA_FORMAT<sp/>(0x31)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="_adafruit___a_d_x_l343_8h_1a0a842ebb5a4191b1a2b685403a7dbfa9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAX0<sp/>(0x32)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="_adafruit___a_d_x_l343_8h_1af132fd8c772a5295b38b7c97158b4d7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAX1<sp/>(0x33)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="_adafruit___a_d_x_l343_8h_1a27ad66205a5c7bd03381d8db41a8d59c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAY0<sp/>(0x34)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="_adafruit___a_d_x_l343_8h_1a2bcffa093c4f612a97ed8170425b0549" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAY1<sp/>(0x35)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_adafruit___a_d_x_l343_8h_1a89ad1be51f4bd97b35ed20b64487816e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAZ0<sp/>(0x36)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_adafruit___a_d_x_l343_8h_1a6927f8cbcac93adc5a145828413a4d04" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_DATAZ1<sp/>(0x37)<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_adafruit___a_d_x_l343_8h_1a84cc40f77dc447bdb0f4fa419fa0acc0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_FIFO_CTL<sp/>(0x38)<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="_adafruit___a_d_x_l343_8h_1a89351fd101fa7deb45a6de27f4025658" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_REG_FIFO_STATUS<sp/>(0x39)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/>REGISTERS</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="_adafruit___a_d_x_l343_8h_1a642c86b9f1fc91402bea49ba73cacf57" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ADXL343_MG2G_MULTIPLIER<sp/>(0.004)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="82" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa782adbaa76b21982ba3eca5050e91d8" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa782adbaa76b21982ba3eca5050e91d8" kindref="member">ADXL343_DATARATE_3200_HZ</ref><sp/>=<sp/>0b1111,<sp/></highlight></codeline>
+<codeline lineno="83" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4cf175b8ace4df4e930634276283b8ef" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4cf175b8ace4df4e930634276283b8ef" kindref="member">ADXL343_DATARATE_1600_HZ</ref><sp/>=<sp/>0b1110,<sp/></highlight></codeline>
+<codeline lineno="84" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4a49d3c15ef625970c5089f78aeee575" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4a49d3c15ef625970c5089f78aeee575" kindref="member">ADXL343_DATARATE_800_HZ</ref><sp/>=<sp/>0b1101,<sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa1537f4c04a6356de27157a36433039ee" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa1537f4c04a6356de27157a36433039ee" kindref="member">ADXL343_DATARATE_400_HZ</ref><sp/>=<sp/>0b1100,<sp/><sp/></highlight></codeline>
+<codeline lineno="86" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa6b6f7c3237e818c2ab1989d233016e2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa6b6f7c3237e818c2ab1989d233016e2" kindref="member">ADXL343_DATARATE_200_HZ</ref><sp/>=<sp/>0b1011,<sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8c09bfedfc876344698cd0a3e2e43ab5" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8c09bfedfc876344698cd0a3e2e43ab5" kindref="member">ADXL343_DATARATE_100_HZ</ref><sp/>=<sp/>0b1010,<sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa3001dcaf384b04e542586961af92fa7a" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa3001dcaf384b04e542586961af92fa7a" kindref="member">ADXL343_DATARATE_50_HZ</ref><sp/>=<sp/>0b1001,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa85a93d23388ed52e8fd86753236f5254" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa85a93d23388ed52e8fd86753236f5254" kindref="member">ADXL343_DATARATE_25_HZ</ref><sp/>=<sp/>0b1000,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aac7063fc631243b5af561ed57baade5de" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aac7063fc631243b5af561ed57baade5de" kindref="member">ADXL343_DATARATE_12_5_HZ</ref><sp/>=<sp/>0b0111,<sp/></highlight></codeline>
+<codeline lineno="91" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8efca2315528667cf431d4eefbae3353" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa8efca2315528667cf431d4eefbae3353" kindref="member">ADXL343_DATARATE_6_25HZ</ref><sp/>=<sp/>0b0110,<sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4c2fbdb6e44c5e549fda963b352faff4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa4c2fbdb6e44c5e549fda963b352faff4" kindref="member">ADXL343_DATARATE_3_13_HZ</ref><sp/>=<sp/>0b0101,<sp/></highlight></codeline>
+<codeline lineno="93" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa748ca5cfb6e2c9b1efd133c77c9ad8e" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aaa748ca5cfb6e2c9b1efd133c77c9ad8e" kindref="member">ADXL343_DATARATE_1_56_HZ</ref><sp/>=<sp/>0b0100,<sp/></highlight></codeline>
+<codeline lineno="94" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa0492711762e93619d48ec5aec1c86b4c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa0492711762e93619d48ec5aec1c86b4c" kindref="member">ADXL343_DATARATE_0_78_HZ</ref><sp/>=<sp/>0b0011,<sp/></highlight></codeline>
+<codeline lineno="95" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa2e3a9723daff6795fd877a1124b8c333" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aa2e3a9723daff6795fd877a1124b8c333" kindref="member">ADXL343_DATARATE_0_39_HZ</ref><sp/>=<sp/>0b0010,<sp/></highlight></codeline>
+<codeline lineno="96" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aae26958e57440eac6b8250aface0bef00" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aae26958e57440eac6b8250aface0bef00" kindref="member">ADXL343_DATARATE_0_20_HZ</ref><sp/>=<sp/>0b0001,<sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aadb39e9d844ada1bd8f6ce4fed7740223" kindref="member">ADXL343_DATARATE_0_10_HZ</ref><sp/>=<sp/>0b0000<sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0aadb39e9d844ada1bd8f6ce4fed7740223" refkind="member"><highlight class="normal">}<sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" kindref="member">dataRate_t</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="102" refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5bacb166bf33b14fb0dc657201d2232835b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5bacb166bf33b14fb0dc657201d2232835b" kindref="member">ADXL343_RANGE_16_G</ref><sp/>=<sp/>0b11,<sp/></highlight></codeline>
+<codeline lineno="103" refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5baf4d20b15527928d5a8a3d02225019bc9" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5baf4d20b15527928d5a8a3d02225019bc9" kindref="member">ADXL343_RANGE_8_G</ref><sp/>=<sp/>0b10,<sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba19981f968911ff0c1e41416f34f888a3" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba19981f968911ff0c1e41416f34f888a3" kindref="member">ADXL343_RANGE_4_G</ref><sp/>=<sp/>0b01,<sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba36d14f18a5ad5a392d25734b28b759d9" kindref="member">ADXL343_RANGE_2_G</ref><sp/>=<sp/>0b00<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5ba36d14f18a5ad5a392d25734b28b759d9" refkind="member"><highlight class="normal">}<sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="unionint__config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="unionint__config" kindref="compound">int_config</ref><sp/>{</highlight></codeline>
+<codeline lineno="110" refid="unionint__config_1aab1a48e30b86ae5d9924941e76592c03" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1aab1a48e30b86ae5d9924941e76592c03" kindref="member">value</ref>;<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112" refid="unionint__config_1aed5918039628382fca1c029a2d188af5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1aed5918039628382fca1c029a2d188af5" kindref="member">overrun</ref><sp/>:<sp/>1;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="unionint__config_1af3fd7621b1a87527a8299621bf95b20a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1af3fd7621b1a87527a8299621bf95b20a" kindref="member">watermark</ref><sp/>:<sp/>1;<sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="unionint__config_1a733fe83d604c875e390b724d8a9cd53c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1a733fe83d604c875e390b724d8a9cd53c" kindref="member">freefall</ref><sp/>:<sp/>1;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115" refid="unionint__config_1abc2431f15320b1fa842c2625530fe115" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1abc2431f15320b1fa842c2625530fe115" kindref="member">inactivity</ref><sp/>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="116" refid="unionint__config_1a625703cff7e93831f6e55eb48f739b37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1a625703cff7e93831f6e55eb48f739b37" kindref="member">activity</ref><sp/>:<sp/>1;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="unionint__config_1aaf34dc42f31e8dcd85c9ce36ab0d2b3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1aaf34dc42f31e8dcd85c9ce36ab0d2b3f" kindref="member">double_tap</ref><sp/>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="118" refid="unionint__config_1a992b85c3fcc6abe9c3fe66ef685e6772" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1a992b85c3fcc6abe9c3fe66ef685e6772" kindref="member">single_tap</ref><sp/>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="119" refid="unionint__config_1a7f6826b0f8dfaa812783d07ce24a5a9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="unionint__config_1a7f6826b0f8dfaa812783d07ce24a5a9b" kindref="member">data_ready</ref><sp/>:<sp/>1;<sp/></highlight></codeline>
+<codeline lineno="120" refid="unionint__config_1a58d75c32c7ce082a7150efe55fa41f0d" refkind="member"><highlight class="normal"><sp/><sp/>}<sp/><ref refid="unionint__config_1a58d75c32c7ce082a7150efe55fa41f0d" kindref="member">bits</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="_adafruit___a_d_x_l343_8h_1ac13c67f033a620e7e62a7311e097901d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/>ADXL343_INT1<sp/>=<sp/>0,<sp/>ADXL343_INT2<sp/>=<sp/>1<sp/>}<sp/><ref refid="_adafruit___a_d_x_l343_8h_1ac13c67f033a620e7e62a7311e097901d" kindref="member">int_pin</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_adafruit___a_d_x_l343" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___a_d_x_l343" kindref="compound">Adafruit_ADXL343</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___sensor" kindref="compound">Adafruit_Sensor</ref><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___a_d_x_l343" kindref="compound">Adafruit_ADXL343</ref>(int32_t<sp/>sensorID);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___a_d_x_l343" kindref="compound">Adafruit_ADXL343</ref>(int32_t<sp/>sensorID,<sp/>TwoWire<sp/>*wireBus);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___a_d_x_l343" kindref="compound">Adafruit_ADXL343</ref>(uint8_t<sp/>clock,<sp/>uint8_t<sp/>miso,<sp/>uint8_t<sp/>mosi,<sp/>uint8_t<sp/>cs,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/>sensorID<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1ac43fa05e13e839fc43f1cff41e10f8fc" kindref="member">begin</ref>(uint8_t<sp/>i2caddr<sp/>=<sp/><ref refid="_adafruit___a_d_x_l343_8h_1a471a5bff26beba374f78df5b333d4716" kindref="member">ADXL343_ADDRESS</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1a7e1023422638d87621053d50536dc155" kindref="member">setRange</ref>(<ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref><sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a5a95c5aa27dc12b07af34405942b7849" kindref="member">range</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref><sp/><ref refid="class_adafruit___a_d_x_l343_1a23d81de07070b2f7cb5405259a27a5f0" kindref="member">getRange</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1a6e4a36e653d0ae7098b41167dbc168f1" kindref="member">setDataRate</ref>(<ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" kindref="member">dataRate_t</ref><sp/>dataRate);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a7b8465343401971414c6cc2581f28b0a" kindref="member">dataRate_t</ref><sp/><ref refid="class_adafruit___a_d_x_l343_1a96ab4c4be9414b82616a4f3aa697cb69" kindref="member">getDataRate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1a23ec0801feee878f6aa64020d4b831f8" kindref="member">getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1aac54a36d585fa7cbe42a88290e37c500" kindref="member">getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>*);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___a_d_x_l343_1ade88a5194521804213cedbdff23da7e5" kindref="member">getDeviceID</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1a7004799e03016dc2d079561bffa0acbf" kindref="member">writeRegister</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>value);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___a_d_x_l343_1a01635b0c88ac6651f35ccc438c42126b" kindref="member">readRegister</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>int16_t<sp/><ref refid="class_adafruit___a_d_x_l343_1aa42e3293cc76a827a58ba49b1202cb84" kindref="member">read16</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1abe69f6718059917432951dc1f9f1730a" kindref="member">enableInterrupts</ref>(<ref refid="unionint__config" kindref="compound">int_config</ref><sp/>cfg);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___a_d_x_l343_1ab2985273e580239dac8a672eb51f3f57" kindref="member">mapInterrupts</ref>(<ref refid="unionint__config" kindref="compound">int_config</ref><sp/>cfg);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___a_d_x_l343_1aa65d5a63863193fcaf5e59004880f817" kindref="member">checkInterrupts</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>int16_t<sp/><ref refid="class_adafruit___a_d_x_l343_1acba8a90ba0532baae64acf67c9338c4a" kindref="member">getX</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>int16_t<sp/><ref refid="class_adafruit___a_d_x_l343_1a0247281d12263afaa21ef5cf2f0a320a" kindref="member">getY</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>int16_t<sp/><ref refid="class_adafruit___a_d_x_l343_1aa98856e2a01d03d5599b72fa0a7233bd" kindref="member">getZ</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref><sp/>*spi_dev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref><sp/>*i2c_dev<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>TwoWire<sp/>*_wire;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>int32_t<sp/>_sensorID;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___a_d_x_l343_8h_1a23c78f6ff1abdabd74f657e54e415e5b" kindref="member">range_t</ref><sp/>_range;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_clk,<sp/>_do,<sp/>_di,<sp/>_cs;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_i2c;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_ADXL343/Adafruit_ADXL343.h"/>
+  </compounddef>
+</doxygen>

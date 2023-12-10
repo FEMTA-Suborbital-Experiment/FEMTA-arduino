@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structmaster_boot_record" kind="struct" language="C++" prot="public">
+    <compoundname>masterBootRecord</compoundname>
+    <includes refid="_fat_structs_8h" local="no">FatStructs.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmaster_boot_record_1a26ca1fb4ebbff2cc1a54153b1dfcd688" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t masterBootRecord::codeArea[440]</definition>
+        <argsstring>[440]</argsstring>
+        <name>codeArea</name>
+        <qualifiedname>masterBootRecord::codeArea</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Code Area for master boot program. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="106" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmaster_boot_record_1a77151c641444c0653ff71a253f0423ef" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t masterBootRecord::diskSignature</definition>
+        <argsstring></argsstring>
+        <name>diskSignature</name>
+        <qualifiedname>masterBootRecord::diskSignature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional WindowsNT disk signature. May contain more boot code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="108" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmaster_boot_record_1afacfc863e98f64053cd9459c6dec948f" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t masterBootRecord::usuallyZero</definition>
+        <argsstring></argsstring>
+        <name>usuallyZero</name>
+        <qualifiedname>masterBootRecord::usuallyZero</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Usually zero but may be more boot code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="110" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmaster_boot_record_1aa4e294e50f311635c10c92f4c99227c5" prot="public" static="no" mutable="no">
+        <type><ref refid="_fat_structs_8h_1a37251e7d5c69a159be727a3fc8c9d0e6" kindref="member">part_t</ref></type>
+        <definition>part_t masterBootRecord::part[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>part</name>
+        <qualifiedname>masterBootRecord::part</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Partition tables. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="112" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmaster_boot_record_1a42b0b413ecb21ac5314d4f6bca05308f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t masterBootRecord::mbrSig0</definition>
+        <argsstring></argsstring>
+        <name>mbrSig0</name>
+        <qualifiedname>masterBootRecord::mbrSig0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>First MBR signature byte. Must be 0X55 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="114" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmaster_boot_record_1aafbbcb4f6a2d1181c6458d4c9603df4f" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t masterBootRecord::mbrSig1</definition>
+        <argsstring></argsstring>
+        <name>mbrSig1</name>
+        <qualifiedname>masterBootRecord::mbrSig1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Second MBR signature byte. Must be 0XAA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="116" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Master Boot Record. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The first block of a storage device that is formatted with a MBR. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>masterBootRecord</label>
+        <link refid="structmaster_boot_record"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>part</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>partitionTable</label>
+        <link refid="structpartition_table"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="104" column="1" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="104" bodyend="117"/>
+    <listofallmembers>
+      <member refid="structmaster_boot_record_1a26ca1fb4ebbff2cc1a54153b1dfcd688" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>codeArea</name></member>
+      <member refid="structmaster_boot_record_1a77151c641444c0653ff71a253f0423ef" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>diskSignature</name></member>
+      <member refid="structmaster_boot_record_1a42b0b413ecb21ac5314d4f6bca05308f" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>mbrSig0</name></member>
+      <member refid="structmaster_boot_record_1aafbbcb4f6a2d1181c6458d4c9603df4f" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>mbrSig1</name></member>
+      <member refid="structmaster_boot_record_1aa4e294e50f311635c10c92f4c99227c5" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>part</name></member>
+      <member refid="structmaster_boot_record_1afacfc863e98f64053cd9459c6dec948f" prot="public" virt="non-virtual"><scope>masterBootRecord</scope><name>usuallyZero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

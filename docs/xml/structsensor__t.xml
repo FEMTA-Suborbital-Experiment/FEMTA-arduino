@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structsensor__t" kind="struct" language="C++" prot="public">
+    <compoundname>sensor_t</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="no">Adafruit_Sensor.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char sensor_t::name</definition>
+        <argsstring>[12]</argsstring>
+        <name>name</name>
+        <qualifiedname>sensor_t::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>sensor name </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="147" column="8" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensor_t::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>sensor_t::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>version of the hardware + driver </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="148" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensor_t::sensor_id</definition>
+        <argsstring></argsstring>
+        <name>sensor_id</name>
+        <qualifiedname>sensor_t::sensor_id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unique sensor identifier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="149" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1ae1d59df64438923d3bd95f2416c32203" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensor_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>sensor_t::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this sensor&apos;s type (ex. SENSOR_TYPE_LIGHT) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="150" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensor_t::max_value</definition>
+        <argsstring></argsstring>
+        <name>max_value</name>
+        <qualifiedname>sensor_t::max_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maximum value of this sensor&apos;s value in SI units </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="151" column="9" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensor_t::min_value</definition>
+        <argsstring></argsstring>
+        <name>min_value</name>
+        <qualifiedname>sensor_t::min_value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>minimum value of this sensor&apos;s value in SI units </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="152" column="9" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensor_t::resolution</definition>
+        <argsstring></argsstring>
+        <name>resolution</name>
+        <qualifiedname>sensor_t::resolution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>smallest difference between two values reported by this sensor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="153" column="9" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensor__t_1a1cd271377ff25ec9ca54886f876c87ec" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t sensor_t::min_delay</definition>
+        <argsstring></argsstring>
+        <name>min_delay</name>
+        <qualifiedname>sensor_t::min_delay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>min delay in microseconds between events. zero = not a constant rate </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="155" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>struct sensor_s is used to describe basic information about a specific sensor. </para>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="146" column="1" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="146" bodyend="157"/>
+    <listofallmembers>
+      <member refid="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>max_value</name></member>
+      <member refid="structsensor__t_1a1cd271377ff25ec9ca54886f876c87ec" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>min_delay</name></member>
+      <member refid="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>min_value</name></member>
+      <member refid="structsensor__t_1a6ee209265e4a44d31369ac6b43b95519" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>name</name></member>
+      <member refid="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>resolution</name></member>
+      <member refid="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>sensor_id</name></member>
+      <member refid="structsensor__t_1ae1d59df64438923d3bd95f2416c32203" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>type</name></member>
+      <member refid="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" prot="public" virt="non-virtual"><scope>sensor_t</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

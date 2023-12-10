@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_adafruit___zero_d_m_a_8h" kind="file" language="C++">
+    <compoundname>Adafruit_ZeroDMA.h</compoundname>
+    <includes local="yes">Arduino.h</includes>
+    <includes refid="dma_8h" local="yes">utility/dma.h</includes>
+    <includedby refid="examples_2logger__test_2src_2_writer_8h" local="no">examples/logger_test/src/Writer.h</includedby>
+    <includedby refid="_adafruit___zero_d_m_a_8cpp" local="no">libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp</includedby>
+    <includedby refid="main_2pme_2src_2_writer_8h" local="no">main/pme/src/Writer.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h</label>
+        <link refid="_adafruit___zero_d_m_a_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>utility/dma.h</label>
+        <link refid="dma_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.cpp</label>
+        <link refid="_adafruit___zero_d_m_a_8cpp"/>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h</label>
+        <link refid="_adafruit___zero_d_m_a_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_adafruit___zero_d_m_a" prot="public">Adafruit_ZeroDMA</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ZeroDMAstatus</name>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686aaeb96d12acc6760c19d99f067abbe21f" prot="public">
+          <name>DMA_STATUS_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686ac66a115b09a788fa21d7e9cabd5f9ff4" prot="public">
+          <name>DMA_STATUS_ERR_NOT_FOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686a2e48c370e24975dbfd888d81ba8dcddd" prot="public">
+          <name>DMA_STATUS_ERR_NOT_INITIALIZED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686a557c9b7dca63975f2a1e336d0f4a721c" prot="public">
+          <name>DMA_STATUS_ERR_INVALID_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686af10ea322b34bd63251345a0ce9b93188" prot="public">
+          <name>DMA_STATUS_ERR_IO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686a01d1590b8f6ac6896f8cd262e7ad4727" prot="public">
+          <name>DMA_STATUS_ERR_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686ad0f66e962296f5451d73dc1cae1fdc0d" prot="public">
+          <name>DMA_STATUS_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686ac097d73d6bf09430412e281a86330a84" prot="public">
+          <name>DMA_STATUS_SUSPEND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686ad5ed1188a2e5b40b24abd4febeca05b6" prot="public">
+          <name>DMA_STATUS_ABORTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686ad446c679b6a2f7d5363534c150103a3b" prot="public">
+          <name>DMA_STATUS_JOBSTATUS</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Status codes returned by some DMA functions and/or held in a channel&apos;s jobStatus variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" line="30" column="1" bodyfile="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h" bodystart="30" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This is part of Adafruit&apos;s DMA library for SAMD microcontrollers on the Arduino platform. SAMD21 and SAMD51 lines are supported.</para>
+<para>Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!</para>
+<para>Written by Phil &quot;PaintYourDragon&quot; Burgess for Adafruit Industries, based partly on DMA insights from Atmel ASFCORE 3.</para>
+<para>MIT license, all text here must be included in any redistribution. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_ADAFRUIT_ZERODMA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ADAFRUIT_ZERODMA_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DMAC_RESERVED_CHANNELS<sp/></highlight><highlight class="comment">//<sp/>SAMD<sp/>core<sp/>&gt;<sp/>1.2.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dma_8h" kindref="compound">dma.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dma_8h" kindref="compound">utility/dma.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>DMA_STATUS_OK<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>DMA_STATUS_ERR_NOT_FOUND,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>DMA_STATUS_ERR_NOT_INITIALIZED,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>DMA_STATUS_ERR_INVALID_ARG,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>DMA_STATUS_ERR_IO,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>DMA_STATUS_ERR_TIMEOUT,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>DMA_STATUS_BUSY,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>DMA_STATUS_SUSPEND,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>DMA_STATUS_ABORTED,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>DMA_STATUS_JOBSTATUS<sp/>=<sp/>-1<sp/></highlight><highlight class="comment">//<sp/>For<sp/>printStatus()<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_adafruit___zero_d_m_a" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___zero_d_m_a" kindref="compound">Adafruit_ZeroDMA</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___zero_d_m_a" kindref="compound">Adafruit_ZeroDMA</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>DMA<sp/>channel<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/><ref refid="class_adafruit___zero_d_m_a_1a12cd181b228127512b854b4f4a4702ad" kindref="member">allocate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/><ref refid="class_adafruit___zero_d_m_a_1a271d8c9050b100ab2fb766f07642af4a" kindref="member">startJob</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/><ref refid="class_adafruit___zero_d_m_a_1a8b3fbf685ae3ef8f5392a21af5836a3f" kindref="member">free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1ac62999634c9708aea1ee780df3f740d0" kindref="member">trigger</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1ac3f324b1792f0287093cedba2f9bfc0b" kindref="member">setTrigger</ref>(uint8_t<sp/><ref refid="class_adafruit___zero_d_m_a_1ac62999634c9708aea1ee780df3f740d0" kindref="member">trigger</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1a4e863ea5e45bda38f9249d9443a55152" kindref="member">setAction</ref>(dma_transfer_trigger_action<sp/>action);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1ada1ef40ce048e2af885815e39859476a" kindref="member">setCallback</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*<ref refid="class_adafruit___zero_d_m_a_1a82b002d9e2f796723e7e0652ee3e4d4f" kindref="member">callback</ref>)(<ref refid="class_adafruit___zero_d_m_a" kindref="compound">Adafruit_ZeroDMA</ref><sp/>*)<sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dma_callback_type<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref><sp/>=<sp/>DMA_CALLBACK_TRANSFER_DONE);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1abcb7a7f194c78db02c17b7dad80dcc1f" kindref="member">loop</ref>(</highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>flag);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1ac84c9a934b0b0533d49ba6d878ad5540" kindref="member">suspend</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1a2b9222e1b16cc0429b491b7fe093cb7a" kindref="member">resume</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1af5843942940a56babc3d00d20472b0a4" kindref="member">abort</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1ad7c9f597b6a6fa658993a80669aa5b33" kindref="member">setPriority</ref>(dma_priority<sp/>pri);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1af940ac0fbf99688fef10fdbeb1e92cc4" kindref="member">printStatus</ref>(<ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/>s<sp/>=<sp/>DMA_STATUS_JOBSTATUS);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___zero_d_m_a_1af43fc8294a0a10448909247ba60ad7a0" kindref="member">getChannel</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>DMA<sp/>descriptor<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>DmacDescriptor<sp/>*</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___zero_d_m_a_1a94112456ab7aead2acb19b10053530d3" kindref="member">addDescriptor</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*src,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dst,<sp/>uint32_t<sp/>count<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dma_beat_size<sp/>size<sp/>=<sp/>DMA_BEAT_SIZE_BYTE,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>srcInc<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dstInc<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>stepSize<sp/>=<sp/>DMA_ADDRESS_INCREMENT_STEP_SIZE_1,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stepSel<sp/>=<sp/>DMA_STEPSEL_DST);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1a176317c57c824f223083b06568941b22" kindref="member">changeDescriptor</ref>(DmacDescriptor<sp/>*d,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*src<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*dst<sp/>=<sp/>NULL,</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>count<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1aefe46f2eb389ac5aac4ebfdb13a620d0" kindref="member">_IRQhandler</ref>(uint8_t<sp/>flags);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1aed42b5b406df8f37f3f48df1b2c3e057" kindref="member">isActive</ref>();</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="237" refid="class_adafruit___zero_d_m_a_1a80771921a68271f5a79ab0a6c4b1bad5" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___zero_d_m_a_1a80771921a68271f5a79ab0a6c4b1bad5" kindref="member">channel</ref>;<sp/></highlight></codeline>
+<codeline lineno="238" refid="class_adafruit___zero_d_m_a_1a66edc3699148ad581926fa3566360f17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_adafruit___zero_d_m_a_8h_1ac32982e07d7b05efd5807bce8819a686" kindref="member">ZeroDMAstatus</ref><sp/><ref refid="class_adafruit___zero_d_m_a_1a66edc3699148ad581926fa3566360f17" kindref="member">jobStatus</ref>;<sp/></highlight></codeline>
+<codeline lineno="239" refid="class_adafruit___zero_d_m_a_1a84ae85a6a87a1388b5e070bb804500c1" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1a84ae85a6a87a1388b5e070bb804500c1" kindref="member">hasDescriptors</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="240" refid="class_adafruit___zero_d_m_a_1a681b8ea014c7d8e198218756700d8926" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___zero_d_m_a_1a681b8ea014c7d8e198218756700d8926" kindref="member">loopFlag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241" refid="class_adafruit___zero_d_m_a_1aa276d20e9ef4b3f8cbcd8cf569497923" refkind="member"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___zero_d_m_a_1aa276d20e9ef4b3f8cbcd8cf569497923" kindref="member">peripheralTrigger</ref>;<sp/></highlight></codeline>
+<codeline lineno="242" refid="class_adafruit___zero_d_m_a_1aef6d75fa171d1be7daec125b7a347363" refkind="member"><highlight class="normal"><sp/><sp/>dma_transfer_trigger_action<sp/><ref refid="class_adafruit___zero_d_m_a_1aef6d75fa171d1be7daec125b7a347363" kindref="member">triggerAction</ref>;<sp/></highlight></codeline>
+<codeline lineno="243" refid="class_adafruit___zero_d_m_a_1a82b002d9e2f796723e7e0652ee3e4d4f" refkind="member"><highlight class="normal"><sp/><sp/>void<sp/>(*<ref refid="class_adafruit___zero_d_m_a_1a82b002d9e2f796723e7e0652ee3e4d4f" kindref="member">callback</ref>[DMA_CALLBACK_N])(<ref refid="class_adafruit___zero_d_m_a" kindref="compound">Adafruit_ZeroDMA</ref><sp/>*);<sp/></highlight></codeline>
+<codeline lineno="244"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_ADAFRUIT_ZERODMA_H_</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_Zero_DMA_Library-1.1.1/Adafruit_ZeroDMA.h"/>
+  </compounddef>
+</doxygen>

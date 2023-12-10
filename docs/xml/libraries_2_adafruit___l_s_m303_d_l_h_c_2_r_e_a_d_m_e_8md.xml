@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___l_s_m303_d_l_h_c_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>LSM303DLHC<sp/>Driver<sp/>(Accelerometer<sp/>+<sp/>Magnetometer)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>driver<sp/>is<sp/>for<sp/>the<sp/>Adafruit<sp/>LSM303<sp/>Breakout<sp/>(http://www.adafruit.com/products/1120),<sp/>and<sp/>is<sp/>based<sp/>on<sp/>Adafruit&apos;s<sp/>Unified<sp/>Sensor<sp/>Library<sp/>(Adafruit_Sensor).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>the<sp/>LSM303<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>LSM303<sp/>is<sp/>a<sp/>digital<sp/>(I2C)<sp/>accelerometer<sp/>and<sp/>digital<sp/>compass<sp/>(magnetometer).<sp/><sp/>The<sp/>accelerometer<sp/>allows<sp/>you<sp/>to<sp/>measure<sp/>acceleration<sp/>or<sp/>direction<sp/>towards<sp/>the<sp/>center<sp/>or<sp/>the<sp/>earth,<sp/>and<sp/>the<sp/>magnetometer<sp/>measure<sp/>magnetic<sp/>force,<sp/>which<sp/>is<sp/>useful<sp/>to<sp/>detect<sp/>magnetic<sp/>north.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">More<sp/>information<sp/>on<sp/>the<sp/>LSM303<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>datasheet:<sp/>http://www.adafruit.com/datasheets/LSM303DLHC.PDF</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>the<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library?<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library<sp/>(**Adafruit_Sensor**)<sp/>provides<sp/>a<sp/>common<sp/>interface<sp/>and<sp/>data<sp/>type<sp/>for<sp/>any<sp/>supported<sp/>sensor.<sp/><sp/>It<sp/>defines<sp/>some<sp/>basic<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>(sensor<sp/>limits,<sp/>etc.),<sp/>and<sp/>returns<sp/>standard<sp/>SI<sp/>units<sp/>of<sp/>a<sp/>specific<sp/>type<sp/>and<sp/>scale<sp/>for<sp/>each<sp/>supported<sp/>sensor<sp/>type.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">It<sp/>provides<sp/>a<sp/>simple<sp/>abstraction<sp/>layer<sp/>between<sp/>your<sp/>application<sp/>and<sp/>the<sp/>actual<sp/>sensor<sp/>HW,<sp/>allowing<sp/>you<sp/>to<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>with<sp/>only<sp/>one<sp/>or<sp/>two<sp/>lines<sp/>of<sp/>code<sp/>to<sp/>change<sp/>in<sp/>your<sp/>project<sp/>(essentially<sp/>the<sp/>constructor<sp/>since<sp/>the<sp/>functions<sp/>to<sp/>read<sp/>sensor<sp/>data<sp/>and<sp/>get<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>are<sp/>defined<sp/>in<sp/>the<sp/>base<sp/>Adafruit_Sensor<sp/>class).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>imporant<sp/>useful<sp/>for<sp/>two<sp/>reasons:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.)<sp/>You<sp/>can<sp/>use<sp/>the<sp/>data<sp/>right<sp/>away<sp/>because<sp/>it&apos;s<sp/>already<sp/>converted<sp/>to<sp/>SI<sp/>units<sp/>that<sp/>you<sp/>understand<sp/>and<sp/>can<sp/>compare,<sp/>rather<sp/>than<sp/>meaningless<sp/>values<sp/>like<sp/>0..1023.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.)<sp/>Because<sp/>SI<sp/>units<sp/>are<sp/>standardised<sp/>in<sp/>the<sp/>sensor<sp/>library,<sp/>you<sp/>can<sp/>also<sp/>do<sp/>quick<sp/>sanity<sp/>checks<sp/>working<sp/>with<sp/>new<sp/>sensors,<sp/>or<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>if<sp/>you<sp/>need<sp/>better<sp/>sensitivity<sp/>or<sp/>if<sp/>a<sp/>lower<sp/>cost<sp/>unit<sp/>becomes<sp/>available,<sp/>etc.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Light<sp/>sensors<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>lux,<sp/>gyroscopes<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>rad/s,<sp/>etc.<sp/>...<sp/>freeing<sp/>you<sp/>up<sp/>to<sp/>focus<sp/>on<sp/>the<sp/>data,<sp/>rather<sp/>than<sp/>digging<sp/>through<sp/>the<sp/>datasheet<sp/>to<sp/>understand<sp/>what<sp/>the<sp/>sensor&apos;s<sp/>raw<sp/>numbers<sp/>really<sp/>mean.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>this<sp/>Driver<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code.<sp/><sp/>Please<sp/>support<sp/>Adafruit<sp/>and<sp/>open-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products<sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Written<sp/>by<sp/>Kevin<sp/>(KTOWN)<sp/>Townsend<sp/>for<sp/>Adafruit<sp/>Industries.</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>START<sp/>COMPATIBILITY<sp/>TABLE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Compatibility</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MCU<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>Tested<sp/>Works<sp/>|<sp/>Doesn&apos;t<sp/>Work<sp/>|<sp/>Not<sp/>Tested<sp/><sp/>|<sp/>Notes</highlight></codeline>
+<codeline><highlight class="normal">------------------<sp/>|<sp/>:----------:<sp/>|<sp/>:----------:<sp/>|<sp/>:---------:<sp/>|<sp/>-----</highlight></codeline>
+<codeline><highlight class="normal">Atmega328<sp/>@<sp/>16MHz<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">Atmega328<sp/>@<sp/>12MHz<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">Atmega32u4<sp/>@<sp/>16MHz<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">Atmega32u4<sp/>@<sp/>8MHz<sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">ESP8266<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">Atmega2560<sp/>@<sp/>16MHz<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>SDA/SCL<sp/>D20/D21</highlight></codeline>
+<codeline><highlight class="normal">ATSAM3X8E<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/>SDA/SCL<sp/>D20/D21</highlight></codeline>
+<codeline><highlight class="normal">ATSAM21D<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">ATtiny85<sp/>@<sp/>16MHz<sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">ATtiny85<sp/>@<sp/>8MHz<sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">Intel<sp/>Curie<sp/>@<sp/>32MHz<sp/>|<sp/><sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline><highlight class="normal">STM32F2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/><sp/><sp/><sp/><sp/>X<sp/><sp/><sp/><sp/><sp/><sp/><sp/>|<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATmega328<sp/>@<sp/>16MHz<sp/>:<sp/>Arduino<sp/>UNO,<sp/>Adafruit<sp/>Pro<sp/>Trinket<sp/>5V,<sp/>Adafruit<sp/>Metro<sp/>328,<sp/>Adafruit<sp/>Metro<sp/>Mini</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATmega328<sp/>@<sp/>12MHz<sp/>:<sp/>Adafruit<sp/>Pro<sp/>Trinket<sp/>3V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATmega32u4<sp/>@<sp/>16MHz<sp/>:<sp/>Arduino<sp/>Leonardo,<sp/>Arduino<sp/>Micro,<sp/>Arduino<sp/>Yun,<sp/>Teensy<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATmega32u4<sp/>@<sp/>8MHz<sp/>:<sp/>Adafruit<sp/>Flora,<sp/>Bluefruit<sp/>Micro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ESP8266<sp/>:<sp/>Adafruit<sp/>Huzzah</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATmega2560<sp/>@<sp/>16MHz<sp/>:<sp/>Arduino<sp/>Mega</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATSAM3X8E<sp/>:<sp/>Arduino<sp/>Due</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATSAM21D<sp/>:<sp/>Arduino<sp/>Zero,<sp/>M0<sp/>Pro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATtiny85<sp/>@<sp/>16MHz<sp/>:<sp/>Adafruit<sp/>Trinket<sp/>5V</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>*<sp/>ATtiny85<sp/>@<sp/>8MHz<sp/>:<sp/>Adafruit<sp/>Gemma,<sp/>Arduino<sp/>Gemma,<sp/>Adafruit<sp/>Trinket<sp/>3V</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>END<sp/>COMPATIBILITY<sp/>TABLE<sp/>--&gt;</highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_LSM303DLHC/README.md"/>
+  </compounddef>
+</doxygen>

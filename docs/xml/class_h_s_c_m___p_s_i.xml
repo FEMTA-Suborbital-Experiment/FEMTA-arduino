@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_h_s_c_m___p_s_i" kind="class" language="C++" prot="public">
+    <compoundname>HSCM_PSI</compoundname>
+    <includes refid="_h_s_c_m_8h" local="no">HSCM.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336" prot="public" static="no" mutable="no">
+        <type>hscm_output_type</type>
+        <definition>hscm_output_type HSCM_PSI::m_output_type</definition>
+        <argsstring></argsstring>
+        <name>m_output_type</name>
+        <qualifiedname>HSCM_PSI::m_output_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="39" column="26" bodyfile="libraries/HSCM/HSCM.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t HSCM_PSI::m_i2cAddress</definition>
+        <argsstring></argsstring>
+        <name>m_i2cAddress</name>
+        <qualifiedname>HSCM_PSI::m_i2cAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="44" column="17" bodyfile="libraries/HSCM/HSCM.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HSCM_PSI::m_tf_type</definition>
+        <argsstring></argsstring>
+        <name>m_tf_type</name>
+        <qualifiedname>HSCM_PSI::m_tf_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="46" column="13" bodyfile="libraries/HSCM/HSCM.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HSCM_PSI::m_pressure_type</definition>
+        <argsstring></argsstring>
+        <name>m_pressure_type</name>
+        <qualifiedname>HSCM_PSI::m_pressure_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="47" column="13" bodyfile="libraries/HSCM/HSCM.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a915870f5e5a8c8e77d84e810987a26e0" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float HSCM_PSI::tf_range</definition>
+        <argsstring>[4][2]</argsstring>
+        <name>tf_range</name>
+        <qualifiedname>HSCM_PSI::tf_range</qualifiedname>
+        <initializer>{
+    {0.1, 0.9}, 
+    {0.05, 0.95}, 
+    {0.05, 0.85}, 
+    {0.04, 0.94}
+}</initializer>
+        <briefdescription>
+<para>Transfer function range, which determines the maximum and minimum output counts for interpolation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="41" column="28" bodyfile="libraries/HSCM/HSCM.h" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1acab11f747649ab552463d4f8400115ff" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float HSCM_PSI::pressure_range</definition>
+        <argsstring>[4][2]</argsstring>
+        <name>pressure_range</name>
+        <qualifiedname>HSCM_PSI::pressure_range</qualifiedname>
+        <initializer>{
+    {0.0, 15.0}, 
+    {0.0, 30.0}, 
+    {0.0, 60.0}, 
+    {0.0, 100.0}
+}</initializer>
+        <briefdescription>
+<para>Pressure range, which is used for interpolating between the maximum and minimum calibrated ranges of the pressure per the type of the HSCM. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="42" column="28" bodyfile="libraries/HSCM/HSCM.h" bodystart="42" bodyend="47"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1ad1c39a8d02b8509369b38044d88b1f41" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HSCM_PSI::_pressure</definition>
+        <argsstring></argsstring>
+        <name>_pressure</name>
+        <qualifiedname>HSCM_PSI::_pressure</qualifiedname>
+        <initializer>{0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="59" column="15" bodyfile="libraries/HSCM/HSCM.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a16fb9374f322f490cc7c551a50ac01af" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float HSCM_PSI::_temperature</definition>
+        <argsstring></argsstring>
+        <name>_temperature</name>
+        <qualifiedname>HSCM_PSI::_temperature</qualifiedname>
+        <initializer>{0.0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="60" column="15" bodyfile="libraries/HSCM/HSCM.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a29606beab1ca00ebd401666426db010c" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::p_upper</definition>
+        <argsstring></argsstring>
+        <name>p_upper</name>
+        <qualifiedname>HSCM_PSI::p_upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="62" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a4a44e2da507f96985ddc897fcd7e27ff" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::p_lower</definition>
+        <argsstring></argsstring>
+        <name>p_lower</name>
+        <qualifiedname>HSCM_PSI::p_lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="63" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a360e0870298759745b6db33cda126bef" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::t_upper</definition>
+        <argsstring></argsstring>
+        <name>t_upper</name>
+        <qualifiedname>HSCM_PSI::t_upper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="64" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a101627b5c6e60d4516e08d8093eefbd1" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::t_lower</definition>
+        <argsstring></argsstring>
+        <name>t_lower</name>
+        <qualifiedname>HSCM_PSI::t_lower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="65" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1ac132a3bd8fc4e009192b34c963e5f15d" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::output_max</definition>
+        <argsstring></argsstring>
+        <name>output_max</name>
+        <qualifiedname>HSCM_PSI::output_max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="67" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a59a7b2702b765bb8da5446cd26bd6b1a" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t HSCM_PSI::output_min</definition>
+        <argsstring></argsstring>
+        <name>output_min</name>
+        <qualifiedname>HSCM_PSI::output_min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="68" column="18" bodyfile="libraries/HSCM/HSCM.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_c_m___p_s_i_1a7cda483db3bc4fdb9f7ab982b5c81c65" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t HSCM_PSI::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>HSCM_PSI::status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="70" column="17" bodyfile="libraries/HSCM/HSCM.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSCM_PSI::HSCM_PSI</definition>
+        <argsstring>(int i2cAddress, int tf_type, int p_type)</argsstring>
+        <name>HSCM_PSI</name>
+        <qualifiedname>HSCM_PSI::HSCM_PSI</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>i2cAddress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tf_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p_type</declname>
+        </param>
+        <briefdescription>
+<para>Construct the HSCM using the I2C address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i2cAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tf_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="49" column="9" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSCM_PSI::HSCM_PSI</definition>
+        <argsstring>(hscm_output_type output_type, int tf_type, int p_type)</argsstring>
+        <name>HSCM_PSI</name>
+        <qualifiedname>HSCM_PSI::HSCM_PSI</qualifiedname>
+        <param>
+          <type>hscm_output_type</type>
+          <declname>output_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tf_type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>p_type</declname>
+        </param>
+        <briefdescription>
+<para>Construct the HSCM using the types listed in the datasheet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>output_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tf_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="50" column="9" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t HSCM_PSI::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <qualifiedname>HSCM_PSI::read</qualifiedname>
+        <briefdescription>
+<para>Poll the HSCM for new pressure and temperature data and check the status of the read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint8_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="52" column="17" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="104" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float HSCM_PSI::pressure</definition>
+        <argsstring>()</argsstring>
+        <name>pressure</name>
+        <qualifiedname>HSCM_PSI::pressure</qualifiedname>
+        <briefdescription>
+<para>Return the ambient pressure (in psi) read by the HSCM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="54" column="15" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float HSCM_PSI::temperature</definition>
+        <argsstring>()</argsstring>
+        <name>temperature</name>
+        <qualifiedname>HSCM_PSI::temperature</qualifiedname>
+        <briefdescription>
+<para>Return the ambient temperature (in C) read by the HSCM. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="55" column="15" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_s_c_m___p_s_i_1a9bc87fb34725c821770e88d66c0594a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t HSCM_PSI::readRaw</definition>
+        <argsstring>()</argsstring>
+        <name>readRaw</name>
+        <qualifiedname>HSCM_PSI::readRaw</qualifiedname>
+        <briefdescription>
+<para>Poll the HSCM for the raw pressure and temperature counts and check the status of the read. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>uint8_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/HSCM/HSCM.h" line="72" column="17" bodyfile="libraries/HSCM/HSCM.cpp" bodystart="130" bodyend="148"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>HSCM class based on <ulink url="https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp">https://github.com/rodan/honeywell_hsc_ssc_i2c/blob/master/hsc_ssc_i2c.cpp</ulink>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/HSCM/HSCM.h" line="36" column="1" bodyfile="libraries/HSCM/HSCM.h" bodystart="36" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_h_s_c_m___p_s_i_1ad1c39a8d02b8509369b38044d88b1f41" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>_pressure</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a16fb9374f322f490cc7c551a50ac01af" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>_temperature</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>HSCM_PSI</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>HSCM_PSI</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>m_i2cAddress</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>m_output_type</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>m_pressure_type</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>m_tf_type</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1ac132a3bd8fc4e009192b34c963e5f15d" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>output_max</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a59a7b2702b765bb8da5446cd26bd6b1a" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>output_min</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a4a44e2da507f96985ddc897fcd7e27ff" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>p_lower</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a29606beab1ca00ebd401666426db010c" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>p_upper</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>pressure</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1acab11f747649ab552463d4f8400115ff" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>pressure_range</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>read</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a9bc87fb34725c821770e88d66c0594a1" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>readRaw</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a7cda483db3bc4fdb9f7ab982b5c81c65" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>status</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a101627b5c6e60d4516e08d8093eefbd1" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>t_lower</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a360e0870298759745b6db33cda126bef" prot="private" virt="non-virtual"><scope>HSCM_PSI</scope><name>t_upper</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>temperature</name></member>
+      <member refid="class_h_s_c_m___p_s_i_1a915870f5e5a8c8e77d84e810987a26e0" prot="public" virt="non-virtual"><scope>HSCM_PSI</scope><name>tf_range</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structsensors__color__t" kind="struct" language="C++" prot="public">
+    <compoundname>sensors_color_t</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="no">Adafruit_Sensor.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensors__color__t_1a4d76803c2e83303f611cf2a7910eaf17" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_color_t::c[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>c</name>
+        <qualifiedname>sensors_color_t::c</qualifiedname>
+        <briefdescription>
+<para>Raw 3-element data. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="103" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1acdeed981e7df8c701e09d4b2fdb9a40c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_color_t::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <qualifiedname>sensors_color_t::r</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Red component </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="106" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1ac91ecea980718cf134f60c497d2a0049" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_color_t::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <qualifiedname>sensors_color_t::g</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Green component </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="107" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1a1bf461b5c728e323f8883a3785c7c60b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_color_t::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <qualifiedname>sensors_color_t::b</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blue component </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="108" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1a713da7fcd97cbfeb045b7477716b730c" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref></type>
+        <definition>union sensors_color_t sensors_color_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_color_t</qualifiedname>
+        <briefdescription>
+<para>Union of various ways to describe RGB colorspace. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="110" column="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1a0afbff980c17fbacdab1666735f3d3e6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sensors_color_t::rgba</definition>
+        <argsstring></argsstring>
+        <name>rgba</name>
+        <qualifiedname>sensors_color_t::rgba</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>24-bit RGBA value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="111" column="12" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__color__t_1abbf217593bca1b79d04c05ce57a1c137" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__color__t" kindref="compound">sensors_color_t</ref></type>
+        <definition>union sensors_color_t sensors_color_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_color_t</qualifiedname>
+        <briefdescription>
+<para>Union of various ways to describe RGB colorspace. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="110" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>struct sensors_color_s is used to return color data in a common format. </para>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="101" column="1" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="101" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structsensors__color__t_1a1bf461b5c728e323f8883a3785c7c60b" prot="public" virt="non-virtual"><scope>sensors_color_t</scope><name>b</name></member>
+      <member refid="structsensors__color__t_1a4d76803c2e83303f611cf2a7910eaf17" prot="public" virt="non-virtual"><scope>sensors_color_t</scope><name>c</name></member>
+      <member refid="structsensors__color__t_1ac91ecea980718cf134f60c497d2a0049" prot="public" virt="non-virtual"><scope>sensors_color_t</scope><name>g</name></member>
+      <member refid="structsensors__color__t_1acdeed981e7df8c701e09d4b2fdb9a40c" prot="public" virt="non-virtual"><scope>sensors_color_t</scope><name>r</name></member>
+      <member refid="structsensors__color__t_1a0afbff980c17fbacdab1666735f3d3e6" prot="public" virt="non-virtual"><scope>sensors_color_t</scope><name>rgba</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

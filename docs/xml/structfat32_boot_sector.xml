@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structfat32_boot_sector" kind="struct" language="C++" prot="public">
+    <compoundname>fat32BootSector</compoundname>
+    <includes refid="_fat_structs_8h" local="no">FatStructs.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfat32_boot_sector_1ad8c4921d1fcaba0370cff44a27f6f2d1" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::jmpToBootCode[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>jmpToBootCode</name>
+        <qualifiedname>fat32BootSector::jmpToBootCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X86 jmp to boot program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="251" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a8516a46b7865715cf0f8f5c39dd96273" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char fat32BootSector::oemName[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>oemName</name>
+        <qualifiedname>fat32BootSector::oemName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>informational only - don&apos;t depend on it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="253" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a01848fd44bea48d521bf13dcc8d69c95" prot="public" static="no" mutable="no">
+        <type><ref refid="_fat_structs_8h_1a5c8af240713e05e7e6c959006ced35fb" kindref="member">bpb_t</ref></type>
+        <definition>bpb_t fat32BootSector::bpb</definition>
+        <argsstring></argsstring>
+        <name>bpb</name>
+        <qualifiedname>fat32BootSector::bpb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BIOS Parameter Block </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="255" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a625a50384e3a46c5e330d0398c35a898" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::driveNumber</definition>
+        <argsstring></argsstring>
+        <name>driveNumber</name>
+        <qualifiedname>fat32BootSector::driveNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>for int0x13 use value 0X80 for hard drive </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="257" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a0a59c59a3f18c1117ffc6a0c25295b9c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::reserved1</definition>
+        <argsstring></argsstring>
+        <name>reserved1</name>
+        <qualifiedname>fat32BootSector::reserved1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used by Windows NT - should be zero for FAT </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="259" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a1a06079dbeb74e505689a56ab08c05a7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::bootSignature</definition>
+        <argsstring></argsstring>
+        <name>bootSignature</name>
+        <qualifiedname>fat32BootSector::bootSignature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>0X29 if next three fields are valid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="261" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1aa4dffa8748097e02373c33d5f1957b1e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t fat32BootSector::volumeSerialNumber</definition>
+        <argsstring></argsstring>
+        <name>volumeSerialNumber</name>
+        <qualifiedname>fat32BootSector::volumeSerialNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>usually generated by combining date and time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="263" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a327d3769a6a9d172cec163cda30a35ee" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char fat32BootSector::volumeLabel[11]</definition>
+        <argsstring>[11]</argsstring>
+        <name>volumeLabel</name>
+        <qualifiedname>fat32BootSector::volumeLabel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>should match volume label in root dir </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="265" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a2835c957e6b680afded2b5f7e133fd3e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char fat32BootSector::fileSystemType[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>fileSystemType</name>
+        <qualifiedname>fat32BootSector::fileSystemType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>informational only - don&apos;t depend on it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="267" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a7a845a41d575937bb7aac2c5204a6e1d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::bootCode[420]</definition>
+        <argsstring>[420]</argsstring>
+        <name>bootCode</name>
+        <qualifiedname>fat32BootSector::bootCode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>X86 boot code </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="269" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1aea26006be62f6bbca4637e359ce85e40" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::bootSectorSig0</definition>
+        <argsstring></argsstring>
+        <name>bootSectorSig0</name>
+        <qualifiedname>fat32BootSector::bootSectorSig0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be 0X55 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="271" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfat32_boot_sector_1a92816cfa0d97e94c46eaff1ccc92f1fa" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t fat32BootSector::bootSectorSig1</definition>
+        <argsstring></argsstring>
+        <name>bootSectorSig1</name>
+        <qualifiedname>fat32BootSector::bootSectorSig1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be 0XAA </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="273" column="12" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="273" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Boot sector for a FAT16 or FAT32 volume. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>biosParmBlock</label>
+        <link refid="structbios_parm_block"/>
+      </node>
+      <node id="1">
+        <label>fat32BootSector</label>
+        <link refid="structfat32_boot_sector"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>bpb</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/SD-1.2.4/src/utility/FatStructs.h" line="249" column="1" bodyfile="libraries/SD-1.2.4/src/utility/FatStructs.h" bodystart="249" bodyend="274"/>
+    <listofallmembers>
+      <member refid="structfat32_boot_sector_1a7a845a41d575937bb7aac2c5204a6e1d" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>bootCode</name></member>
+      <member refid="structfat32_boot_sector_1aea26006be62f6bbca4637e359ce85e40" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>bootSectorSig0</name></member>
+      <member refid="structfat32_boot_sector_1a92816cfa0d97e94c46eaff1ccc92f1fa" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>bootSectorSig1</name></member>
+      <member refid="structfat32_boot_sector_1a1a06079dbeb74e505689a56ab08c05a7" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>bootSignature</name></member>
+      <member refid="structfat32_boot_sector_1a01848fd44bea48d521bf13dcc8d69c95" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>bpb</name></member>
+      <member refid="structfat32_boot_sector_1a625a50384e3a46c5e330d0398c35a898" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>driveNumber</name></member>
+      <member refid="structfat32_boot_sector_1a2835c957e6b680afded2b5f7e133fd3e" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>fileSystemType</name></member>
+      <member refid="structfat32_boot_sector_1ad8c4921d1fcaba0370cff44a27f6f2d1" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>jmpToBootCode</name></member>
+      <member refid="structfat32_boot_sector_1a8516a46b7865715cf0f8f5c39dd96273" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>oemName</name></member>
+      <member refid="structfat32_boot_sector_1a0a59c59a3f18c1117ffc6a0c25295b9c" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>reserved1</name></member>
+      <member refid="structfat32_boot_sector_1a327d3769a6a9d172cec163cda30a35ee" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>volumeLabel</name></member>
+      <member refid="structfat32_boot_sector_1aa4dffa8748097e02373c33d5f1957b1e" prot="public" virt="non-virtual"><scope>fat32BootSector</scope><name>volumeSerialNumber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

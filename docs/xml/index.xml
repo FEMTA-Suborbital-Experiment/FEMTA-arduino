@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_atmospheric_vector" kind="class"><name>AtmosphericVector</name>
+    <member refid="class_atmospheric_vector_1adaf6740e684438f8433bb2aca8163018" kind="variable"><name>_maxSize</name></member>
+    <member refid="class_atmospheric_vector_1a54fe37c8110bbfdf68704acf2a7173dd" kind="function"><name>setMaxSize</name></member>
+    <member refid="class_atmospheric_vector_1a7a106e4ea19953c8ac462e2694852770" kind="function"><name>push_back</name></member>
+    <member refid="class_atmospheric_vector_1afae4276f4d9bd7a732e3a4750c4d7c8e" kind="function"><name>isFilled</name></member>
+  </compound>
+  <compound refid="class_h_s_c_m___p_s_i" kind="class"><name>HSCM_PSI</name>
+    <member refid="class_h_s_c_m___p_s_i_1a4fa8f62695d0d66e646088397fe9f336" kind="variable"><name>m_output_type</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1ae3bc375649408a1d480076fd595594f7" kind="variable"><name>m_i2cAddress</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a63d459ed11f0a38961f373f1d4edd10b" kind="variable"><name>m_tf_type</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a0cca745c27711d1db3e37eaaf2624091" kind="variable"><name>m_pressure_type</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a915870f5e5a8c8e77d84e810987a26e0" kind="variable"><name>tf_range</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1acab11f747649ab552463d4f8400115ff" kind="variable"><name>pressure_range</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1ad1c39a8d02b8509369b38044d88b1f41" kind="variable"><name>_pressure</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a16fb9374f322f490cc7c551a50ac01af" kind="variable"><name>_temperature</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a29606beab1ca00ebd401666426db010c" kind="variable"><name>p_upper</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a4a44e2da507f96985ddc897fcd7e27ff" kind="variable"><name>p_lower</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a360e0870298759745b6db33cda126bef" kind="variable"><name>t_upper</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a101627b5c6e60d4516e08d8093eefbd1" kind="variable"><name>t_lower</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1ac132a3bd8fc4e009192b34c963e5f15d" kind="variable"><name>output_max</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a59a7b2702b765bb8da5446cd26bd6b1a" kind="variable"><name>output_min</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a7cda483db3bc4fdb9f7ab982b5c81c65" kind="variable"><name>status</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a941174c0151507e8d8b72a0193a42e4a" kind="function"><name>HSCM_PSI</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a677e240c8558cf83cb4f2dfc63e4576e" kind="function"><name>HSCM_PSI</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a031053cbe875f5cf94f45b69686d26ac" kind="function"><name>read</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1ad100480c035dcb4a57665a853c70b764" kind="function"><name>pressure</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a85ee6c72fc17db6d5345fef5b367c6c1" kind="function"><name>temperature</name></member>
+    <member refid="class_h_s_c_m___p_s_i_1a9bc87fb34725c821770e88d66c0594a1" kind="function"><name>readRaw</name></member>
+  </compound>
+  <compound refid="class_logger" kind="class"><name>Logger</name>
+    <member refid="class_logger_1a4b71165774ee49293228f547869c325b" kind="variable"><name>logData</name></member>
+    <member refid="class_logger_1a8648c145510d37ea7fefab9a3714fb71" kind="variable"><name>mArraySize</name></member>
+    <member refid="class_logger_1af5561fd7ff77bb54d5d6cd797ebe2d28" kind="function"><name>Logger</name></member>
+    <member refid="class_logger_1a9a048968b68dcb6ad6de58d23b2eacfe" kind="function"><name>init</name></member>
+    <member refid="class_logger_1aa9983a0826820827e31fcf8fb77636a7" kind="function"><name>pushData</name></member>
+    <member refid="class_logger_1a69480ae18f1c2961b07fb7cadcdd59d6" kind="function"><name>flushArrays</name></member>
+    <member refid="class_logger_1a5ba805b3d05cb8f2492251e2229600c5" kind="function"><name>isStructFilled</name></member>
+  </compound>
+  <compound refid="structlog_type" kind="struct"><name>logType</name>
+    <member refid="structlog_type_1a99408840dfd21747ed6a6ac0b8010061" kind="variable"><name>time</name></member>
+    <member refid="structlog_type_1a3393cdfa35b7fc60c5d1c6b734bbed21" kind="variable"><name>lowPressure</name></member>
+    <member refid="structlog_type_1ac427d4daf20af0f2756e54154951ed3d" kind="variable"><name>highPressure</name></member>
+    <member refid="structlog_type_1a07557f8ebc502e7ba07083a57f4337b5" kind="variable"><name>acceleration</name></member>
+  </compound>
+  <compound refid="class_pin_ctrl" kind="class"><name>PinCtrl</name>
+    <member refid="class_pin_ctrl_1abe39a3ac84558a46dea0bc5ba39a5d55" kind="variable"><name>closeSV1</name></member>
+    <member refid="class_pin_ctrl_1aa39597f74b4649bad9d4f3329bacd63d" kind="variable"><name>openSV1</name></member>
+    <member refid="class_pin_ctrl_1ae1d1af73a55ec807240d05f286cec63c" kind="variable"><name>closeSV2</name></member>
+    <member refid="class_pin_ctrl_1ab5af45204e25ead56ce109870ef506f5" kind="variable"><name>openSV2</name></member>
+    <member refid="class_pin_ctrl_1aca5b3b6417ecad685b3897963fbf3673" kind="variable"><name>closeLV1</name></member>
+    <member refid="class_pin_ctrl_1a0a3ad4622a307d0bfb3066a5f0620725" kind="variable"><name>openLV1</name></member>
+    <member refid="class_pin_ctrl_1a23dd544aa7ed1e19bc54a7ddd88917fc" kind="variable"><name>signalPin</name></member>
+    <member refid="class_pin_ctrl_1aace9d6def6122250a23c9f217557430a" kind="variable"><name>closeSV1_bool</name></member>
+    <member refid="class_pin_ctrl_1ad95d962187db9561a9d42d7b286b27c2" kind="variable"><name>openSV1_bool</name></member>
+    <member refid="class_pin_ctrl_1aaa2cd126bbfe0837ec3718643cbf93b2" kind="variable"><name>closeSV2_bool</name></member>
+    <member refid="class_pin_ctrl_1acfd5ca74c003e931ffe6758ff24ccedb" kind="variable"><name>openSV2_bool</name></member>
+    <member refid="class_pin_ctrl_1ac6bafc0eb9bc6f5031048a249ee8b40a" kind="variable"><name>closeLV1_bool</name></member>
+    <member refid="class_pin_ctrl_1a15ba7706aba2ceceb4e1f3bd792f0ff7" kind="variable"><name>openLV1_bool</name></member>
+    <member refid="class_pin_ctrl_1aa4cfc2d94200389c25ee1eeb2726a214" kind="function"><name>PinCtrl</name></member>
+    <member refid="class_pin_ctrl_1a38719c52dcbe99f6230a51bf17f28f77" kind="function"><name>openFlowValve1</name></member>
+    <member refid="class_pin_ctrl_1a58db08121a93246bd87410709b36a692" kind="function"><name>closeFlowValve1</name></member>
+    <member refid="class_pin_ctrl_1a5e386cb600e543d75e8caf00355a3941" kind="function"><name>openFlowValve2</name></member>
+    <member refid="class_pin_ctrl_1ad0ce7969311375d091aa06ce7621179a" kind="function"><name>closeFlowValve2</name></member>
+    <member refid="class_pin_ctrl_1a6ef0214620aed42aa885e659be665d87" kind="function"><name>openVentValve</name></member>
+    <member refid="class_pin_ctrl_1a147c686c6879b7e574569bbfea69dd70" kind="function"><name>closeVentValve</name></member>
+    <member refid="class_pin_ctrl_1aa658b5b491087b47e0c83ec4ceccc6e7" kind="function"><name>signalStart</name></member>
+    <member refid="class_pin_ctrl_1a2ac6386b567543305a3f82e14054c58d" kind="function"><name>signalStop</name></member>
+    <member refid="class_pin_ctrl_1acb4a92935a1e3d525f4e29e8a6e607d7" kind="function"><name>init</name></member>
+    <member refid="class_pin_ctrl_1a0959fe33d8bba4514287ed0d5c64a870" kind="function"><name>Run</name></member>
+    <member refid="class_pin_ctrl_1ac539efce25d65e17de3b479248632cd5" kind="function"><name>togglePin</name></member>
+  </compound>
+  <compound refid="class_p_v_c4000" kind="class"><name>PVC4000</name>
+    <member refid="class_p_v_c4000_1aa002f1e10d5c829d89d2c69762674226" kind="variable"><name>I2C_address</name></member>
+    <member refid="class_p_v_c4000_1afc394daf589265fadceb3fa2c2df2c90" kind="variable"><name>Cal_Data_R</name></member>
+    <member refid="class_p_v_c4000_1a65ca2af2e69bd3fca7d11fffcb0184db" kind="variable"><name>Raw_Data_R</name></member>
+    <member refid="class_p_v_c4000_1a14cac417f8d03115c9eb0caf552171d2" kind="variable"><name>Reg1_R</name></member>
+    <member refid="class_p_v_c4000_1ad9720be571b67edf411edf6fe7137c7b" kind="variable"><name>Reg2_R</name></member>
+    <member refid="class_p_v_c4000_1ace53d88e9ad3640f473cc45f3dbdf92a" kind="variable"><name>Cal_Tbl_X_R</name></member>
+    <member refid="class_p_v_c4000_1a757301ea5e2a32971b26ddf761c76dee" kind="variable"><name>Cal_Tbl_Y_R</name></member>
+    <member refid="class_p_v_c4000_1ad3361f715b1a6ec2dc474c2be9ea4b0a" kind="variable"><name>In_W</name></member>
+    <member refid="class_p_v_c4000_1ad710173175d422d2d4888e6d4cfd6c39" kind="variable"><name>Out_W</name></member>
+    <member refid="class_p_v_c4000_1aeaec099a27dbf7265ab8f3577408ae0e" kind="variable"><name>Reg1_W</name></member>
+    <member refid="class_p_v_c4000_1a3b491c05b3fa1aa22a1c767dfb5bda6a" kind="variable"><name>Reg2_W</name></member>
+    <member refid="class_p_v_c4000_1aaac219c3aa3ff740d2f8d5f23db12bba" kind="variable"><name>Cal_Tbl_X_W</name></member>
+    <member refid="class_p_v_c4000_1a0a492356697162e746c0736c87e75f22" kind="variable"><name>Cal_Tbl_Y_W</name></member>
+    <member refid="class_p_v_c4000_1aa390523e5a43c8aad6c027ba493937ba" kind="variable"><name>model_1</name></member>
+    <member refid="class_p_v_c4000_1a0ff8830cf4d6004624bcb9e87b6011b7" kind="variable"><name>model_2</name></member>
+    <member refid="class_p_v_c4000_1ad8fd0e3cc1ba5b441258c2a893dc553f" kind="variable"><name>m_i2cAddress</name></member>
+    <member refid="class_p_v_c4000_1abb2beb0495ed0f4845d613d26b84ebfb" kind="variable"><name>_baselineTemperature</name></member>
+    <member refid="class_p_v_c4000_1a26a6b101a4b345665483edb0d023d0d2" kind="variable"><name>_temperature</name></member>
+    <member refid="class_p_v_c4000_1ad1d79ab49231e06f8c63887086032582" kind="variable"><name>_pressure</name></member>
+    <member refid="class_p_v_c4000_1a94141e583a2d41bc0cde3c2debd96cbe" kind="variable"><name>t_upper</name></member>
+    <member refid="class_p_v_c4000_1a8a3128965b54f801e74673f1867f2ec8" kind="variable"><name>bt_upper</name></member>
+    <member refid="class_p_v_c4000_1a3ed781be70998ece5897924364b84d07" kind="variable"><name>raw_upper</name></member>
+    <member refid="class_p_v_c4000_1ad372c66786b2d056dec470940925d928" kind="variable"><name>t_lower</name></member>
+    <member refid="class_p_v_c4000_1afc9e7b87469095965429e6a551aa5a52" kind="variable"><name>bt_lower</name></member>
+    <member refid="class_p_v_c4000_1abe79222ed93636ed18fc8f8d85f26d1a" kind="variable"><name>raw_lower</name></member>
+    <member refid="class_p_v_c4000_1a5e9c5241791752c700ed422517734fd5" kind="variable"><name>coeff</name></member>
+    <member refid="class_p_v_c4000_1ac7210610540b377b360bcf2ce024128f" kind="variable"><name>firstCalibration</name></member>
+    <member refid="class_p_v_c4000_1a96a8df0ae8ab6633d01a8b7aa884ef10" kind="variable"><name>interpolationTableX</name></member>
+    <member refid="class_p_v_c4000_1a585db47d1e8692e1dc441764392bb454" kind="variable"><name>interpolationTableY</name></member>
+    <member refid="class_p_v_c4000_1ab323ce3fc497f7c8adbc0cd9ab90b4fa" kind="variable"><name>calibrationTableX</name></member>
+    <member refid="class_p_v_c4000_1a5f62cd8fa4f88cd2498a4661a7481e0f" kind="variable"><name>calibrationTableY</name></member>
+    <member refid="class_p_v_c4000_1ae28cab4248c83e84b22671594ad3d643" kind="variable"><name>baseSensitivityTableX</name></member>
+    <member refid="class_p_v_c4000_1a7c88f8935e004eb3ad3dc8c912e3d251" kind="variable"><name>baseSensitivityTableY</name></member>
+    <member refid="class_p_v_c4000_1ab31a08063d6c570167391800d86bef11" kind="function"><name>PVC4000</name></member>
+    <member refid="class_p_v_c4000_1ac122759c1e4e377d672d54b661635509" kind="function"><name>read</name></member>
+    <member refid="class_p_v_c4000_1ab53fa675adb01243365a843116e69ff3" kind="function"><name>calibrate</name></member>
+    <member refid="class_p_v_c4000_1a639d26c43bfd632608d5d6128e5ac752" kind="function"><name>init</name></member>
+    <member refid="class_p_v_c4000_1a52012201d7a9199558053865c9eadac8" kind="function"><name>baselineTemperature</name></member>
+    <member refid="class_p_v_c4000_1a59cc546886f0a720d3a03f0ff8bb2c4b" kind="function"><name>temperature</name></member>
+    <member refid="class_p_v_c4000_1a91cce578ec12ebfc42f0b529cb886547" kind="function"><name>pressure</name></member>
+    <member refid="class_p_v_c4000_1ab422024da4c792301181f537f066d7a4" kind="function"><name>get_raw_upper</name></member>
+    <member refid="class_p_v_c4000_1adc333675bd99d8ce897ba721959607c5" kind="function"><name>get_raw_lower</name></member>
+    <member refid="class_p_v_c4000_1a688bea91e8d3a0c09b82e831dd68aad6" kind="function"><name>CRC</name></member>
+    <member refid="class_p_v_c4000_1af8e2ed07eb57520a559c2457853fa1d2" kind="function"><name>readCalibrationTableX</name></member>
+    <member refid="class_p_v_c4000_1a584bfff9e57097a30d2e3b8d56e37122" kind="function"><name>readCalibrationTableY</name></member>
+    <member refid="class_p_v_c4000_1ac0ad58f87843584aa02315e7bb85f02f" kind="function"><name>writeCalibrationTableX</name></member>
+    <member refid="class_p_v_c4000_1acda0452008c2120154d5b8ec8e67f849" kind="function"><name>writeCalibrationTableY</name></member>
+    <member refid="class_p_v_c4000_1a079cc72fb407dd358801219227137bcb" kind="function"><name>enterWriteMode</name></member>
+    <member refid="class_p_v_c4000_1a7718a1be2ba53c158ecf9e05a7c34099" kind="function"><name>exitWriteMode</name></member>
+    <member refid="class_p_v_c4000_1a2218bae87a9d2ccc801e43254bb2e722" kind="function"><name>writeCalibrationTemperature</name></member>
+    <member refid="class_p_v_c4000_1a2d5deeb173269a3e674ff76824dbab31" kind="function"><name>getBaselineTemperature</name></member>
+    <member refid="class_p_v_c4000_1af23b9fef5045f25d1194866641bae7d3" kind="function"><name>write</name></member>
+    <member refid="class_p_v_c4000_1a5db391b20818d88ca10ea3eb43a280ab" kind="function"><name>interpolate</name></member>
+    <member refid="class_p_v_c4000_1a0a86de48853d7bef1e674c1e93006903" kind="function"><name>readRaw</name></member>
+  </compound>
+  <compound refid="class_reader" kind="class"><name>Reader</name>
+    <member refid="class_reader_1a30cfe56ad99583512fc0919618def1ca" kind="variable"><name>mChipSelect</name></member>
+    <member refid="class_reader_1a488d82bbe2e4bf0146ceadfed23ae335" kind="variable"><name>mBufferSize</name></member>
+    <member refid="class_reader_1a7f4dada87525737cfa00e8a111128e4b" kind="variable"><name>mFile</name></member>
+    <member refid="class_reader_1a8bf4741798c9a0bd64c6eb4472d07619" kind="variable"><name>logSizeFile</name></member>
+    <member refid="class_reader_1aa53c935378e501762119494dbd1fdffb" kind="function"><name>Reader</name></member>
+    <member refid="class_reader_1a28fe13eed13d02af3eb622de08604e87" kind="function"><name>readFile</name></member>
+    <member refid="class_reader_1aa761bdab52a52b4a9f61be941cb779a7" kind="function"><name>readVector</name></member>
+    <member refid="class_reader_1aefa8f6560711e520cd36ec0f21afc403" kind="function"><name>init</name></member>
+  </compound>
+  <compound refid="class_sensor_poller" kind="class"><name>SensorPoller</name>
+    <member refid="class_sensor_poller_1a03bb1b528db3a08ac6baf266e12deef4" kind="variable"><name>pollRate</name></member>
+    <member refid="class_sensor_poller_1abf908b6d7bbc6450f4ddf4fce027c334" kind="variable"><name>sensorVector</name></member>
+    <member refid="class_sensor_poller_1a3572c6394bf4998b66c916f75b1090e9" kind="variable"><name>accel</name></member>
+    <member refid="class_sensor_poller_1a7b5c6b2ddc1c9d4a908b698b294b8796" kind="variable"><name>pressure0</name></member>
+    <member refid="class_sensor_poller_1a280e05d834319fa5db8e29b22f387fba" kind="variable"><name>pressure1</name></member>
+    <member refid="class_sensor_poller_1ac8281f359e20580af2526d8355469d01" kind="variable"><name>pressure2</name></member>
+    <member refid="class_sensor_poller_1a27b45e12989d938a19996ca6a1e010cb" kind="variable"><name>pressure3</name></member>
+    <member refid="class_sensor_poller_1a2fa114864cf1f1b821dd8912bd5f139f" kind="variable"><name>pressure4</name></member>
+    <member refid="class_sensor_poller_1a5c4cd33c89720d9f54dbcb8829dd85fd" kind="variable"><name>pressures</name></member>
+    <member refid="class_sensor_poller_1a91075ee502dad1678b88c5337a81359d" kind="variable"><name>highAlt</name></member>
+    <member refid="class_sensor_poller_1a70e0411b0727b787e43d7926c0bbbe76" kind="variable"><name>lowAlt</name></member>
+    <member refid="class_sensor_poller_1a24fd7fb75ebc22476b5750c97460784d" kind="variable"><name>lastRead</name></member>
+    <member refid="class_sensor_poller_1a338c136e068817d97b20051b4617c15e" kind="variable"><name>sensorVector</name></member>
+    <member refid="class_sensor_poller_1a07221024054d65eaaa7e0e5a86b37ad1" kind="variable"><name>accelGood</name></member>
+    <member refid="class_sensor_poller_1aaeb798658b989736f6337d8c2a2e7055" kind="variable"><name>pressuresGood</name></member>
+    <member refid="class_sensor_poller_1a4e1e2005c268633c607e6cb5a2da8255" kind="variable"><name>flowGood</name></member>
+    <member refid="class_sensor_poller_1aa85a57a10c9605cd42b776c6286fcc65" kind="function"><name>addToSensorVector</name></member>
+    <member refid="class_sensor_poller_1a0b8145fbf9f50710d1c42943c049f9c0" kind="function"><name>readVector</name></member>
+    <member refid="class_sensor_poller_1aa138651a728049e6c3a69053a7e7ee6a" kind="function"><name>SensorPoller</name></member>
+    <member refid="class_sensor_poller_1a51cc1ae086e9b89287363cf1eb8ce23d" kind="function"><name>init</name></member>
+    <member refid="class_sensor_poller_1a4a3044944aa9049c2b8c4c5ffd3a4a34" kind="function"><name>readAccelerometer</name></member>
+    <member refid="class_sensor_poller_1aa2020c7d465f711303e678e9070dadab" kind="function"><name>readLowAltBaro</name></member>
+    <member refid="class_sensor_poller_1ac1e38e730991296e93ebebb88245536a" kind="function"><name>readHighAltBaro</name></member>
+    <member refid="class_sensor_poller_1ad75cf23df4e4dd6b8c1e6d5cd22e4c2e" kind="function"><name>readPressureSensors</name></member>
+    <member refid="class_sensor_poller_1a1785417aa3d67e67076340f92c29bd1c" kind="function"><name>readFlowMeter</name></member>
+    <member refid="class_sensor_poller_1a1bfb10418f9d5076c5825fd2babb60dc" kind="function"><name>initPressureSensors</name></member>
+  </compound>
+  <compound refid="class_writer" kind="class"><name>Writer</name>
+    <member refid="class_writer_1a20ff82abdbff423dfc518b5510f4c008" kind="variable"><name>logFile</name></member>
+    <member refid="class_writer_1a1c8c7417c31a4abcb96e27cf5dede3e8" kind="variable"><name>logSize</name></member>
+    <member refid="class_writer_1a3a1cb16ad118c5b865738362245ab6f7" kind="variable"><name>fileName</name></member>
+    <member refid="class_writer_1aac1a692fff179dfa380307c0dffea6d7" kind="variable"><name>willWriteToBinary</name></member>
+    <member refid="class_writer_1a51c53e3e9155002e7616385b62c887a7" kind="variable"><name>willOverwrite</name></member>
+    <member refid="class_writer_1a05d7179ff6612729875b685be6ec710a" kind="variable"><name>chipSelect</name></member>
+    <member refid="class_writer_1a29e0ee6eb72c1069fa1431ce8c8adbf7" kind="variable"><name>logSizeFile</name></member>
+    <member refid="class_writer_1a06639f3d8669309bb57aa89fe85de302" kind="function"><name>Writer</name></member>
+    <member refid="class_writer_1a4e59a184209bcd1133ccf030087fab7f" kind="function"><name>writeToFile</name></member>
+    <member refid="class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8" kind="function"><name>init</name></member>
+    <member refid="class_writer_1a9ce9a2221d3bb6e438226abbc636352e" kind="function"><name>writeToBinary</name></member>
+    <member refid="class_writer_1aa2f6c38109bbf865c05ca652f62680f2" kind="function"><name>writeToText</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8md" kind="file"><name>api.md</name>
+  </compound>
+  <compound refid="_h_s_c_m_8cpp" kind="file"><name>HSCM.cpp</name>
+  </compound>
+  <compound refid="_h_s_c_m_8h" kind="file"><name>HSCM.h</name>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fb" kind="enum"><name>hscm_output_type</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fbaef75ddb70165ba4f6249c6e738d6429e" kind="enumvalue"><name>TYPE_2</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fba80a1a17a29904f0f8affc6fc4544accb" kind="enumvalue"><name>TYPE_3</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fbadaa1dff4bb10a70a782a8655d3d4c302" kind="enumvalue"><name>TYPE_4</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fba89f62674b79866bc5b1bf545a07e0774" kind="enumvalue"><name>TYPE_5</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fbab9b23083e92b5556745d0dc3027f1a05" kind="enumvalue"><name>TYPE_6</name></member>
+    <member refid="_h_s_c_m_8h_1a3be77b04f9c84da60f1a4f93812f23fba3f0c85ec09caf5bfa5913f35ca5f4c2a" kind="enumvalue"><name>TYPE_7</name></member>
+  </compound>
+  <compound refid="_p_v_c4000_8cpp" kind="file"><name>PVC4000.cpp</name>
+    <member refid="_p_v_c4000_8cpp_1a09864d79b4290ec38192c7f3fd844bd3" kind="function"><name>bigLittle</name></member>
+  </compound>
+  <compound refid="_p_v_c4000_8h" kind="file"><name>PVC4000.h</name>
+    <member refid="_p_v_c4000_8h_1a8e9cb0010ed11c91b8e89e1c4c180fd9" kind="enum"><name>pvcModel</name></member>
+    <member refid="_p_v_c4000_8h_1a8e9cb0010ed11c91b8e89e1c4c180fd9a942eb65a5dc9c192fa539d95e73b84aa" kind="enumvalue"><name>PVC_4000</name></member>
+    <member refid="_p_v_c4000_8h_1a8e9cb0010ed11c91b8e89e1c4c180fd9a3ede04e4aa7826891ba4b692c6c0946c" kind="enumvalue"><name>PVC_4100</name></member>
+  </compound>
+  <compound refid="_atmospheric_struct_8h" kind="file"><name>AtmosphericStruct.h</name>
+  </compound>
+  <compound refid="_atmospheric_vector_8h" kind="file"><name>AtmosphericVector.h</name>
+  </compound>
+  <compound refid="_logger_8cpp" kind="file"><name>Logger.cpp</name>
+  </compound>
+  <compound refid="_logger_8h" kind="file"><name>Logger.h</name>
+    <member refid="_logger_8h_1a0592dba56693fad79136250c11e5a7fe" kind="define"><name>MAX_SIZE</name></member>
+  </compound>
+  <compound refid="_pin_ctrl_8cpp" kind="file"><name>PinCtrl.cpp</name>
+    <member refid="_pin_ctrl_8cpp_1a2e6c18ab1e3d7a6fd1aae599d80c61cc" kind="variable"><name>t_delay</name></member>
+  </compound>
+  <compound refid="_pin_ctrl_8h" kind="file"><name>PinCtrl.h</name>
+  </compound>
+  <compound refid="_reader_8cpp" kind="file"><name>Reader.cpp</name>
+    <member refid="_reader_8cpp_1acff66890723ba2501dbb68934e8f75d5" kind="variable"><name>MAX_COUNTS</name></member>
+  </compound>
+  <compound refid="_reader_8h" kind="file"><name>Reader.h</name>
+  </compound>
+  <compound refid="main_2pme_2src_2_sensor_poller_8cpp" kind="file"><name>SensorPoller.cpp</name>
+  </compound>
+  <compound refid="tests_2sensors_2src_2_sensor_poller_8cpp" kind="file"><name>SensorPoller.cpp</name>
+    <member refid="tests_2sensors_2src_2_sensor_poller_8cpp_1a3657e82c0d0f330398a39142a1604818" kind="variable"><name>sensor_array</name></member>
+  </compound>
+  <compound refid="main_2pme_2src_2_sensor_poller_8h" kind="file"><name>SensorPoller.h</name>
+  </compound>
+  <compound refid="tests_2sensors_2src_2_sensor_poller_8h" kind="file"><name>SensorPoller.h</name>
+    <member refid="tests_2sensors_2src_2_sensor_poller_8h_1a3e553cb1549b32cbdb8e38b97961b3fa" kind="define"><name>PIN_DPT_SELECTOR_0</name></member>
+    <member refid="tests_2sensors_2src_2_sensor_poller_8h_1ac629e1a3737ee765c63e6ae18759a84a" kind="define"><name>PIN_DPT_SELECTOR_1</name></member>
+    <member refid="tests_2sensors_2src_2_sensor_poller_8h_1a5ce29f54b558268fe85901f3c603d170" kind="define"><name>PIN_DPT_SELECTOR_2</name></member>
+  </compound>
+  <compound refid="_state_logic_8cpp" kind="file"><name>StateLogic.cpp</name>
+  </compound>
+  <compound refid="_state_logic_8h" kind="file"><name>StateLogic.h</name>
+  </compound>
+  <compound refid="_writer_8cpp" kind="file"><name>Writer.cpp</name>
+  </compound>
+  <compound refid="_writer_8h" kind="file"><name>Writer.h</name>
+    <member refid="_writer_8h_1a27949243d0997bf78a36426886b294c8" kind="variable"><name>max_timeout</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md_api" kind="page"><name>md_api</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md__r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_e49f2ac6e2206cd2e2ab86f29c42e94d" kind="dir"><name>libraries/HSCM</name>
+  </compound>
+  <compound refid="dir_bc0718b08fb2015b8e59c47b2805f60c" kind="dir"><name>libraries</name>
+  </compound>
+  <compound refid="dir_5c982d53a68cdbcd421152b4020263a9" kind="dir"><name>main</name>
+  </compound>
+  <compound refid="dir_9a2bbcf1783a9ef7aa1b687990dee469" kind="dir"><name>main/pme</name>
+  </compound>
+  <compound refid="dir_5c4b5ef54d966e0b6dcd2109d30115b4" kind="dir"><name>libraries/PVC4000</name>
+  </compound>
+  <compound refid="dir_10675ec624763ac3632fce909592650c" kind="dir"><name>tests/sensors</name>
+  </compound>
+  <compound refid="dir_31d72a702e3d866b109a9bba4a326d3c" kind="dir"><name>main/pme/src</name>
+  </compound>
+  <compound refid="dir_1ceed6ac65738c70f90e358f5e1d69ce" kind="dir"><name>tests/sensors/src</name>
+  </compound>
+  <compound refid="dir_59425e443f801f1f2fd8bbe4959a3ccf" kind="dir"><name>tests</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

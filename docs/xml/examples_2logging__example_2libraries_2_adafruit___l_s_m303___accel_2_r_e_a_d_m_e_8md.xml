@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">Adafruit_LSM303_Accel<sp/>[![Build<sp/>Status](https://github.com/adafruit/Adafruit_LSM303_Accel/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_LSM303_Accel/actions)[![Documentation](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](http://adafruit.github.io/Adafruit_LSM303_Accel/html/index.html)</highlight></codeline>
+<codeline><highlight class="normal">================</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>href=&quot;https://www.adafruit.com/product/1120&quot;&gt;&lt;img<sp/>src=&quot;assets/board.jpg?raw=true&quot;<sp/>width=&quot;500px&quot;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Adafruit<sp/>LSM303<sp/>Accelerometer<sp/>Library</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>library<sp/>is<sp/>for<sp/>the<sp/>accelerometer<sp/>used<sp/>in<sp/>the<sp/>LSM303AGR<sp/>and<sp/>LSM303DLH</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tested<sp/>and<sp/>works<sp/>great<sp/>with<sp/>Adafruit&apos;s<sp/>LSM303AGR<sp/>and<sp/>LSM303DLH<sp/>Breakout<sp/>Boards</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>https://www.adafruit.com/product/1120</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>https://www.adafruit.com/product/4413</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>chip<sp/>uses<sp/>I2C<sp/>to<sp/>communicate,<sp/>2<sp/>pins<sp/>are<sp/>required<sp/>to<sp/>interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code,<sp/>please<sp/>support<sp/>Adafruit<sp/>and<sp/>open-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products<sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>the<sp/>LSM303<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>LSM303<sp/>is<sp/>a<sp/>digital<sp/>(I2C)<sp/>accelerometer<sp/>and<sp/>digital<sp/>compass<sp/>(magnetometer)<sp/>and<sp/>accelerometer.<sp/><sp/>The<sp/>accelerometer<sp/>allows<sp/>you<sp/>to<sp/>measure<sp/>acceleration<sp/>or<sp/>direction<sp/>towards<sp/>the<sp/>center<sp/>or<sp/>the<sp/>earth<sp/>or<sp/>orthogonal<sp/>axes.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Information<sp/>on<sp/>the<sp/>LSM303AGR<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>datasheet:<sp/>http://www.adafruit.com/datasheets/LSM303AGRC.PDF</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Information<sp/>on<sp/>the<sp/>LSM303DLH<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>datasheet:<sp/>http://www.adafruit.com/datasheets/LSM303DLHC.PDF</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>What<sp/>is<sp/>the<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library?<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Adafruit<sp/>Unified<sp/>Sensor<sp/>Library<sp/>(**Adafruit_Sensor**)<sp/>provides<sp/>a<sp/>common<sp/>interface<sp/>and<sp/>data<sp/>type<sp/>for<sp/>any<sp/>supported<sp/>sensor.<sp/><sp/>It<sp/>defines<sp/>some<sp/>basic<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>(sensor<sp/>limits,<sp/>etc.),<sp/>and<sp/>returns<sp/>standard<sp/>SI<sp/>units<sp/>of<sp/>a<sp/>specific<sp/>type<sp/>and<sp/>scale<sp/>for<sp/>each<sp/>supported<sp/>sensor<sp/>type.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">It<sp/>provides<sp/>a<sp/>simple<sp/>abstraction<sp/>layer<sp/>between<sp/>your<sp/>application<sp/>and<sp/>the<sp/>actual<sp/>sensor<sp/>HW,<sp/>allowing<sp/>you<sp/>to<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>with<sp/>only<sp/>one<sp/>or<sp/>two<sp/>lines<sp/>of<sp/>code<sp/>to<sp/>change<sp/>in<sp/>your<sp/>project<sp/>(essentially<sp/>the<sp/>constructor<sp/>since<sp/>the<sp/>functions<sp/>to<sp/>read<sp/>sensor<sp/>data<sp/>and<sp/>get<sp/>information<sp/>about<sp/>the<sp/>sensor<sp/>are<sp/>defined<sp/>in<sp/>the<sp/>base<sp/>Adafruit_Sensor<sp/>class).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>imporant<sp/>useful<sp/>for<sp/>two<sp/>reasons:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.)<sp/>You<sp/>can<sp/>use<sp/>the<sp/>data<sp/>right<sp/>away<sp/>because<sp/>it&apos;s<sp/>already<sp/>converted<sp/>to<sp/>SI<sp/>units<sp/>that<sp/>you<sp/>understand<sp/>and<sp/>can<sp/>compare,<sp/>rather<sp/>than<sp/>meaningless<sp/>values<sp/>like<sp/>0..1023.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2.)<sp/>Because<sp/>SI<sp/>units<sp/>are<sp/>standardised<sp/>in<sp/>the<sp/>sensor<sp/>library,<sp/>you<sp/>can<sp/>also<sp/>do<sp/>quick<sp/>sanity<sp/>checks<sp/>working<sp/>with<sp/>new<sp/>sensors,<sp/>or<sp/>drop<sp/>in<sp/>any<sp/>comparable<sp/>sensor<sp/>if<sp/>you<sp/>need<sp/>better<sp/>sensitivity<sp/>or<sp/>if<sp/>a<sp/>lower<sp/>cost<sp/>unit<sp/>becomes<sp/>available,<sp/>etc.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Light<sp/>sensors<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>lux,<sp/>gyroscopes<sp/>will<sp/>always<sp/>report<sp/>units<sp/>in<sp/>rad/s,<sp/>etc.<sp/>...<sp/>freeing<sp/>you<sp/>up<sp/>to<sp/>focus<sp/>on<sp/>the<sp/>data,<sp/>rather<sp/>than<sp/>digging<sp/>through<sp/>the<sp/>datasheet<sp/>to<sp/>understand<sp/>what<sp/>the<sp/>sensor&apos;s<sp/>raw<sp/>numbers<sp/>really<sp/>mean.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>this<sp/>Driver<sp/>##</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Written<sp/>by<sp/>Bryan<sp/>Siepert<sp/>for<sp/>Adafruit<sp/>Industries.</highlight></codeline>
+<codeline><highlight class="normal">BSD<sp/>license,<sp/>check<sp/>license.txt<sp/>for<sp/>more<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">All<sp/>text<sp/>above<sp/>must<sp/>be<sp/>included<sp/>in<sp/>any<sp/>redistribution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>install,<sp/>use<sp/>the<sp/>Arduino<sp/>Library<sp/>Manager<sp/>and<sp/>search<sp/>for<sp/>and<sp/>install<sp/>the<sp/>following<sp/>libraries:</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>&quot;Adafruit<sp/>LSM303<sp/>Accel&quot;</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>&quot;Adafruit<sp/>Unified<sp/>Sensor&quot;</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>&quot;Adafruit<sp/>BusIO&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Additonal<sp/>details<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>guide:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">https://learn.adafruit.com/lsm303-accelerometer-slash-compass-breakout/coding</highlight></codeline>
+    </programlisting>
+    <location file="examples/logging_example/libraries/Adafruit_LSM303_Accel/README.md"/>
+  </compounddef>
+</doxygen>

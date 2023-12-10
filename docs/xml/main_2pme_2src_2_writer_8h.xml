@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="main_2pme_2src_2_writer_8h" kind="file" language="C++">
+    <compoundname>Writer.h</compoundname>
+    <includes refid="main_2pme_2src_2_atmospheric_struct_8h" local="yes">AtmosphericStruct.h</includes>
+    <includes local="yes">Arduino.h</includes>
+    <includes refid="_adafruit___zero_d_m_a_8h" local="no">Adafruit_ZeroDMA.h</includes>
+    <includes local="no">SPI.h</includes>
+    <includes refid="_s_d_8h" local="no">SD.h</includes>
+    <includedby refid="main_2pme_2src_2_writer_8cpp" local="yes">main/pme/src/Writer.cpp</includedby>
+    <incdepgraph>
+      <node id="6">
+        <label>Arduino.h</label>
+      </node>
+      <node id="7">
+        <label>Adafruit_ZeroDMA.h</label>
+        <link refid="_adafruit___zero_d_m_a_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>utility/dma.h</label>
+        <link refid="dma_8h"/>
+      </node>
+      <node id="10">
+        <label>SD.h</label>
+        <link refid="_s_d_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>FatStructs.h</label>
+        <link refid="_fat_structs_8h"/>
+      </node>
+      <node id="12">
+        <label>Sd2Card.h</label>
+        <link refid="_sd2_card_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Sd2PinMap.h</label>
+        <link refid="_sd2_pin_map_8h_source"/>
+      </node>
+      <node id="11">
+        <label>utility/SdFat.h</label>
+        <link refid="_sd_fat_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>utility/SdFatUtil.h</label>
+        <link refid="_sd_fat_util_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>SdInfo.h</label>
+        <link refid="_sd_info_8h_source"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AtmosphericStruct.h</label>
+        <link refid="main_2pme_2src_2_atmospheric_struct_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>AtmosphericVector.h</label>
+        <link refid="main_2pme_2src_2_atmospheric_vector_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Print.h</label>
+      </node>
+      <node id="9">
+        <label>SPI.h</label>
+      </node>
+      <node id="5">
+        <label>limits</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_writer" prot="public">Writer</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_2pme_2src_2_writer_8h_1a27949243d0997bf78a36426886b294c8" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int max_timeout</definition>
+        <argsstring></argsstring>
+        <name>max_timeout</name>
+        <initializer>{10}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="main/pme/src/Writer.h" line="24" column="18" bodyfile="main/pme/src/Writer.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The writer class used in the FEMTA Suborbital Experiment for writing a struct of sensor data into file. The writer supports two writing methods: writing to a text file (for ground processing) and writing to a binary (to enable better performance during the experiment). </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jacob Valdez (<ulink url="mailto:valdez24@purdue.edu">valdez24@purdue.edu</ulink>) </para>
+</simplesect>
+<simplesect kind="date"><para>2023-09-25 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FEMTA_WRITER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FEMTA_WRITER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;AtmosphericStruct.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="_adafruit___zero_d_m_a_8h" kindref="compound">Adafruit_ZeroDMA.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SD.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_timeout{10};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_writer" kindref="compound">Writer</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Alternate<sp/>constructor<sp/>which<sp/>shouldn&apos;t<sp/>take<sp/>booleans<sp/>as<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_writer" kindref="compound">Writer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_fat_structs_8h_1a30308c9b983377042fd2cc8900454fb1" kindref="member">name</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chipSelect=4,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>toBinary=0,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>overwrite=0);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_writer_1a4e59a184209bcd1133ccf030087fab7f" kindref="member">writeToFile</ref>(<ref refid="structlog_type" kindref="compound">logType</ref><sp/>data);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_writer_1a3f99b88bff437fbe0b36afe7d32ef8c8" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>logFile;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>logSize;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>writeToBinary(<ref refid="structlog_type" kindref="compound">logType</ref><sp/>data);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>writeToText(<ref refid="structlog_type" kindref="compound">logType</ref><sp/>data);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>fileName;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>willWriteToBinary;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>willOverwrite;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chipSelect;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>logSizeFile;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="main/pme/src/Writer.h"/>
+  </compounddef>
+</doxygen>

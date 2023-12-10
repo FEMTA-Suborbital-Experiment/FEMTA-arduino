@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_s_d_8h" kind="file" language="C++">
+    <compoundname>SD.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="_sd_fat_8h" local="yes">utility/SdFat.h</includes>
+    <includes refid="_sd_fat_util_8h" local="yes">utility/SdFatUtil.h</includes>
+    <includedby refid="examples_2logger__test_2src_2_writer_8h" local="no">examples/logger_test/src/Writer.h</includedby>
+    <includedby refid="examples_2read__struct__from__binary_2src_2_reader_8h" local="no">examples/read_struct_from_binary/src/Reader.h</includedby>
+    <includedby refid="_c_s_v___parser_8cpp" local="no">libraries/CSV_Parser/CSV_Parser.cpp</includedby>
+    <includedby refid="_file_8cpp" local="no">libraries/SD-1.2.4/src/File.cpp</includedby>
+    <includedby refid="_s_d_8cpp" local="yes">libraries/SD-1.2.4/src/SD.cpp</includedby>
+    <includedby refid="main_2pme_2src_2_reader_8h" local="no">main/pme/src/Reader.h</includedby>
+    <includedby refid="main_2pme_2src_2_writer_8h" local="no">main/pme/src/Writer.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/SD.h</label>
+        <link refid="_s_d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>FatStructs.h</label>
+        <link refid="_fat_structs_8h"/>
+      </node>
+      <node id="4">
+        <label>Sd2Card.h</label>
+        <link refid="_sd2_card_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Sd2PinMap.h</label>
+        <link refid="_sd2_pin_map_8h_source"/>
+      </node>
+      <node id="3">
+        <label>utility/SdFat.h</label>
+        <link refid="_sd_fat_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>utility/SdFatUtil.h</label>
+        <link refid="_sd_fat_util_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SdInfo.h</label>
+        <link refid="_sd_info_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Print.h</label>
+      </node>
+      <node id="7">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>examples/logger_test/src/Writer.cpp</label>
+        <link refid="examples_2logger__test_2src_2_writer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>examples/logger_test/src/Writer.h</label>
+        <link refid="examples_2logger__test_2src_2_writer_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>examples/read_struct_from_binary/src/Reader.cpp</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8cpp"/>
+      </node>
+      <node id="4">
+        <label>examples/read_struct_from_binary/src/Reader.h</label>
+        <link refid="examples_2read__struct__from__binary_2src_2_reader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>libraries/SD-1.2.4/src/SD.h</label>
+        <link refid="_s_d_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>main/pme/src/Reader.cpp</label>
+        <link refid="main_2pme_2src_2_reader_8cpp"/>
+      </node>
+      <node id="6">
+        <label>main/pme/src/Reader.h</label>
+        <link refid="main_2pme_2src_2_reader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>main/pme/src/Writer.cpp</label>
+        <link refid="main_2pme_2src_2_writer_8cpp"/>
+      </node>
+      <node id="8">
+        <label>main/pme/src/Writer.h</label>
+        <link refid="main_2pme_2src_2_writer_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_s_d_lib_1_1_file" prot="public">SDLib::File</innerclass>
+    <innerclass refid="class_s_d_lib_1_1_s_d_class" prot="public">SDLib::SDClass</innerclass>
+    <innernamespace refid="namespace_s_d_lib">SDLib</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="_s_d_8h_1ad52d51659a75e25d96fb04d22ff718cb" prot="public" static="no">
+        <name>FILE_READ</name>
+        <initializer><ref refid="_sd_fat_8h_1ac5a1c3e543273b0374ba114c496e662e" kindref="member">O_READ</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="23" column="9" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_s_d_8h_1ace34e503254fa9004599ddf122264c8f" prot="public" static="no">
+        <name>FILE_WRITE</name>
+        <initializer>(<ref refid="_sd_fat_8h_1ac5a1c3e543273b0374ba114c496e662e" kindref="member">O_READ</ref> | <ref refid="_sd_fat_8h_1a44c1620ada13f6318ab39b9fa38ef55a" kindref="member">O_WRITE</ref> | <ref refid="_sd_fat_8h_1a20d0ef801486dd02de6ee482de731193" kindref="member">O_CREAT</ref> | <ref refid="_sd_fat_8h_1a4242b37e810af3a6485adda0e08a9a2b" kindref="member">O_APPEND</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="24" column="9" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_s_d_8h_1a405c3a8f45330e676ad86dd8b2747c4c" prot="public" static="no">
+        <name>SDFileSystem</name>
+        <initializer>SDLib::SD</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="136" column="9" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_s_d_8h_1a648a3a258d9c960be256a6f29c31ffe1" prot="public" static="no">
+        <type><ref refid="class_s_d_lib_1_1_file" kindref="compound">SDLib::File</ref></type>
+        <definition>typedef SDLib::File SDFile</definition>
+        <argsstring></argsstring>
+        <name>SDFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="134" column="24" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_s_d_8h_1a31f8484f4f6fe64504a2b1bacbd276c7" prot="public" static="no">
+        <type><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDLib::SDClass</ref></type>
+        <definition>typedef SDLib::SDClass SDFileSystemClass</definition>
+        <argsstring></argsstring>
+        <name>SDFileSystemClass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/SD-1.2.4/src/SD.h" line="135" column="24" bodyfile="libraries/SD-1.2.4/src/SD.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>SD<sp/>-<sp/>a<sp/>slightly<sp/>more<sp/>friendly<sp/>wrapper<sp/>for<sp/>sdfatlib</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>This<sp/>library<sp/>aims<sp/>to<sp/>expose<sp/>a<sp/>subset<sp/>of<sp/>SD<sp/>card<sp/>functionality</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>in<sp/>the<sp/>form<sp/>of<sp/>a<sp/>higher<sp/>level<sp/>&quot;wrapper&quot;<sp/>object.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>License:<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>V3</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(Because<sp/>sdfatlib<sp/>is<sp/>licensed<sp/>with<sp/>this.)</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>(C)<sp/>Copyright<sp/>2010<sp/>SparkFun<sp/>Electronics</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"></highlight></codeline>
+<codeline lineno="13"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SD_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SD_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sd_fat_8h" kindref="compound">utility/SdFat.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_sd_fat_util_8h" kindref="compound">utility/SdFatUtil.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_READ<sp/>O_READ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FILE_WRITE<sp/>(O_READ<sp/>|<sp/>O_WRITE<sp/>|<sp/>O_CREAT<sp/>|<sp/>O_APPEND)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">SDLib<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_s_d_lib_1_1_file" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Stream<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>_name[13];<sp/></highlight><highlight class="comment">//<sp/>our<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sd_file" kindref="compound">SdFile</ref><sp/>*_file;<sp/><sp/></highlight><highlight class="comment">//<sp/>underlying<sp/>file<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref>(<ref refid="class_sd_file" kindref="compound">SdFile</ref><sp/>f,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>wraps<sp/>an<sp/>underlying<sp/>SdFile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&apos;empty&apos;<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>write(uint8_t);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>write(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*buf,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>availableForWrite();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>read();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>peek();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>available();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>flush();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>read(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*buf,<sp/>uint16_t<sp/>nbyte);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>seek(uint32_t<sp/>pos);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>position();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>size();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>close();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="_fat_structs_8h_1a30308c9b983377042fd2cc8900454fb1" kindref="member">name</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>isDirectory(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>openNextFile(uint8_t<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>=<sp/><ref refid="_sd_fat_8h_1ac13ca62d7e6f8f6d657d4607474652bf" kindref="member">O_RDONLY</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>rewindDirectory(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">Print::write;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_s_d_lib_1_1_s_d_class" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDClass</ref><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>required<sp/>for<sp/>initialisation<sp/>and<sp/>use<sp/>of<sp/>sdfatlib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sd2_card" kindref="compound">Sd2Card</ref><sp/>card;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sd_volume" kindref="compound">SdVolume</ref><sp/>volume;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sd_file" kindref="compound">SdFile</ref><sp/>root;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>my<sp/>quick&amp;dirty<sp/>iterator,<sp/>should<sp/>be<sp/>replaced</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sd_file" kindref="compound">SdFile</ref><sp/>getParentDir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*indx);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>needs<sp/>to<sp/>be<sp/>called<sp/>to<sp/>set<sp/>up<sp/>the<sp/>connection<sp/>to<sp/>the<sp/>SD<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>before<sp/>other<sp/>methods<sp/>are<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>begin(uint8_t<sp/>csPin<sp/>=<sp/><ref refid="_sd2_card_8h_1ae6b17538c14ba6c91ccb513db2c4c29c" kindref="member">SD_CHIP_SELECT_PIN</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>begin(uint32_t<sp/>clock,<sp/>uint8_t<sp/>csPin);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//call<sp/>this<sp/>when<sp/>a<sp/>card<sp/>is<sp/>removed.<sp/>It<sp/>will<sp/>allow<sp/>you<sp/>to<sp/>insert<sp/>and<sp/>initialise<sp/>a<sp/>new<sp/>card.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>end();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>the<sp/>specified<sp/>file/directory<sp/>with<sp/>the<sp/>supplied<sp/>mode<sp/>(e.g.<sp/>read<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>write,<sp/>etc).<sp/>Returns<sp/>a<sp/>File<sp/>object<sp/>for<sp/>interacting<sp/>with<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>currently<sp/>only<sp/>one<sp/>file<sp/>can<sp/>be<sp/>open<sp/>at<sp/>a<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>open(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename,<sp/>uint8_t<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>=<sp/>FILE_READ);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref><sp/>open(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filename,<sp/>uint8_t<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref><sp/>=<sp/>FILE_READ)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>open(filename.c_str(),<sp/><ref refid="examples_2logging__example_2libraries_2_adafruit___l_s_m303___accel_2_adafruit___l_s_m303___accel_8h_1a1a6b6fb557d8d37d59700faf4e4c9167" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods<sp/>to<sp/>determine<sp/>if<sp/>the<sp/>requested<sp/>file<sp/>path<sp/>exists.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>exists(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>exists(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filepath)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exists(filepath.c_str());</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>requested<sp/>directory<sp/>heirarchy--if<sp/>intermediate<sp/>directories</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>do<sp/>not<sp/>exist<sp/>they<sp/>will<sp/>be<sp/>created.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>mkdir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>mkdir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filepath)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mkdir(filepath.c_str());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>the<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>remove(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>remove(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filepath)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>remove(filepath.c_str());</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>rmdir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filepath);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>rmdir(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>String<sp/>&amp;filepath)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rmdir(filepath.c_str());</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>used<sp/>to<sp/>determine<sp/>the<sp/>mode<sp/>used<sp/>to<sp/>open<sp/>a<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it&apos;s<sp/>here<sp/>because<sp/>it&apos;s<sp/>the<sp/>easiest<sp/>place<sp/>to<sp/>pass<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>information<sp/>through<sp/>the<sp/>directory<sp/>walking<sp/>function.<sp/>But</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it&apos;s<sp/>probably<sp/>not<sp/>the<sp/>best<sp/>place<sp/>for<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>It<sp/>shouldn&apos;t<sp/>be<sp/>set<sp/>directly--it<sp/>is<sp/>set<sp/>via<sp/>the<sp/>parameters<sp/>to<sp/>`open`.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fileOpenMode;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_s_d_lib_1_1_file" kindref="compound">File</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>callback_openPath(<ref refid="class_sd_file" kindref="compound">SdFile</ref>&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDClass</ref><sp/>SD;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>enclose<sp/>File<sp/>and<sp/>SD<sp/>classes<sp/>in<sp/>namespace<sp/>SDLib<sp/>to<sp/>avoid<sp/>conflicts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>with<sp/>others<sp/>legacy<sp/>libraries<sp/>that<sp/>redefines<sp/>File<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>ensure<sp/>compatibility<sp/>with<sp/>sketches<sp/>that<sp/>uses<sp/>only<sp/>SD<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">SDLib;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>allows<sp/>sketches<sp/>to<sp/>use<sp/>SDLib::File<sp/>with<sp/>other<sp/>libraries<sp/>(in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sketch<sp/>you<sp/>must<sp/>use<sp/>SDFile<sp/>instead<sp/>of<sp/>File<sp/>to<sp/>disambiguate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">SDLib::File</ref><sp/><sp/><sp/><sp/><ref refid="class_s_d_lib_1_1_file" kindref="compound">SDFile</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDLib::SDClass</ref><sp/><ref refid="class_s_d_lib_1_1_s_d_class" kindref="compound">SDFileSystemClass</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SDFileSystem<sp/><sp/><sp/>SDLib::SD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="libraries/SD-1.2.4/src/SD.h"/>
+  </compounddef>
+</doxygen>

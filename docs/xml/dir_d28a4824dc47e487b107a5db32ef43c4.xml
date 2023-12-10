@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d28a4824dc47e487b107a5db32ef43c4" kind="dir">
+    <compoundname>examples</compoundname>
+    <innerdir refid="dir_9d0b8a6ef82f2015ee3fd96f9878c5fb">examples/logger_test</innerdir>
+    <innerdir refid="dir_25fb7192d9a0d621ffa12580b792bd31">examples/logging_example</innerdir>
+    <innerdir refid="dir_117c4895f2c0076e1fdfee564f25702c">examples/pin_controller</innerdir>
+    <innerdir refid="dir_1c9117dbe2432f230c46dd3ebd36fe53">examples/read_struct_from_binary</innerdir>
+    <innerdir refid="dir_5705e740a53c30b2cffef35d5872a4d8">examples/simbox_integration</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/"/>
+  </compounddef>
+</doxygen>

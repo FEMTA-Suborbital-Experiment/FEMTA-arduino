@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_m_s5837" kind="class" language="C++" prot="public">
+    <compoundname>MS5837</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_m_s5837_1ae54d04a637682f68502e79d221bf00e3" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float MS5837::Pa</definition>
+        <argsstring></argsstring>
+        <name>Pa</name>
+        <qualifiedname>MS5837::Pa</qualifiedname>
+        <initializer>= 100.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="44" column="20" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1afaf021ab4e8b402a642c383f35ff4258" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float MS5837::bar</definition>
+        <argsstring></argsstring>
+        <name>bar</name>
+        <qualifiedname>MS5837::bar</qualifiedname>
+        <initializer>= 0.001f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="45" column="20" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a300724fab62674ab5e32a8b1861d3bba" prot="public" static="yes" mutable="no">
+        <type>const float</type>
+        <definition>const float MS5837::mbar</definition>
+        <argsstring></argsstring>
+        <name>mbar</name>
+        <qualifiedname>MS5837::mbar</qualifiedname>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="46" column="20" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1abc4a4367230b5ee53fbaf8060231a4bb" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MS5837::MS5837_30BA</definition>
+        <argsstring></argsstring>
+        <name>MS5837_30BA</name>
+        <qualifiedname>MS5837::MS5837_30BA</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="48" column="22" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a5b94f94735c695d94882f689fc55e853" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MS5837::MS5837_02BA</definition>
+        <argsstring></argsstring>
+        <name>MS5837_02BA</name>
+        <qualifiedname>MS5837::MS5837_02BA</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="49" column="22" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_m_s5837_1a6eac2b695dcb0cc600dade313983428a" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t MS5837::C[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>C</name>
+        <qualifiedname>MS5837::C</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="87" column="10" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1af2f3b0328ad5efb89c653e3e4ca21e14" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MS5837::D1</definition>
+        <argsstring></argsstring>
+        <name>D1</name>
+        <qualifiedname>MS5837::D1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="88" column="10" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a20f2ac1f695dc7a5abb3dab0a40168b4" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t MS5837::D2</definition>
+        <argsstring></argsstring>
+        <name>D2</name>
+        <qualifiedname>MS5837::D2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="88" column="13" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a0b7861f997783664961579d4a70f1831" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t MS5837::TEMP</definition>
+        <argsstring></argsstring>
+        <name>TEMP</name>
+        <qualifiedname>MS5837::TEMP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="89" column="9" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a74fac4ed16bfe7a34e44a695e2801429" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t MS5837::P</definition>
+        <argsstring></argsstring>
+        <name>P</name>
+        <qualifiedname>MS5837::P</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="90" column="9" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a204d77f46bded1a3a82b03b9e2999c66" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t MS5837::_model</definition>
+        <argsstring></argsstring>
+        <name>_model</name>
+        <qualifiedname>MS5837::_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="91" column="9" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_m_s5837_1a7c05bd9e8a4e12e8a0220f5eeb566c32" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MS5837::fluidDensity</definition>
+        <argsstring></argsstring>
+        <name>fluidDensity</name>
+        <qualifiedname>MS5837::fluidDensity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="93" column="7" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_m_s5837_1af137d8f2b22895a4fe0c3e059d1ba5a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MS5837::MS5837</definition>
+        <argsstring>()</argsstring>
+        <name>MS5837</name>
+        <qualifiedname>MS5837::MS5837</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="51" column="1" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1accd5fa071ae977c796e4fb0648954499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MS5837::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>MS5837::init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="53" column="6" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="22" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1af8b0b1e168f39a9b99fa5918a6ef8f04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5837::setModel</definition>
+        <argsstring>(uint8_t model)</argsstring>
+        <name>setModel</name>
+        <qualifiedname>MS5837::setModel</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set model of <ref refid="class_m_s5837" kindref="compound">MS5837</ref> sensor. Valid options are MS5837::MS5837_30BA (default) and MS5837::MS5837_02BA. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="58" column="6" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1a40ad0394fa84d49afa62ae63c411aa8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5837::setFluidDensity</definition>
+        <argsstring>(float density)</argsstring>
+        <name>setFluidDensity</name>
+        <qualifiedname>MS5837::setFluidDensity</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>density</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provide the density of the working fluid in kg/m^3. Default is for seawater. Should be 997 for freshwater. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="63" column="6" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1a69b945b55b93c96173e8369fec1d9100" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5837::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <qualifiedname>MS5837::read</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The read from I2C takes up to 40 ms, so use sparingly is possible. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="67" column="6" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="60" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1a14b4dd5598dc65e2d3f7c185e940af88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MS5837::pressure</definition>
+        <argsstring>(float conversion=1.0f)</argsstring>
+        <name>pressure</name>
+        <qualifiedname>MS5837::pressure</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>conversion</declname>
+          <defval>1.0f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pressure returned in mbar or mbar*conversion rate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="71" column="7" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="162" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1a554d181ffc4329c1e292ca87e0a810f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MS5837::temperature</definition>
+        <argsstring>()</argsstring>
+        <name>temperature</name>
+        <qualifiedname>MS5837::temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Temperature returned in deg C. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="75" column="7" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1af5ec680e29a8cdaed429b9fb91d813e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MS5837::depth</definition>
+        <argsstring>()</argsstring>
+        <name>depth</name>
+        <qualifiedname>MS5837::depth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Depth returned in meters (valid for operation in incompressible liquids only. Uses density that is set for fresh or seawater. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="80" column="7" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1af3c24ba068ed52a2918c784b3d608c8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MS5837::altitude</definition>
+        <argsstring>()</argsstring>
+        <name>altitude</name>
+        <qualifiedname>MS5837::altitude</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Altitude returned in meters (valid for operation in air only). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="84" column="7" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_m_s5837_1a91e004ee3023d2bdad2107103f88258c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MS5837::calculate</definition>
+        <argsstring>()</argsstring>
+        <name>calculate</name>
+        <qualifiedname>MS5837::calculate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs calculations per the sensor data sheet for conversion and second order compensation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="98" column="6" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="98" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_m_s5837_1aec790e19fb1b8edc3ad801a2f42ed082" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t MS5837::crc4</definition>
+        <argsstring>(uint16_t n_prom[])</argsstring>
+        <name>crc4</name>
+        <qualifiedname>MS5837::crc4</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>n_prom</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="100" column="9" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.cpp" bodystart="184" bodyend="208"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/BlueRobotics_MS5837_Library/MS5837.h" line="42" column="1" bodyfile="libraries/BlueRobotics_MS5837_Library/MS5837.h" bodystart="42" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_m_s5837_1a204d77f46bded1a3a82b03b9e2999c66" prot="private" virt="non-virtual"><scope>MS5837</scope><name>_model</name></member>
+      <member refid="class_m_s5837_1af3c24ba068ed52a2918c784b3d608c8a" prot="public" virt="non-virtual"><scope>MS5837</scope><name>altitude</name></member>
+      <member refid="class_m_s5837_1afaf021ab4e8b402a642c383f35ff4258" prot="public" virt="non-virtual"><scope>MS5837</scope><name>bar</name></member>
+      <member refid="class_m_s5837_1a6eac2b695dcb0cc600dade313983428a" prot="private" virt="non-virtual"><scope>MS5837</scope><name>C</name></member>
+      <member refid="class_m_s5837_1a91e004ee3023d2bdad2107103f88258c" prot="private" virt="non-virtual"><scope>MS5837</scope><name>calculate</name></member>
+      <member refid="class_m_s5837_1aec790e19fb1b8edc3ad801a2f42ed082" prot="private" virt="non-virtual"><scope>MS5837</scope><name>crc4</name></member>
+      <member refid="class_m_s5837_1af2f3b0328ad5efb89c653e3e4ca21e14" prot="private" virt="non-virtual"><scope>MS5837</scope><name>D1</name></member>
+      <member refid="class_m_s5837_1a20f2ac1f695dc7a5abb3dab0a40168b4" prot="private" virt="non-virtual"><scope>MS5837</scope><name>D2</name></member>
+      <member refid="class_m_s5837_1af5ec680e29a8cdaed429b9fb91d813e6" prot="public" virt="non-virtual"><scope>MS5837</scope><name>depth</name></member>
+      <member refid="class_m_s5837_1a7c05bd9e8a4e12e8a0220f5eeb566c32" prot="private" virt="non-virtual"><scope>MS5837</scope><name>fluidDensity</name></member>
+      <member refid="class_m_s5837_1accd5fa071ae977c796e4fb0648954499" prot="public" virt="non-virtual"><scope>MS5837</scope><name>init</name></member>
+      <member refid="class_m_s5837_1a300724fab62674ab5e32a8b1861d3bba" prot="public" virt="non-virtual"><scope>MS5837</scope><name>mbar</name></member>
+      <member refid="class_m_s5837_1af137d8f2b22895a4fe0c3e059d1ba5a3" prot="public" virt="non-virtual"><scope>MS5837</scope><name>MS5837</name></member>
+      <member refid="class_m_s5837_1a5b94f94735c695d94882f689fc55e853" prot="public" virt="non-virtual"><scope>MS5837</scope><name>MS5837_02BA</name></member>
+      <member refid="class_m_s5837_1abc4a4367230b5ee53fbaf8060231a4bb" prot="public" virt="non-virtual"><scope>MS5837</scope><name>MS5837_30BA</name></member>
+      <member refid="class_m_s5837_1a74fac4ed16bfe7a34e44a695e2801429" prot="private" virt="non-virtual"><scope>MS5837</scope><name>P</name></member>
+      <member refid="class_m_s5837_1ae54d04a637682f68502e79d221bf00e3" prot="public" virt="non-virtual"><scope>MS5837</scope><name>Pa</name></member>
+      <member refid="class_m_s5837_1a14b4dd5598dc65e2d3f7c185e940af88" prot="public" virt="non-virtual"><scope>MS5837</scope><name>pressure</name></member>
+      <member refid="class_m_s5837_1a69b945b55b93c96173e8369fec1d9100" prot="public" virt="non-virtual"><scope>MS5837</scope><name>read</name></member>
+      <member refid="class_m_s5837_1a40ad0394fa84d49afa62ae63c411aa8f" prot="public" virt="non-virtual"><scope>MS5837</scope><name>setFluidDensity</name></member>
+      <member refid="class_m_s5837_1af8b0b1e168f39a9b99fa5918a6ef8f04" prot="public" virt="non-virtual"><scope>MS5837</scope><name>setModel</name></member>
+      <member refid="class_m_s5837_1a0b7861f997783664961579d4a70f1831" prot="private" virt="non-virtual"><scope>MS5837</scope><name>TEMP</name></member>
+      <member refid="class_m_s5837_1a554d181ffc4329c1e292ca87e0a810f0" prot="public" virt="non-virtual"><scope>MS5837</scope><name>temperature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

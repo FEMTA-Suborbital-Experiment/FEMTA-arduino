@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structsensors__vec__t" kind="struct" language="C++" prot="public">
+    <compoundname>sensors_vec_t</compoundname>
+    <includes refid="examples_2logging__example_2libraries_2_adafruit___unified___sensor_2_adafruit___sensor_8h" local="no">Adafruit_Sensor.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsensors__vec__t_1a5114a743de9aab053acce7722f394bc4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::v[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>v</name>
+        <qualifiedname>sensors_vec_t::v</qualifiedname>
+        <briefdescription>
+<para>3D vector elements </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="76" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a9fb71ba50079915da244b839969da7d9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>sensors_vec_t::x</qualifiedname>
+        <briefdescription>
+<para>X component of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="78" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a08088cd422b668c75ca0db77d0227ef8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>sensors_vec_t::y</qualifiedname>
+        <briefdescription>
+<para>Y component of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="79" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1af955e602ed046ad810f972fbbc5e0936" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <qualifiedname>sensors_vec_t::z</qualifiedname>
+        <briefdescription>
+<para>Z component of vector. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="80" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a6d8c6e288de54942e1d2be4f42f96bb2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::roll</definition>
+        <argsstring></argsstring>
+        <name>roll</name>
+        <qualifiedname>sensors_vec_t::roll</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotation around the longitudinal axis (the plane body, &apos;X axis&apos;). Roll is positive and increasing when moving downward. -90 degrees &lt;= roll &lt;= 90 degrees </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="84" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1aa298c3cbbd0016698c64d9451fbf3aff" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::pitch</definition>
+        <argsstring></argsstring>
+        <name>pitch</name>
+        <qualifiedname>sensors_vec_t::pitch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rotation around the lateral axis (the wing span, &apos;Y axis&apos;). Pitch is positive and increasing when moving upwards. -180 degrees &lt;= pitch &lt;= 180 degrees) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="87" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a4fe8caabff59868ff44f1ed8334cbf47" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sensors_vec_t::heading</definition>
+        <argsstring></argsstring>
+        <name>heading</name>
+        <qualifiedname>sensors_vec_t::heading</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Angle between the longitudinal axis (the plane body) and magnetic north, measured clockwise when viewing from the top of the device. 0-359 degrees </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="90" column="13" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a7643befbf9d921d3c6eb53b6053b7562" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>union sensors_vec_t sensors_vec_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_vec_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Union that can hold 3D vector array, XYZ components or roll/pitch/heading </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1af75d491f35f979932de5609d6ef6c363" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t sensors_vec_t::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>sensors_vec_t::status</qualifiedname>
+        <briefdescription>
+<para>Status byte. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="96" column="10" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a8991b7e181ed3cbf3ad0e54da3d8e6c9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t sensors_vec_t::reserved</definition>
+        <argsstring>[3]</argsstring>
+        <name>reserved</name>
+        <qualifiedname>sensors_vec_t::reserved</qualifiedname>
+        <briefdescription>
+<para>Reserved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="97" column="11" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsensors__vec__t_1a01785589e7ec4856cf547970b9b3fd18" prot="public" static="no" mutable="no">
+        <type>union <ref refid="structsensors__vec__t" kindref="compound">sensors_vec_t</ref></type>
+        <definition>union sensors_vec_t sensors_vec_t</definition>
+        <argsstring></argsstring>
+        <name></name>
+        <qualifiedname>sensors_vec_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Union that can hold 3D vector array, XYZ components or roll/pitch/heading </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="95" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>struct sensors_vec_s is used to return a vector in a common format. </para>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" line="74" column="1" bodyfile="examples/logging_example/libraries/Adafruit_Unified_Sensor/Adafruit_Sensor.h" bodystart="74" bodyend="98"/>
+    <listofallmembers>
+      <member refid="structsensors__vec__t_1a4fe8caabff59868ff44f1ed8334cbf47" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>heading</name></member>
+      <member refid="structsensors__vec__t_1aa298c3cbbd0016698c64d9451fbf3aff" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>pitch</name></member>
+      <member refid="structsensors__vec__t_1a8991b7e181ed3cbf3ad0e54da3d8e6c9" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>reserved</name></member>
+      <member refid="structsensors__vec__t_1a6d8c6e288de54942e1d2be4f42f96bb2" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>roll</name></member>
+      <member refid="structsensors__vec__t_1af75d491f35f979932de5609d6ef6c363" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>status</name></member>
+      <member refid="structsensors__vec__t_1a5114a743de9aab053acce7722f394bc4" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>v</name></member>
+      <member refid="structsensors__vec__t_1a9fb71ba50079915da244b839969da7d9" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>x</name></member>
+      <member refid="structsensors__vec__t_1a08088cd422b668c75ca0db77d0227ef8" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>y</name></member>
+      <member refid="structsensors__vec__t_1af955e602ed046ad810f972fbbc5e0936" prot="public" virt="non-virtual"><scope>sensors_vec_t</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

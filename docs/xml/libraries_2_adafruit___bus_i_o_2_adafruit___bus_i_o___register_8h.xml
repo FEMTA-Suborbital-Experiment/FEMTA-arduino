@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h" kind="file" language="C++">
+    <compoundname>Adafruit_BusIO_Register.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_device_8h" local="no">Adafruit_I2CDevice.h</includes>
+    <includes refid="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h" local="no">Adafruit_SPIDevice.h</includes>
+    <includedby refid="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8cpp" local="no">libraries/Adafruit_BusIO/Adafruit_BusIO_Register.cpp</includedby>
+    <includedby refid="libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h" local="no">libraries/Adafruit_BusIO/Adafruit_I2CRegister.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="1">
+        <label>libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adafruit_I2CDevice.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_device_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Adafruit_SPIDevice.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___s_p_i_device_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SPI.h</label>
+      </node>
+      <node id="4">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>libraries/Adafruit_BusIO/Adafruit_I2CRegister.h</label>
+        <link refid="libraries_2_adafruit___bus_i_o_2_adafruit___i2_c_register_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_adafruit___bus_i_o___register" prot="public">Adafruit_BusIO_Register</innerclass>
+    <innerclass refid="class_adafruit___bus_i_o___register_bits" prot="public">Adafruit_BusIO_RegisterBits</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1aab8187a2a7855dbdafc14106289f7c52" prot="public" static="no" strong="no">
+        <type></type>
+        <name>_Adafruit_BusIO_SPIRegType</name>
+        <enumvalue id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1aab8187a2a7855dbdafc14106289f7c52a8b87cf6aa44743ad867af0a38ebf7a2d" prot="public">
+          <name>ADDRBIT8_HIGH_TOREAD</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ADDRBIT8_HIGH_TOREAD When reading a register you must actually send the value 0x80 + register address to the device. e.g. To read the register 0x0B the register value 0x8B is sent and to write 0x0B is sent. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1aab8187a2a7855dbdafc14106289f7c52a33287651889968168c65b8bb3c1ff9d0" prot="public">
+          <name>AD8_HIGH_TOREAD_AD7_HIGH_TOINC</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ADDRBIT8_HIGH_TOWRITE When writing to a register you must actually send the value 0x80 + the register address to the device. e.g. To write to the register 0x19 the register value 0x99 is sent and to read 0x19 is sent. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1aab8187a2a7855dbdafc14106289f7c52af378f422210a85e02ce862100f9be37b" prot="public">
+          <name>ADDRBIT8_HIGH_TOWRITE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ADDRESSED_OPCODE_LOWBIT_TO_WRITE Used by the MCP23S series, we send 0x40 |&apos;rd with the opcode Then set the lowest bit to write </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1aab8187a2a7855dbdafc14106289f7c52a2f34659af5a4eca59f60cb6c60779104" prot="public">
+          <name>ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="12" column="1" bodyfile="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" bodystart="12" bodyend="37"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="libraries_2_adafruit___bus_i_o_2_adafruit___bus_i_o___register_8h_1a071c4a820b1ac412da2d42c7c61cb219" prot="public" static="no">
+        <type>enum _Adafruit_BusIO_SPIRegType</type>
+        <definition>typedef enum _Adafruit_BusIO_SPIRegType Adafruit_BusIO_SPIRegType</definition>
+        <argsstring></argsstring>
+        <name>Adafruit_BusIO_SPIRegType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h" line="37" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>Adafruit_BusIO_Register_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Adafruit_BusIO_Register_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(SPI_INTERFACES_COUNT)<sp/>||<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(SPI_INTERFACES_COUNT)<sp/>&amp;&amp;<sp/>(SPI_INTERFACES_COUNT<sp/>&gt;<sp/>0))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_I2CDevice.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Adafruit_SPIDevice.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>_Adafruit_BusIO_SPIRegType<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>ADDRBIT8_HIGH_TOREAD<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>AD8_HIGH_TOREAD_AD7_HIGH_TOINC<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>ADDRBIT8_HIGH_TOWRITE<sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>ADDRESSED_OPCODE_BIT0_LOW_TO_WRITE<sp/>=<sp/>3,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/>Adafruit_BusIO_SPIRegType;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(<ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref><sp/>*i2cdevice,<sp/>uint16_t<sp/>reg_addr,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" kindref="member">width</ref><sp/>=<sp/>1,<sp/>uint8_t<sp/>byteorder<sp/>=<sp/>LSBFIRST,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>address_width<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(<ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref><sp/>*spidevice,<sp/>uint16_t<sp/>reg_addr,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adafruit_BusIO_SPIRegType<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>,<sp/>uint8_t<sp/><ref refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" kindref="member">width</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>byteorder<sp/>=<sp/>LSBFIRST,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>address_width<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref>(<ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref><sp/>*i2cdevice,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref><sp/>*spidevice,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Adafruit_BusIO_SPIRegType<sp/><ref refid="_fat_structs_8h_1a1d127017fb298b889f4ba24752d08b8e" kindref="member">type</ref>,<sp/>uint16_t<sp/>reg_addr,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" kindref="member">width</ref><sp/>=<sp/>1,<sp/>uint8_t<sp/>byteorder<sp/>=<sp/>LSBFIRST,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>address_width<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" kindref="member">read</ref>(uint8_t<sp/>*buffer,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" kindref="member">read</ref>(uint8_t<sp/>*value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" kindref="member">read</ref>(uint16_t<sp/>*value);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="class_adafruit___bus_i_o___register_1a699434b2567ae8fce541b8048d891252" kindref="member">read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="class_adafruit___bus_i_o___register_1a9738fbb8c088d5cf6d381f87dc9288bb" kindref="member">readCached</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" kindref="member">write</ref>(uint8_t<sp/>*buffer,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1aa418dced5301a1d8c1776a1941c8bc64" kindref="member">write</ref>(uint32_t<sp/>value,<sp/>uint8_t<sp/>numbytes<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" kindref="member">width</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a478ae4ca787304ead47a56994fbdb840" kindref="member">setWidth</ref>(uint8_t<sp/><ref refid="class_adafruit___bus_i_o___register_1abf1eaeb0ae836be082a73dae14e7e352" kindref="member">width</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a08ddf29ed836c712e2a2f050e1ae3bcd" kindref="member">setAddress</ref>(uint16_t<sp/>address);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1a421a7c74ab0faafe243060af1883717a" kindref="member">setAddressWidth</ref>(uint16_t<sp/>address_width);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1abc1e92469336a95e6ddf34bd7fd18a67" kindref="member">print</ref>(Stream<sp/>*s<sp/>=<sp/>&amp;Serial);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_1aebb1d9dd6520ba1a20b3952c434d7a47" kindref="member">println</ref>(Stream<sp/>*s<sp/>=<sp/>&amp;Serial);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___i2_c_device" kindref="compound">Adafruit_I2CDevice</ref><sp/>*_i2cdevice;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___s_p_i_device" kindref="compound">Adafruit_SPIDevice</ref><sp/>*_spidevice;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>Adafruit_BusIO_SPIRegType<sp/>_spiregtype;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_address;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_width,<sp/>_addrwidth,<sp/>_byteorder;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_buffer[4];<sp/></highlight><highlight class="comment">//<sp/>we<sp/>won&apos;t<sp/>support<sp/>anything<sp/>larger<sp/>than<sp/>uint32<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>non-buffered<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>uint32_t<sp/>_cached<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register_bits" kindref="compound">Adafruit_BusIO_RegisterBits</ref>(<ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>*reg,<sp/>uint8_t<sp/>bits,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>shift);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_adafruit___bus_i_o___register_bits_1a9311f94f1a1d93bc575b06c34ddecd80" kindref="member">write</ref>(uint32_t<sp/>value);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>uint32_t<sp/><ref refid="class_adafruit___bus_i_o___register_bits_1a868614bb793ae3c4c00b7954896213d0" kindref="member">read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="class_adafruit___bus_i_o___register" kindref="compound">Adafruit_BusIO_Register</ref><sp/>*_register;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_bits,<sp/>_shift;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>SPI<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BusIO_Register_h</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="libraries/Adafruit_BusIO/Adafruit_BusIO_Register.h"/>
+  </compounddef>
+</doxygen>

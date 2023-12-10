@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_167996bba75b53f0367bb61bd4da5eae" kind="dir">
+    <compoundname>libraries/CSV_Parser/examples</compoundname>
+    <innerdir refid="dir_c633655b9d7b692e82f44aab137f7da1">libraries/CSV_Parser/examples/reading_from_computer_python</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/CSV_Parser/examples/"/>
+  </compounddef>
+</doxygen>

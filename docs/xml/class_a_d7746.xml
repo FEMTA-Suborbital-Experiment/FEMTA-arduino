@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_a_d7746" kind="class" language="C++" prot="public">
+    <compoundname>AD7746</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_a_d7746_1a43391cdc5a0cc6f6ca123d35e323b2df" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AD7746::devAddr</definition>
+        <argsstring></argsstring>
+        <name>devAddr</name>
+        <qualifiedname>AD7746::devAddr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="182" column="17" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_a_d7746_1afce66080f0480a4e87c62eab70be6ed4" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AD7746::buffer[19]</definition>
+        <argsstring>[19]</argsstring>
+        <name>buffer</name>
+        <qualifiedname>AD7746::buffer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="183" column="17" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_a_d7746_1a51bfb371af256f07028623ccc4680c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AD7746::AD7746</definition>
+        <argsstring>()</argsstring>
+        <name>AD7746</name>
+        <qualifiedname>AD7746::AD7746</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor, uses default I2C address. <simplesect kind="see"><para>AD7746_DEFAULT_ADDRESS </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="164" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a9632ee9c6f86f857c83943a1ebeed219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AD7746::AD7746</definition>
+        <argsstring>(uint8_t address)</argsstring>
+        <name>AD7746</name>
+        <qualifiedname>AD7746::AD7746</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specific address constructor. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>I2C address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AD7746_DEFAULT_ADDRESS </para>
+</simplesect>
+<simplesect kind="see"><para>AD7746_ADDRESS </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="165" column="9" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a1f173bcc3280f5921a7e8500184f82d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>AD7746::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Power on and prepare for general usage. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="167" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1ade3ea764ff47c96c1884745a2d4ceb82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AD7746::testConnection</definition>
+        <argsstring>()</argsstring>
+        <name>testConnection</name>
+        <qualifiedname>AD7746::testConnection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Verify the I2C connection. Make sure the device is connected and responds as expected. <simplesect kind="return"><para>True if connection is valid, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="168" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="63" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a8c3a03fb494b84e4d4267a43114ac4e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <qualifiedname>AD7746::reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="169" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="70" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1aa7f76229530d2b53c0d9dfea036aacd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t AD7746::getCapacitance</definition>
+        <argsstring>()</argsstring>
+        <name>getCapacitance</name>
+        <qualifiedname>AD7746::getCapacitance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="171" column="18" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1ac7bb6d9c10784c3c6a25d3ef08dbd072" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeCapSetupRegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeCapSetupRegister</name>
+        <qualifiedname>AD7746::writeCapSetupRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="173" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a08417feab36ba3547b8b97b0aa27b13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeVtSetupRegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeVtSetupRegister</name>
+        <qualifiedname>AD7746::writeVtSetupRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="174" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a5032a925a33646395c6b512f02ca6c4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeExcSetupRegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeExcSetupRegister</name>
+        <qualifiedname>AD7746::writeExcSetupRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="175" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a90c8a3ccfcb77cbc4443678eb4ed715a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeConfigurationRegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeConfigurationRegister</name>
+        <qualifiedname>AD7746::writeConfigurationRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="176" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a33741872ca2c755076faa530fc7b12d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeCapDacARegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeCapDacARegister</name>
+        <qualifiedname>AD7746::writeCapDacARegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="177" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_a_d7746_1a802c885646da7182e93012f07d4f6bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AD7746::writeCapDacBRegister</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>writeCapDacBRegister</name>
+        <qualifiedname>AD7746::writeCapDacBRegister</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="178" column="14" bodyfile="examples/logging_example/libraries/AD7746/AD7746.cpp" bodystart="132" bodyend="134"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/AD7746/AD7746.h" line="162" column="1" bodyfile="examples/logging_example/libraries/AD7746/AD7746.h" bodystart="162" bodyend="184"/>
+    <listofallmembers>
+      <member refid="class_a_d7746_1a51bfb371af256f07028623ccc4680c1e" prot="public" virt="non-virtual"><scope>AD7746</scope><name>AD7746</name></member>
+      <member refid="class_a_d7746_1a9632ee9c6f86f857c83943a1ebeed219" prot="public" virt="non-virtual"><scope>AD7746</scope><name>AD7746</name></member>
+      <member refid="class_a_d7746_1afce66080f0480a4e87c62eab70be6ed4" prot="private" virt="non-virtual"><scope>AD7746</scope><name>buffer</name></member>
+      <member refid="class_a_d7746_1a43391cdc5a0cc6f6ca123d35e323b2df" prot="private" virt="non-virtual"><scope>AD7746</scope><name>devAddr</name></member>
+      <member refid="class_a_d7746_1aa7f76229530d2b53c0d9dfea036aacd7" prot="public" virt="non-virtual"><scope>AD7746</scope><name>getCapacitance</name></member>
+      <member refid="class_a_d7746_1a1f173bcc3280f5921a7e8500184f82d2" prot="public" virt="non-virtual"><scope>AD7746</scope><name>initialize</name></member>
+      <member refid="class_a_d7746_1a8c3a03fb494b84e4d4267a43114ac4e5" prot="public" virt="non-virtual"><scope>AD7746</scope><name>reset</name></member>
+      <member refid="class_a_d7746_1ade3ea764ff47c96c1884745a2d4ceb82" prot="public" virt="non-virtual"><scope>AD7746</scope><name>testConnection</name></member>
+      <member refid="class_a_d7746_1a33741872ca2c755076faa530fc7b12d3" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeCapDacARegister</name></member>
+      <member refid="class_a_d7746_1a802c885646da7182e93012f07d4f6bc2" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeCapDacBRegister</name></member>
+      <member refid="class_a_d7746_1ac7bb6d9c10784c3c6a25d3ef08dbd072" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeCapSetupRegister</name></member>
+      <member refid="class_a_d7746_1a90c8a3ccfcb77cbc4443678eb4ed715a" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeConfigurationRegister</name></member>
+      <member refid="class_a_d7746_1a5032a925a33646395c6b512f02ca6c4f" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeExcSetupRegister</name></member>
+      <member refid="class_a_d7746_1a08417feab36ba3547b8b97b0aa27b13a" prot="public" virt="non-virtual"><scope>AD7746</scope><name>writeVtSetupRegister</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

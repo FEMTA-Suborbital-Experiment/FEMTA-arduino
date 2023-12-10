@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_f7a9a5d1e51acfe4127456acfeeed4a0" kind="dir">
+    <compoundname>examples/logging_example/libraries/AD7746</compoundname>
+    <innerfile refid="_a_d7746_8cpp">AD7746.cpp</innerfile>
+    <innerfile refid="_a_d7746_8h">AD7746.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="examples/logging_example/libraries/AD7746/"/>
+  </compounddef>
+</doxygen>

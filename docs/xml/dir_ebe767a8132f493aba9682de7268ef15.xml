@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_ebe767a8132f493aba9682de7268ef15" kind="dir">
+    <compoundname>libraries/sensirion-lf</compoundname>
+    <innerfile refid="sensirion-lf_8cpp">sensirion-lf.cpp</innerfile>
+    <innerfile refid="sensirion-lf_8h">sensirion-lf.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/sensirion-lf/"/>
+  </compounddef>
+</doxygen>
